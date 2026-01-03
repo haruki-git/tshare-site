@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>正規表現（Regex）一覧で時短＆失敗回避テク</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>正規表現（Regex）一覧で時短＆失敗回避テク</h1>
+        <nav><a href="/index.html">Home</a></nav>
+        <p class="meta">投稿日：2026-01-03</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/921266.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">正規表現でよくある困りごと（イントロ）</a></li>
+  <li><a href="#sec-2">困りごとの具体例と確認観点</a></li>
+  <li><a href="#sec-3">解決：覚えておくべき主要パターン一覧</a></li>
+  <li><a href="#sec-4">手順：実践テンプレ・ちょい自動化・失敗例</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>正規表現でよくある困りごと（イントロ）</h3>
+  <p>結論として、よく使う基本パターンを覚えてテンプレ化すれば、速く安全に置換や抽出ができます。</p>
+<p>よくある状況として、「部分だけ抜きたいけれど文字がまちまちで取れない」です。</p>
+<p>また、「エスケープ忘れでマッチしないため、時間を浪費する」です。</p>
+</section>
+
+<section id="sec-2">
+  <h3>困りごとの具体例と確認観点</h3>
+  <p>ログやCSVから特定フィールドを取り出したいものの、形式が不統一で手が止まることがあります。</p>
+<p>要チェックとして、生データの代表10行を用意して目視で差分を確認すると整理しやすいです。</p>
+<p>UIで作業する場合は、テキストエディタの検索機能で先に試すと見通しが立ちます。</p>
+<p>切り分けでは、正規表現のパターンをいったん単純化し、部分一致で拾える範囲を確認すると進めやすいです。</p>
+</section>
+
+<section id="sec-3">
+  <h3>解決：覚えておくべき主要パターン一覧</h3>
+  <p>使えるパターンをテンプレートとして用意しておくと作業が速いです。代表例を示します。</p>
+<p>コード例（基本）です。</p>
+<pre><code>\d+      # 数字（1個以上）
+^[A-Za-z] # 行頭が英字
+(.+?)     # 非貪欲で最短キャプチャ
+</code></pre>
+<p>判断の要チェックとして、精度を重視する場合はアンカー（^$）と貪欲・非貪欲の違いを使い分けるとよいです。</p>
+</section>
+
+<section id="sec-4">
+  <h3>手順：実践テンプレ・ちょい自動化・失敗例</h3>
+  <p>手順は次の3ステップです。</p>
+<ol>
+  <li>小さなサンプルで正規表現を検証します。</li>
+  <li>テストできたら本番対象に部分適用してログを確認します。</li>
+  <li>問題なければ全件に適用します。</li>
+</ol>
+
+<p>Pythonで抽出するスクリプト例は次のとおりです。</p>
+<pre><code>import re
+m = re.search(r'ID:(\d+)', line)
+if m:
+    print(m.group(1))</code></pre>
+
+<p>避けたい例として、貪欲指定で複数該当をまとめてしまう事例があります。原因は「.*」が想定より広く取ってしまうためです。要チェックの進め方としては、最初に非貪欲の「.*?」を試すと比較しやすいです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><p>本文のパターンやスクリプトを本番データに適用する前に、バックアップの取得と小規模テストの実施を必ず行ってください。</p></li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>基本パターンをテンプレ化すると作業が速くなります。</li>
+  <li>まず代表サンプルで目視と検索で差分を確認してください。</li>
+  <li>必須パターン（<code>\d</code>, <code>^</code>, <code>.</code>, <code>+</code>, <code>?</code>）を押さえて使い分けてください。</li>
+  <li>実行は段階的に行い、スクリプトはテスト環境で検証してください。</li>
+  <li>貪欲と非貪欲の違いでミスが発生しやすいので、まずは非貪欲を試してください。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>
