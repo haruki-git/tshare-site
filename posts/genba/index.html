@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>解説記事一覧</title>
+  <style>/* build_genba_index.js inline css (match styles.css) */
+
+:root {
+  --bg: #0b0f14;
+  --card: #121924;
+  --text: #e8eef6;
+  --muted: #9fb0c3;
+  --line: #233042;
+  --accent: #66b3ff;
+  --radius: 16px;
+  --tap: 44px;
+}
+
+/* ✅ 対応ブラウザだけ変数上書き */
+@supports (color: oklch(60% 0.1 240)) {
+  :root {
+    --bg: oklch(18% 0.02 240);
+  }
+}
+
+/* 変数を実際の背景・文字色に使う（保険） */
+html, body { background: var(--bg); color: var(--text); }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+
+  /* ✅ styles.css と同じ：ページ幅と中央寄せ */
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover { color: var(--accent); }
+
+p {
+  line-height: 1.8;
+  margin: 1em 0;
+}
+
+/* コードブロック（styles.css と同じ） */
+pre {
+  background-color: #000;
+  color: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 15px;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  margin: 1.5em 0;
+}
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* レイアウトコンテナ（styles.css と同じ） */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ヘッダー（styles.css と同じ） */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(11, 15, 20, 0.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.toprow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+}
+
+/* ナビ（styles.css と同じ） */
+.nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  min-height: var(--tap);
+  transition: all 0.2s ease;
+}
+.pill:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  background: rgba(102, 179, 255, 0.05);
+}
+.pill.active { border-color: var(--accent); color: var(--text); }
+
+/* モバイル用メニューボタン（styles.css と同じ） */
+.menuBtn {
+  display: none;
+  border: 1px solid var(--line);
+  background: #0f1520;
+  color: var(--text);
+  border-radius: 12px;
+  cursor: pointer;
+  min-height: var(--tap);
+  min-width: var(--tap);
+  padding: 0 12px;
+  align-items: center;
+  justify-content: center;
+}
+.burger {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  display: block;
+}
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+}
+.burger::before { top: -6px; }
+.burger::after  { top:  6px; }
+
+main { padding: 18px 0 28px; }
+
+.section { margin-top: 24px; }
+.section h2 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* カード（styles.css と同じ） */
+.card {
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+/* リスト（styles.css と同じ） */
+ul { margin: 0; padding: 0; list-style: none; }
+li + li { margin-top: 12px; }
+
+/* ✅ genba用：styles.css の .item / .meta に寄せる */
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.2s;
+}
+.item:hover { border-color: var(--accent); }
+
+.meta {
+  margin-top: 0;
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* ✅ genba用：UI部品（styles.cssに無いのでここだけ追加） */
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+.badge {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-size: 11px;
+  opacity: .95;
+}
+.badge.label {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0 6px 0 0;
+  opacity: .9;
+  color: var(--muted);
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #0f1520;
+  color: var(--text);
+  outline: none;
+  min-height: var(--tap);
+}
+.input:focus { border-color: var(--accent); }
+
+.btn {
+  border: 1px solid var(--line);
+  background: #0f1520;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  min-height: var(--tap);
+}
+.btn:hover { border-color: var(--accent); }
+.btn.primary {
+  border-color: rgba(102, 179, 255, .6);
+  background: rgba(102, 179, 255, .12);
+}
+.btn:disabled { opacity: .6; cursor: not-allowed; }
+
+.note { margin-top: 10px; opacity: .8; font-size: .9em; }
+.err  { color: #ff8a8a; white-space: pre-wrap; font-size: 12px; }
+
+/* フッター（styles.css と同じ） */
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  padding: 40px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* レスポンシブ（styles.css と同じ） */
+@media (max-width: 780px) {
+  .item { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .meta { white-space: normal; }
+}
+@media (max-width: 640px) {
+  .menuBtn { display: inline-flex; }
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+  .nav.open { display: flex; }
+  .pill { width: 100%; justify-content: flex-start; }
+}</style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="toprow">
+        <div class="brand">IT基礎ポータル</div>
+
+        <button class="menuBtn" id="menuBtn"
+                type="button"
+                aria-controls="siteNav"
+                aria-expanded="false"
+                aria-label="メニューを開く">
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" id="siteNav">
+          <a class="pill" href="/index.html">ITニュース</a>
+          <a class="pill active" href="/posts/genba/">解説記事</a>
+          <a class="pill" href="/posts/python/">Python</a>
+          <a class="pill" href="/index.html#tools">ツール</a>
+          <a class="pill" href="/posts/raspi-introduction.html">はじめに</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" id="queue">
+  <h2>生成テーマのキュー</h2>
+  <div class="card">
+    <div class="row">
+      <span class="badge" id="queueCurrent">設定中のテーマ：読み込み中...</span>
+    </div>
+
+    <div class="row" style="margin-top:10px;">
+      <input id="themeInput" class="input" style="min-width:260px; flex:1;" placeholder="例：PCの便利機能(Windows)" />
+      <button class="btn primary" id="btnAdd">追加</button>
+      <button class="btn" id="btnClear">全削除</button>
+      <button class="btn" id="btnReload">更新</button>
+    </div>
+
+    <div id="queueList" style="margin-top:10px;"></div>
+    <p class="note">※追加したテーマは、次回の自動生成で先頭から1件消費されます。</p>
+
+    <div id="queueErr" class="err" style="margin-top:10px;"></div>
+  </div>
+</section>
+
+<script>
+(async () => {
+  const $ = (id) => document.getElementById(id);
+
+  async function fetchJson(url, opts) {
+    const res = await fetch(url, opts);
+    const ct = res.headers.get("content-type") || "";
+    const data = ct.includes("application/json") ? await res.json().catch(() => null) : await res.text().catch(() => "");
+    if (!res.ok) {
+      const msg = (data && data.message) ? data.message : (typeof data === "string" ? data : ("HTTP " + res.status));
+      throw new Error(msg);
+    }
+    return data;
+  }
+
+  function renderQueue(items) {
+    const current = items && items.length ? items[0].theme : "";
+    $("queueCurrent").textContent = "設定中のテーマ：" + (current || "(なし)");
+
+    const box = $("queueList");
+    box.innerHTML = "";
+
+    if (!items || items.length === 0) {
+      const p = document.createElement("p");
+      p.textContent = "キューは空です。";
+      box.appendChild(p);
+      return;
+    }
+
+    const ol = document.createElement("ol");
+    ol.style.margin = "0";
+    ol.style.paddingLeft = "1.2em";
+
+    items.forEach((it, idx) => {
+      const li = document.createElement("li");
+      li.style.margin = "6px 0";
+
+      const row = document.createElement("div");
+      row.className = "row";
+
+      const text = document.createElement("span");
+      text.textContent = it.theme;
+
+      const meta = document.createElement("span");
+      meta.style.opacity = ".7";
+      meta.style.fontSize = ".85em";
+      meta.textContent = it.createdAtJST ? ("(" + it.createdAtJST + ")") : "";
+
+      const btn = document.createElement("button");
+      btn.className = "btn";
+      btn.textContent = "削除";
+      btn.addEventListener("click", async () => {
+        btn.disabled = true;
+        try {
+          await fetchJson("/api/genba/themes/" + encodeURIComponent(it.id), { method: "DELETE" });
+          await loadQueue();
+        } catch (e) {
+          alert("削除失敗: " + (e && e.message ? e.message : e));
+        } finally {
+          btn.disabled = false;
+        }
+      });
+
+      if (idx === 0) {
+        const badge = document.createElement("span");
+        badge.className = "badge label";   // ← ここ
+        badge.textContent = "次に生成";
+        row.appendChild(badge);
+      }
+
+      row.appendChild(text);
+      if (meta.textContent) row.appendChild(meta);
+      row.appendChild(btn);
+
+      li.appendChild(row);
+      ol.appendChild(li);
+    });
+
+    box.appendChild(ol);
+  }
+
+  async function loadQueue() {
+    const data = await fetchJson("/api/genba/themes", { method: "GET" });
+    renderQueue(data.items || []);
+  }
+
+  $("btnReload").addEventListener("click", () => loadQueue().catch(e => $("queueErr").textContent = (e.message || e)));
+
+  $("btnAdd").addEventListener("click", async () => {
+    const v = $("themeInput").value.trim();
+    if (!v) return alert("テーマを入力してください。");
+
+    $("btnAdd").disabled = true;
+    $("queueErr").textContent = "";
+    try {
+      await fetchJson("/api/genba/themes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ theme: v }),
+      });
+      $("themeInput").value = "";
+      await loadQueue();
+    } catch (e) {
+      $("queueErr").textContent = "追加失敗: " + (e.message || e);
+    } finally {
+      $("btnAdd").disabled = false;
+    }
+  });
+
+  $("btnClear").addEventListener("click", async () => {
+    if (!confirm("キューを全削除します。よろしいですか？")) return;
+    $("btnClear").disabled = true;
+    $("queueErr").textContent = "";
+    try {
+      await fetchJson("/api/genba/themes", { method: "DELETE" });
+      await loadQueue();
+    } catch (e) {
+      $("queueErr").textContent = "全削除失敗: " + (e.message || e);
+    } finally {
+      $("btnClear").disabled = false;
+    }
+  });
+
+  try {
+    await loadQueue();
+  } catch (e) {
+    $("queueCurrent").textContent = "設定中のテーマ：取得失敗";
+    $("queueErr").textContent = "APIに繋がりませんでした: " + (e.message || e);
+  }
+})();
+</script>
+    <section class="section" id="articles">
+  <h2>記事一覧</h2>
+  <div class="card">
+  <div class="row" style="margin-bottom:10px;">
+    <span class="badge">並び替え</span>
+    <select id="sortArticles" class="input" style="width:auto;">
+      <option value="dateDesc">新しい順</option>
+      <option value="dateAsc">古い順</option>
+      <option value="titleAsc">タイトル A→Z</option>
+      <option value="titleDesc">タイトル Z→A</option>
+    </select>
+
+    <span class="badge">検索</span>
+    <input id="searchArticles"
+          class="input"
+          style="min-width:220px; flex:1;"
+          placeholder="タイトル検索（例：PowerShell）"
+          autocomplete="off" />
+    <button class="btn" id="clearSearch" type="button">クリア</button>
+
+    <span class="meta" id="searchMeta" aria-live="polite"></span>
+  </div>
+
+
+    <ul id="articleList">
+  <li class="item" data-date="2026-01-03" data-title="バックエンドとフロントエンドの違いをすぐに使える観点で整理" data-mtime="1767398541169.4343">
+    <a class="title" href="genba_2026-01-03_820011.html">バックエンドとフロントエンドの違いをすぐに使える観点で整理</a>
+    <span class="meta">2026-01-03</span>
+  </li>
+  <li class="item" data-date="2026-01-02" data-title="実践的セキュリティ事故対策：メール誤送信と初動の時短テク" data-mtime="1767335315979.407">
+    <a class="title" href="genba_2026-01-02_168975.html">実践的セキュリティ事故対策：メール誤送信と初動の時短テク</a>
+    <span class="meta">2026-01-02</span>
+  </li>
+  <li class="item" data-date="2026-01-02" data-title="VBA入門：仕事効率を上げる最初の一歩" data-mtime="1767336729011.8586">
+    <a class="title" href="genba_2026-01-02_799295.html">VBA入門：仕事効率を上げる最初の一歩</a>
+    <span class="meta">2026-01-02</span>
+  </li>
+  <li class="item" data-date="2026-01-02" data-title="VBA：同名ファイルを安全に開く・扱うコツ" data-mtime="1767337028379.7053">
+    <a class="title" href="genba_2026-01-02_870299.html">VBA：同名ファイルを安全に開く・扱うコツ</a>
+    <span class="meta">2026-01-02</span>
+  </li>
+  <li class="item" data-date="2026-01-02" data-title="Windowsの時短＆失敗回避テクニック集" data-mtime="1767330602059.3113">
+    <a class="title" href="genba_2026-01-02_946454.html">Windowsの時短＆失敗回避テクニック集</a>
+    <span class="meta">2026-01-02</span>
+  </li>
+  <li class="item" data-date="2026-01-02" data-title="ちょっと楽しいAI活用術：時短と失敗回避の実践例" data-mtime="1767334634623.0703">
+    <a class="title" href="genba_2026-01-02_985211.html">ちょっと楽しいAI活用術：時短と失敗回避の実践例</a>
+    <span class="meta">2026-01-02</span>
+  </li>
+  <li class="item" data-date="2025-12-29" data-title="PowerShell:Start-Processの基本と活用方法" data-mtime="1766994720679.6196">
+    <a class="title" href="genba_2025-12-29_655979.html">PowerShell:Start-Processの基本と活用方法</a>
+    <span class="meta">2025-12-29</span>
+  </li>
+  <li class="item" data-date="2025-12-26" data-title="Windowsで仕事が速くなる実践機能集（IT初心者向け）" data-mtime="1767184610183.8174">
+    <a class="title" href="genba_2025-12-26_316785.html">Windowsで仕事が速くなる実践機能集（IT初心者向け）</a>
+    <span class="meta">2025-12-26</span>
+  </li>
+  <li class="item" data-date="2025-12-26" data-title="PowerShellでファイルを探す：Get-ChildItem と Select-String の現場メモ" data-mtime="1766981496436.1558">
+    <a class="title" href="genba_2025-12-26_824626.html">PowerShellでファイルを探す：Get-ChildItem と Select-String の現場メモ</a>
+    <span class="meta">2025-12-26</span>
+  </li>
+  <li class="item" data-date="2025-12-26" data-title="JavaScriptの基本 — 現場で使える最初の一歩" data-mtime="1766981496440.1558">
+    <a class="title" href="genba_2025-12-26_989419.html">JavaScriptの基本 — 現場で使える最初の一歩</a>
+    <span class="meta">2025-12-26</span>
+  </li>
+  <li class="item" data-date="2025-11-27" data-title="PowerShellコマンド：テキスト系ファイルの操作" data-mtime="1764201600000">
+    <a class="title" href="../win_command_file.html">PowerShellコマンド：テキスト系ファイルの操作</a>
+    <span class="meta">2025-11-27</span>
+  </li>
+  <li class="item" data-date="2025-11-25" data-title="PowerShellコマンド：フォルダの操作" data-mtime="1764028800000">
+    <a class="title" href="../win_command.html">PowerShellコマンド：フォルダの操作</a>
+    <span class="meta">2025-11-25</span>
+  </li>
+    </ul>
+
+   <script>
+    (() => {
+      const sel   = document.getElementById("sortArticles");
+      const q     = document.getElementById("searchArticles");
+      const clear = document.getElementById("clearSearch");
+      const meta  = document.getElementById("searchMeta");
+      const list  = document.getElementById("articleList");
+
+      const getDate  = (li) => li.dataset.date || "";
+      const getTitle = (li) => (li.dataset.title || li.textContent || "").trim();
+      const getMtime = (li) => Number(li.dataset.mtime || 0);
+
+      function cmpDate(a, b, dir) {
+        const da = getDate(a), db = getDate(b);
+        if (da && db) return dir * da.localeCompare(db); // YYYY-MM-DD
+        if (da && !db) return -1;
+        if (!da && db) return  1;
+        return dir * (getMtime(a) - getMtime(b));
+      }
+
+      function applyFilter() {
+        const term = ((q && q.value) ? q.value : "").trim().toLowerCase();
+        const items = Array.from(list.querySelectorAll("li.item"));
+
+        let shown = 0;
+        for (const li of items) {
+          const hay = (getTitle(li) + " " + getDate(li)).toLowerCase();
+          const ok = (!term) || hay.includes(term);
+          li.style.display = ok ? "" : "none";
+          if (ok) shown++;
+        }
+
+        if (meta) meta.textContent = shown + "/" + items.length;
+      }
+
+      function sortAndRender(mode) {
+        const items = Array.from(list.querySelectorAll("li.item"));
+
+        items.sort((a, b) => {
+          switch (mode) {
+            case "dateAsc":   return cmpDate(a, b, +1);
+            case "dateDesc":  return cmpDate(a, b, -1);
+            case "titleAsc":  return getTitle(a).localeCompare(getTitle(b), "ja");
+            case "titleDesc": return getTitle(b).localeCompare(getTitle(a), "ja");
+            default: return 0;
+          }
+        });
+
+        const frag = document.createDocumentFragment();
+        items.forEach((li) => frag.appendChild(li));
+        list.appendChild(frag);
+
+        applyFilter(); // ソート後も絞り込み維持
+      }
+
+      sel && sel.addEventListener("change", () => sortAndRender(sel.value));
+      q && q.addEventListener("input", applyFilter);
+      q && q.addEventListener("search", applyFilter); // type="search" の場合に来ることがある
+
+      if (clear) {
+        clear.addEventListener("click", () => {
+          if (q) q.value = "";
+          applyFilter();
+          if (q) q.focus();
+        });
+      }
+
+      sortAndRender((sel && sel.value) ? sel.value : "dateDesc");
+    })();
+    </script>
+
+  </div>
+</section>
+  </main>
+
+  <footer>© 2025 hi</footer>
+
+  <script>
+    // モバイルメニュー：aria-expandedを更新（Disclosure系パターン）
+    const menuBtn = document.getElementById("menuBtn");
+    const siteNav = document.getElementById("siteNav");
+    menuBtn?.addEventListener("click", () => {
+      const open = siteNav.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    siteNav?.addEventListener("click", (e) => {
+      const a = e.target.closest("a");
+      if (!a) return;
+      if (siteNav.classList.contains("open")) {
+        siteNav.classList.remove("open");
+        menuBtn?.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：変数ってなに？(変数と型 int / float / str / boolなど)</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767337586503">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：変数ってなに？(変数と型 int / float / str / boolなど)</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>="pill" href="/posts/python/">Python記事一覧</a>
+        </nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/400971.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">変数とは？基本の考え方と使い分けの基準</a></li>
+  <li><a href="#sec-2">実践：最小コードと実行方法</a></li>
+  <li><a href="#sec-3">確認とデバッグ（type確認・print・logging）</a></li>
+  <li><a href="#sec-4">よくあるミスと1段ステップアップ</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>変数とは？基本の考え方と使い分けの基準</h3>
+  <p>今回できるようになることは、変数の意味と int/float/str/bool の使い分けがわかり、簡単な演算と表示ができるようになることです。</p>
+
+<p>変数とは、値（データ）に名前を付けて扱う箱（参照）です。型とは、その箱に入るデータの種類を表し、int（整数）、float（小数）、str（文字列）、bool（真偽値）などがあります。</p>
+
+<p>使い分けは、数値計算なら int/float、テキストなら str、条件判定なら bool を選ぶのが基本です。型が異なると演算や結合で失敗しやすいため、必要に応じて int()/float()/str() で明示的に変換すると要チェックしやすくなります。</p>
+
+<ul>
+  <li>計算の精度が必要な場合は float を基準に選びます。</li>
+  <li>桁や順序を扱う場合は int を基準に選びます。</li>
+  <li>出力や結合では str、真偽判定では bool を基準に選びます。</li>
+</ul>
+</section>
+
+<section id="sec-2">
+  <h3>実践：最小コードと実行方法</h3>
+  <p>最小コードは次のとおりです。</p>
+
+<pre><code class="language-python"># vars_demo.py
+a = 10                       # int
+b = 3.5                      # float
+name = "Alice"               # str
+is_active = True             # bool
+
+sum_val = a + b              # int + float -&gt; float
+greet = "User: " + name      # str concatenation
+check = (a &gt; 5) and is_active
+
+print("sum_val =", sum_val)
+print("greet =", greet)
+print("check =", check)
+print("sum_val type:", type(sum_val))
+</code></pre>
+
+<p>このコードは数値の加算、文字列の結合、真偽値の組み合わせを行い、最後に値と型を表示します。</p>
+
+<p>実行方法は次のとおりです。</p>
+
+<ol>
+  <li>ファイル名を vars_demo.py として保存します。</li>
+  <li>ターミナルで <code>python vars_demo.py</code> を実行します。</li>
+  <li>または VSCode でファイルを開き、Run（実行）を押して実行します。</li>
+</ol>
+
+<pre><code class="language-bash"># 実行コマンド例
+python vars_demo.py
+</code></pre>
+</section>
+
+<section id="sec-3">
+  <h3>確認とデバッグ（type確認・print・logging）</h3>
+  <p>途中結果を確かめるには、<code>print()</code>で値を表示し、<code>type(変数)</code>で型を確認すると分かりやすいです。実行中に想定どおりの値になっているかを追うことで、原因の切り分けが早くなります。</p>
+
+<p>出力を状況に応じて切り替えたい場合は、<code>logging</code>モジュールを使うとレベル管理ができます。たとえば<code>logging.basicConfig(level=logging.DEBUG)</code>を設定し、<code>logging.debug()</code>で詳細ログを出す運用にすると、開発時と本番時で出力を調整しやすくなります。</p>
+
+<pre><code>sum_val = 13.5
+greet = "User: Alice"
+check = True
+
+print("sum_val =", sum_val)
+print("greet =", greet)
+print("check =", check)
+print("sum_val type:", type(sum_val))</code></pre>
+
+<pre><code>sum_val = 13.5
+greet = User: Alice
+check = True
+sum_val type: &lt;class 'float'&gt;</code></pre>
+
+<p>値の追跡は<code>print</code>が手早く、型の確認は<code>type()</code>が確実です。必要になった段階で<code>logging</code>を導入すると、出力の整理がしやすくなります。</p>
+
+<p>ポイントとして、短いコードでは<code>print</code>が最短ですが、規模が大きくなるほど出力が散らかりやすいので、状況に応じて<code>logging</code>へ寄せると保守しやすいです。</p>
+</section>
+
+<section id="sec-4">
+  <h3>よくあるミスと1段ステップアップ</h3>
+  <p>よくあるミスとして、文字列と数値を<code>+</code>で結合しようとしてTypeErrorになることがあります。この場合は、<code>str()</code>で数値を文字列に変換するか、フォーマット文字列の<code>f"{val}"</code>で結合すると解決しやすいです。</p>
+
+<p>また、計算結果が期待した型にならないことも起こりやすいです。たとえば、整数同士の割り算でも結果が<code>float</code>になるため、必要に応じて<code>int()</code>で変換したり、<code>round()</code>で丸めたりすると意図に合いやすいです。</p>
+
+<p>1段ステップアップとして、入力を受け取って型変換まで行う処理を関数化すると再利用性が上がります。さらに例外処理を入れておくと、不正な入力が混ざっても処理が止まりにくくなります。</p>
+
+<pre><code>def read_int(prompt="数値を入力してください: "):
+    while True:
+        s = input(prompt)
+        try:
+            return int(s)
+        except ValueError:
+            print("整数として解釈できませんでした。もう一度入力してください。")
+
+
+def read_float(prompt="小数を入力してください: "):
+    while True:
+        s = input(prompt)
+        try:
+            return float(s)
+        except ValueError:
+            print("小数として解釈できませんでした。もう一度入力してください。")
+</code></pre>
+
+<p>使い分けの基準として、表示は<code>str</code>に変換し、計算は数値型で扱い、条件分岐は<code>bool</code>で扱うと整理しやすいです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>変数名は英字またはアンダースコアで始める必要があります。また、組み込み名（例: <code>list</code>、<code>str</code>、<code>int</code>）を変数名にして上書きすると標準の振る舞いに影響しやすいため、要チェックとして避けたい例です。</li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>変数は値に名前を付ける箱のようなもので、int・float・str・boolは用途に応じて使い分けできます。</li>
+  <li>型が違うと演算や結合がうまくいかないため、type()で確認しつつ、必要に応じて明示的に変換するとよいです。</li>
+  <li>最小コード例で、加算・文字列結合・真偽値の基本操作と出力を学べます。</li>
+  <li>デバッグではprintとtype()で確認し、必要ならloggingも使うと効率よく状況を追えます。</li>
+  <li>よくあるミスは型の不一致と組み込みの名前の上書きで、エラーメッセージを読みながら変換や名前変更で直せます。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

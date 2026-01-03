@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>タイトルタグはページ中には表示されない。記事のテンプレ</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1766977946166">
+  <style>
+  .tight-list {
+    margin-left: 0;
+    padding-left: 2em;  /* インデントを少なめに調整 */
+  }
+  pre {
+    background-color: #000;
+    color: #fff;
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>タイトル：テンプレ&テスト用</h1>
+    <nav>
+      <a href="/index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>サブタイトル</h2>
+      <p><small>投稿日：2025-11-17</small></p>
+
+      <h3>大項目1</h3>
+      <ul>
+        <li>中点1</li>
+        <li>中点2</li>
+      </ul>
+      <ul class="tight-list">
+        <li>中点3(tight-list関数で位置調整可)</li>
+        <li>中点4(ulタグでリスト囲んでも前に出る)</li>
+      </ul>
+
+      <h3>大項目2</h3>
+      <pre><code>
+        // pre/codeタグはコード用のタグ
+      </code></pre>
+
+      <h3>大項目3</h3>
+      <p>pタグは段落で使う。文章を書く時はpタグ</p>
+      <p>改行は末尾にbrタグ</p><br>
+      <p>a href="url"でリンクを貼れる</p>
+      <a href="https://example.com">リンクの文字</a>
+
+      <h3>大項目4</h3>
+      <p>画像を入れる時はimgタグに画像パス、altタグに画像が表示できないときの代わりのテキスト：</p>
+      <img src="/img/gpt_ras.png" alt="GPT作ラズベリー" width="400">
+      <p></p>
+    </article>
+  </main>
+
+  <footer>
+    <p>c 2025 hi</p>
+  </footer>
+</body>
+</html>

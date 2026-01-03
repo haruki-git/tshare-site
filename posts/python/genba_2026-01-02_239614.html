@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：記号まとめ — () [] {} , . の基本ルール</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767358555942">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：記号まとめ — () [] {} , . の基本ルール</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/239614.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">はじめに：役割の全体像</a></li>
+  <li><a href="#sec-2">最小コードで動かして覚える</a></li>
+  <li><a href="#sec-3">使い分けと具体ルール</a></li>
+  <li><a href="#sec-4">デバッグの見方と1段ステップアップ</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>はじめに：役割の全体像</h3>
+  <p>今回できるようになることは、Pythonで使う主な記号の意味と基本的な使い分けを理解して、簡単なコードを書いて動作確認できるようになることです。</p>
+<p>丸括弧()は関数呼び出しやタプル（複数値のグループ化）に使います。角括弧[]はリストとインデックス指定に使います。波括弧{}は辞書（キーと値）と集合に使います。</p>
+<p>コンマ,は要素の区切りに使います。ドット.は属性やメソッドの呼び出しに使います。最初は用途ごとに覚えると混乱が減ります。</p>
+</section>
+
+<section id="sec-2">
+  <h3>最小コードで動かして覚える</h3>
+  <p>最小コードは、関数呼び出し、リストのインデックス参照、タプル・辞書の作成と参照を順に確認できる内容です。</p>
+
+<pre><code class="language-python"># demo_symbols.py
+def greet(name):
+    return f"Hello, {name}"  # () と {}（f文字列の波括弧）
+
+names = ["Alice", "Bob"]      # [] リスト
+pair = ("x", 1)              # () タプル
+info = {"a": 1, "b": 2}      # {} 辞書
+
+print(greet(names[0]))       # ドットと()、インデックス[]
+print(pair, type(pair))      # コンマで複数値
+print(info["a"])             # 辞書参照 []</code></pre>
+
+<p>実行方法は次のとおりです。</p>
+<ol>
+  <li>ファイル名を demo_symbols.py にして保存します。</li>
+  <li>ターミナルで python demo_symbols.py を実行します。</li>
+  <li>または VSCode でファイルを開き、上部の実行ボタンで実行します。</li>
+</ol>
+
+<p>出力例は次のとおりです。</p>
+<pre><code>Hello, Alice
+('x', 1) &lt;class 'tuple'&gt;
+1</code></pre>
+
+<p>確認方法として、print を使って途中結果を表示します。type() で型を確認します。names[0] や info["a"] を個別に print して、値の取り出しを確認します。</p>
+</section>
+
+<section id="sec-3">
+  <h3>使い分けと具体ルール</h3>
+  <p>使い分けの基準は、要素を変更する予定があるならリスト <code>[]</code> を選ぶことです。順序が不変ならタプル <code>()</code> を候補にします。キーで値を参照するなら辞書 <code>{}</code> を選びます。要素が重複しない集合が必要なら <code>set()</code> を使います。関数呼び出しは必ず <code>()</code> を付けます。</p>
+
+<p>コンマの罠は単一要素のタプルです。<code>("a")</code> は文字列ですが、<code>("a",)</code> は1要素タプルです。辞書リテラルと集合リテラルは <code>{}</code> で見た目が同じに見える点が紛らわしいです。<code>{}</code> にコロンがあると辞書になります。属性アクセスのドットはメソッド呼び出しとプロパティ取得を区別するので、メソッドは必ず <code>()</code> を付けて実行します。</p>
+
+<p>よくあるミスは、1要素タプルのコンマを書き忘れて <code>("a")</code> としてしまうことです。直し方は、要素の後ろにコンマを付けて <code>("a",)</code> と表記することです。</p>
+
+<pre><code>("a")    # 文字列です
+("a",)   # 1要素タプルです
+{"a": 1} # コロンがあるので辞書です
+</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>デバッグの見方と1段ステップアップ</h3>
+  <p>デバッグの見方は、まず <code>print()</code> で変数の中身と型を表示すると把握しやすいです。</p>
+<pre><code>print(f"names={names}, type={type(names)}")</code></pre>
+<p>次に <code>logging</code> モジュールを使うと、レベル別に出力を整理できます。</p>
+<p>VSCode のデバッガーではブレークポイントを置き、変数ウィンドウで値を確認すると状況を追いやすいです。</p>
+
+<p>1段ステップアップとして、関数化して例外処理を加える練習をすると保守しやすくなります。</p>
+<p>例えば辞書参照を関数にして <code>KeyError</code> を捕まえると、処理が堅牢になります。</p>
+<p>ファイル入出力が必要な場合は <code>open()</code> を <code>with</code> 文で使うと自動でクローズされます。</p>
+<p>外部ライブラリが必要な場合は <code>pip install</code> で導入できます。</p>
+
+<p>例（簡単な例外処理）です。</p>
+<pre><code class="language-python">def get_val(d, k):
+    try:
+        return d[k]
+    except KeyError:
+        return None</code></pre>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <p>リストや辞書をループで回しながら同じオブジェクトを変更すると、期待した順序や要素が変わることがあります。</p>
+<ul>
+  <li>例えば、forで回している最中にリストの要素を削除すると、要素が一部飛ばされることがあります。</li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>丸括弧 () は関数呼び出しとタプルの作成に使います。</li>
+  <li>角括弧 [] はリストの作成と、インデックス参照やスライスに使います。</li>
+  <li>波括弧 {} は辞書リテラルと集合リテラルに使うため、違いを見分けて使います。</li>
+  <li>コンマ , は要素の区切りに使い、単要素タプルでは末尾にコンマが必要です。</li>
+  <li>ドット . は属性やメソッドの参照に使い、メソッドは () を付けて呼びます。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

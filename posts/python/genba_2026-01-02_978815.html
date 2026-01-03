@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：インデントとコロン（:）— if/for/def/try の基本ルール</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767358555942">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：インデントとコロン : — if/for/def/try の基本ルール</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/978815.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+      <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">インデントとコロンの基本</a></li>
+  <li><a href="#sec-2">if と for の書き方</a></li>
+  <li><a href="#sec-3">def と例外処理（try）の書き方</a></li>
+  <li><a href="#sec-4">デバッグの見方（print / logging / 変数の確認）</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>インデントとコロンの基本</h3>
+  <p>今回できるようになることは、if/for/def/tryでコロンとインデントを正しく使えるようになることです。</p>
+
+<p>Pythonはブロックを波括弧ではなくインデント（字下げ）で表す言語です。コロン（:）は「これからブロックが始まります」という合図で、忘れるとSyntaxErrorになります。</p>
+
+<p>インデントはスペースが一般的で、1レベルは慣習的に4スペースです。タブとスペースの混在は避けると、読みやすさと互換性が高まります。</p>
+
+<p>使い分けの基準としては、複数行の処理が必要ならコロン＋インデントのブロックを使い、一行だけで簡潔に書きたい場合は三項演算子や内包表現を検討するとよいです。</p>
+</section>
+
+<section id="sec-2">
+  <h3>if と for の書き方</h3>
+  <p>if 文は条件の末尾にコロンを置き、続く行をインデントします。elif と else も同様です。</p>
+<p>for 文もコロンで終え、繰り返し内の処理をインデントします。1行で書くこともできますが、可読性を考えると複雑な処理はブロック化するほうが望ましいです。</p>
+<pre><code>if x &gt; 0: print("pos")</code></pre>
+<pre><code>if x &gt; 0:
+    print("pos")
+    print(type(x))
+
+for i in range(3):
+    print(i)</code></pre>
+<p>動作確認では、条件分岐やループの中に print を置いて値や型を出力すると把握しやすいです。ループ中に変数が期待どおりに更新されるかも、print で追うと確認しやすいです。</p>
+<p>ポイントとして、ネストが深くなると読みづらくなるため、処理を小さな関数に分けるのが良いです。</p>
+</section>
+
+<section id="sec-3">
+  <h3>def と例外処理（try）の書き方</h3>
+  <p>関数定義（def）もコロンで終えて、次行をインデントして本体を書きます。例外処理は <code>try:</code> の後に <code>except</code> を続けます。最小コードは次のとおりです。</p>
+
+<pre><code class="language-python">def greet(names):
+    for n in names:
+        if n:
+            print(f"Hello, {n}")
+        else:
+            print("Hello, stranger")
+
+def divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return None
+
+if __name__ == "__main__":
+    names = ["Alice", "", "Bob"]
+    greet(names)
+    print("3/0 -&gt;", divide(3, 0))
+</code></pre>
+
+<p>このコードでは、<code>greet</code> が名前を順に出力します。<code>divide</code> はゼロ除算のときに <code>None</code> を返します。出力例は下の「出力例：」で示します。</p>
+
+<p>関数は処理を分割して、ネストを浅く保つ助けになります。短い処理はその場で書き、再利用する処理やテストしたい処理は <code>def</code> で関数化するとよいです。</p>
+</section>
+
+<section id="sec-4">
+  <h3>デバッグの見方（print / logging / 変数の確認）</h3>
+  <p>実行中の値を把握するには、print が最も手軽です。ログが増えてきたら、標準ライブラリの logging を使うとレベルを管理しやすくなります。</p>
+
+<p>logging の基本設定は、次のとおりです。</p>
+
+<pre><code>import logging
+logging.basicConfig(level=logging.INFO)</code></pre>
+
+<p>進め方は、次の5つに収めると整理しやすいです。</p>
+
+<ol>
+  <li>問題の前後に print を置きます。</li>
+  <li>期待値と実際値を比較します。</li>
+  <li>type() で型を確認します。</li>
+  <li>必要であれば logging に切り替えます。</li>
+  <li>VSCode のデバッガでブレークポイントを使います。</li>
+</ol>
+
+<p>実行方法は、次のようにコマンドで実行します。</p>
+
+<pre><code class="language-bash">python sample.py
+# または VSCode でファイルを開き、実行ボタンを押してください</code></pre>
+
+<p>出力例は次のとおりです。</p>
+
+<pre><code>Hello, Alice
+Hello, stranger
+Hello, Bob
+3/0 -&gt; None</code></pre>
+
+<p>確認するときは、関数の返却値を print で表示し、type() で型も合わせて見ておくと要チェック箇所を絞り込みやすいです。途中結果も表示して、ロジックが期待どおりに進んでいるか確かめます。</p>
+
+<p>よくあるミスは2つです。if や def の行末にコロンを付け忘れると SyntaxError になりやすいので、該当行の末尾に : を追加します。タブとスペースが混在すると IndentationError になりやすいので、エディタ設定をスペース4に統一し、不要なタブはスペースに置換します。</p>
+
+<p>print で追いかけるデバッグは泥臭いですが、最初は間違い探しが速くなります。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <p>タブとスペースが混在すると想定外の IndentationError につながりやすいです。</p>
+<ul>
+  <li>プロジェクトではスペース4に統一すると安定します。</li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li><p>コロン（:）はブロック開始の合図です。必ず行末に付けて、次の行からインデントを続けてください。</p></li>
+  <li><p>インデントはスペース4つが慣習です。タブと混在させないようにしてください。</p></li>
+  <li><p>if/for/def/try はすべて、コロン（:）とインデントでブロックを作る書き方です。</p></li>
+  <li><p>デバッグはまず print で状況を確認し、規模が大きくなったら logging とデバッガで追跡するのが要チェックです。</p></li>
+  <li><p>よくあるエラーはコロンの付け忘れとインデントの不一致です。原因を理解して修正してください。</p></li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

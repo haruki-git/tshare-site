@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>自宅Webサーバ作成：他のPCから操作できるようにする</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1766977946166">
+  <style>
+  .tight-list {
+    margin-left: 0;
+    padding-left: 2em;  /* インデントを少なめに調整 */
+  }
+  pre {
+    background-color: #000;
+    color: #fff;
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>自宅Webサーバ作成：他のPCから操作できるようにする</h1>
+    <nav>
+      <a href="/index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>2.他のPCから操作できるようにする</h2>
+      <p><small>投稿日：2025-11-23</small></p>
+      
+      <p>毎回ラズパイにモニター・マウス・キーボードをつないで操作するのは面倒なので、普段使用しているPCから操作できるようにします。
+      <br>ラズパイの初期設定ではWindowsのリモートデスクトップ（RDP）を受け付けるようにはなっていないので、代わりにRealVNCを使ってリモートデスクトップ接続を行います。</p>
+      <br>
+      <h3>ラズパイ側でVNCを有効化</h3>
+      <p>VNCは Virtual Network Computing の略で、これを有効化すると遠隔操作を受付けるようになります。
+      <br>ラズパイ側のターミナルを開いて</p>
+      <pre><code>sudo raspi-config</code></pre>
+      <p>と入力してEnterを押します。</p>
+      <img src="/img/sudo raspi-config.jpg" alt="sudo raspi-config" width="500">
+      <p>Interface Options を選択してEnterを押します。</p>
+      <img src="/img/Interface Optionsを選択してEnter.jpg" alt="画像" width="500">
+      <p>VNC を選択してEnterを押します。</p>
+      <img src="/img/VNCを選択してEnter.jpg" alt="画像" width="500">
+      <p>はい を選択してEnterを押します。</p>
+      <img src="/img/はい を選択してEnter.jpg" alt="画像" width="500">
+      <p>ラズパイ側のターミナルで</p>
+      <pre><code>hostname -I</code></pre>
+      <p>と入力してEnterを押します。
+      <br>表示されたIPアドレス(例：192.168.〇.〇)をメモしておきます。
+      <br>これでラズパイ側の作業は終わりです。</p>
+      <br>
+
+      <h3>PCにRealVNCをインストール</h3>
+      <p>普段使用のPCで公式サイトからVNC Viewerをダウンロードしていきます。
+      <br>下記のリンクを開きます。</p>
+      <a href="https://www.realvnc.com/en/connect/download/viewer/">https://www.realvnc.com/en/connect/download/viewer/</a>
+      <p>Download RealVNC Viewer を押して、インストーラーをダウンロードします。
+      <br>VNC-Viewer-~~(バージョン/OS名).exe を起動して、RealVNC Connectをインストールします。
+      <br>RealVNC Connect を起動して、左の欄でDevicesを選択します。
+      <br>上部のアドレス欄にさっき調べた、IPアドレスを入力します。</p>
+      <img src="/img/RealVNC Connect を起動して、Devicesを選択します。p.jpg" alt="画像" width="500">
+      <p>接続できるPCが表示されたら、それをダブルクリックします。
+      <br>ユーザ名とパスワードを聞かれるので、ラズパイのユーザ名とパスワードを入力します。
+      <br>接続成功すると、PC上にラズパイのデスクトップ画面が表示され、操作できるようになります。</p>
+      <br>
+      
+    </article>
+  </main>
+
+  <footer>
+    <p>c 2025 hi</p>
+  </footer>
+</body>
+</html>

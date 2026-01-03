@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>自宅Webサーバ作成：ラズパイをWebサーバ化</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1766977946166">
+    <style>
+    /* コードブロックの見た目 */
+    pre {
+      background-color: #000;
+      color: #fff;
+      font-family: monospace;
+      padding: 0px 10px;
+      border-radius: 4px;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <h1>自宅Webサーバ作成：ラズパイをWebサーバ化</h1>
+    <nav>
+      <a href="/index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>3.ラズパイをWebサーバ化</h2>
+      <p><small>投稿日：2025-11-23</small></p>
+      
+      <p></p>
+      <pre><code>
+      </code></pre>
+      <h3>IT用語の説明</h3>
+      <p>大まかに使用するもの、出てくるもの</p>
+      <p>LINUXのコマンド</p>
+      <p>ディストリビューション</p>
+      <p>HTML：中身・構造を決める、例：タイトル、文章、画像、リンク など。マークアップ言語</p>
+      <p>CSS：見た目を決める、文字の色・大きさ、背景色、余白、枠線、レイアウト など。スタイルシート言語</p>
+      <p>その他、コマンドの意味などは、その都度説明を入れていきます。</p>
+      <br>
+      <h3>ラズパイを最新状態にする</h3>
+      <pre><code>
+sudo apt update
+sudo apt upgrade -y
+      </code></pre>
+      <p>終わったら念のため再起動：</p>
+      <pre><code>
+sudo reboot
+      </code></pre>
+      <p>再起動後、またRealVNCで接続します。</p>
+      <br>
+
+      <h3>Apache Webサーバをインストール</h3>
+      <p>ターミナルで：</p>
+      <pre><code>
+sudo apt install apache2 -y
+      </code></pre>
+       <p>インストール後、自動で起動します。状態確認：</p>
+      <pre><code>
+systemctl status apache2
+      </code></pre>
+      <p>active (running) と出ていればOKです。qキーで抜けられます。</p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <pre><code>
+      </code></pre>
+      <pre><code>
+      </code></pre>
+      <pre><code>
+      </code></pre>
+      <pre><code>
+      </code></pre>
+      <br>
+
+      <h3>ブラウザからアクセス確認（まずは自宅LAN内）</h3>
+      <p></p>
+      <p></p>
+      <p></p>
+      <pre><code>
+hostname -I
+      </code></pre>      
+      <p>同じWi-FiにつながっているPCやスマホでブラウザを開き、</p>
+      <p>http://192.168.0.23 （←さっきのIPに置き換え）</p>
+      <p>にアクセスしてみてください。</p>
+      <p>Apache2 Debian Default Page みたいなページが表示されれば Webサーバとして稼働OK です。</p>
+
+      <pre><code>
+      </code></pre>
+      <pre><code>
+      </code></pre>
+      <pre><code>
+      </code></pre>
+      <br>
+
+      <h3>公開フォルダの場所とトップページ編集</h3>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <pre><code>
+      </code></pre>
+      <pre><code>
+      </code></pre>
+      <pre><code>
+      </code></pre>
+      <pre><code>
+      </code></pre>
+      <br>
+
+      <h3>ファイル種類ごとのフォルダをつくる</h3>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <pre><code>
+      </code></pre>
+      <pre><code>
+      </code></pre>
+      <pre><code>
+      </code></pre>
+      <pre><code>
+      </code></pre>
+      <br>
+
+      <h3>共通デザイン用の CSS をつくる</h3>
+      <p>「共通デザイン用CSS」＝ サイト全体の見た目ルールを1つのCSSファイルにまとめること</p>
+      <p>各HTMLからlinkタグでそのCSSを読み込むとデザインが統一される</p>
+      <pre><code>
+/* 全体の基本レイアウト設定(ファイル名:style.css) */
+body {
+  font-family: sans-serif;  /* ゴシック体っぽいフォントにする */
+  max-width: 800px;         /* 本文の最大幅を800pxにする */
+  margin: 0 auto;           /* 中央寄せ */
+  padding: 16px;            /* 画面端との余白 */
+  line-height: 1.6;         /* 行間を少し広めにして読みやすく */
+}
+
+/* ページ上部のヘッダー部分 */
+header {
+  border-bottom: 1px solid #ccc;  /* 下に区切りライン */
+  margin-bottom: 16px;            /* 本文との間に余白 */
+}
+
+/* ヘッダー内のタイトル */
+header h1 {
+  margin-bottom: 4px;  /* タイトルとナビの間を少し空ける */
+}
+
+/* ナビゲーションリンクの見た目 */
+nav a {
+  margin-right: 8px;      /* リンク同士の間隔 */
+  text-decoration: none;  /* 下線を消す */
+}
+
+/* 記事ごとの下の余白 */
+article {
+  margin-bottom: 32px;
+}
+
+/* ページ下部のフッター */
+footer {
+  border-top: 1px solid #ccc;  /* 上に区切りライン */
+  margin-top: 32px;            /* 本文との間に余白 */
+  padding-top: 8px;            /* ラインと文字の間の余白 */
+  font-size: 0.9em;            /* 少し小さい文字サイズ */
+  color: #666;                 /* 薄いグレーで控えめに */
+}
+      </code></pre>
+
+      <br>
+      <h3>トップページ（記事一覧ページ）をつくる</h3>
+      <h3></h3>
+
+      
+    </article>
+  </main>
+
+  <footer>
+    <p>c 2025 hi</p>
+  </footer>
+</body>
+</html>

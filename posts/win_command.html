@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Windowsコマンド：フォルダの操作</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1766977946166">
+    <style>
+    /* コードブロックの見た目 */
+</style>
+</head>
+<body>
+  <header>
+    <h1>Windowsコマンド：フォルダの操作</h1>
+    <nav>
+      <a href="/index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>簡単なPowerShellでの操作</h2>
+      <p><small>投稿日：2025-11-25</small></p>
+
+      <h3>目次</h3>
+      <ul>
+        <li><a href="#cli-and-powershell">1. CLIとPowerShell</a></li>
+        <li><a href="#powershell-careful">2. PowerShellを使う時の注意点</a></li>
+        <li><a href="#open">3. PowerShellを開く</a></li>
+        <li><a href="#move">4. 作業フォルダに移動する(cdコマンド)</a></li>
+        <li><a href="#create">5. フォルダを作成する(mkdirコマンド)</a></li>
+        <li><a href="#confirm">6. フォルダの中身を確認する(lsコマンド)</a></li>
+        <li><a href="#smallcareful">7. ちょっとした注意点</a></li>
+        <li><a href="#100">8. フォルダを100個つくる</a></li>
+        <li><a href="#tree">9. フォルダの中身を下の階層も含めて確認(treeコマンド)</a></li>
+        <li><a href="#search">10. コンソール内の検索(Ctrl + Shift + F)</a></li>
+      </ul>
+      <br>
+      
+      <h3 id="cli-and-powershell">CLIとPowerShell</h3>
+      <p>CLIはコマンドラインインターフェースの略で、主にコマンド入力でPCを操作するものです。
+      <br>CUIとも呼ばれます(Character User Interface：文字によるユーザーインターフェース)。
+      <br>普段使っているウィンドウ＋ボタン操作（GUI）と比べると、例えばフォルダを100個作るとか、一気に複数ファイルを開くといった繰り返しの作業が楽になります。
+      <br>
+      <br>PowerShellはそんなCLIの1つです。
+      <br>WindowsのCLIには昔からcmd（コマンドプロンプト）がありますが、大量の設定変更や複雑な管理作業を行うには限界が見えてきたため、新しい標準ツールとして PowerShell が導入されました。
+      <br>
+      <br>PowerShellの特徴の1つに、他のCLI(cmdやLinuxなど)の一部のコマンド名も(内部でPowerShellコマンドに自動変換して)実行できることがあります。
+      <br>cmd/Linuxのコマンド名はシンプルで書きやすいですが命名規則があまりなくて覚えにくい、
+      <br>PowerShellのコマンド名は「動詞-名詞」という表現で規則性がある反面、名前が長くて書きにくい、
+      <br>と一長一短があります。
+      <br>なので、最初はcmd/Linux由来の短いコマンドも活用しつつ、適宜PowerShell独自のコマンドを使っていこうと思います。
+      </p>
+      <br>
+
+      <h3 id="powershell-careful">PowerShellを使う時の注意点</h3>
+      <p>PowerShellはファイルやフォルダを削除したり設定を大きく変更したりすることもできます。
+      <br>内容が分からないコマンドは、むやみに実行しないようにしましょう。
+      <br>実行中の処理を止めたいときは、画面で処理が続いている場合に限り、Ctrl + C で中断できることがあります。
+      <br>ただし、一瞬で終わる削除などは止められないので、「実行する前によく確認する」ことが一番の安全策です。
+      </p>
+      <br>
+      
+      <h3 id="open">PowerShellを開く</h3>
+      <p>スタートを押下し、PowerShellと入力して検索します。
+      <br>表示された「Windows PowerShell」や「PowerShell～」をクリックして起動します。
+      <br>起動すると黒い画面(コンソール)が表示され、コマンドを入力できるようになります。
+      </p>
+      <br>
+
+      <h3 id="move">作業フォルダに移動する(cdコマンド)</h3>
+      <p>あらかじめ、作業するフォルダに移動すると後の操作が簡単になります。
+      <br>作業中のフォルダはカレントディレクトリやカレントフォルダとも呼びます。
+      <br>
+      <br>作業中のフォルダを変更するには、cdコマンドを使用します。
+      <br>cdはchange directory（チェンジ・ディレクトリ）の略です。
+      <br>
+      <br>書式は
+      <pre><code>cd "移動したいフォルダのパス"</code></pre>
+      "" が無くても移動できますが、スペースや特殊記号がある場合は "" で囲わないとエラーになります。
+      <br>
+      <br>実践します。
+      <br>「C:\PowerShell Test」のフォルダで作業したいので変更します。
+      <pre><code>cd "C:\PowerShell Test\"</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/cdコマンド.jpg" alt="cdコマンド" width="500">
+      <br>コンソールの左側(赤線部分)が、指定したフォルダパスになっていたら作業フォルダの移動は完了です。
+      </p>
+      <br>
+
+      <h3 id="create">フォルダを作成する(mkdirコマンド)</h3>
+      <p>作業中のフォルダ内にフォルダを作成します。
+      <br>mkdirコマンドを使用します。mkdirはmake direcoty(ディレクトリを作る)の略です。
+      <br>
+      <br>書式は
+      <pre><code>mkdir 作成したいフォルダ名</code></pre>
+      複数作成したい場合の書式は
+      <pre><code>makdir 作成したいフォルダ名, 作成したいフォルダ名</code></pre>
+      フォルダ名にスペースや特殊記号を入れたい場合は、フォルダ名を""で囲います。
+      <br>
+      <br>実践します。
+      <br>dir1というフォルダを作成します。
+      <pre><code>mkdir dir1</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/dir1作成.jpg" alt="dir1作成" width="500">
+      <br>作成されました。
+      <br>
+      <br>dir2、dir3、dir4というフォルダを作成します。
+      <pre><code>mkdir dir2, dir3, dir4</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/dir2-4作成.jpg" alt="dir2-4作成" width="500">
+      <br>作成されました。
+      <br>エクスプローラーで確認すると、4つのフォルダができています。
+      <br>
+      <img src="/img/エクスプローラーでdir1-4を確認.jpg" alt="エクスプローラーで確認" width="500">
+      <br>mkdirコマンドは既に存在するフォルダを指定するとエラーになり上書きはされません。
+      <br>dir1フォルダがある状態で、もう一度dir1を作ろうとします。
+      <br>
+      <img src="/img/dir1がすでにあります。.jpg" alt="dir1がすでにあります。" width="500">
+      <br>「指定した名前がすでに存在します。」というエラーになります。
+      </p>
+      <br>
+
+      <h3 id="confirm">フォルダの中身を確認する(lsコマンド)</h3>
+      <p>さっきは、エクスプローラーでフォルダが作成されたか確認しましたが、
+      <br>lsコマンドでもフォルダの中身を確認できます。lsはlist(リスト)の略です。
+      <br>
+      <br>書式は
+      <pre><code>ls</code></pre>
+      lsとだけ入力するとカレントディレクトリの中身を表示します。
+      <br>特定のフォルダの中身を確認したい場合は
+      <pre><code>ls "確認したいフォルダのパス"</code></pre>
+      隠しファイルも含めて確認したい場合は
+      <pre><code>ls -Force</code></pre>
+      <br>実践します。
+      <pre><code>ls</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/lsコマンド.jpg" alt="lsコマンド" width="500">
+      <br>dir1～4が作成されているので表示されます。
+      <br>
+      <br>ゲームのフォルダの中身を確認してみます。
+      <pre><code>ls "F:\SteamLibrary\steamapps\common\MonsterHunterWilds"</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/lsコマンドゲーム.jpg" alt="lsコマンドゲーム" width="500">
+      <br>さまざまな拡張子のファイルも表示されます
+      </p>
+      <h4 id="smallcareful">ちょっとした注意点</h4>
+      <p>コマンドの後ろのハイフンが付いているものをオプションといいます。
+      <br>PowerShellでは「ls -Force」と入力すると、隠しファイルも表示されますが、lsは本来Linuxなどで使われているコマンドで、隠しファイルを表示する代表的な書き方は「ls -a」です。
+      <br>ですが、PowerShellで「ls -a」のように書くとエラーになります。
+      <br>これは、PowerShellで ls のような他環境由来のコマンドを実行すると、代わりにPowerShell内のコマンドが実行されているためです。
+      <br>ls なら Get-ChildItem が裏側で実行されていて、オプションの仕様までは同じではないのでエラーになります。
+      <br>そのため、オプション付きの短いコマンドでエラーが出たら、PowerShell用のオプションに書き換えるか、PowerShell本来のコマンドを使う必要があります。
+      </p>
+      <br>
+
+      <h3 id="100">フォルダを100個つくる</h3>
+      <p>mkdirコマンドを使用して、フォルダを100個作成していきます。
+      <br>各フォルダにバラバラの名前を付けつつフォルダを100個作成しようとすると、コマンドが複雑になるのでExcelとメモ帳を使用して簡単に作成していきます。
+      <br>
+      <br>実践します。
+      <br>間違えると面倒なのでカレントディレクトリを確認します。
+      <br>今回は、C:\PowerShell Test\dir1 内に作成するので移動します。
+      <pre><code>cd "C:\PowerShell Test\dir1"</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/100個フォルダ作成時のカレントディレクトリ.jpg" alt="カレントディレクトリに移動" width="500">
+      <br>移動できました。
+      <br>
+      <br>Excelを開いてA列の100行目までmkdirを入力します。
+      <br>
+      <img src="/img/excelamkdir.jpg" alt="ExcelA列" width="500">
+      <br>
+      <br>B列に作成したいフォルダ名を入力します。
+      <br>今回は、2025-01-01から2025-04-10までを作成するので入力していきます。
+      <br>
+      <img src="/img/excelbdate.jpg" alt="ExcelB列" width="500">
+      <br>
+      <br>そのままコピーするとmkdirとフォルダ名の間にTAB文字が入るので編集していきます。
+      <br>AB列の100行目までをコピーしてメモ帳に貼り付けます。
+      <br>編集 → 置換と選択します。
+      <br>mkdirとフォルダ名の間を選択して、半角スペースにすべて置換します。
+      <br>
+      <img src="/img/texttab.jpg" alt="texttab" width="500">
+      <br>
+      <br>mkdirとフォルダ名の間が半角スペースだけになりました。
+      <br>
+      <img src="/img/textspace.jpg" alt="textspace" width="500">
+      <br>
+      <br>メモ帳で編集したものを全部PowerShellに貼り付けます。
+      <br>ダイアログが表示されるので強制的に貼付けを押下します。
+      <br>
+      <img src="/img/daialogok.jpg" alt="ダイアログで強制的に貼付け" width="500">
+      <br>
+      <br>1つずつ実行され最後のフォルダが作成されました。
+      <br>
+      <img src="/img/100フォルダ作成後.jpg" alt="100フォルダ作成後" width="500">
+      <br>
+      <br>lsコマンドで確認します。
+      <br>2025-01-01から2025-04-10までのフォルダが作成されています。
+      <br>
+      <img src="/img/lsdedate1.jpg" alt="100フォルダ作成後" width="500">
+      <br>
+      <img src="/img/lsdedate100.jpg" alt="100フォルダ作成後" width="500">
+      </p>
+      <br>
+
+
+
+      <h3 id="tree">フォルダの中身を下の階層も含めて確認(treeコマンド)</h3>
+      <p>「C:\PowerShell Test」フォルダを下の階層の中身まで含めて確認してみます。
+      <br>下の階層も含めて確認するには、treeコマンドを使用します。
+      <br>treeコマンドはオプションを使用せず実行するとフォルダのみが表示され、その他のファイルは表示されません。
+      <br>
+      <br>書式は
+      <pre><code>tree</code></pre>
+      ファイルも含めて表示する場合は
+      <pre><code>tree /F</code></pre>
+      <br>中身がフォルダだけなのでオプションなしで実践します。
+      <br>カレントディレクトリを移動します。
+      <pre><code>cd "C:\PowerShell Test"</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <pre><code>tree</code></pre>
+      と入力して押下します。
+      <br>ツリー状にフォルダが表示されます。
+      <br>
+      <img src="/img/treefolder.jpg" alt="ツリー状のフォルダを確認" width="500">
+      </p>
+      <br>
+
+      <h3 id="search">コンソール内の検索(Ctrl + Shift + F)</h3>
+      </p>最後に、コンソール内で検索をします。
+      <br>Ctrl + Shift + F
+      <br>と押下すると検索バーが出てきます。
+      <br>入力したものはハイライトで表示され↑↓で移動できます。
+      <br>
+      <img src="/img/コンソール内を検索.jpg" alt="コンソール内を検索" width="600">
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <p>c 2025 hi</p>
+  </footer>
+</body>
+</html>

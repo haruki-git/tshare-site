@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：ライブラリ導入について(seleniumなど基本的なもの)</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767337586503">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：ライブラリ導入について(seleniumなど基本的なもの)</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/918616.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">基本と今回できること</a></li>
+  <li><a href="#sec-2">ライブラリ導入の流れ（pipと仮想環境）</a></li>
+  <li><a href="#sec-3">最小コードと実行</a></li>
+  <li><a href="#sec-4">デバッグと1段ステップアップ</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>基本と今回できること</h3>
+  <p>今回できるようになることは、Pythonで外部ライブラリを導入して使い始める基本手順を理解することです。</p>
+
+<p>Pythonは、標準ライブラリ（OS操作やHTTPなど）と、外部ライブラリ（pipで追加するパッケージ）に分かれます。seleniumはブラウザ自動化を行う外部ライブラリです。</p>
+
+<p>どんな場面で外部ライブラリが必要かを先に押さえると、選定が効率的です。たとえば、軽いHTTP取得やHTML解析であれば標準ライブラリのurllibや、外部のrequestsとBeautifulSoupの組み合わせを使います。一方で、ブラウザ上での操作確認やJavaScriptの評価が必要であれば、seleniumを使う判断になります。</p>
+</section>
+
+<section id="sec-2">
+  <h3>ライブラリ導入の流れ（pipと仮想環境）</h3>
+  <p>導入手順はシンプルです。</p>
+<p>まずプロジェクトごとに仮想環境を作ると依存管理が安定します。Windowsでは <code>python -m venv venv</code>、Mac/Linuxでは <code>python3 -m venv venv</code> が基本です。</p>
+<p>仮想環境を有効化してから <code>pip install</code> でパッケージを入れます。pipはPythonのパッケージ管理ツールで、インストールは1行で完了します。</p>
+<p>例（pipインストール）です。</p>
+<pre><code>pip install selenium
+</code></pre>
+<p>このコマンドでseleniumが仮想環境に追加されます。ブラウザドライバは別途用意が必要です。</p>
+</section>
+
+<section id="sec-3">
+  <h3>最小コードと実行</h3>
+  <p>最小コードは次のとおりです。</p>
+<pre><code class="language-python"># check_packages.py
+import importlib.util
+import sys
+
+def check(pkg):
+    spec = importlib.util.find_spec(pkg)
+    if spec is None:
+        print(f"{pkg} は未インストールです")
+    else:
+        print(f"{pkg} は利用可能です")
+
+if __name__ == "__main__":
+    targets = ["selenium", "bs4", "requests"]
+    for p in targets:
+        check(p)
+</code></pre>
+
+<p>このスクリプトは、指定したパッケージが環境にあるかを検査して結果を表示します。外部ライブラリの有無を簡単に確認できます。</p>
+
+<p>実行方法は、<code>python check_packages.py</code> で実行します。VSCodeでは、エクスプローラーからファイルを右クリックして「Python ファイルをターミナルで実行」を選ぶか、デバッグ実行を使います。</p>
+
+<p>出力例は次のとおりです。</p>
+<pre><code>selenium は未インストールです
+bs4 は未インストールです
+requests は利用可能です
+</code></pre>
+
+<p>要チェックのポイントは次のとおりです。</p>
+<ol>
+  <li><code>print</code> の出力を確認します。</li>
+  <li><code>importlib.util.find_spec</code> が <code>None</code> かどうかで状態を判定します。</li>
+  <li>必要なら <code>sys.executable</code> を <code>print</code> して、仮想環境を使っているかを確認します。</li>
+</ol>
+</section>
+
+<section id="sec-4">
+  <h3>デバッグと1段ステップアップ</h3>
+  <p>デバッグの見方（printやlogging、変数の確認）は基礎です。まずはprintで変数の値を出力すると状況を把握しやすいです。</p>
+
+<p>より実用的には、loggingモジュールでログ出力レベルを制御すると便利です。簡単な例は次のとおりです。</p>
+
+<pre><code class="language-python">import logging
+logging.basicConfig(level=logging.INFO)
+logging.info("チェック開始")
+</code></pre>
+
+<p>1段ステップアップとして、処理を関数化し、例外処理も追加すると保守しやすくなります。外部ライブラリをインポートする際は、try/except ImportErrorでフォールバック処理を用意しておくと運用時に詰まりにくいです。</p>
+
+<p>ImportErrorやModuleNotFoundErrorが出る場合は、仮想環境が有効化されていないことが多いです。仮想環境をアクティブにしてから再インストールすると解決しやすいです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><p>仮想環境を作らずにシステムPythonへ直接pip installすると、別プロジェクトやシステムツールに影響する場合がありますので、プロジェクトごとに仮想環境を使う習慣にすることがポイントです。</p></li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>仮想環境を作ってから <code>pip install</code> で外部ライブラリを導入できます。</li>
+  <li>最小コードでパッケージの有無を確認する習慣が、トラブルを減らします。</li>
+  <li><code>selenium</code> はブラウザ操作に向き、<code>requests</code>/<code>bs4</code> は静的な取得と解析に向くため、用途で使い分けます。</li>
+  <li>デバッグは <code>print</code> から <code>logging</code> へ発展させ、例外処理を組み合わせて頑健にします。</li>
+  <li>仮想環境を使わずにインストールすると依存関係が汚れやすいため、環境の確認を最優先にします。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

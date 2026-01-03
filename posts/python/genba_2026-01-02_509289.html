@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：関数ってなに？（def、引数、戻り値）の解説</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767337586503">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：関数ってなに？（def、引数、戻り値）の解説</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/509289.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">関数の基本と今回できること</a></li>
+  <li><a href="#sec-2">最小コードと実行方法</a></li>
+  <li><a href="#sec-3">引数・戻り値の使い方と確認の流れ</a></li>
+  <li><a href="#sec-4">デバッグと1段ステップアップ（使い分けの基準）</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>関数の基本と今回できること</h3>
+  <p>今回できるようになることは、関数の定義（def）、引数の渡し方、戻り値の受け取り方を理解して、簡単な関数を作って呼び出せるようになることです。</p>
+
+<p>関数は「処理のまとまり」です。重複を減らし、読みやすく再利用できる形にするために使います。</p>
+
+<p>Pythonではdefで関数名を定義して、丸かっこ内に引数を書きます。処理の結果を返したいときはreturnを使います。</p>
+
+<p>引数には位置引数、キーワード引数、デフォルト値があります。可変長引数（*args、**kwargs）は応用として扱います。</p>
+
+<p>関数名を分かりやすくして処理を短く保つことが、読みやすさのポイントです。</p>
+</section>
+
+<section id="sec-2">
+  <h3>最小コードと実行方法</h3>
+  <p>最小コードです。</p>
+<pre><code># functions_demo.py
+def add(a, b):
+    return a + b
+
+def greet(name="ユーザー"):
+    """名前を受け取り挨拶文字列を返します"""
+    return f"こんにちは、{name}さん"
+
+def stats(nums):
+    if not nums:
+        return None
+    return {"count": len(nums), "sum": sum(nums)}
+
+if __name__ == "__main__":
+    print(add(2, 3))
+    print(greet("太郎"))
+    print(stats([1, 2, 3]))</code></pre>
+<p>このコードは3つの関数を定義し、ファイルを直接実行したときに呼び出します。数値の足し算と挨拶、リストの集計結果を返す例です。</p>
+<p>実行方法です。</p>
+<pre><code>python functions_demo.py</code></pre>
+<p>またはVSCodeでファイルを開き、右上の「Run Python File」ボタンから実行します。</p>
+<p>出力例です。</p>
+<pre><code>5
+こんにちは、太郎さん
+{'count': 3, 'sum': 6}</code></pre>
+</section>
+
+<section id="sec-3">
+  <h3>引数・戻り値の使い方と確認の流れ</h3>
+  <p>引数は入力で、戻り値は出力です。位置引数は順序で渡し、キーワード引数は名前で指定できます。戻り値を受け取るには、変数に代入して扱います。</p>
+
+<p>確認の流れは次のとおりです。</p>
+<ol>
+  <li>関数呼び出し結果を<code>print</code>で出力します。</li>
+  <li>途中で戻り値の型を確認するには、<code>print(type(var))</code>を使います。</li>
+  <li><code>list</code>や<code>dict</code>の途中結果は、<code>print</code>で中身を確認します。</li>
+  <li>ログが必要なら、<code>logging</code>モジュールを使って出力レベルを分けます。</li>
+</ol>
+
+<p>よくあるミスとして、戻り値を返し忘れて<code>None</code>になってしまうことがあります。原因は<code>return</code>を書き忘れていることが多いので、処理の最後に<code>return</code>で値を返すようにします。</p>
+
+<pre><code>def add(a, b):
+    result = a + b
+    return result
+
+x = add(2, 3)
+print(x)  # 5</code></pre>
+
+<p><code>TypeError</code>が出る場合は、引数の型が想定と合っているかを確認します。必要なら型変換を入れるか、型ヒントを追加して意図を明確にします。</p>
+
+<pre><code>def repeat(text: str, n: int) -&gt; str:
+    return text * n
+
+n = int("3")
+print(repeat("a", n))  # aaa</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>デバッグと1段ステップアップ（使い分けの基準）</h3>
+  <p>デバッグの見方（print / logging / 変数の確認）は短時間で状態を把握できます。</p>
+<p>printは簡単に使えますが、複雑な処理や本番環境ではloggingを使うと、ログレベルで情報量を調整できて運用に向きます。</p>
+<p>IDEではブレークポイントを置き、ステップ実行しながら変数の値を確認できます。</p>
+<p>さらに1段ステップアップとして例外処理を追加すると、想定外の入力でも止まりにくくなり堅牢になります。例です。</p>
+<pre><code>def safe_div(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return None
+</code></pre>
+<p>使い分けの基準として、出力をすぐ確認したいときはprint、運用で追跡するならlogging、原因特定はブレークポイントと組み合わせるのが要チェックです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <p>デフォルト引数に可変オブジェクト（例：list、dict）を使うと、関数を呼び出すたびに同じオブジェクトが使い回されて値が保持されるため、意図しない結果になりやすいです。</p>
+<ul>
+  <li>回避するにはデフォルト値を <code>None</code> にして、関数内で新しいオブジェクトを作成する書き方にするのが要チェックです。</li>
+</ul>
+<pre><code>def add_item(item, items=None):
+    if items is None:
+        items = []
+    items.append(item)
+    return items</code></pre>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>関数は処理をまとめる仕組みで、<code>def</code>で定義し<code>return</code>で値を返せます。</li>
+  <li>引数には位置引数・キーワード引数・デフォルト引数があり、可変長引数は応用として使えます。</li>
+  <li>最小コードを実行し、<code>print</code>や<code>type</code>で途中確認すると理解が早まります。</li>
+  <li>デバッグは<code>print</code>→<code>logging</code>→ブレークポイントの順で使い分けると効率的です。</li>
+  <li>詰まりどころは「<code>return</code>の書き忘れ」と「デフォルト引数に可変オブジェクトを使うこと」で、どちらも避けたい例です。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT基礎ポータル</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=20251229-1">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="toprow">
+        <div class="brand">IT基礎ポータル</div>
+
+        <button class="menuBtn" id="menuBtn"
+                type="button"
+                aria-controls="siteNav"
+                aria-expanded="false"
+                aria-label="メニューを開く">
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" id="siteNav">
+          <a class="pill active" href="/index.html">ITニュース</a>
+          <a class="pill" href="/posts/genba/">解説記事</a>
+          <a class="pill" href="/posts/python/">Python</a>
+          <a class="pill" href="#tools">ツール</a>
+          <a class="pill" href="/posts/raspi-introduction.html">はじめに</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ▼ ニュース（詳細表示を復活） -->
+    <section class="section" id="news">
+      <h2>今日のITニュース(7:15更新)</h2>
+      <div class="card">
+        <ul id="newsList"></ul>
+        <div id="newsError" class="news-error"></div>
+      </div>
+    </section>
+
+    <!-- ▼ 記事一覧：/posts/genba/ の一覧をここに表示 -->
+    <section class="section" id="genba">
+      <h2>最近の解説記事</h2>
+      <div class="card">
+        <ul id="genbaList"></ul>
+        <div id="genbaError" class="news-error"></div>
+      </div>
+    </section>
+
+    <section class="section" id="tools">
+      <h2>ツール</h2>
+      <div class="grid">
+        <a class="tool" href="/posts/code_tools_compare.html">
+          <div class="name">翻訳 & 文章比較</div>
+          <div class="desc">短文〜長文の翻訳と、差分のチェック。</div>
+        </a>
+        <a class="tool" href="/posts/test_ui.html">
+          <div class="name">UIテスト</div>
+          <div class="desc">UIの検証用ページ。</div>
+        </a>
+        <a class="tool" href="/posts/test_recipe.html">
+          <div class="name">コードテスト</div>
+          <div class="desc">コード断片の動作確認。</div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 hi</footer>
+
+  <script>
+    // ▼モバイルメニュー：aria-expandedを更新（推奨パターン）
+    // WAI: menu button pattern  :contentReference[oaicite:3]{index=3}
+    const menuBtn = document.getElementById("menuBtn");
+    const siteNav = document.getElementById("siteNav");
+    menuBtn?.addEventListener("click", () => {
+      const open = siteNav.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    siteNav?.addEventListener("click", (e) => {
+      const a = e.target.closest("a");
+      if (!a) return;
+      if (siteNav.classList.contains("open")) {
+        siteNav.classList.remove("open");
+        menuBtn?.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    // ▼共通
+    function escapeHtml(s) {
+      return String(s ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+    function fmtJst(dtIso) {
+      try {
+        return dtIso
+          ? new Date(dtIso).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })
+          : "";
+      } catch { return ""; }
+    }
+    async function fetchJsonWithFallback(urls) {
+      for (const u of urls) {
+        try {
+          const res = await fetch(u, { cache: "no-store" });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          return await res.json();
+        } catch {}
+      }
+      throw new Error("ニュース取得に失敗しました（/data/digest.json と /assets/top_news.json が読めません）。");
+    }
+    function normalizeItems(data) {
+      const items = Array.isArray(data?.items) ? data.items : [];
+      const ok = (data?.status ? data.status === "ok" : true);
+      if (!ok) throw new Error(data?.message || "digest status != ok");
+      return items;
+    }
+
+    // ▼ニュース：用語解説などを復活（旧index相当）
+    const newsList  = document.getElementById("newsList");
+    const newsError = document.getElementById("newsError");
+
+    function renderNews(items) {
+      newsList.innerHTML = "";
+      newsError.textContent = "";
+
+      if (!items.length) {
+        newsError.textContent = "ニュースが0件です（生成待ち or 取得失敗の可能性）。";
+        return;
+      }
+
+      for (const it of items) {
+        const li = document.createElement("li");
+        li.className = "news-item";
+
+        const title = it.title_ja || it.title || it.url || "(no title)";
+        const url = it.url || "#";
+        const dt = fmtJst(it.publishedAt);
+        const source = it.source || "";
+        const tags = Array.isArray(it.tags) ? it.tags : [];
+
+        const summary = it.summary_ja || "";
+        const keyPoints = Array.isArray(it.key_points) ? it.key_points : [];
+        const glossary = Array.isArray(it.glossary) ? it.glossary : [];
+        const actions = Array.isArray(it.personal_actions) ? it.personal_actions : [];
+
+        li.innerHTML = `
+          <div>
+            <a class="news-title" href="${escapeHtml(url)}" target="_blank" rel="noopener">
+              ${escapeHtml(title)}
+            </a>
+          </div>
+          <div class="news-sub">
+            ${escapeHtml(source)}${dt ? " / " + escapeHtml(dt) : ""}
+            ${tags.map(t => `<span class="badge">${escapeHtml(t)}</span>`).join("")}
+          </div>
+
+          ${(summary || keyPoints.length || glossary.length || actions.length) ? `
+            <div class="news-box">
+              ${summary ? `<div style="margin-top:6px;">${escapeHtml(summary)}</div>` : ""}
+
+              ${keyPoints.length ? `
+                <ul style="margin:8px 0 0; padding-left:18px; list-style:disc;">
+                  ${keyPoints.map(x => `<li>${escapeHtml(x)}</li>`).join("")}
+                </ul>
+              ` : ""}
+
+              ${glossary.length ? `
+                <details style="margin-top:10px;">
+                  <summary style="cursor:pointer;">用語解説</summary>
+                  <ul style="margin:8px 0 0; padding-left:18px; list-style:disc;">
+                    ${glossary.map(g => `<li><b>${escapeHtml(g.term)}</b>: ${escapeHtml(g.explain_ja)}</li>`).join("")}
+                  </ul>
+                </details>
+              ` : ""}
+
+              ${actions.length ? `
+                <details style="margin-top:10px;">
+                  <summary style="cursor:pointer;">個人でできること</summary>
+                  <ul style="margin:8px 0 0; padding-left:18px; list-style:disc;">
+                    ${actions.map(a => `<li>${escapeHtml(a)}</li>`).join("")}
+                  </ul>
+                </details>
+              ` : ""}
+            </div>
+          ` : ""}
+        `;
+
+        newsList.appendChild(li);
+      }
+    }
+
+    async function loadNews() {
+      try {
+        newsError.textContent = "";
+        newsList.innerHTML = `<li class="news-item" style="opacity:.8;">読み込み中...</li>`;
+
+        const data = await fetchJsonWithFallback([
+          "/data/digest.json",
+          "/assets/top_news.json"
+        ]);
+
+        const items = normalizeItems(data);
+        renderNews(items);
+      } catch (e) {
+        newsList.innerHTML = "";
+        newsError.textContent = String(e?.message || e);
+      }
+    }
+
+    // ▼現場記事：/posts/genba/ のHTMLからリンクを抽出して表示
+    // /posts/genba/ には記事リンクと日付が並んでいる :contentReference[oaicite:4]{index=4}
+    const genbaList  = document.getElementById("genbaList");
+    const genbaError = document.getElementById("genbaError");
+
+    function renderGenba(items) {
+      genbaList.innerHTML = "";
+      genbaError.textContent = "";
+
+      if (!items.length) {
+        genbaError.textContent = "現場記事を取得できませんでした。";
+        return;
+      }
+
+      for (const it of items) {
+        const li = document.createElement("li");
+        li.className = "item";
+        li.innerHTML = `
+          <a class="title" href="${escapeHtml(it.href)}">${escapeHtml(it.title)}</a>
+          <span class="meta">${escapeHtml(it.date || "")}</span>
+        `;
+        genbaList.appendChild(li);
+      }
+    }
+
+    async function loadGenba() {
+      try {
+        const res = await fetch("/posts/genba/", { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const html = await res.text();
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        
+        const allLinks = [...doc.querySelectorAll("a")];
+        let items = allLinks
+          .map(a => {
+            const hrefAttr = a.getAttribute("href") || "";
+            const dateMatch = hrefAttr.match(/(\d{4}-\d{2}-\d{2})/);
+            const dateStr = dateMatch ? dateMatch[1] : "";
+            const cleanHref = new URL(hrefAttr, location.origin + "/posts/genba/").pathname;
+            const title = (a.textContent || "").trim();
+            return { href: cleanHref, title, date: dateStr };
+          })
+          .filter(x => 
+            x.title && 
+            x.href.includes("genba_") && 
+            x.href.endsWith(".html") &&
+            !x.href.includes("index.html")
+          );
+
+        const uniqueItems = [];
+        const seen = new Set();
+        for (const it of items) {
+          if (!seen.has(it.href)) {
+            seen.add(it.href);
+            uniqueItems.push(it);
+          }
+        }
+
+        uniqueItems.sort((a, b) => b.date.localeCompare(a.date));
+        const top3 = uniqueItems.slice(0, 3);
+        
+        if (!top3.length) {
+          renderGenba([{ href: "/posts/genba/", title: "解説記事（一覧へ）", date: "" }]);
+        } else {
+          top3.push({ href: "/posts/genba/", title: "解説記事（一覧へ）", date: "" });
+          renderGenba(top3);
+        }
+      } catch (e) { 
+        console.error(e);
+        renderGenba([{ href: "/posts/genba/", title: "解説記事（一覧へ）", date: "" }]);
+      }
+    }
+
+    loadNews();
+    loadGenba();
+  </script>
+</body>
+</html>

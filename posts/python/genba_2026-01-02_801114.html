@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：条件分岐（if）の解説</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767337586503">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：条件分岐（ if ）の解説</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/801114.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">基本：今回できるようになること／if文の構造と例</a></li>
+  <li><a href="#sec-2">最小コードと実行方法</a></li>
+  <li><a href="#sec-3">使い分けの基準と確認方法</a></li>
+  <li><a href="#sec-4">デバッグの見方と1段ステップアップ・よくあるミス</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>基本：今回できるようになること／if文の構造と例</h3>
+  <p>今回できるようになることは、if/elif/elseで条件を分岐して処理を分けられるようになることです。</p>
+
+<p>if文は、条件がTrueかFalseかで処理を切り替える制御構文（フロー制御）です。</p>
+
+<p>条件式では、比較演算子（==、!=、&lt;、&gt;）と論理演算子（and、or、not）を使います。単純な例として、値が閾値より大きいかどうかを判定するケースがあります。</p>
+
+<p>elifは複数候補の分岐に使い、elseは上のどれにも当てはまらない場合に使います。</p>
+
+<p>ネスト（入れ子）が深くなると可読性が下がりやすいので、後で関数化するのが有用です。</p>
+</section>
+
+<section id="sec-2">
+  <h3>最小コードと実行方法</h3>
+  <p>最小コードは次のとおりです。</p>
+
+<pre><code>def classify_age(age):
+    if age &lt; 13:
+        return "child"
+    elif age &lt; 20:
+        return "teen"
+    elif age &lt; 65:
+        return "adult"
+    else:
+        return "senior"
+
+ages = [3, 15, 27, 70]
+for a in ages:
+    category = classify_age(a)
+    print(f"{a} -&gt; {category}")</code></pre>
+
+<p>このコードでは、年齢リストを先頭から順に分類し、分類結果を<code>print</code>で出力します。実行すると各年齢がどのカテゴリになるかが表示されます。</p>
+
+<p>実行方法は、ファイル名を<code>if_example.py</code>として保存し、ターミナルで<code>python if_example.py</code>を実行します。VSCodeを使う場合はファイルを開き、実行ボタンから実行します。</p>
+
+<p>出力例は次のとおりです。</p>
+
+<pre><code>3 -&gt; child
+15 -&gt; teen
+27 -&gt; adult
+70 -&gt; senior</code></pre>
+</section>
+
+<section id="sec-3">
+  <h3>使い分けの基準と確認方法</h3>
+  <p>使い分けの基準は、単純な2分岐であれば if/else を使うとよいです。複数の排他的条件がある場合は if/elif/else にすると読みやすいです。条件が多数でデータとの対応付けが中心になる場合は、辞書を使うか関数化してマップとして切り出すと見通しがよくなります。型の判定や例外処理が必要な場面では try/except と組み合わせると安定します。</p>
+<p>確認方法としては、途中結果を print して変数の値を確認するとよいです。型は type(変数) で確認できます。関数を使う場合は戻り値を print して期待値と比較するとずれに気づきやすいです。テストは小さな入力を複数用意して実行すると原因の切り分けがしやすいです。</p>
+<pre><code>print(x)
+print(type(x))
+result = f(x)
+print(result)</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>デバッグの見方と1段ステップアップ・よくあるミス</h3>
+  <p>デバッグでは、まず <code>print</code> で変数の中身を出す方法が分かりやすいです。</p>
+<p><code>logging</code> モジュールを使う場合は、<code>logging.basicConfig(level=logging.DEBUG)</code> を設定してログ出力を確認すると状況を追いやすいです。</p>
+<p>VSCodeではブレークポイントを置くと、停止位置でローカル変数を確認できるため、条件分岐の判断材料が意図どおりかを見直しやすいです。</p>
+<p>1段ステップアップとして、入力を受け取る場合は例外処理で安全に変換すると堅牢になります。コード例は次のとおりです。</p>
+<pre><code>def safe_classify(input_str):
+    try:
+        age = int(input_str)
+    except ValueError:
+        return "入力が整数ではありません"
+    return classify_age(age)
+</code></pre>
+<p>よくあるミスは、原因と直し方をセットで把握すると再発を避けやすいです。</p>
+<ul>
+  <li>インデントのずれ（IndentationError）は、ファイル内でスペースとタブが混在していることが多いため、エディタの「タブをスペースに変換」機能などでインデントを統一すると改善しやすいです。</li>
+  <li>比較演算子の誤用（<code>if x = 1</code>）は構文エラーになるため、代入の <code>=</code> ではなく比較の <code>==</code> を使う必要があります。</li>
+</ul>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <p>条件が複雑になったときに無理にネストを深くすると可読性が低下してバグの原因になります。</p>
+<ul>
+  <li>その場合は関数化して条件を名前で表現するか、辞書で分岐を置き換えることを検討するとよいです。</li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>if/elif/else を使うと、条件に応じて処理を分岐できるようになります。</li>
+  <li>比較演算子と論理演算子を組み合わせると、より複雑な条件を表現できます。</li>
+  <li>print/type/logging やブレークポイントを使うと、途中結果を確認しやすくなります。</li>
+  <li>ネストが深くなった場合は、関数化したり辞書で置き換えたりすると見通しが良くなります。</li>
+  <li>インデントの混在や比較演算子の取り違えがつまずきやすいポイントなので、表記を統一して確認すると安心です。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

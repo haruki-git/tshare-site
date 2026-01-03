@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PowerShell：Start-Processの基本と活用方法</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1766977946166">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>PowerShell:Start-Processの基本と活用方法</h1>
+        <nav><a href="/index.html">Home</a></nav>
+        <p class="meta">投稿日：2025-12-29</p>
+      </header>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ul>
+  <li><a href="#sec-1">1. Start-Processの概要と使いどころ</a></li>
+  <li><a href="#sec-2">2. 基本オプションとよく使う引数</a></li>
+  <li><a href="#sec-3">3. 非同期／同期実行と出力管理</a></li>
+  <li><a href="#sec-4">4. 管理者権限・Credentialの扱い（エスカレーション）</a></li>
+  <li><a href="#sec-5">5. 実務で役立つ例（インストーラ・ファイル開封・URL起動）</a></li>
+  <li><a href="#sec-6">6. トラブルシュートと安全運用のチェックリスト</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ul>
+      </section>
+
+      <section id="sec-1">
+        <h3>1. Start-Processの概要と使いどころ</h3>
+        <p>Start-Processは外部アプリをPowerShellから柔軟に起動するための基本コマンドです。</p>
+
+<ul>
+  <li>GUIアプリやコマンドを「新しいプロセス」として起動したいときに使います。</li>
+  <li>非同期で起動してすぐにPowerShellの制御を戻したい場合に便利です（既定では待機しません）。</li>
+  <li><code>-WorkingDirectory</code>で作業フォルダ（カレントディレクトリ）を指定できます。</li>
+</ul>
+
+<ol>
+  <li>新プロセスで起動する（例：メモ帳）</li>
+</ol>
+<pre><code>Start-Process notepad.exe</code></pre>
+
+<ol>
+  <li>作業フォルダを指定して起動する（例：カレントを切り替えて起動）</li>
+</ol>
+<pre><code>Start-Process -FilePath "cmd.exe" -WorkingDirectory "C:\Work"</code></pre>
+
+<p>よくあるミスとして、「Start-Processは実行結果（標準出力）をそのまま返してくれる」と誤解しがちです。標準出力が必要な場合は、<code>-Wait</code>や出力リダイレクト等の設計が別途必要になります。</p>
+
+<p><strong>注意（権限・影響範囲）:</strong> 管理者権限で実行すると、起動したプロセスがシステム設定やファイルに変更を加えるなど影響が大きくなる可能性があります。権限昇格が必要な操作は、対象・手順・影響範囲を事前に必ず確認してください。</p>
+      </section>
+
+<section id="sec-2">
+        <h3>2. 基本オプションとよく使う引数</h3>
+        <p><strong>結論（1行）：</strong>-FilePath / -ArgumentList / -WorkingDirectory / -Verb / -NoNewWindow / -Wait の組み合わせが現場で頻出です。</p>
+
+<p><strong>手順／具体例：</strong></p>
+<ol>
+  <li>基本起動（引数付き）</li>
+  <li>管理者で起動（UACあり）</li>
+  <li>バックグラウンド実行（待機しない）</li>
+</ol>
+
+<ul>
+  <li>基本起動：Start-Process -FilePath "notepad.exe" -ArgumentList "C:\log.txt"</li>
+  <li>管理者で起動：Start-Process -FilePath "msiexec.exe" -ArgumentList "/i pkg.msi" -Verb RunAs</li>
+  <li>バックグラウンド実行：Start-Process -FilePath "app.exe"</li>
+</ul>
+
+<p><strong>よくあるミス：</strong>引数をスペースで分けて渡すと意図と違う挙動になりがちです。<code>-ArgumentList</code> は「配列」または「1つの文字列」として扱うのが基本です。</p>
+
+<p><strong>注意：</strong><code>-Verb RunAs</code> は UAC を発生させます。承認のない権限昇格は業務フローや監査要件を壊すため、運用ルール（申請・承認・ログ）に従って使用してください。</p>
+
+<pre><code class="language-powershell"># 例1：ファイルをノートパッドで開く
+Start-Process -FilePath "notepad.exe" -ArgumentList "C:\temp\memo.txt"
+
+# 例2：MSIを管理者でサイレントインストール
+Start-Process -FilePath "msiexec.exe" -ArgumentList "/i C:\pkg.msi /qn" -Verb RunAs -Wait
+</code></pre>
+      </section>
+
+<section id="sec-3">
+        <h3>3. 非同期／同期実行と出力管理</h3>
+        <p>同期（<code>-Wait</code>）と非同期の違いを理解し、出力が必要なら別手段で受け取ります。</p>
+
+<ul>
+  <li>非同期：<code>Start-Process "app.exe"</code>（起動してすぐ戻る）</li>
+  <li>同期：<code>Start-Process "app.exe" -Wait</code>（終了まで待つ）</li>
+  <li>出力取得：起動したプロセスの標準出力をPowerShell側で扱いたい場合、<code>Start-Process</code>ではなく <code>Invoke-Expression</code> や呼び出し演算子 <code>&amp;</code> の利用を検討する</li>
+</ul>
+
+<p><strong>よくあるミス：</strong><code>-Wait</code> を付けると「出力が得られる」と期待してしまう点です。<code>Start-Process</code> はプロセス制御（起動・待機など）が主目的で、標準出力の取得には向きません。</p>
+
+<p><strong>注意：</strong>長時間ブロッキングする処理を同期で待つと、PowerShellセッションが固まって見えることがあります。自動化ジョブではタイムアウト設計（監視・強制終了・リトライ方針など）を入れる判断が重要です。</p>
+
+<pre><code class="language-powershell"># バックグラウンドで起動してProcessオブジェクトを取得
+$p = Start-Process -FilePath "ping.exe" -ArgumentList "localhost -n 5" -PassThru
+$p.WaitForExit()
+</code></pre>
+      </section>
+
+<section id="sec-4">
+        <h3>4. 管理者権限・Credentialの扱い（エスカレーション）</h3>
+        <p><strong>結論（1行）：</strong>権限昇格は便利だがリスク大。誰が何を承認するかを明確に。</p>
+
+<p><strong>注意（重要）：</strong>管理者権限での実行はシステム設定やファイルを変更し得る<strong>破壊的操作</strong>です。実行前に対象・影響範囲・ロールバック手順を確認し、<strong>運用チケット等で承認</strong>を得てください。</p>
+
+<p>手順／具体例：</p>
+<ol>
+  <li>UACによる昇格：<code>-Verb RunAs</code> を使用</li>
+</ol>
+<pre><code>Start-Process -FilePath "powershell.exe" -Verb RunAs</code></pre>
+
+<ol start="2">
+  <li>別ユーザー実行：<code>-Credential</code> を使用（対話で資格情報を入力）</li>
+</ol>
+<pre><code>Start-Process -Credential (Get-Credential) -FilePath "powershell.exe" -ArgumentList "-File C:\script.ps1"</code></pre>
+
+<ol start="3">
+  <li>自動化ではセキュアなシークレット管理を併用（資格情報の直書き回避）</li>
+</ol>
+
+<p>よくあるミス：</p>
+<ul>
+  <li>平文でパスワードをスクリプトに書く → <strong>重大な漏洩リスク</strong>（ログ・履歴・リポジトリ経由で拡散しやすい）</li>
+</ul>
+
+<p>補足：</p>
+<ul>
+  <li><code>-Credential</code> による実行は、対象マシンのポリシー（例：UAC/ローカルセキュリティ/権限設定）により失敗する場合があります。</li>
+  <li>現場の判断ポイント：エスカレーションが本当に必要か、承認フロー（運用チケット等）を通すべきかを必ず検討してください。</li>
+</ul>
+      </section>
+
+<section id="sec-5">
+        <h3>5. 実務で役立つ例（インストーラ・ファイル開封・URL起動）</h3>
+        <p>現場の定型作業をStart-Processで自動化すると手戻りが減る。</p>
+
+<ul>
+  <li>インストーラ自動実行：Start-Process msiexec /i /qn -Wait</li>
+  <li>URLを既定ブラウザで開く：Start-Process "https://example.com"</li>
+  <li>ファイル関連アプリ起動：Start-Process -FilePath "explorer.exe" -ArgumentList "C:\logs"</li>
+</ul>
+
+<p><strong>よくあるミス：</strong>サイレントインストール時に戻りコードを確認しないと、失敗を検知できません。</p>
+
+<p><strong>注意（重要）：</strong>インストールやファイル上書きは業務影響が大きい操作です。<strong>破壊的操作を自動化する場合は、事前にバックアップを取得し、関係者の承認を得てから実行してください。</strong></p>
+
+<pre><code># URLを開く（既定ブラウザで）
+Start-Process "https://intranet.company.local"
+
+# サイレントインストールの例（戻り値確認は別途）
+Start-Process -FilePath "msiexec.exe" -ArgumentList "/i C:\tools\agent.msi /qn" -Wait
+</code></pre>
+      </section>
+
+<section id="sec-6">
+        <h3>6. トラブルシュートと安全運用のチェックリスト</h3>
+        <p><strong>結論：</strong>動かない原因は「権限」「パス」「引数」の3点がほとんどです。順に潰す運用フローを用意します。</p>
+
+<ol>
+  <li>実行ユーザーとUAC（管理者権限）の要否を確認する</li>
+  <li><code>FilePath</code>はフルパスで指定する（どの作業ディレクトリでも同じ挙動にする）</li>
+  <li><code>ArgumentList</code>の引用符・スペース・エスケープを確認する</li>
+</ol>
+
+<ul>
+  <li>ログ出力（標準出力/標準エラー）と戻りコード取得を運用に組み込む</li>
+  <li>テスト環境で動作確認 → 本番は段階展開（小さく当てて広げる）</li>
+</ul>
+
+<p>よくあるミスは、相対パスや作業ディレクトリ依存で失敗するケースです。必要に応じて<code>WorkingDirectory</code>を明示して解消します。</p>
+
+<pre><code>$p = Start-Process -FilePath "C:\Tools\tool.exe" `
+  -ArgumentList @("--input", "C:\Data\in.txt", "--flag") `
+  -WorkingDirectory "C:\Tools" `
+  -NoNewWindow -PassThru -Wait
+
+# 終了コード（運用上の判定材料）
+$p.ExitCode
+</code></pre>
+
+<p><strong>注意（強い警告）：</strong>無許可で多数マシンへ一斉実行すると障害を広げる可能性があります。影響範囲が不明な場合は、まず少数台で検証し、停止条件・切り戻し手順・エスカレーションラインを事前に明確化してください。</p>
+      </section>
+
+      <section id="sec-7">
+        <h3>要約</h3>
+        <ul>
+  <li>Start-Processは外部アプリ起動の汎用ツールで、同期/非同期や作業フォルダを制御できる。</li>
+  <li>よく使うオプションは <code>-FilePath</code>, <code>-ArgumentList</code>, <code>-WorkingDirectory</code>, <code>-Verb</code>, <code>-Wait</code>, <code>-PassThru</code>。</li>
+  <li>出力取得が必要ならStart-Process以外の手法も検討（Invoke-Expressionやリダイレクト）。</li>
+  <li>権限昇格やCredential取り扱いはリスクが高いので、承認・ログ管理・シークレット管理が必須。</li>
+  <li><strong>注意:</strong> 本番運用前は必ず段階的検証を行い、上書き・インストール・削除などの<strong>破壊的操作</strong>を伴う場合は、事前承認とバックアップ確保を徹底する。</li>
+</ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

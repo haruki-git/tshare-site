@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>自宅webサーバの作成：概要とラズパイ詳細</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1766977946166">
+</head>
+<body>
+  <header>
+    <h1>自宅Webサーバ作成：ラズパイの準備と設定</h1>
+    <nav>
+      <a href="/index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Raspberry Piを使って自宅Webサーバを構築</h2>
+      <p><small>投稿日：2025-11-23</small></p>
+
+      <h3>概要</h3>
+      <p>Raspberry Piを使って自宅Webサーバを構築します。使用するOSはDebian系Linuxの Raspberry Pi OS です。
+      <br>Raspberry Pi（ラズベリーパイ）は「手のひらサイズの小型パソコン」で、1~2万円程度で手に入ります。
+      <br>これをWebサーバ化する利点は、レンタルサーバに比べてランニングコストが電気代だけ、普段使いPCと分けて気軽に常時稼働しておけること。
+      <br>短所は、固定IPアドレスを取得しないとセキュリティの厳しい(Dynamic DNSが許可されていないなど)環境からはアクセスできない、アクセスが重めであることなどがあります。
+      <br>全体的には下記の順で、Webサーバをつくります。
+      <br>※長くなりそうなので項目ごとに記事を分けます。</p>
+      <ul>
+      <p style="font-size: 16px;">1.ラズパイの準備と設定</p>
+      <p style="font-size: 16px;">2.他のPCから操作できるようにする</p>
+      <p style="font-size: 16px;">3.ラズパイをWebサーバ化</p>
+      <p style="font-size: 16px;">4.セキュリティの強化</p>
+      <p style="font-size: 16px;">5.他のPCからVSCodeを使って編集したい</p>
+      </ul>
+      <br>
+
+      <h2>1.ラズパイの準備と設定</h2>
+      <h3>ラズパイの購入</h3>
+      <p>必要なもの</p>
+      <ul>
+      <li>Raspberry Pi 5</li>
+      <li>microSDカード64GB</li>
+      <li>USBカードリーダー</li>
+      <li>ラズパイとモニターをつなぐケーブル(端子：USB⇔自宅のモニターに合う端子)</li>
+      <li>電源ケーブル(端子：Type-c)</li>
+      <li>ケース</li>
+      <li>Raspberry pi 5用アクティブクーラー</li>
+      <li>熱伝導シート</li>
+      </ul>
+      <p>私の場合、何が必要か不明だったのでスターターキットを買って、</p>
+      <a href="https://www.amazon.co.jp/dp/B0CVTT9VG8?psc=1&ref=ppx_pop_dt_b_product_details">商品ページのリンク</a><br>
+      <img src="/img/raspi_buy.jpg" alt="ラズパイ購入例" width="600">
+      <p>その中で実際に使ったのが上記の必要なもの一覧でした。
+      <br>他には、ラズパイをモニターに繋いで操作する際に、USB端子(Bluetoothでも可)のマウスとキーボードを使います。
+         USBレシーバーがないBluetooth専用マウス・キーボードしかない場合は準備が必要です。</p>
+      <br>
+
+      <h3>ラズパイの組み立て</h3>
+      <p>ラズパイ・熱伝導シート・クーラー・ケースを組み立てます。
+      <br>ラズパイのチップ部分に熱伝導シートを貼る → クーラーを取り付ける → ケースを組み立てて入れるという順がスムーズかと思います。
+      <br>
+      <br>熱伝導シートを貼る</p>
+      <img src="/img/熱伝導シートを貼る.jpg" alt="熱伝導シートを貼る" width="400">
+      <p>クーラーを取り付ける</p>
+      <img src="/img/クーラー取り付け.jpg" alt="クーラー取り付け" width="400">
+      <p>ケースを組み立てる</p>
+      <img src="/img/ケースの組立方.jpg" alt="ケースの組立方" width="600">
+      <p>組み立て後</p>
+      <img src="/img/ラズパイ組立後.jpg" alt="ラズパイ組立後" width="400">
+      <br>
+      <br>
+
+      <h3>microSDカードにOSを入れる</h3>
+      <p>ラズパイにOSを入れる大まかな順序は、
+      <br>普段使用のPCでmicroSDカードにOSを入れる → microSDカードをラズパイに挿して初期設定
+      <br>という流れになります。</p>
+      <a href="https://youtu.be/CFi2yl5YtiM?t=237">この動画がわかりやすかったです。</a>
+      <p>まずは普段使用のPCでmicroSDカードにOSを入れていきます。
+      <br>USBカードリーダーにmicroSDカードを取り付け、PCに挿します。</p>
+      <img src="/img/カードリーダーを挿す.jpg" alt="ラズパイ組立後" width="400">
+      <p>下記リンクからRaspberry Pi Imagerのページを開きます。</p>
+      <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imagerのリンク</a>
+      <p>開いたページの「Download for Windows(OSは自分のPCのOSを選択)」を押下すると、PCに imager-1.9.6.exe がダウンロードされます。
+      <br>ダウンロードした imager-1.9.6.exe を起動します。
+      <br>Slect Setup LanguageでEnglishを選択しOKを押します。
+      <br>Setup- Raspberry Pi Imagerで下記のように進めます。
+      <br>Next → I accept the atreementを選択 → Next → Create a desktop shortcut(任意) → Next → Installが開始される → Finishを押下(Raspberry Pi Imagerのインストールが完了します)</p>
+      <br>Raspberry Pi Imagerを起動します。</p>
+      <img src="/img/Raspberry Pi Imager画面.jpg" alt="Raspberry Pi Imager画面" width="500">
+      <p>Raspberry Piデバイス ⇒ RASPBERRY PI 5
+      <br>OS ⇒ RASPBERRY PI OS(64-bit)
+      <br>ストレージ ⇒ PCに挿したmicroSDカード
+      <br>上記を選択して次へを押します。
+      <br>Use OS customization?で いいえ を押します。
+      <br>警告で はい を押します。
+      <br>書き込みが始まるので完了まで待ちます(10分前後)。
+      <br>書き込みが正常に完了しました と表示されるので 続ける を押します。
+      <br>これでmicroSDカードにOSを書き込む作業は完了です。</p>
+      <br>
+
+      <h3>ラズパイでOSの設定</h3>
+      <p>microSDカードをラズパイに挿して、モニター・キーボード・マウス・電源ケーブルを接続します。
+      <br>電源ケーブルを接続するとLEDが緑点灯してラズパイが起動します。
+      <br>初回起動時はOSの設定ウィザードが表示されるので、画面の指示に従って設定を進めます。<br>
+      <br>言語・タイムゾーン・キーボードレイアウトの設定</p>
+      <img src="/img/言語・タイムゾーン・キーボードレイアウトの設定.jpg" alt="言語・タイムゾーン・キーボードレイアウトの設定" width="500">
+      <p>上から、Japan、Japanese、Tokyo を選択して Next を押します。<br>
+      <br>ユーザー名とパスワードの設定</p>
+      <img src="/img/ユーザー名とパスワードの設定.jpg" alt="ユーザー名とパスワードの設定" width="500">
+      <p>※ログイン時や他PCからの接続の際に使用するユーザ名/パスワードになるので後に多用します。
+      <br>任意のユーザー名とパスワードを入力して Next を押します。<br>
+      <br>Wi-Fiネットワークへの接続</p>
+      <img src="/img/wi-fi設定.jpg" alt="wi-fi設定" width="400">
+      <p>自宅のWi-Fiネットワークを選択して Next を押します。</p>
+      <img src="/img/wi-fiパス.jpg" alt="wi-fiパス" width="400">
+      <p>Wi-Fiのパスワードを入力して Next を押します。
+      <br>Choose Browse(デフォルトブラウザ設定)で Next を押します。
+      <br>Update Software(OSとアプリケーションのアップデート)で Next を押します。
+      <br>Setup Completeで Restartを押します。
+      <br>Raspberrt Pi OSが起動しデスクトップ画面が表示されます。
+      <br>これでラズパイの初期設定は完了です。</p>
+      <br>
+
+
+      <p></p>
+    </article>
+  </main>
+
+  <footer>
+    <p>c 2025 hi</p>
+  </footer>
+</body>
+</html>

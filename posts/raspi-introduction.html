@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>はじめに - IT基礎ポータル</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1766977946166">
+    <style>
+      /* このページは styles.css を使う。上書きは最小限にする */
+
+      /* 読みやすさだけ調整（全体のトーンは維持） */
+      .card {
+        padding: 32px;
+      }
+
+      /* 見出しのサイズは少しだけ上げる（色は共通変数のまま） */
+      h2 {
+        font-size: 1.6rem;
+        margin: 0 0 1rem;
+        color: var(--text);
+      }
+      h3 {
+        font-size: 1.25rem;
+        margin: 2rem 0 1rem;
+        color: var(--text);
+      }
+
+      /* このページのリストは「news-item」を使わず、専用クラスにするのが安全 */
+      .intro-item {
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .intro-item + .intro-item {
+        margin-top: 12px;
+      }
+      .intro-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .intro-item p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .note-box {
+        margin-top: 24px;
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 14px;
+        border: 1px dashed var(--line);
+      }
+
+      @media (max-width: 640px) {
+        .card { padding: 20px; }
+      }
+    </style>
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="toprow">
+        <div class="brand">IT基礎ポータル</div>
+
+        <button class="menuBtn" id="menuBtn"
+                type="button"
+                aria-controls="siteNav"
+                aria-expanded="false"
+                aria-label="メニューを開く">
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" id="siteNav">
+          <a class="pill" href="/index.html">ITニュース</a>
+          <a class="pill" href="/posts/genba/">解説記事</a>
+          <a class="pill" href="/posts/python/">Python</a>
+          <a class="pill" href="/index.html#tools">ツール</a>
+          <a class="pill active" href="/posts/raspi-introduction.html">はじめに</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>はじめに</h1>
+      <p style="font-size: 1.2rem; margin-top: 10px; opacity: 0.9;">
+        このサイトはインフラ系のニュースを取得し、ITの基礎知識を整理する現場用ポータルです。
+      </p>
+    </section>
+
+    <article class="card">
+      <h2>メニューごとの説明</h2>
+
+      <ul style="padding: 0; margin-top: 20px;">
+        <li class="news-item">
+          <div class="news-title">ITニュース</div>
+           <p>
+            NewsAPIからDC/インフラ/AIなどの最新ニュースを毎日3記事ずつ自動取得して、GPTの要約を表示します。「用語解説」「個人でできること」をクリックすると詳細が表示されます。
+          </p>
+        </li>
+        <li class="news-item">
+          <div class="news-title">解説記事</div>
+           <p>
+            現場で使えそうな音声付きの記事をGPTが土曜日に自動生成します。「設定中のテーマ：」に沿った記事が出力されます(追加/削除可)。
+          </p>
+        </li>
+        <li class="news-item">
+          <div class="news-title">Python</div>
+           <p>
+            Python入門の解説記事一覧です（環境設定〜基礎文法〜小さな制作まで）。
+          </p>
+        </li>
+      </ul>
+
+      <h3>その他</h3>
+      <div class="note-box">
+        <p>※ ダイナミックDNSを使用しているのでアクセスできなくなる場合があります。</p>
+        <p style="margin-top: 10px;">※ 特定のネットワーク環境（データセンター等）のPCからはアクセスできない制限があります。</p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 hi</p>
+    </div>
+  </footer>
+
+  <script>
+    // モバイルメニュー用スクリプト
+    const menuBtn = document.getElementById("menuBtn");
+    const siteNav = document.getElementById("siteNav");
+    menuBtn?.addEventListener("click", () => {
+      const open = siteNav.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  </script>
+</body>
+</html>

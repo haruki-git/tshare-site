@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：「=」「==」「is」— None と比較の落とし穴</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767358555942">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：「=」「==」「is」— None と比較の落とし穴</h1>
+         <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/124167.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">基本と今回できること</a></li>
+  <li><a href="#sec-2">「=」「==」「is」の振る舞い</a></li>
+  <li><a href="#sec-3">最小コードと実行結果</a></li>
+  <li><a href="#sec-4">デバッグ・使い分けの基準とよくあるミス</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>基本と今回できること</h3>
+  <p>今回できるようになることは、None と比較するときに安全な書き方を理解し、等価性（==）と同一性（is）の違いを見分けられるようになることです。</p>
+
+<p>Python の代入は「=」を使い、比較は「==」で値の等しさを調べます。</p>
+
+<p>一方、「is」はオブジェクトの同一性、つまり同じオブジェクトかどうかを調べます。</p>
+
+<p>None は単一のオブジェクト（シングルトン）なので、None と比較するときは「is None」「is not None」を使うことが推奨されます。</p>
+
+<p>理由は、「== None」はクラスが <code>__eq__</code> をカスタムしていると、意図しない結果になる可能性があるためです。</p>
+
+<p>ここではまず概念を押さえ、後でコードで確認します。</p>
+</section>
+
+<section id="sec-2">
+  <h3>「=」「==」「is」の振る舞い</h3>
+  <p>「=」は代入であり、変数にオブジェクトを持たせるために使います。</p>
+<p>「==」は等価性の比較であり、オブジェクトが同じ値を持つかどうかを、クラスの <code>__eq__</code> 実装に従って判定します。</p>
+<p>「is」は同一性の比較であり、同じメモリ上のオブジェクトかどうかで判定します。組み込みの不変型（数値・文字列など）は実装の最適化により同一に見える場合がありますが、これは言語仕様ではなく実装依存です。</p>
+<p>None は唯一のインスタンスであるため、None との比較では <code>is</code> を使う基準が安全です。使い分けとしては、等価性が必要なら <code>==</code>、同一性が必要なら <code>is</code>、None 判定は <code>is</code> を使うとよいです。</p>
+</section>
+
+<section id="sec-3">
+  <h3>最小コードと実行結果</h3>
+  <p>最小コードはこちらです。</p>
+
+<pre><code class="language-python"># none_compare.py
+def eq_is_examples():
+    a = None
+    b = None
+    print("a == b:", a == b)
+    print("a is b:", a is b)
+    x = []
+    y = []
+    print("x == y:", x == y)
+    print("x is y:", x is y)
+    s1 = "hello"
+    s2 = "".join(["h","e","l","l","o"])
+    print("s1 == s2:", s1 == s2)
+    print("s1 is s2:", s1 is s2)
+
+if __name__ == "__main__":
+    eq_is_examples()</code></pre>
+
+<p>このコードでは、None 同士は等価でも同一でもあることが表示されます。リストは値が等しくても別オブジェクトになるため、is は False になります。文字列は等価でも、実装によって is の結果が変わる場合があることが分かります。</p>
+
+<p>実行方法はこちらです。</p>
+
+<ol>
+  <li>ファイル名を none_compare.py として保存します。</li>
+  <li>ターミナルで python none_compare.py を実行するか、VSCode の Run ボタンで実行します。</li>
+</ol>
+
+<pre><code class="language-bash">python none_compare.py</code></pre>
+
+<p>出力例はこちらです。</p>
+
+<pre><code>a == b: True
+a is b: True
+x == y: True
+x is y: False
+s1 == s2: True
+s1 is s2: False</code></pre>
+
+<p>確認方法はこちらです。</p>
+
+<ul>
+  <li>print で各比較結果を出力して、== と is の違いを確認します。</li>
+  <li>type(a) を出力して、a が NoneType であることを確認します。</li>
+  <li>リストや文字列でも == と is を両方試して、結果の違いを確かめます。</li>
+</ul>
+</section>
+
+<section id="sec-4">
+  <h3>デバッグ・使い分けの基準とよくあるミス</h3>
+  <p>デバッグの見方としては、print による途中結果の確認、logging モジュールでログレベルを分けた出力、pdb を使った対話的な変数確認などがあります。簡単な手順は以下です。</p>
+
+<ol>
+  <li>比較の直前に、対象変数の <code>repr()</code> と <code>type()</code> を出力すると要チェックです。</li>
+  <li>ログが必要な場合は <code>import logging</code> を行い、<code>logging.basicConfig(level=logging.DEBUG)</code> を設定すると整理しやすいです。</li>
+  <li>エディタのデバッガでブレークポイントを置き、実際の値と型を確認すると確実です。</li>
+</ol>
+
+<p>使い分けの基準は次のとおりです。</p>
+
+<ul>
+  <li>None の判定は常に <code>is None</code> または <code>is not None</code> を使うと安全です。</li>
+  <li>値の等しさを調べる場合は <code>==</code> を使います。</li>
+  <li>同一オブジェクトかどうかを厳密に確認したい場合は <code>is</code> を使います。</li>
+</ul>
+
+<p>避けたい例として、None と比較するときに <code>==</code> を使ってしまい、クラスの <code>__eq__</code> が特殊に実装されている場合に誤判定が起きることがあります。この場合は <code>is None</code> または <code>is not None</code> に置き換えると改善します。</p>
+
+<p>また、値比較に <code>is</code> を使ってしまい、実装依存の最適化によって誤判定になることがあります。意図が値の比較であれば <code>==</code> に置き換えるのがポイントです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <p>None はシングルトンであるため、None 判定は is を使う慣習が最も安全です。</p>
+<ul>
+  <li>コードレビューやスタイルチェックで「== None」を見つけた場合は、「is None」に直すことを推奨します。</li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>None の判定は is None / is not None を使うことで、安全に判定できます。</li>
+  <li>「=」は代入で、「==」は値の等価性を表し、「is」はオブジェクトの同一性を表します。</li>
+  <li>標準的なデバッグは print/type、logging、pdb の順で手軽に確認できます。</li>
+  <li>よくあるミスは "== None" を使うことや、値比較に "is" を使うことですので、用途に応じて置き換えてください。</li>
+  <li>まずは最小コードを実行して出力を確認し、等価性と同一性の違いを体感してください。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

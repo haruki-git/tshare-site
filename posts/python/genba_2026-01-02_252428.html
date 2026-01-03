@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：VSCodeでコードが書きやすくなるショートカットキー(Tab, Ctrl+[ ], Ctrl+/, Alt+左クリック, Ctrl+D)</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767358555942">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：VSCodeでコードが書きやすくなるショートカットキー(Tab, Ctrl+[ ], Ctrl+/, Alt+左クリック, Ctrl+D)</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/252428.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">基本と今回できること</a></li>
+  <li><a href="#sec-2">ショートカット実例と最小コード</a></li>
+  <li><a href="#sec-3">実行とデバッグの見方（確認方法）</a></li>
+  <li><a href="#sec-4">使い分けの基準とよくあるミス</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>基本と今回できること</h3>
+  <p>今回できるようになることは、VSCodeでPythonコードを書く際に、編集・整形・複数選択で生産性を上げるショートカットを使いこなせるようになることです。</p>
+
+<p>Pythonは文法がシンプルで可読性が高い言語です。インデントが構文の一部としてブロックを表す点を意識すると、編集時のミスを減らしやすいです。</p>
+
+<p>VSCodeは拡張機能（Language Server）により補完やエラー表示をしてくれます。ここでは、Tab（インデント・補完）、Ctrl+[ / Ctrl+]（インデント移動）、Ctrl+/（行コメント切替）、Alt+左クリック（複数カーソル）、Ctrl+D（選択語の次を選択）を実例で説明します。</p>
+
+<p>最初は慣れが必要ですが、数回使うとマウスより速く編集できる場面が増えます。</p>
+</section>
+
+<section id="sec-2">
+  <h3>ショートカット実例と最小コード</h3>
+  <p>最小コードは次のとおりです。</p>
+
+<pre><code class="language-python"># sample.py: 簡単なデータ処理と表示
+def summarize(nums):
+    total = sum(nums)
+    count = len(nums)
+    return {"total": total, "count": count, "avg": total / count if count else 0}
+
+if __name__ == "__main__":
+    data = [10, 20, 30, 40]
+    res = summarize(data)
+    print(f"合計: {res['total']}, 件数: {res['count']}, 平均: {res['avg']:.1f}")</code></pre>
+
+<p>このコードはリストの合計・件数・平均を辞書で返して表示します。</p>
+
+<p>編集時はTabでインデントを補完し、Ctrl+/で行コメントに切り替えできます。Alt+左クリックで複数行を同時編集でき、Ctrl+Dで同じ変数名を順に選択して一括変更できます。</p>
+
+<p>出力例は次のとおりです。</p>
+
+<pre><code>合計: 100, 件数: 4, 平均: 25.0</code></pre>
+</section>
+
+<section id="sec-3">
+  <h3>実行とデバッグの見方（確認方法）</h3>
+  <p>実行方法は、ターミナルで <code>python sample.py</code> を実行するか、VSCodeの「Run Python File」ボタンで実行します。</p>
+
+<p>実行コマンド例は次のとおりです。</p>
+
+<pre><code class="language-bash">python sample.py
+</code></pre>
+
+<p>確認方法は、途中の値を確かめたい箇所に <code>print(res)</code> や <code>print(type(res))</code> を入れて結果を観察します。</p>
+
+<p>デバッグではブレークポイントを置き、VSCodeの「変数ビュー」で値を確認できます。簡単な切り分けは <code>print</code> で行い、細かい追跡はデバッガのステップ実行と変数ウォッチを使うと把握しやすいです。</p>
+
+<p>ログを残したい場合は、標準の<code>logging</code>を使うと出力が整理しやすいです。</p>
+</section>
+
+<section id="sec-4">
+  <h3>使い分けの基準とよくあるミス</h3>
+  <p>使い分けの基準は次のとおりです。</p>
+<ul>
+  <li>小さな置換や同名変数の変更は Ctrl+D が速いです。</li>
+  <li>複数箇所を同時編集して同じ変更を加えるなら Alt+左クリック の複数カーソルが便利です。</li>
+  <li>コード整形（インデント移動）は Ctrl+[ / Ctrl+] を使うと安定してずれません。</li>
+</ul>
+<p>コメントの切り替えは Ctrl+/ を使うと素早くオンオフできます。</p>
+<p>避けたい例として、変数名を Ctrl+D で選択しているつもりでも意図しない部分まで選ばれてしまい、結果として変数が壊れることがあります。</p>
+<p>この場合は Undo（Ctrl+Z）で戻してから選択範囲を見直し、個別編集に切り替えるか、正規表現置換を使う方針に変えると安全です。</p>
+<p>SyntaxError（インデント混在など）が出る場合は、タブとスペースが混じっている可能性が高いです。</p>
+<p>エディタの表示で空白を可視化し、タブかスペースのどちらかに統一すると解決しやすいです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <p>VSCodeの複数カーソルや一括置換は強力ですが、プロジェクト全体での置換は取り返しがつかないことがあります。コミット前には必ず変更差分を確認してください。</p>
+<ul>
+  <li>差分の確認は、次のコマンドで行えます。</li>
+</ul>
+<pre><code>git diff
+</code></pre>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>VSCodeのショートカットを使うと、インデント調整やコメント化、複数箇所の同時編集が速くなります。</li>
+  <li>最小のコード例でTabやCtrl+/などを実際に試すと、効果を実感しやすいです。</li>
+  <li>実行は<pre><code>python file.py</code></pre>のように行い、デバッグはprintでの確認かVSCodeのデバッガが有効です。</li>
+  <li>使い分けの基準を理解して、誤置換やインデントの混在を避けるのがポイントです。</li>
+  <li>変更はコミット前に差分を確認し、必要に応じて自動整形のルールをチームで統一すると運用しやすいです。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

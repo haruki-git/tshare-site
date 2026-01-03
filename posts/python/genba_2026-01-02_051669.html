@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：環境設定(Windowsでインストール、VSCodeの操作)</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767337586503">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：環境設定(Windowsでインストール、VSCodeの操作)</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/051669.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">環境の概要と今回できること</a></li>
+  <li><a href="#sec-2">WindowsでのPythonインストール手順</a></li>
+  <li><a href="#sec-3">VSCodeの設定と実行の流れ</a></li>
+  <li><a href="#sec-4">実践コードとデバッグ・1段ステップアップ</a></li>
+  <li><a href="#sec-5">30秒チェック：</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>環境の概要と今回できること</h3>
+  <p>今回できるようになることは、WindowsにPythonを入れて、VSCodeで実行とデバッグができる状態にすることです。</p>
+
+<p>Pythonは読みやすい文法を持つ言語です。プログラム実行の基本はインタプリタで、Windowsでは主に<code>python</code>コマンドとして利用します。</p>
+
+<p>VSCodeはエディタ兼軽量なIDE（統合開発環境）です。拡張機能を入れると、Pythonの実行とデバッグに対応できます。</p>
+
+<p>このセクションでは、インストールの確認、VSCodeでのインタプリタ選択、簡単なスクリプトの実行までを丁寧に説明します。</p>
+</section>
+
+<section id="sec-2">
+  <h3>WindowsでのPythonインストール手順</h3>
+  <ol>
+  <li>公式サイト（python.org）から最新版のインストーラをダウンロードします。</li>
+  <li>インストーラ実行時は「Add Python to PATH」にチェックを入れてからインストールします。これにより、コマンドプロンプトやPowerShellでpythonを実行しやすくなります。</li>
+  <li>インストール後は、コマンドプロンプトでバージョン確認をします。</li>
+</ol>
+<p>判断のポイントとして、複数バージョンを使う場合は、pyランチャー（py -3.10など）やvenv（仮想環境）の利用を検討すると運用しやすいです。</p>
+<p>実行コマンド例は、PowerShellまたはcmdで実行します。</p>
+<pre><code>python --version
+py -3 --version
+</code></pre>
+</section>
+
+<section id="sec-3">
+  <h3>VSCodeの設定と実行の流れ</h3>
+  <ol>
+  <li>VSCodeをインストール後、拡張機能から「Python」を入れてください。pipは不要ですが、静的解析が欲しい場合はpylintを入れると便利です。</li>
+  <li>VSCodeでフォルダを開き、左下のインタプリタ選択からインストール済みのPythonを選んでください。</li>
+  <li>ファイルを作成し、右上の実行ボタンまたはF5で実行・デバッグを開始できます。ブレークポイントをクリックで挿入し、変数ウォッチで確認できます。</li>
+</ol>
+
+<p>pylintを入れる場合は、次のようにpipでインストールできます。</p>
+<pre><code>pip install pylint
+</code></pre>
+
+<p>実行は、コマンドでの実行またはVSCodeの実行・デバッグ機能で行えます。</p>
+<pre><code>python file.py
+</code></pre>
+
+<p>判断のポイントとして、VSCodeのPython拡張が提示するインタプリタを使うと、仮想環境の切替が楽になります。</p>
+</section>
+
+<section id="sec-4">
+  <h3>実践コードとデバッグ・1段ステップアップ</h3>
+  <p>最小コードはこちらです。</p>
+
+<pre><code class="language-python"># sample.py
+import sys
+import platform
+from datetime import datetime
+
+def greet(name):
+    return f"Hello, {name}. Python {platform.python_version()}"
+
+def main():
+    name = sys.argv[1] if len(sys.argv) &gt; 1 else "World"
+    msg = greet(name)
+    now = datetime.now().isoformat(sep=' ', timespec='seconds')
+    print(msg)
+    print("実行時刻:", now)
+    # 結果を簡単なファイルに保存
+    with open("sample_output.txt", "w", encoding="utf-8") as f:
+        f.write(f"{now}\n{msg}\n")
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+
+<p>引数で名前を受け取り、挨拶とPythonバージョン、実行時刻を表示します。最後に sample_output.txt に書き出します。</p>
+
+<p>実行方法は、コマンドラインで <code>python sample.py YourName</code> を実行するか、VSCodeでsample.pyを開いてRunまたはF5で実行します。</p>
+
+<p>出力例はこちらです。</p>
+
+<pre><code>Hello, Alice. Python 3.11.2
+実行時刻: 2026-01-02 12:34:56
+</code></pre>
+
+<p>確認方法は、print出力で内容を見ていきます。型も見たい場合は <code>type(msg)</code> を追加して確認します。ファイル出力は、エクスプローラで sample_output.txt が作成されているかを確認します。</p>
+
+<p>よくあるミスとして、pythonコマンドが見つからない（「'python' は内部コマンドではありません」）という表示があります。原因はPATHが通っていないことが多いので、インストーラを再実行して「Add Python to PATH」にチェックして再インストールするか、環境変数にPythonのパスを手動で追加します。</p>
+
+<p>もう一つはインデントミス（IndentationError）です。スペースとタブが混在して起きやすいので、エディタ設定でタブをスペースに統一し、正しい位置にそろえて修正します。</p>
+
+<p>デバッグは、まずprintで値を出す方法が手早いです。VSCodeのデバッガではブレークポイントで停止し、Variablesビューで変数の中身を確認します。loggingを使う場合は、<code>import logging; logging.basicConfig(level=logging.DEBUG)</code> を入れると段階的にログを出せます。</p>
+
+<p>さらに一段ステップアップするなら、このスクリプトをargparse（標準ライブラリ）で引数対応し、例外処理でファイルI/Oエラーを扱うようにすると実用度が上がります。</p>
+</section>
+
+<section id="sec-5">
+  <h3>30秒チェック：</h3>
+  <p>Pythonスクリプト実行時に「moduleが見つかりません」と表示される場合は、まずpipで該当モジュールがインストール済みかを確認し、次にVSCodeで選択しているPythonインタプリタが同じ環境を指しているかを確認します。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>
+    <p>ファイルの書き出しは既存の同名ファイルを上書きしますので、重要なファイルと同名にならないファイル名を使うか、上書きしないロジック（存在確認やバックアップ）を実装するとよいです。</p>
+  </li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ul>
+  <li><p>Windowsでは公式インストーラで「Add Python to PATH」を有効にすると、コマンド実行がしやすくなります。</p></li>
+  <li><p>VSCodeはPython拡張を使うと、インタプリタの選択とデバッグができます。</p></li>
+  <li><p>簡単なスクリプトを用意すると、バージョン確認・引数処理・ファイル書き出しの基本が学べます。</p></li>
+  <li><p>よくあるトラブルはPATH設定とインデント混在ですので、それぞれの原因と直し方を確認するのがポイントです。</p></li>
+  <li><p>ファイル上書きの挙動は1点だけ要チェックです。</p></li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

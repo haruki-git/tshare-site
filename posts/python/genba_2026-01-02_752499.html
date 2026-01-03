@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：例外処理（try/except）の解説</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767337586503">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：例外処理（try/except）の解説</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/752499.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">例外処理の基本と今回できること</a></li>
+  <li><a href="#sec-2">最小コードと実行方法</a></li>
+  <li><a href="#sec-3">使い分けの基準とデバッグの見方</a></li>
+  <li><a href="#sec-4">1段ステップアップ：関数化とファイル対応</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>例外処理の基本と今回できること</h3>
+  <p>今回できるようになることは、ユーザー入力やファイル操作で起きる代表的なエラーを捕まえて、安全に処理を続けられるようになることです。</p>
+<p>例外（エクセプション）は、プログラム実行時に発生する問題のことです。Pythonでは<code>try</code>ブロックに正常処理を置き、<code>except</code>ブロックで特定の例外を補足します。</p>
+<p><code>except</code>は複数書けるため、例外の種類ごとに処理を分岐できます。また、<code>else</code>ブロックで例外が発生しなかった場合の処理を分けられます。</p>
+<p><code>finally</code>ブロックでは、後片付け処理（クローズなど）を例外の有無にかかわらず常に実行できます。まずは小さな例で流れをつかめます。</p>
+</section>
+
+<section id="sec-2">
+  <h3>最小コードと実行方法</h3>
+  <p>最小コードは次のとおりです。</p>
+
+<pre><code class="language-python"># try_example.py
+try:
+    a = input("分子を入力してください：")
+    b = input("分母を入力してください：")
+    num = int(a)
+    den = int(b)
+    result = num / den
+except ValueError as e:
+    print("数値ではありません:", e)
+except ZeroDivisionError:
+    print("0で割れません")
+except Exception as e:
+    print("予期せぬエラー:", type(e).__name__)
+else:
+    print("結果:", result)
+finally:
+    print("処理終了")</code></pre>
+
+<p>このコードは、入力を数値に変換して割り算を試みます。入力が不正な場合や0除算、その他の例外に応じて該当するexceptが動作し、メッセージを出力します。例外が発生しない場合はelseで結果を出力し、最後にfinallyで終了メッセージを出力します。</p>
+
+<p>実行方法は次のとおりです。</p>
+
+<ul>
+  <li>ターミナルで保存したファイルを実行する場合は、<code>python try_example.py</code>と入力して実行します。</li>
+  <li>VSCodeではファイルを開き、右上の「Run」またはF5で実行します。</li>
+</ul>
+
+<pre><code class="language-bash">python try_example.py</code></pre>
+
+<p>出力例は次のとおりです。</p>
+
+<ul>
+  <li>入力が10と2の場合は、「結果: 5.0」の後に「処理終了」が出力されます。</li>
+  <li>入力がabcの場合は、「数値ではありません: invalid literal for int() with base 10: 'abc'」の後に「処理終了」が出力されます。</li>
+</ul>
+</section>
+
+<section id="sec-3">
+  <h3>使い分けの基準とデバッグの見方</h3>
+  <p>特定の復旧が可能なエラーは、その例外名（ValueError、FileNotFoundError など）を個別に捕まえて処理するのが基準です。</p>
+
+<p>ログを残すだけで先に進めない場合は、Exception で捕まえた後に再送出（raise）する選択肢もあります。</p>
+
+<p>デバッグでは、まずは print() で変数の型や途中値を確認すると状況を切り分けやすいです。より本格的には logging モジュールでレベル（DEBUG/INFO/WARNING/ERROR）を設定してログを出す方法が便利です。</p>
+
+<pre><code>import logging
+logging.basicConfig(level=logging.DEBUG, format="%(levelname)s:%(message)s")
+logging.debug("num=%s, den=%s", num, den)</code></pre>
+
+<p>確認方法としては、int() の後や除算の直前に print(type(num), num) のように出力して、型と値を目視すると良いです。ユニットテストで異常系を用意して自動確認する方法もあります。</p>
+
+<p>よくあるミスは、原因と直し方をセットで押さえるのがポイントです。</p>
+
+<ul>
+  <li>ミスとして、except Exception: や bare except で全てを捕まえてしまい、バグの原因が隠れる場合があります。直し方として、捕まえる例外を特定するか、ログを残した上で raise して再送出します。</li>
+  <li>ミスとして、input のまま計算して ValueError になる場合があります。直し方として、int() の前後で print や type を入れて確認するか、ユーザー入力のバリデーションを追加します。</li>
+</ul>
+</section>
+
+<section id="sec-4">
+  <h3>1段ステップアップ：関数化とファイル対応</h3>
+  <p>関数化すると再利用とテストがしやすくなります。ファイル対応では <code>open</code> で発生し得る例外も扱います。例として、ファイルから数字を読み取り合計する関数です。</p>
+
+<pre><code>def sum_integers_from_file(path):
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            total = 0
+            for line in f:
+                total += int(line.strip())
+    except FileNotFoundError:
+        print("ファイルが見つかりません:", path)
+        return None
+    except ValueError as e:
+        print("数値変換エラー:", e)
+        return None
+    else:
+        return total
+</code></pre>
+
+<p>ファイルが無ければ <code>FileNotFoundError</code> を報告して <code>None</code> を返します。行の値が数値でなければ <code>ValueError</code> を捕まえて報告します。長い処理では <code>try</code> を狭めて影響範囲を限定するのがポイントです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>例外を安易に握りつぶして何もせずに <pre><code>except:
+    pass
+</code></pre> のようにすると原因の追跡が難しくなるため、ログ出力やエラーメッセージを残すか、処理できない例外は再送出するのがポイントです。</li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>try/except/else/finally を使うと、正常系・異常系・後片付けを分けて書けます。</li>
+  <li>例外は種類ごとに捕まえ、必要であれば再送出する基準を決めておくのがポイントです。</li>
+  <li>デバッグはまず print を使い、規模が大きい場合は logging を使って可観測性を高めるとよいです。</li>
+  <li>関数化やファイル操作では、例外の対象範囲を狭めて影響を限定すると有効です。</li>
+  <li>例外をそのまま無視せず、ログやメッセージで原因を残すことが重要です。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

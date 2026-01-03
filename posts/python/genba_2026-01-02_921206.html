@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：リスト・タプル・辞書・集合の解説</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767358555942">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：リスト・タプル・辞書・集合の解説</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/921206.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">基本の理解と今回できること</a></li>
+  <li><a href="#sec-2">データ型ごとの特徴と使い分けの基準</a></li>
+  <li><a href="#sec-3">操作の実例とデバッグの見方</a></li>
+  <li><a href="#sec-4">1段ステップアップ：関数化と実行方法</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>基本の理解と今回できること</h3>
+  <p>今回できるようになることは、リスト・タプル・辞書・集合の違いを説明できて、簡単な操作を自分で書けるようになることです。</p>
+
+<p>Pythonのコレクションは、複数の値をまとめて扱うためのデータ構造です。リストは順序付きで後から変更でき、タプルは順序付きですが変更できません。辞書はキーと値の組で管理し、集合は順序を前提にせず重複を持たない要素の集まりです。</p>
+
+<p>まずは短いコードで、動きの違いを確認します。</p>
+
+<p>最小コードは次のとおりです。</p>
+
+<pre><code class="language-python"># 最小コード：リスト/タプル/辞書/集合の基本比較
+lst = [1, 2, 3]                    # リスト（変更可）
+tpl = (1, 2, 3)                    # タプル（不変）
+dct = {"a": 1, "b": 2}             # 辞書（キー:値）
+st = {1, 2, 2, 3}                  # 集合（重複除去）
+lst.append(4)
+# 表示
+print("list:", lst)
+print("tuple:", tpl)
+print("dict keys:", list(dct.keys()))
+print("set:", st)
+</code></pre>
+
+<p>このコードでは、4種類の変数を作ったうえで、appendによりリストだけを変更しています。出力を見ると、リストが更新されること、タプルがそのままであること、辞書がキーを持つこと、集合で重複が取り除かれることが確認できます。</p>
+</section>
+
+<section id="sec-2">
+  <h3>データ型ごとの特徴と使い分けの基準</h3>
+  <p>使い分けの基準は、順序が必要かどうか、変更するかどうか、キーで取り出すかどうか、重複を排除するかどうかで判断します。</p>
+
+<p>リストは順序付きで、<code>append</code> や <code>pop</code> による追加や削除がしやすいです。タプルは不変なので、関数の戻り値として扱いやすく、辞書のキーとしても利用しやすいです（要素も含めてイミュータブルな場合に限ります）。辞書はキーを使って値を高速に取り出せます。集合はメンバーシップテストや集合演算（和・差・交差）が高速です。</p>
+
+<p>型の確認は <code>type()</code> で行います。要素数は <code>len()</code> で確認します。</p>
+
+<pre><code>print(type(var))
+print(len(var))
+</code></pre>
+</section>
+
+<section id="sec-3">
+  <h3>操作の実例とデバッグの見方</h3>
+  <p>ここでは、よく使う操作の例を示します。デバッグの見方としては、<code>print</code>で値を逐次表示する方法が簡単です。大きなスクリプトでは<code>logging</code>を使うと便利です。次の例は、集合演算と辞書の取り扱いを示します。</p>
+
+<pre><code class="language-python"># 集合と辞書操作の例
+a = {1, 2, 3}
+b = {2, 3, 4}
+print("union:", a | b)             # 和集合
+print("intersection:", a &amp; b)      # 積集合
+users = {"alice": 25, "bob": 30}
+print("alice age:", users.get("alice"))</code></pre>
+
+<p>このコードでは、集合の和と積を表示し、辞書からキーで値を取り出します。出力例は<code>union: {1, 2, 3, 4}</code>のようになります。</p>
+
+<p>出力例は次のとおりです。</p>
+<ul>
+  <li><code>union: {1, 2, 3, 4}</code>です。</li>
+  <li><code>intersection: {2, 3}</code>です。</li>
+  <li><code>alice age: 25</code>です。</li>
+</ul>
+
+<p>要チェックとしては、まず<code>print</code>で中間変数を出力して追いかけると状況を把握しやすいです。長期的には、<code>logging.basicConfig(level=logging.DEBUG)</code>を設定し、<code>logging.debug()</code>を使うと運用しやすいです。</p>
+</section>
+
+<section id="sec-4">
+  <h3>1段ステップアップ：関数化と実行方法</h3>
+  <p>小さなスクリプトを関数化すると再利用とテストが楽になります。ここではリストと集合の違いを確かめる関数を用意します。外部ライブラリは不要です。</p>
+
+<pre><code class="language-python"># 関数化例：リストと集合で重複を扱う
+def unique_list(seq):
+    """順序を保持して重複を除去します"""
+    seen = set()
+    out = []
+    for x in seq:
+        if x not in seen:
+            seen.add(x)
+            out.append(x)
+    return out
+
+data = [1,2,2,3,1]
+print("unique_list:", unique_list(data))</code></pre>
+
+<p>このコードでは、順序を保ちながら重複を除去する関数を作り、結果を表示します。出力例は <code>unique_list: [1, 2, 3]</code> です。</p>
+
+<p>実行方法は <code>python file.py</code> で実行するか、VSCode の「実行」ボタンから実行します。ファイル名を <code>example.py</code> にして <code>python example.py</code> をターミナルで実行すると確認できます。</p>
+
+<p>外部ライブラリが不要なため、pip の操作は不要です。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>
+    <p>集合や辞書のキーにミュータブル（変更できる）なオブジェクトを使うと <code>TypeError</code> になります。</p>
+    <p>回避するには、キーにタプルなどのイミュータブル型を使うか、キーとして使うデータをハッシュ可能な形に変換してください。</p>
+  </li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>リストは順序付きで変更可能であり、追加や削除の操作に向いています。</li>
+  <li>タプルは不変であり、安全に共有したい値や辞書のキーとして扱いたい値に向いています。</li>
+  <li>辞書はキーから値を高速に取り出せる連想配列として扱えます。</li>
+  <li>集合は重複の排除や集合演算が得意であり、要素の存在確認が高速です。</li>
+  <li>詰まりやすいポイントは「ミュータブルとイミュータブルの違い」であり、キーにできる型や各メソッドの挙動を要チェックにするとよいです。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

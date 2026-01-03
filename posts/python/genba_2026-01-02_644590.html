@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：入出力（print / input）の解説</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767337586503">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：入出力（print / input）の解説</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/644590.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">入出力の基本</a></li>
+  <li><a href="#sec-2">実践：標準出力と標準入力（最小コード）</a></li>
+  <li><a href="#sec-3">デバッグと確認方法</a></li>
+  <li><a href="#sec-4">1段ステップアップ：ファイル入出力と例外処理</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>入出力の基本</h3>
+  <p>今回できるようになることは、printでの出力、inputでの入力、型変換、そして簡単なデバッグです。</p>
+
+<p>printは標準出力（コンソール）に表示する関数です。複数の値をカンマ区切りで渡すと、自動でスペース区切りで表示されます。sepやendを使うと、区切り文字や末尾の改行を変更できます。</p>
+
+<pre><code>print("a", "b", "c")
+print("a", "b", "c", sep="-")
+print("Hello", end="!")
+print(" world")</code></pre>
+
+<p>inputはユーザーから文字列を受け取る関数です。数値として扱いたい場合は、intやfloatで型変換します。inputは常に文字列（str）を返す点が要チェックです。</p>
+
+<pre><code>name = input("名前を入力してください: ")
+age = int(input("年齢を入力してください: "))
+height = float(input("身長を入力してください: "))</code></pre>
+
+<p>printにfile引数を渡すと、ファイルへ書き出せるためログのような出力にできます。</p>
+
+<pre><code>with open("app.log", "a", encoding="utf-8") as f:
+    print("処理を開始しました", file=f)</code></pre>
+</section>
+
+<section id="sec-2">
+  <h3>実践：標準出力と標準入力（最小コード）</h3>
+  <p>最小コードは次のとおりです。</p>
+
+<pre><code class="language-python"># input_output_demo.py
+def get_user_info():
+    name = input("名前を入力してください: ")
+    age_s = input("年齢を入力してください: ")
+    try:
+        age = int(age_s)
+    except ValueError:
+        print("年齢は整数で入力してください。30と仮定します。")
+        age = 30
+    print(f"こんにちは、{name}さん。{age}歳ですね。")
+    print("次の年に", age+1, "歳になります。", sep=" ")
+    return name, age
+
+if __name__ == "__main__":
+    get_user_info()</code></pre>
+
+<p>このコードは名前と年齢を受け取り、年齢を整数に変換してメッセージを表示します。<code>int()</code> の変換で <code>ValueError</code> が発生した場合は例外処理で既定値を使います。</p>
+
+<p>実行方法は次のとおりです。</p>
+
+<pre><code class="language-bash">python input_output_demo.py</code></pre>
+
+<p>または VSCode でファイルを開き、右上の実行ボタンをクリックして実行します。</p>
+
+<p>出力例は次のとおりです。</p>
+
+<pre><code>名前を入力してください: 田中
+年齢を入力してください: 29
+こんにちは、田中さん。29歳ですね。
+次の年に 30 歳になります。</code></pre>
+</section>
+
+<section id="sec-3">
+  <h3>デバッグと確認方法</h3>
+  <p>確認方法として、printで途中結果を出すと状況を追いやすいです。</p>
+<p>また、type()で型を確認すると、想定どおりにデータが扱えているかを把握しやすいです。</p>
+<p>小さな入力例を手で渡して、期待値と比較する方法も有効です。</p>
+<p>デバッグの見方としては、printやlogging、変数の確認が重要です。開発初期はprintで変数の値と型を表示して確認するとよいです。</p>
+<p>表示が多すぎる場合はloggingモジュールを使い、ログレベルを切り替えると整理しやすいです。</p>
+<p>VSCodeのデバッガでは変数をウォッチしながらステップ実行できるため、処理の流れと値の変化を追いやすいです。</p>
+<p>出力を見て意図した型かどうかや、空文字ではないかを要チェックにすると、原因特定が早くできます。</p>
+<p>よくあるミスとして、int変換に失敗してValueErrorになることがあります。この場合は例外処理を追加するか、入力前にisdigit()で検査すると改善しやすいです。</p>
+<pre><code>text = input()
+if text.isdigit():
+    value = int(text)
+    print(value, type(value))
+else:
+    print("数値として解釈できない入力です。", text, type(text))</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>1段ステップアップ：ファイル入出力と例外処理</h3>
+  <p>使い分けの基準は、短いデバッグ出力はprintを使い、運用ログや詳細な診断はloggingを使うことです。ユーザー入力はinputを使い、スクリプト引数はargparseを使うのが基本です。</p>
+
+<p>ファイル入出力はopenで読み書きします。例外処理を組み合わせると安全性が上がります。</p>
+
+<pre><code class="language-python">with open("out.txt", "w", encoding="utf-8") as f:
+    f.write(f"{name},{age}\n")</code></pre>
+
+<p>上記は簡単な保存例です。入出力をファイルに移すと自動化や後処理がしやすくなります。</p>
+
+<p>ファイル操作ではFileNotFoundErrorやPermissionErrorが発生する可能性があるため、try/exceptで囲むと堅牢になります。小さなステップアップとして、入力値の検証と例外処理を組み合わせると実運用に耐えるコードになります。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>
+    <p>input()は対話式でユーザーの入力を待ち続けるため、CIや自動化環境で実行すると処理が止まります。</p>
+    <p>自動実行するときはinput()を使わず、コマンドライン引数（argparse）や環境変数を利用してください。</p>
+  </li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>printで出力し、inputは文字列を返すことを理解できます。</li>
+  <li>sepやend、f文字列で見やすい出力を作れることを学べます。</li>
+  <li>型変換（int/float）と例外処理で入力エラーを扱えることを示しました。</li>
+  <li>デバッグはprint→logging→デバッガの順で進める基準が使えることを示しました。</li>
+  <li>自動化ではinputを避け、ファイル保存や引数処理に切り替えることが要チェックです。</li>
+</ul>
+<p>30秒チェックとして、input()の戻り値の型はstr（文字列）です。整数として使う場合はint()で変換する必要があります。</p>
+</section>
+    </article>
+  </main>
+</body>
+</html>

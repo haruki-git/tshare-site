@@ -1,0 +1,91 @@
+/* ===== ツール：共通 ===== */
+.muted { opacity: .75; }
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* ===== 差分表示（diff-match-patch） ===== */
+.diff {
+  margin-top: 6px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(10,16,30,.35);
+
+  /* コードやログが見やすいように */
+  white-space: pre-wrap;
+  overflow-x: auto;
+  line-height: 1.7;
+}
+
+.diff ins {
+  text-decoration: none;
+  padding: 0 2px;
+  border-radius: 4px;
+  background: rgba(0, 255, 0, .18);  /* 追加＝緑 */
+}
+
+.diff del {
+  padding: 0 2px;
+  border-radius: 4px;
+  background: rgba(255, 0, 0, .18);  /* 削除＝赤 */
+  text-decoration: underline wavy rgba(255,0,0,.95); /* 赤線っぽく */
+}
+
+/* 2カラム（翻訳：入力/出力、比較：A/B） */
+.grid.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+/* スマホは縦並び */
+@media (max-width: 900px) {
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* カード内ヘッダー（見出し＋右側ボタン）を揃える */
+.card-head {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-head h2 {
+  margin: 0;              /* ← これが効く（ズレの主因） */
+}
+
+/* ボタン列を揃える */
+.btn-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ボタン列：高さ・見た目を統一（翻訳/比較でズレないように） */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* 文章比較のボタンだけ幅が不自然なら、ここで揃える */
+.card .btn {
+  min-width: 96px;   /* 好みで 90〜110 くらい */
+}
+
+/* 「A⇄B入れ替え」だけ長いので、スマホで折り返すなら min-width を弱めてもOK */
+@media (max-width: 900px) {
+  .card .btn {
+    min-width: 0;
+  }
+}
+
+

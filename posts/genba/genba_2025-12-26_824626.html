@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/styles.css?v=1766977946166">
+  <title>PowerShellでファイルを探す：Get-ChildItem と Select-String の現場メモ</title>
+</head>
+<body>
+  <header>
+    <h1>PowerShellでファイルを探す：Get-ChildItem と Select-String の現場メモ</h1>
+    <p>投稿日：2025-12-26</p>
+    <nav>
+      <a href="/index.html">Home</a>
+    </nav>
+  </header>
+
+  <nav aria-label="目次">
+    <h2>目次</h2>
+    <ul>
+      <li><a href="#intro">はじめに</a></li>
+      <li><a href="#get-childitem-basic">基本：Get-ChildItem（ファイル・フォルダの列挙）</a></li>
+      <li><a href="#select-string-basic">基本：Select-String（ファイルの中身を検索）</a></li>
+      <li><a href="#practical-one-liners">実践例（組み合わせ・現場で使えるワンライナー）</a></li>
+      <li><a href="#common-mistakes">よくある失敗と対処法</a></li>
+      <li><a href="#performance-safety">パフォーマンスと運用上の注意（安全運用）</a></li>
+      <li><a href="#destructive-warning">破壊的操作についての強い注意（必読）</a></li>
+      <li><a href="#version-options">PowerShell バージョン差と便利なオプション</a></li>
+      <li><a href="#troubleshooting">トラブルシューティングのヒント</a></li>
+      <li><a href="#one-liner-collection">便利ワンライナー集</a></li>
+      <li><a href="#checklist">チェックリスト（箇条書き）</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <h3>1. はじめに</h3>
+      <p>現場で「どこにあるファイル？」や「この文字列がどのファイルにある？」を素早く調査するときに使う基本コマンドが <strong>Get-ChildItem</strong>（GCI）と <strong>Select-String</strong>（SS）です。本メモはIT初心者が最初の一歩で安全に使えるよう、具体例とよくある失敗、運用上の注意を書いています。</p>
+    </section>
+
+    <section id="get-childitem-basic">
+      <h3>2. 基本：Get-ChildItem（ファイル・フォルダの列挙）</h3>
+      <p>主な使い方（読み取り専用）：</p>
+      <ul>
+        <li>ファイル一覧（カレントディレクトリ）：<pre><code>Get-ChildItem</code></pre></li>
+        <li>特定拡張子だけ：<pre><code>Get-ChildItem -Filter *.log</code></pre></li>
+        <li>再帰検索（サブフォルダも）：<pre><code>Get-ChildItem -Recurse</code></pre></li>
+        <li>ファイルのみ／ディレクトリのみ：
+          <pre><code>Get-ChildItem -File
+Get-ChildItem -Directory</code></pre>
+        </li>
+        <li>隠しファイル・システムファイルを含める：<pre><code>Get-ChildItem -Force</code></pre></li>
+      </ul>
+
+      <h3>よく使うオプションの意味</h3>
+      <ul>
+        <li><code>-Path</code> / <code>-LiteralPath</code>：検索パス。<code>-Path</code> はワイルドカード解釈あり、<code>-LiteralPath</code> は文字列をそのまま扱う</li>
+        <li><code>-Filter</code>：ファイル名フィルタ。ファイルシステム側で処理されるので高速（可能な限り使う）</li>
+        <li><code>-Include</code> / <code>-Exclude</code>：複数パターン指定（<code>-Recurse</code> と組み合わせる時の動作に注意）</li>
+        <li><code>-Recurse</code>：サブディレクトリを下る（PowerShell 7 以降は <code>-Depth</code> で深さ制限可能）</li>
+        <li><code>-File</code> / <code>-Directory</code>：結果をファイルまたはフォルダに限定</li>
+        <li><code>-ErrorAction SilentlyContinue</code>：アクセス拒否などのエラーを無視（ただし運用ではログを残す設計に寄せる）</li>
+      </ul>
+
+      <h3>実例（現場で役立つ）</h3>
+      <ul>
+        <li>カレント以下の <code>.log</code> を再帰で探してファイル名だけ表示：
+          <pre><code>Get-ChildItem -Path . -Filter *.log -Recurse -File | Select-Object FullName</code></pre>
+        </li>
+        <li>30日より古いファイルだけ列挙：
+          <pre><code>Get-ChildItem -Path C:\Logs -Recurse -File |
+  Where-Object { $_.LastWriteTime -lt (Get-Date).AddDays(-30) }</code></pre>
+        </li>
+        <li>ネットワーク共有（パスにスペースがあれば引用）：
+          <pre><code>Get-ChildItem -Path "\\server\share\path with space" -Recurse -File</code></pre>
+        </li>
+      </ul>
+
+      <h3>パフォーマンスのコツ</h3>
+      <ul>
+        <li><code>-Filter</code> を使うと高速。<code>Where-Object</code> で後から絞ると遅くなることが多い。</li>
+        <li>大量ファイルのディレクトリで <code>-Recurse</code> は重い。PS7+ の <code>-Depth</code> や <code>-File</code> と組み合わせる。</li>
+      </ul>
+    </section>
+
+    <section id="select-string-basic">
+      <h3>3. 基本：Select-String（ファイルの中身を検索）</h3>
+      <p><code>Select-String</code> はテキストファイル内の文字列（正規表現）検索。grep に相当します。</p>
+
+      <h3>主なオプション</h3>
+      <ul>
+        <li><code>-Pattern</code>：検索パターン（正規表現）</li>
+        <li><code>-SimpleMatch</code>：正規表現を使わず完全/部分一致検索</li>
+        <li><code>-CaseSensitive</code>：大文字小文字区別</li>
+        <li><code>-AllMatches</code>：1行の中で複数マッチを取得</li>
+        <li><code>-List</code>：ファイルごとに最初のマッチだけを返す（ファイル一覧を知りたいとき便利）</li>
+        <li><code>-Context</code>：前後の行も表示（例：<code>-Context 2,1</code>）</li>
+        <li><code>-Path</code>：検索対象ファイルパス（ワイルドカード可）</li>
+        <li><code>-Encoding</code>：ファイルのエンコーディング指定（Shift_JIS など）</li>
+      </ul>
+
+      <h3>実例</h3>
+      <ul>
+        <li>カレントディレクトリの全ファイルから <code>TODO</code> を検索：
+          <pre><code>Select-String -Pattern "TODO" -Path *</code></pre>
+        </li>
+        <li>再帰して <code>.cs</code> ファイル内の <code>Exception</code> を探す（ファイル名付き）：
+          <pre><code>Get-ChildItem -Path . -Filter *.cs -Recurse -File | Select-String -Pattern "Exception"</code></pre>
+        </li>
+        <li>特定フォルダ以下のファイルを再帰で検索（パイプ利用の実務型）：
+          <pre><code>Get-ChildItem -Path C:\Project -Filter *.log -Recurse -File | Select-String -Pattern "ERROR"</code></pre>
+        </li>
+        <li>前後の行を確認（前2行・後1行）：
+          <pre><code>Select-String -Path *.txt -Pattern "password" -Context 2,1</code></pre>
+        </li>
+      </ul>
+
+      <h3>MatchInfo オブジェクトの利用</h3>
+      <p><code>Select-String</code> の結果は MatchInfo オブジェクト。主なプロパティは <code>Path</code>（ファイルパス）、<code>LineNumber</code>、<code>Line</code>（マッチ行）、<code>Matches</code>（MatchCollection）などです。</p>
+      <p>例：ファイル名と行番号だけを出す：</p>
+      <pre><code>Select-String -Path *.log -Pattern "Exception" | Select-Object Path, LineNumber</code></pre>
+
+      <h3>注意点</h3>
+      <ul>
+        <li>バイナリっぽいファイルを検索するとノイズが出る。基本はテキストファイルで使う。</li>
+        <li>文字コードが合わないとマッチしない。必要なら <code>-Encoding</code> で明示する。</li>
+      </ul>
+    </section>
+
+    <section id="practical-one-liners">
+      <h3>4. 実践例（組み合わせ・現場で使えるワンライナー）</h3>
+      <ul>
+        <li>ある文字列を含むファイルの一覧（重複なし）：
+          <pre><code>Get-ChildItem -Path C:\Site -Filter *.html -Recurse -File |
+  Select-String -Pattern "KEYWORD" -List |
+  Select-Object -ExpandProperty Path</code></pre>
+        </li>
+      </ul>
+      <p>（下書きが途中のため、以降の項目は追記予定のセクションとして枠だけ用意しています）</p>
+    </section>
+
+    <section id="common-mistakes">
+      <h3>5. よくある失敗と対処法</h3>
+      <ul>
+        <li><strong>パスのワイルドカード誤爆</strong>：特殊文字を含むパスは <code>-LiteralPath</code> を検討。</li>
+        <li><strong>-Recurse のつけ忘れ／つけ過ぎ</strong>：対象範囲を意識して、必要なら PS7+ の <code>-Depth</code> を使う。</li>
+        <li><strong>アクセス拒否エラーで止まる</strong>：調査目的なら <code>-ErrorAction SilentlyContinue</code> も選択肢。ただし「どこで拒否されたか」は別途記録したほうが安全。</li>
+        <li><strong>文字コード不一致</strong>：<code>Select-String -Encoding</code> を試す（Shift_JIS/UTF8 など）。</li>
+      </ul>
+    </section>
+
+    <section id="performance-safety">
+      <h3>6. パフォーマンスと運用上の注意（安全運用）</h3>
+      <ul>
+        <li>大量ファイルへ再帰＋全文検索は重い。まずは <code>-Filter</code>、対象拡張子、探索深さを絞る。</li>
+        <li>ネットワーク共有は遅くなりがち。ピーク時間の実行や広範囲検索は避ける。</li>
+        <li>結果を保存するなら、実行コマンドと日時もセットで残す（再現性・監査性）。</li>
+      </ul>
+    </section>
+
+    <section id="destructive-warning">
+      <h3>7. 破壊的操作についての強い注意（必読）</h3>
+      <ul>
+        <li><code>Remove-Item</code> や <code>Move-Item</code> と組み合わせる前に、必ず <code>Select-Object FullName</code> 等で対象が想定通りか確認する。</li>
+        <li><code>-Recurse</code> と削除の組み合わせは特に危険。まずは読み取り専用で「列挙→確認→ログ保存」の手順を踏む。</li>
+        <li>可能なら <code>-WhatIf</code>（対応コマンドのみ）で事前確認し、運用では権限や承認フローも用意する。</li>
+      </ul>
+    </section>
+
+    <section id="version-options">
+      <h3>8. PowerShell バージョン差と便利なオプション</h3>
+      <ul>
+        <li>PowerShell 7 以降は <code>Get-ChildItem -Depth</code> で再帰の深さ制限が可能。</li>
+        <li>Windows PowerShell 5.1 と PowerShell 7 で既定の挙動（エンコーディング等）が異なるケースがある。混在環境では明示指定を増やす。</li>
+      </ul>
+    </section>
+
+    <section id="troubleshooting">
+      <h3>9. トラブルシューティングのヒント</h3>
+      <ul>
+        <li>まずは対象を絞って再現：<code>-Filter</code>、<code>-File</code>、<code>-Depth</code>（PS7+）。</li>
+        <li>エラーの詳細が必要なら <code>-ErrorAction Stop</code>＋<code>try/catch</code> で捕捉してログ化。</li>
+        <li>検索が当たらない時は文字コード、改行コード、想定している正規表現（エスケープ）を疑う。</li>
+      </ul>
+    </section>
+
+    <section id="one-liner-collection">
+      <h3>10. 便利ワンライナー集</h3>
+      <ul>
+        <li>ファイルパスだけ一覧：
+          <pre><code>Get-ChildItem -Path . -Recurse -File | Select-Object -ExpandProperty FullName</code></pre>
+        </li>
+        <li>拡張子別に件数を数える：
+          <pre><code>Get-ChildItem -Path . -Recurse -File |
+  Group-Object Extension |
+  Sort-Object Count -Descending</code></pre>
+        </li>
+        <li>マッチしたファイルだけ（ファイル単位で最初の一致のみ）：
+          <pre><code>Select-String -Path .\*.log -Pattern "ERROR" -List | Select-Object Path</code></pre>
+        </li>
+      </ul>
+    </section>
+
+    <section id="checklist">
+      <h3>11. チェックリスト（箇条書き）</h3>
+      <ul>
+        <li>まず <code>-Filter</code> と拡張子で対象を絞る</li>
+        <li><code>-Recurse</code> は範囲を意識して使う（PS7+ は <code>-Depth</code> も検討）</li>
+        <li>パスに特殊文字があるなら <code>-LiteralPath</code> を検討</li>
+        <li>アクセス拒否は「無視」より「記録」できる設計に寄せる</li>
+        <li><code>Select-String</code> は文字コード問題が出やすいので <code>-Encoding</code> を選択肢に</li>
+        <li>削除・移動など破壊的操作は、列挙結果を必ず目視確認してから</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Windowsの時短＆失敗回避テクニック集</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1766977946166">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Windowsの時短＆失敗回避テクニック集</h1>
+        <nav><a href="/index.html">Home</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/946454.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">クリップボード履歴とテキストの小自動化</a></li>
+  <li><a href="#sec-2">トラブル切り分けのチェック手順</a></li>
+  <li><a href="#sec-3">注意（ここだけ）</a></li>
+  <li><a href="#sec-4">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>クリップボード履歴とテキストの小自動化</h3>
+  <p>クリップボード履歴を活用し、簡単なスクリプトで定型文の貼り付けを自動化すると、日々の作業が楽になります。</p>
+
+<ul>
+  <li>まずはWin+Vでクリップボード履歴を有効化するとよいです。</li>
+  <li>次に短いAutoHotkeyスクリプトでテンプレート挿入を作成するとよいです。</li>
+</ul>
+
+<pre><code>; AutoHotkey例：Ctrl+Alt+Tで定型文貼り付け
+^!t::
+SendInput, お世話になっております。{Enter}よろしくお願いいたします。
+return</code></pre>
+
+<p>エスカレーションの前に、ローカルでの動作確認を済ませておくと安心です。</p>
+</section>
+
+<section id="sec-2">
+  <h3>トラブル切り分けのチェック手順</h3>
+  <p>結論として、問題発生時は「確認→絞り込み→報告」の順に手を動かすと無駄が減ります。</p>
+
+<ol>
+  <li>ネットワーク系の場合は、ipconfigとpingで疎通を確認します。</li>
+  <li>ソフトの場合は、イベントビューアーでエラーのタイムスタンプを比較します。</li>
+  <li>再現手順が取れない場合は、スクリーンショットとログをまとめてエスカレーションします。</li>
+</ol>
+
+<pre><code class="language-powershell"># PowerShell例：ディスクとメモリの簡易チェック
+Get-PSDrive -PSProvider FileSystem
+Get-CimInstance Win32_OperatingSystem | Select-Object TotalVisibleMemorySize,FreePhysicalMemory
+</code></pre>
+
+<p>判断のポイントとして、ログがない場合はまず再現手順の確保を優先します。</p>
+</section>
+
+<section id="sec-3">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><p>操作前には影響範囲とバックアップの有無を確認し、本人の権限で実行可能かも要チェックです。</p></li>
+</ul>
+</section>
+
+      <section id="sec-4">
+  <h3>要約</h3>
+  <ul>
+  <li>ショートカットとスナップを統一すると、画面切替の時間を短縮できます。</li>
+  <li>クリップボード履歴と簡易スクリプトを組み合わせると、定型作業を自動化できます。</li>
+  <li>トラブル対応は「確認→絞り込み→報告」の順で進めると効率的です。</li>
+  <li>操作前は影響範囲とバックアップの有無を必ず確認するのがポイントです。</li>
+  <li>重大影響や権限問題は早めにエスカレーションし、対応を依頼するとスムーズです。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

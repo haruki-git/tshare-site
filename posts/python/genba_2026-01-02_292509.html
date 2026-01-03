@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：まず書いて動かしてみる(print とコメント)</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767337586503">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：まず書いて動かしてみる(print とコメント)</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/292509.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">はじめにと目的</a></li>
+  <li><a href="#sec-2">最小コード：print とコメント</a></li>
+  <li><a href="#sec-3">実行と確認（VSCode とコマンド）</a></li>
+  <li><a href="#sec-4">デバッグと1段ステップアップ</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>はじめにと目的</h3>
+  <p>今回できるようになることは、Pythonでファイルを書いて実行し、printとコメントで動作を確かめられるようになることです。</p>
+
+<p>Pythonは読みやすく書きやすい言語です。まずは文字列や数値を表示するprintと、説明用に書くコメント（#）を理解します。</p>
+
+<p>変数の型確認や途中出力を入れると、挙動をつかみやすくなります。判断のポイントは「まず動く最小のコード」を書くことです。</p>
+
+<p>最初は完璧を目指さず、出力を見て直すサイクルを回します。</p>
+</section>
+
+<section id="sec-2">
+  <h3>最小コード：print とコメント</h3>
+  <pre><code class="language-python"># hello.py : print とコメントの最小例
+name = "Alice"
+age = 28
+pi = 3.14
+# 挨拶を表示します
+print(f"こんにちは、{name}さん。")
+print("年齢:", age)
+print("age の型:", type(age))
+# 値の計算をします
+next_age = age + 1
+print(f"来年は {next_age} 歳です。")
+# 簡単な条件でメッセージ切替
+if age &gt;= 20:
+    print("成人です。")
+else:
+    print("未成年です。")
+</code></pre>
+<p>このコードは文字列と数値を変数に入れて、<code>print</code>で表示します。</p>
+<p>コメント行は実行結果に影響しませんので、処理の意図を残す用途に使えます。</p>
+<p>変数の中身に加えて、<code>type()</code>で型も確認できます。</p>
+</section>
+
+<section id="sec-3">
+  <h3>実行と確認（VSCode とコマンド）</h3>
+  <p>実行方法は、ターミナルから実行するか、VSCode の実行ボタンで動かします。</p>
+
+<pre><code class="language-bash">python hello.py
+# または VSCode でファイルを開き、右上の▷（Run）ボタンを押して実行します
+</code></pre>
+
+<p>手順は次のとおりです。</p>
+
+<ol>
+  <li>ファイル名を <code>hello.py</code> で保存します。</li>
+  <li>ターミナルを開いて <code>python hello.py</code> と入力して実行します。</li>
+  <li>VSCode で実行する場合は Python 拡張を有効にして、実行ボタンを押します。</li>
+</ol>
+
+<p>出力例は次のとおりです。</p>
+
+<pre><code>こんにちは、Aliceさん。
+年齢: 28
+age の型: &lt;class 'int'&gt;
+来年は 29 歳です。
+成人です。
+</code></pre>
+
+<p>確認は <code>print</code> で途中の変数を表示して進めます。型は <code>type(変数)</code> で確認し、条件分岐の前後でも値を出力して挙動を確かめます。</p>
+</section>
+
+<section id="sec-4">
+  <h3>デバッグと1段ステップアップ</h3>
+  <p>デバッグの見方としては、まずはprintで変数や処理の前後を出力し、値の流れを追うのが早いです。もう少し高度にしたい場合はloggingモジュールを使い、ログレベルで出力を分けると見通しがよくなります。</p>
+
+<p>1段ステップアップするには、コードを関数に分けてmain関数を作ると再利用しやすくなります。例外処理で入力エラーを受け止めると、想定外の入力でも止まりにくくなります。外部ライブラリが必要な場合は、pip install ライブラリ名 を1行で追加できます。</p>
+
+<p>デバッグの判断のポイントは、まず「期待する出力」を決めて、それと違う箇所をprintで絞り込むことです。</p>
+
+<p>よくあるミスとして、変数名をtypoしてNameErrorが出ることがあります。エラーメッセージに表示される変数名を確認し、ソースの該当箇所を正しい名前に修正すると解決しやすいです。例えばageeと書いていた場合はageに直します。</p>
+
+<p>ほかにもSyntaxErrorはコロンの書き忘れ、IndentationErrorはスペース数の不一致が典型です。いずれもエラーメッセージの行番号を見て、該当行を修正すると進めやすいです。</p>
+
+<p>30秒チェックとして、print(f"値は{val}") としてNameErrorが出る場合は、valが定義されていないのが原因です。定義（例：val = 1）を追加するか、正しい変数名に直すと解決します。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>
+    <p>スクリプト実行ではファイル名や変数名のスペルミス、インデントの乱れが最も詰まりやすい落とし穴です。</p>
+    <p>例えばインデントがそろっていないと、次のように <code>IndentationError</code> になります。</p>
+    <pre><code>IndentationError: unexpected indent</code></pre>
+  </li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>Pythonファイルに<code>print</code>とコメント（<code>#</code>）を書いて保存し、<code>python file.py</code>で実行できます。</li>
+  <li>最小コードでまず動かし、<code>type()</code>や途中の<code>print</code>で挙動を確認するとよいです。</li>
+  <li>実行はコマンドかVSCodeのRunボタンで行えます。</li>
+  <li>よくある詰まりどころはスペルミス・インデント・コロンの書き忘れで、エラーメッセージに出た行を直すと進みやすいです。</li>
+  <li>デバッグは<code>print</code>から始め、必要に応じて<code>logging</code>や関数化、例外処理へ段階的に進めるとよいです。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

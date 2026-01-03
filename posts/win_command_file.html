@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Windowsコマンド：テキスト系ファイルの操作</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1766977946166">
+    <style>
+    /* 表の協調 */
+    .caption {
+  margin: 4px 0;
+  padding: 2px 6px;
+  font-size: 0.9em;
+  border-left: 4px solid #888;
+  background-color: #f5f5f5;
+  font-weight: normal;  /* ←太字にしない */
+}
+
+.file-types {
+  margin: 4px 0;
+  padding: 2px 6px;
+  font-size: 0.9em;
+  border-left: 4px solid #888;
+  background-color: #f5f5f5;
+  font-weight: normal;  /* ←太字にしない */
+}
+.file-types dt {
+  font-weight: bold;
+}
+.file-types dd {
+  margin: 0 0 4px 1.5em;
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Windowsコマンド：テキスト系ファイルの操作</h1>
+    <nav>
+      <a href="/index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>簡単なPowerShellでの操作</h2>
+      <p><small>投稿日：2025-11-27</small></p>
+
+      <h3>目次</h3>
+      <ul>
+        <li><a href="#powershell-careful">1. PowerShellを使う時の注意点</a></li>
+        <li><a href="#Text-based">2. テキスト系ファイルの作成（New-Itemコマンド）</a></li>
+        <li><a href="#Text-write">3. 作成するファイルに文字列を書き込み(-Valueオプション)</a></li>
+        <li><a href="#Text-add">4. 作成したファイルに文字列を追加(Add-Contentコマンドやリダイレクト)</a></li>
+        <li><a href="#Text-content">5. テキスト系ファイルの内容を確認(Get-Content / catコマンド)</a></li>
+
+      </ul>
+      <br>
+
+      <h3 id="powershell-careful">PowerShellを使う時の注意点</h3>
+      <p>前回と同様にPowerShellを使用します。
+      <br>PowerShellはファイルやフォルダを削除したり設定を大きく変更したりすることもできます。
+      <br>内容が分からないコマンドは、むやみに実行しないようにしましょう。
+      <br>実行中の処理を止めたいときは、画面で処理が続いている場合に限り、Ctrl + C で中断できることがあります。
+      <br>ただし、一瞬で終わる削除などは止められないので、「実行する前によく確認する」ことが一番の安全策です。
+      </p>
+      <br>
+      
+      <h3 id="Text-based">テキスト系ファイルの作成（New-Itemコマンド）</h3>
+      <p>テキスト系ファイルを作成するには、New-Itemコマンドを使用します。
+      <br>New-Itemコマンドは、指定した名前で空のファイル（0バイト）を作成するコマンドです。
+      <br>
+      <br>New-Itemコマンドには相性の良くないファイル形式があります。
+      <br>Excel / Word / PDF / 画像ファイルなどの形式は、本来ヘッダや決められた構造（ファイルフォーマット）を持っている必要があります。
+      <br>New-Itemコマンドで作成した 0バイトのファイルにはその構造が一切ないため、これらの拡張子で空ファイルを作成すると、アプリケーションからは「壊れたファイル」とみなされ、正常に開くことができません。
+      <br>
+      <br>一方、中身がテキストで完結する形式の下記のファイルは、空のファイル（0バイト）でも正常に開けるため、New-Itemコマンドで簡単に作成できます。
+      <br>
+      <p class="file-types">New-Itemコマンドで簡単に作れるテキスト系ファイルの例</p>
+      <dl class="file-types">
+        <dt>プレーンテキスト</dt>
+        <dd>.txt, .log</dd>
+        <dt>データ系</dt>
+        <dd>.csv, .tsv<br>.json, .xml, .yaml, .ini, .conf</dd>
+        <dt>スクリプト／設定</dt>
+        <dd>.ps1（PowerShell）<br>.bat, .cmd（バッチ）<br>.vb, .vbs, .reg など</dd>
+        <dt>Web系</dt>
+        <dd>.html, .htm<br>.css<br>.js</dd>
+      </dl>
+      <br>書式は
+      <pre><code>New-Item "作成したいファイル名.拡張子"</code></pre>
+      ※拡張子は上記の「～テキスト系ファイルの例」に限ります。
+      <br>
+      <br>複数ファイルを作成する場合は,(カンマ)で区切ります。
+      <pre><code>New-Item "作成したいファイル名.拡張子", "作成したいファイル名.拡張子"</code></pre>
+      <br>実践します。
+      <br>"C:\PowerShell Test"フォルダ でファイルを作成したいので移動します。
+      <pre><code>cd "C:\PowerShell Test"</code></pre>
+      とPowerShellに入力してEnterを押下します。
+      <br>
+      <img src="/img/カレントフォルダ移動.jpg" alt="カレントフォルダ移動" width="500">
+      <br>移動できました。
+      <br>
+      <br>テキストファイルを作成します。
+      <pre><code>New-Item "memo1.txt"</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/memo1作成.jpg" alt="画像" width="500">
+      <br>memo1.txt ファイルが作成されました。
+      <br>
+      <br>複数ファイルを作成します。
+      <pre><code>New-Item "memo2.txt", "memo3.txt", "memo4.txt"</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/memo2-4作成.jpg" alt="画像" width="500">
+      <br>3つのファイルが作成されました。
+      <br>
+      <br>拡張子でファイルの種類を指定できます。※上記の「～テキスト系ファイルの例」に限ります。
+      <pre><code>New-Item "memo5.csv"</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/memo5作成.jpg" alt="memo5作成" width="500">
+      <br>memo5.csv ファイルが作成されました。
+      <br>
+      <br>lsコマンドで作成されているか確認します。
+      <pre><code>ls</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/lsmemo1-5.jpg" alt="lsmemo1-5" width="500">
+      <br>memo1～5が作成されているのが確認できました。
+      <br>作成完了です。
+      <br>
+      <br>New-Itemコマンドは既に存在するファイルを指定するとエラーになり上書きはされません。
+      <br>"memo1.txt" がある状態で、もう一度 "memo1.txt" を作ろうとします。
+      <img src="/img/すでにファイルがあります。.jpg" alt="すでにファイルがあります。" width="500">
+      <br>「指定したファイルがすでに存在します。」というエラーになります。
+      </p>
+      <br>
+
+      <h3 id="Text-write">作成するファイルに文字列を書き込み(-Valueオプション)</h3>
+      <p>作成するファイルに文字列を書き込みたい場合は、New-Itemコマンドに -Value オプションを付けます。
+      <br>
+      <br>書式は
+      <pre><code>New-Item "作成したいファイル名.拡張子" -Value "書き込みたい文字列"</code></pre>
+      <br>実践します。
+      <br>"write.txt"ファイルを作成して、"Hello World!"と書き込みます。
+      <pre><code>New-Item "write.txt" -Value "Helo World!"</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/write-確認.jpg" alt="画像。" width="500">
+      <br>エクスプローラーを確認すると、"Hello World!"と書き込まれたwrite.txtファイルが作成されています。
+      </p>
+      <br>
+
+
+      <h3 id="Text-add">ファイルに文字列を追加(Add-Contentコマンドやリダイレクト)</h3>
+      <p>作成するファイルに文字列を追加したい場合は、Add-Contentコマンドを使用します。
+      <br>また、お手軽に追加したい場合はリダイレクト(>>)を使用する方法もあります(ただし間違って上書きしてしまう危険があります)。
+      <br>
+      <br>Add-Contentコマンドから説明していきます。
+      <br>New-Itemコマンドの -Value オプションで作成された文字列の末尾には改行が入らないため、最初に追加する文字列は改行されずに続けて追加されます。
+      <br>逆に、Add-Contentコマンドで追加した文字列には末尾に自動で改行が入るので、続けてAdd-Contentコマンドで追加する場合は行が分かれます。
+      <br>
+      <br>書式は
+      <pre><code>Add-Content "ファイル名.拡張子" "追加したい文字列"</code></pre>
+
+      <br>実践します。
+      <br>"write.txt"ファイルに、2回"ハローワールド!"と追加します。
+      <pre><code>Add-Content "write.txt" "ハローワールド!"</code></pre>
+      と入力してEnterを押下します。×2
+      <br>
+      <br>
+      <img src="/img/ハローワールド追加.jpg" alt="画像。" width="300">
+      <br>1回目の"ハローワールド!"が末尾に追加され、2回目の"ハローワールド!"は改行されて追加されます。
+      <br>
+      <br>次にリダイレクト(>>)で追加する方法を説明します。
+      <br>>> がファイルに文字列の追加で、> が指定した文字列で上書きになります。
+      <br>リダイレクト(>>)は、動作はAdd-Contentコマンドと同じですが、間違って上書き(>)してしまう危険があるため注意が必要です。
+      <br>> で上書きした場合、Ctrl + Z などで元に戻すことはできません。
+      <br>
+      <br>書式は、追加する場合
+      <pre><code>"追加したい文字列" >> "ファイル名.拡張子"</code></pre>
+      上書きする場合
+      <pre><code>"追加したい文字列" > "ファイル名.拡張子"</code></pre>
+      <br>文字列の追加から実践します。
+      <pre><code>">>で文字追加" >> "write.txt"</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/>>文字列追加.jpg" alt="画像。" width="300">
+      <br>Add-Contentコマンドと同じように改行されて追加されます。
+      <br>次に上書きします。
+      <pre><code>">で上書き" > "write.txt"</code></pre>
+      と入力してEnterを押下します。 
+      <br>
+      <img src="/img/>で上書き.jpg" alt="画像。" width="300">
+      <br>ファイルの中身が上書きされました。
+      <br>リダイレクト(>>)での追加と(>)での上書きの違いが確認できました。
+      </p>
+      <br>
+
+      <h3 id="Text-content">テキスト系ファイルの内容を確認(Get-Content / catコマンド)</h3>
+      <p>今まで、テキストの中身を確認するためにファイルを開いていましたが、PowerShell上で中身を確認することもできます。
+      <br>Get-Contentコマンドもしくは、catコマンドを使用します。
+      <br>catコマンドはLinux由来のコマンドですが、PowerShellで使用すると自動でGet-Contentコマンドに変換されて実行されます。
+      <br>そのため書式やオプションなどの使い方は同じです。好きな方を使用してください。
+      <br>一応、catのコマンド名の由来はconcatenate（連結する）の略で、ファイルを標準出力(コンソール)に繋げるところから来ています。
+      <br>
+      <br>書式は
+      <pre><code>cat "ファイル名.拡張子"</code></pre>
+      カレントディレクトリではないファイルを指定する場合は、フルパスで指定します。
+      <pre><code>cat "フォルダパス/ファイル名.拡張子"</code></pre>
+      文字化けする場合は、-Encodingオプションに UTF8 や Default や Unicode を指定します。
+      <pre><code>cat "ファイル名.拡張子" -Encoding UTF8などの文字コード</code></pre>
+      <br>"write.txt"ファイルの中身の確認を実践します。
+      <pre><code>cat "write.txt"</code></pre>
+      と入力してEnterを押下します。
+      <br>
+      <img src="/img/catコマンド.jpg" alt="画像。" width="500">
+      <br>"write.txt"の内容がPowerShellに表示されました。
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <p>c 2025 hi</p>
+  </footer>
+</body>
+</html>

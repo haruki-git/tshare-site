@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python：繰り返し（for / while）の解説</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767337586503">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Python：繰り返し（for / while）の解説</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-02</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/941208.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">基本：for と while の仕組み</a></li>
+  <li><a href="#sec-2">実例と最小コード</a></li>
+  <li><a href="#sec-3">デバッグと確認方法</a></li>
+  <li><a href="#sec-4">1段ステップアップ（関数化・入力対応）</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>基本：for と while の仕組み</h3>
+  <p>今回できるようになることは、for と while を使って一覧処理と条件ループを正しく書けるようになることです。</p>
+
+<p>for 文は、シーケンス（リストや range など）の各要素を順番に処理するために使います。while 文は、条件が成り立つ間だけ処理を繰り返すために使います。</p>
+
+<p>range() は整数の列を作る組み込み関数で、for と組み合わせて回数分の繰り返しを書くときに便利です。</p>
+
+<p>for の基本形は次のとおりです。</p>
+<pre><code>for 変数 in シーケンス:
+    処理
+</code></pre>
+
+<p>while の基本形は次のとおりで、ループを抜けられるように条件を変化させる処理も一緒に書きます。</p>
+<pre><code>while 条件:
+    処理
+    条件を変化させる処理
+</code></pre>
+
+<p>break を使うとループから早めに抜けられて、continue を使うと次の繰り返しへ進めます。</p>
+
+<p>使い分けは、シーケンスを順に処理するときは for を優先して、回数が固定でない場合や外部条件で止めたい場合は while を選ぶのがポイントです。</p>
+</section>
+
+<section id="sec-2">
+  <h3>実例と最小コード</h3>
+  <p>最小コードは次のとおりです。</p>
+
+<pre><code class="language-python"># loops_demo.py
+def main():
+    numbers = [1, 2, 3, 4, 5]
+    sum_even = 0
+    for idx, n in enumerate(numbers, start=1):
+        if n % 2 == 0:
+            sum_even += n
+            print(f"{idx}: {n} は偶数です")
+        else:
+            print(f"{idx}: {n} は奇数です")
+
+    i = 0
+    while i &lt; 3:
+        print("while でカウント:", i)
+        i += 1
+    else:
+        print("while を抜けました")
+
+if __name__ == "__main__":
+    main()</code></pre>
+
+<p>このコードでは、リストの各要素を for で確認して偶数の合計を作り、その後に while で 0 から 2 まで数えます。出力例は下に示します。</p>
+
+<p>実行方法は次のとおりです。</p>
+<ul>
+  <li>ターミナルで <code>python loops_demo.py</code> を実行します。</li>
+  <li>または VSCode でファイルを開き、上部の再生ボタンやデバッガーで実行します。</li>
+</ul>
+
+<p>出力例は次のとおりです。</p>
+<pre><code>1: 1 は奇数です
+2: 2 は偶数です
+3: 3 は奇数です
+4: 4 は偶数です
+5: 5 は奇数です
+while でカウント: 0
+while でカウント: 1
+while でカウント: 2
+while を抜けました</code></pre>
+</section>
+
+<section id="sec-3">
+  <h3>デバッグと確認方法</h3>
+  <p>デバッグの見方としては、まず <code>print()</code> で変数の中身や途中結果を出力すると、ループの流れを追いやすくなります。</p>
+<p><code>logging</code> を使うとログレベルで出力を制御できます。次の例では DEBUG レベルの出力を有効にします。</p>
+<pre><code>import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logging.debug("デバッグ用の出力です")</code></pre>
+<p>VSCode のデバッガーを使う場合は、ブレークポイントを置いて変数ウォッチやコールスタックを確認すると、どこで値が変わったかを把握しやすくなります。</p>
+
+<p>確認方法としては、<code>for</code> では <code>enumerate()</code> で index と値を出力し、必要に応じて <code>type()</code> で型も確認すると分かりやすいです。</p>
+<pre><code>items = ["a", "b", "c"]
+
+for i, v in enumerate(items):
+    print(i, v, type(v))</code></pre>
+<p><code>while</code> ではループ変数が想定どおりに増減しているかを出力で追うと、条件式と更新処理の整合を確認しやすくなります。</p>
+<pre><code>i = 0
+while i &lt; 3:
+    print("i =", i)
+    i += 1</code></pre>
+<p>合計やカウントを作る処理では、ループの最後に最終結果を出力して期待どおりかを確かめると安心です。</p>
+<pre><code>nums = [1, 2, 3]
+total = 0
+
+for n in nums:
+    total += n
+
+print("total =", total)</code></pre>
+
+<p>よくあるミスとして、<code>while</code> でループ変数の更新を忘れて処理が終わらなくなることがあります。この場合はループ内でカウントを増やすなど、条件が変化する処理を入れると改善します。</p>
+<p><code>range()</code> の終端を勘違いして回数が 1 回ずれることもあります。<code>range(n)</code> は 0 から <code>n-1</code> までになるため、必要な回数と一致するかを見直すとよいです。</p>
+<p>リストをループ中に破壊的に変更すると期待どおりに動かないことがあります。たとえば <code>for</code> の最中に <code>remove()</code> を呼ぶ代わりに、コピーしたリストで回すか、削除は後処理に回す方法が扱いやすいです。</p>
+</section>
+
+<section id="sec-4">
+  <h3>1段ステップアップ（関数化・入力対応）</h3>
+  <p>関数化すると再利用性が上がります。例として、リストの偶数合計を関数にまとめます。</p>
+
+<pre><code>def sum_even_numbers(numbers):
+    total = 0
+    for n in numbers:
+        if n % 2 == 0:
+            total += n
+    return total
+
+# 実行例
+nums = [10, 15, 20]
+print("偶数の合計:", sum_even_numbers(nums))
+</code></pre>
+
+<p>sum_even_numbers関数で偶数だけを足し、呼び出し側では結果を表示します。</p>
+
+<p>入力をユーザーから受け取る場合はinput()を使い、strをintに変換してリストを作る処理を追加します。外部ライブラリは不要です。もし必要ならpipの使い方は一行でpip install パッケージ名です。</p>
+
+<p>30秒チェックです。</p>
+<ul>
+  <li>問題はrange(5)が生成する要素は何ですかです。</li>
+  <li>答えは0, 1, 2, 3, 4です。リストなら[0, 1, 2, 3, 4]と表示できます。</li>
+</ul>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <p>無限ループは実行が止まらず端末やエディタが操作しづらくなるため、while を書くときはループ上限を設けるか、必ず変化する条件を入れてください。</p>
+<ul>
+  <li>既に動かなくなった場合は、ターミナルで Ctrl+C を押してプロセスを中断してください。</li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>for はシーケンスを順に処理するのに向いていますが、while は条件で繰り返すときに使います。</li>
+  <li>enumerate や range を使うと、インデックスや連続数列の処理が簡単になります。</li>
+  <li>print と logging、VSCode のデバッガーで途中結果と変数を確認します。</li>
+  <li>while では変数更新の忘れが無限ループの典型的なミスになりやすいので、ループ上限や条件変更を入れます。</li>
+  <li>関数化するとテストと再利用が楽になるため、入力対応は input() と型変換で行います。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>コード作成ツール</title>
+
+  <!-- 既存CSS -->
+  <link rel="stylesheet" href="/assets/styles.css?v=1766977946166">
+  <link rel="stylesheet" href="../assets/tools.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="h1">英和/和英訳と文章比較（差分ハイライト）</h1>
+
+    <!-- ========== 英和訳（後でPython接続） ========== -->
+<section class="card" style="margin-top:16px;">
+    <div>
+        <h2 style="margin:0;">翻訳</h2>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:10px;">
+            <label class="badge" for="langDir" style="cursor:pointer;">方向</label>
+            <select id="langDir" class="input" style="width:auto;">
+                <option value="en2ja">英→和</option>
+                <option value="ja2en">和→英</option>
+            </select>
+
+            <button class="btn primary" id="btnTranslate">翻訳する</button>
+            <button class="btn" id="btnSwapTranslate">入れ替え</button>
+            <button class="btn" id="btnClearTranslate">クリア</button>
+        </div>
+    </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div>
+          <div class="badge">入力</div>
+          <textarea class="input mono" id="enText" rows="7" placeholder="英語のエラー文、変数名の説明など"></textarea>
+        </div>
+        <div>
+          <div class="badge">翻訳結果</div>
+          <textarea class="input mono" id="jaText" rows="7" placeholder="ここに翻訳結果が出ます" readonly></textarea>
+        </div>
+      </div>
+
+      <p class="muted" id="translateStatus" style="margin-top:10px;"></p>
+    </section>
+  </main>
+
+    <!-- ========== 文章比較 ========== -->
+    <div>
+        <h2 style="margin:0;">文章比較（差分）</h2>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;">
+            <button class="btn primary" id="btnCompare">比較する</button>
+            <button class="btn" id="btnSwap">A⇄B入れ替え</button>
+            <button class="btn" id="btnClearCompare">クリア</button>
+        </div>
+    </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div>
+          <div class="badge">テキストA</div>
+          <textarea class="input mono" id="textA" rows="10" placeholder="ここに比較したい文章/コード/エラー文を貼り付け"></textarea>
+        </div>
+        <div>
+          <div class="badge">テキストB</div>
+          <textarea class="input mono" id="textB" rows="10" placeholder="修正後の文章/コード/エラー文など"></textarea>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;">
+        <div class="badge">差分結果</div>
+        <div id="diffResult" class="diff mono" style="margin-top:8px;"></div>
+        <p class="muted" style="margin-top:10px;">
+          ※緑＝Aにはない文字、赤＝Aだけにある文字（赤は下線/ハイライト）
+        </p>
+      </div>
+    </section>
+
+  <!-- diff-match-patch（文章比較用ライブラリ） -->
+  <script src="https://unpkg.com/diff-match-patch@1.0.5/index.js"></script>
+
+  <!-- 自作JS -->
+  <script src="../assets/js/compare.js"></script>
+  <script src="../assets/js/translate.js"></script>
+</body>
+</html>
