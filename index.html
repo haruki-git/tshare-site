@@ -36,7 +36,7 @@
 
     <!-- ▼ ニュース（詳細表示を復活） -->
     <section class="section" id="news">
-      <h2>今日のITニュース(7:15更新)</h2>
+      <h2>今日のITニュース <span id="news-updated">(最終更新：読み込み中...)</span></h2>
       <div class="card">
         <ul id="newsList"></ul>
         <div id="newsError" class="news-error"></div>
@@ -74,6 +74,32 @@
   <footer>© 2025 hi</footer>
 
   <script>
+    // ▼ニュース最終更新日時の取得と表示
+    function formatYmdHm(isoString) {
+      const d = new Date(isoString);
+      const parts = new Intl.DateTimeFormat("ja-JP", {
+        timeZone: "Asia/Tokyo",
+        year: "numeric", month: "2-digit", day: "2-digit",
+        hour: "2-digit", minute: "2-digit",
+        hour12: false,
+      }).formatToParts(d).reduce((acc, p) => (acc[p.type] = p.value, acc), {});
+      return `${parts.year}/${parts.month}/${parts.day}/${parts.hour}:${parts.minute}`;
+    } // formatToParts はこの用途向き :contentReference[oaicite:1]{index=1}
+
+    // ② その下に updateNewsTimestamp
+    async function updateNewsTimestamp() {
+      const el = document.getElementById("news-updated");
+      if (!el) return;
+
+      try {
+        const r = await fetch("/assets/top_news.json?ts=" + Date.now(), { cache: "no-store" }); // no-store OK :contentReference[oaicite:2]{index=2}
+        const j = await r.json();
+        el.textContent = `最終更新：${formatYmdHm(j.generatedAtJST)}`;
+      } catch (e) {
+        el.textContent = "(更新日時取得失敗)";
+      }
+    }
+
     // ▼モバイルメニュー：aria-expandedを更新（推奨パターン）
     // WAI: menu button pattern  :contentReference[oaicite:3]{index=3}
     const menuBtn = document.getElementById("menuBtn");
@@ -289,8 +315,11 @@
       }
     }
 
-    loadNews();
-    loadGenba();
+    loadNews();   // ITニュースの読み込み
+    loadGenba();  // 現場記事の読み込み
+
+    updateNewsTimestamp();  // ITニュースの最終更新日時を更新 
   </script>
+
 </body>
 </html>
