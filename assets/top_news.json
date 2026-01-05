@@ -1,121 +1,134 @@
 {
-  "date": "2026-01-05",
-  "generatedAtJST": "2026-01-05T07:15:43.910+09:00",
+  "date": "2026-01-06",
+  "generatedAtJST": "2026-01-06T07:15:53.095+09:00",
   "items": [
     {
-      "url": "https://truthout.org/articles/fracking-industry-executives-are-salivating-over-the-ai-data-center-boom/",
-      "source": "Truthout",
-      "publishedAt": "2026-01-03T21:24:21Z",
-      "title": "Fracking Industry Executives Are Salivating Over the AI Data Center Boom",
-      "title_ja": "フラクタリング業界の幹部たちがAIデータセンターのブームに期待を寄せる理由",
-      "summary_ja": "フラクタリング業界の企業、特にハリバートンは、AIの需要増加に伴い、データセンターの電力供給を目指している。これにより、メタンを多く排出する天然ガス発電が選ばれ、気候変動への影響が懸念される。フラクタリング企業は、急成長するデータセンター需要を満たすために新たなインフラを構築し、地元の農村コミュニティに悪影響を及ぼす可能性がある。",
+      "url": "https://en.protothema.gr/2026/01/04/operational-incident-centers-across-greece-how-the-new-network-will-function/",
+      "source": "Protothema.gr",
+      "publishedAt": "2026-01-04T07:45:03Z",
+      "title": "Operational Incident Centers across Greece: How the new network will function",
+      "title_ja": "ギリシャにおける運用インシデントセンター：新ネットワークの機能",
+      "summary_ja": "ギリシャ全土に運用インシデントセンターが設置され、国の危機管理を強化します。このセンターは、地域の消防サービスと全国の調整センター（ESKEDIK）と接続され、リアルタイムでの情報共有と決定を迅速化します。この改革は、過去の危機における統一的な調整の欠如を克服し、より安全な対応を可能にします。",
       "key_points": [
-        "フラクタリング企業はデータセンターの電力需要に注目し、天然ガス供給を強化している。",
-        "データセンターは現在、41％以上の電力を天然ガスから得ており、その需要は急増している。",
-        "トランプ政権がフossil fuelを優遇する政策を展開し、データセンターにおいても影響を及ぼしている。",
-        "コミュニティにおける環境問題への影響が懸念されている。",
-        "大手テクノロジー企業は再生可能エネルギーへの取り組みを後退させ、天然ガス依存を強めている。"
+        "運用インシデントセンターは各地域の消防サービス指令の下に設置されます。",
+        "統一された命令と運用応答プロトコルが導入されます。",
+        "国際的な事故管理モデルであるインシデントコマンドシステム（ICS）が採用されます。",
+        "13のインシデントセンターが全国に配置され、リアルタイムで情報を共有します。",
+        "各機関間の調整と連携を強化し、危機管理の質を向上させます。"
       ],
       "glossary": [
         {
-          "term": "フラクタリング",
-          "explain_ja": "地下のシェール層から石油や天然ガスを抽出する手法。環境への影響が懸念される。"
+          "term": "ESKEDIK",
+          "explain_ja": "国の危機管理のための調整センター。"
         },
         {
-          "term": "メタン",
-          "explain_ja": "強力な温室効果ガスで、フラクタリングや天然ガスの生成・焼却時に多く排出される。"
+          "term": "ICS",
+          "explain_ja": "インシデントコマンドシステム。全ハザード対応型の事故管理モデル。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを処理・保存するための施設。電力消費が非常に大きい。"
+          "term": "SOPP",
+          "explain_ja": "Civil Protection Coordination Bodyの略。"
+        },
+        {
+          "term": "PESOPP",
+          "explain_ja": "Regional Civil Protection Coordination Bodyの略。"
+        },
+        {
+          "term": "TESOPP",
+          "explain_ja": "Local Civil Protection Coordination Bodyの略。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力供給に関する地域の計画や政策を確認する。",
-        "フラクタリングの影響を受ける地域の環境問題について学ぶ。",
-        "再生可能エネルギーの利用を促進するためのローカル活動に参加する。"
+        "新しい運用インシデントセンターの機能を理解し、現場での適用を考える。",
+        "ICSの原則に基づいて、日常業務での運用手順を見直す。",
+        "他の機関との連携を強化し、情報共有の流れを確認する。"
       ],
       "tags": [
-        "DC",
+        "インフラ"
+      ]
+    },
+    {
+      "url": "https://bitcoinist.com/solanas-upcoming-upgrade/",
+      "source": "Bitcoinist",
+      "publishedAt": "2026-01-04T04:30:50Z",
+      "title": "Solana’s Upcoming Upgrade Could Be A Turning Point For The Network - Here's Why | Bitcoinist.com",
+      "title_ja": "ソラナの upcoming アップグレードがネットワークの転換点となる可能性 - その理由",
+      "summary_ja": "ソラナは、重要なネットワークアップグレードを控えています。このアップグレードにより、長期間の安定性やスケーラビリティに関する懸念に対処し、ブロックチェーンエコシステムにおけるSOLの役割を再定義することが期待されています。特に、新しいコンセンサスオーバーホール「Alpenglow」では、処理効率と安定性の大幅な向上を図る内容となっています。",
+      "key_points": [
+        "AlpenglowアップグレードでTower BFTとProof of Historyが改善される。",
+        "新しいVotorコンポーネントにより、最終確認時間が100-150ミリ秒に短縮される可能性。",
+        "二つの並行した最終確認パス、Fast FinalizationおよびSlow Finalizationを導入。",
+        "RotorがSOLブロック伝播層を再設計し、効率的な帯域幅利用を図る。",
+        "2025年にはソラナのオンチェーン取引ボリュームがトリリオンに達し、オフチェーン取引所を上回る。"
+      ],
+      "glossary": [
+        {
+          "term": "BFT",
+          "explain_ja": "ビザンチンフォールトトレラントの略。分散システムにおける耐障害性を指します。"
+        },
+        {
+          "term": "PoH",
+          "explain_ja": "Proof of Historyの略。ブロックチェーンにおいて時間の経過を証明するための手法です。"
+        },
+        {
+          "term": "SOL",
+          "explain_ja": "ソラナブロックチェーンのネイティブトークンで、取引手数料の支払いなどに使用されます。"
+        }
+      ],
+      "personal_actions": [
+        "アップグレードの進捗状況を定期的に確認する。",
+        "SOLの取引市場動向をウォッチし、取引機会を逃さないようにする。",
+        "今後のアップデートに備えて、バリデーターとしての機能を見直す。"
+      ],
+      "tags": [
+        "インフラ"
+      ]
+    },
+    {
+      "url": "https://www.pentestpartners.com/security-blog/eurostar-ai-vulnerability-when-a-chatbot-goes-off-the-rails/",
+      "source": "Pentestpartners.com",
+      "publishedAt": "2026-01-04T20:52:52Z",
+      "title": "Eurostar AI vulnerability: when a chatbot goes off the rails",
+      "title_ja": "Eurostar AIの脆弱性：チャットボットが制御を失った時",
+      "summary_ja": "Eurostarの公衆向けAIチャットボットにおいて、4つのセキュリティ問題が発見されました。これらには、ガードレールの回避、不正な会話・メッセージIDの検証不足、プロンプトインジェクションによるシステムプロンプトの漏洩、HTMLインジェクションによる自己XSSが含まれます。これらの問題に対する対応は遅れ、無視される場面もありましたが、最終的には修正が施されました。これにより、AIモデルが関与する場合でも、古いウェブやAPIの脆弱性は依然重要であることが示されました。",
+      "key_points": [
+        "EurostarのAIチャットボットに4つの脆弱性が発見された。",
+        "ガードレールの回避や不正なID検証が可能であった。",
+        "プロンプトインジェクションによりシステム情報が漏洩した。",
+        "HTMLインジェクションにより自己XSSが発生するリスクがあった。",
+        "Eurostarの脆弱性開示プログラムがあったが、対応が遅れた。",
+        "AIモデルでも古い脆弱性が影響する可能性がある。"
+      ],
+      "glossary": [
+        {
+          "term": "ガードレール",
+          "explain_ja": "システムが許可するリクエストを制御するための制約。"
+        },
+        {
+          "term": "プロンプトインジェクション",
+          "explain_ja": "入力値を利用してシステムが内部で使用するプロンプトを操作する攻撃。"
+        },
+        {
+          "term": "自己XSS",
+          "explain_ja": "ユーザー自身のブラウザで悪意のあるスクリプトが実行される脆弱性。"
+        },
+        {
+          "term": "REST API",
+          "explain_ja": "WebサービスのためのAPIの設計スタイル。"
+        },
+        {
+          "term": "VDP（脆弱性開示プログラム）",
+          "explain_ja": "企業が脆弱性の報告を受け付けるための公式なプログラム。"
+        }
+      ],
+      "personal_actions": [
+        "チャットボットのセキュリティ動作を確認して、ガードレールやフィルターが適切に機能しているか調査する。",
+        "過去の会話履歴が正しく管理されているか検証し、悪用されるリスクを評価する。",
+        "プロンプトインジェクションに対する防御策を強化するため、入力検証を定期的に見直す。"
+      ],
+      "tags": [
+        "セキュリティ",
         "AI"
-      ]
-    },
-    {
-      "url": "https://economictimes.indiatimes.com/tech/technology/big-techs-fast-expanding-plans-for-data-centers-are-running-into-stiff-community-opposition/articleshow/126317480.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-01-03T05:35:59Z",
-      "title": "Big Tech's fast-expanding plans for data centers are running into stiff community opposition",
-      "title_ja": "ビッグテックのデータセンター拡張計画が地域住民の反対に直面",
-      "summary_ja": "ビッグテック企業のデータセンター計画が、地域住民の強い反対に直面している。アメリカ各地で、データセンター建設に関する地域の戦いが増えており、地方自治体は適切なゾーニングの枠組みを模索している。この状況は、地域の生活品質や環境への影響を懸念する住民の声により、プロジェクトの進行に大きな影響を及ぼしている。",
-      "key_points": [
-        "データセンター建設に対する地域住民の反対が強まっている。",
-        "新しいプロジェクトは適切なゾーニングがなく、計画が遅延している。",
-        "多くの地域で住民が集まって反対運動を行い、政治的圧力をかけている。",
-        "ビッグテック企業は数百億ドル規模の投資を行っているが、地域の抵抗が問題となっている。",
-        "環境や生活品質への影響が住民の懸念として浮上している。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データの保存や管理を行うための施設。"
-        },
-        {
-          "term": "ゾーニング",
-          "explain_ja": "土地の用途や建物の種類を決定するための地域計画。"
-        },
-        {
-          "term": "ビッグテック",
-          "explain_ja": "大規模IT企業の総称。"
-        },
-        {
-          "term": "プロジェクト",
-          "explain_ja": "特定の目的のために行われる一連の活動。"
-        }
-      ],
-      "personal_actions": [
-        "地域のデータセンター建設計画に関する住民集会に参加する。",
-        "データセンターがもたらす影響について地元の意見を収集する。",
-        "地元行政への意見提出や署名活動を行う。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://apnews.com/article/data-centers-artificial-intelligence-nimby-tech-21fa7b957664d5dca6788e35ab43b88e",
-      "source": "Associated Press",
-      "publishedAt": "2026-01-03T05:16:47Z",
-      "title": "Tech companies increasingly defeated by communities opposed to data centers | AP News",
-      "title_ja": "データセンターに反対する地域が増加する中、テクノロジー企業が苦戦",
-      "summary_ja": "米国のコミュニティはデータセンターの提案に対抗し、テクノロジー企業や開発者は失敗を重ねている。データセンターはエネルギーを大量消費するため、地域住民の反発が強まっている。この動きが続けば、データセンターの開発計画がさらに難航する可能性が高い。",
-      "key_points": [
-        "データセンターの提案が地方自治体で拒否される事例が増加している。",
-        "地域住民はエネルギーコストや環境問題への懸念から強く反発している。",
-        "最近の4月から6月の間に20件、総額980億ドルのデータセンター提案がブロックまたは遅延された。",
-        "ビッグテック企業はコスト削減だけでなく、地域社会との関係構築の重要性を再認識している。",
-        "秘密裏に進められたデータセンター計画に対する住民の反発が広がっている。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを管理・保存する施設で、主にクラウドサービスなどの基盤となる。"
-        },
-        {
-          "term": "ビッグテック",
-          "explain_ja": "米国の主要テクノロジー企業（例：Microsoft、Google、Amazon、Facebookなど）を指す。"
-        },
-        {
-          "term": "区域指定 (zoning)",
-          "explain_ja": "土地利用の種類を定める法令で、開発計画に影響を与える。"
-        }
-      ],
-      "personal_actions": [
-        "自社環境におけるデータセンターの影響を再評価し、必要に応じて議論をスタートする。",
-        "地域住民とのコミュニケーションを重視し、意見を取り入れることを検討する。",
-        "地域のエネルギー消費への影響を分析し、対策を講じる。"
-      ],
-      "tags": [
-        "DC"
       ]
     }
   ]
