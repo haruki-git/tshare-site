@@ -1,0 +1,35 @@
+「小項目（subTopics）が欠けていない／目次どおりに章があり、最後まで（注意＋要約まで）揃っている」という意味で現状問題が少ない記事は、私が確認できた範囲だと次の5本です。
+
+001：Excel VBA入門：基礎知識と開発環境（目次4項目＋注意＋要約あり） 
+002：最初のコードを書いてみる（目次5項目＋注意＋要約あり） 
+005：繰り返し処理の基本（目次5項目＋注意＋要約あり） 
+013：関数とプロシージャの使い分け（目次5項目＋注意＋要約あり） 
+020：実務で役立つTipsとベストプラクティス（目次5項目＋注意＋要約あり）
+
+■他記事のデバッグ内容
+生成打ち切りで小項目が足りない
+生成されていない記事もある
+
+■現在の懸念
+まとめて、記事出力はトークンが足りなくなるとかない？下記のやつ
+========================
+sudo -u hi bash -lc '
+set -e
+cd /opt/tshare-api
+
+set -a
+source /opt/api_key/.env
+set +a
+
+while true; do
+  n=$(node -e "const fs=require(\"fs\");const q=JSON.parse(fs.readFileSync(\"/opt/tshare-api/data/genba_queue.json\",\"utf8\"));console.log(Array.isArray(q)?q.length:0)")
+  echo "queue length = $n"
+  [ "$n" -le 0 ] && break
+
+  node /opt/tshare-api/scripts/generate_genba_weekly.js
+  sleep 8
+done
+'
+========================
+
+その他またバックエンドのファイルを修正だな。
