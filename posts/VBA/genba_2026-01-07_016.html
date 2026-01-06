@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>実務でよく使うExcel VBA自動化テクニック</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>実務でよく使うExcel VBA自動化テクニック</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/016.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">条件付き書式をVBAで設定する</a></li>
+  <li><a href="#sec-2">グラフの自動作成（ChartObjectsコレクション）</a></li>
+  <li><a href="#sec-3">印刷処理の自動化（PrintOut、PrintPreview）</a></li>
+  <li><a href="#sec-4">ExportAsFixedFormatでPDF出力</a></li>
+  <li><a href="#sec-5">Application.ScreenUpdatingで画面更新を制御する</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>条件付き書式をVBAで設定する</h3>
+  <p>今回できるようになることとして、データに応じて自動で色付けやルールを設定して見やすさを保てるようになります。</p>
+<p>条件付き書式は手作業で設定すると煩雑になりやすいため、VBAで範囲にルールを貼る方法を覚えると実務で役立ちます。対象範囲を変数で指定し、FormatConditions（書式条件）コレクションに新しいルールを追加します。</p>
+<p>最小マクロ：次の例はA2:A20のセルが50以上なら背景を薄緑にする簡単なマクロです。</p>
+
+<pre><code>Sub SetConditionalFormat_Min()
+    Dim ws As Worksheet
+    Dim rng As Range
+    Set ws = ThisWorkbook.Worksheets("Sheet1")
+    Set rng = ws.Range("A2:A20")
+    rng.FormatConditions.Delete
+    rng.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, Formula1:="=50"
+    rng.FormatConditions(1).Interior.Color = RGB(200, 255, 200)
+End Sub</code></pre>
+
+<p>貼り付け場所は、標準モジュールに入れると再利用しやすいです。</p>
+<p>実行方法は、VBE（Alt+F11）でマクロを選んで実行するか、ボタンに割り当てます。</p>
+<p>確認方法は、Sheet1のA2:A20の該当セルの背景色が変わっているかを目視で確認します。</p>
+<p>使い分けの基準として、Rangeは明示的な範囲指定に向いており、Cellsはループや動的な行列に使うと扱いやすくなります。</p>
+</section>
+
+<section id="sec-2">
+  <h3>グラフの自動作成（ChartObjectsコレクション）</h3>
+  <p>データから定型的にグラフを作ると報告資料作成が速くなります。ChartObjectsコレクションはシート上に埋め込みグラフ（ChartObject）を追加・編集できます。系列や軸ラベル、表示位置をコードで決めると同じ書式のグラフを大量に作成できます。次のコードはB列とC列のデータで折れ線グラフを作成する例です。</p>
+
+<pre><code>Sub CreateChartExample()
+    Dim ws As Worksheet
+    Dim ch As ChartObject
+    Set ws = ThisWorkbook.Worksheets("Sheet1")
+    Set ch = ws.ChartObjects.Add(Left:=300, Top:=10, Width:=400, Height:=250)
+    With ch.Chart
+        .ChartType = xlLineMarkers
+        .SetSourceData Source:=ws.Range("B1:C12")
+        .HasTitle = True
+        .ChartTitle.Text = "月次推移"
+    End With
+End Sub</code></pre>
+
+<p>系列の追加や見た目はChartオブジェクトのプロパティで細かく制御できます。よくあるミスとして、データ範囲の指定がずれて空白や文字列が混ざるとグラフが正しく描けないことが多いので、範囲を見直してから実行するとよいです（対処法はセル値の型確認かRangeの再指定です）。</p>
+</section>
+
+<section id="sec-3">
+  <h3>印刷処理の自動化（PrintOut、PrintPreview）</h3>
+  <p>帳票を決まった形式で印刷する作業は、自動化で大幅に時短できます。PrintOutは直接印刷、PrintPreviewは印刷プレビュー表示を行います。ページ設定（Orientation/Zoom/PrintArea）を事前に整え、必要なら一時的に印刷用のシートを作ると安全です。次の例は印刷範囲を設定してプレビュー表示する簡単な流れです。</p>
+
+<p>Subではなく先のChart作成と組み合わせる場合は、ScreenUpdating制御が効きます（後述）。PrintOutはプリンタドライバの設定に依存するため、複数環境で試すと安定します。使い分けの基準として、ユーザー確認が必要ならPrintPreviewを、完全自動で配布するならPrintOutを選びます。</p>
+</section>
+
+<section id="sec-4">
+  <h3>ExportAsFixedFormatでPDF出力</h3>
+  <p>ExcelブックやシートをPDFにするにはExportAsFixedFormatメソッドが便利です。</p>
+<p>ファイル名や出力先を指定でき、複数シートや印刷範囲のみを出力できます。</p>
+<p>例として、指定シートをPDFで保存する流れを示します。</p>
+
+<pre><code>Sub ExportSheetToPDF()
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Worksheets("Sheet1")
+    ws.PageSetup.Orientation = xlLandscape
+    ws.ExportAsFixedFormat Type:=xlTypePDF, Filename:=ThisWorkbook.Path &amp; "\出力_Sheet1.pdf", Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, OpenAfterPublish:=False
+End Sub</code></pre>
+
+<p>ファイルパスが空の状態（保存していないブック）だと、意図しない場所に保存されることがあるため、先にブックを保存してから実行するのが実務上安全です。</p>
+<p>実行方法は、ブックを保存してからマクロを実行します。</p>
+<p>確認方法は、指定フォルダにPDFが作成されていることと、内容が印刷イメージ通りであることを開いて確認します。</p>
+</section>
+
+<section id="sec-5">
+  <h3>Application.ScreenUpdatingで画面更新を制御する</h3>
+  <p>大量の処理や画面操作を伴う自動化は、画面更新をオフにすると高速化できます。</p>
+<p>Application.ScreenUpdating = Falseで更新を停止し、最後にTrueに戻します。</p>
+<p>Falseにしたままエラーで抜けると画面が更新されないままになるため、エラーハンドリングで必ず復帰させます。</p>
+<p>次は複数操作をまとめて実</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き・権限変更）をする前に、対象と影響範囲を確認して、必要であればバックアップを取ってから進めるとよいです。</li>
+</ul>
+</section>
+
+      
+    </article>
+  </main>
+</body>
+</html>

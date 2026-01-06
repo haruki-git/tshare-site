@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>データ型と変数の使い方</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>データ型と変数の使い方</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/003.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">主要なデータ型（String、Integer、Long、Double、Boolean、Date）</a></li>
+  <li><a href="#sec-2">変数のスコープ（プロシージャレベル、モジュールレベル、パブリック）</a></li>
+  <li><a href="#sec-3">定数（Const）の活用方法</a></li>
+  <li><a href="#sec-4">型変換関数（CStr、CInt、CLng、CDbl）の使い分け</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>主要なデータ型（String、Integer、Long、Double、Boolean、Date）</h3>
+  <p>今回できるようになることとして、データ型の選び方と基本的な変数宣言、型変換の使い分けがわかるようになります。</p>
+<p>Stringは文字列、Integerは小さな整数、Longは大きな整数、Doubleは小数、Booleanは真偽、Dateは日付専用です。Integerは-32,768〜32,767なので大きな数はLongを使います。Dateは内部的には数値扱いになるため、日付演算で便利です。型を宣言すると読みやすく、バグを減らせます。</p>
+
+<p>最小マクロ：</p>
+<pre><code>Sub MinimalTypes()
+    Dim s As String
+    Dim i As Integer
+    Dim l As Long
+    Dim d As Double
+    Dim f As Boolean
+    Dim dt As Date
+
+    s = "テスト"
+    i = 10
+    l = 100000
+    d = 3.14
+    f = True
+    dt = Date
+
+    MsgBox s &amp; " / " &amp; i &amp; " / " &amp; l &amp; " / " &amp; d &amp; " / " &amp; f &amp; " / " &amp; Format(dt, "yyyy/mm/dd")
+End Sub</code></pre>
+
+<p>貼り付け場所は、標準モジュール（VBEの挿入→標準モジュール）に入れます。</p>
+<p>実行方法は、VBEでマクロを選んでF5実行するか、シートにボタンを置いて割り当てて実行できます。</p>
+<p>確認方法は、MsgBoxで値が表示されるか、シートのセルに書き出して中身を目視で確認します。</p>
+</section>
+
+<section id="sec-2">
+  <h3>変数のスコープ（プロシージャレベル、モジュールレベル、パブリック）</h3>
+  <p>プロシージャレベルは、SubやFunction内でDimで宣言し、そのプロシージャの中だけで有効な変数です。</p>
+<p>モジュールレベルは、モジュール先頭でPrivateまたはDimを使って宣言し、同じモジュール内の複数プロシージャで共有できます。</p>
+<p>Publicは、標準モジュールの先頭で宣言すると、ワークブック全体で使えます。</p>
+<p>作業する際はブックをマクロ有効形式（.xlsm）で保存し、ファイルを開いたときにマクロを有効にしてください。</p>
+<p>よくあるミスとして、Integerに大きな数を入れてオーバーフローすることがあるため、その場合はLongに変えるか型を確認して直すとよいです。</p>
+</section>
+
+<section id="sec-3">
+  <h3>定数（Const）の活用方法</h3>
+  <p>Constは変わらない値を名前で管理するために使います。</p>
+<p>税率やバージョン番号、シート名の固定値はConstにしておくと、後から修正が楽になり安全性も上がります。</p>
+<p>モジュール先頭に置くとそのモジュール内で再利用でき、Public Constにすれば他のモジュールでも参照できます。</p>
+<p>コード例として、税率をConstにして計算するスタイルは可読性とメンテナンス性が高くなります。</p>
+<pre><code>Option Explicit
+Const TAX_RATE As Double = 0.1
+Private Const VERSION As String = "1.0"
+
+Sub CalcWithConst()
+    Dim price As Double
+    price = 1000
+    MsgBox "税込:" &amp; price * (1 + TAX_RATE)
+End Sub</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>型変換関数（CStr、CInt、CLng、CDbl）の使い分け</h3>
+  <p>文字列から数値への変換や、浮動小数点から整数への変換は、明示的に型変換すると安全です。CStrは文字列に変換し、CIntは四捨五入してIntegerに変換し、CLngは長整数に変換し、CDblは小数を扱えるDoubleに変換します。</p>
+
+<p>CIntは扱える範囲が狭く、値が大きいとオーバーフローしやすいので、大きめの整数はCLngを使うのがポイントです。また、数値として解釈できない文字列を変換するとエラーになるため、IsNumericで事前チェックしておくと堅牢になります。</p>
+
+<ul>
+  <li>整数で扱う範囲が大きい場合はCLngを使います。</li>
+  <li>端数が必要な場合はCDblを使います。</li>
+  <li>表示用途ではCStrを使います。</li>
+</ul>
+
+<p>セルから値を取得するときは、Range.ValueとRange.Value2の違いを覚えておくと便利です。日付の正確さが必要ならValueを選び、速度や単純な数値取得を優先するならValue2を選ぶとよいです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>最小マクロを含むブックは.xlsm形式で保存しないとVBAが消えることがあるため、保存形式は常に確認することです。</li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ol>
+  <li><p>String、Integer、Long、Double、Boolean、Dateそれぞれの用途と制限を理解するとバグが減ります。</p></li>
+  <li><p>プロシージャレベルは局所的で、モジュールレベルはモジュール内で共有され、Publicはブック全体で共有されます。</p></li>
+  <li><p>Constで固定値をまとめると可読性とメンテ性が上がります。</p></li>
+  <li><p>CInt/CLng/CDbl/CStrは用途（範囲・小数・表示）に合わせて選び、IsNumericで保険をかけます。</p></li>
+  <li><p>作業前に標準モジュールにコードを入れ、.xlsmで保存してマクロを有効化してから実行してください。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

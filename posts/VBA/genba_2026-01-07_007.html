@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Excel VBA：ワークシート操作の基本</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Excel VBA：ワークシート操作の基本</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/007.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">シートの追加・削除・コピー</a></li>
+  <li><a href="#sec-2">シート名の取得と変更</a></li>
+  <li><a href="#sec-3">シートの表示・非表示・保護</a></li>
+  <li><a href="#sec-4">複数シート間のデータ連携</a></li>
+  <li><a href="#sec-5">Worksheetsコレクションの活用</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>シートの追加・削除・コピー</h3>
+  <p>今回できるようになることとして、VBAでシートを自動で追加・削除・コピーして作業を効率化できるようになります。シート追加はWorksheets.Add、削除は.Delete、コピーは.Copyを使いますが、削除は確認のダイアログを抑制する方法が重要です。ラベル（最小マクロ：）として、以下は新しいシートを追加して名前を付け、コピーする基本例です。貼り付け場所：標準モジュール に入れてください。</p>
+
+<pre><code>Sub BasicSheetOps()
+    Dim ws As Worksheet
+    Set ws = Worksheets.Add(After:=Worksheets(Worksheets.Count))
+    ws.Name = "TempSheet"
+    Worksheets("Sheet1").Copy After:=ws
+    Application.DisplayAlerts = False
+    Worksheets("TempSheet").Delete
+    Application.DisplayAlerts = True
+End Sub</code></pre>
+
+<p>実行方法は、VBEでこのプロシージャを選んでF5で実行するか、フォームコントロールのボタンに割り当てて使えます。確認方法は、シートの追加・削除が反映されているかをシートタブで確認してください。</p>
+</section>
+
+<section id="sec-2">
+  <h3>シート名の取得と変更</h3>
+  <p>シート名は <code>Worksheet.Name</code> で取得・変更できます。複数のシート名を一覧にする際は <code>For Each</code> で回すと安全です。名前変更時に同名のシートがあるとエラーになるため、エラーハンドリングや事前チェックが便利です。次はシート名の存在チェックをしてから名前変更する小さな応用コード例です。</p>
+
+<pre><code>Sub RenameIfNotExist()
+    Dim ws As Worksheet, newName As String, exists As Boolean
+    newName = "集計"
+    exists = False
+    For Each ws In Worksheets
+        If ws.Name = newName Then exists = True: Exit For
+    Next
+    If Not exists Then Worksheets("Sheet1").Name = newName Else MsgBox "既に存在します: " &amp; newName
+End Sub
+</code></pre>
+
+<p>よくあるミスとして、シート名の変更で「名前が既に使用されています」エラーが出る場合は、同名が存在することが原因です。対処法は事前に <code>For Each</code> で確認するか、<code>On Error</code> で処理を分岐させることです。</p>
+</section>
+
+<section id="sec-3">
+  <h3>シートの表示・非表示・保護</h3>
+  <p>Visibleプロパティで表示状態を操作できます（xlSheetVisible / xlSheetHidden / xlSheetVeryHidden）です。</p>
+<p>xlSheetVeryHiddenはユーザーインターフェイスから復元できないため、VBEで戻す必要があります。</p>
+<p>保護は.Protectと.Unprotectで行い、パスワードを設定することで誤編集を防げます。</p>
+<p>非表示にして保護することで意図せぬ操作を避ける使い方が一般的です。</p>
+<p>確認方法は、ワークシートタブの表示可否やセル編集の可否を実際に試して確認します。</p>
+</section>
+
+<section id="sec-4">
+  <h3>複数シート間のデータ連携</h3>
+  <p>シート間でセルを直接参照する方法（Sheets("A").Range("A1").Value = Sheets("B").Range("B1").Value）や、ループで複数行を転記する方法があります。大量データの場合は配列に読み込んで一括代入すると高速です。次はSheetAからSheetBへ範囲を丸ごとコピーする応用例です。</p>
+
+<pre><code>Sub CopyRangeBetweenSheets()
+    Dim src As Worksheet, dst As Worksheet
+    Set src = Worksheets("SheetA")
+    Set dst = Worksheets("SheetB")
+    Dim data As Variant
+    data = src.Range("A1:D100").Value
+    dst.Range("A1").Resize(UBound(data, 1), UBound(data, 2)).Value = data
+End Sub</code></pre>
+
+<p>使い分けの基準として、Rangeは固定参照に便利で可読性が高いです。一方でCellsはループや変動する列番号を扱いやすいです。Valueは通常で問題ありませんが、日付や数値の扱いで速度を重視する場合はValue2を使う選択肢があります。</p>
+</section>
+
+<section id="sec-5">
+  <h3>Worksheetsコレクションの活用</h3>
+  <p>Worksheetsコレクションは、ブック内のワークシートを管理する主要な入り口です。</p>
+<p>For Eachで全シートを巡回して操作を適用したり、Worksheets(index)でインデックス指定をしたりできます。</p>
+<p>Sheetsコレクションと違い、Worksheetsはワークシートのみを対象にするため、Chartシートを除外したい時に便利です。</p>
+<p>複数ワークシートの一括処理や存在チェック、順序の入れ替えなどで威力を発揮します。</p>
+<p>実行方法は、IndexやNameを引数にして呼び出すマクロをVBEで試す形になります。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><p>最小マクロ：マクロを実行する前は、ファイルをマクロ有効形式（.xlsm）で保存し、Excelの「ファイル」→「オプション」→「セキュリティセンター」からマクロを有効にしてください。</p></li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>Worksheets.Add/.Delete/.Copyでシートの追加・削除・コピーが行えることです。</p></li>
+  <li><p>Worksheet.Nameで名前の取得・変更ができ、重複チェックが重要なことです。</p></li>
+  <li><p>VisibleプロパティとProtectで表示制御と編集保護ができることです。</p></li>
+  <li><p>シート間はRange/配列転送で高速化でき、量に応じて使い分けることです。</p></li>
+  <li><p>Worksheetsコレクションで一括処理や存在チェックがやりやすいことです。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

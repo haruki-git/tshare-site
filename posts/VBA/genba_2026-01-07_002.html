@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>最初のコードを書いてみる</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>最初のコードを書いてみる</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/002.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">Subプロシージャの基本構造</a></li>
+  <li><a href="#sec-2">Rangeオブジェクトでセルに値を書き込む</a></li>
+  <li><a href="#sec-3">Cellsプロパティの使い方</a></li>
+  <li><a href="#sec-4">MsgBox関数でメッセージを表示する</a></li>
+  <li><a href="#sec-5">変数の宣言（Dim）と基本的な使い方</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>Subプロシージャの基本構造</h3>
+  <p>今回できるようになることとして、Subプロシージャ（プロシージャ＝一連の処理をまとめたまとまり）の基本形を理解して、簡単なマクロを実行できるようになります。</p>
+<p>Subプロシージャは「Sub 名前()」で始まり「End Sub」で終わる単純な構造です。複数行の命令を入れられ、コメントはシングルクオートで書きます。</p>
+<p>貼り付け場所は標準モジュール（VBEの挿入→モジュール）に貼り付けるのが一般的です。</p>
+<p>保存はマクロ有効ブック（拡張子 .xlsm）で行い、実行前にExcelのマクロを有効にしてください。</p>
+<p>実行方法はVBEの実行ボタン（F5）か、Excel側でマクロを割り当てたボタン／ショートカットから実行します。</p>
+<p>要チェックとして、保存形式やマクロ有効化の設定が済んでいないと実行できない点が苦手なポイントです。</p>
+</section>
+
+<section id="sec-2">
+  <h3>Rangeオブジェクトでセルに値を書き込む</h3>
+  <p>Rangeオブジェクト（オブジェクト＝セルや範囲を表す仕組み）を使うと、A1のような文字列で特定セルにアクセスできます。</p>
+<p>セルに値を代入する基本は <code>Range("A1").Value = "文字列"</code> のようになります。最小マクロ：下のサンプルはRangeで複数セルに書き込み、最後にMsgBoxで完了を知らせます。</p>
+
+<pre><code>Sub WriteWithRange()
+    ' A1とB2に値を書き込む最小マクロ
+    Range("A1").Value = "こんにちは"
+    Range("B2").Value = 123
+    Range("C3").Value = Date
+    MsgBox "書き込みが完了しました。", vbInformation
+End Sub
+</code></pre>
+
+<p>確認方法：Excelの該当セル（A1/B2/C3）が期待どおり変わっていること、MsgBoxが表示されることを確認します。</p>
+</section>
+
+<section id="sec-3">
+  <h3>Cellsプロパティの使い方</h3>
+  <p>Cellsプロパティ（プロパティ＝オブジェクトの要素を取得する仕組み）は、行番号・列番号でセルを指定します。たとえば Cells(1,1) は Range("A1") と同じです。ループや変数で行列を動的に扱うときに便利です。下は1行目に連番を書き出す例です。</p>
+
+<pre><code>Sub WriteWithCells()
+    Dim i As Long
+    For i = 1 To 5
+        Cells(1, i).Value = "列" &amp; i
+    Next i
+End Sub
+</code></pre>
+
+<p>使い分けの基準として、Rangeは固定のラベル指定（"A1"や"A1:B2"）が直感的なため、セル範囲の指定や名前付き範囲に向きます。Cellsは行列を数値で扱うとき（ループや変数で動かす場合）に向きます。</p>
+
+<p>ValueとValue2の違いは微妙ですが、Valueは書式やロケールを考慮する場合に便利で、Value2は高速かつ生データ取得に適しています。</p>
+</section>
+
+<section id="sec-4">
+  <h3>MsgBox関数でメッセージを表示する</h3>
+  <p>MsgBox関数（関数＝結果を返す処理）を使うと、ユーザーへメッセージを表示したり、簡単な入力確認をしたりできます。</p>
+
+<p>基本形は <code>MsgBox "本文", ボタン定数, "タイトル"</code> で、戻り値からユーザーの選択（vbYes/vbNoなど）を取得できます。</p>
+
+<p>上の最小マクロやCellsの例でも完了通知に使いましたし、上書き確認のダイアログに使うと操作ミスを減らせます。</p>
+
+<p>よくあるミスは、MsgBoxの戻り値を扱わずに分岐を書かないため、ユーザーの「いいえ」を無視して処理を続けてしまうことです。</p>
+
+<p>直し方は、戻り値を変数に受け取り、Ifで分岐することです。</p>
+
+<pre><code>If MsgBox(...)=vbYes Then ...
+</code></pre>
+</section>
+
+<section id="sec-5">
+  <h3>変数の宣言（Dim）と基本的な使い方</h3>
+  <p>変数はDimで宣言します。型を明示すると動作が速く安定します（例：Dim i As Long, s As String）です。Variant型は型指定を省いた場合のデフォルトですが、大量処理では避けるとよいです。</p>
+<p>宣言のスコープは書いた場所で変わり、プロシージャ内で宣言するとローカル変数になります。次はRangeとCellsを組み合わせて変数を使う例のイメージです（コードは前節を参照）です。</p>
+<p>変数で行列番号や書き込む値を切り替えると、同じ処理を別セルに簡単に適用できます。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>マクロを保存する際は必ず「Excel マクロ有効ブック (*.xlsm)」で保存し、Excel上でマクロを有効にしてから実行してください。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>Subプロシージャは <code>Sub 名前()</code> ～ <code>End Sub</code> の構造で、標準モジュールに貼り付けて実行します。</p></li>
+  <li><p><code>Range("A1")</code> は直接セルを指定するのに便利で、シンプルな書き込みに向きます。</p></li>
+  <li><p><code>Cells(row, col)</code> は数字でセルを扱うためループや動的指定に適しています。</p></li>
+  <li><p><code>MsgBox</code> は通知やユーザー確認に使い、戻り値を受け取って分岐処理を行います。</p></li>
+  <li><p><code>Dim</code> で変数を宣言し型を明示すると処理が安定しやすく、コードの可読性と保守性が向上します。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

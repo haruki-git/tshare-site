@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>実践プロジェクト：請求書の自動作成</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>実践プロジェクト：請求書の自動作成</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/018.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">プロジェクトの要件定義（何を作るか）</a></li>
+  <li><a href="#sec-2">テンプレートシートの準備</a></li>
+  <li><a href="#sec-3">データシートから請求書への転記ロジック</a></li>
+  <li><a href="#sec-4">注意（ここだけ）</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>プロジェクトの要件定義（何を作るか）</h3>
+  <p>今回できるようになることとして、データ一覧からテンプレートへ情報を転記し、請求書を個別PDFで出力する仕組みを作れるようになります。</p>
+<p>要件はシンプルで、1) データシートに1行が1請求書、2) テンプレートは印刷済みの請求書レイアウト、3) VBAで転記してPDFで保存、という流れです。</p>
+<p>出力ファイル名は「請求書_請求番号_顧客名.pdf」のようにし、出力先フォルダは事前に指定しておくと運用が楽です。</p>
+<p>マクロはExcel VBAのみで作成し、ワークブックはマクロ有効形式（.xlsm）で保存します。</p>
+</section>
+
+<section id="sec-2">
+  <h3>テンプレートシートの準備</h3>
+  <p>テンプレートは「InvoiceTemplate」というシート名を付け、請求書番号や日付、顧客名を固定セル（例：B3,B4,B6）に配置します。</p>
+<p>明細はあらかじめ5行分などの枠を用意しておくと簡単です。</p>
+<p>印刷範囲とページ設定（A4縦/余白/拡大縮小なし）をテンプレートで整えておくと、PDF出力時にぶれません。</p>
+<p>テンプレートには計算式（合計など）を入れておくと、転記後に自動計算されます。</p>
+<p>テンプレートは編集しやすい場所（先頭のタブ）に置くと迷いにくくなります。</p>
+</section>
+
+<section id="sec-3">
+  <h3>データシートから請求書への転記ロジック</h3>
+  <p>データシート（例：「Data」）は列ごとに項目を揃え、請求書番号・日付・顧客名・明細1～明細Nのようにします。</p>
+<p>転記ロジックは「テンプレートの固定セルにDataの値を代入」して、明細部分はループで各行に書き込む、という流れです。</p>
+<p>最小マクロ：以下は1行分をテンプレートへ転記してPDFを出す例です。実行前に保存先フォルダ（outPath）を実際のパスに変更してください。</p>
+
+<pre><code>Sub CreateSingleInvoice()
+    Dim wsData As Worksheet, wsTpl As Worksheet
+    Dim outPath As String, fileName As String
+    Set wsData = ThisWorkbook.Sheets("Data")
+    Set wsTpl = ThisWorkbook.Sheets("InvoiceTemplate")
+    outPath = ThisWorkbook.Path &amp; "\Invoices\"
+    ' データは2行目を想定（ヘッダあり）
+    wsTpl.Range("B3").Value = wsData.Range("A2").Value ' 請求書番号
+    wsTpl.Range("B4").Value = wsData.Range("B2").Value ' 日付
+    wsTpl.Range("B6").Value = wsData.Range("C2").Value ' 顧客名
+    ' 明細（例：D～F列を3行に渡ってテンプレートの表に転記）
+    Dim i As Long
+    For i = 0 To 2
+        wsTpl.Range("A10").Offset(i, 0).Value = wsData.Range("D2").Offset(0, i).Value
+    Next i
+    fileName = outPath &amp; "Invoice_" &amp; wsData.Range("A2").Value &amp; ".pdf"
+    wsTpl.ExportAsFixedFormat xlTypePDF, fileName
+End Sub</code></pre>
+
+<p>貼り付け場所：標準モジュール（VBEで「挿入」→「標準モジュール」）です。</p>
+<p>コードはThisWorkbookやシート名に依存するため、名前を事前に揃えてください。</p>
+<p>実行方法はVBEでF5実行です。</p>
+</section>
+
+<section id="sec-4">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き・権限変更）をする前に、対象と影響範囲を確認して、必要ならバックアップを取ってから進めることがポイントです。</li>
+</ul>
+</section>
+
+      
+    </article>
+  </main>
+</body>
+</html>

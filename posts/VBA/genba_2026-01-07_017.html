@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Excel VBAで学ぶデータベース的な処理</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Excel VBAで学ぶデータベース的な処理</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/017.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">Findメソッドでデータを検索する</a></li>
+  <li><a href="#sec-2">FindNext、FindPreviousで連続検索</a></li>
+  <li><a href="#sec-3">Dictionaryオブジェクトの活用（重複除去、カウント）</a></li>
+  <li><a href="#sec-4">ユニークなリストの作成方法</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>Findメソッドでデータを検索する</h3>
+  <p>今回できるようになることとして、Findで目的のセルを素早く見つけられるようになります。</p>
+<p>Range.Findは検索条件（検索値、検索方向、検索範囲など）を細かく指定でき、結果としてセルオブジェクトを返します。</p>
+<p>基本はシート上の範囲（例：A列）を指定して検索し、見つかったセルに色を付けたり値を取得したりできます。</p>
+<p>最小マクロ：以下はA列から指定した文字列を探して背景色を変える最小サンプルです。</p>
+<p>貼り付け場所：標準モジュール（VBEで挿入 → Module）です。</p>
+<p>このマクロは10〜20行程度で、範囲指定や検索値の扱い方が分かる仕様です。</p>
+
+<pre><code>Sub FindSample()
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Worksheets("Sheet1")
+    Dim rng As Range, f As Range
+    Set rng = ws.Range("A:A")
+    Set f = rng.Find(What:="検索文字列", LookIn:=xlValues, LookAt:=xlWhole)
+    If Not f Is Nothing Then
+        f.Interior.Color = vbYellow
+        MsgBox "見つかりました: " &amp; f.Address
+    Else
+        MsgBox "見つかりませんでした"
+    End If
+End Sub</code></pre>
+</section>
+
+<section id="sec-2">
+  <h3>FindNext、FindPreviousで連続検索</h3>
+  <p>Findメソッドで最初のセルが見つかったら、FindNext/FindPreviousを使って同じ条件の次・前のセルへ移動できます。</p>
+<p>ポイントは検索開始時のアドレス（firstAddress）を覚えておき、ループで同じアドレスに戻ったら終了することです。</p>
+<p>連続検索はデータの重複確認や複数セルの処理に便利です。また、処理中にセルへの書き込みを行うと検索結果がずれる場合があるため、値の取得だけを先に行ってから更新する流れにするとよいです。</p>
+<p>実行方法は、VBEで選んで実行するか、ワークシートにボタンを作って割り当てることで便利に実行できます。</p>
+</section>
+
+<section id="sec-3">
+  <h3>Dictionaryオブジェクトの活用（重複除去、カウント）</h3>
+  <p>Dictionary（Scripting.Dictionary）はキーの重複を許さないコレクションで、出現回数のカウントやユニーク抽出に適しています。</p>
+<p>参照設定をしなくてもCreateObjectで使えるため、配布が簡単です。</p>
+<p>次のコードはA列の値を走査して出現回数をDictionaryに記録し、結果をB列とC列に書き出す例です。</p>
+<p>確認方法は、処理後にB/C列にキーとカウントが出力されることで結果が確認できます。</p>
+
+<pre><code>Sub CountWithDictionary()
+    Dim ws As Worksheet: Set ws = ThisWorkbook.Worksheets("Sheet1")
+    Dim dic As Object: Set dic = CreateObject("Scripting.Dictionary")
+    Dim v As Variant, r As Range, i As Long, outRow As Long
+    Set r = ws.Range("A1", ws.Cells(ws.Rows.Count, "A").End(xlUp))
+    For i = 1 To r.Rows.Count
+        v = Trim(r.Cells(i, 1).Value)
+        If v &lt;&gt; "" Then
+            If dic.Exists(v) Then
+                dic(v) = dic(v) + 1
+            Else
+                dic.Add v, 1
+            End If
+        End If
+    Next i
+    outRow = 1
+    ws.Range("B:C").ClearContents
+    Dim key As Variant
+    For Each key In dic.Keys
+        ws.Cells(outRow, "B").Value = key
+        ws.Cells(outRow, "C").Value = dic(key)
+        outRow = outRow + 1
+    Next key
+    MsgBox "完了：" &amp; dic.Count &amp; " 件のユニーク項目を出力しました"
+End Sub</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>ユニークなリストの作成方法</h3>
+  <p>ユニークリストはDictionaryのキーを使う方法、あるいはWorksheetのAdvancedFilter（抽出</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><p>破壊的な操作（削除・上書き・権限変更）をする前に、対象と影響範囲を確認して、必要ならバックアップを取ってから進めてください。</p></li>
+</ul>
+</section>
+
+      
+    </article>
+  </main>
+</body>
+</html>

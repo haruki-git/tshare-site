@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>データの抽出と集計（Excel VBA入門）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>データの抽出と集計（Excel VBA入門）</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/010.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">条件に合うデータの抽出方法</a></li>
+  <li><a href="#sec-2">AutoFilterメソッドの使い方</a></li>
+  <li><a href="#sec-3">Sortメソッドでデータを並べ替える</a></li>
+  <li><a href="#sec-4">注意（ここだけ）</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>条件に合うデータの抽出方法</h3>
+  <p>今回できるようになることとして、条件に合う行を抽出して別シートに出力し、次の処理（並べ替え・重複削除・集計）に渡せるようになることです。</p>
+<p>まずはどこにコードを置くか説明します。貼り付け場所は標準モジュール（VBEで挿入→Module）に入れると再利用がしやすいです。実行方法はAlt+F8でマクロ一覧から選ぶか、ボタンに割り当てるか、VBEでF5実行します。ファイルは必ずマクロ有効形式（.xlsm）で保存してください。</p>
+<p>最小マクロ：以下は表のヘッダーが1行目、データがA:Dにある想定で「状態」列（列C）が「完了」の行だけを抽出して新規シートにコピーする簡単な例です。</p>
+<pre><code>Sub 抽出最小マクロ()
+    Dim ws As Worksheet, wsOut As Worksheet
+    Set ws = ThisWorkbook.Sheets("データ")
+    On Error Resume Next
+    Set wsOut = ThisWorkbook.Sheets("抽出結果")
+    If wsOut Is Nothing Then Set wsOut = ThisWorkbook.Sheets.Add(After:=ws)
+    On Error GoTo 0
+    ws.Range("A1:D1").Copy wsOut.Range("A1") ' ヘッダーコピー
+    ws.Range("A1:D" &amp; ws.Cells(ws.Rows.Count, "A").End(xlUp).Row) _
+      .AutoFilter Field:=3, Criteria1:="完了"
+    ws.Range("A2:D" &amp; ws.Cells(ws.Rows.Count, "A").End(xlUp).Row) _
+      .SpecialCells(xlCellTypeVisible).Copy wsOut.Range("A2")
+    ws.AutoFilterMode = False
+    MsgBox "抽出完了"
+End Sub</code></pre>
+<p>確認方法は、抽出先シートにヘッダーと条件に合う行がコピーされていることを確認します。</p>
+<p>よくあるミスとして、ヘッダー行を含めるRange指定を間違えて見出しがコピーされないことが多いので、Row範囲は必ず1行目を含めるよう修正します（End(xlUp)の基準列を確認します）。</p>
+</section>
+
+<section id="sec-2">
+  <h3>AutoFilterメソッドの使い方</h3>
+  <p>AutoFilter（オートフィルター）はRange.AutoFilterで列を条件指定して表示／非表示を切り替えます。</p>
+<p>複数条件はCriteria1／Operator／Criteria2で扱い、ワイルドカード（*や?）や日付、数値の比較も可能です。</p>
+<p>実行順としてはヘッダー行を含む範囲を対象にAutoFilterを設定し、VisibleなセルだけをSpecialCells(xlCellTypeVisible)で扱います。</p>
+<p>複数列で絞る場合は同じRangeに対して別Fieldを指定して順に適用します。</p>
+<p>抽出後はAutoFilterMode = Falseで元に戻すとユーザー操作の邪魔になりません。</p>
+
+<pre><code>Sub AutoFilter例()
+    Dim r As Range
+    Set r = Sheets("データ").Range("A1").CurrentRegion
+    r.AutoFilter Field:=2, Criteria1:="&gt;=2026/1/1", Operator:=xlAnd, Criteria2:="&lt;=2026/12/31"
+    r.AutoFilter Field:=4, Criteria1:="完了"
+End Sub
+</code></pre>
+</section>
+
+<section id="sec-3">
+  <h3>Sortメソッドでデータを並べ替える</h3>
+  <p>Sort（並べ替え）は<code>Range.Sort</code>で複数キーや昇順／降順、ヘッダーの有無を指定できます。</p>
+
+<p>使い分けの基準として、<code>Range</code>で範囲を丸ごと指定すると意図が明快で、<code>Cells</code>を使うと動的に列や行を指定したいときに便利です。</p>
+
+<p><code>Value</code>（値）の取得は通常は<code>Value</code>で十分ですが、速度を重視する大量データでは<code>Value2</code>の方が高速です。</p>
+
+<p>並べ替えは抽出後に行うことが多く、<code>SortFields.Add Key:=Range("B2:B1000")</code>のようにキーを追加して<code>Apply</code>すると安定します。</p>
+
+<p>並べ替えは</p>
+</section>
+
+<section id="sec-4">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き・権限変更）をする前に、対象と影響範囲を確認し、必要であればバックアップを取ってから進めてください。</li>
+</ul>
+</section>
+
+      
+    </article>
+  </main>
+</body>
+</html>

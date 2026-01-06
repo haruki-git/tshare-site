@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Excel VBAで学ぶファイル操作の基本</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Excel VBAで学ぶファイル操作の基本</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/011.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">Workbooks.Openでブックを開く</a></li>
+  <li><a href="#sec-2">Workbooks.Add、Close、Saveの使い方</a></li>
+  <li><a href="#sec-3">注意（ここだけ）</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>Workbooks.Openでブックを開く</h3>
+  <p>今回できるようになることとして、指定したファイルを開いて中のデータを読み取り、閉じる一連の流れが扱えるようになります。</p>
+<p>VBA（Visual Basic for Applications）はExcel内で動く言語ですので、コードはExcelのVBE（Visual Basic Editor）に貼り付けて実行します。</p>
+<p>ファイルパスは絶対パスが推奨で、ネットワークパスはUNC（\\server\share）の形式を使います。</p>
+<p>マクロ有効化は、ブックを.xlsm形式で保存することと、Excelの「ファイル→オプション→セキュリティセンター」で信頼設定を確認することで先回りできます。</p>
+<p>基本はWorkbooks.Openでブックをオブジェクトとして扱い、変数に入れてから操作します。</p>
+
+<p>最小マクロ：</p>
+<pre><code>Sub OpenAndRead()
+    Dim wb As Workbook
+    Dim v As Variant
+    ' フルパスを指定（例）
+    Set wb = Workbooks.Open("C:\Temp\Sample.xlsx")
+    ' シート1のA1を読み取り
+    v = wb.Worksheets(1).Range("A1").Value
+    MsgBox "A1の値: " &amp; v
+    wb.Close SaveChanges:=False
+End Sub</code></pre>
+
+<p>貼り付け場所：標準モジュールに貼り付けます（VBEで「挿入→標準モジュール」）。この場所ならどのシートからも呼び出せます。</p>
+</section>
+
+<section id="sec-2">
+  <h3>Workbooks.Add、Close、Saveの使い方</h3>
+  <p>Workbooks.Addで新しいブックを作成し、データを書き込んでSaveまたはCloseで保存や破棄を行います。</p>
+<p>新規ブックはオブジェクト変数に格納して操作すると安全です。</p>
+<p>Saveは既に名前が付いているブックを上書き保存し、SaveChanges引数を使うとClose時に保存を制御できます。</p>
+<p>保存形式は拡張子で判断され、マクロ有効なブックは「.xlsm」で保存することが必要です。</p>
+<p>次のコードはワークブックを追加しセルを書き換えて保存する例です。</p>
+
+<pre><code>Sub AddSaveClose()
+    Dim wb As Workbook
+    Set wb = Workbooks.Add
+    wb.Worksheets(1).Range("A1").Value = "テスト"
+    ' 名前を付けずに保存（既定はExcelブック）
+    wb.SaveAs Filename:="C:\Temp\NewBook.xlsx", FileFormat:=xlOpenXMLWorkbook
+    wb.Close SaveChanges:=False
+End Sub
+</code></pre>
+
+<p>実行方法は、VBEの実行ボタン（F5）を使うか、フォームのボタンにこのSubを割り当てて使います。</p>
+<p>頻繁に使うならクイックアクセスツールバーにします。</p>
+</section>
+
+<section id="sec-3">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き・権限変更）をする前に、対象と影響範囲を確認して、必要ならバックアップを取ってから進めてください。</li>
+</ul>
+</section>
+
+      
+    </article>
+  </main>
+</body>
+</html>

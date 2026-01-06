@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>配列で処理を高速化する：Excel VBA入門</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>配列で処理を高速化する：Excel VBA入門</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/009.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">1次元配列の宣言と使い方</a></li>
+  <li><a href="#sec-2">2次元配列の活用（行と列のデータ管理）</a></li>
+  <li><a href="#sec-3">注意（ここだけ）</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>1次元配列の宣言と使い方</h3>
+  <p>今回できるようになることとして、1次元配列を宣言して値の読み書きができるようになります。</p>
+<p>1次元配列は同じ型の値をまとめて扱うため、繰り返し処理で使うとコードがすっきりして速くなります。</p>
+<p>宣言は <code>Dim arr(1 To 5) As Long</code> のように行番号を指定して作り、Forループで値を入れていきます。</p>
+<p>配列は0始まり（Option Base 0）か1始まり（Option Base 1）かが要チェックで、Variant型にするとRangeから直接受け取るときに便利です。</p>
+<p>以下は配列の基本動作を確かめる短いマクロです。</p>
+
+<p>最小マクロ：</p>
+<pre><code>Sub SampleOneDim()
+    Dim arr(1 To 5) As Long
+    Dim i As Long
+    For i = 1 To 5
+        arr(i) = i * 10
+    Next i
+    ' 配列の内容をシートに書き出し
+    For i = 1 To 5
+        ThisWorkbook.Worksheets(1).Cells(i, 1).Value = arr(i)
+    Next i
+    MsgBox "書き込み完了: " &amp; arr(1) &amp; "〜" &amp; arr(5)
+End Sub</code></pre>
+
+<p>貼り付け場所：標準モジュールに貼り付けます（VBEで挿入→モジュール）。</p>
+<p>実行方法：VBEでSubを選んでF5またはExcel上のボタンに割り当てて実行できます。</p>
+<p>確認方法：実行後にワークシートのA1〜A5に10,20,..50が書かれ、MsgBoxで範囲が表示されます。</p>
+</section>
+
+<section id="sec-2">
+  <h3>2次元配列の活用（行と列のデータ管理）</h3>
+  <p>2次元配列は表形式データ（行×列）をそのまま扱えるため、セルの行列操作で特に有効です。</p>
+<p>宣言は <code>Dim arr(1 To r, 1 To c) As Variant</code> のようにして、<code>arr(row, col)</code> でアクセスします。</p>
+<p>二重ループで処理するか、Rangeから一括で取得して配列内で処理し、最後に一括で書き戻すと処理時間が大幅に短縮します。</p>
+<p>配列はVBA内部で連続したメモリに格納されるため、セルを1つずつ操作する</p>
+</section>
+
+<section id="sec-3">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き・権限変更）をする前に、対象と影響範囲を確認して、必要ならバックアップを取ってから進めてください。</li>
+</ul>
+</section>
+
+      
+    </article>
+  </main>
+</body>
+</html>

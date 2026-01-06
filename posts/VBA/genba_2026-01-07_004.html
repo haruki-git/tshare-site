@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Excel VBAで条件分岐をマスターする</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Excel VBAで条件分岐をマスターする</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/004.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">If文の基本構文</a></li>
+  <li><a href="#sec-2">If...Then...Else文の使い方</a></li>
+  <li><a href="#sec-3">複数条件の組み合わせ（And、Or、Not）</a></li>
+  <li><a href="#sec-4">Select Case文と使い分けの基準</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>If文の基本構文</h3>
+  <p>今回できるようになることとして、VBAで条件を判定して処理を分岐できるようになります。</p>
+<p>If文は条件が真（True）のときだけ処理を行う基本の構文です。単行で書く場合は「If 条件 Then 処理」のようになり、複数行の処理を含める場合は「If 条件 Then ... End If」で囲みます。</p>
+<p>最小マクロ：次の例は、A1セルの値が10より大きければメッセージを出す最小の構成です。</p>
+<p>貼り付け場所：標準モジュールに貼り付けてください。</p>
+<p>実行方法：VBE（Alt+F11）でF5実行か、ワークシートのボタンに割り当てる方法が使えます。</p>
+<p>確認方法：A1に数値を入れてメッセージが出るかで確認できます。</p>
+<pre><code>Sub CheckA1()
+    If Range("A1").Value &gt; 10 Then
+        MsgBox "A1は10より大きいです"
+    End If
+End Sub
+</code></pre>
+<p>よくあるミスとして、条件で文字列を数値と比較して正しく動かないことが多いです。直し方は、IsNumericでチェックするかCLng/CIntで型変換してから比較することです。</p>
+</section>
+
+<section id="sec-2">
+  <h3>If...Then...Else文の使い方</h3>
+  <p>If...Then...Elseは条件に応じて「真の処理」と「偽の処理」を切り替えるために使います。複数の分岐が必要なときはElseIfを使うとすっきり書けます。</p>
+<p>ネスト（入れ子）で深く書くと可読性が落ちるため、条件が多いときは後述するSelect Caseを検討します。次は評価の段階に応じたメッセージを出す例です。</p>
+
+<pre><code>Sub GradeCheck()
+    Dim score As Integer
+    score = Range("B1").Value
+    If score &gt;= 90 Then
+        MsgBox "優：A"
+    ElseIf score &gt;= 75 Then
+        MsgBox "良：B"
+    ElseIf score &gt;= 60 Then
+        MsgBox "可：C"
+    Else
+        MsgBox "不可：D"
+    End If
+End Sub
+</code></pre>
+
+<p>この例はB1に数値を入れて実行して動作を確かめます。Elseブロックは「どれにも当てはまらない場合」の受け皿になります。</p>
+</section>
+
+<section id="sec-3">
+  <h3>複数条件の組み合わせ（And、Or、Not）</h3>
+  <p>複数条件の組み合わせはAnd（かつ）、Or（または）、Not（否定）で表現します。</p>
+<p>条件が複雑になると何を優先するか分かりにくくなるため、括弧で優先順位を明示します。</p>
+<p>VBAではAndやOrは全ての式を評価するため、エラーが出る可能性がある式（ゼロ除算やNull参照）があるときは、順序に依存する実装で回避します。</p>
+<p>次は範囲と状態の両方を満たすときに処理する例です。</p>
+
+<pre><code>Sub MultiCondition()
+    Dim v As Variant
+    v = Range("C1").Value
+    If IsNumeric(v) And v &gt; 0 Then
+        MsgBox "C1は正の数です"
+    ElseIf Not IsNumeric(v) Then
+        MsgBox "C1は数値ではありません"
+    Else
+        MsgBox "C1は0または負の数です"
+    End If
+End Sub</code></pre>
+
+<p>括弧で囲むことで意図が明確になります。</p>
+<p>Orで複数パターンを許容する場合は、評価順と副作用の有無を考えて書くとトラブルが減ります。</p>
+</section>
+
+<section id="sec-4">
+  <h3>Select Case文と使い分けの基準</h3>
+  <p>Select Caseは値の比較が中心で、多数の分岐を読みやすく表現できます。数値や文字列の範囲チェックにも向いています。</p>
+
+<p>使い分けの基準として、単純にTrue/Falseで分岐するならIfを選び、値の範囲や多数の一致条件があるならSelect Caseを選ぶと可読性が上がります。</p>
+
+<p>あわせて、RangeとCells、ValueとValue2の使い分けも要チェックです。Range("A1")は複数セル操作に向き、Cells(row, col)は変数でセル参照する場合に便利です。Valueは通常の値取得で十分ですが、Value2は日付型の取り扱いがより直接的になります。</p>
+
+<p>具体例として、Select Caseでランクを振るコードを示します。</p>
+
+<pre><code>Sub RankByScore()
+    Dim sc As Integer
+    sc = Range("D1").Value
+    Select Case sc
+        Case Is &gt;= 90
+            MsgBox "Aランク"
+        Case 75 To 89
+            MsgBox "Bランク"
+        Case 60 To 74
+            MsgBox "Cランク"
+        Case Else
+            MsgBox "Dランク"
+    End Select
+End Sub
+</code></pre>
+
+<p>Select Caseは範囲や複数値チェックがある場面でIfより読みやすくなります。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>最小マクロ：マクロを保存する際は「.xlsm」のマクロ有効ブック形式で保存し、Excelの「マクロを有効にする」を許可してから実行してください。</li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ol>
+  <li>If文は条件が真のときだけ処理を行います。</li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

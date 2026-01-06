@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>セルとシートの操作</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>セルとシートの操作</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/006.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">セルの値の読み書き（Value、Text、Value2の違い）</a></li>
+  <li><a href="#sec-2">セルの書式設定（Font、Interior、Borders）</a></li>
+  <li><a href="#sec-3">行・列の挿入と削除</a></li>
+  <li><a href="#sec-4">セルのコピー・貼り付け（Copy、PasteSpecial）</a></li>
+  <li><a href="#sec-5">セルのクリア（Clear、ClearContents、ClearFormats）</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>セルの値の読み書き（Value、Text、Value2の違い）</h3>
+  <p>今回できるようになることとして、セルの値を読み書きして表示形式の違いを扱えるようになります。</p>
+<p><code>Range("A1").Value</code>はセルの値（型を保つ）を扱い、<code>.Text</code>は表示されている文字列（幅・書式に依存）を返します。<code>.Value2</code>は日付をDoubleではなくシンプルに扱うため通例で速い結果になります。</p>
+<p>セルに書き込むときは基本的に<code>.Value</code>か<code>.Value2</code>を使うと安定します。最小マクロ：</p>
+<pre><code>Sub 最小マクロ_値読み書き()
+    Dim v As Variant
+    v = Range("A1").Value2        ' 読み取り
+    Range("B1").Value = v         ' 書き込み（表示形式はB1の書式に従う）
+    Range("C1").Value = Range("A1").Text ' 表示されているテキストをそのままコピー
+End Sub</code></pre>
+<p>貼り付け場所：標準モジュール（VBEの挿入→標準モジュール）に入れると使いやすいです。</p>
+<p>使い分けの基準：数値や日付を計算で使う場合は<code>.Value</code>/<code>.Value2</code>、画面に表示された通りの文字列が必要な場合は<code>.Text</code>を選ぶと分かりやすいです。</p>
+</section>
+
+<section id="sec-2">
+  <h3>セルの書式設定（Font、Interior、Borders）</h3>
+  <p>セルの見た目は、RangeオブジェクトのFont（フォント）、Interior（塗りつぶし）、Borders（罫線）で操作します。たとえば、Font.Bold = Trueで太字にし、Interior.Color = RGB(255,255,0)で背景色を設定し、Borders(xlEdgeBottom).LineStyle = xlContinuousで罫線を引きます。書式は値と独立しているため、値を書き換えても書式は残ります。次の例は見やすさ確認用の応用スニペットです。</p>
+
+<pre><code>Sub 書式サンプル()
+    With Range("A1:C1")
+        .Font.Name = "Meiryo"
+        .Font.Size = 11
+        .Font.Bold = True
+        .Interior.Color = RGB(230, 240, 250)
+        .Borders(xlEdgeBottom).LineStyle = xlContinuous
+    End With
+End Sub
+</code></pre>
+
+<p>確認方法は、セルのフォントや背景色、罫線が変わっていることを見て確認し、あわせてイミディエイトウィンドウでRange("A1").Font.Boldを?で評価してTrueが返ることを確認できます。</p>
+</section>
+
+<section id="sec-3">
+  <h3>行・列の挿入と削除</h3>
+  <p>行や列はEntireRowおよびEntireColumnを使って挿入や削除をします。例えば<code>Rows(3).Insert</code>で3行目の上に新しい行が入りますし、<code>Columns("B").Delete</code>でB列全体を削除できます。</p>
+<p>複数行をまとめて扱う場合は、<code>Range("5:7").Delete</code>のように範囲指定をすると扱いやすいです。</p>
+<p>Shiftの向きや参照のずれは要チェックです。挿入前にデータのバックアップを取り、Undoが効くように保存しておくと作業を戻しやすくなります。</p>
+<p>計算式の参照がずれる場合は、挿入の前後で名前付き範囲やテーブルを使うと影響を抑えられます。</p>
+</section>
+
+<section id="sec-4">
+  <h3>セルのコピー・貼り付け（Copy、PasteSpecial）</h3>
+  <p>セルのコピーはRange.Copyで簡単にできますが、貼り付け方法によって結果が変わります。</p>
+<p>PasteSpecial（例：xlPasteValues）を使うと値のみを貼り付けられますし、xlPasteFormatsでは書式のみ、xlPasteFormulasでは数式のみを貼れます。</p>
+<p>ワークシート間で貼り付けるときはPasteSpecialを使うと、不要な書式やリンクを避けやすいです。</p>
+<p>よくあるミスとして、Copyした直後に別の操作を挟んでしまい、貼り付け先がずれることが多いです。対処法としては、コピーしてから直接PasteSpecialを行うか、変数に値を保存してRange.Valueで代入する方法があります。</p>
+<p>PasteSpecialを使う例です。</p>
+<pre><code>Sub コピー値のみ()
+    Range("A1:A10").Copy
+    Range("B1").PasteSpecial Paste:=xlPasteValues
+    Application.CutCopyMode = False
+End Sub
+</code></pre>
+</section>
+
+<section id="sec-5">
+  <h3>セルのクリア（Clear、ClearContents、ClearFormats）</h3>
+  <p>セルの中身を消す方法は用途別に選べます。<code>Range.Clear</code>は値・書式・コメントなどを一括で削除し、<code>Range.ClearContents</code>は値だけを消して書式は残します。<code>Range.ClearFormats</code>は書式だけを消して値は維持します。</p>
+<p>たとえばテンプレートを初期化するときは<code>ClearContents</code>が向いていて、見た目だけをリセットするときは<code>ClearFormats</code>が適しています。マクロで複数セルを一括で消すときは、範囲指定でまとめて呼ぶと処理が速くなります。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>マクロを保存する際は必ずブックを「Excel マクロ有効ブック（.xlsm）」で保存し、実行前にExcelの「マクロ有効化」をオンにしておくことを要チェックにしてください。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>.Value/.Value2は計算に向いており、.Textは表示文字列の取得に向いています。</p></li>
+  <li><p>Font/Interior/Bordersを使うと、見た目を細かく制御できます。</p></li>
+  <li><p>Rows/ColumnsのInsert/Deleteは参照ずれが起きやすいため、セル参照の影響範囲を要チェックしつつ使います。</p></li>
+  <li><p>CopyとPasteSpecialを使うと、値・書式・数式を選んで貼り付けできます。</p></li>
+  <li><p>Clear系は用途別（全部/値のみ/書式のみ）で使い分けると安全です。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

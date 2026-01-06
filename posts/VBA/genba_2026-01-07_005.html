@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>繰り返し処理の基本</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>繰り返し処理の基本</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/005.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">For...Next文の基本</a></li>
+  <li><a href="#sec-2">Stepを使った増減値の指定</a></li>
+  <li><a href="#sec-3">For Each...Next文でコレクションを処理する</a></li>
+  <li><a href="#sec-4">Do...Loop文の種類と使い分け</a></li>
+  <li><a href="#sec-5">Exit文でループを抜ける方法</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>For...Next文の基本</h3>
+  <p>今回できるようになることは、For...Nextで決まった回数だけ繰り返す処理を作れるようになることです。</p>
+<p>For...Nextは「何回繰り返すか」が明確な時に使います。ループ変数を宣言して開始値・終了値を指定すると、処理が自動で繰り返されます。</p>
+<p>最小マクロ：</p>
+<pre><code>Sub Minimal_ForNext()
+    Dim i As Long
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Sheets(1)
+    ws.Range("A1:A10").ClearContents
+    For i = 1 To 10
+        ws.Cells(i, 1).Value = "行 " &amp; i
+    Next i
+    MsgBox "完了: A1〜A10に書き込みました"
+End Sub</code></pre>
+<p>貼り付け場所は、標準モジュールに貼り付けます。</p>
+<p>実行方法は、VBE（Alt+F11）で開いてF5で実行するか、またはExcelの「マクロ」から実行します。</p>
+</section>
+
+<section id="sec-2">
+  <h3>Stepを使った増減値の指定</h3>
+  <p>Step句を使うと増分や減分を自由に指定できます。</p>
+<p>Step 2で2ずつ増やしたり、Step -1で逆順に減らしたりできます。ループの進み方を変えることで偶数だけ処理するなどの柔軟な制御が可能です。以下は逆順でB列に書く例です。</p>
+<pre><code>Sub Step_Example()
+    Dim i As Long
+    For i = 10 To 1 Step -1
+        Cells(11 - i, 2).Value = "値:" &amp; i
+    Next i
+End Sub</code></pre>
+<p>確認方法：実行後にB列の値が10から1まで逆順で並んでいることを確認します。Stepの符号が想定と逆だと空ループになるので要チェックです。</p>
+</section>
+
+<section id="sec-3">
+  <h3>For Each...Next文でコレクションを処理する</h3>
+  <p>For Each...Nextは、ワークシートのコレクションやRangeのセル集合など、複数の要素を順に処理するのに向いています。</p>
+<p>インデックスを意識せずに書けるため、コードが読みやすくなります。例えば選択中のセルの色を変える場合は、次のように書きます。</p>
+<pre><code>For Each c In Selection.Cells
+    ' c を処理します
+Next c</code></pre>
+<p>使い分けの基準として、インデックス（1,2,3）の管理が必要な場合はFor...Nextが向きます。一方で、要素ごとに順次処理するだけならFor Each...Nextが簡潔です。</p>
+<p>また、RangeとCellsの違いは参照の仕方にあります。固定範囲を指定するならRange("A1:A10")が適しており、行列番号で参照するならCells(r, c)が向きます。</p>
+</section>
+
+<section id="sec-4">
+  <h3>Do...Loop文の種類と使い分け</h3>
+  <p>Do...Loopは条件評価の位置を変えることで、「繰り返す前に条件をチェック」するDo While/Untilと、「最低1回は実行してから条件をチェック」するLoop While/Untilがあります。</p>
+
+<p>ユーザー入力待ちや、条件が途中で変わる処理には柔軟に対応できます。</p>
+
+<p>例として、Do While SomeFlag = True ... LoopやDo ... Loop Until IsEmpty(ActiveCell)のように使い分けます。</p>
+
+<pre><code>Do While SomeFlag = True
+    ' ...
+Loop</code></pre>
+
+<pre><code>Do
+    ' ...
+Loop Until IsEmpty(ActiveCell)</code></pre>
+
+<p>条件をループの先頭で評価すると最小回数が0回になり、ループ末尾で評価すると最低1回は実行される点が違いです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>Exit文でループを抜ける方法</h3>
+  <p>Exit ForやExit Doを使うと、途中でループを止めて次の処理に移れます。検索で目的の値が見つかったら残りを処理しないときなどに使います。例えば<code>If Cells(i,1).Value = target Then Exit For</code>のように書きます。</p>
+<p>よくあるミスとして、Exitを使っても次のネストされた外側のループは止まらないことがあり、意図した範囲で抜けられない原因になります。直し方は外側のフラグ変数を用意してループ終了後に判定するか、関数化してExit Subで抜ける方法を検討します。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>マクロを動かすにはファイルを.xlsxではなくマクロ有効ブック（.xlsm）で保存し、Excelの「コンテンツの有効化」でマクロを有効にしてください。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>For...Nextは回数が決まっている繰り返しに使うです。</p></li>
+  <li><p>Stepで増減幅や逆順が指定でき、符号に要チェックするです。</p></li>
+  <li><p>For Eachはコレクションを簡潔に処理でき、RangeとCellsの使い分けが肝心です。</p></li>
+  <li><p>Do...Loopは条件の評価位置で最低実行回数が変わるため用途で選ぶです。</p></li>
+  <li><p>Exit For/Exit Doは途中退出に使い、ネスト時はフラグや関数化で対応するです。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

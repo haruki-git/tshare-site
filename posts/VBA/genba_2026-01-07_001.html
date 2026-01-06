@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Excel VBA入門：基礎知識と開発環境</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Excel VBA入門：基礎知識と開発環境</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/001.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">VBAとは何か（マクロとの違い、できること）</a></li>
+  <li><a href="#sec-2">VBEの起動と画面構成（プロジェクトエクスプローラ、コードウィンドウ、プロパティウィンドウ）</a></li>
+  <li><a href="#sec-3">マクロの記録機能を使ってみる</a></li>
+  <li><a href="#sec-4">マクロ有効ブック（.xlsm）の保存方法</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>VBAとは何か（マクロとの違い、できること）</h3>
+  <p>今回できるようになることとして、VBAで簡単な自動化マクロを作成して実行し、保存までできるようになります。</p>
+<p>VBA（Visual Basic for Applications）はExcelに組み込まれたプログラミング言語で、手作業の繰り返しや定型処理をコードで自動化できます。一般に「マクロ」はユーザーが実行する自動化処理の総称で、マクロを作る手段がVBAだったり、記録機能だったりします。</p>
+<p>VBAではセルの読み書きや書式設定、条件分岐、ループ、外部ファイルや他のOfficeアプリとの連携まで行えます。最初は短いマクロから始めると分かりやすいです。</p>
+<p>使い分けの基準として、セル指定はRange("A1")が固定参照で、Cells(行,列)は繰り返し処理で便利です。Valueは値を扱う標準で、Value2は日付や通貨の扱いで差が出る場合がありますので、特に日付の細かい扱いが必要ならValue2を試すとよいです。</p>
+
+<p>最小マクロ：</p>
+<pre><code class="language-vb">' 最小サンプル：Sheet1にテストを書き込む
+Sub MinimalMacro()
+    Dim i As Integer
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Worksheets("Sheet1")
+    For i = 1 To 5
+        ws.Range("A" &amp; i).Value = "テスト " &amp; i
+    Next i
+    MsgBox "最小マクロが実行されました。", vbInformation
+End Sub
+</code></pre>
+<p>貼り付け場所：標準モジュール</p>
+</section>
+
+<section id="sec-2">
+  <h3>VBEの起動と画面構成（プロジェクトエクスプローラ、コードウィンドウ、プロパティウィンドウ）</h3>
+  <p>VBE（Visual Basic Editor）はAlt＋F11キーで起動できます。</p>
+<p>起動すると左側にプロジェクトエクスプローラがあり、開いているブックやシート、モジュールが階層表示されます。中央のコードウィンドウで実際にVBAコードを書き、下や右のプロパティウィンドウで選択オブジェクトの設定を確認できます。</p>
+<p>プロジェクトエクスプローラでは標準モジュールやシートモジュール、ThisWorkbookの違いだけ先に押さえると迷いが減ります。標準モジュールは汎用のSubやFunctionを入れる場所で、シートモジュールはそのシート固有のイベント向けです。ThisWorkbookはブック全体のイベント向けです。</p>
+<p>実行方法：VBEで実行（F5キーまたは実行ボタン）です。</p>
+<p>本文中では、コードを保存する前に要チェックとしてファイルの保存形式とマクロ有効化設定を確認するとよいです。VBE内での検索（Ctrl＋F）やステップ実行（F8）で動きを追いながら理解を深めます。</p>
+</section>
+
+<section id="sec-3">
+  <h3>マクロの記録機能を使ってみる</h3>
+  <p>記録機能は画面操作を自動的にVBAに変換してくれるため、初心者がVBAの出力を学ぶのに便利です。</p>
+<p>開発タブの「マクロの記録」を押してから操作を行い、停止するとModuleにコードが生成されます。</p>
+<p>記録されたコードはSelectやActivateを多用するため、そのまま使うより不要な行を削ってシンプルにするのが実務でのコツです。</p>
+<p>例えば選択して太字にする手順を記録して、後で対象範囲を引数化して使えるように整形します。</p>
+<p>記録後はコードウィンドウで名前を付け直し、コメントを入れると読みやすくなります。</p>
+
+<p>確認方法：セルの値の変化や書式の反映、またはMsgBoxで処理が終わったことを表示して動作を確かめます。</p>
+
+<p>以下は記録コードを整理した確認用のサンプルです（選択範囲を太字・背景色設定）。</p>
+<pre><code>Sub ApplyFormatToSelection()
+    Dim rng As Range
+    Set rng = Selection
+    If rng Is Nothing Then Exit Sub
+    With rng
+        .Font.Bold = True
+        .Interior.Color = RGB(230, 230, 255)
+    End With
+    MsgBox "書式を設定しました。", vbInformation
+End Sub</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>マクロ有効ブック（.xlsm）の保存方法</h3>
+  <p>マクロを含むブックは「Excel マクロ有効ブック（*.xlsm）」で保存する必要があります。通常はファイル→名前を付けて保存で保存形式を選びます。拡張子が.xlsxだとマクロが保存されないため、拡張子を確認することが重要です。</p>
+<p>組織のセキュリティ設定により、ブックを開いたときにマクロが無効化される場合は、信頼できる場所に置くか、署名付きマクロを使う運用が一般的です。</p>
+<p>プログラムから保存する例は以下のとおりで、配布用テンプレートを自動保存する場面で便利です。</p>
+<pre><code>Sub SaveAsXLSM()
+    Dim fPath As String
+    fPath = ThisWorkbook.Path
+    If fPath = "" Then fPath = Environ("USERPROFILE") &amp; "\Desktop"
+    ThisWorkbook.SaveAs Filename:=fPath &amp; "\マクロ付きブック.xlsm", _
+        FileFormat:=xlOpenXMLWorkbookMacroEnabled
+    MsgBox "保存しました：" &amp; fPath &amp; "\マクロ付きブック.xlsm", vbInformation
+End Sub</code></pre>
+<p>よくあるミスとして、保存形式を.xlsxにしたまま終了してマクロを失ってしまうことが多いです。直し方としては、再度マクロを含む状態で開けるなら.xlsmで上書き保存し、もし上書きで失った場合はバックアップやバージョン履歴から復元するか、再作成が必要になります。社内の保存ルールに合わせてファイル名や保存先を決めると安心です。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><p>最小マクロ：マクロは初回に開いたとき無効になることが多いので、信頼できる場所へ保存するか、社内の運用に従って「コンテンツの有効化」を行ってください。</p></li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li><p>VBAはExcel内で動くプログラミング言語で、マクロはその自動化処理の呼び名です。</p></li>
+  <li><p>VBEはAlt＋F11で起動し、プロジェクトエクスプローラ・コードウィンドウ・プロパティウィンドウを使います。</p></li>
+  <li><p>マクロ記録は学習に便利で、記録後はコードを整理して使うと効率が上がります。</p></li>
+  <li><p>マクロを保存する場合は必ず「.xlsm」で保存し、開くときはマクロの有効化方法を確認します。</p></li>
+  <li><p>最初は短いマクロを作って実行と確認（セルの変化やMsgBox）を繰り返すと習得が早まります。</p></li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

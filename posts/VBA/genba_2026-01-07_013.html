@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>関数とプロシージャの使い分け</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>関数とプロシージャの使い分け</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/013.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">SubプロシージャとFunctionプロシージャの違い</a></li>
+  <li><a href="#sec-2">引数（ByVal、ByRef）と戻り値</a></li>
+  <li><a href="#sec-3">WorksheetFunction.○○でワークシート関数を呼び出す</a></li>
+  <li><a href="#sec-4">自作関数をセルから使う方法</a></li>
+  <li><a href="#sec-5">プロシージャの分割と再利用</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>SubプロシージャとFunctionプロシージャの違い</h3>
+  <p>今回できるようになることとして、SubとFunctionの違いを理解し目的に合わせて使い分けられるようになります。</p>
+<p>Subプロシージャは処理を実行して結果をセルに書き出したりMsgBoxで通知したりするために使います。</p>
+<p>Functionプロシージャは値を返すために設計され、ワークシートに直接書ける自作関数（ユーザー定義関数）になります。</p>
+<p>Subは戻り値を返さない点、Functionは戻り値が必須な点が大きな違いです。</p>
+<p>イベントハンドラ（例：SheetのChange）はSubになりますし、計算に使いたい処理はFunctionにします。</p>
+
+<p>最小マクロ：</p>
+<pre><code>Sub 最小マクロ_例()
+    Dim x As Long
+    x = 10
+    Cells(1, 1).Value = x         ' A1 に 10 を書き込む
+    Cells(1, 2).Value = DoubleIt(x) ' B1 に関数の結果を書き込む
+    MsgBox "A1=" &amp; Cells(1, 1).Value &amp; " B1=" &amp; Cells(1, 2).Value
+End Sub
+
+Function DoubleIt(n As Long) As Long
+    DoubleIt = n * 2
+End Function</code></pre>
+
+<p>貼り付け場所：上のコードは標準モジュール（VBEで挿入→標準モジュール）に貼り付けます。</p>
+<p>標準モジュールはSubやFunctionを複数まとめておけるので再利用しやすくなります。</p>
+
+<p>実行方法：VBE（Alt+F11）で該当モジュールを開き、カーソルをSub内に置いてF5で実行するか、Excel側でフォームコントロールのボタンに割り当てて実行できます。</p>
+</section>
+
+<section id="sec-2">
+  <h3>引数（ByVal、ByRef）と戻り値</h3>
+  <p>引数の渡し方はByVal（値渡し）とByRef（参照渡し）があります。ByValは中の値をコピーして関数やSubに渡すため、呼び出し元の変数は変更されません。ByRefは呼び出し元の変数を直接扱うため、処理内で値を変えると呼び出し元にも反映されます（既定はByRefです）。</p>
+
+<p>戻り値はFunctionで1つ返すのが基本です。必要なら配列やVariantで複数値を返す方法も使えます。副作用（呼び出し元が書き変わる）を避けたい場合はByValを明示すると読みやすくなります。</p>
+
+<p>よくあるミスとして、引数を意図せずByRefにしてしまい、呼び出し元の値が書き換わることがあります。原因はByRefが既定な点です。直し方はByValを明示するか、処理で新しい変数にコピーしてから操作する方法があります。</p>
+
+<p>確認方法として、上の最小マクロを実行するとA1/B1に値が入り、MsgBoxで結果が確認できます。Functionの戻り値が期待通りか、セルやMsgBoxで検証してください。</p>
+</section>
+
+<section id="sec-3">
+  <h3>WorksheetFunction.○○でワークシート関数を呼び出す</h3>
+  <p>ワークシートで使える関数はVBAからWorksheetFunction経由で呼べます。SumやVLookup、MatchなどをVBAで使うときに便利です。たとえば<code>WorksheetFunction.Sum(Range("A1:A10"))</code>で合計を取得できます。</p>
+<p>ただしWorksheetFunctionはエラーが発生するとランタイムエラーになるため、エラー制御（On Error Resume Nextなど）やApplication.WorksheetFunctionの使い分けを考えます。Application.WorksheetFunctionはエラー時の挙動が若干異なるケースがあるため、戻り値のチェックやエラーハンドリングを組むと堅牢になります。</p>
+<p>使い分けの基準として、RangeとCellsの使い分けは「可読性と可変インデックス」が基準になります。固定範囲ならRange("A1:B2")、ループで行列を扱うならCells(row, col)が便利です。ValueとValue2はValue2の方が日付や通貨の扱いで高速または精度差が出るケースがあるため、特に気にしなければValue2を使うことが多いです。また、ワークシート関数をVBA内部で計算したいだけならWorksheetFunctionを使い、セルに式を書いてユーザーが結果を参照するならFunction（UDF）を作ると役割が分かりやすくなります。</p>
+<pre><code>Sub 使用例_WorksheetFunction()
+    Dim s As Double
+    s = Application.WorksheetFunction.Sum(Range("A1:A10"))
+    Cells(2, 1).Value = s
+End Sub
+</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>自作関数をセルから使う方法</h3>
+  <p>自作関数（UDF）はPublic Functionで作ると、ワークシートのセルに<code>=MyFunc(A1,B1)</code>のように書いて使えます。</p>
+<p>関数は標準モジュールに置くとExcel側から見えるようになります。UDF内でセルを書き換える操作は推奨されないため、計算だけ行って値を返す設計にします。</p>
+<p>最小限の例として文字列結合や数値計算を返す関数を作ると理解しやすいです。セルに直接入力して使う場合は、保存形式をマクロ有効ブック（.xlsm）にしておく必要があります。</p>
+<pre><code>Public Function ConcatWithDash(a As Variant, b As Variant) As String
+    ConcatWithDash = CStr(a) &amp; " - " &amp; CStr(b)
+End Function</code></pre>
+<p>この関数をセルに<code>=ConcatWithDash(A1,B1)</code>と書くと結合結果が返ります。保存形式が.xlsmでないとUDFは含まれないため、保存時にファイル形式を確認してください。</p>
+</section>
+
+<section id="sec-5">
+  <h3>プロシージャの分割と再利用</h3>
+  <p>長い処理は小さなSubやFunctionに分割すると、可読性とテストしやすさが上がります。</p>
+<p>共通処理は標準モジュールにまとめ、プロジェクト内で呼び出す形にすると再利用が進みます。</p>
+<p>引数は必要最小限にし、副作用を減らすために戻り値で結果を返す方式が望ましいです。</p>
+<p>ユニット感覚で小さく作ってから組み合わせ、変更があればその小さな単位だけ修正すると安全です。</p>
+<p>外部依存（シート名や固定セル）を減らすために、シートやRangeは引数で渡すとユニットテストがしやすくなります。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>マクロを保存する際は必ず「.xlsm」で保存し、Excelのオプションでマクロを有効にしてから実行してください。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li>Subは処理を実行する役割で、Functionは値を返す役割が基本です。</li>
+  <li>ByValは値渡しで、ByRefは参照渡しになるため、副作用の出方に違いがあります。</li>
+  <li>WorksheetFunctionはワークシート関数をVBAから使えますが、エラー処理が必要です。</li>
+  <li>自作関数は標準モジュールにPublic Functionとして置き、セルから<code>=関数()</code>の形で呼び出せます（.xlsmで保存します）。</li>
+  <li>長い処理は小さなプロシージャに分けると、再利用性と保守性が高まります。</li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>
