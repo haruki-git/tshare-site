@@ -28,112 +28,74 @@
   <li><a href="#sec-2">フォルダ内の全Excelファイルを開く処理</a></li>
   <li><a href="#sec-3">データの統合と集計ロジック</a></li>
   <li><a href="#sec-4">集計結果のレポート作成</a></li>
-  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-5">エラー処理の実装（ファイルが開けない場合など）</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
 </ol>
       </section>
 
       <section id="sec-1">
   <h3>プロジェクトの要件（複数ファイルからデータ収集）</h3>
-  <p>今回できるようになることとして、複数のExcelファイルから指定列を集めて1つの集計表にまとめるVBAを作成できるようになります。</p>
-<p>想定要件は次のとおりです。</p>
-<ul>
-  <li>フォルダ内に同様のレイアウト（ヘッダーが同じ）を持つxlsx/xlsmが複数ある前提です。</li>
-  <li>各ファイルの「Data」シートからA〜C列を集めてマスターに統合し、集計（合計・件数）して別シートに出力する想定です。</li>
-  <li>マクロは.xlsmで保存し、マクロ有効化をして、貼り付け場所は標準モジュールにする想定です。</li>
-</ul>
-<p>最小マクロ：下はファイル名を列挙するだけの最短例で、動作イメージ確認に使えます。</p>
-<pre><code class="language-vb">' 最小マクロ：フォルダ内ファイル名を一覧（例）
-Sub ListFiles()
-    Dim f As String, r As Long
-    Dim folder As String: folder = "C:\Data\"
-    Sheets("Master").Cells.Clear
-    r = 1
-    f = Dir(folder &amp; "*.xls*")
-    Do While f &lt;&gt; ""
-        Sheets("Master").Cells(r, 1).Value = f
-        r = r + 1
-        f = Dir()
-    Loop
-    MsgBox "完了: " &amp; r - 1 &amp; " 件"
-End Sub
-</code></pre>
+  <p>目的は、複数のExcel（同一フォーマット）から自動でデータを収集し、商品別・担当別などで合計を出すことです。</p>
+<p>前提として、全ファイルで列見出し（日付／担当／商品／数量／売上など）が一致している必要があります。</p>
+<p>マクロは集計用ブック（.xlsm）に置き、元ファイルは読み取り専用で扱います。</p>
+<p>標準モジュールへコードを置くのが扱いやすく、実行権限（マクロ有効化）を必須とします。</p>
 </section>
 
 <section id="sec-2">
   <h3>フォルダ内の全Excelファイルを開く処理</h3>
-  <p>フォルダ走査とファイルオープンはDir関数とWorkbooks.Openを組み合わせるのが基本です。</p>
-<p>処理では画面更新を切り、読み取り専用で開いて必要範囲をコピーし、閉じる流れにします。</p>
-<p>大きなファイルがあるときはApplication.CalculationをxlCalculationManualにしておくと高速化できます。</p>
-<p>下は実装例で、エラーはログ用の配列に貯めて最後にまとめて表示します。</p>
-<p>実行方法はVBEの実行（F5）か、クイックアクセスツールバーやフォームコントロールのボタンに割り当てる方法です。</p>
-<p>ファイルは必ずマクロ有効形式で保存してください。</p>
-
-<pre><code>Option Explicit
-Sub CollectAllFiles()
-    Dim folder As String, f As String
-    Dim wbSrc As Workbook, wsSrc As Worksheet, wsDst As Worksheet
-    Dim dstRow As Long, lastRow As Long
-    Dim errList As Collection: Set errList = New Collection
-
-    folder = "C:\Data\" ' フォルダは実行前に変更
-    Set wsDst = ThisWorkbook.Sheets("Master")
-    wsDst.Cells.Clear
-    dstRow = 1
-
-    Application.ScreenUpdating = False
-    f = Dir(folder & "*.xls*")
-    Do While f &lt;&gt; ""
-        On Error GoTo OpenErr
-        Set wbSrc = Workbooks.Open(folder & f, ReadOnly:=True)
-        Set wsSrc = wbSrc.Worksheets("Data")
-        lastRow = wsSrc.Cells(wsSrc.Rows.Count, "A").End(xlUp).Row
-        wsSrc.Range("A2:C" &amp; lastRow).Copy wsDst.Cells(dstRow, 1)
-        dstRow = dstRow + lastRow - 1
-        wbSrc.Close SaveChanges:=False
-        On Error GoTo 0
-        f = Dir()
-        ContinueLoop:
-    Loop
-    Application.ScreenUpdating = True
-    MsgBox "ファイル収集完了"
-    Exit Sub
-
-OpenErr:
-    errList.Add f
-    On Error GoTo 0
-    If Not wbSrc Is Nothing Then wbSrc.Close SaveChanges:=False
-    f = Dir()
-    Resume ContinueLoop
-End Sub</code></pre>
+  <p>フォルダの列挙はDirが簡単で高速です。サブフォルダの再帰処理や属性の詳細取得が必要な場合はFileSystemObjectを使う方法が適しています。</p>
+<p>処理中は<code>Application.ScreenUpdating = False</code>と<code>Application.EnableEvents = False</code>を設定すると高速化しやすいです。</p>
+<p>テンポラリ（~$）や隠しファイルはスキップしておくと安定しやすいです。</p>
+<p>Excelファイルは読み取り専用（<code>ReadOnly:=True</code>）で開くと、意図しない上書きを避けやすいです。</p>
+<p>大量ファイルを扱う場合は、処理前にファイル一覧を作っておくと、中断時の再開や復旧が行いやすいです。</p>
 </section>
 
 <section id="sec-3">
   <h3>データの統合と集計ロジック</h3>
-  <p>統合した生データは、ヘッダー行を一度だけ残して下へ追記するスタイルが扱いやすいです。</p>
-
-<p>集計はピボットテーブルを作成するか、VBAで辞書（Scripting.Dictionary）を使ってグループ集計する方法があります。ピボットは少ないコードで柔軟ですが、VBA集計は処理中に細かい条件判定が入るときに便利です。</p>
-
-<p>確認方法は、Masterシートの行数と、MsgBoxやImmediateウィンドウの出力で件数を確かめることです。予想と異なる場合は、ヘッダーが重複していないかを要チェックです。</p>
-
-<p>使い分けの基準として、RangeとCellsは可読性と動的参照の違いで選びます。Range("A1")は固定参照に向き、Cells(r, c)はループに向きます。ValueとValue2は日付や通貨の扱いで微差があるため、通常はValue2を高速性重視で使い、日付精度が必要なときはValueを検討します。</p>
+  <p>流れは「取り込み→辞書で集計→出力」です。</p>
+<p>各ファイルの必要行を集計シートへ追記し、Scripting.Dictionaryでキー（商品名など）ごとに数値を累積すると高速で簡潔です。</p>
+<p>列は固定列番号で参照（Cells(row, col)）し、値取得はValue/Value2を用途で使い分けます。</p>
+<p>処理後に辞書のキー順で集計シートに出力し、AutoFitなどで体裁を調整します。</p>
+<p>失敗ファイルは別配列やErrorsシートに記録して後で確認します。</p>
 </section>
 
 <section id="sec-4">
   <h3>集計結果のレポート作成</h3>
-  <p>集計結果は専用の「Report」シートに出すと見やすくなります。</p>
-<p>ピボットテーブルを使う場合は、データテーブルをテーブル化（ListObject）してからPivotCacheを作成すると安定します。</p>
-<p>書式は数式や条件付き書式で整え、最終的にはPDFで出力することも多いです。</p>
-<p>よくあるミスとして、ヘッダーのスペル違いで集計対象が欠けることが最も多いです。直し方は、元データのヘッダーを正規化（Trim/大文字小文字統一）してから処理する方法です。</p>
+  <p>出力は見やすさを優先し、ヘッダ書式や数値書式（#,##0）、桁区切り、ソート（順位付け）を行います。</p>
+<p>運用面では集計結果を別ブック（例：YYYYMMDD_集計.xlsx）として保存し、マクロが不要な場合は.xlsxで出力します。</p>
+<p>頻繁に使う場合はボタン割当やクイックアクセス登録で実行性を高めます。</p>
+<p>最後に合計チェック（=SUM(B2:Bn)等）とMsgBoxで件数確認を行います。</p>
 </section>
 
 <section id="sec-5">
+  <h3>エラー処理の実装（ファイルが開けない場合など）</h3>
+  <p>Workbooks.Open直後にエラー検出の仕組みを入れ、開けないファイルはログ化してスキップします。</p>
+<p>実装例として、ファイル単位では On Error Resume Next で Err.Number を確認し、問題があればErrorsシートへ日時・ファイル名・Err.Number・説明を追記して Err.Clearします。</p>
+<p>共通処理型では On Error GoTo のハンドラでログ化と後片付け（Close/Release）をまとめます。</p>
+<p>ロックや破損がある場合は、ReadOnly指定にするか、手動対応のワークフローを用意します。</p>
+</section>
+
+<section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き・権限変更）をする前に、対象と影響範囲を確認して、必要ならバックアップを取ってから進めてください。</li>
+  <li>
+    <p>集計列順や見出しが一致しないと誤集計になるため、事前にサンプルで列順を確認することです。</p>
+    <p>マクロは必ずバックアップを取り、初回は少数ファイルでテスト実行することです。</p>
+  </li>
 </ul>
 </section>
 
-      
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>同一フォーマットの複数ファイルから自動でデータを収集し、辞書でキーごとに合計する設計が効率的です。</p></li>
+  <li><p>ファイル列挙は単純ならDirを使い、サブフォルダも含めるならFileSystemObjectを使うのが適しています。</p></li>
+  <li><p>処理中は画面更新とイベントを止め、ReadOnlyで開いて保存ミスを防ぐ運用が要チェックです。</p></li>
+  <li><p>集計結果は別ブックで保存し、書式・ソート・合計チェックを行うと品質を保ちやすいです。</p></li>
+  <li><p>開けないファイルはログに残し、On Errorで個別または共通ハンドラにより安全にスキップ・記録するのが確実です。</p></li>
+</ol>
+</section>
     </article>
   </main>
 </body>

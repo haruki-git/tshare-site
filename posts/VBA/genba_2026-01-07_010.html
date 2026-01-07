@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>データの抽出と集計（Excel VBA入門）</title>
+  <title>データの抽出と集計（Excel VBAやさしく解説）</title>
   <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
 </head>
 <body>
   <main class="container">
     <article class="card">
       <header>
-        <h1>データの抽出と集計（Excel VBA入門）</h1>
+        <h1>データの抽出と集計（Excel VBAやさしく解説）</h1>
         <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
         <p class="meta">投稿日：2026-01-07</p>
       </header>
@@ -27,72 +27,113 @@
   <li><a href="#sec-1">条件に合うデータの抽出方法</a></li>
   <li><a href="#sec-2">AutoFilterメソッドの使い方</a></li>
   <li><a href="#sec-3">Sortメソッドでデータを並べ替える</a></li>
-  <li><a href="#sec-4">注意（ここだけ）</a></li>
+  <li><a href="#sec-4">RemoveDuplicatesで重複データを削除する</a></li>
+  <li><a href="#sec-5">実務での集計処理パターン</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
 </ol>
       </section>
 
       <section id="sec-1">
   <h3>条件に合うデータの抽出方法</h3>
-  <p>今回できるようになることとして、条件に合う行を抽出して別シートに出力し、次の処理（並べ替え・重複削除・集計）に渡せるようになることです。</p>
-<p>まずはどこにコードを置くか説明します。貼り付け場所は標準モジュール（VBEで挿入→Module）に入れると再利用がしやすいです。実行方法はAlt+F8でマクロ一覧から選ぶか、ボタンに割り当てるか、VBEでF5実行します。ファイルは必ずマクロ有効形式（.xlsm）で保存してください。</p>
-<p>最小マクロ：以下は表のヘッダーが1行目、データがA:Dにある想定で「状態」列（列C）が「完了」の行だけを抽出して新規シートにコピーする簡単な例です。</p>
-<pre><code>Sub 抽出最小マクロ()
-    Dim ws As Worksheet, wsOut As Worksheet
-    Set ws = ThisWorkbook.Sheets("データ")
-    On Error Resume Next
-    Set wsOut = ThisWorkbook.Sheets("抽出結果")
-    If wsOut Is Nothing Then Set wsOut = ThisWorkbook.Sheets.Add(After:=ws)
-    On Error GoTo 0
-    ws.Range("A1:D1").Copy wsOut.Range("A1") ' ヘッダーコピー
-    ws.Range("A1:D" &amp; ws.Cells(ws.Rows.Count, "A").End(xlUp).Row) _
-      .AutoFilter Field:=3, Criteria1:="完了"
-    ws.Range("A2:D" &amp; ws.Cells(ws.Rows.Count, "A").End(xlUp).Row) _
-      .SpecialCells(xlCellTypeVisible).Copy wsOut.Range("A2")
+  <p>今回できるようになることは、指定した条件で表を絞り込み、必要な行だけを扱えるようになることです。</p>
+
+<p>Excelでは「AutoFilter（オートフィルター）」やVisible（表示）セルの扱いを中心に考えるとわかりやすいです。</p>
+
+<p>まずは最小限で動くマクロを用意して、どこに貼るか・どう実行するかを確認します。最小マクロ：</p>
+
+<pre><code>Sub MinimalFilter()
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Worksheets("Sheet1")
+    ' ヘッダー付きの表（A1から現在の領域）を列2で絞り込み
     ws.AutoFilterMode = False
-    MsgBox "抽出完了"
+    ws.Range("A1").CurrentRegion.AutoFilter Field:=2, Criteria1:="Tokyo"
+    MsgBox "列2=Tokyo の絞り込みを実行しました。", vbInformation
 End Sub</code></pre>
-<p>確認方法は、抽出先シートにヘッダーと条件に合う行がコピーされていることを確認します。</p>
-<p>よくあるミスとして、ヘッダー行を含めるRange指定を間違えて見出しがコピーされないことが多いので、Row範囲は必ず1行目を含めるよう修正します（End(xlUp)の基準列を確認します）。</p>
+
+<p>貼り付け場所は標準モジュール（VBEで挿入→モジュール）です。</p>
+
+<p>ファイルはマクロ有効形式（.xlsm）で保存してください。</p>
+
+<p>実行方法は、VBEでF5実行、あるいはフォームボタンに割り当てて使えます。</p>
+
+<p>確認方法は、シート上で行が絞られていることを目視で確認するか、MsgBoxの表示で実行確認ができます。</p>
+
+<p>保存形式とマクロ有効化は先に行っておくと混乱が少なくなります。</p>
 </section>
 
 <section id="sec-2">
   <h3>AutoFilterメソッドの使い方</h3>
-  <p>AutoFilter（オートフィルター）はRange.AutoFilterで列を条件指定して表示／非表示を切り替えます。</p>
-<p>複数条件はCriteria1／Operator／Criteria2で扱い、ワイルドカード（*や?）や日付、数値の比較も可能です。</p>
-<p>実行順としてはヘッダー行を含む範囲を対象にAutoFilterを設定し、VisibleなセルだけをSpecialCells(xlCellTypeVisible)で扱います。</p>
-<p>複数列で絞る場合は同じRangeに対して別Fieldを指定して順に適用します。</p>
-<p>抽出後はAutoFilterMode = Falseで元に戻すとユーザー操作の邪魔になりません。</p>
-
-<pre><code>Sub AutoFilter例()
-    Dim r As Range
-    Set r = Sheets("データ").Range("A1").CurrentRegion
-    r.AutoFilter Field:=2, Criteria1:="&gt;=2026/1/1", Operator:=xlAnd, Criteria2:="&lt;=2026/12/31"
-    r.AutoFilter Field:=4, Criteria1:="完了"
-End Sub
-</code></pre>
+  <p>AutoFilterはRange.AutoFilterで動かし、Field（列番号）とCriteria1/Criteria2で条件を指定します。</p>
+<p>文字列、数値、日付、ワイルドカード（"*"や"?"）などを使えますし、Operator引数で複数条件をつなげられます。</p>
+<p>フィルター適用後はSpecialCells(xlCellTypeVisible)で見えているセルだけを扱えます。</p>
+<p>AutoFilter適用時には既存のAutoFilterModeを解除しておくと予期せぬ振る舞いを避けやすいです。</p>
+<p>フィルター後に行単位で処理する場合は、Visibleセルをループで回すか、WorksheetFunction.Subtotalで集計するのが実務的です。</p>
 </section>
 
 <section id="sec-3">
   <h3>Sortメソッドでデータを並べ替える</h3>
-  <p>Sort（並べ替え）は<code>Range.Sort</code>で複数キーや昇順／降順、ヘッダーの有無を指定できます。</p>
-
-<p>使い分けの基準として、<code>Range</code>で範囲を丸ごと指定すると意図が明快で、<code>Cells</code>を使うと動的に列や行を指定したいときに便利です。</p>
-
-<p><code>Value</code>（値）の取得は通常は<code>Value</code>で十分ですが、速度を重視する大量データでは<code>Value2</code>の方が高速です。</p>
-
-<p>並べ替えは抽出後に行うことが多く、<code>SortFields.Add Key:=Range("B2:B1000")</code>のようにキーを追加して<code>Apply</code>すると安定します。</p>
-
-<p>並べ替えは</p>
+  <p>Range.Sortを使うと、指定列で昇順や降順に並べ替えられます。</p>
+<p>ヘッダーを保持したい場合はHeader:=xlYesを指定し、キーにはセル参照（例：Key1:=ws.Range("B2")）を渡す点を覚えてください。</p>
+<p>複数キーでのソートも可能です。また、並べ替えの後にフィルターをかける場合と、フィルター後に可視セルだけを別シートにコピーする場合で、処理順を決めておく必要があります。</p>
+<p>RangeとCellsの使い分けは、見た目の分かりやすさで選ぶと整理しやすいです。Range("A1:B10")は固定範囲に向き、Cells(row, col)はループや動的範囲の指定に向きます。</p>
+<p>ValueとValue2は大差ありませんが、日付の細かい扱いではValue2の方が高速で互換性が高い場合があります。</p>
 </section>
 
 <section id="sec-4">
+  <h3>RemoveDuplicatesで重複データを削除する</h3>
+  <p>Range.RemoveDuplicatesは、指定列の組み合わせで重複行をまとめて削除できます。</p>
+<p>Columns引数に配列を渡し、Header:=xlYesまたはxlNoでヘッダーの有無を指定します。</p>
+<p>RemoveDuplicatesは元データを上書きするため、元に戻す必要がある場面では事前にコピーを取るか、Undoが効かないことを理解しておくと安全です。</p>
+<p>重複判定後に集計（件数や合計）を出す場合は、RemoveDuplicates前と後で差分を取るか、コピー先で集計する構成にすると実務では扱いやすいです。</p>
+<p>よくあるミスとして、Field（列番号）をヘッダー行基準で間違えることが多く、原因は見た目の列位置とField番号のズレです。</p>
+<p>直し方は、CurrentRegionや範囲をDebug.Printで確認し、Field番号をヘッダー行から数え直すことです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>実務での集計処理パターン</h3>
+  <p>実務では「フィルター→並べ替え→重複削除→集計」の流れがよく出ます。以下はその流れをVBAで一気に行い、合計を出すサンプルです。</p>
+<p>フィルターは日付やカテゴリ、並べ替えは担当者や金額順、重複はキー列の組み合わせで行うのが典型です。出力は別シートやシグナル列、集計セルに書き出すと運用が楽になります。</p>
+
+<pre><code>Sub FilterSortRemoveDupAggregate()
+    Dim ws As Worksheet, rng As Range
+    Set ws = ThisWorkbook.Worksheets("Sheet1")
+    Set rng = ws.Range("A1").CurrentRegion
+    ' 例: 列3が日付で2023年以降を抽出
+    rng.AutoFilter Field:=3, Criteria1:="&gt;=2023/01/01", Operator:=xlAnd
+    ' 列2（B列）で昇順ソート（ヘッダーあり）
+    rng.Sort Key1:=ws.Range("B2"), Order1:=xlAscending, Header:=xlYes
+    ' 列1と列2の組で重複削除（ヘッダーあり）
+    rng.RemoveDuplicates Columns:=Array(1, 2), Header:=xlYes
+    ' 見えているD列の合計をSUBTOTALで取得（9はSUM）
+    Dim last As Long, sumVal As Double
+    last = ws.Cells(ws.Rows.Count, "D").End(xlUp).Row
+    sumVal = Application.WorksheetFunction.Subtotal(9, ws.Range("D2:D" &amp; last))
+    ws.Range("F1").Value = "合計"
+    ws.Range("F2").Value = sumVal
+    ' フィルター解除（必要なら）
+    ws.AutoFilterMode = False
+    MsgBox "処理が完了しました。合計: " &amp; sumVal, vbInformation
+End Sub</code></pre>
+</section>
+
+<section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き・権限変更）をする前に、対象と影響範囲を確認し、必要であればバックアップを取ってから進めてください。</li>
+  <li>最小マクロ：マクロを実行する前に、ファイルをマクロ有効形式（.xlsm）で保存してから動かすことがポイントです。</li>
 </ul>
 </section>
 
-      
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>AutoFilterで条件抽出すると、VisibleセルやSubtotalで絞り込んだ集計ができるようになります。</p></li>
+  <li><p>Range.SortはHeader指定とキーの指定を要チェックして使うと安定します。</p></li>
+  <li><p>RemoveDuplicatesは元データを上書きするため、必要ならコピーを残してから実行します。</p></li>
+  <li><p>実務では「絞り込み→並べ替え→重複削除→集計」の順がよく使われますので、コードで一括処理が可能です。</p></li>
+  <li><p>小さなミス（列番号やシート名）で動かなくなるため、Debug.PrintやMsgBoxで中間確認を入れると運用が楽になります。</p></li>
+</ol>
+</section>
     </article>
   </main>
 </body>

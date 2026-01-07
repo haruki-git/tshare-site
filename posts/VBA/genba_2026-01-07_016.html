@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>実務でよく使うExcel VBA自動化テクニック</title>
+  <title>実務でよく使う自動化テクニック</title>
   <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
 </head>
 <body>
   <main class="container">
     <article class="card">
       <header>
-        <h1>実務でよく使うExcel VBA自動化テクニック</h1>
+        <h1>実務でよく使う自動化テクニック</h1>
         <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
         <p class="meta">投稿日：2026-01-07</p>
       </header>
@@ -30,92 +30,112 @@
   <li><a href="#sec-4">ExportAsFixedFormatでPDF出力</a></li>
   <li><a href="#sec-5">Application.ScreenUpdatingで画面更新を制御する</a></li>
   <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
 </ol>
       </section>
 
       <section id="sec-1">
   <h3>条件付き書式をVBAで設定する</h3>
-  <p>今回できるようになることとして、データに応じて自動で色付けやルールを設定して見やすさを保てるようになります。</p>
-<p>条件付き書式は手作業で設定すると煩雑になりやすいため、VBAで範囲にルールを貼る方法を覚えると実務で役立ちます。対象範囲を変数で指定し、FormatConditions（書式条件）コレクションに新しいルールを追加します。</p>
-<p>最小マクロ：次の例はA2:A20のセルが50以上なら背景を薄緑にする簡単なマクロです。</p>
-
-<pre><code>Sub SetConditionalFormat_Min()
-    Dim ws As Worksheet
-    Dim rng As Range
-    Set ws = ThisWorkbook.Worksheets("Sheet1")
-    Set rng = ws.Range("A2:A20")
-    rng.FormatConditions.Delete
-    rng.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, Formula1:="=50"
-    rng.FormatConditions(1).Interior.Color = RGB(200, 255, 200)
-End Sub</code></pre>
-
-<p>貼り付け場所は、標準モジュールに入れると再利用しやすいです。</p>
-<p>実行方法は、VBE（Alt+F11）でマクロを選んで実行するか、ボタンに割り当てます。</p>
-<p>確認方法は、Sheet1のA2:A20の該当セルの背景色が変わっているかを目視で確認します。</p>
-<p>使い分けの基準として、Rangeは明示的な範囲指定に向いており、Cellsはループや動的な行列に使うと扱いやすくなります。</p>
+  <p>条件付き書式をVBAでルール化すると、一貫した見た目にしやすくなり、人的ミスも減らせます。</p>
+<p>Range.FormatConditionsを使い、既存ルールは削除してから追加します。マクロは標準モジュールへ置き、保存は.xlsmが推奨です。</p>
+<pre><code>Sub ApplySimpleCF()
+  Dim rng As Range
+  Set rng = ThisWorkbook.Sheets("Sheet1").Range("B2:B20")
+  rng.FormatConditions.Delete
+  rng.FormatConditions.Add Type:=xlCellValue, Operator:=xlLess, Formula1:="=0"
+  rng.FormatConditions(1).Interior.Color = RGB(255,200,200)
+  rng.FormatConditions.AddColorScale 2
+End Sub
+</code></pre>
+<p>ポイントとして、範囲指定のミスやFormatConditionsの重複は要チェックです。Rangeはブロック操作に向き、Cellsはループ処理に向きます。</p>
 </section>
 
 <section id="sec-2">
   <h3>グラフの自動作成（ChartObjectsコレクション）</h3>
-  <p>データから定型的にグラフを作ると報告資料作成が速くなります。ChartObjectsコレクションはシート上に埋め込みグラフ（ChartObject）を追加・編集できます。系列や軸ラベル、表示位置をコードで決めると同じ書式のグラフを大量に作成できます。次のコードはB列とC列のデータで折れ線グラフを作成する例です。</p>
+  <p>ChartObjectsコレクションでシート上にChartObjectを追加し、サイズ・位置・ソースを設定します。定期レポートで有効です。凡例や系列はSeriesCollectionで細かく調整します。</p>
 
-<pre><code>Sub CreateChartExample()
-    Dim ws As Worksheet
-    Dim ch As ChartObject
-    Set ws = ThisWorkbook.Worksheets("Sheet1")
-    Set ch = ws.ChartObjects.Add(Left:=300, Top:=10, Width:=400, Height:=250)
-    With ch.Chart
-        .ChartType = xlLineMarkers
-        .SetSourceData Source:=ws.Range("B1:C12")
-        .HasTitle = True
-        .ChartTitle.Text = "月次推移"
-    End With
+<pre><code>Sub CreateSalesChart()
+  Dim ws As Worksheet, ch As ChartObject
+  Set ws = ThisWorkbook.Sheets("Sheet1")
+  On Error Resume Next: ws.ChartObjects("SalesChart").Delete: On Error GoTo 0
+  Set ch = ws.ChartObjects.Add(300,10,400,250): ch.Name = "SalesChart"
+  With ch.Chart
+    .ChartType = xlLineMarkers
+    .SetSourceData ws.Range("A1:B13")
+    .HasTitle = True: .ChartTitle.Text = "月次売上"
+  End With
 End Sub</code></pre>
 
-<p>系列の追加や見た目はChartオブジェクトのプロパティで細かく制御できます。よくあるミスとして、データ範囲の指定がずれて空白や文字列が混ざるとグラフが正しく描けないことが多いので、範囲を見直してから実行するとよいです（対処法はセル値の型確認かRangeの再指定です）。</p>
+<p>事前に印刷範囲や列幅を整えると見栄えが安定します。</p>
 </section>
 
 <section id="sec-3">
   <h3>印刷処理の自動化（PrintOut、PrintPreview）</h3>
-  <p>帳票を決まった形式で印刷する作業は、自動化で大幅に時短できます。PrintOutは直接印刷、PrintPreviewは印刷プレビュー表示を行います。ページ設定（Orientation/Zoom/PrintArea）を事前に整え、必要なら一時的に印刷用のシートを作ると安全です。次の例は印刷範囲を設定してプレビュー表示する簡単な流れです。</p>
+  <p>ActiveSheet.PrintOut／PrintPreviewで印刷を自動化します。From/To/Copies/Previewなどの引数で制御できます。PageSetupで用紙サイズや向きを事前に固定すると、期待どおりの出力になりやすいです。</p>
 
-<p>Subではなく先のChart作成と組み合わせる場合は、ScreenUpdating制御が効きます（後述）。PrintOutはプリンタドライバの設定に依存するため、複数環境で試すと安定します。使い分けの基準として、ユーザー確認が必要ならPrintPreviewを、完全自動で配布するならPrintOutを選びます。</p>
+<pre><code>Sub PrintReport()
+  With ThisWorkbook.Sheets("Sheet1").PageSetup
+    .Orientation = xlPortrait: .PaperSize = xlPaperA4
+  End With
+  ThisWorkbook.Sheets("Sheet1").PrintPreview
+  ' ThisWorkbook.Sheets("Sheet1").PrintOut Copies:=1, Preview:=False
+End Sub</code></pre>
+
+<p>共有プリンタ環境では、テスト印刷を推奨します。</p>
 </section>
 
 <section id="sec-4">
   <h3>ExportAsFixedFormatでPDF出力</h3>
-  <p>ExcelブックやシートをPDFにするにはExportAsFixedFormatメソッドが便利です。</p>
-<p>ファイル名や出力先を指定でき、複数シートや印刷範囲のみを出力できます。</p>
-<p>例として、指定シートをPDFで保存する流れを示します。</p>
+  <p>ExportAsFixedFormatでシートやブックをPDF化します。ファイル名に日付や時刻を付けて上書きを避け、PrintAreaを設定して不要な分割を防ぎます。</p>
 
 <pre><code>Sub ExportSheetToPDF()
-    Dim ws As Worksheet
-    Set ws = ThisWorkbook.Worksheets("Sheet1")
-    ws.PageSetup.Orientation = xlLandscape
-    ws.ExportAsFixedFormat Type:=xlTypePDF, Filename:=ThisWorkbook.Path &amp; "\出力_Sheet1.pdf", Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, OpenAfterPublish:=False
+  Dim fpath As String
+  fpath = ThisWorkbook.Path &amp; "\Report_" &amp; Format(Date, "yyyymmdd") &amp; ".pdf"
+  ThisWorkbook.Sheets("Sheet1").ExportAsFixedFormat Type:=xlTypePDF, Filename:=fpath, _
+    Quality:=xlQualityStandard, IgnorePrintAreas:=False, OpenAfterPublish:=False
 End Sub</code></pre>
 
-<p>ファイルパスが空の状態（保存していないブック）だと、意図しない場所に保存されることがあるため、先にブックを保存してから実行するのが実務上安全です。</p>
-<p>実行方法は、ブックを保存してからマクロを実行します。</p>
-<p>確認方法は、指定フォルダにPDFが作成されていることと、内容が印刷イメージ通りであることを開いて確認します。</p>
+<p>上書きを避けたい場合は、Dirで存在チェックをするかタイムスタンプを付与すると運用しやすいです。</p>
 </section>
 
 <section id="sec-5">
   <h3>Application.ScreenUpdatingで画面更新を制御する</h3>
-  <p>大量の処理や画面操作を伴う自動化は、画面更新をオフにすると高速化できます。</p>
-<p>Application.ScreenUpdating = Falseで更新を停止し、最後にTrueに戻します。</p>
-<p>Falseにしたままエラーで抜けると画面が更新されないままになるため、エラーハンドリングで必ず復帰させます。</p>
-<p>次は複数操作をまとめて実</p>
+  <p>長時間処理では画面更新を止めると高速化できます。必ずエラーハンドラでTrueに戻すことがポイントです。Falseのまま中断すると画面が更新されなくなります。</p>
+
+<pre><code>Sub LongProcess()
+  On Error GoTo ErrHandler
+  Application.ScreenUpdating = False
+  Call CreateSalesChart
+  Call ExportSheetToPDF
+  MsgBox "完了"
+Cleanup:
+  Application.ScreenUpdating = True
+  Exit Sub
+ErrHandler:
+  MsgBox "エラー:" &amp; Err.Number &amp; " " &amp; Err.Description
+  Resume Cleanup
+End Sub</code></pre>
+
+<p>ScreenUpdating以外にもCalculationやEnableEventsを制御すると、さらに高速化できる場合があります。</p>
 </section>
 
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き・権限変更）をする前に、対象と影響範囲を確認して、必要であればバックアップを取ってから進めるとよいです。</li>
+  <li>Application.ScreenUpdating = False のまま止めず、必ず復帰させます。また、PDF出力で上書きされないようにファイル名を管理します。</li>
 </ul>
 </section>
 
-      
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>FormatConditionsで条件付き書式を自動化し、見やすさと一貫性を確保します。</p></li>
+  <li><p>ChartObjects.Addでグラフを動的に作成し、シリーズや書式はSeriesCollectionで制御します。</p></li>
+  <li><p>PrintOut／PrintPreviewで印刷を自動化し、PageSetupで体裁を固定します。</p></li>
+  <li><p>ExportAsFixedFormatでPDF出力を行い、ファイル名に日時を付与したり、存在チェックを行ったりすることを推奨します。</p></li>
+  <li><p>Application.ScreenUpdatingをFalseにして高速化し、必ずエラーハンドラでTrueに戻します。</p></li>
+</ol>
+</section>
     </article>
   </main>
 </body>

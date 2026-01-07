@@ -35,107 +35,113 @@
 
       <section id="sec-1">
   <h3>If文の基本構文</h3>
-  <p>今回できるようになることとして、VBAで条件を判定して処理を分岐できるようになります。</p>
-<p>If文は条件が真（True）のときだけ処理を行う基本の構文です。単行で書く場合は「If 条件 Then 処理」のようになり、複数行の処理を含める場合は「If 条件 Then ... End If」で囲みます。</p>
-<p>最小マクロ：次の例は、A1セルの値が10より大きければメッセージを出す最小の構成です。</p>
-<p>貼り付け場所：標準モジュールに貼り付けてください。</p>
-<p>実行方法：VBE（Alt+F11）でF5実行か、ワークシートのボタンに割り当てる方法が使えます。</p>
-<p>確認方法：A1に数値を入れてメッセージが出るかで確認できます。</p>
-<pre><code>Sub CheckA1()
-    If Range("A1").Value &gt; 10 Then
-        MsgBox "A1は10より大きいです"
+  <p>今回できるようになることとして、If文の基本構文を使ってセルの値に応じた処理を行えるようになることです。</p>
+<p>If文（条件分岐）は「条件が真なら処理をする」という考え方で、VBAでは非常に頻繁に出てきます。</p>
+<p>最初は1行で書く単純な形から始めると理解が早く、読みやすさを意識すると保守性が上がります。</p>
+
+<p>最小マクロ：</p>
+<pre><code>Sub SimpleIf()
+    Dim v As Variant
+    v = Range("A1").Value
+    If v = "OK" Then
+        MsgBox "処理を続行します"
     End If
 End Sub
 </code></pre>
-<p>よくあるミスとして、条件で文字列を数値と比較して正しく動かないことが多いです。直し方は、IsNumericでチェックするかCLng/CIntで型変換してから比較することです。</p>
+
+<p>貼り付け場所：標準モジュール（VBEで挿入→モジュール）に貼り付けます。</p>
+<p>初めての場合はブックをマクロ有効形式（.xlsm）で保存すると実行できるようになります。</p>
+<p>最初の例は10行程度で、Ifの基本が分かれば読み書きが楽になります。</p>
 </section>
 
 <section id="sec-2">
   <h3>If...Then...Else文の使い方</h3>
-  <p>If...Then...Elseは条件に応じて「真の処理」と「偽の処理」を切り替えるために使います。複数の分岐が必要なときはElseIfを使うとすっきり書けます。</p>
-<p>ネスト（入れ子）で深く書くと可読性が落ちるため、条件が多いときは後述するSelect Caseを検討します。次は評価の段階に応じたメッセージを出す例です。</p>
+  <p>If...Then...Else文（条件に応じて分岐して別の処理をする構文）は、処理パターンが2つ以上あるときに使います。</p>
+<p>単純な例では、セルの数値が基準を超えたら合格メッセージ、そうでなければ不合格メッセージを表示する、といった流れです。</p>
+<p>ElseIfを使うことで複数段階の判定も自然に書けます。</p>
+
+<p>次のコードはIf...Then...ElseとElseIfの組み合わせ例です。</p>
 
 <pre><code>Sub GradeCheck()
     Dim score As Integer
-    score = Range("B1").Value
+    score = Range("B2").Value
     If score &gt;= 90 Then
-        MsgBox "優：A"
+        MsgBox "優"
     ElseIf score &gt;= 75 Then
-        MsgBox "良：B"
+        MsgBox "良"
     ElseIf score &gt;= 60 Then
-        MsgBox "可：C"
+        MsgBox "可"
     Else
-        MsgBox "不可：D"
+        MsgBox "不可"
     End If
-End Sub
-</code></pre>
+End Sub</code></pre>
 
-<p>この例はB1に数値を入れて実行して動作を確かめます。Elseブロックは「どれにも当てはまらない場合」の受け皿になります。</p>
+<p>実行方法：VBE（Visual Basic Editor）でサブルーチン内にカーソルを置きF5で実行するか、シートにフォームコントロールのボタンを配置してボタンにマクロを割り当てることで実行できます。</p>
+<p>マクロを有効にしていないブックでは動作しないため、.xlsm形式で保存することを忘れないでください。</p>
+
+<p>確認方法：処理前にセルの値（この例ではB2）を変えて、表示されるMsgBoxの文言や対象セルの値の変化で期待どおりに分岐しているかを確認します。</p>
 </section>
 
 <section id="sec-3">
   <h3>複数条件の組み合わせ（And、Or、Not）</h3>
-  <p>複数条件の組み合わせはAnd（かつ）、Or（または）、Not（否定）で表現します。</p>
-<p>条件が複雑になると何を優先するか分かりにくくなるため、括弧で優先順位を明示します。</p>
-<p>VBAではAndやOrは全ての式を評価するため、エラーが出る可能性がある式（ゼロ除算やNull参照）があるときは、順序に依存する実装で回避します。</p>
-<p>次は範囲と状態の両方を満たすときに処理する例です。</p>
+  <p>複数条件が必要な場面ではAnd（かつ）やOr（または）、Not（否定）を組み合わせて表現します。Andはすべての条件が真のときだけ真になり、Orはどれか一つが真なら真になります。Notは条件の真偽を反転させるため、存在チェックや除外条件で役に立ちます。括弧で条件を明示的にまとめると可読性が高くなります（可読性はバグの発生を減らします）。</p>
+
+<p>次は複合条件の例で、範囲チェックとステータス判定を同時に行います。</p>
 
 <pre><code>Sub MultiCondition()
-    Dim v As Variant
-    v = Range("C1").Value
-    If IsNumeric(v) And v &gt; 0 Then
-        MsgBox "C1は正の数です"
-    ElseIf Not IsNumeric(v) Then
-        MsgBox "C1は数値ではありません"
+    Dim val As Long
+    val = CLng(Range("C3").Value)
+    If val &gt;= 1 And val &lt;= 100 And Not IsEmpty(Range("D3").Value) Then
+        MsgBox "有効な入力です"
     Else
-        MsgBox "C1は0または負の数です"
+        MsgBox "入力を確認してください"
     End If
 End Sub</code></pre>
 
-<p>括弧で囲むことで意図が明確になります。</p>
-<p>Orで複数パターンを許容する場合は、評価順と副作用の有無を考えて書くとトラブルが減ります。</p>
+<p>よくあるミスとして、条件式でセル参照や関数の型が想定と違う場合に、比較が常にFalseになったり型不一致エラーが出たりすることがあります。直し方は、CLngやCStrなどで型変換を明示し、IsEmptyやIsNumericで前処理を入れることです。</p>
 </section>
 
 <section id="sec-4">
   <h3>Select Case文と使い分けの基準</h3>
-  <p>Select Caseは値の比較が中心で、多数の分岐を読みやすく表現できます。数値や文字列の範囲チェックにも向いています。</p>
+  <p>Select Case文（複数値の分岐）は、対象の値が取り得る候補が明確に決まっているときに見やすく書けます。</p>
+<p>複雑な数式や範囲判定が中心の場合はIf系の方が柔軟ですし、複数の論理条件を組み合わせると可読性が落ちるため使い分けが重要です。</p>
+<p>以下は文字列や数値の候補ごとに処理を分ける代表例です。</p>
 
-<p>使い分けの基準として、単純にTrue/Falseで分岐するならIfを選び、値の範囲や多数の一致条件があるならSelect Caseを選ぶと可読性が上がります。</p>
-
-<p>あわせて、RangeとCells、ValueとValue2の使い分けも要チェックです。Range("A1")は複数セル操作に向き、Cells(row, col)は変数でセル参照する場合に便利です。Valueは通常の値取得で十分ですが、Value2は日付型の取り扱いがより直接的になります。</p>
-
-<p>具体例として、Select Caseでランクを振るコードを示します。</p>
-
-<pre><code>Sub RankByScore()
-    Dim sc As Integer
-    sc = Range("D1").Value
-    Select Case sc
-        Case Is &gt;= 90
-            MsgBox "Aランク"
-        Case 75 To 89
-            MsgBox "Bランク"
-        Case 60 To 74
-            MsgBox "Cランク"
+<pre><code>Sub ExampleSelectCase()
+    Dim s As String
+    s = Trim(Range("E1").Value)
+    Select Case s
+        Case "Start"
+            MsgBox "開始処理"
+        Case "Stop"
+            MsgBox "終了処理"
+        Case "Pause"
+            MsgBox "一時停止"
         Case Else
-            MsgBox "Dランク"
+            MsgBox "想定外のコマンド"
     End Select
-End Sub
-</code></pre>
+End Sub</code></pre>
 
-<p>Select Caseは範囲や複数値チェックがある場面でIfより読みやすくなります。</p>
+<p>使い分けの基準：一般的には「候補が値の集合で決まっている場合はSelect Case、範囲判定や複雑な論理はIf/Else」を基準にすると迷いが少なくなります。</p>
+<p>また、Range vs Cellsの参照はコードの可読性を優先して使い分けるとよく、Range("A1")は固定セル、Cells(row, col)はループ処理で有利です。</p>
+<p>ValueとValue2は通常どちらでも使えますが、日付や通貨の正確な扱いを重視する場合はValueを使う習慣が多いです。</p>
 </section>
 
 <section id="sec-5">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>最小マクロ：マクロを保存する際は「.xlsm」のマクロ有効ブック形式で保存し、Excelの「マクロを有効にする」を許可してから実行してください。</li>
+  <li>最小マクロ：マクロを実行する前に、ブックを.xlsmで保存してマクロを有効にしてください。</li>
 </ul>
 </section>
 
       <section id="sec-6">
   <h3>要約</h3>
   <ol>
-  <li>If文は条件が真のときだけ処理を行います。</li>
+  <li>If文は「条件が真なら処理」を書く基本で、まずは単純な形から慣れるとよいです。</li>
+  <li>If...Then...Elseは複数の処理分岐に向き、ElseIfで段階的に判定できます。</li>
+  <li>And/Or/Notで複数条件を組み合わせる際は型変換や前処理を入れて堅牢にします。</li>
+  <li>Select Caseは候補が限られる分岐で見やすく、範囲判定や複雑論理はIf系が適します。</li>
+  <li>実務では貼り付け場所（標準モジュール）、マクロ有効形式、実行方法（VBEのF5やシートボタン）、確認方法（セルの値とMsgBox）を揃えてから試すとスムーズです。</li>
 </ol>
 </section>
     </article>

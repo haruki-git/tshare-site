@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Excel VBAで学ぶファイル操作の基本</title>
+  <title>Excel VBAで学ぶ：ファイル操作の基本</title>
   <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
 </head>
 <body>
   <main class="container">
     <article class="card">
       <header>
-        <h1>Excel VBAで学ぶファイル操作の基本</h1>
+        <h1>Excel VBAで学ぶ：ファイル操作の基本</h1>
         <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
         <p class="meta">投稿日：2026-01-07</p>
       </header>
@@ -26,63 +26,105 @@
         <ol>
   <li><a href="#sec-1">Workbooks.Openでブックを開く</a></li>
   <li><a href="#sec-2">Workbooks.Add、Close、Saveの使い方</a></li>
-  <li><a href="#sec-3">注意（ここだけ）</a></li>
+  <li><a href="#sec-3">名前を付けて保存（SaveAs）</a></li>
+  <li><a href="#sec-4">複数ブックの同時操作</a></li>
+  <li><a href="#sec-5">Dir関数でフォルダ内のファイル一覧を取得する</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
 </ol>
       </section>
 
       <section id="sec-1">
   <h3>Workbooks.Openでブックを開く</h3>
-  <p>今回できるようになることとして、指定したファイルを開いて中のデータを読み取り、閉じる一連の流れが扱えるようになります。</p>
-<p>VBA（Visual Basic for Applications）はExcel内で動く言語ですので、コードはExcelのVBE（Visual Basic Editor）に貼り付けて実行します。</p>
-<p>ファイルパスは絶対パスが推奨で、ネットワークパスはUNC（\\server\share）の形式を使います。</p>
-<p>マクロ有効化は、ブックを.xlsm形式で保存することと、Excelの「ファイル→オプション→セキュリティセンター」で信頼設定を確認することで先回りできます。</p>
-<p>基本はWorkbooks.Openでブックをオブジェクトとして扱い、変数に入れてから操作します。</p>
-
-<p>最小マクロ：</p>
-<pre><code>Sub OpenAndRead()
+  <p>Workbooks.Openは指定したパスのブックをVBAで開く基本メソッドです。</p>
+<p>フルパスと相対パスの両方が使えます。読み取り専用やパスワードなどの引数も指定できますが、まずはWorkbook変数にセットして確実に参照する習慣をつけることがポイントです。</p>
+<p>パスにスペースや日本語があるときは、文字列を正確に書く必要があります。簡単な例です。</p>
+<pre><code>Sub OpenSample()
     Dim wb As Workbook
-    Dim v As Variant
-    ' フルパスを指定（例）
-    Set wb = Workbooks.Open("C:\Temp\Sample.xlsx")
-    ' シート1のA1を読み取り
-    v = wb.Worksheets(1).Range("A1").Value
-    MsgBox "A1の値: " &amp; v
+    Dim sPath As String
+    sPath = ThisWorkbook.Path &amp; "\Sample.xlsx"
+    Set wb = Workbooks.Open(Filename:=sPath, ReadOnly:=True)
+    MsgBox "開きました：" &amp; wb.Name
     wb.Close SaveChanges:=False
 End Sub</code></pre>
-
-<p>貼り付け場所：標準モジュールに貼り付けます（VBEで「挿入→標準モジュール」）。この場所ならどのシートからも呼び出せます。</p>
 </section>
 
 <section id="sec-2">
   <h3>Workbooks.Add、Close、Saveの使い方</h3>
-  <p>Workbooks.Addで新しいブックを作成し、データを書き込んでSaveまたはCloseで保存や破棄を行います。</p>
-<p>新規ブックはオブジェクト変数に格納して操作すると安全です。</p>
-<p>Saveは既に名前が付いているブックを上書き保存し、SaveChanges引数を使うとClose時に保存を制御できます。</p>
-<p>保存形式は拡張子で判断され、マクロ有効なブックは「.xlsm」で保存することが必要です。</p>
-<p>次のコードはワークブックを追加しセルを書き換えて保存する例です。</p>
+  <p>新規ブック作成はWorkbooks.Add、保存はSaveまたはSaveAs、閉じるときはCloseを使います。</p>
+<p>CloseのSaveChanges引数を明示すると誤保存を防げます。</p>
+<p>テンプレート指定やシート数指定も可能で、作成後は通常のWorkbookオブジェクトとして操作します。</p>
+<p>ボタンにマクロを割り当てるか、VBEから実行します。例です。</p>
 
-<pre><code>Sub AddSaveClose()
+<pre><code>Sub AddSaveCloseSample()
     Dim wb As Workbook
     Set wb = Workbooks.Add
-    wb.Worksheets(1).Range("A1").Value = "テスト"
-    ' 名前を付けずに保存（既定はExcelブック）
-    wb.SaveAs Filename:="C:\Temp\NewBook.xlsx", FileFormat:=xlOpenXMLWorkbook
+    wb.Sheets(1).Range("A1").Value = "テスト"
+    wb.SaveAs Filename:=ThisWorkbook.Path &amp; "\NewBook.xlsx", FileFormat:=xlOpenXMLWorkbook
     wb.Close SaveChanges:=False
 End Sub
 </code></pre>
-
-<p>実行方法は、VBEの実行ボタン（F5）を使うか、フォームのボタンにこのSubを割り当てて使います。</p>
-<p>頻繁に使うならクイックアクセスツールバーにします。</p>
 </section>
 
 <section id="sec-3">
+  <h3>名前を付けて保存（SaveAs）</h3>
+  <p>SaveAsはファイル名や形式を指定して保存するメソッドです。</p>
+<p>マクロを保持したい場合は、拡張子とFileFormatを合わせることがポイントです（例：.xlsmとxlOpenXMLWorkbookMacroEnabledです）。</p>
+<p>既存ファイルの上書き確認やユーザー入力での保存名取得は、Application.GetSaveAsFilenameやFileSystemObjectを組み合わせます。</p>
+<p>上書きしたくない場合はSaveCopyAsでコピーを作成します。</p>
+<p>よくあるミスは拡張子とFileFormatの不一致でマクロが消えることですので、要チェックです。</p>
+</section>
+
+<section id="sec-4">
+  <h3>複数ブックの同時操作</h3>
+  <p>複数のブックを開いて値や数式を移すケースは頻繁にあります。Workbook変数にそれぞれセットして、ActiveWorkbookやActiveSheetに依存せずに扱うのが安全です。処理後は各ブックごとにSave/Closeを呼びます。値コピーはValue、数式はFormulaやFormulaR1C1を使い分けます。例です。</p>
+
+<pre><code>Sub MultiBookSample()
+    Dim wb1 As Workbook, wb2 As Workbook
+    Set wb1 = Workbooks.Open(Filename:=ThisWorkbook.Path &amp; "\Data1.xlsx")
+    Set wb2 = Workbooks.Open(Filename:=ThisWorkbook.Path &amp; "\Data2.xlsx")
+    wb2.Sheets(1).Range("A1").Value = wb1.Sheets(1).Range("A1").Value
+    wb1.Close SaveChanges:=False
+    wb2.Close SaveChanges:=True
+End Sub
+</code></pre>
+</section>
+
+<section id="sec-5">
+  <h3>Dir関数でフォルダ内のファイル一覧を取得する</h3>
+  <p>Dir関数は指定フォルダ内のファイル名を順に取得する簡潔な方法で、ワイルドカード（"*.xlsx"）で絞れます。</p>
+<p>ループ内でOpenと組み合わせれば一括処理が可能ですが、処理中にフォルダの中身が変わると予期せぬ動作になり得ます。必要であれば、事前に一覧を配列やコレクションに格納してから処理すると安定します。例です。</p>
+<pre><code>Sub DirLoopSample()
+    Dim sFile As String, sFolder As String, wb As Workbook
+    sFolder = ThisWorkbook.Path &amp; "\Samples\"
+    sFile = Dir(sFolder &amp; "*.xlsx")
+    Do While sFile &lt;&gt; ""
+        Set wb = Workbooks.Open(Filename:=sFolder &amp; sFile, ReadOnly:=True)
+        Debug.Print "処理：" &amp; wb.Name
+        wb.Close SaveChanges:=False
+        sFile = Dir()
+    Loop
+End Sub
+</code></pre>
+</section>
+
+<section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き・権限変更）をする前に、対象と影響範囲を確認して、必要ならバックアップを取ってから進めてください。</li>
+  <li>最小マクロを残したいファイルは必ず.xlsm形式で保存することがポイントです。拡張子とFileFormatが一致しないと、マクロが失われることがあります。</li>
 </ul>
 </section>
 
-      
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>Workbooks.Openでファイルを確実に開き、Workbook変数で扱います。</p></li>
+  <li><p>Workbooks.Addで作成し、Save/CloseはSaveChangesを明示して操作します。</p></li>
+  <li><p>SaveAsでは拡張子とFileFormatを合わせ、マクロ保存は.xlsmかxlOpenXMLWorkbookMacroEnabledを使います。</p></li>
+  <li><p>複数ブックは明示的にWorkbook変数で管理し、Activeに依存しないようにします。</p></li>
+  <li><p>Dirでフォルダ内ファイルを列挙し、一括処理の入口に使えますが、処理前に一覧を固めると安定します。</p></li>
+</ol>
+</section>
     </article>
   </main>
 </body>

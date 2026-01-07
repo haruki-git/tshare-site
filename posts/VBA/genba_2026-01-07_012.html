@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Excel VBAでCSVファイルを扱う方法</title>
+  <title>Excel VBAでCSVファイルを扱う基本と実践</title>
   <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
 </head>
 <body>
   <main class="container">
     <article class="card">
       <header>
-        <h1>Excel VBAでCSVファイルを扱う方法</h1>
+        <h1>Excel VBAでCSVファイルを扱う基本と実践</h1>
         <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
         <p class="meta">投稿日：2026-01-07</p>
       </header>
@@ -28,55 +28,82 @@
   <li><a href="#sec-2">CSVファイルの書き出し（SaveAs xlCSV）</a></li>
   <li><a href="#sec-3">文字コードの問題と対処法</a></li>
   <li><a href="#sec-4">テキストファイルの読み書き（Open、Print #、Input #）</a></li>
-  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-5">大量データの分割処理</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
 </ol>
       </section>
 
       <section id="sec-1">
   <h3>CSVファイルを開く方法（Workbooks.Open、QueryTables）</h3>
-  <p>今回できるようになることとして、CSVファイルをExcelで正しく開いて中身をVBAで操作できるようになります。</p>
-<p>単純にファイルを開くなら <code>Workbooks.Open</code> を使うのが手軽です。区切り文字や桁区切りの扱いはローカル設定に依存するため、明示的に引数で指定するか <code>QueryTables</code> を使ってテキストインポートの詳細を設定すると安全です。<code>QueryTables</code> は細かい列指定や文字コード指定が必要なときに便利です。</p>
-<p>最小マクロ：</p>
-<pre><code>Sub OpenCSV_Min()
-    Dim wb As Workbook
-    ' フルパスを指定してください
-    Set wb = Workbooks.Open(Filename:="C:\Data\sample.csv")
-    MsgBox "開いたブック: " &amp; wb.Name
-End Sub
-</code></pre>
-<p>貼り付け場所：標準モジュールです。</p>
-<p>実行方法：VBE（Alt+F11）でマクロを選んで実行するか、シート上のボタンに割り当てて実行できます。</p>
-<p>確認方法：新しいブックが開くこと、または <code>MsgBox</code> の表示で確認します。</p>
+  <p>目的に応じて使い分けます。単にブックとして開くなら Workbooks.Open／OpenText を使い、取り込み時に区切り文字・列型・文字コードを細かく指定したいなら QueryTables が有利です。例（OpenText の最小例）です。</p>
+<pre><code>Workbooks.OpenText Filename:="C:\Temp\sample.csv", Origin:=65001, _
+  DataType:=xlDelimited, Comma:=True</code></pre>
+<p>実行は標準モジュールに貼り付け、VBE で F5 します。表示が期待通りか A1 などで確認します。</p>
 </section>
 
 <section id="sec-2">
   <h3>CSVファイルの書き出し（SaveAs xlCSV）</h3>
-  <p>CSVに保存するには、Workbook.SaveAs メソッドで FileFormat:=xlCSV を指定します。</p>
-<p>既存のブックを上書きする場合は要チェックで、保存前に別名で保存するかバックアップを作ると安全です。</p>
-<p>SaveAs はアクティブなロケールの区切りや書式の影響を受けますので、数値の区切りや日付書式が変わるケースがある点を踏まえてください。</p>
-<p>マクロで複数シートをCSV化する際は、対象シートをコピーして単一シートのブックにしてから SaveAs する方法が良く使われます。</p>
+  <p>Workbook.SaveAs で CSV を出力できます。アクティブブックを上書きしたくない場合は、シートをコピーして新規ブックとして保存するのが安全です。Excel のバージョンによっては UTF-8 出力向けに xlCSVUTF8 を利用できます。最小例は次のとおりです。</p>
+
+<pre><code class="language-vb">ActiveSheet.Copy
+ActiveWorkbook.SaveAs Filename:="C:\Temp\out.csv", FileFormat:=xlCSV
+ActiveWorkbook.Close SaveChanges:=False</code></pre>
+
+<p>数値や先頭ゼロなどは、セルをテキスト形式にしてから保存すると期待どおりになりやすいです。</p>
 </section>
 
 <section id="sec-3">
   <h3>文字コードの問題と対処法</h3>
-  <p>CSVでよく遭遇するのが文字コード（エンコーディング）の問題です。Excel標準の開き方ですとWindows-31J（Shift_JIS）を期待することが多く、UTF-8のファイルは文字化けすることがあります。</p>
-<p>対処法としてはQueryTablesを使ってTextFilePlatformを指定するか、外部でBOMを付ける／外す操作を行います。</p>
-<p>避けたい例として、UTF-8のままWorkbooks.Openして文字化けすることが多いです。対処法はQueryTablesでTextFilePlatform:=65001を指定するか、VBAでバイナリ読み込みしてUTF-8をExcelに渡す処理に置き換えることです。</p>
+  <p>日本語の文字化けは、Origin（読み込み）や BOM（書き出し）の設定で解決することが多いです。</p>
+<p>Origin=932 が Shift_JIS、65001 が UTF-8 です。</p>
+<p>SaveAs で UTF-8 が使えない場合は、ADODB.Stream や FileSystemObject を使い、バイナリ的に BOM を付けて書き出す方法があります。</p>
+<p>実務では、(1) 取り込み側で Origin を指定して正しく開けるかを確認し、(2) 必要に応じて ADODB.Stream で UTF-8（BOM/無BOM）を制御する、という流れが基本です。</p>
 </section>
 
 <section id="sec-4">
   <h3>テキストファイルの読み書き（Open、Print #、Input #）</h3>
-  <p>VBAの基本IOは Open、Print #、Input # です。Openでファイルをモード指定（For Input/Output/Append）で開き、Line Input # で1行ずつ読み、Print # で書き込みます。大量の行を扱う場合は、配列に格納してバッファを作り、一括で書くと高速化できます。</p>
+  <p>VBAの古典的手法はOpen／Close／Print #／Line Input #です。行単位の読み書きやヘッダー操作に向きますが、文字コードの制御は弱めです。簡単な書き込み例はこちらです。</p>
+
+<pre><code>Open "C:\Temp\sample_txt.csv" For Output As #1
+Print #1, "列1,列2"
+Close #1</code></pre>
+
+<p>読み込みはLine Input #で1行ずつ読み、Debug.Printなどで処理します。UTF-8が必要ならADODB.Streamと組み合わせるか、SaveAsを使う方法を選びます。パスやファイルロックは要チェックです。</p>
 </section>
 
 <section id="sec-5">
+  <h3>大量データの分割処理</h3>
+  <p>大量行は一度に処理せず分割すると安定します。行数のしきい値で新ファイルを作る方式は簡単で高速です。ストリーム読み（Open For Input／Line Input）で出力ファイルを切り替えるパターンが実用的です。</p>
+<p>概略は次のとおりです。</p>
+<ul>
+  <li>Openで元ファイルをFor Inputとして開きます。</li>
+  <li>行カウントnを増やしつつ、現行の出力先へPrintで書き込みます。</li>
+  <li>n &gt;= maxRowsになったら出力をCloseし、新規にOpenしてn=0へ戻します。</li>
+</ul>
+<p>処理前にApplication.ScreenUpdating=False、Calculation=xlCalculationManualにすると速度が向上します。書き込み回数を減らすためにバッファ（配列や文字列結合）を使うと、さらに高速になります。</p>
+</section>
+
+<section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き・権限変更）をする前に、対象と影響範囲を確認して、必要ならバックアップを取ってから進めてください。</li>
+  <li>
+    <p>最小マクロ：マクロ実行前にブックを <code>*.xlsm</code> で保存し、Excel のセキュリティ設定でマクロが実行可能な状態にしてください。</p>
+    <p>また、ファイルアクセス権やパス、他プロセスでのロックもエラー原因になります。</p>
+  </li>
 </ul>
 </section>
 
-      
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>Workbooks.Open は手軽に使えますが、OpenText／QueryTables は区切り文字や列型、文字コード指定に有効です。</p></li>
+  <li><p>CSV の書き出しは SaveAs の FileFormat を使い、UTF-8 が必要なら xlCSVUTF8 や ADODB.Stream を検討するのがポイントです。</p></li>
+  <li><p>文字化けは Origin や BOM の有無で多く解決しますので、取り込みと出力の両方で確認を行うのが要チェックです。</p></li>
+  <li><p>Open／Print #／Line Input # は行単位処理に向きますが、文字コード制御は限定的です。</p></li>
+  <li><p>大量データは分割して処理し、ScreenUpdating や Calculation の一時変更、バッファ利用で効率化するのがポイントです。</p></li>
+</ol>
+</section>
     </article>
   </main>
 </body>
