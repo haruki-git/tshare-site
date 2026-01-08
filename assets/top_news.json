@@ -1,40 +1,71 @@
 {
-  "date": "2026-01-08",
-  "generatedAtJST": "2026-01-08T07:15:41.050+09:00",
+  "date": "2026-01-09",
+  "generatedAtJST": "2026-01-09T07:15:47.280+09:00",
   "items": [
     {
-      "url": "https://www.storagereview.com/news/micron-3610-nvme-ssd-gen5-performance-and-4tb-capacity-for-ultra-thin-ai-ready-device-1-69ams",
-      "source": "Storagereview.com",
-      "publishedAt": "2026-01-06T21:03:54Z",
-      "title": "Micron 3610 NVMe SSD: Gen5 Performance and 4TB Capacity for Ultra‑Thin, AI‑Ready Device",
-      "title_ja": "Micron 3610 NVMe SSD: AI対応の超薄型デバイス向けにGen5パフォーマンスと4TB容量を実現",
-      "summary_ja": "Micronは、最新のG9 NANDを搭載したMicron 3610 NVMe SSDを発表しました。このSSDは、データセンタークラスのGen5パフォーマンスを提供し、AI支援の生産性やコンテンツ制作に適したスムーズな処理を実現します。特に唯一の4TBのシングルサイドM.2 2230フォームファクターデザインにより、OEMは薄型システムを維持しつつ大容量のローカルストレージを確保できます。",
+      "url": "https://www.theregister.com/2026/01/07/new_carbon_capture_tech/",
+      "source": "Theregister.com",
+      "publishedAt": "2026-01-07T21:04:40Z",
+      "title": "New carbon capture tech could save us from datacenter doom",
+      "title_ja": "新しい炭素捕集技術がデータセンターの危機を救う可能性",
+      "summary_ja": "フィンランドの研究者たちが新たに開発した炭素捕集法は、既存の技術よりも効率的で安価、再利用可能です。この技術は、捕集された二酸化炭素を低温で容易に放出できるため、エネルギー効率が高く、実用化が期待されています。データセンターの化石燃料依存が持続可能でない中、迅速な導入が求められています。",
       "key_points": [
-        "最大11GB/sの順次読み込み、9.3GB/sの順次書き込み性能を提供",
-        "4TBのシングルサイドM.2 2230 フォームファクターが特徴",
-        "DRAMレスアーキテクチャにより、パフォーマンスと省電力性を向上",
-        "AIモデルを3秒未満でロードできる能力を持つ",
-        "ホスト制御のサーマル管理により、薄型設計での持続的パフォーマンスをサポート",
-        "高度なセキュリティ機能を搭載"
+        "新しい化合物TBN-BAは高いCO₂捕集能力を持つ。",
+        "700℃以上の温度を必要としないため、エネルギー効率が高い。",
+        "50回のサイクル後も高い捕集能力を維持可能。",
+        "捕集したCO₂はプラスチックやメタノール燃料に再利用できる。",
+        "商業化には、固体バージョンの開発が必要。"
       ],
       "glossary": [
         {
-          "term": "NVMe",
-          "explain_ja": "Non-Volatile Memory Expressの略で、SSDのための高速インターフェース規格です。"
+          "term": "TBN-BA",
+          "explain_ja": "新しい炭素捕集化合物で、高効率かつ安価に二酸化炭素を捕集できる。"
         },
         {
-          "term": "QLC",
-          "explain_ja": "Quad-Level Cellの略で、1つのメモリセルに4ビットのデータを格納するNAND型フラッシュメモリの一種です。"
-        },
-        {
-          "term": "M.2",
-          "explain_ja": "コンピュータの拡張カード接続のための規格で、特にSSDに多く使用されます。"
+          "term": "直接空気捕集（DAC）",
+          "explain_ja": "大気中の二酸化炭素を直接捕集する技術。"
         }
       ],
       "personal_actions": [
-        "新しいSSDの導入を考慮して性能向上の効果を評価する",
-        "自社のデバイス内での熱管理方法を確認し、調整可能な設計を検討する",
-        "セキュリティ機能を強化するための評価を行う"
+        "新技術の進展を定期的に確認し、環境への影響を考慮した運用を目指す。",
+        "施設でのエネルギー効率を向上させる方法を検討する。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://blogs.cisco.com/insidervoices/insidervoices-ai-data-center-design-checklist",
+      "source": "Cisco.com",
+      "publishedAt": "2026-01-07T19:59:17Z",
+      "title": "Future-Proof Your Data Center for AI: A Checklist for Designing and Building AI Data Centers",
+      "title_ja": "AI対応データセンターの設計チェックリスト",
+      "summary_ja": "AIワークロードには高密度のコンピューティング、極端な東西トラフィック、未曾有の電力と冷却の需要があります。これにより、多くの組織では構造的な再設計が求められています。この記事は、AI対応データセンターを設計・構築するためのチェックリストを提供し、ITプロフェッショナルの実践的な知見に基づいています。",
+      "key_points": [
+        "AI対応データセンターは高密度コンピューティングと低遅延ネットワーキングを支える必要がある。",
+        "ネットワーク性能は平均値ではなく、99パーセンタイルの遅延を測定することが重要。",
+        "次世代ネットワーク容量を早期に計画し、急速な技術進化に対応する必要がある。",
+        "AI環境では自動化が重要で、手動介入は効率的ではない。",
+        "電力密度と冷却戦略を慎重に評価し、持続可能なデザインを採用すること."
+      ],
+      "glossary": [
+        {
+          "term": "GPU",
+          "explain_ja": "Graphics Processing Unitの略。高性能な計算を行うために使用される処理ユニット。"
+        },
+        {
+          "term": "低遅延",
+          "explain_ja": "データが送信されてから受信されるまでの時間が短い状態。"
+        },
+        {
+          "term": "オブザーバビリティ",
+          "explain_ja": "システムのパフォーマンスと動作を視覚的に把握する能力。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターのネットワーク設計を見直し、GPU間の通信を最適化する。",
+        "冷却戦略を再評価し、必要に応じて新しい技術を導入する。",
+        "AIワークロードの要求に基づいて電力供給の計画を更新する。"
       ],
       "tags": [
         "DC",
@@ -42,76 +73,41 @@
       ]
     },
     {
-      "url": "https://richmond.com/news/state-regional/government-politics/article_1472ec4a-442a-4943-a218-4b4f4a108da5.html",
-      "source": "Richmond.com",
-      "publishedAt": "2026-01-06T18:10:00Z",
-      "title": "Northern Va. electric co-op raises rate for 3rd time in 12 months",
-      "title_ja": "ノーザンヴァ州電力協同組合、12ヶ月で3回目の料金引き上げ",
-      "summary_ja": "ノーザンヴァ州の電力協同組合が料金を引き上げた。これは過去12ヶ月間で3回目の変更であり、住民に影響を及ぼす見込みだ。料金の増加は、経済状況や電力供給のコストに起因していると考えられる。",
+      "url": "https://www.powermag.com/the-power-interview-investing-in-energy-solutions-for-the-data-center-boom/",
+      "source": "POWER magazine",
+      "publishedAt": "2026-01-07T09:57:55Z",
+      "title": "The POWER Interview: Investing in Energy Solutions for the Data Center Boom",
+      "title_ja": "データセンターのブームに向けたエネルギーソリューションへの投資",
+      "summary_ja": "データセンターの発展に伴い、AIセクターからのエネルギー需要が高まっています。Dynamix Corporation IIIのCEO、Andrejka Bernatova氏は、持続可能で低炭素の未来に向けたエネルギーとインフラの変革が始まっていると語ります。特に天然ガスは、基幹電力供給の一つとして注目されています。",
       "key_points": [
-        "料金引き上げは過去12ヶ月で3回目",
-        "引き上げは住民に影響を与える",
-        "経済状況や供給コストが要因"
+        "A.I.関連でデータセンターのエネルギー需要が急増中。",
+        "天然ガスが基幹電源として有望視されている。",
+        "Dynamix Capital Partnersは、エネルギーインフラの投資機会を追求。",
+        "「破壊的脱炭素化」を進めることで、実践的な減排を目指す。",
+        "エネルギーインフラにおけるキャッシュフローと契約構造が重要。"
       ],
       "glossary": [
         {
-          "term": "コープ",
-          "explain_ja": "電力供給を行う協同組合の一形態。"
+          "term": "SPAC",
+          "explain_ja": "特別買収目的会社。私企業がSPACと合併することで公開企業となる手法。"
         },
         {
-          "term": "料金引き上げ",
-          "explain_ja": "電力の利用料金を上昇させること。"
+          "term": "デカーボナイゼーション",
+          "explain_ja": "炭素排出量を削減するプロセス。"
+        },
+        {
+          "term": "EBITDA",
+          "explain_ja": "利息・税金・減価償却費用を引く前の収益。"
         }
       ],
       "personal_actions": [
-        "最新の料金プランを確認する",
-        "節電対策を考える",
-        "将来の料金動向に注意を払う"
+        "データセンターやエネルギー関連プロジェクトの最新情報を確認する。",
+        "エネルギーの効率的利用について社内で啓発活動を行う。",
+        "持続可能なエネルギーへの移行についてチームで話し合う。"
       ],
       "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://economictimes.indiatimes.com/news/international/us/why-data-center-cooling-stocks-dropped-fast-after-nvidia-ceo-jensen-huang-spoke-at-ces-heres-the-breakdown/articleshow/126378658.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-01-06T17:35:09Z",
-      "title": "Why data-center cooling stocks dropped fast after Nvidia CEO Jensen Huang spoke at CES - here's the breakd",
-      "title_ja": "Nvidia CEOの発言がデータセンター冷却株に与えた影響",
-      "summary_ja": "NvidiaのCEO、ジェンセン・ファンの発言により、データセンター冷却システムを提供する企業の株が急落しました。彼は次世代のルビンチップが従来の水冷チラーを必要としない可能性を示唆しました。この発言が冷却システムメーカーに対する長期的な需要への懸念を呼び起こしました。",
-      "key_points": [
-        "NvidiaのファンCEOがCESで次世代チップについて言及",
-        "データセンター冷却株が急落、Traneの株価は11%下落",
-        "Modine Manufacturingが21%下落",
-        "長期的に液体冷却が注目される中、従来の冷却設備が懸念される",
-        "アナリストは冷却株の急落を過剰反応と評価",
-        "Vertivは液体冷却の面で有利な立場にある"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データを集積し、管理する施設。"
-        },
-        {
-          "term": "チラー",
-          "explain_ja": "冷却装置の一種で、データセンターの温度管理に使用される。"
-        },
-        {
-          "term": "液体冷却",
-          "explain_ja": "冷却剤として液体を使用する技術で、高温でも効率的に動作する。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能。データセンターで使用されるチップの多くはAIに関連している。"
-        }
-      ],
-      "personal_actions": [
-        "最新のデータセンター冷却技術のトレンドを把握する。",
-        "冷却システムの供給者との関係について再評価する。",
-        "今後の注文動向に関心を持つ。"
-      ],
-      "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
