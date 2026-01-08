@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>最終行・最終列を取得する</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>最終行・最終列を取得する</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/008.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">End(xlDown)とEnd(xlUp)の使い方</a></li>
+  <li><a href="#sec-2">Cells(Rows.Count, 1).End(xlUp).Rowのパターン</a></li>
+  <li><a href="#sec-3">UsedRangeプロパティの活用と注意点</a></li>
+  <li><a href="#sec-4">データ件数に応じた動的な処理</a></li>
+  <li><a href="#sec-5">空白行の扱い方と判定方法</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>End(xlDown)とEnd(xlUp)の使い方</h3>
+  <p>Endメソッドは起点から空白または値の端までジャンプします。End(xlDown)は下方向、End(xlUp)は上方向へ移動しますが、起点によって結果が変わる点は要チェックです。</p>
+<p>ヘッダーや先頭セル(A1)からEnd(xlDown)を使うと途中の空白で止まることがあるため、安定して最終データを得るには下端（Rows.Count）からEnd(xlUp)で上へ探す方法が推奨されます。簡潔な確認用マクロ例です。</p>
+<pre><code>Sub 確認_End()
+    Dim ws As Worksheet: Set ws = ActiveSheet
+    ws.Range("A1").Select
+    Selection.End(xlDown).Select
+    MsgBox "End(xlDown): " &amp; ActiveCell.Address
+    MsgBox "End(xlUp): " &amp; ws.Cells(ws.Rows.Count, 1).End(xlUp).Address
+End Sub
+</code></pre>
+</section>
+
+<section id="sec-2">
+  <h3>Cells(Rows.Count, 1).End(xlUp).Rowのパターン</h3>
+  <p>Rows.Countはシートの最終行番号を返し、そこから指定列で上へ探すと実データの最終行が得られます。途中に空白があっても末尾のデータ行を確実に取得でき、実務で最も信頼されるパターンです。最終列は同様にColumns.CountからxlToLeftを使います。</p>
+<pre><code class="language-vb">lastRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
+lastCol = ws.Cells(1, ws.Columns.Count).End(xlToLeft).Column
+</code></pre>
+<p>RangeとCellsの使い分けは可読性と動的参照次第です。日付扱いではValueとValue2の違いは要チェックです。</p>
+</section>
+
+<section id="sec-3">
+  <h3>UsedRangeプロパティの活用と注意点</h3>
+  <p>UsedRangeは最終使用セルを含む範囲を素早く取得でき、ループや書式変更に便利ですが、過去に書式やデータがあったセルも範囲に含まれるため過大に返ることがあります。</p>
+<p>不要領域を消すには該当セルのClear（書式含む）や保存して再度開くなどでリセットする必要があります。</p>
+<p>実務では最終行取得はCells(...).End(xlUp)のほうがより確実です。</p>
+<pre><code>MsgBox ws.UsedRange.Address &amp; " (" &amp; ws.UsedRange.Rows.Count &amp; "行)"</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>データ件数に応じた動的な処理</h3>
+  <p>lastRow/lastColを基にForループや配列で処理範囲を決めれば、データ件数に応じた自動処理が可能です。</p>
+<p>大量データではセル単位の操作を繰り返すと遅くなるため、配列で読み書きしたり、範囲ごとに一括書式変更する等のバルク処理を検討してください。</p>
+<p>簡単な処理例（ヘッダー1行想定）です。</p>
+<pre><code>For i = 2 To lastRow
+    If Application.WorksheetFunction.CountA(ws.Rows(i)) &gt; 0 Then
+        ws.Cells(i, 2).Value = "処理済"
+    End If
+Next i
+</code></pre>
+</section>
+
+<section id="sec-5">
+  <h3>空白行の扱い方と判定方法</h3>
+  <p>途中の空白行は多い実務パターンです。行全体を判定するには <code>Application.WorksheetFunction.CountA(ws.Rows(i))</code> で 0 なら空白行と見なしてスキップします。特定列のみで判定する場合は、その列だけを範囲にします（例: <code>CountA(ws.Range("A" &amp; i))</code>）です。<code>End(xlDown)</code> のみで最終行を取ると途中空白で誤判定しやすいため、<code>Rows.Count</code> からの <code>End(xlUp)</code> や <code>CountA</code> で確認する組合せが安全です。</p>
+<p>最小マクロ： このあとに示す短いVBAを使います。</p>
+<p>貼り付け場所： VBEの「標準モジュール」に貼り付けます。</p>
+<p>実行方法： Excelで Alt+F8 → マクロを選択 → 実行します。</p>
+<p>確認方法： MsgBoxの表示やセルの変化で確認します。</p>
+<p>よくあるミス： 貼り付け場所の違い（標準/シート/ThisWorkbook）で動かないことがあります。</p>
+<p>使い分けの基準： If と Select Case は条件の数と可読性で選びます。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><p>削除・上書き・行/列の削除を行う前に、対象シートをコピーしてバックアップを作ってから進めます。</p></li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>End(xlDown)やEnd(xlUp)は起点に依存するため、Rows.CountからEnd(xlUp)を取る方法が安定します。</p></li>
+  <li><p>Cells(Rows.Count, 列).End(xlUp).Rowは、実務で最も信頼される最終行の取得方法です。</p></li>
+  <li><p>UsedRangeは手早い一方で、過去のフォーマットなどの影響で過大に返ることがあります。</p></li>
+  <li><p>lastRowやlastColを基にループと配列で動的に処理し、大量データはバルク処理で高速化します。</p></li>
+  <li><p>空白行はCountAなどで判定してスキップまたは別処理にし、Endメソッド単体の誤認を防ぎます。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

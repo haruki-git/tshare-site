@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Excel VBA：エラー処理とデバッグの基本</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Excel VBA：エラー処理とデバッグの基本</h1>
+        <nav><a href="/posts/VBA/">VBA記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-07</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/014.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">よくある実行時エラー（1004・91・9）</a></li>
+  <li><a href="#sec-2">On Error Resume Next の使い方</a></li>
+  <li><a href="#sec-3">On Error GoTo での基本形</a></li>
+  <li><a href="#sec-4">ブレークポイントとステップ実行（F8）</a></li>
+  <li><a href="#sec-5">イミディエイトと Debug.Print</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>よくある実行時エラー（1004・91・9）</h3>
+  <p>代表的な実行時エラーと原因・対処を短くまとめます。</p>
+<ul>
+  <li>1004はApplication-defined or object-defined errorであり、存在しないシートの参照、保護シートへの書き込み、誤ったRange指定などで発生しやすいです。</li>
+  <li>91はオブジェクト変数またはWithブロック変数が設定されていない状態であり、Setのし忘れや取得に失敗してNothingになっていることが原因です。</li>
+  <li>9はインデックスが有効範囲にない状態であり、Worksheets("名前")の誤字やWorksheets(5)が存在しないなどで発生します。</li>
+</ul>
+<p>対処の基本は、エラー行を特定して「何を参照しようとしたか」を確認することです。VBEのステップ実行（F8）で直前の変数状態を見て、イミディエイトやDebug.Printで値を出していくと再現条件が絞れます。</p>
+<p>最小マクロ： エラーになりやすい参照（シート名）をわざと含めた最小例です。</p>
+<pre><code>Option Explicit
+
+Sub MinimalMacro()
+  Dim ws As Worksheet
+  Set ws = ThisWorkbook.Worksheets("Data") ' 存在しなければ実行時エラー 9 になりやすい
+  ws.Cells(1, 1).Value = "行1"
+  Debug.Print ws.Cells(1, 1).Address
+End Sub</code></pre>
+</section>
+
+<section id="sec-2">
+  <h3>On Error Resume Next の使い方</h3>
+  <p>エラーが起きても次の行へ進める命令です。「失敗しても問題ない」処理（例：存在しないものを消そうとする、任意シートがあれば参照したい等）に限定して使います。</p>
+
+<p>ポイントは次の3つです。</p>
+<ol>
+  <li>影響範囲を最小にして、必要な行だけにかけます。</li>
+  <li>Err.Number をすぐ確認し、必要なら Err.Clear します。</li>
+  <li>処理が終わったら必ず On Error GoTo 0 で通常状態に戻し、戻し忘れを避けます。</li>
+</ol>
+
+<p>例（存在すれば削除し、なければ何もしない）です。</p>
+<pre><code>Option Explicit
+
+Sub DeleteTempSheetIfExists()
+  Dim ws As Worksheet
+
+  On Error Resume Next
+  Set ws = ThisWorkbook.Worksheets("Temp") ' 無ければここでエラーになり得る
+  On Error GoTo 0
+
+  If ws Is Nothing Then
+    Debug.Print "Tempシートは存在しません"
+    Exit Sub
+  End If
+
+  Application.DisplayAlerts = False
+  ws.Delete
+  Application.DisplayAlerts = True
+End Sub</code></pre>
+</section>
+
+<section id="sec-3">
+  <h3>On Error GoTo での基本形</h3>
+  <p>エラー発生時に指定ラベルへジャンプし、共通の後片付け（設定の復元）やログ出力を行う定番パターンです。構造は次の形にすると崩れにくいです。</p>
+
+<ul>
+  <li>先頭で <code>On Error GoTo ErrHandler</code> を書きます。</li>
+  <li>本体処理の後に、正常終了用として <code>Exit Sub</code> を置きます。</li>
+  <li><code>ErrHandler:</code> で Err情報を取得してログ出力や復旧を行い、必要に応じて <code>Resume</code> / <code>Resume Next</code> / <code>Exit Sub</code> を使います。</li>
+</ul>
+
+<p>基本形（エラー情報を Debug.Print へ出し、後で必ず終了する例）です。</p>
+
+<pre><code>Option Explicit
+
+Sub ReadCellWithHandler()
+  On Error GoTo ErrHandler
+
+  Dim v As Variant
+  v = ThisWorkbook.Worksheets("Data").Range("B1").Value ' 参照が壊れていると1004/9などになり得る
+  MsgBox "B1=" &amp; v
+
+  Exit Sub
+
+ErrHandler:
+  Debug.Print "Err=" &amp; Err.Number &amp; " / " &amp; Err.Description
+  MsgBox "エラーが発生しました。Err=" &amp; Err.Number, vbExclamation
+  Exit Sub
+End Sub</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>ブレークポイントとステップ実行（F8）</h3>
+  <p>VBEのコード行左の余白をクリックするとブレークポイントを置けます。実行するとその行の手前で停止し、F8で1行ずつ進められます。</p>
+
+<p>よく使う観察手段は以下です。</p>
+<ul>
+  <li>マウスオーバーで変数値を確認できます。</li>
+  <li>Locals（ローカル）ウィンドウでスコープ内変数を一覧表示できます。</li>
+  <li>ウォッチ式で特定の式を監視できます。</li>
+</ul>
+
+<p>外部参照（Worksheets取得、Range指定、ファイル操作など）の直後や、ループに入る直前にブレークポイントを置くと、1004・91・9の原因となる「参照先が想定と違う」状況を早期に見つけられます。</p>
+</section>
+
+<section id="sec-5">
+  <h3>イミディエイトと Debug.Print</h3>
+  <p>イミディエイトウィンドウ（Ctrl+G）は、式の即時評価と簡易ログ確認に使います。<code>Debug.Print</code> は処理の流れと変数の中身を軽量に出せるため、MsgBoxを繰り返す方法よりデバッグに向きます。</p>
+
+<p>例です。</p>
+<ul>
+  <li>イミディエイトで <code>? ThisWorkbook.Name</code> のように評価します。</li>
+  <li>ループ内で <code>Debug.Print "i=" &amp; i</code> のように経過ログを出します。</li>
+  <li>エラーハンドラで <code>Err.Number</code> を出して、発生条件を絞ります。</li>
+</ul>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><code>On Error Resume Next</code> を使った場合は、処理が終わった時点で <code>On Error GoTo 0</code> に戻さないと、以降のエラーが握りつぶされて原因追跡が困難になります。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>1004はRangeやシート参照の不整合が原因になりやすく、91はNothing（Set忘れや取得失敗）が典型で、9はコレクションの範囲外参照が起きやすいです。</p></li>
+  <li><p>On Error Resume Next は短い範囲に限定し、Errの確認と On Error GoTo 0 への戻しを徹底するのがポイントです。</p></li>
+  <li><p>On Error GoTo は、エラー時のログ出力、復旧、後片付けを一箇所にまとめる基本形として有効です。</p></li>
+  <li><p>ブレークポイントとF8のステップ実行を使うと、エラー直前の状態（参照先や変数）を確認できます。</p></li>
+  <li><p>イミディエイトと Debug.Print は、即時評価と軽量ログによって原因の切り分けを高速化できます。</p></li>
+</ol>
+<pre><code></code></pre>
+</section>
+    </article>
+  </main>
+</body>
+</html>
