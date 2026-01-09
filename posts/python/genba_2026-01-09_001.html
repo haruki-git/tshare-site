@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pythonはどんなプログラミング言語？（はじめに）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Pythonはどんなプログラミング言語？（はじめに）</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-09</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/101.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">Pythonって一言でいうと？（何が得意？）</a></li>
+  <li><a href="#sec-2">Pythonでできること（自動化・データ処理・Web・AIなど）</a></li>
+  <li><a href="#sec-3">Pythonが選ばれやすい理由（読みやすい／試しやすい）</a></li>
+  <li><a href="#sec-4">苦手なこと・注意点（速度・インデントなど）</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>Pythonって一言でいうと？（何が得意？）</h3>
+  <p>今回できるようになることとして、Pythonが「どんな場面で頼りになるか」を端的に理解できるようになります。</p>
+<p>Pythonは読みやすさと書きやすさを重視した言語で、業務の自動化やデータ分析、機械学習（AI）、Web開発など幅広い作業に向いています。</p>
+<p>初学者にとっては学習コストが低く、標準ライブラリやサードパーティパッケージ（外部モジュール）が充実しているため、ちょっとしたスクリプトから本格的なシステムまで同じ言語で進めやすい点が強みです。</p>
+<p>作業としてはファイル操作、自動メール送信、ログ解析、表計算の置き換えなどが得意分野になります。</p>
+</section>
+
+<section id="sec-2">
+  <h3>Pythonでできること（自動化・データ処理・Web・AIなど）</h3>
+  <p>現場でよく使うのは、ファイル操作やデータの整形と集計、外部APIとの連携、レポート自動生成などの自動化の領域です。</p>
+<p>データ処理ではPandasやNumPyといったライブラリを使って、大量データの集約や欠損処理を簡潔に書けます。機械学習ではscikit-learnやTensorFlow、PyTorchが標準的で、プロトタイプから本番までの遷移がしやすいです。WebではFlaskやDjangoでAPIや管理画面を作れます。</p>
+
+<p>最小コード：</p>
+<pre><code class="language-python"># sample.py: CSVを読み込み、列ごとの平均を表示する最小コード
+import csv
+from statistics import mean
+
+with open('data.csv', newline='', encoding='utf-8') as f:
+    reader = csv.DictReader(f)
+    rows = list(reader)
+
+if rows:
+    for key in rows[0].keys():
+        try:
+            vals = [float(r[key]) for r in rows if r[key] != '']
+            print(f"{key} の平均: {mean(vals):.2f}")
+        except ValueError:
+            print(f"{key} は数値ではありません")
+</code></pre>
+
+<p>貼り付け場所：このコードは sample.py として保存するか、Jupyterの1セルにそのまま貼り付けてください。data.csv は同じフォルダに置きます（CSVのヘッダー行が必要です）。この例では標準ライブラリだけで動きます。</p>
+
+<p>実行方法：ターミナル（コマンドプロンプト）で python sample.py と実行するか、VSCodeやPyCharmの実行ボタン、あるいはJupyterでセルを実行してください。Pythonが複数バージョンある環境では python3 sample.py とします。仮想環境（venv）は依存管理に便利です（venvはプロジェクト隔離の仕組みです）。</p>
+
+<p>確認方法：print出力で平均値が表示されれば成功です。データを一行だけにして期待値と比較するか、assertを使って自動チェックすることもできます。</p>
+</section>
+
+<section id="sec-3">
+  <h3>Pythonが選ばれやすい理由（読みやすい／試しやすい）</h3>
+  <p>読みやすさはPythonの特徴で、コードの体裁がインデント（字下げ）で表現されます。</p>
+<p>読みやすいことでコードレビューや共同開発が楽になりますし、実験的に試すハードルが低いためプロトタイプ作成が早いです。</p>
+<p>pipというパッケージ管理ツールで外部ライブラリを簡単に追加でき、PyPI（ライブラリの集積所）から必要なものを入手できます。</p>
+<p>IDEやエディタも豊富で、Jupyter（対話環境）は探索的にデータを触るのに適しています。</p>
+<p>仮想環境（venv or virtualenv）を使えばプロジェクトごとに依存関係を分離できます。</p>
+</section>
+
+<section id="sec-4">
+  <h3>苦手なこと・注意点（速度・インデントなど）</h3>
+  <p>Pythonはインタプリタ型で可読性を優先するため、CやRustに比べて実行速度で不利な場合があります。</p>
+<p>重い数値計算はNumPyのようなC実装ライブラリを使うか、必要ならC拡張やプロファイリングでボトルネックを解消します。</p>
+<p>インデントが構文要素なので、タブとスペースの混在でSyntaxErrorになることがあり、エディタにスペース統一を設定することが現場では普通です。</p>
+<p>例外処理は便利ですが多用すると制御フローが複雑になりますので、通常の分岐で処理できる場合はifで明示すると読みやすくなります。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><p>削除・上書き・行/列の削除を行う前に、対象シートをコピーしてバックアップを作ってから進めます。</p></li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li>Pythonは読みやすさと豊富なライブラリが強みであり、自動化やデータ処理、AIに強い言語です。</li>
+  <li>実作業ではファイル操作やAPI連携、データ集計、プロトタイプ作成で威力を発揮します。</li>
+  <li>pipと仮想環境（venv）、Jupyterを使うと導入と試行がスムーズになります。</li>
+  <li>実行速度やインデント、例外の扱いは設計時に配慮が必要です。</li>
+  <li>他言語とは用途と優先度が異なるため、目的に応じてPythonと併用する判断が現場では重要です。</li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pythonの環境設定（Windows + VSCodeで動かすまで）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Pythonの環境設定（Windows + VSCodeで動かすまで）</h1>
+        <nav><a href="/index.html">Home</a></nav>
+        <p class="meta">投稿日：2026-01-09</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/102.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">ゴール：VSCodeでPythonが1本動く状態にする</a></li>
+  <li><a href="#sec-2">Python本体のインストールと確認（PATH／python --version）</a></li>
+  <li><a href="#sec-3">VSCodeの準備（Python拡張・フォルダを開く）</a></li>
+  <li><a href="#sec-4">Hello Worldを実行（hello.py作成→実行）</a></li>
+  <li><a href="#sec-5">つまずきポイントTOP3（pythonが見つからない／インタプリタ違い／未保存）</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>ゴール：VSCodeでPythonが1本動く状態にする</h3>
+  <p>今回できるようになることとして、Windows上のVSCodeで.pyファイルを作り、ターミナルまたは実行ボタンで動かせる状態にします。</p>
+<p>まずはPython実行環境をインストールしてPATHに入れ、VSCode側でPython拡張を入れ、簡単なスクリプトを作って実行まで確認します。</p>
+<p>仮想環境（venv）は最初は必須ではありませんが、プロジェクトが増えたら使う準備だけしておくとよいです。</p>
+<p>最初の流れをつかむことで、以後の学習やパッケージ導入（pip）にスムーズにつながります。</p>
+
+<p>最小コード：</p>
+<pre><code>import sys
+
+def greet(name):
+    return f"Hello, {name}!"
+
+if __name__ == "__main__":
+    print(greet("World"))
+    print("Python version:", sys.version.split()[0])
+    assert "Hello" in greet("Test")
+</code></pre>
+
+<p>貼り付け場所：hello.py（プロジェクト用のフォルダを作り、その中に保存します。拡張子は必ず .py にします。JupyterではなくVSCodeのエディタで保存してください。）</p>
+</section>
+
+<section id="sec-2">
+  <h3>Python本体のインストールと確認（PATH／python --version）</h3>
+  <p>公式サイト（python.org）からWindows用のインストーラをダウンロードし、「Add Python to PATH」のチェックを入れてからインストールします。</p>
+<p>これを入れておくとコマンドプロンプトやPowerShell、VSCodeの統合ターミナルで <code>python</code> と打つだけで実行できます。</p>
+<p>インストール後はコマンドプロンプトかPowerShellを開き、以下のコマンドで確認します。</p>
+
+<pre><code>python --version
+where python
+</code></pre>
+
+<p>実行方法は、コマンドプロンプト（cmd）またはPowerShell、もしくはVSCodeのターミナルで上のコマンドを打つことです。</p>
+<p>バージョンが表示されればインストール成功です。</p>
+<p><code>where python</code> で複数パスが出る場合は、どの実行ファイルが使われているかを把握できます。</p>
+<p>PATHを付け忘れたときは、インストーラを再実行するか、環境変数の編集で追加します。</p>
+</section>
+
+<section id="sec-3">
+  <h3>VSCodeの準備（Python拡張・フォルダを開く）</h3>
+  <p>VSCodeを開いたら左の拡張機能（Extensions）で「Python」（Microsoft製）を検索してインストールします。</p>
+<p>単一ファイルを開くより、フォルダごと「フォルダを開く」でプロジェクトを開いた方が設定や仮想環境の認識が安定します。</p>
+<p>画面右下に表示されるPythonインタプリタ名をクリックすると使用するPython本体（インタプリタ）を選べます。ここで仮想環境（venv）やシステムPythonを選べますので、プロジェクトごとに切り替えて使います。</p>
+<p>使い分けの基準として、小さなスクリプトや学習初期はシステムPythonでも問題ありませんが、実プロジェクトや外部パッケージを複数扱うときは仮想環境（venv）を使うと依存関係が分離され安全です。データ解析や説明用の短いトライはJupyterが便利で、スクリプト化して配布するなら .py にしてVSCodeで管理します。</p>
+</section>
+
+<section id="sec-4">
+  <h3>Hello Worldを実行（hello.py作成→実行）</h3>
+  <p>プロジェクトフォルダに hello.py を作成し、先ほどの最小コード（greet関数など）を貼り付けます。保存は必ず Ctrl+S（またはファイルメニュー）で行ってください。未保存のまま実行すると古い内容が走ることがあります。</p>
+<p>保存後、VSCodeの上部にある▶（実行）ボタンを押すか、統合ターミナルで以下のように実行します。</p>
+<pre><code class="language-bash">python hello.py
+</code></pre>
+<p>確認方法として、実行するとターミナルに Hello, World! と表示され、続けて Python のバージョンが出ます。assertが失敗していなければエラーは出ません。表示が期待どおりであれば正しく動いています。もしエラーが出たらエラーメッセージを読み、ファイルの保存漏れやインタプリタの指定ミスを疑います。</p>
+</section>
+
+<section id="sec-5">
+  <h3>つまずきポイントTOP3（pythonが見つからない／インタプリタ違い／未保存）</h3>
+  <p>まず多いのは「pythonが見つからない」エラーで、これはインストール時にPATHを通していないか、複数のPythonが入っていて参照先が違う場合に起きます。</p>
+<p>解決策はインストーラの再実行で「Add Python to PATH」をチェックするか、環境変数にパスを追加することです。</p>
+<p>次に「インタプリタ違い」で、VSCodeの右下に表示されるインタプリタを誤って古いものや別バージョンにしているケースがあります。</p>
+<p>ここは必ずプロジェクトに合ったPythonを選び直してください。</p>
+<p>最後に「未保存」です。エディタで編集したものを保存せずにターミナルで実行すると、古い内容が実行されて混乱します。</p>
+<p>保存を習慣化してください。</p>
+<p>よくあるミスは、VSCodeでファイルを保存していないために古いコードが実行されることが最も頻繁である点です。</p>
+<p>直し方は、編集後に必ず保存（Ctrl+S）するか、設定で実行前に自動保存を有効にすることです。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><p>削除・上書き・ファイルの上書きを行う前に、対象ファイルをコピーしてバックアップを作ってから進めます。</p></li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>まずはpython.orgからインストールし、「Add Python to PATH」を有効にして、コマンドで <code>python --version</code> を確認します。</p></li>
+  <li><p>VSCodeにPython拡張を入れ、フォルダを開いて右下のインタプリタを正しいものに設定します。</p></li>
+  <li><p><code>hello.py</code> を作り、保存してからターミナルで <code>python hello.py</code> を実行すると動作確認できます。</p></li>
+  <li><p>よくある問題はPATH未設定、VSCodeのインタプリタ選択ミス、ファイル未保存の3点で、順に対処すれば解決します。</p></li>
+  <li><p>初期はシステムPythonで学び、プロジェクトが増えたら仮想環境（venv）を使う基準で切り替えると管理が楽になります。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>
