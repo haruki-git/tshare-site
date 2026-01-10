@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>フロントエンドとバックエンドの違い</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>フロントエンドとバックエンドの違い</h1>
+        <nav><a href="/index.html">Home</a></nav>
+        <p class="meta">投稿日：2026-01-10</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/214772.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">結論と役割</a></li>
+  <li><a href="#sec-2">技術と具体例</a></li>
+  <li><a href="#sec-3">切り分けと確認方法</a></li>
+  <li><a href="#sec-4">よくある失敗と原因</a></li>
+  <li><a href="#sec-5">注意（ここだけ）</a></li>
+  <li><a href="#sec-6">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>結論と役割</h3>
+  <p>結論として、フロントエンドは「見える部分」、バックエンドは「見えない処理」を担う役割です。</p>
+<p>フロントエンドはユーザーが見る画面や操作の部分であり、HTML/CSS/JavaScriptで表現します。</p>
+<p>バックエンドはデータ処理や保存を行うサーバー側であり、APIやデータベースで処理と保管を行います。</p>
+<p>レストランに例えると、フロントエンドがメニューと給仕、バックエンドが厨房と在庫管理の役割です。</p>
+</section>
+
+<section id="sec-2">
+  <h3>技術と具体例</h3>
+  <p>フロントエンドは、ブラウザ（ウェブ閲覧ソフト）で動く技術です。</p>
+<p>代表的な技術は、HTML（構造）、CSS（見た目）、JavaScript（動き）です。</p>
+<p>バックエンドは、サーバー側の言語（例：Python、Node.js、Java）やデータベース（例：MySQL、Postgres）を扱い、認証やビジネスロジックを担当します。</p>
+<p>判断のポイントとして、ユーザー操作に即応する処理はフロントエンド、データの永続化や権限判定はバックエンドに置くと設計しやすいです。</p>
+</section>
+
+<section id="sec-3">
+  <h3>切り分けと確認方法</h3>
+  <p>不具合発生時の切り分け手順を簡潔に書きます。</p>
+<ol>
+  <li>ブラウザでエラーが出るか確認します（開発者ツールのコンソールを開きます）。</li>
+  <li>APIの応答をcurlやHTTPクライアントで確認します。</li>
+  <li>サーバーログで例外やタイムアウトを探します。</li>
+</ol>
+<p>これらでフロント寄りかバック寄りかを切り分けできます。</p>
+<p>要チェックはレスポンスコードとタイムスタンプです。</p>
+</section>
+
+<section id="sec-4">
+  <h3>よくある失敗と原因</h3>
+  <p>よくあるミスは「フロントに処理を置きすぎ」で、セキュリティや一貫性を欠くことです。</p>
+<p>原因は、開発の手間を減らすために入力検証や権限チェックをクライアント側だけにしてしまうことです。</p>
+<p>もう一つの失敗は「バックエンドが同期処理で遅くなる」ことで、原因はDBのN+1クエリや重い同期処理です。</p>
+<p>避けたい例として、クライアントでの簡易チェックだけで本番データを更新することが挙げられます。</p>
+</section>
+
+<section id="sec-5">
+  <h3>注意（ここだけ）</h3>
+  <p>本番環境のデータベースを直接編集したり、サーバー上でスクリプトを実行して上書きする前は、必ずバックアップを取り、手順を要チェックしてください。</p>
+<ul>
+  <li>事前に復元手順まで確認しておくと、万一の際も落ち着いて対応できます。</li>
+</ul>
+</section>
+
+      <section id="sec-6">
+  <h3>要約</h3>
+  <ul>
+  <li>フロントエンドは、ユーザーが見る画面と操作を担当します。</li>
+  <li>バックエンドは、データ保存やビジネスロジック、認証を担当します。</li>
+  <li>切り分けは、ブラウザのコンソール、APIレスポンス、サーバーログの順で行います。</li>
+  <li>よくあるミスは、クライアント側に安全策を依存することであり、原因は手間削減を優先した安易な実装です。</li>
+  <li>判断のポイントは、「即時性はフロント、永続性と権限はバック」に置くことです。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>
