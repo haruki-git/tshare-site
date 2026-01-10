@@ -87,11 +87,9 @@ print("alice age:", users.get("alice"))</code></pre>
 <p>このコードでは、集合の和と積を表示し、辞書からキーで値を取り出します。出力例は<code>union: {1, 2, 3, 4}</code>のようになります。</p>
 
 <p>出力例は次のとおりです。</p>
-<ul>
-  <li><code>union: {1, 2, 3, 4}</code>です。</li>
-  <li><code>intersection: {2, 3}</code>です。</li>
-  <li><code>alice age: 25</code>です。</li>
-</ul>
+<pre><code>union: {1, 2, 3, 4}
+intersection: {2, 3}
+alice age: 25</code></pre>
 
 <p>要チェックとしては、まず<code>print</code>で中間変数を出力して追いかけると状況を把握しやすいです。長期的には、<code>logging.basicConfig(level=logging.DEBUG)</code>を設定し、<code>logging.debug()</code>を使うと運用しやすいです。</p>
 </section>

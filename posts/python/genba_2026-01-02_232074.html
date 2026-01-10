@@ -11,7 +11,7 @@
     <article class="card">
       <header>
         <h1>Python：データ構造（list / dict）の解説</h1>
-         <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
         <p class="meta">投稿日：2026-01-02</p>
       </header>
 
@@ -24,121 +24,125 @@
       <section id="sec-toc">
         <h2>目次</h2>
         <ol>
-  <li><a href="#sec-1">入門と今回できること</a></li>
-  <li><a href="#sec-2">listの基本と使い方</a></li>
-  <li><a href="#sec-3">dictの基本と使い方</a></li>
-  <li><a href="#sec-4">デバッグと1段ステップアップ</a></li>
-  <li><a href="#sec-5">注意（ここだけ）</a></li>
-  <li><a href="#sec-6">要約</a></li>
-</ol>
+          <li><a href="#sec-1">入門と今回できること</a></li>
+          <li><a href="#sec-2">listの基本と使い方</a></li>
+          <li><a href="#sec-3">dictの基本と使い方</a></li>
+          <li><a href="#sec-4">デバッグと1段ステップアップ</a></li>
+          <li><a href="#sec-5">注意（ここだけ）</a></li>
+          <li><a href="#sec-6">要約</a></li>
+        </ol>
       </section>
-
       <section id="sec-1">
-  <h3>入門と今回できること</h3>
-  <p>今回できるようになることは、listとdictの基本操作を読めて書けるようになることです。</p>
-<p>listは配列のような順序付きコレクションで、順序とインデックスが重要です。dictはキーと値の組み合わせで、キーを使って値を取り出します。</p>
-<p>どちらもミュータブルで、作成後に中身を変更できます。使い分けとしては、順序を扱う場合はlistを使い、キーで素早く検索したい場合はdictを使うのがポイントです。</p>
-<p>例えば、ユーザー一覧はlistが向いていて、ユーザーIDから情報を引けるようなマッピングはdictが向いています。追加・削除・走査といった基本操作は、このあとで順に確認します。</p>
-</section>
-
-<section id="sec-2">
-  <h3>listの基本と使い方</h3>
-  <p>最小コードは次のとおりです。</p>
-
-<pre><code class="language-python"># 最小コード：
+        <h3>入門と今回できること</h3>
+        <p>今回できるようになることは、listとdictの基本操作を読めて書けるようになることです。</p>
+        <p>listは配列のような順序付きコレクションで、順序とインデックスが重要です。dictはキーと値の組み合わせで、キーを使って値を取り出します。</p>
+        <p>どちらもミュータブルで、作成後に中身を変更できます。使い分けとしては、順序を扱う場合はlistを使い、キーで素早く検索したい場合はdictを使うのがポイントです。</p>
+        <p>例えば、ユーザー一覧はlistが向いていて、ユーザーIDから情報を引けるようなマッピングはdictが向いています。追加・削除・走査といった基本操作は、このあとで順に確認します。</p>
+      </section>
+      <section id="sec-2">
+        <h3>listの基本と使い方</h3>
+        <p>最小コードは次のとおりです。</p>
+        <p>※ この最小コードは、list操作とdict操作を同じ例でまとめて確認します。</p>
+<pre><code class="language-python"># data_struct_demo.py
 nums = [3, 1, 4]
 names = ["Alice", "Bob"]
+
+# list：追加・挿入・内包表記
 nums.append(5)
 names.insert(1, "Carol")
 squares = [n * n for n in nums]
+
+# dict：追加・取得（get）
 scores = {"Alice": 90, "Bob": 80}
 scores["Carol"] = 85
+
+print("squares =", squares)
+
+# enumerate で index と要素を取り出して表示
 for i, name in enumerate(names):
     print(i, name, scores.get(name, "NoScore"))
 </code></pre>
+        <p>このコードでは、listに要素を追加し、リスト内包表記で平方のlistを作り、dictにキーを追加してから、enumerateでインデックス付きで表示します。</p>
+        <p>実行方法は次のとおりです。</p>
+        <ol>
+          <li>ファイルに保存して、<code>python data_struct_demo.py</code>を実行します。</li>
+          <li>または、VSCodeで「Run Python File in Terminal」を選んで実行します。</li>
+        </ol>
 
-<p>このコードでは、listに要素を追加し、リスト内包表記で平方のlistを作り、dictにキーを追加してから、enumerateでインデックス付きで表示します。</p>
-
-<p>実行方法は次のとおりです。</p>
-
-<ol>
-  <li>ファイルに保存して、<code>python file.py</code>を実行します。</li>
-  <li>または、VSCodeで「Run Python File in Terminal」を選んで実行します。</li>
-</ol>
-
-<p>出力例は次のとおりです。</p>
+        <p>出力例は次のとおりです。</p>
 
 <pre><code>0 Alice 90
 1 Carol 85
 2 Bob 80
 </code></pre>
-</section>
+      </section>
 
-<section id="sec-3">
-  <h3>dictの基本と使い方</h3>
-  <p>dictは波括弧で作ります。キーにはイミュータブルな型（文字列や数値など）を使います。以下の例では、典型的な操作をまとめて確認できます。</p>
+      <section id="sec-3">
+        <h3>dictの基本と使い方</h3>
+        <p>dictは波括弧で作ります。キーにはイミュータブルな型（文字列や数値など）を使います。以下の例では、典型的な操作をまとめて確認できます。</p>
 
 <pre><code class="language-python"># dictのサンプル（補助コード）
 p = {"a": 1, "b": 2}
-print(p.get("a"))         # 1を返します
-print(list(p.keys()))     # ['a','b'] を返します
-p.update({"c": 3})        # 複数追加できます
-print({k: v*10 for k, v in p.items()})  # dict内包表記で変換できます
+print(p.get("a"))                  # 1を返します
+print(list(p.keys()))              # ['a', 'b'] を返します
+p.update({"c": 3})                 # 複数追加できます
+print({k: v * 10 for k, v in p.items()})  # dict内包表記で変換できます
 </code></pre>
 
-<p>このコードでは、getで安全に値を取得し、keys()やitems()で走査し、updateやdict内包表記でまとめて変更できます。</p>
+        <p>このコードでは、getで安全に値を取得し、keys()やitems()で走査し、updateやdict内包表記でまとめて変更できます。</p>
 
-<p>動作の確認では、型や要素数、内容の一部を出力して確かめるのが要チェックです。</p>
+        <p>動作の確認では、型や要素数、内容の一部を出力して確かめるのが要チェックです。</p>
 
-<ul>
-  <li><p>print(type(var)) で型を確認できます。</p></li>
-  <li><p>print(len(list_var), list_var[:3]) で長さと先頭要素を確認できます。</p></li>
-  <li><p>print(list(d.keys()), list(d.values())) でdictの中身をチェックできます。</p></li>
-</ul>
+        <ul>
+          <li><p>print(type(var)) で型を確認できます。</p></li>
+          <li><p>print(len(list_var), list_var[:3]) で長さと先頭要素を確認できます。</p></li>
+          <li><p>print(list(d.keys()), list(d.values())) でdictの中身をチェックできます。</p></li>
+        </ul>
 
-<p>避けたい例として、リストの多重代入で参照が共有される問題があります。たとえば a = [[0]*3]*3 とすると各行が同じオブジェクト参照になり、a[0][0] = 1 が全行に影響します。この場合はリスト内包表記にして a = [[0]*3 for _ in range(3)] に変えると解消できます。</p>
-
-<p>また、dictの要素アクセスで d["no_key"] を使うとKeyErrorになることがあります。存在しないキーの可能性がある場合は d.get("no_key") を使うと、デフォルト値を返す形にできます。</p>
-</section>
-
-<section id="sec-4">
-  <h3>デバッグと1段ステップアップ</h3>
-  <p>デバッグでは、まずprintで途中結果を出すと状況を把握しやすいです。より制御しやすい方法としてloggingモジュールを使うと、出力レベルを切り替えながら情報を残せます。</p>
+        <p>避けたい例として、リストの多重代入で参照が共有される問題があります。たとえば a = [[0]*3]*3 とすると各行が同じオブジェクト参照になり、a[0][0] = 1 が全行に影響します。この場合はリスト内包表記にして a = [[0]*3 for _ in range(3)] に変えると解消できます。</p>
+        <p>また、dictの要素アクセスで d["no_key"] を使うとKeyErrorになることがあります。存在しないキーの可能性がある場合は d.get("no_key") を使うと、デフォルト値を返す形にできます。</p>
+      </section>
+      <section id="sec-4">
+        <h3>デバッグと1段ステップアップ</h3>
+        <p>デバッグでは、まずprintで途中結果を出すと状況を把握しやすいです。より制御しやすい方法としてloggingモジュールを使うと、出力レベルを切り替えながら情報を残せます。</p>
+        <p>※ logging の例は、このブロック内で確認用の変数を用意して出力しています。</p>
 
 <pre><code>import logging
+
+nums = [3, 1, 4]  # 確認用の例
 logging.basicConfig(level=logging.DEBUG, format="%(levelname)s:%(message)s")
 logging.debug("変数の中身: %s", nums)
 </code></pre>
 
-<p>ログレベルに応じて出力が変わるため、printよりも必要な情報だけを出し分けやすくなります。</p>
+        <p>ログレベルに応じて出力が変わるため、printよりも必要な情報だけを出し分けやすくなります。</p>
+        <p>さらに一段進めるなら、処理を関数にまとめて例外処理やファイル入出力に対応すると再利用性が上がります。例外処理はtry/exceptで囲い、必要に応じてfinallyで後片付けをするのが基本です。</p>
+        <p>ファイル操作ではwithを使うと、処理の終了時に自動でクローズされて扱いやすいです。JSONの読み書きは外部ライブラリなしでも標準のjsonで十分です。</p>
+        <p>ファイル関連の例外が起きた場合は、例外内容をログに記録しつつ動作を継続する設計にすると運用しやすくなります。</p>
+      </section>
 
-<p>さらに一段進めるなら、処理を関数にまとめて例外処理やファイル入出力に対応すると再利用性が上がります。例外処理はtry/exceptで囲い、必要に応じてfinallyで後片付けをするのが基本です。</p>
-
-<p>ファイル操作ではwithを使うと、処理の終了時に自動でクローズされて扱いやすいです。JSONの読み書きは外部ライブラリなしでも標準のjsonで十分です。</p>
-
-<p>ファイル関連の例外が起きた場合は、例外内容をログに記録しつつ動作を継続する設計にすると運用しやすくなります。</p>
-</section>
-
-<section id="sec-5">
-  <h3>注意（ここだけ）</h3>
-  <ul>
-  <li>
-    <p>リストや辞書での削除や上書きはデータを失う可能性があります。</p>
-    <p>例えば <pre><code>del lst[i]</code></pre> や <pre><code>dict.pop(key)</code></pre> は元に戻せません。</p>
-  </li>
-</ul>
-</section>
+      <section id="sec-5">
+        <h3>注意（ここだけ）</h3>
+        <ul>
+          <li>
+            <p>リストや辞書での削除や上書きはデータを失う可能性があります。</p>
+            <p>例えば</p>
+<pre><code>del lst[i]
+dict.pop(key)</code></pre>
+            <p>は元に戻せません。</p>
+          </li>
+        </ul>
+      </section>
 
       <section id="sec-6">
-  <h3>要約</h3>
-  <ul>
-  <li>listは順序付きコレクションであり、インデックス参照や順序処理に向いています。</li>
-  <li>dictはキーで値を高速に取り出せる連想配列であり、マッピングに向いています。</li>
-  <li>基本操作は追加（append/update）、削除（pop/del）、走査（for/enumerate/items）です。</li>
-  <li>デバッグはprintからloggingへ移行し、関数化と例外処理で1段ステップアップできます。</li>
-  <li>削除や上書きは元に戻らないため、バックアップやコピーを取る設計にすると要チェックです。</li>
-</ul>
-</section>
+        <h3>要約</h3>
+        <ul>
+          <li>listは順序付きコレクションであり、インデックス参照や順序処理に向いています。</li>
+          <li>dictはキーで値を高速に取り出せる連想配列であり、マッピングに向いています。</li>
+          <li>基本操作は追加（append/update）、削除（pop/del）、走査（for/enumerate/items）です。</li>
+          <li>デバッグはprintからloggingへ移行し、関数化と例外処理で1段ステップアップできます。</li>
+          <li>削除や上書きは元に戻らないため、バックアップやコピーを取る設計にすると要チェックです。</li>
+        </ul>
+      </section>
     </article>
   </main>
 </body>

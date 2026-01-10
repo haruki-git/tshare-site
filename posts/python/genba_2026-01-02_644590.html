@@ -52,7 +52,8 @@ height = float(input("身長を入力してください: "))</code></pre>
 
 <p>printにfile引数を渡すと、ファイルへ書き出せるためログのような出力にできます。</p>
 
-<pre><code>with open("app.log", "a", encoding="utf-8") as f:
+<pre><code># app.log に「処理を開始しました」を1行追記する（無ければ新規作成）
+with open("app.log", "a", encoding="utf-8") as f:
     print("処理を開始しました", file=f)</code></pre>
 </section>
 
@@ -102,12 +103,17 @@ if __name__ == "__main__":
 <p>VSCodeのデバッガでは変数をウォッチしながらステップ実行できるため、処理の流れと値の変化を追いやすいです。</p>
 <p>出力を見て意図した型かどうかや、空文字ではないかを要チェックにすると、原因特定が早くできます。</p>
 <p>よくあるミスとして、int変換に失敗してValueErrorになることがあります。この場合は例外処理を追加するか、入力前にisdigit()で検査すると改善しやすいです。</p>
-<pre><code>text = input()
+<pre><code># 入力値が整数（0以上）として解釈できるかを判定する例
+print("整数（0以上）を入力してください")
+text = input()
+
+# isdigit(): 文字列が「数字だけ」でできているかを判定する（True/False）
+# ※小数点「.」やマイナス「-」が入ると False になる。ここはintと違うので注意
 if text.isdigit():
     value = int(text)
     print(value, type(value))
 else:
-    print("数値として解釈できない入力です。", text, type(text))</code></pre>
+    print("整数（0以上）として解釈できない入力です:", text)</code></pre>
 </section>
 
 <section id="sec-4">
@@ -115,9 +121,21 @@ else:
   <p>使い分けの基準は、短いデバッグ出力はprintを使い、運用ログや詳細な診断はloggingを使うことです。ユーザー入力はinputを使い、スクリプト引数はargparseを使うのが基本です。</p>
 
 <p>ファイル入出力はopenで読み書きします。例外処理を組み合わせると安全性が上がります。</p>
+<p>※ファイル操作は失敗することがあるため、本来は try/except で例外（エラー）を捕まえて安全に処理します。例外処理については後の記事で説明します。</p>
+<pre><code class="language-python"># ユーザーから名前と年齢を取得し、out.txtに保存する
+name = input("名前: ")
+age = input("年齢: ")
 
-<pre><code class="language-python">with open("out.txt", "w", encoding="utf-8") as f:
-    f.write(f"{name},{age}\n")</code></pre>
+# 例外処理付きでファイルに書き込む
+try:
+    age = int(age)  # 入力検証（失敗するとValueError）
+    with open("out.txt", "w", encoding="utf-8") as f:
+        f.write(f"{name},{age}\n")  # カンマ区切りで1行保存
+    print("保存しました: out.txt")
+except ValueError:
+    print("年齢は整数で入力してください。")
+except (PermissionError, OSError) as e:
+    print("ファイルに書き込めませんでした:", e)</code></pre>
 
 <p>上記は簡単な保存例です。入出力をファイルに移すと自動化や後処理がしやすくなります。</p>
 

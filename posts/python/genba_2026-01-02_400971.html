@@ -43,9 +43,10 @@
 <p>使い分けは、数値計算なら int/float、テキストなら str、条件判定なら bool を選ぶのが基本です。型が異なると演算や結合で失敗しやすいため、必要に応じて int()/float()/str() で明示的に変換すると要チェックしやすくなります。</p>
 
 <ul>
-  <li>計算の精度が必要な場合は float を基準に選びます。</li>
+  <li>小数を扱うなら float を基準に選びます。</li>
   <li>桁や順序を扱う場合は int を基準に選びます。</li>
   <li>出力や結合では str、真偽判定では bool を基準に選びます。</li>
+  <li>※Pythonは型を書かなくても、代入した値から自動で型が決まります。型を確認したいときは type() を使います。</li>
 </ul>
 </section>
 
@@ -54,19 +55,22 @@
   <p>最小コードは次のとおりです。</p>
 
 <pre><code class="language-python"># vars_demo.py
-a = 10                       # int
-b = 3.5                      # float
-name = "Alice"               # str
-is_active = True             # bool
+# 変数 （型の例）
+a = 10                       # int: 整数
+b = 3.5                      # float: 小数
+name = "Alice"               # str: 文字列
+is_active = True             # bool: True/False
 
-sum_val = a + b              # int + float -&gt; float
-greet = "User: " + name      # str concatenation
-check = (a &gt; 5) and is_active
+# 使ってみる（計算・連結・条件）
+sum_val = a + b              # int + float → float（小数が混ざると結果はfloat）
+greet = "User: " + name      # str + str → 文字列をつなぐ
+check = (a &gt; 5) and is_active   # 条件の結果はbool（True/False）
 
+# 表示して確認
 print("sum_val =", sum_val)
 print("greet =", greet)
 print("check =", check)
-print("sum_val type:", type(sum_val))
+print("sum_val type:", type(sum_val)) # 型の確認
 </code></pre>
 
 <p>このコードは数値の加算、文字列の結合、真偽値の組み合わせを行い、最後に値と型を表示します。</p>
@@ -88,17 +92,23 @@ python vars_demo.py
   <h3>確認とデバッグ（type確認・print・logging）</h3>
   <p>途中結果を確かめるには、<code>print()</code>で値を表示し、<code>type(変数)</code>で型を確認すると分かりやすいです。実行中に想定どおりの値になっているかを追うことで、原因の切り分けが早くなります。</p>
 
-<p>出力を状況に応じて切り替えたい場合は、<code>logging</code>モジュールを使うとレベル管理ができます。たとえば<code>logging.basicConfig(level=logging.DEBUG)</code>を設定し、<code>logging.debug()</code>で詳細ログを出す運用にすると、開発時と本番時で出力を調整しやすくなります。</p>
+<p>（最初は不要ですが）出力を状況に応じて切り替えたい場合は、<code>logging</code>モジュールを使うとレベル管理ができます。たとえば<code>logging.basicConfig(level=logging.DEBUG)</code>を設定し、<code>logging.debug()</code>で詳細ログを出す運用にすると、開発時と本番時で出力を調整しやすくなります。</p>
 
-<pre><code>sum_val = 13.5
-greet = "User: Alice"
+<p><strong>コード例</strong></p>
+<pre><code class="language-python"># 変数を作る
+sum_val = 13.5
+greet = "User: Alice"   
 check = True
 
+# 値を表示する
 print("sum_val =", sum_val)
 print("greet =", greet)
 print("check =", check)
+
+# 型を表示する
 print("sum_val type:", type(sum_val))</code></pre>
 
+<p><strong>実行結果</strong></p>
 <pre><code>sum_val = 13.5
 greet = User: Alice
 check = True
@@ -117,7 +127,12 @@ sum_val type: &lt;class 'float'&gt;</code></pre>
 
 <p>1段ステップアップとして、入力を受け取って型変換まで行う処理を関数化すると再利用性が上がります。さらに例外処理を入れておくと、不正な入力が混ざっても処理が止まりにくくなります。</p>
 
-<pre><code>def read_int(prompt="数値を入力してください: "):
+<pre><code># input()で入力した値は、すべてstr型として扱われます。
+# そのため、数値として扱いたい場合は、int()やfloat()で変換する必要があります。
+# なので、入力値を数値に変換できるまで繰り返す関数を作成します。
+
+# 入力を int に変換できるまで繰り返し、成功したら int を返す
+def read_int(prompt="整数を入力してください: "):
     while True:
         s = input(prompt)
         try:
@@ -125,14 +140,21 @@ sum_val type: &lt;class 'float'&gt;</code></pre>
         except ValueError:
             print("整数として解釈できませんでした。もう一度入力してください。")
 
-
-def read_float(prompt="小数を入力してください: "):
+# 入力を float に変換できるまで繰り返し、成功したら float を返す
+# ※ "10" のような入力も float("10") -> 10.0 でOK
+def read_float(prompt="数値を入力してください（整数/小数）: "):
     while True:
         s = input(prompt)
         try:
             return float(s)
         except ValueError:
-            print("小数として解釈できませんでした。もう一度入力してください。")
+            print("数値として解釈できませんでした。もう一度入力してください。")
+
+# 実行例
+x = read_int()
+y = read_float()
+print("read_int  ->", x, type(x))  # 期待される型: int
+print("read_float->", y, type(y))  # 期待される型: float
 </code></pre>
 
 <p>使い分けの基準として、表示は<code>str</code>に変換し、計算は数値型で扱い、条件分岐は<code>bool</code>で扱うと整理しやすいです。</p>

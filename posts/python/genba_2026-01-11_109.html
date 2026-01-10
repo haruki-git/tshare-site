@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pythonのインデントとコロン（:）の基本</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>Pythonのインデントとコロン（:）の基本</h1>
+        <nav><a href="/posts/python/">Python記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/209.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">コロン（:）の役割（ブロック開始の合図）</a></li>
+  <li><a href="#sec-2">インデントの役割（Pythonは字下げでまとまりを表す）</a></li>
+  <li><a href="#sec-3">正しい書き方の例（if / for / def）</a></li>
+  <li><a href="#sec-4">よくあるエラー（SyntaxError: &#39;:&#39;忘れ／IndentationError）</a></li>
+  <li><a href="#sec-5">VSCodeでの対策（スペース4・自動フォーマット）</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>コロン（:）の役割（ブロック開始の合図）</h3>
+  <p>Pythonでは <code>if</code> / <code>for</code> / <code>while</code> / <code>def</code> / <code>class</code> / <code>try</code> などの行末にコロン（:）を書きます。これは「ここから下にブロック（ひとかたまりの処理）が続く」という開始の合図です。</p>
+<p>コロン自体が処理を生むのではなく、「次の行をインデントしてブロックとして書く」ことまでがセットになります。</p>
+</section>
+
+<section id="sec-2">
+  <h3>インデントの役割（Pythonは字下げでまとまりを表す）</h3>
+  <p>Pythonは <code>{}</code> の代わりにインデント（字下げ）でブロックを表します。そのため、インデントは見た目の整形ではなく、プログラムの構造そのものです。</p>
+<p>一般的にはPEP 8に従い「スペース4つ」で統一します。また、同じブロック内の行は必ず同じ幅で揃えます（混在するとエラーや意図しない挙動の原因になります）。</p>
+</section>
+
+<section id="sec-3">
+  <h3>正しい書き方の例（if / for / def）</h3>
+  <p>最小コードです。</p>
+<pre><code class="language-python">def filter_long_names(names):
+    """長さが4文字以上の名前だけ残す（空文字は除外）"""
+    result = []
+    for n in names:
+        if n and len(n) >= 4:
+            result.append(n)
+    return result
+
+def greet_all(names):
+    """受け取った名前一覧に順に挨拶する"""
+    for n in names:
+        print(f"Hello, {n}")
+
+if __name__ == "__main__":
+    names = ["Amy", "Taro", "Jiro", "Kazuo"]
+
+    long_names = filter_long_names(names)  # フィルタ結果を使い回す
+    print("filtered ->", long_names)
+    greet_all(long_names)</code></pre>
+
+<p>貼り付け場所は <code>sample.py</code> に上から貼り付けて保存します。</p>
+<p>実行方法はターミナルで <code>python sample.py</code> を実行するか、VSCodeの実行ボタンを使います。</p>
+
+<p>確認方法です。</p>
+<pre><code class="language-python"># 確認用：関数の戻り値を assert で検証
+# assert は条件を入力してTrue（何も起きない）か確かめる文です。条件がFalseだとそこで止まり、AssertionError が出ます。
+# このブロックは if __name__ == "__main__": の中に入れてください
+assert filter_long_names(["Ken", "Yoko", "Anna"]) == ["Yoko", "Anna"]
+assert filter_long_names(["", "Kazuo"]) == ["Kazuo"]  # 空文字は除外される想定
+print("テスト成功")</code></pre>
+
+<p>上の <code>assert</code> が通ると「テスト成功」が表示されます。</p>
+</section>
+
+<section id="sec-4">
+  <h3>よくあるエラー（SyntaxError: &#39;:&#39;忘れ／IndentationError）</h3>
+  <p>コロンを忘れると、代表的には次のようなエラーになります（環境により表示文言は多少変わります）。</p>
+
+<pre><code class="language-python"># 避けたい例（コロン忘れ）
+if x &gt; 0
+    print(x)
+</code></pre>
+
+<ul>
+  <li><code>SyntaxError</code>：<code>if x &gt; 0:</code> のように、条件や宣言の末尾に <code>:</code> が必要です。</li>
+  <li><code>IndentationError</code>：インデントが揃っていない、またはタブとスペースが混在していると発生します。</li>
+</ul>
+
+<p>よくあるミスは、タブとスペースの混在でインデントが崩れ、<code>IndentationError</code> になることです（見た目が揃っているように見えても、内部的にはズレている場合があります）。</p>
+</section>
+
+<section id="sec-5">
+  <h3>VSCodeでの対策（スペース4・自動フォーマット）</h3>
+  <p>VSCodeでは、インデント周りを最初に固定しておくと事故が減ります。</p>
+
+<ul>
+  <li>スペース4で統一することをおすすめします（例：<code>editor.insertSpaces: true</code>、<code>editor.tabSize: 4</code>）</li>
+  <li>保存時フォーマットを有効にすると整形の揺れを減らせます（例：<code>editor.formatOnSave: true</code>）</li>
+  <li>Python拡張を入れてblackなどのフォーマッタを設定すると、インデントや空白が自動で整います。</li>
+  <li>※blackはPythonコードをルールに沿って読みやすい形に整形する「フォーマッタ」です。使うには事前に pip install black などでインストールが必要です（ここでは“自動整形の例”として紹介します）。</li>
+</ul>
+
+<p>使い分けの基準としては、プロジェクト内で「スペース4・タブ不使用・保存時フォーマット」を標準にするかどうかを先に決め、全員の設定と既存ファイルをその基準に合わせて統一します。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>注意：インデント修正で「タブ→スペース置換」や一括整形を行うと、意図しない行まで変わることがあります。作業前にファイルをコピーしてバックアップを取り、差分を見ながら反映してください。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>コロン（:）はブロック開始の合図で、次の行をインデントしてブロックを作ります。</p></li>
+  <li><p>Pythonのインデントは見た目ではなく構造そのものなので、ブロック内は同じ幅で揃えます。</p></li>
+  <li><p><code>if / for / def</code> は行末に <code>:</code> を付け、次行をスペース4で字下げするのが基本です。</p></li>
+  <li><p>よく出るエラーは <code>SyntaxError</code>（<code>:</code>忘れ）と <code>IndentationError</code>（インデント不整合）です。</p></li>
+  <li><p>VSCodeはスペース4設定と自動フォーマットで、インデント起因のミスを予防できます。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>
