@@ -1,40 +1,32 @@
 {
-  "date": "2026-01-11",
-  "generatedAtJST": "2026-01-11T07:15:52.641+09:00",
+  "date": "2026-01-12",
+  "generatedAtJST": "2026-01-12T07:15:40.296+09:00",
   "items": [
     {
-      "url": "https://japantoday.com/category/tech/meta-signs-three-nuclear-power-deals-to-help-support-its-ai-data-centers",
-      "source": "Japan Today",
-      "publishedAt": "2026-01-09T21:21:53Z",
-      "title": "Meta lines up massive supply of nuclear power to energize AI data centers",
-      "title_ja": "Meta、AIデータセンター向けに核電力の供給契約を締結",
-      "summary_ja": "Metaは、AIデータセンターへの電力供給を確保するため、核電力に関する3つの契約を締結しました。この契約により、約500万世帯分の電力を供給することが可能になります。これにより、Metaは新しいクリーンエネルギーの開発を促進し、米国の核供給チェーンを強化します。",
+      "url": "https://www.digitimes.com/news/a20260108PD221/data-center-power-supply-nvidia-2026.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-01-10T14:43:33Z",
+      "title": "AI-driven surge in computing power transforms data center energy architecture",
+      "title_ja": "AIによる計算能力の急増がデータセンターのエネルギー構造を変革",
+      "summary_ja": "AI技術の進化に伴い、データセンターにおける計算能力が飛躍的に向上している。これにより、エネルギー需要と供給構造にも大きな影響が出ている。専門家は、今後数年でデータセンターのエネルギー管理が変わると予測している。",
       "key_points": [
-        "Metaは3つの会社と核電力契約を締結し、AIデータセンターに電力を供給する計画。",
-        "契約の一環で、2035年までに新たに6.6ギガワットのクリーンエネルギーが支援される。",
-        "MetaのPrometheusデータセンターは、オハイオ州に1ギガワットの電力で建設中。",
-        "Natriumユニットの開発を支援し、690メガワットの電力を生成する予定。",
-        "MetaはVistraの2つの稼働中核電力プラントから2.1ギガワットを購入予定。",
-        "Okloとの契約により、オハイオ州で1.2ギガワットの発電キャンパスを開発。"
+        "AIの進化がデータセンターでの計算能力を押し上げている",
+        "エネルギー供給の構造が変化しつつある",
+        "専門家は今後のエネルギー管理の変革を予測している"
       ],
       "glossary": [
         {
-          "term": "Natrium",
-          "explain_ja": "核電力を生成するための新しい技術ユニット。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを収集、保存、処理するための施設。"
         },
         {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位であり、750,000世帯分の電力を供給可能。"
-        },
-        {
-          "term": "クリーンエネルギー",
-          "explain_ja": "環境に優しく、持続可能なエネルギー源。"
+          "term": "AI",
+          "explain_ja": "人工知能。機械が人間の知能を模倣する技術。"
         }
       ],
       "personal_actions": [
-        "現在のエネルギー供給計画やデータセンターの運営方針を確認する。",
-        "新たな電力源の契約に影響を与える可能性のある法規制や政策を把握する。",
-        "データセンターのエネルギー効率を向上させるための戦略を検討する。"
+        "現在のデータセンターのエネルギー管理ポリシーを確認する",
+        "新しいAI技術の導入を検討する"
       ],
       "tags": [
         "DC",
@@ -42,77 +34,77 @@
       ]
     },
     {
-      "url": "https://www.channelnewsasia.com/business/openai-softbank-invest-1-billion-in-sb-energy-5849541",
-      "source": "CNA",
-      "publishedAt": "2026-01-09T19:26:20Z",
-      "title": "OpenAI, SoftBank invest $1 billion in SB Energy as Stargate buildout expands",
-      "title_ja": "OpenAIとソフトバンクがSBエネルギーに10億ドルを投資、スターレートの拡張へ",
-      "summary_ja": "OpenAIとソフトバンクがSBエネルギーに各500百万ドルを投資し、スターレートのデータセンターと電力インフラを拡張します。このプロジェクトは、オラクルなどの主要投資家に支持される50兆ドル規模の多年度プロジェクトで、AIのデータセンターを構築することが目的です。データセンターの構築が進む中、電力インフラの確保がAI拡大の重要な課題となっています。",
+      "url": "https://uk.pcmag.com/graphics-cards/162510/can-the-zeus-gpu-really-outshine-nvidias-rtx-5090",
+      "source": "PCMag.com",
+      "publishedAt": "2026-01-10T13:00:00Z",
+      "title": "Can the Zeus GPU Really Outshine Nvidia's RTX 5090?",
+      "title_ja": "Zeus GPUは本当にNvidiaのRTX 5090を超えられるのか？",
+      "summary_ja": "グラフィックスプロセッサースタートアップのBolt GraphicsがCES 2026でZeus GPUを発表しました。Nvidia RTX 5090を上回るパス・トレース性能や低消費電力、大容量のメモリを謳っていますが、実際の製品はまだ公開されていません。そのため、実現可能性には疑問が残ります。",
       "key_points": [
-        "OpenAIとソフトバンクがSBエネルギーに500百万ドルずつ投資。",
-        "SBエネルギーはテキサス州ミラム郡に1.2ギガワットのデータセンターを建設・運営。",
-        "スターレートは500兆ドルのAIデータセンター構築プロジェクト。",
-        "AIデータセンターの建設ブームが進行中で、電力需要が急増。",
-        "OpenAIは競争激化の中、費用上昇に直面している。"
+        "Bolt GraphicsのZeus GPUは、Nvidia RTX 5090を超える性能を約束している。",
+        "ZeusはRISC-Vコマンドプロセッサを搭載し、PCIe 5 x16インターフェースを使用。",
+        "最大384GBのメモリをサポートし、エンタープライズ向けの500Gbps以上のネットワークインターフェースを持つ。",
+        "実際のハードウェアによるデモが待たれる中、パフォーマンス主張は大きい。",
+        "開発者キットは2025年第4四半期、サーバーアクセスは2026年第3四半期、量産は2026年第4四半期を予定している。"
       ],
       "glossary": [
         {
-          "term": "SB Energy",
-          "explain_ja": "ソフトバンクが所有するエネルギー企業で、データセンターの建設を担当。"
+          "term": "SIMD",
+          "explain_ja": "Single Instruction Multiple Dataの略で、単一の命令で複数のデータに対して処理を行う技術。"
         },
         {
-          "term": "Stargate",
-          "explain_ja": "AIデータセンターを構築するための大規模な多年度プロジェクト。"
+          "term": "RISC-V",
+          "explain_ja": "オープンソースの命令セットアーキテクチャで、主に教育やデータセンター向けに利用される。"
         },
         {
-          "term": "OpenAI",
-          "explain_ja": "AI技術を開発する企業で、ChatGPTなどの製品を提供。"
+          "term": "PCIe 5",
+          "explain_ja": "第5世代のPCI Express規格で、高速なデータ転送を可能にするインターフェース。"
+        },
+        {
+          "term": "LPDDR5X",
+          "explain_ja": "低電力DDRメモリの一種で、主にモバイルデバイスや高性能コンピューティングに使用される。"
         }
       ],
       "personal_actions": [
-        "データセンターの拡張に伴う電力インフラの変更を確認する。",
-        "AIシステムにおける消費電力の効率化を検討する。",
-        "新しいテクノロジーの導入に向けたインフラ整備について情報を集める。"
+        "Bolt Graphicsの最新情報を定期的に確認し、Zeusの実際のパフォーマンスを待つ。",
+        "業界ニュースに目を光らせ、Zeusに関するデモやベンチマークの発表をチェックする。",
+        "新しいGPU技術やパフォーマンス比較について学び続ける。"
       ],
       "tags": [
         "AI"
       ]
     },
     {
-      "url": "https://www.channelnewsasia.com/business/openai-softbank-invest-1-billion-in-sb-energy-stargate-buildout-expands-5849541",
-      "source": "CNA",
-      "publishedAt": "2026-01-09T19:26:20Z",
-      "title": "OpenAI, SoftBank invest $1 billion in SB Energy as Stargate buildout expands",
-      "title_ja": "OpenAIとソフトバンクがSBエナジーに10億ドルを投資、スターステージの拡張へ",
-      "summary_ja": "OpenAIとソフトバンクグループはSBエナジーに各500百万ドルを投資し、データセンターと電力インフラを拡張します。この計画は、テキサス州ミラム郡に1.2ギガワットのデータセンターを構築するもので、SBエナジーが運営を担当します。AIの拡張に向けた重要な取り組みであるスターステージは、電力アクセスの重要性が高まる中で推進されています。",
+      "url": "https://hardware.slashdot.org/story/26/01/09/2329256/meta-signs-deals-with-three-nuclear-companies-for-6-gw-of-power",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-01-10T07:00:00Z",
+      "title": "Meta Signs Deals With Three Nuclear Companies For 6+ GW of Power - Slashdot",
+      "title_ja": "Metaが3つの原子力企業と6GW以上の電力契約を締結",
+      "summary_ja": "Metaはデータセンターのために、6ギガワット以上の長期原子力契約を締結しました。これには新興企業と中小企業、既存の原子力発電所を運営する大手企業が含まれます。この契約により、Metaは2030年代初頭に1〜4ギガワットの発電能力を追加するパートナーを求めていました。新たな電力供給は、データセンターが集中するPJМインタコネクションを通じて行われる予定です。",
       "key_points": [
-        "OpenAIとソフトバンクがSBエナジーに各500百万ドルを投資",
-        "データセンターはテキサス州ミラム郡に1.2ギガワットの規模で建設",
-        "スターステージは5000億ドルの多年度計画でAIデータセンターの構築を目指す",
-        "SBエナジーはOpenAIのAPIを利用し、ChatGPTを従業員向けに導入予定",
-        "エネルギーアクセスの拡張がAIの発展に不可欠な課題となっている"
+        "Metaが原子力企業3社と6GW以上の電力契約を締結",
+        "契約はOklo、TerraPower、Vistraの3社と締結された",
+        "Vistraとの契約では既存の発電所から2.1GWを調達",
+        "Okloは2030年までに1.2GWの電力供給を目指す",
+        "TerraPowerは2032年にMetaへの電力供給を計画"
       ],
       "glossary": [
         {
-          "term": "SB Energy",
-          "explain_ja": "ソフトバンクが所有するエネルギー会社で、データセンターの構築・運営を行う。"
+          "term": "SMR",
+          "explain_ja": "小型モジュール炉（Small Modular Reactor）の略で、小型かつモジュール化された原子炉の一種。"
         },
         {
-          "term": "Stargate",
-          "explain_ja": "AIデータセンターの構築に向けた5000億ドルの計画、主要な投資家が参画している。"
-        },
-        {
-          "term": "API",
-          "explain_ja": "アプリケーションプログラミングインターフェース、ソフトウェアコンポーネント間の通信を支援する。"
+          "term": "PJMインタコネクション",
+          "explain_ja": "13の中東部および中西部州をカバーする電力グリッド。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンター建設計画について情報を集める",
-        "電力インフラの安定性確保について関係者と話し合う",
-        "AI関連技術の最新動向をフォローする"
+        "データセンターのエネルギー供給の安定性について確認する",
+        "新しい電力供給による影響を評価するための社内会議を計画する",
+        "メンテナンスやアップグレードに必要な設備投資を見直す"
       ],
       "tags": [
-        "AI"
+        "DC"
       ]
     }
   ]
