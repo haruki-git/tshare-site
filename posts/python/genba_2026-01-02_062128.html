@@ -37,15 +37,11 @@
   <h3>はじめに</h3>
   <p>今回できるようになることは、シンプルなGUIメモ帳を作って保存と読み込みができるようになることです。</p>
 
-<p>このセクションでは、Pythonの基本とツール選びをやさしく説明します。</p>
-
-<p>Pythonは手軽にコードを書いてすぐ動かせる言語です。</p>
+<p>このセクションでは、変数・関数・モジュール（ファイル分割）の基礎を復習しつつ、実用的な最小アプリを作ります。</p>
 
 <p>今回使う標準ライブラリは、tkinter（GUI）とファイル操作です。</p>
 
-<p>変数・関数・モジュール（ファイル分割）の基礎を復習しつつ、実用的な最小アプリを作ります。</p>
-
-<p>初心者でもわかるように、かたまりを小さくして説明します。</p>
+<p>わかりやすくするため、かたまりを小さくして説明します。</p>
 </section>
 
 <section id="sec-2">
@@ -80,6 +76,58 @@ root.mainloop()</code></pre>
 <p>このコードを実行すると小さなウィンドウが開きます。</p>
 <p>テキストを入力して「保存」を押すとファイルとして書き出せます。</p>
 <p>「開く」を押すと、選んだテキストファイルを読み込んで表示できます。</p>
+
+<p>要素ごとにコードの解説をしていきます。</p>
+
+<ul>
+  <li><strong>1) import 部分</strong>
+    <ul>
+      <li><code>import tkinter as tk</code>：GUI部品（ウィンドウ、ボタン、テキスト欄など）を使うための読み込みです。</li>
+      <li><code>from tkinter import filedialog, messagebox</code>：補助機能を読み込みます。
+        <ul>
+          <li><code>filedialog</code>：ファイルの「開く／保存」選択ダイアログです。</li>
+          <li><code>messagebox</code>：通知（保存しました等）のダイアログです。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li><strong>2) save 関数（保存）</strong>
+    <ul>
+      <li><code>filedialog.asksaveasfilename(defaultextension=".txt")</code>：保存先を選ばせ、拡張子が無ければ <code>.txt</code> を付けます。</li>
+      <li><code>if path:</code>：キャンセル時は空になるので、空のときは何もしない安全策です。</li>
+      <li><code>with open(path, "w", encoding="utf-8") as f:</code>：UTF-8 でテキストを書き込みます。</li>
+      <li><code>txt.get("1.0", "end")</code>：テキスト欄の内容を取得します。
+        <ul>
+          <li><code>"1.0"</code>：先頭（1行目0文字目）です。</li>
+          <li><code>"end"</code>：末尾です（Textは末尾に改行が入りやすいです）。</li>
+        </ul>
+      </li>
+      <li><code>.rstrip()</code>：末尾の余分な改行や空白を落としてから保存します。</li>
+      <li><code>messagebox.showinfo(...)</code>：保存できたことをポップアップで知らせます。</li>
+    </ul>
+  </li>
+
+  <li><strong>3) open_file 関数（読み込み）</strong>
+    <ul>
+      <li><code>filedialog.askopenfilename(filetypes=[("Text", "*.txt")])</code>：テキストファイルだけ選びやすくします。</li>
+      <li><code>if path:</code>：キャンセル時は空になるので、空のときは何もしないようにします。</li>
+      <li><code>txt.delete("1.0", "end")</code>：いったん既存の表示を消します。</li>
+      <li><code>txt.insert("1.0", f.read())</code>：ファイル内容を先頭から差し込みます。</li>
+    </ul>
+  </li>
+
+  <li><strong>4) 画面（ウィンドウ・テキスト・ボタン）</strong>
+    <ul>
+      <li><code>root = tk.Tk()</code>：アプリ本体のウィンドウを作成します。</li>
+      <li><code>root.title("簡単メモ帳")</code>：ウィンドウタイトルを付けます。</li>
+      <li><code>txt = tk.Text(root, wrap="word")</code>：複数行入力できるテキスト欄です（単語の途中で折り返しにくくします）。</li>
+      <li><code>txt.pack(expand=True, fill="both")</code>：ウィンドウサイズに合わせてテキスト欄が伸び縮みするように配置します。</li>
+      <li><code>tk.Button(..., command=open_file)</code>／<code>command=save</code>：クリック時に呼ぶ関数を紐づけます。</li>
+      <li><code>root.mainloop()</code>：GUIの待ち受けを開始します（これが無いとウィンドウがすぐ終了します）。</li>
+    </ul>
+  </li>
+</ul>
 </section>
 
 <section id="sec-3">
@@ -104,11 +152,11 @@ root.mainloop()</code></pre>
 <section id="sec-4">
   <h3>デバッグと1段ステップアップ（使い分けの基準）</h3>
   <p>デバッグの見方としては、printで中間値を出力して変数の中身を見る方法が即効性があります。</p>
-<p>logging（標準ライブラリ）を使うと、実行環境に応じて出力の詳細度を切り替えられます。</p>
-<p>小さなGUIでは、messageboxやprintでログを確認すると把握しやすいです。</p>
+  <p>logging（標準ライブラリ）を使うと、実行環境に応じて出力の詳細度を切り替えられます。</p>
+  <p>小さなGUIでは、messageboxやprintでログを確認すると把握しやすいです。</p>
 
-<p>1段ステップアップとして、例外処理とファイルエンコーディング対応を追加すると堅牢になります。</p>
-<p>次は例として、saveをtry/exceptでラップした拡張例です。</p>
+  <p>1段ステップアップとして、例外処理とファイルエンコーディング対応を追加すると堅牢になります。</p>
+  <p>次は例として、saveをtry/exceptでラップした拡張例です。</p>
 <pre><code class="language-python"># 拡張例（抜粋）
 try:
     with open(path, "w", encoding="utf-8") as f:
@@ -116,13 +164,13 @@ try:
 except OSError as e:
     messagebox.showerror("エラー", f"保存できませんでした: {e}")</code></pre>
 
-<p>使い分けの基準として、短いテストや学習時はprint中心でも問題ありません。</p>
-<p>長期運用や複数人開発では、loggingと例外処理を使う前提にすると安定します。</p>
+  <p>使い分けの基準として、短いテストや学習時はprint中心でも問題ありません。</p>
+  <p>長期運用や複数人開発では、loggingと例外処理を使う前提にすると安定します。</p>
 
-<p>よくあるミスとして、ファイルダイアログの戻り値が空のときに処理を続けてしまうことがあります。</p>
-<p>ユーザーがキャンセルするとpathが空文字になるため、if path:で処理を囲むと回避できます。</p>
-<p>別ケースとして、tkinterが未インストールの環境ではImportErrorが出ることがあります。</p>
-<p>その場合は環境のPythonを入れ直すか、Linuxではtkinterを追加インストールすると解決しやすいです。</p>
+  <p>よくあるミスとして、ファイルダイアログの戻り値が空のときに処理を続けてしまうことがあります。</p>
+  <p>ユーザーがキャンセルするとpathが空文字になるため、if path:で処理を囲むと回避できます。</p>
+  <p>別ケースとして、tkinterが未インストールの環境ではImportErrorが出ることがあります。</p>
+  <p>その場合は環境のPythonを入れ直すか、Linuxではtkinterを追加インストールすると解決しやすいです。</p>
 </section>
 
 <section id="sec-5">
