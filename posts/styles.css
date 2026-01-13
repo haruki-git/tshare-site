@@ -20,7 +20,7 @@ header h1 {
 
 
 p {
-  line-height: 1.8;  /* 段落内の行間を広めに */
+  line-height: 1.2;  /* 段落内の行間を広めに */
 }
 
 pre {

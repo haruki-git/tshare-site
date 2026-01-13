@@ -55,7 +55,7 @@ a:hover {
 
 p {
   line-height: 1.8; /* 読みやすさを重視した広めの行間 [2] */
-  margin: 1em 0;
+  margin: 0 0 0.1em 0;
 }
 
 /* コードブロック：旧styles.cssの意匠をダークテーマに最適化 */
@@ -216,8 +216,14 @@ ul {
   list-style: none;
 }
 
-li + li {
-  margin-top: 12px;
+/* リスト項目は全部同じ間隔にする */
+li {
+  margin: 0 0 0.1em 0;
+}
+
+/* 最後だけ余白を消して、リストの終わりを自然に */
+li:last-child {
+  margin-bottom: 0;
 }
 
 /* リストアイテムの共通スタイル */
