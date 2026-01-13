@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：データ保存（localStorageで安全に永続化）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：データ保存（localStorageで安全に永続化）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">localStorage/sessionStorageの違い</a></li>
+  <li><a href="#sec-2">保存・読み込み・削除の基本</a></li>
+  <li><a href="#sec-3">JSONで保存する定石</a></li>
+  <li><a href="#sec-4">保存データのバージョン管理（簡易）</a></li>
+  <li><a href="#sec-5">壊れたデータへの復旧（try/catch）</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>localStorage/sessionStorageの違い</h3>
+  <p>localStorageは、ブラウザを閉じても残る永続領域で、同一オリジン内で共有されます。</p>
+<p>sessionStorageは、タブ／ウィンドウ単位の一時領域で、タブを閉じると消えます。</p>
+<p>どちらも文字列として保存されるため、機密情報（平文トークンなど）の保存は避けたい例です。使い分けは「永続で良いか」「セッションだけで良いか」で決めるとよいです。</p>
+</section>
+
+<section id="sec-2">
+  <h3>保存・読み込み・削除の基本</h3>
+  <p>APIはシンプルで、setItem/getItem/removeItem（必要なら clear）を使います。値は文字列として保存される点を押さえる必要があります。</p>
+
+<pre><code class="language-js">localStorage.setItem('demo.key', 'hello');   // 保存
+const v = localStorage.getItem('demo.key');  // 読み込み（無ければ null）
+localStorage.removeItem('demo.key');         // 削除</code></pre>
+
+<p>UIでのテスト（ボタン操作など）を併用すると挙動把握が早いです。</p>
+</section>
+
+<section id="sec-3">
+  <h3>JSONで保存する定石</h3>
+  <p>オブジェクトや配列は JSON.stringify で保存し、JSON.parse で復元します。Date などの特殊型は ISO 文字列にして保存し、読み込み時に new Date(...) で復元します。</p>
+<p>要チェックとして、stringify を忘れると "[object Object]" など意図しない文字列が保存されます。</p>
+<pre><code class="language-js">const KEY = 'profile';
+const data = { name:'Taro', updatedAt: new Date().toISOString() };
+localStorage.setItem(KEY, JSON.stringify(data));
+const loaded = JSON.parse(localStorage.getItem(KEY) || 'null');
+const updatedAt = loaded ? new Date(loaded.updatedAt) : null;
+</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>保存データのバージョン管理（簡易）</h3>
+  <p>将来的なフォーマット変更に備え、保存物にバージョンを持たせます。{ v, payload } 形式にすると読み込み時のマイグレーションが扱いやすいです。</p>
+
+<pre><code class="language-js">const KEY = 'app.data';
+const VERSION = 2;
+function save(payload){
+  localStorage.setItem(KEY, JSON.stringify({ v: VERSION, payload }));
+}
+function migrateIfNeeded(saved){
+  if (saved.v === 1) {
+    return { v: 2, payload: { ...saved.payload, migrated: true } };
+  }
+  return saved;
+}
+</code></pre>
+
+<p>読み込み時は v を見て必要な変換を行い、互換性を保ちます。</p>
+</section>
+
+<section id="sec-5">
+  <h3>壊れたデータへの復旧（try/catch）</h3>
+  <p>外部編集や拡張機能で値が壊れていることがあるため、JSON.parse は必ず try/catch で保護し、失敗したら該当キーを削除してデフォルトを返すのが安全です。</p>
+
+<p>最小の UI とスクリプト（CodePen 等で動作確認可）です。</p>
+
+<p>HTML（例）</p>
+<pre><code>&lt;button id="saveBtn"&gt;保存&lt;/button&gt;&lt;button id="loadBtn"&gt;読み込み&lt;/button&gt;&lt;button id="delBtn"&gt;削除&lt;/button&gt;&lt;div id="out"&gt;&lt;/div&gt;
+</code></pre>
+
+<p>JS（要点のみ）</p>
+<pre><code class="language-js">const KEY = 'app.data'; const VERSION = 1;
+function saveData(obj){ localStorage.setItem(KEY, JSON.stringify({v:VERSION, payload:obj})); console.log('saved'); }
+function loadData(){
+  try{
+    const raw = localStorage.getItem(KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    // migrateIfNeeded(parsed) をここで呼べる
+    return parsed.payload ?? null;
+  }catch(e){
+    console.error('復旧: 壊れたデータを削除します', e);
+    localStorage.removeItem(KEY);
+    return null;
+  }
+}
+</code></pre>
+
+<p>保存→読み込み→削除の流れが正しく動くかを UI で確認します。</p>
+
+<p>最小コード： このあとに示す短いJavaScriptコードを使います。</p>
+
+<p>貼り付け場所： CodePenならHTML欄にボタンと出力用div、JS欄にJavaScriptを貼ります（同じブロックに混在させません）。HTMLファイルなら&lt;body&gt;の最後（&lt;/body&gt;直前）に&lt;script&gt;を置くか、DOMContentLoaded内で実行します。</p>
+
+<p>実行方法： ブラウザで開くか、CodePenのRunで実行します。Consoleで結果を見ます。</p>
+
+<p>確認方法： console.logの出力や画面表示が想定どおりかで確認します（必要なら簡単な条件チェックもします）。</p>
+
+<p>よくあるミス： Consoleを開いていないため出力が見えない、または変数名のスペル違いでReferenceErrorになることがあります。</p>
+
+<p>使い分けの基準： 繰り返しはfor/for...of、変換はmap、絞り込みはfilterのように目的で使い分けます。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>localStorage は永続的に保存され、sessionStorage はタブ単位の一時保存になりますので、用途に応じて使い分ける必要があります。</p></li>
+  <li><p>基本操作は setItem/getItem/removeItem で行い、保存できる値は文字列として扱われます。</p></li>
+  <li><p>オブジェクトは JSON.stringify/JSON.parse を使って保存・復元し、Date などは ISO 文字列に変換してから復元する必要があります。</p></li>
+  <li><p>{v, payload} の形でバージョン管理を行い、読み込み時にマイグレーションを実施するのが有効です。</p></li>
+  <li><p>JSON.parse は try/catch で保護し、壊れたデータは削除して再初期化するのが要チェックです。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

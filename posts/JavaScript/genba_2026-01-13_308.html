@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：オブジェクト（データを整理して扱う）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：オブジェクト（データを整理して扱う）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+      
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">オブジェクトの基本（キーと値）</a></li>
+  <li><a href="#sec-2">ドット記法とブラケット記法</a></li>
+  <li><a href="#sec-3">分割代入（必要なものだけ取り出す）</a></li>
+  <li><a href="#sec-4">スプレッドでコピー・マージする</a></li>
+  <li><a href="#sec-5">参照の理解（浅いコピーの注意）</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>オブジェクトの基本（キーと値）</h3>
+  <p>今回できるようになることとして、オブジェクトを作ってキーと値で整理し、読み書きや分割代入・コピーの基本を扱えるようになります。</p>
+<p>JavaScriptのオブジェクトはキー（プロパティ名）と値のペアでデータをまとめる箱です。</p>
+<p>値には文字列・数値・配列・関数・別のオブジェクトなどが入ります。</p>
+<p>実行はブラウザ環境で、CodePenのHTMLとJS欄に分けて貼ると手早く試せます。</p>
+<p>キーは自動的に文字列扱いになる点がポイントです。</p>
+</section>
+
+<section id="sec-2">
+  <h3>ドット記法とブラケット記法</h3>
+  <p>プロパティの取得・設定にはドット記法（obj.name）とブラケット記法（obj['name']）があります。</p>
+<p>ドット記法は識別子として有効なキーに使いやすく、ブラケット記法は変数で動的にキーを扱うときや、スペースやハイフンを含むキーを扱うときに必要です。</p>
+<p>ブラケット記法は計算結果や変数をそのまま使えるため、ランタイムでキーが決まる場面で重宝します。</p>
+</section>
+
+<section id="sec-3">
+  <h3>分割代入（必要なものだけ取り出す）</h3>
+  <p>分割代入（オブジェクトのデストラクチャリング）を使うと、必要なプロパティだけ取り出して変数に割り当てられます。</p>
+<p>例えば次のように書くと、<code>user.name</code> と <code>user.age</code> を別の変数に展開できます。</p>
+<pre><code>const {name, age} = user;
+</code></pre>
+<p>別名をつける場合やデフォルト値を指定する場合は、次のように書けます。</p>
+<pre><code>const {name: userName} = user;
+const {score = 0} = user;
+</code></pre>
+<p>コードが読みやすくなる場面で有用です。</p>
+</section>
+
+<section id="sec-4">
+  <h3>スプレッドでコピー・マージする</h3>
+  <p>オブジェクトのコピーやマージにはスプレッド構文 <code>{...obj}</code> が便利です。</p>
+<p>新しいオブジェクトを作るので元の参照を直接変えませんが、同じキーは右側の値で上書きされますので、順序が重要です。</p>
+<p>複数のオブジェクトを結合して新しい設定オブジェクトを作る場面や、部分更新で新しいオブジェクトを返したいときに使います。</p>
+<p>浅いコピーである点は要チェックです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>参照の理解（浅いコピーの注意）</h3>
+  <p>オブジェクトや配列は参照（ポインタのようなもの）で扱われるため、浅いコピー（スプレッドやObject.assign）はネストした内部オブジェクトまで複製しません。</p>
+<p>内部がオブジェクトだと、コピー後に内部を変更すると元も変わってしまいます。深くコピーしたいときは専用の手法（ライブラリや構造に合わせた手作業）を検討します。開発中はconsole.logで参照先を確認すると混乱を避けられます。</p>
+
+<p>最小コード：</p>
+<pre><code>&lt;!-- HTML欄（CodePenのHTMLに貼る） --&gt;
+&lt;button id="btn"&gt;実行&lt;/button&gt;
+&lt;pre id="out"&gt;&lt;/pre&gt;
+</code></pre>
+
+<pre><code>// JS欄（CodePenのJSに貼る）
+const person = {
+  name: "田中",
+  age: 28,
+  contact: { email: "t@example.com" }
+};
+
+const output = document.getElementById("out");
+document.getElementById("btn").addEventListener("click", () =&gt; {
+  // ドットとブラケット
+  const byDot = person.name;
+  const key = "age";
+  const byBrackets = person[key];
+
+  // 分割代入とスプレッド
+  const { name, contact } = person;
+  const copy = { ...person, city: "Tokyo" };
+
+  // 浅いコピーの例（参照される内部オブジェクト）
+  const shallow = { ...person };
+  shallow.contact.email = "changed@example.com";
+
+  output.textContent = [
+    `dot: ${byDot}`,
+    `bracket: ${byBrackets}`,
+    `destructured name: ${name}`,
+    `copy.city: ${copy.city}`,
+    `original email after shallow change: ${person.contact.email}`
+  ].join("\n");
+  console.log(person, copy, shallow);
+});
+</code></pre>
+
+<p>貼り付け場所：CodePenを想定する場合はHTML欄に先のHTMLブロックを、JS欄にJavaScriptブロックをそれぞれ貼り付けます。ローカルで試す場合はHTMLファイルの&lt;body&gt;内にHTML部分を置き、同じファイル内で&lt;script&gt;にJSを入れてください。</p>
+
+<p>実行方法：CodePenならRun（または自動実行）でページを表示し、ボタンをクリックします。ローカルならブラウザでHTMLを開いてボタンを押します。</p>
+
+<p>確認方法：画面の&lt;pre id="out"&gt;に表示されるテキストと、ブラウザの開発者ツールConsoleに出るオブジェクトを見比べてください。浅いコピーの結果で元のperson.contact.emailが変わっているかが確認ポイントです。</p>
+
+<p>よくあるミス：スプレッドでネストしたオブジェクトまで複製されると誤解してしまう点が最も多いです。原因は参照渡しの理解不足で、直し方はconsole.logでオブジェクトを展開して確認し、必要なら深いコピー手法（ライブラリや手動クローン）を使うことです。</p>
+
+<p>使い分けの基準：静的で簡単なプロパティ取得はドット、動的キーや不正識別子はブラケットを使います。順序が要るデータや同種の項目集合は配列、名前付きのプロパティ群や設定はオブジェクトを選びます。スプレッドは不変性（immutability）を保ちたい更新に向き、頻繁な差分更新は専用のライブラリを検討します。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li>オブジェクトはキーと値のペアでデータを整理する基本的な箱です。</li>
+  <li>ドットは静的キー、ブラケットは動的キーや特殊キーに使います。</li>
+  <li>分割代入で必要なプロパティだけ簡潔に取り出せます。</li>
+  <li>スプレッドで簡単にコピー・マージできるが浅いコピーである点を理解します。</li>
+  <li>ネストした参照は浅いコピーで共有されるため、必要に応じて深いクローンを選びます。</li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

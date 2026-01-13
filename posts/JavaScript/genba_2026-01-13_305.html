@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：条件分岐と繰り返し（書き方を固める）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：条件分岐と繰り返し（書き方を固める）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">if/elseの基本と読みやすい並べ方</a></li>
+  <li><a href="#sec-2">switchの使いどころ</a></li>
+  <li><a href="#sec-3">for / for...of / while の違い</a></li>
+  <li><a href="#sec-4">break/continueの使い方</a></li>
+  <li><a href="#sec-5">早期returnでネストを浅くする</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>if/elseの基本と読みやすい並べ方</h3>
+  <p>今回できるようになることとして、条件分岐を読みやすく書き、ネストを減らすコツを使えるようになります。</p>
+<p>if/elseは条件が少ないときに直感的で使いやすいです。</p>
+<p>複数条件は else if を使って上から順に判定しますが、深い入れ子（ネスト）は可読性を下げます。</p>
+<p>早期return（ガード節）やフラットな条件チェーンを使うと読みやすくなります。</p>
+<p>まずはCodePenで試せる小さな例を用意しています。</p>
+</section>
+
+<section id="sec-2">
+  <h3>switchの使いどころ</h3>
+  <p>switchは値が離散（具体的な定数）で分岐が多いときに向いています。caseごとに処理が分かれる場合に見通しがよくなりますが、fall-through（フォールスルー）は要チェックです。簡単なラベル付けや複数caseを同じ処理にまとめるときに有効です。</p>
+<p>条件が式や範囲に依存する場合はif/elseの方が自然です。</p>
+</section>
+
+<section id="sec-3">
+  <h3>for / for...of / while の違い</h3>
+  <p>forはインデックスを使ったループに向いており、開始・終了・増分を明示できます。for...ofは配列や文字列などの反復可能オブジェクト（イテラブル）を要素単位で扱うのに適しています。whileは繰り返し回数が事前にわからない場合や、条件が外部で変わるケースに便利です。どれを使うかで読みやすさと意図の伝わりやすさが変わります。</p>
+</section>
+
+<section id="sec-4">
+  <h3>break/continueの使い方</h3>
+  <p>breakはループを完全に抜けるとき、continueはその反復をスキップして次に進むときに使います。</p>
+<p>検索で最初に見つけた要素で終了する場合はbreak、特定の条件のときだけ処理を飛ばしたいときはcontinueを使うと、余分なネストを作らずに書けます。</p>
+<p>switch内でのbreakはフォールスルー防止のためによく使われます。</p>
+</section>
+
+<section id="sec-5">
+  <h3>早期returnでネストを浅くする</h3>
+  <p>関数の冒頭で入力チェックや異常系を早めに返すと、残りの処理をインデントせずに書けて可読性が上がります。ガード節は「問題があるならすぐ返す」という考え方で、例外的な処理を先に片付けてから主処理を書くイメージです。これによりifの入れ子を避け、主要ロジックが左に揃って読みやすくなります。</p>
+
+<p>最小コード：<br>貼り付け場所：CodePenの場合はHTML欄にHTML、JS欄に以下のJavaScriptを貼り付けてください。HTML欄にはボタンや出力用要素を用意しています。</p>
+
+<pre><code class="language-html">&lt;input id="num" type="number" placeholder="数値を入力" /&gt;
+&lt;button id="run"&gt;実行&lt;/button&gt;
+&lt;pre id="out"&gt;&lt;/pre&gt;
+</code></pre>
+
+<pre><code class="language-javascript">const btn = document.getElementById('run');
+const out = document.getElementById('out');
+
+function analyze(input) {
+  if (input === '' || isNaN(input)) return '入力が必要です';
+  const n = Number(input);
+  let s = '';
+  if (n &gt; 0) s += 'positive\n';
+  else if (n &lt; 0) s += 'negative\n';
+  else s += 'zero\n';
+
+  switch (n % 3) {
+    case 0: s += 'mod 3 == 0\n'; break;
+    default: s += 'mod 3 != 0\n';
+  }
+
+  for (let i = 0; i &lt; Math.min(n, 5); i++) {
+    if (i === 2) continue;
+    s += `for i=${i}\n`;
+  }
+
+  const arr = [10, 20, 30];
+  for (const v of arr) s += `of:${v}\n`;
+
+  let i = 0;
+  while (i &lt; 2) { s += `while:${i}\n`; i++; }
+  return s;
+}
+
+btn.addEventListener('click', () =&gt; {
+  out.textContent = analyze(document.getElementById('num').value);
+});
+</code></pre>
+
+<p>実行方法：CodePenに貼って「Run」するか、上のHTMLをindex.html、JSを外部スクリプトでブラウザに読み込ませて開きます。ボタンをクリックすると処理が動きます。</p>
+<p>確認方法：画面の入力欄に数値を入れて実行ボタンを押すと #out に結果が表示されます。Consoleでログを確認する場合は console.log に出力するよう一時変更して試せます。</p>
+
+<p>よくあるミス：比較で == を使って型変換に頼ることがあります。原因は型の違いを意識しないことです。直し方は厳密等価演算子 === を使い、必要であれば Number() や String() で明示的に型変換することです。</p>
+
+<p>使い分けの基準：インデックスや逆方向ループが必要なときは for、配列要素を順に処理するだけなら for...of を優先します。配列操作で新しい配列が欲しいときは map、条件で絞るなら filter を使うと宣言的で読みやすくなります。オブジェクトの固定キーでの分岐はオブジェクトマップ（辞書）で代替可能です。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>if/else は少数分岐で直感的です。深いネストは早期returnで回避します。</p></li>
+  <li><p>switch は離散値の多分岐で有効です。フォールスルーに気を配ります。</p></li>
+  <li><p>for はインデックス管理に向きます。for...of は要素列の反復に向き、while は回数不定の繰り返しに向きます。</p></li>
+  <li><p>break でループから脱出します。continue で現在の反復をスキップして可読性を保ちます。</p></li>
+  <li><p>早期return（ガード節）を使うとネストが浅くなり、主要ロジックが見やすくなります。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

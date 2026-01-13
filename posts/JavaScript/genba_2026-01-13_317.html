@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：React直前まとめ（JS力チェックリスト）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：React直前まとめ（JS力チェックリスト）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">map/filterが自然に書けるか</a></li>
+  <li><a href="#sec-2">分割代入・スプレッドを使えるか</a></li>
+  <li><a href="#sec-3">コールバックと関数の受け渡し</a></li>
+  <li><a href="#sec-4">async/awaitで例外処理まで書けるか</a></li>
+  <li><a href="#sec-5">状態→描画の流れを説明できるか</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>map/filterが自然に書けるか</h3>
+  <p>今回できるようになることとして、配列を変換（map）と絞り込み（filter）でまとめて書き、可読性を高めることができます。</p>
+<p>配列はforループで逐一処理するより意図がはっきりし、副作用を避けやすいです。</p>
+<p>CodePenのJS欄で配列操作を試すと理解が早まります。</p>
+</section>
+
+<section id="sec-2">
+  <h3>分割代入・スプレッドを使えるか</h3>
+  <p>オブジェクト・配列の分割代入（destructuring）で必要な値だけ取り出し、スプレッド（...）でコピーや結合が簡潔に書けます。</p>
+<p>Reactに入るとpropsやstateの操作で頻出するため、CodePenのHTML欄に出力要素を置いて動作確認すると便利です。</p>
+</section>
+
+<section id="sec-3">
+  <h3>コールバックと関数の受け渡し</h3>
+  <p>この小項目「コールバックと関数の受け渡し」は、JavaScriptで「処理の対象をどう決めるか」と結びつけて考えると理解しやすいです。</p>
+<p>途中に空の要素があるか、基準にするキーが何かで、最終的な件数や判定が変わります。</p>
+<p>まずは最小例で「今どんな値が入っているか」をConsoleに出してから、条件分岐やループを調整すると迷いにくいです。</p>
+<pre><code class="language-js">// 例：配列の中身を確認してから、条件を固める
+const items = ["ok", "", "避けたい例", null, "ok"];
+const cleaned = items.filter(x =&gt; typeof x === "string" &amp;&amp; x.trim() !== "");
+console.log("raw=", items);
+console.log("cleaned=", cleaned);
+</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>async/awaitで例外処理まで書けるか</h3>
+  <p>async/awaitはPromiseを直線的に扱える構文で、必ずtry/catchで例外を捕まえる習慣をつけます。</p>
+<p>外部通信の代わりにsetTimeoutで疑似的に試すと、エラーハンドリングの流れが掴みやすく、CodePenでコンソールと画面の両方を確認すると学びが深まります。</p>
+</section>
+
+<section id="sec-5">
+  <h3>状態→描画の流れを説明できるか</h3>
+  <p>状態（state）を定義して、それをもとに描画（render）する単方向データフローを説明できます。状態を直接 mutate せずに新しいオブジェクトを作る点や、状態変更後に描画関数を呼ぶ流れがReactの基本理解につながります。最小コードで実際のクリック→状態更新→描画の順を確認できます。</p>
+
+<p>貼り付け場所：HTML欄にボタンと出力先、JS欄にスクリプトを貼ります。CodePenのHTML欄とJS欄を使ってください。</p>
+
+<pre><code>&lt;!-- HTML欄 --&gt;
+&lt;button id="load"&gt;データ取得&lt;/button&gt;
+&lt;div id="out"&gt;&lt;/div&gt;
+</code></pre>
+
+<p>最小コード：</p>
+
+<pre><code>// JS欄
+const data = [{id:1,name:'A',v:10},{id:2,name:'B',v:0},{id:3,name:'C',v:5}];
+const state = {items: []};
+const render = () =&gt; { document.getElementById('out').textContent =
+  state.items.map(i=&gt;`${i.name}:${i.v}`).join(' | '); };
+
+const process = items =&gt; items.filter(i=&gt;i.v&gt;0).map(({id,name,v})=&gt; ({id,name,v:v*2}));
+const fetchData = () =&gt; new Promise((res,rej)=&gt; setTimeout(()=&gt; res(data),300));
+document.getElementById('load').addEventListener('click', async () =&gt; {
+  try {
+    const res = await fetchData();
+    const items = process([...res]); // スプレッドでコピー
+    state.items = items;
+    render();
+  } catch (e) { console.error('取得失敗', e); }
+});
+</code></pre>
+
+<p>実行方法：CodePenに貼り付けてRunボタンを押すか、HTMLとJSを分けてブラウザで開き、ボタンをクリックしてください。</p>
+
+<p>確認方法：ボタン押下で画面の#outが更新されること、Consoleにエラーが出ないこと、またmap/filter後の値が期待どおりかを確認します。</p>
+
+<p>よくあるミス：mapで副作用（配列外への代入）を行い期待どおりに動かない点が多く、解決策はmapは純粋に値変換だけにして副作用はforEachや外部関数に切り分けることです。</p>
+
+<p>使い分けの基準：単純な変換はmap、絞り込みはfilter、順序や早期打ち切りが必要ならfor/of、オブジェクトの探索はfindやfor...inではなく配列変換を検討します。配列は一覧処理、オブジェクトはキーでの参照に向きます。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li>map/filterで配列操作を意図的に書けると可読性が上がります。</li>
+  <li>分割代入とスプレッドでデータ取り出しとコピーが簡潔になります。</li>
+  <li>関数を渡す設計（コールバック）はイベント駆動で有用です。</li>
+  <li>async/awaitはtry/catchで例外処理まで書く習慣が必要です。</li>
+  <li>状態を更新してから描画する単方向フローがReactの理解に直結します。</li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

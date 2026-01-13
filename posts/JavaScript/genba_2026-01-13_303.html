@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：値と型（バグを減らす型感覚）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：値と型（バグを減らす型感覚）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">number / string / boolean / null / undefined</a></li>
+  <li><a href="#sec-2">等価比較：== と === の違い</a></li>
+  <li><a href="#sec-3">暗黙の型変換で起きる事故例</a></li>
+  <li><a href="#sec-4">NaNとInfinityの扱い</a></li>
+  <li><a href="#sec-5">型を確認する（typeofの基本）</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>number / string / boolean / null / undefined</h3>
+  <p>今回できるようになることとして、基本的な値の種類を見分けて、型による振る舞いの違いでバグを減らせるようになります。</p>
+<p>number（数値）は計算に使い、string（文字列）はテキスト、boolean（真偽）は条件分岐に使います。</p>
+<p>nullは「値がないことを明示」し、undefinedは「値が未定義または未設定」を表します。これらが混ざると思わぬ挙動になるため、使い分けが重要です。</p>
+
+<p>貼り付け場所：CodePenを想定する場合はHTML欄とJS欄に分けて貼り付けます。HTML欄にはボタンと出力要素（例：#check, #result）を用意します。</p>
+
+<pre><code>&lt;!-- HTML欄（CodePenのHTMLエリアに貼ってください） --&gt;
+&lt;button id="check"&gt;型チェック実行&lt;/button&gt;
+&lt;div id="result"&gt;&lt;/div&gt;
+</code></pre>
+
+<p>最小コード：</p>
+
+<pre><code>// JS欄（CodePenのJSエリアに貼ってください）
+const out = document.getElementById('result');
+document.getElementById('check').addEventListener('click', () =&gt; {
+  const a = 0;           // number
+  const b = "0";         // string
+  const c = null;        // null
+  const d = undefined;   // undefined
+  out.innerText = [
+    `a:${a} (${typeof a})`,
+    `b:${b} (${typeof b})`,
+    `c:${c} (${typeof c})`,
+    `d:${d} (${typeof d})`,
+  ].join('\n');
+});
+</code></pre>
+</section>
+
+<section id="sec-2">
+  <h3>等価比較：== と === の違い</h3>
+  <p>==（ダブルイコール）は型変換を行った上で比較し、===（トリプルイコール）は型も値も同じ場合にのみ真になります。</p>
+<p>例えば 0 == "0" は真になりますが、0 === "0" は偽になります。</p>
+<p>条件分岐では型の違いで誤判定しやすいため、原則 === を使うことで予測可能性が高まります。</p>
+<p>既存コードで意図的な型変換がある場合に限り == を選ぶ判断が必要です。</p>
+</section>
+
+<section id="sec-3">
+  <h3>暗黙の型変換で起きる事故例</h3>
+  <p>暗黙の型変換（coercion）は便利ですが、意図しない結果を生みます。</p>
+<p>たとえば <pre><code>"" + 1</code></pre> は <pre><code>"1"</code></pre> になりますが、<pre><code>"" - 1</code></pre> は <pre><code>-1</code></pre>（文字列が数値に変換されます）になります。</p>
+<p>また、<pre><code>[] == 0</code></pre> が真になるなど直感に反する比較が起こります。</p>
+<p>文字列連結や数値計算を行うときは、明示的な変換（<pre><code>Number()</code></pre> / <pre><code>String()</code></pre>）を使うと事故が減ります。</p>
+</section>
+
+<section id="sec-4">
+  <h3>NaNとInfinityの扱い</h3>
+  <p>計算で想定外の値になることがあります。0/0 は NaN（Not-a-Number）になり、1/0 は Infinity になります。NaN は自分自身とも等しくない特徴があり、NaN === NaN は偽です。isNaN() や Number.isNaN()、Number.isFinite() を使って検査し、無効な計算結果を早めに処理すると安全性が高まります。</p>
+</section>
+
+<section id="sec-5">
+  <h3>型を確認する（typeofの基本）</h3>
+  <p>typeof 演算子はプリミティブの型確認に便利で、typeof 123 は <code>"number"</code>、typeof <code>"a"</code> は <code>"string"</code>、typeof true は <code>"boolean"</code> を返します。</p>
+<p>ただし typeof null が <code>"object"</code> を返す歴史的事情があるため、null 判定は値比較（<code>x === null</code>）で行うのが確実です。</p>
+<p>配列は typeof で <code>"object"</code> になるので、<code>Array.isArray()</code> を使うと配列判定ができます。</p>
+
+<p>実行方法：ブラウザで開くか、CodePenのRunで実行します。Consoleで結果を見ます。</p>
+
+<p>確認方法：console.logの出力や画面表示が想定どおりかで確認します（必要なら簡単な条件チェックもします）。</p>
+
+<p>よくあるミス：Consoleを開いていないため出力が見えない、または変数名のスペル違いでReferenceErrorになることがあります。</p>
+
+<p>使い分けの基準：繰り返しはfor/for...of、変換はmap、絞り込みはfilterのように目的で使い分けます。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ul>
+  <li>number/string/boolean/null/undefined は用途ごとに使い分けるとバグが減ります。</li>
+  <li>=== は型も比較するため予測可能で、原則こちらを使います。</li>
+  <li>暗黙の型変換は直感と異なる結果を生むため明示変換を検討します。</li>
+  <li>NaN は自分自身と等しくないため Number.isNaN での検査が有効です。</li>
+  <li>typeof は基本を押さえつつ null や配列の扱いを補助関数で補うと安全です。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

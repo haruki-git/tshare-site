@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：文字列とJSON（実務のデータ処理の入口）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：文字列とJSON（実務のデータ処理の入口）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>  
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">テンプレートリテラル（${}）</a></li>
+  <li><a href="#sec-2">よく使う文字列メソッド（includes/replaceなど）</a></li>
+  <li><a href="#sec-3">JSON.stringify / JSON.parse</a></li>
+  <li><a href="#sec-4">よくあるJSONエラー（ダブルクォート等）</a></li>
+  <li><a href="#sec-5">画面表示とデータの分離</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>テンプレートリテラル（${}）</h3>
+  <p>テンプレートリテラルはバッククォート（<code>`</code>）で文字列を囲み、<code>${式}</code>で値や計算結果を埋め込めます。文字列連結（<code>+</code>）より読みやすく、ログ出力や画面に出す文言を整えるときに便利です。</p>
+<p>例えば「名前」と「件数」のような可変要素が混ざる文を、1つの文字列として自然に組み立てられます。複数行もそのまま書けるので、HTML断片を作る用途にも向きます。</p>
+</section>
+
+<section id="sec-2">
+  <h3>よく使う文字列メソッド（includes/replaceなど）</h3>
+  <p>文字列処理は「判定」「置換」「整形」が頻出です。代表例として、<code>includes</code>は部分一致の判定、<code>replace</code>は置換に使います。入力の前後に空白が入りがちな場面では<code>trim</code>、特定の位置を取り出すなら<code>slice</code>がよく使われます。</p>
+<p>使い分けの基準：まずは「読みやすい最短の意図」で選びます。単純な存在チェックは<code>includes</code>、1箇所の置換は<code>replace</code>、複数回の置換や条件付きの置換は正規表現の<code>replace</code>を検討し、複雑になりそうなら“文字列を分割→配列処理→結合”の方が保守しやすいことがあります。</p>
+</section>
+
+<section id="sec-3">
+  <h3>JSON.stringify / JSON.parse</h3>
+  <p>JSONは「データを文字列にして渡す」ための共通形式です。JavaScriptでは<code>JSON.stringify</code>でオブジェクトをJSON文字列にし、<code>JSON.parse</code>でJSON文字列をオブジェクトに戻します。</p>
+
+<ul>
+  <li><code>JSON.stringify(value)</code>は、通信や保存向けに文字列化します。</li>
+  <li><code>JSON.parse(text)</code>は、受け取ったJSON文字列をデータに復元します。</li>
+</ul>
+
+<p>要チェックな点として、<code>undefined</code>や関数はJSONにできず、<code>Date</code>は文字列として出力されます。復元時に日付型へ戻す場合は、別途変換が必要です。</p>
+
+<p>最小コード：</p>
+<pre><code class="language-js">const data = { name: "田中", tags: ["js", "json"] };
+const json = JSON.stringify(data);
+const parsed = JSON.parse(json);
+console.log(`ユーザー: ${parsed.name}、タグ数: ${parsed.tags.length}`);</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>よくあるJSONエラー（ダブルクォート等）</h3>
+  <p>JSONは「JavaScriptのオブジェクト表記に似ていますが別物」です。特に次が典型的な落とし穴です。</p>
+
+<ul>
+  <li>キーと文字列はダブルクォート（<code>&quot;</code>）が必須で、シングルクォートは使えません。</li>
+  <li>末尾カンマは使えません。</li>
+  <li><code>undefined</code>や関数は表現できず、循環参照（自分自身を参照する構造）は<code>JSON.stringify</code>でエラーになり得ます。</li>
+</ul>
+
+<p>よくあるミスは、<code>JSON.parse(&quot;{'name':'田中'}&quot;)</code>のように、JSONではなく「JavaScriptっぽい文字列」を渡して<code>SyntaxError</code>になるケースです。対策は「JSONは必ずダブルクォートの厳密な形式で作る」ことで、可能なら手書きせず<code>JSON.stringify</code>で生成した文字列を使うのが安全です。</p>
+</section>
+
+<section id="sec-5">
+  <h3>画面表示とデータの分離</h3>
+  <p>実務では「データ（状態）」と「画面表示（DOM）」を分けるほど変更に強くなります。データはオブジェクトで持ち、画面は描画関数がそのデータから作る形にすると、責務が整理されます。</p>
+
+<p>貼り付け場所は、CodePenの「HTML」欄にHTML、「JS」欄にJavaScriptを貼り付けます。ローカルなら同等のHTMLファイルでも問題ありません。</p>
+
+<pre><code>// データ（状態）
+const state = {
+  user: { name: "田中" },
+  tags: ["js", "json"]
+};
+
+// 表示だけを担当する関数（データ→画面）
+function render() {
+  const out = document.getElementById("out");
+  const message = `ユーザー: ${state.user.name} / タグ: ${state.tags.join(", ")}`;
+  out.textContent = message;
+}
+
+document.getElementById("btn").addEventListener("click", () =&gt; {
+  const input = document.getElementById("input").value.trim();
+
+  // 例：簡単な整形（空なら更新しない）
+  if (input.includes(" ")) {
+    state.user.name = input.replace(/\s+/g, " ");
+  } else if (input !== "") {
+    state.user.name = input;
+  }
+
+  render();
+});
+
+// 初期描画
+render();
+</code></pre>
+
+<p>実行方法は、ブラウザでページを開き、入力欄に文字を入れてボタンを押します。CodePenならRunでも実行できます。</p>
+
+<p>確認方法は、画面の表示が更新されることを見ます。必要ならConsoleで例外が出ていないことも確認します。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ul>
+  <li><p>テンプレートリテラル（<code>${}</code>）で、変数や式を読みやすく文字列に埋め込めます。</p></li>
+  <li><p><code>includes</code>や<code>replace</code>などの文字列メソッドで、判定・置換・整形を手早く実装できます。</p></li>
+  <li><p><code>JSON.stringify</code>で文字列化し、<code>JSON.parse</code>で復元するのがJSON入出力の基本です。</p></li>
+  <li><p>JSONはダブルクォート必須・末尾カンマ不可などの“厳密な形式”があり、そこがエラー原因になりやすいです。</p></li>
+  <li><p>データ（state）と画面表示（render/DOM）を分離すると、変更に強い実装になります。</p></li>
+</ul>
+<pre><code>
+</code></pre>
+</section>
+    </article>
+  </main>
+</body>
+</html>

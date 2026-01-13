@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：デバッグと例外処理（現場で困らないため）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：デバッグと例外処理（現場で困らないため）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>   
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">consoleの使い分け（log/warn/error/table）</a></li>
+  <li><a href="#sec-2">try/catch/finallyの基本</a></li>
+  <li><a href="#sec-3">「握りつぶさない」エラー表示の方針</a></li>
+  <li><a href="#sec-4">DevToolsでブレークポイント</a></li>
+  <li><a href="#sec-5">原因切り分けの手順テンプレ</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>consoleの使い分け（log/warn/error/table）</h3>
+  <p>consoleは観測ツールです。出力の種類を揃えるだけで追跡が速くなります。</p>
+
+<ul>
+  <li>console.logは通常の経過や値の確認に使います。</li>
+  <li>console.warnは挙動が怪しい場合や非推奨など、要チェックな状況の記録に使います。</li>
+  <li>console.errorは例外や致命的な問題をスタック付きで残したい場合に使います。</li>
+</ul>
+
+<p>console.tableは配列やオブジェクトの一覧を見やすくするために使います。</p>
+
+<p>貼り付け場所は、CodePenならHTML欄に要素、JS欄にスクリプトです。ローカルならHTMLに置いてブラウザで開きます。</p>
+
+<p>最小サンプル（要点だけ）です。</p>
+
+<pre><code class="language-html">&lt;button id="btn"&gt;実行&lt;/button&gt;
+&lt;div id="out"&gt;&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-js">const btn = document.getElementById('btn');
+const out = document.getElementById('out');
+const data = [{id:1,name:'Alice'},{id:2,name:'Bob'}];
+
+btn.addEventListener('click',()=&gt;{
+  console.log('ボタン押下');
+  console.table(data);
+  try{
+    const item = risky(data);
+    out.textContent = `取得: ${item.name}`;
+  }catch(e){
+    console.warn('部分的に失敗:', e.message);
+    out.textContent = 'エラー（Console参照）';
+    console.error(e);
+  }finally{
+    console.log('処理終了');
+  }
+});
+function risky(list){
+  const it = list.find(d=&gt;d.id===3);
+  if(!it) throw new Error('データがありません');
+  return it;
+}
+</code></pre>
+
+<p>確認は、DevToolsのConsoleでlog/warn/error/tableを見て、画面の出力も確認します。</p>
+</section>
+
+<section id="sec-2">
+  <h3>try/catch/finallyの基本</h3>
+  <p>概要：tryは「失敗するかもしれない処理」、catchは「受け口」、finallyは「必ず実行する後片付け」です。</p>
+
+<p>要点：</p>
+<ul>
+  <li>try：例外が発生する可能性がある範囲を限定します。</li>
+  <li>catch (e)：例外オブジェクトでログ・通知・復旧を行います。</li>
+  <li>finally：ローディング解除やリソース解放など必須処理を行います。</li>
+</ul>
+
+<p>非同期：Promiseやasync/awaitでは適切にcatchを使います（promise.catch / try+await）。</p>
+
+<p>例（短縮）：</p>
+<pre><code class="language-js">try{ JSON.parse(s); }
+catch(e){ console.error('parse失敗', e); }
+finally{ console.log('終了'); }</code></pre>
+</section>
+
+<section id="sec-3">
+  <h3>「握りつぶさない」エラー表示の方針</h3>
+  <p>空catchやログなしで続けるのは禁止です。障害を隠すと長期化します。</p>
+<p>二段構えにするのがポイントです。</p>
+<ul>
+  <li>ユーザー向けは短く具体的にし、再試行や問い合わせ方法を示します。</li>
+  <li>開発者向けはスタックや文脈を必ず残し、console.error(e)やログ基盤を使います。</li>
+</ul>
+<p>要チェックの点は次のとおりです。</p>
+<ul>
+  <li>e.messageだけで済ませず、例外全体を残します。</li>
+  <li>必要なら再スロー（throw e）して上位で処理させます。</li>
+</ul>
+</section>
+
+<section id="sec-4">
+  <h3>DevToolsでブレークポイント</h3>
+  <p>ログで追い切れないときは「止めて見る」です。</p>
+
+<ul>
+  <li>Sourcesで行番号をクリックしてブレークポイントを置きます。</li>
+  <li>Event Listener Breakpointsでイベントごとに停止させます。</li>
+  <li>コードに一時的に <pre><code>debugger;</code></pre> を入れて停止させます。</li>
+</ul>
+
+<ul>
+  <li>停止中にScope/Watch/Call Stackで状態を確認し、再開はF8、ステップ実行はF10/F11を使います。</li>
+</ul>
+
+<p>短い運用ルールとして、最小の場所にブレークし、値とコールスタックをまず確認します。</p>
+</section>
+
+<section id="sec-5">
+  <h3>原因切り分けの手順テンプレ</h3>
+  <p>調査が迷走しないために順序を固定します。</p>
+
+<ol>
+  <li>再現条件を明確化します（入力・環境・期待/実際をそろえます）。</li>
+  <li>影響範囲を最小化します（最小データ・最小画面・最小関数に絞ります）。</li>
+  <li>ログを要所に追加します（log/warn/error/tableを目的で使い分けます）。</li>
+  <li>ブレークポイントやdebuggerで停止し、変数や分岐を確認します。</li>
+  <li>原因箇所を1点だけ修正し、同じ手順で再現確認します。</li>
+  <li>境界値や類似ケースも確認し、必要ならテストを追加します。</li>
+</ol>
+
+<p>最小コード：このあとに示す短いJavaScriptコードを使います。</p>
+
+<p>実行方法：ブラウザで開くか、CodePenのRunで実行します。Consoleで結果を見ます。</p>
+
+<p>確認方法：console.logの出力や画面表示が想定どおりかで確認します（必要なら簡単な条件チェックもします）。</p>
+
+<p>よくあるミス：Consoleを開いていないため出力が見えない、または変数名のスペル違いでReferenceErrorになることがあります。</p>
+
+<p>使い分けの基準：繰り返しはfor/for...of、変換はmap、絞り込みはfilterのように目的で使い分けます。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ul>
+  <li>console.log、console.warn、console.error、console.tableを使い分けてログの形式を揃えると、調査が速くなります。</li>
+  <li>try/catch/finallyは例外処理の基本であり、後片付けはfinallyに集約すると読みやすくなります。</li>
+  <li>エラーは握りつぶさず、ユーザー向けには短い文面を出しつつ、開発者向けには詳細ログとしてconsole.error(e)を残します。</li>
+  <li>DevToolsのブレークポイントやdebuggerを使うと、値とコールスタックを直接確認できます。</li>
+  <li>切り分けは「再現固定→最小化→ログ→停止して確認→1点修正→再確認」の順に進めると安定します。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：設計（状態→描画の形を作る）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：設計（状態→描画の形を作る）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">state（状態）を1か所に集める</a></li>
+  <li><a href="#sec-2">render（描画）を1本にする</a></li>
+  <li><a href="#sec-3">handler（イベント）→ state更新 → render</a></li>
+  <li><a href="#sec-4">破壊的変更（mutate）を減らす</a></li>
+  <li><a href="#sec-5">部品化の考え方（Reactの入口）</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>state（状態）を1か所に集める</h3>
+  <p>今回できるようになることとして、状態を一か所にまとめ、状態を基準に画面を更新する設計ができるようになります。</p>
+<p>アプリの状態（state）は入力値や一覧、チェック状態などを含む単一のオブジェクトにまとめると管理が楽になります。</p>
+<p>CodePenやブラウザで試す場合、stateはJS側に置いておき、HTMLは描画先だけ用意します。</p>
+<p>状態を分散させると同期が取れずバグになりやすいため、まずは1つに集約する癖をつけます。</p>
+</section>
+
+<section id="sec-2">
+  <h3>render（描画）を1本にする</h3>
+  <p>画面への反映はrender関数を1つにまとめて実装します。</p>
+<p>renderはstateを参照してDOMを作り直す役割だけに絞ると分かりやすいです。</p>
+<p>複数箇所でDOM更新ロジックをばらばらに書くと整合が取れなくなります。</p>
+<p>renderはstateの「読み取り専用」の関数にして、イベントで状態変更が起きたら必ずrenderを呼ぶ、というルールを守ると画面の一貫性が保てます。</p>
+</section>
+
+<section id="sec-3">
+  <h3>handler（イベント）→ state更新 → render</h3>
+  <p>イベントハンドラはイベントの受け取りとstate更新だけを担当し、更新後にrenderを呼び出します。例えばボタン押下でリストに項目を追加する場合、ハンドラで新しいstateを作って代入し、最後にrenderを1回呼ぶ流れです。イベントバインドは初期化時（DOMContentLoadedやDOMContentLoaded相当）にまとめて行うと、どこでハンドラが登録されているか分かりやすくなります。</p>
+
+<p>最小コード：</p>
+<p>貼り付け場所：CodePen想定です。HTML欄にHTML、JS欄にJavaScriptを貼ってください。</p>
+
+<pre><code>&lt;!-- HTML欄 --&gt;
+&lt;input id="todoInput" placeholder="項目を入力"&gt;
+&lt;button id="addBtn"&gt;追加&lt;/button&gt;
+&lt;div id="list"&gt;&lt;/div&gt;
+</code></pre>
+
+<pre><code>// JS欄
+let state = { todos: [] };
+function render() {
+  const out = document.getElementById('list');
+  out.innerHTML = state.todos.map(t =&gt;
+    `&lt;div data-id="${t.id}"&gt;&lt;input type="checkbox" ${t.done?'checked':''}&gt; ${t.text}&lt;/div&gt;`
+  ).join('');
+  attachHandlers();
+}
+function addTodo(text) {
+  state = { ...state, todos: [...state.todos, { id: Date.now(), text, done: false }] };
+  render();
+}
+function toggleTodo(id) {
+  state = { ...state, todos: state.todos.map(t =&gt; t.id===id? { ...t, done: !t.done } : t) };
+  render();
+}
+function attachHandlers() {
+  document.querySelectorAll('#list div').forEach(el =&gt; {
+    el.querySelector('input').onclick = () =&gt; toggleTodo(Number(el.dataset.id));
+  });
+}
+document.getElementById('addBtn').onclick = () =&gt; {
+  const v = document.getElementById('todoInput').value.trim();
+  if (v) addTodo(v);
+};
+render();
+</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>破壊的変更（mutate）を減らす</h3>
+  <p>stateを直接書き換える（破壊的変更）はバグの原因になりやすいです。</p>
+<p>配列やオブジェクトを更新するときはスプレッド構文やmap/filterで新しい値を作ると履歴が追いやすくなります。</p>
+<p>例えば配列の要素を切り替えるときはmapで新配列を返し、追加はスプレッドで新しい配列を作り、削除はfilterで作る方針が分かりやすいです。</p>
+<p>イミュータブルな更新は意図しない共有参照を防ぎ、renderの信頼性も高めます。</p>
+</section>
+
+<section id="sec-5">
+  <h3>部品化の考え方（Reactの入口）</h3>
+  <p>画面を小さな部品（コンポーネント）に分け、各部品がstateの一部を受け取って描画するイメージを持つと成長が早いです。</p>
+<p>最初は関数でDOM片を返すだけでも十分です（props相当を引数にします）。</p>
+<p>Reactはこの考えを徹底しているライブラリなので、今回の設計に慣れるとReactの学習がスムーズになります。</p>
+<p>部品化は再利用とテストを楽にします。</p>
+
+<p>実行方法：ブラウザで開くか、CodePenのRunで実行します。Consoleで結果を見ます。</p>
+
+<p>確認方法：console.logの出力や画面表示が想定どおりかで確認します（必要なら簡単な条件チェックもします）。</p>
+
+<p>よくあるミス：Consoleを開いていないため出力が見えない、または変数名のスペル違いでReferenceErrorになることがあります。</p>
+
+<p>使い分けの基準：繰り返しはfor/for...of、変換はmap、絞り込みはfilterのように目的で使い分けます。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><p>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</p></li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li>stateは1か所に集めると同期が取りやすくなります。</li>
+  <li>画面更新はrenderを一本化して責務を分けます。</li>
+  <li>イベントはハンドラでstateを更新し、更新後にrenderを呼びます。</li>
+  <li>破壊的変更を避け、スプレッドやmap/filterで新しい値を作ると安全です。</li>
+  <li>小さな部品に分ける考え方はReactの学習につながります。</li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

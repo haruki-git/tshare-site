@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：ES ModulesとViteの地図（概念だけ）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1768350000000">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：ES ModulesとViteの地図（概念だけ）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section style="margin-top:12px;">
+        <p>
+          この記事は「導入できる・できない」はひとまず置いて、<strong>ES Modules（イーエス・モジュール）</strong>と
+          <strong>Vite（ヴィート）</strong>を、地図として頭に入れるための概念整理です。
+          実務でプロジェクトを見たときに「何をやっている構成なのか」が分かることを目的にします。
+        </p>
+
+        <div class="card" style="margin-top:12px; padding:12px;">
+          <p style="margin:0 0 8px 0;"><strong>目次</strong></p>
+          <ol style="margin:0; padding-left:1.2em;">
+            <li><a href="#s1">import/exportの基本（named/default）</a></li>
+            <li><a href="#s2">依存関係が見えるメリット</a></li>
+            <li><a href="#s3">npmとpackage.jsonの超概要</a></li>
+            <li><a href="#s4">Viteの役割（開発サーバ・ビルド）</a></li>
+            <li><a href="#s5">会社PCで導入不可でも理解できる範囲</a></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 id="s1" style="margin:0 0 8px 0;">import/exportの基本（named/default）</h2>
+        <p>
+          ES Modulesは「ファイルを部品として分割して、読み込んで組み立てる」仕組みです。
+          その中心が <strong>export（外に出す）</strong> と <strong>import（取り込む）</strong> です。
+        </p>
+
+        <p><strong>named export（名前付き）</strong>は、同じファイルから複数個出せます。</p>
+        <pre><code>// utils.js
+export function add(a, b) {
+  return a + b;
+}
+export const VERSION = "1.0.0";
+
+// main.js
+import { add, VERSION } from "./utils.js";
+console.log(add(2, 3), VERSION);
+</code></pre>
+
+        <p><strong>default export（デフォルト）</strong>は、そのファイルの「代表1つ」を出すイメージです。</p>
+        <pre><code>// logger.js
+export default function log(msg) {
+  console.log("[LOG]", msg);
+}
+
+// main.js
+import log from "./logger.js";
+log("hello");
+</code></pre>
+
+        <p>
+          使い分けの雑な目安は、<br>
+          ・複数の道具箱として出したい → named<br>
+          ・そのファイルの主役が1つ → default<br>
+          くらいでOKです。
+        </p>
+
+        <p>
+          なお、ブラウザでES Modulesを使うときは、HTML側で <strong>typeがmodule</strong> になっていることが多いです。
+        </p>
+        <pre><code>&lt;script type="module" src="/src/main.js"&gt;&lt;/script&gt;
+</code></pre>
+      </section>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 id="s2" style="margin:0 0 8px 0;">依存関係が見えるメリット</h2>
+        <p>
+          import/exportで分割すると、ファイル同士の「つながり（依存関係）」が見えるようになります。
+          これが地味に強いです。
+        </p>
+
+        <ul style="margin-top:8px;">
+          <li><strong>影響範囲が追いやすい</strong>：この関数を直したら、どこに効くかが分かりやすい</li>
+          <li><strong>再利用しやすい</strong>：便利関数を切り出して、別の場所でも使える</li>
+          <li><strong>テストしやすい</strong>：部品単位で確認できる</li>
+          <li><strong>読みやすい</strong>：1ファイルが巨大になりにくい</li>
+        </ul>
+
+        <p>
+          逆に、依存がぐちゃぐちゃだと「どこを直すと壊れるか」が見えにくくなります。
+          モジュール化は、その事故を減らすための整理術でもあります。
+        </p>
+      </section>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 id="s3" style="margin:0 0 8px 0;">npmとpackage.jsonの超概要</h2>
+        <p>
+          <strong>npm（エヌピーエム）</strong>は、JavaScriptの部品（ライブラリ）を管理する仕組みです。
+          その設計図が <strong>package.json</strong> です。
+        </p>
+
+        <p>package.jsonに書かれている代表的な情報は、だいたい次の3つです。</p>
+        <ul style="margin-top:8px;">
+          <li><strong>dependencies</strong>：実行に必要なライブラリ（本番でも使う）</li>
+          <li><strong>devDependencies</strong>：開発中だけ必要な道具（ビルドや整形など）</li>
+          <li><strong>scripts</strong>：よく使うコマンドのショートカット（例：dev、build）</li>
+        </ul>
+
+        <pre><code>{
+  "name": "my-app",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
+</code></pre>
+
+        <p>
+          ここで大事なのは、コマンド自体を暗記することよりも、<br>
+          「このプロジェクトは、どんな部品を使って、どう起動して、どう作っているか」<br>
+          が package.json を見れば分かる、という点です。
+        </p>
+      </section>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 id="s4" style="margin:0 0 8px 0;">Viteの役割（開発サーバ・ビルド）</h2>
+        <p>
+          <strong>Vite（ヴィート）</strong>は、ざっくり言うと「開発しやすくして、配布用にもまとめてくれる道具」です。
+          主な役割は2つです。
+        </p>
+
+        <h3 style="margin:12px 0 6px 0;">1. 開発サーバ</h3>
+        <p>
+          開発中にページを素早く表示したり、変更を即反映したりします。
+          よく「ホットリロード」みたいな言い方もします（保存したらすぐ反映される体験）。
+        </p>
+
+        <h3 style="margin:12px 0 6px 0;">2. ビルド</h3>
+        <p>
+          配布用に、ファイルをまとめたり、軽くしたりします。
+          例えば、複数のJSファイルを最適化して、ブラウザで読み込みやすい形にします。
+          ここで出来上がる成果物（ディストなど）をサーバに置くと、本番サイトとして動く、というイメージです。
+        </p>
+
+        <p>
+          つまりViteは、<br>
+          「開発中は快適に」＋「本番用はきちんとまとめる」<br>
+          を両方やる立ち位置、と思っておけばOKです。
+        </p>
+      </section>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 id="s5" style="margin:0 0 8px 0;">会社PCで導入不可でも理解できる範囲</h2>
+        <p>
+          会社PCでツール導入ができない場合でも、理解できる範囲は意外と広いです。
+          「実行」は無理でも「読む・構造を把握する・説明できる」はできます。
+        </p>
+
+        <ul style="margin-top:8px;">
+          <li><strong>import/exportの読み方</strong>：どの部品をどこで使っているか追える</li>
+          <li><strong>フォルダ構成の意味</strong>：srcがソース、distが配布物、などの典型が分かる</li>
+          <li><strong>package.jsonの読み取り</strong>：何を使っているか、起動やビルドが何か分かる</li>
+          <li><strong>Viteの役割の説明</strong>：開発サーバとビルドの概念を説明できる</li>
+        </ul>
+
+        <p>
+          実務では「自分のPCで試せない」状況でも、<br>
+          ・ソースを読んで原因を当てる<br>
+          ・環境チームや開発チームに「何が必要か」を言語化する<br>
+          だけで価値が出る場面があります。
+        </p>
+
+        <div class="card" style="margin-top:12px; padding:12px;">
+          <p style="margin:0;"><strong>ワンポイント</strong></p>
+          <p style="margin:8px 0 0 0;">
+            「Viteを触れない」＝「分からない」ではありません。<br>
+            まずは <strong>import/export</strong> と <strong>package.json</strong> を読めるようになるだけで、プロジェクト理解が一気に進みます。
+          </p>
+        </div>
+      </section>
+
+      <footer style="margin-top:14px;">
+        <p class="meta" style="margin:0;">以上。</p>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>

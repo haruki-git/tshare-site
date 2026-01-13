@@ -1,0 +1,166 @@
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p><code>typeof null</code> は歴史的事情で <code>"object"</code> になります（null判定は <code>value === null</code> を使います）。</p></li>
+    <li><p><code>NaN</code> は「自分自身とも等しくない」ので <code>value === NaN</code> は常にfalseです。判定は <code>Number.isNaN(value)</code> を使います。</p></li>
+    <li><p>小数は誤差が出ます（例：<code>0.1 + 0.2 !== 0.3</code>）。金額などは「整数（円・最小単位）」で扱うのが安全です。</p></li>
+  </ul>
+</section>
+
+304
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p><code>var</code> は関数スコープで巻き上げ（hoist）され、意図しない上書きが起きやすいので基本は避けます。</p></li>
+    <li><p><code>const</code> は「再代入禁止」なだけで、中身（オブジェクト/配列）の変更は可能です。凍結が必要なら <code>Object.freeze</code> を検討します（浅い凍結に注意）。</p></li>
+    <li><p>グローバル（最上位）に変数を置くと名前衝突の原因になります。なるべく関数やモジュールの内側に閉じます。</p></li>
+  </ul>
+</section>
+
+
+305 JavaScript：条件分岐と繰り返し：書き方を固める
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p><code>if (x = 1)</code> のような「代入」を条件に書くミスが起きがちです。比較は <code>===</code> を基本にします。</p></li>
+    <li><p><code>switch</code> は <code>break</code> を忘れるとフォールスルーします。意図がない限り必ず入れます。</p></li>
+    <li><p>ループの「回数・境界（&lt; と &lt;=）」はバグの温床です。配列は <code>i &lt; arr.length</code> を基本にします。</p></li>
+  </ul>
+</section>
+
+
+
+306 JavaScript：関数：Reactの前に必須の書き方
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p>アロー関数は <code>this</code> を「外側のスコープから引き継ぐ」ため、メソッド用途で安易に置き換えると挙動が変わります。</p></li>
+    <li><p>コールバックに渡す関数は「呼び出し結果」ではなく「関数そのもの」を渡します（<code>fn</code> と <code>fn()</code> を混同しない）。</p></li>
+    <li><p>引数が増えたら、オブジェクト引数（<code>{...}</code>）にまとめると呼び出し側のミスを減らせます。</p></li>
+  </ul>
+</section>
+
+
+307 JavaScript：配列：map/filterが使えるようになる
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p><code>sort()</code> / <code>reverse()</code> / <code>splice()</code> は配列を破壊的に変更します。元を残したいならコピーしてから使います（例：<code>[...arr].sort()</code>）。</p></li>
+    <li><p><code>for...in</code> は配列向きではありません（キー列挙なので順序や拡張プロパティで事故ります）。配列は <code>for...of</code> や <code>map</code> を使います。</p></li>
+    <li><p><code>map</code> / <code>filter</code> 内で外側の変数を書き換えると追跡が難しくなります。できるだけ「入力→出力」を純粋にします。</p></li>
+  </ul>
+</section>
+
+
+308 JavaScript：オブジェクト：データを整理して扱う
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p>浅いコピー（<code>{...obj}</code>）はネストしたオブジェクトまで複製しません。内部を編集すると元も変わる可能性があります。</p></li>
+    <li><p>キーが動的（変数）ならドット記法ではなくブラケット記法（<code>obj[key]</code>）を使います。</p></li>
+    <li><p>存在しないプロパティ参照は <code>undefined</code> になります。深い参照は <code>obj?.a?.b</code> のように安全にたどると落ちにくいです。</p></li>
+  </ul>
+</section>
+
+
+309 JavaScript：文字列とJSON：実務のデータ処理の入口
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p>JSONは「キーも値も基本ダブルクォート」です。シングルクォートや末尾カンマはエラーになります。</p></li>
+    <li><p><code>JSON.parse</code> は壊れた入力で例外を投げるので、外部データや保存データは <code>try/catch</code> で守ります。</p></li>
+    <li><p>ユーザー入力を <code>innerHTML</code> に入れるのは避けます。基本は <code>textContent</code> を使います（XSS対策）。</p></li>
+  </ul>
+</section>
+
+
+310 JavaScript：デバッグと例外処理：現場で困らないために
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p><code>catch (e) {}</code> のように握りつぶすと原因が消えます。最低でも <code>console.error(e)</code> を残します。</p></li>
+    <li><p>ログは出しすぎると本番でノイズになります。必要なら「開発中だけ出す」フラグを作って切り替えます。</p></li>
+    <li><p>エラーは「起きた場所」より「起きた原因」を追います。直前の入力値・状態・分岐をログで確認すると早いです。</p></li>
+  </ul>
+</section>
+
+
+311 JavaScript：DOM操作：ブラウザで完結するUI作り
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p><code>querySelector</code> が <code>null</code> を返すと、その後の <code>.textContent</code> で落ちます。取得結果がある前提なら早めにチェックします。</p></li>
+    <li><p>表示は基本 <code>textContent</code> を使い、<code>innerHTML</code> は最小限にします（意図しないHTML注入を防ぐ）。</p></li>
+    <li><p>DOMを何度も直接更新すると重くなりがちです。まず state を作り、最後にまとめて render する形が安定します。</p></li>
+  </ul>
+</section>
+
+
+312 JavaScript：イベント：クリック・入力・フォームを扱う
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p><code>submit</code> はページ遷移するので、SPA風に扱うなら <code>event.preventDefault()</code> が必要です。</p></li>
+    <li><p>入力イベントは連発します。重い処理を入れるなら、軽い検証だけにするか、間引き（debounce）を検討します。</p></li>
+    <li><p>連打で二重実行が起きるなら、ボタンを一時的にdisabledにするなど「再入防止」を入れます。</p></li>
+  </ul>
+</section>
+
+
+313 JavaScript：非同期：ネットワーク無しでも理解する
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p><code>setTimeout</code> の順序は「待ち時間が短い順に即実行」ではなく、キューの都合で前後します。ログで順序を確認しながら学ぶのが安全です。</p></li>
+    <li><p><code>async/await</code> でも例外は起きます。非同期処理は <code>try/catch</code> で包まないと「落ちた理由」が見えづらくなります。</p></li>
+    <li><p>並列（<code>Promise.all</code>）は一つでも失敗すると全体が失敗扱いになります。必要なら個別に失敗を吸収する設計にします。</p></li>
+  </ul>
+</section>
+
+
+314 JavaScript：データ保存：localStorageで安全に永続化
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p>localStorageは「文字列しか保存できない」ので、オブジェクトは <code>JSON.stringify</code> → <code>JSON.parse</code> が前提です。</p></li>
+    <li><p>保存データは壊れたり古い形式のまま残ることがあります。読み込みは <code>try/catch</code> と「初期値フォールバック」を用意します。</p></li>
+    <li><p>容量は無限ではありません。大きいデータ（画像や大量ログ）を入れる用途には向きません。</p></li>
+  </ul>
+</section>
+
+
+315 JavaScript：設計：状態→描画の形を作る（Reactの準備）
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p>stateを複数箇所に分散させると不整合が起きます。まずは「1か所に集約」が基本です。</p></li>
+    <li><p>stateを直接書き換える（破壊的変更）と、差分追跡が難しくなります。コピーして更新する流れを徹底します。</p></li>
+    <li><p>renderがあちこちに散ると表示が崩れます。UI更新は「render 1本」に寄せると安全です。</p></li>
+  </ul>
+</section>
+
+
+316 JavaScript：ES ModulesとViteの地図（概念だけ）
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p>ブラウザでES Modulesを使う場合、<code>&lt;script type="module"&gt;</code> が必要です（通常scriptと挙動が違います）。</p></li>
+    <li><p><code>import</code> はローカルファイル直開き（file://）だと制限で動かないことがあります。基本は開発サーバ前提です。</p></li>
+    <li><p>会社PCでnpm導入ができない場合は、概念理解に留め、実行は個人環境や許可された環境で行うのが安全です。</p></li>
+  </ul>
+</section>
+
+
+317 JavaScript：React直前まとめ：JS力チェックリスト
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+    <li><p>「書ける」より「説明できる」が重要です。なぜその書き方が安全か（破壊的変更しない等）を言語化できると強いです。</p></li>
+    <li><p>チェックは一気にやらず、ミニ課題（小さいUI）で確認するのが確実です。詰まったらConsoleと最小再現に戻します。</p></li>
+    <li><p>理解が曖昧なままReactに行くと躓きやすいので、map/filter、分割代入、非同期の例外処理は最低限固めます。</p></li>
+  </ul>
+</section>
+
+
+

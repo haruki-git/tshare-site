@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>まず動かす：JavaScriptの最小セット</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：まず動かすための最小セット</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">scriptの書き方（HTMLとJSのつなぎ方）</a></li>
+  <li><a href="#sec-2">console.logで動作確認する</a></li>
+  <li><a href="#sec-3">コメント・改行・セミコロンの基本</a></li>
+  <li><a href="#sec-4">エラーの読み方（まずここを見る）</a></li>
+  <li><a href="#sec-5">小さく作って小さく直すコツ</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>scriptの書き方（HTMLとJSのつなぎ方）</h3>
+  <p>今回できるようになることとして、ブラウザでJavaScriptを動かしてConsoleと画面の両方で結果を確認できるようになります。HTML内に&lt;script&gt;を書く方法と、外部ファイル（またはCodePenのJS欄）を使う方法を説明します。基本は「HTMLに要素を置く→JSで参照して操作する」です。ここでは簡単なボタンで数を増やし、画面表示とConsole出力を両方行う最小の例を示します。</p>
+
+<p>最小コード：</p>
+<pre><code class="language-html">&lt;!-- HTML欄（CodePenのHTML欄へ貼る） --&gt;
+&lt;button id="btn"&gt;クリック&lt;/button&gt;
+&lt;div id="out"&gt;0&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-javascript">// JS欄（CodePenのJS欄へ貼る）
+const btn = document.getElementById('btn');
+const out = document.getElementById('out');
+let count = 0;
+
+btn.addEventListener('click', function () {
+  count += 1;
+  out.textContent = count;             // 画面に表示
+  console.log('クリック数:', count);   // Consoleで確認
+});
+</code></pre>
+
+<p>貼り付け場所として、CodePenを想定する場合はHTML欄に上のHTMLを、JS欄に最小コードのJavaScriptを貼ります。ローカルで試す場合はHTMLに&lt;script&gt;でJSを直接書くか、外部.jsを読み込みます。</p>
+</section>
+
+<section id="sec-2">
+  <h3>console.logで動作確認する</h3>
+  <p>console.logは動作確認の第一歩で、値や変数の中身、関数の呼び出し順を確かめるのに向いています。</p>
+<p>Browserの開発者ツール（DevTools）のConsoleタブを開き、クリックなどの操作をしてログが出るか確認します。</p>
+<p>長いオブジェクトはconsole.tableやconsole.dirで見やすくなりますが、まずはconsole.logで期待する値が出るかを確認します。</p>
+<p>ログは先に仕込んで後から消す習慣が便利です。</p>
+<p>実行方法は、CodePenなら画面右上のRunで実行し、ローカルならHTMLをブラウザで開きます。</p>
+<p>ボタンをクリックするなどでイベントを発生させると、JavaScriptが動きます。</p>
+</section>
+
+<section id="sec-3">
+  <h3>コメント・改行・セミコロンの基本</h3>
+  <p>JavaScriptのコメントは<code>//</code>と<code>/* ... */</code>の二種類で、コードの説明や一時無効化に使います。改行は可読性のために積極的に使い、ステートメントの区切りにセミコロン（;）は不要な場面もありますが、自動セミコロン挿入（ASI）の挙動で意図しない結合が起きることがあります。慣れないうちは短い行ごとにセミコロンを付けるルールにするとトラブルが減ります。短い関数や変数は一行でなく改行して書くと読みやすくなります。</p>
+<p>よくあるミスとして、DOM要素を取得する前にスクリプトが走って<code>null</code>を参照することが多いです。対処法は<code>&lt;script&gt;</code>を<code>&lt;/body&gt;</code>直前に置くか、<code>DOMContentLoaded</code>イベントで処理を実行することです。</p>
+</section>
+
+<section id="sec-4">
+  <h3>エラーの読み方（まずここを見る）</h3>
+  <p>エラーが出たら、まずブラウザのConsoleで赤いメッセージの先頭を見ます。そこに「種類（例：TypeError）」「エラーメッセージ」「ファイル名:行番号」が表示されます。行番号をクリックするとソースが開くので、該当行の前後を確認して変数が未定義か関数名が誤っているかを判断します。stack（呼び出し履歴）を辿ると、どの関数経由で来たかが分かります。最初はエラーメッセージ全文と行番号だけで、問題の大半が分かります。</p>
+<p>確認方法としては、Consoleでログとエラーメッセージを確認し、必要ならSourcesタブでブレークポイントを置いて動作を追います。画面表示も同時に見て、DOMの状態とログを比べます。</p>
+</section>
+
+<section id="sec-5">
+  <h3>小さく作って小さく直すコツ</h3>
+  <p>大きな機能を一気に作らず、ボタン一つ、関数一つといった小さな単位で作り、動作を確認してから次へ進むと修正が楽になります。</p>
+<p>テストは手動でもconsole.logで十分で、失敗したら戻して別のアプローチを試します。</p>
+<p>Gitやスナップショットを使うと差分で何が変わったか追いやすくなります。</p>
+<p>使い分けの基準として、ループは単純な数値反復ならforを選び、配列の要素を逐一処理して新配列を作るならmapを使い、条件で絞るならfilterを使うと整理しやすいです。</p>
+<p>オブジェクトのキー操作や参照を多用するならfor...inやObject.keysを検討すると運用しやすくなります。</p>
+<p>配列は順序と繰り返し処理に強く、オブジェクトはキーによる参照に向くため、この違いで使い分けると分かりやすいです。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><p>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</p></li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li>HTMLに要素を置き、JavaScriptで参照して操作する流れが基本です。</li>
+  <li><code>console.log</code>で値を出力して動作を確かめる習慣を付けます。</li>
+  <li>コメントと改行で可読性を上げ、セミコロンは慣れるまで付けると安全です。</li>
+  <li>エラーはConsoleの赤いメッセージと行番号をまず見ると原因が分かりやすいです。</li>
+  <li>小さく作って小さく直し、適切なループ・配列・オブジェクトの使い分けを意識します。</li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：変数とスコープ（let/constの使い分け）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：変数とスコープ（let/constの使い分け）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">letとconst（再代入・再宣言）</a></li>
+  <li><a href="#sec-2">ブロックスコープの考え方</a></li>
+  <li><a href="#sec-3">関数スコープとグローバル汚染</a></li>
+  <li><a href="#sec-4">参照型の落とし穴（constでも中身は変わる）</a></li>
+  <li><a href="#sec-5">安全な命名と整理のコツ</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>letとconst（再代入・再宣言）</h3>
+  <p>今回できるようになることとして、letとconstの違いを理解して適切に使い分けられるようになります。</p>
+<p>constは再代入が禁止で、letは再代入が可能です。</p>
+<p>どちらも同じ名前で再宣言はできません（同じスコープ内）。</p>
+<p>短い例を実行して違いを確かめると感覚がつかめます。</p>
+<p>貼り付け場所：CodePenを想定する場合、HTMLはHTML欄に、スクリプトはJS欄に貼り付けます。</p>
+<p>ローカルで試す場合はHTML欄のボタンと出力要素を含む部分をindex.htmlに置き、JSは&lt;script&gt;で読み込みます。</p>
+</section>
+
+<section id="sec-2">
+  <h3>ブロックスコープの考え方</h3>
+  <p>ブロックスコープとは中括弧({})内だけ有効な変数範囲で、let/constはこれを持ちます。</p>
+<p>ifやforの中で定義したlet変数は外から見えないため、同じ名前を他で使っても衝突しにくくなります。</p>
+<p>短いブロック例を動かして挙動を確認すると理解が深まります。</p>
+</section>
+
+<section id="sec-3">
+  <h3>関数スコープとグローバル汚染</h3>
+  <p>関数内でvarを使わない、あるいは宣言を忘れて代入すると暗黙的にグローバル変数になり、他のスクリプトを壊しやすくなります。</p>
+<p>関数スコープは関数単位で有効範囲が決まるため、ローカルにするなら必ずlet/constで宣言します。</p>
+<p>小さな関数でグローバルが生える例を確認してください。</p>
+</section>
+
+<section id="sec-4">
+  <h3>参照型の落とし穴（constでも中身は変わる）</h3>
+  <p>constで宣言したオブジェクトや配列は参照が固定されるだけで、内部のプロパティや要素は変更できます。</p>
+<p>オブジェクトの再代入はできませんが、プロパティの変更やpushは可能です。</p>
+<p>これを誤解すると「constでも値が変わった」と感じるため、参照と中身の違いを意識するとよいです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>安全な命名と整理のコツ</h3>
+  <p>命名は何を表すか一目で分かるようにして、グローバル変数は避けます。接頭辞やキャメルケースで役割を出し、関数は動詞＋目的語、変数は名詞にします。ファイル内で使う小さなヘルパー関数は名前空間（オブジェクト）にまとめると衝突が減ります。</p>
+
+<p>最小コード：</p>
+<pre><code>// 短い実例（CodePenのJS欄に貼る）
+const MAX = 3;
+let count = 0;
+const user = {name: 'A'};
+
+function clickHandler() {
+  // ブロックスコープ
+  if (count &lt; MAX) {
+    let inside = 'visible';
+    console.log('inside:', inside);
+  }
+  // 参照型の中身は変えられる
+  user.name = 'B';
+  count++;
+  document.getElementById('out').textContent = `count=${count}, user=${user.name}`;
+}
+
+document.getElementById('btn').addEventListener('click', clickHandler);
+</code></pre>
+
+<pre><code>&lt;!-- HTML欄に貼る（CodePenのHTML欄） --&gt;
+&lt;button id="btn"&gt;クリック&lt;/button&gt;
+&lt;div id="out"&gt;count=0, user=A&lt;/div&gt;
+</code></pre>
+
+<p>実行方法は、CodePenにHTMLをHTML欄、JavaScriptをJS欄にそれぞれ貼り付けてRunボタンを押すか、ローカルならindex.htmlをブラウザで開きます。</p>
+
+<p>確認方法は、ボタンをクリックして画面の表示が変わることを見ます。さらにブラウザのConsoleを開くと、ブロックスコープ内のconsole.log出力や、誤ったグローバルがあるとwindowオブジェクト上に出ることを確認できます。</p>
+
+<p>よくあるミスは、宣言を忘れて代入すると暗黙のグローバルになることです（例: foo = 1）。原因は宣言漏れで、直し方は必ずlet/constで宣言することと、厳格モード（'use strict'）を使って検出することです。</p>
+
+<p>使い分けの基準は、原則として「constをデフォルトにして、必要なときだけletにする」です。再代入しない固定値や参照はconst、ループやカウンタのように値を更新するものはletにします。配列やオブジェクトは構造の変更が多い場合でも参照自体を変えないならconstを使い、反復処理は要素操作ならmap/filter、インデックス操作が必要ならforやfor...ofを選びます。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li><p>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</p></li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>constは再代入が不可で、letは再代入が可能ですが、どちらも同一スコープ内での再宣言は不可です。</p></li>
+  <li><p>ブロックスコープにより、同名変数の衝突を避けやすくなります。</p></li>
+  <li><p>宣言を忘れるとグローバル汚染を招きやすいため、必ず宣言してから使うようにします。</p></li>
+  <li><p>constは参照を固定するだけなので、オブジェクトの中身は変更できる場合があります。</p></li>
+  <li><p>命名は意味が分かるようにし、constをデフォルトとして、必要な場合にだけletを使うようにします。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

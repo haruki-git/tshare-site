@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：DOM操作（ブラウザで完結するUI作り）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：DOM操作（ブラウザで完結するUI作り）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>     
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">querySelectorで要素を取る</a></li>
+  <li><a href="#sec-2">textContentとinnerHTML（安全な方を基本に）</a></li>
+  <li><a href="#sec-3">classListで見た目を切り替える</a></li>
+  <li><a href="#sec-4">data-*属性で要素に情報を持たせる</a></li>
+  <li><a href="#sec-5">小さなrender関数で再描画する</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>querySelectorで要素を取る</h3>
+  <p>今回できるようになることとして、querySelectorやquerySelectorAllでHTML要素を選んで操作できるようになります。</p>
+<p>querySelectorは最初に見つかった要素を文字列（CSSセレクタ）で返します。idは#id、クラスは.classのように書きます。子孫セレクタや属性セレクタも使えます。</p>
+<p>複数取りたい場合はquerySelectorAllでNodeListを取得してforEachで回すのが基本です。</p>
+<p>DOMへアクセスするときは、スクリプトをbody末尾に置くかDOMContentLoadedで待つと安全です。</p>
+</section>
+
+<section id="sec-2">
+  <h3>textContentとinnerHTML（安全な方を基本に）</h3>
+  <p>textContentは文字列だけを安全に入れ替えますが、innerHTMLはHTMLをパースしてタグを反映します。</p>
+<p>ユーザー入力や外部データを表示する際は、基本的にtextContentを使うのが安全です。</p>
+<p>HTMLを使いたい場面は、静的で信頼できるテンプレートだけに限定するとよいです。</p>
+<p>サニタイズ処理が必要なケースは後から検討しますが、まずはtextContentを既定にしてください。</p>
+</section>
+
+<section id="sec-3">
+  <h3>classListで見た目を切り替える</h3>
+  <p>classListは要素のクラス操作を簡潔にします。add/remove/toggle/containsがあり、toggleを使うとクリックで切り替えるUIが作りやすいです。</p>
+<p>スタイルはCSS側にまとめておき、JSは状態（クラス）だけを切り替えると役割分担が明確になります。</p>
+<p>複雑になったら状態名を定数化してミスを減らすことがポイントです。</p>
+</section>
+
+<section id="sec-4">
+  <h3>data-*属性で要素に情報を持たせる</h3>
+  <p>data-*属性は要素に小さなメタ情報を持たせるのに便利です。</p>
+<p>datasetプロパティから読み書きでき、数値やIDなどをDOMに結びつけておくとイベントハンドラ側で扱いやすくなります。</p>
+<p>サーバーから渡された識別子や、UIのモードなどを持たせる用途に向いています。</p>
+<p>DOMとデータの簡単な紐付けに役立ちます。</p>
+</section>
+
+<section id="sec-5">
+  <h3>小さなrender関数で再描画する</h3>
+  <p>UI更新は小さなrender関数にまとめると、状態と表示の整合性が保ちやすくなります。状態（オブジェクトや配列）を更新したらrenderを呼び出してDOMをまとめて更新する設計がシンプルです。部分的に再描画する場合は、差分更新か必要な要素だけ書き換える工夫をするとパフォーマンスが安定します。少なくとも「状態を変更→render呼び出し」の流れを守ることをお勧めします。</p>
+
+<p>貼り付け場所：CodePenを想定する場合はHTML欄にHTMLを、JS欄にJavaScriptを貼り付けてください。HTML欄にはボタン（#btn）や表示エリア（#out）を用意してあります。</p>
+
+<pre><code>&lt;!-- HTML欄に貼る（CodePenのHTML欄） --&gt;
+&lt;div id="app"&gt;
+  &lt;button id="btn"&gt;切替&lt;/button&gt;
+  &lt;div id="out" data-count="0" class="box"&gt;カウント: 0&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>最小コード：</p>
+
+<pre><code>// JS欄に貼る（CodePenのJS欄）
+const btn = document.querySelector('#btn');
+const out = document.querySelector('#out');
+
+function render() {
+  const count = Number(out.dataset.count);
+  out.textContent = `カウント: ${count}`;
+  out.classList.toggle('active', count % 2 === 1);
+}
+
+btn.addEventListener('click', () =&gt; {
+  out.dataset.count = String(Number(out.dataset.count) + 1);
+  render();
+});
+
+// 初期描画
+render();
+</code></pre>
+
+<p>実行方法：CodePenでHTML欄とJS欄にそれぞれ上のコードを貼り、Run（自動実行が有効ならそのまま）でブラウザ上に表示します。もしローカルHTMLで試す場合は&lt;script&gt;をbody末尾に入れて開いてください。</p>
+
+<p>確認方法：画面上の「切替」ボタンをクリックして表示（#out）の数字が増えることを確認し、奇数のときは見た目用のCSSクラス（active）でスタイルが変わることを目視します。Consoleに出すならrender内にconsole.logを追加して状態を確認できます。</p>
+
+<p>よくあるミス：querySelectorで"#btn"などのセレクタが間違っているとnullになりaddEventListenerでエラーが出ます。解消法はまずConsoleでquerySelectorの結果を確認し、スクリプトをbody末尾に置くかDOMContentLoadedで待つようにすることです。</p>
+
+<p>使い分けの基準：textContentはプレーンテキスト表示、innerHTMLは信頼できる静的テンプレート用に使い分けます。基本はtextContentを優先し、タグを入れる必要が明確で安全なケースのみinnerHTMLを選びます。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ul>
+  <li>querySelector/querySelectorAllでCSSセレクタを使って要素を取得します。</li>
+  <li>表示の置換は基本textContentを使い、HTMLが必要な場合のみinnerHTMLを限定して使います。</li>
+  <li>classListで見た目をクラス単位で切り替えると役割分担が明確になります。</li>
+  <li>data-*属性は要素に小さなデータを持たせるのに便利で、datasetから扱います。</li>
+  <li>状態を更新したら小さなrender関数でDOMをまとめて再描画する設計が有効です。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

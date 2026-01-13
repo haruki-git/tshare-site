@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：このシリーズの前提（安全設計）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1768368000000">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：このシリーズの前提（安全設計）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">このサイトの方針（やらないこと）</a></li>
+          <li><a href="#sec-2">実行環境：CodePen / paiza.io の使い分け</a></li>
+          <li><a href="#sec-3">ブラウザ開発者ツール（Consoleの見方）</a></li>
+          <li><a href="#sec-4">よくある詰まり（読み込み順・キャッシュ）</a></li>
+          <li><a href="#sec-5">「安全に試す」ためのチェックリスト</a></li>
+          <li><a href="#sec-6">注意（ここだけ）</a></li>
+          <li><a href="#sec-7">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h3>このサイトの方針（やらないこと）</h3>
+        <p>今回できるようになることとして、ブラウザ上で安全にJavaScriptを試すための前提と、つまずきやすい点の回避手順を押さえます。</p>
+        <p>このシリーズでは、学習のために「試せる」ことよりも「安全に試せる」ことを優先します。外部サイトへの自動操作、スクレイピング、大量リクエスト、社内システムの画面を対象にしたコードは扱いません。</p>
+        <p>また、ログイン情報や個人情報を入力して動かす前提の例も扱いません。入力が必要な場合は、ダミー文字列で動作確認できる形に置き換えます。</p>
+        <p>コードは「自分の画面の中だけ」で完結する最小構成を基本にします。DOM操作やConsole出力、簡単なイベント処理のように、影響範囲が見える範囲で練習します。</p>
+      </section>
+
+      <section id="sec-2">
+        <h3>実行環境：CodePen / paiza.io の使い分け</h3>
+        <p>ブラウザで動くものはCodePenが向いています。HTML/CSS/JSが分かれていて、画面表示とConsole確認が一体でできるため、初心者が流れをつかみやすいです。</p>
+        <p>一方、paiza.ioは短いアルゴリズム練習や、入出力を伴う問題（標準入力など）に向きます。ブラウザ表示よりも「計算して結果を出す」タイプで使うと迷いにくいです。</p>
+        <p><strong>貼り付け場所：</strong>CodePenならJS欄に貼り付けます。画面要素が必要ならHTML欄に最小のボタンや表示領域を置きます。paiza.ioならJavaScript(Node.js)のエディタ領域に貼り付けます。</p>
+        <p><strong>実行方法：</strong>CodePenはRunで実行し、保存はForkで自分用に複製してから進めます。paiza.ioは実行ボタンで動かし、出力欄（Result）で結果を確認します。</p>
+      </section>
+
+      <section id="sec-3">
+        <h3>ブラウザ開発者ツール（Consoleの見方）</h3>
+        <p>ブラウザの開発者ツールは、実行結果とエラーを最短で確認する場所です。まずConsoleを開き、<code>console.log</code>が出ているか、赤いエラーが出ていないかを見ます。</p>
+        <p>エラーが出たら、メッセージの先頭（例：ReferenceError / TypeError）と、行番号（どこで起きたか）をセットで見ます。最初は「何が未定義か」「何が関数ではないか」だけ拾えると十分です。</p>
+        <p><strong>最小コード：</strong>画面に出す要素とConsole出力を両方用意すると、動いているかを判断しやすいです。</p>
+<pre><code class="language-html">&lt;!-- CodePenのHTML欄に貼り付けます --&gt;
+&lt;button id=&quot;btn&quot;&gt;実行&lt;/button&gt;
+&lt;div id=&quot;out&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<pre><code class="language-javascript">// CodePenのJS欄に貼り付けます
+const out = document.getElementById("out");
+const btn = document.getElementById("btn");
+
+function render(msg) {
+  out.textContent = msg;
+  console.log("[render]", msg);
+}
+
+btn.addEventListener("click", () =&gt; {
+  try {
+    const now = new Date().toLocaleString("ja-JP");
+    render("クリックされました: " + now);
+  } catch (e) {
+    console.error(e);
+    render("エラーが出ました。Consoleを確認してください。");
+  }
+});
+</code></pre>
+        <p><strong>確認方法：</strong>ボタンを押して画面に文字が出ること、Consoleに<code>[render]</code>のログが出ること、エラーが出た場合は赤い行に原因が表示されることを順に確認します。</p>
+      </section>
+
+      <section id="sec-4">
+        <h3>よくある詰まり（読み込み順・キャッシュ）</h3>
+        <p>動かない原因で多いのは「要素がまだ無い状態でJSが実行されている」「同じ名前の変数や関数を上書きしている」「古いコードが残って見えている」の3つです。</p>
+        <p>読み込み順の対策としては、HTMLより後ろでJSを動かす、または<code>DOMContentLoaded</code>で開始点をそろえると安定します。特にCodePenは自動でラップされることがあるため、開始点を明示すると追いやすいです。</p>
+        <p>キャッシュっぽい挙動が出たら、まずページの再読み込みをして、次にConsoleログで「最新のコードが動いているか」を判定します。文字列を少し変えてログを出すだけでも確認になります。</p>
+        <pre><code class="language-javascript">// 読み込み順のズレを避ける開始点の例
+document.addEventListener("DOMContentLoaded", () =&gt; {
+  console.log("boot: v2"); // ここを変えて、更新が反映されているかを判断します
+  const el = document.getElementById("out");
+  if (!el) {
+    console.log("outが見つかりません。HTML欄に &lt;div id='out'&gt; を用意します。");
+    return;
+  }
+  el.textContent = "準備OKです。";
+});
+</code></pre>
+        <p><strong>よくあるミス：</strong><code>document.getElementById</code>のIDがHTMLと一致していないのに、JS側だけを直してしまうことがあります。HTML側のIDと、JS側の文字列が同じかを先に確認すると復旧が速いです。</p>
+      </section>
+
+      <section id="sec-5">
+        <h3>「安全に試す」ためのチェックリスト</h3>
+        <p>安全に試すためには、実行前に「影響範囲」と「戻せる手段」を決めておくのがコツです。最初から大きなコードを書かず、まず観測できる形（Console/画面表示）を作ってから広げます。</p>
+        <ul>
+          <li><p>入力はダミー文字列で始め、個人情報や認証情報を扱わない構成にします。</p></li>
+          <li><p>画面操作は自分のページ内に限定し、外部サイトの操作や自動巡回は扱いません。</p></li>
+          <li><p>最初にConsoleログを1つ置き、開始点が意図どおり動いているかを確認します。</p></li>
+          <li><p>変更は小さく区切り、動いた状態を残しながら1つずつ足します。</p></li>
+          <li><p>エラーは「種類（Reference/Type）」と「行番号」から当たりを付け、直したら同じ操作で再確認します。</p></li>
+        </ul>
+        <p><strong>使い分けの基準：</strong>画面表示の確認が中心ならCodePen、計算結果や入出力の練習ならpaiza.ioを選びます。原因切り分けはConsoleログ、流れを追う必要があるときはブレークポイント（Sources）を使うと整理しやすいです。</p>
+      </section>
+
+      <section id="sec-6">
+        <h3>注意（ここだけ）</h3>
+        <ul>
+          <li><p>実行対象が外部サービスや社内システムに触れる可能性がある場合は、動かす前に対象と影響範囲を確認し、必要なら手元の検証用ページだけで再現できる形に置き換えてから進めます。</p></li>
+        </ul>
+      </section>
+
+      <section id="sec-7">
+        <h3>要約</h3>
+        <ul>
+          <li><p>このシリーズは「安全に試せる範囲」を優先し、外部サイトの自動操作や大量アクセスにつながる例は扱いません。</p></li>
+          <li><p>ブラウザで動く確認はCodePen、計算や入出力中心はpaiza.ioを使うと迷いにくいです。</p></li>
+          <li><p>Consoleは実行結果とエラーを最短で確認できるため、最初にログで開始点を見える化します。</p></li>
+          <li><p>詰まりやすい原因は読み込み順、ID不一致、古いコードの残りで、開始点の固定とログで切り分けます。</p></li>
+          <li><p>小さく変更して動作確認を積み重ねると、安全性と復旧の速さが両立しやすいです。</p></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+</body>
+</html>

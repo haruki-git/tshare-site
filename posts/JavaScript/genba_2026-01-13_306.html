@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：関数（Reactの前に必須の書き方）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：関数（Reactの前に必須の書き方）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">関数宣言と関数式の違い</a></li>
+  <li><a href="#sec-2">アロー関数の基本（短縮形）</a></li>
+  <li><a href="#sec-3">引数・戻り値・デフォルト引数</a></li>
+  <li><a href="#sec-4">コールバック関数の考え方</a></li>
+  <li><a href="#sec-5">thisは最小限（深入りしない）</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>関数宣言と関数式の違い</h3>
+  <p>今回できるようになることとして、関数宣言と関数式の使い分けと実行順の違いがわかることです。</p>
+<p>関数宣言（function doX(){...}）はホイスティング（先上げ）により、スコープ内のどこでも呼べます。</p>
+<p>関数式（const doY = function(){...} や const doZ = () =&gt; {...}）は、代入後でないと呼べません。</p>
+<p>定義の置き場所でエラーが出ることが多いので、読みやすさを優先して宣言か式かを決めます。</p>
+</section>
+
+<section id="sec-2">
+  <h3>アロー関数の基本（短縮形）</h3>
+  <p>アロー関数は書き方が短くなり、特に短い処理で見やすくなります（(a,b)=&gt;a+b）です。</p>
+<p>波括弧を省略すると即値を返しますが、複数行にする場合は波括弧とreturnが必要です。</p>
+<p>thisの扱いが通常の関数と違うため、イベントやコールバックで便利になる一方で、メソッドには向かないことがあります（後述で簡単に触れます）です。</p>
+</section>
+
+<section id="sec-3">
+  <h3>引数・戻り値・デフォルト引数</h3>
+  <p>関数は入力（引数）を受け取り、処理して戻り値を返します。</p>
+<p>引数は複数にでき、省略された場合に備えてデフォルト引数（<code>function f(a=1){...}</code>）を設定できます。</p>
+<p>戻り値がない場合は<code>undefined</code>が返る点は要チェックです。</p>
+<p>副作用（DOM操作やconsole）をするか、純粋関数として値だけ扱うかで設計が変わります。</p>
+</section>
+
+<section id="sec-4">
+  <h3>コールバック関数の考え方</h3>
+  <p>コールバックは別の関数に処理を渡すパターンで、非同期や汎用処理でよく使います。</p>
+<p>関数を引数に渡すときは、実行結果ではなく関数そのものを渡すことが多い点が迷いやすいポイントです。</p>
+<p>短い関数はアロー関数で渡すと読みやすくなり、再利用する処理は命名して渡すとテストしやすくなります。</p>
+</section>
+
+<section id="sec-5">
+  <h3>thisは最小限（深入りしない）</h3>
+  <p>thisはスコープや呼び出し方で参照先が変わるため初心者が混乱しやすいです。ここでは深掘りせず、簡単に言うと「アロー関数はthisを束縛しない（外側を参照）、通常関数は呼び出し時のオブジェクトを指す」と覚えておくと実務で困りにくくなります。Reactでは特にアローを使うケースが増えます。</p>
+
+<p>最小コード：</p>
+<pre><code>function add(a,b){ return a+b; }                       // 関数宣言
+const mult = function(a,b){ return a*b; };             // 関数式
+const double = x =&gt; x*2;                                // アロー（短縮形）
+function greet(name='guest'){ return `Hello ${name}`; } // デフォルト引数
+function operate(a,b,op){ return op(a,b); }            // コールバック受け取り
+
+// DOM操作とイベントで確認
+document.getElementById('btn').addEventListener('click', function(){
+  const res = operate(2,3,add);
+  document.getElementById('out').textContent = '結果: ' + res;
+  console.log('traditional this:', this);
+});
+document.getElementById('btn2').addEventListener('click', () =&gt; {
+  console.log('arrow this:', this);
+});</code></pre>
+
+<pre><code>&lt;button id="btn"&gt;計算&lt;/button&gt;
+&lt;button id="btn2"&gt;this確認&lt;/button&gt;
+&lt;div id="out" style="margin-top:8px"&gt;&lt;/div&gt;</code></pre>
+
+<p>貼り付け場所：CodePenを想定する場合はHTML欄に上のHTMLを、JS欄に最小コードのJavaScriptを貼り付けます。ローカルHTMLで試す場合はHTML内に&lt;script&gt;でJSを分けて配置します。</p>
+
+<p>実行方法：CodePenなら「Run」または自動実行でそのまま動きます。ローカルではブラウザでHTMLファイルを開いてボタンをクリックします。</p>
+
+<p>確認方法：#out要素に「結果: 5」が表示され、ブラウザの開発者ツールConsoleでthisの出力を確認します。add/mult/doubleの挙動はconsole.logで追うと理解が早くなります。</p>
+
+<p>よくあるミス：関数そのものを渡すべきところで呼び出してしまい（doSomething() とすべきでない場面で実行してしまう）、意図したタイミングで動かないことがあります。渡すべきは関数名（または () =&gt; ... の形）であるかを確認すると直ります。</p>
+
+<p>使い分けの基準：短く要素変換だけならmapを使います。条件で絞るならfilterを使います。単純な列挙や早期終了が必要ならfor/for...ofを使います。</p>
+<p>配列操作で副作用を避けたい場合はmap/filterで新しい配列を作る方が安全です。オブジェクトの操作はfor...inやObject.keysで行います。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li>関数宣言はホイスティングによりどこでも呼べますが、関数式は定義後でしか使えません。</li>
+  <li>アロー関数は短く書けてthisの扱いが異なるため、使いどころを意識します。</li>
+  <li>引数と戻り値は関数設計の基本で、デフォルト引数で未指定を安全に扱えます。</li>
+  <li>コールバックは関数を渡すパターンで、関数そのものを渡す点が迷いやすいです。</li>
+  <li>thisは挙動が複雑なので今回は最小限に理解し、実務ではアロー関数と通常関数の違いを意識して使い分けます。</li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

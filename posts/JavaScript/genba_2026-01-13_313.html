@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：非同期（ネットワーク無しでも理解する）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：非同期（ネットワーク無しでも理解する）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">setTimeout/setIntervalで非同期を体感</a></li>
+  <li><a href="#sec-2">Promiseの基本（then/catch）</a></li>
+  <li><a href="#sec-3">async/awaitの書き方</a></li>
+  <li><a href="#sec-4">例外処理（try/catch）との組み合わせ</a></li>
+  <li><a href="#sec-5">並列実行（Promise.all）の考え方（軽く）</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>setTimeout/setIntervalで非同期を体感</h3>
+  <p>この小項目「setTimeout/setIntervalで非同期を体感」は、JavaScriptで「処理の対象をどう決めるか」と結びつけて考えると理解しやすいです。</p>
+<p>途中に空の要素があるか、基準にするキーが何かで、最終的な件数や判定が変わります。</p>
+<p>まずは最小例で「今どんな値が入っているか」をConsoleに出してから、条件分岐やループを調整すると迷いにくいです。</p>
+<pre><code class="language-js">// 例：配列の中身を確認してから、条件を固める
+const items = ["ok", "", "避けたい例", null, "ok"];
+const cleaned = items.filter(x =&gt; typeof x === "string" &amp;&amp; x.trim() !== "");
+console.log("raw=", items);
+console.log("cleaned=", cleaned);
+</code></pre>
+</section>
+
+<section id="sec-2">
+  <h3>Promiseの基本（then/catch）</h3>
+  <p>この小項目「Promiseの基本（then/catch）」は、JavaScriptで「処理の対象をどう決めるか」と結びつけて考えると理解しやすいです。</p>
+<p>途中に空の要素があるか、基準にするキーが何かで、最終的な件数や判定が変わります。</p>
+<p>まずは最小例で「今どんな値が入っているか」をConsoleに出してから、条件分岐やループを調整すると迷いにくいです。</p>
+<pre><code class="language-js">// 例：配列の中身を確認してから、条件を固める
+const items = ["ok", "", "避けたい例", null, "ok"];
+const cleaned = items.filter(x =&gt; typeof x === "string" &amp;&amp; x.trim() !== "");
+console.log("raw=", items);
+console.log("cleaned=", cleaned);
+</code></pre>
+</section>
+
+<section id="sec-3">
+  <h3>async/awaitの書き方</h3>
+  <p>この小項目「async/awaitの書き方」は、JavaScriptで「処理の対象をどう決めるか」と結びつけて考えると理解しやすいです。</p>
+<p>途中に空の要素があるか、基準にするキーが何かで、最終的な件数や判定が変わります。</p>
+<p>まずは最小例で「今どんな値が入っているか」をConsoleに出してから、条件分岐やループを調整すると迷いにくいです。</p>
+
+<pre><code class="language-js">// 例：配列の中身を確認してから、条件を固める
+const items = ["ok", "", "避けたい例", null, "ok"];
+const cleaned = items.filter(x =&gt; typeof x === "string" &amp;&amp; x.trim() !== "");
+console.log("raw=", items);
+console.log("cleaned=", cleaned);
+</code></pre>
+</section>
+
+<section id="sec-4">
+  <h3>例外処理（try/catch）との組み合わせ</h3>
+  <p>この小項目「例外処理（try/catch）との組み合わせ」は、JavaScriptで「処理の対象をどう決めるか」と結びつけて考えると理解しやすいです。</p>
+<p>途中に空の要素があるか、基準にするキーが何かで、最終的な件数や判定が変わります。</p>
+<p>まずは最小例で「今どんな値が入っているか」をConsoleに出してから、条件分岐やループを調整すると迷いにくいです。</p>
+<pre><code class="language-js">// 例：配列の中身を確認してから、条件を固める
+const items = ["ok", "", "避けたい例", null, "ok"];
+const cleaned = items.filter(x =&gt; typeof x === "string" &amp;&amp; x.trim() !== "");
+console.log("raw=", items);
+console.log("cleaned=", cleaned);
+</code></pre>
+</section>
+
+<section id="sec-5">
+  <h3>並列実行（Promise.all）の考え方（軽く）</h3>
+  <p>独立した非同期処理を同時に始めて全て終わるのを待つときにPromise.allを使います。個別にawaitするより高速になることが多く、結果は配列で返ります。要チェックとして、1つでもrejectすると全体がrejectになります。</p>
+
+<p>最小コード：</p>
+<pre><code class="language-javascript">const out = document.getElementById('out');
+const log = m=&gt;{console.log(m); out.textContent += m + '\n';};
+function wait(ms){ return new Promise(res=&gt;setTimeout(()=&gt;res(ms), ms)); }
+
+document.getElementById('btn1').onclick = ()=&gt;{
+  log('setTimeout開始');
+  setTimeout(()=&gt;log('1秒後'),1000);
+  const id = setInterval(()=&gt;log('tick'),300);
+  setTimeout(()=&gt;{clearInterval(id); log('interval停止');},1100);
+};
+
+document.getElementById('btn2').onclick = ()=&gt;{
+  wait(700).then(ms=&gt;log(ms+'ms完了 then')).catch(e=&gt;log('thenエラー:'+e));
+};
+
+document.getElementById('btn3').onclick = async ()=&gt;{
+  log('async開始');
+  const v = await wait(500);
+  log('awaitで待った:'+v+'ms');
+};
+
+document.getElementById('btn4').onclick = async ()=&gt;{
+  try{
+    await new Promise((_,rej)=&gt;setTimeout(()=&gt;rej(new Error('失敗')),400));
+  }catch(e){
+    log('catchで受けた:'+e.message);
+  }
+};
+
+document.getElementById('btn5').onclick = ()=&gt;{
+  Promise.all([wait(300),wait(600)]).then(a=&gt;log('Promise.all完了:'+a.join(',')));
+};</code></pre>
+
+<pre><code class="language-html">&lt;button id="btn1"&gt;setTimeout/Interval&lt;/button&gt;
+&lt;button id="btn2"&gt;Promise then/catch&lt;/button&gt;
+&lt;button id="btn3"&gt;async/await&lt;/button&gt;
+&lt;button id="btn4"&gt;try/catchでエラー&lt;/button&gt;
+&lt;button id="btn5"&gt;Promise.all&lt;/button&gt;
+&lt;pre id="out" style="background:#f7f7f7;padding:8px;"&gt;&lt;/pre&gt;</code></pre>
+
+<p>貼り付け場所は、CodePenならHTML欄にHTMLを、JS欄にJSを貼ります。ローカルでは&lt;body&gt;内にHTMLを置き、&lt;script&gt;でJSを読み込む形にします。</p>
+
+<p>実行方法は、ページを開いて各ボタンを押すと#outとConsoleにログが出ます。期待どおりのタイミングやエラー表示が確認できればOKです。</p>
+
+<p>確認方法は、#outに順にログが出ることと、Consoleにも同じログが出ることを見ます。</p>
+
+<p>よくあるミスは、HTMLの要素IDとJSの参照を合わせ忘れることです。その場合はonclickが未定義になりやすいので、DOMContentLoadedで初期化するかIDを一致させます。</p>
+
+<p>使い分けの基準は、順次処理はasync/awaitが読みやすく、短いチェーンはthen/catchでもよいです。独立処理の同時実行はPromise.allを使い、繰り返しは状況に応じてsetIntervalか逐次setTimeoutを選びます。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ul>
+  <li>setTimeoutは遅延実行で、setIntervalは繰り返し実行ですが、どちらもUIをブロックしません。</li>
+  <li>Promiseは非同期の結果を表し、then/catchで処理を繋げます。</li>
+  <li>async/awaitでPromiseを同期風に書けるため、可読性が上がります。</li>
+  <li>awaitとtry/catchを組み合わせると、自然な例外処理ができます。</li>
+  <li>Promise.allで並列実行して効率化できますが、1つの失敗で全体が失敗します。</li>
+</ul>
+</section>
+    </article>
+  </main>
+</body>
+</html>

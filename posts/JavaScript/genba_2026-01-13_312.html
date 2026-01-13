@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：イベント（クリック・入力・フォームを扱う）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：イベント（クリック・入力・フォームを扱う）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>      
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">addEventListenerの基本</a></li>
+  <li><a href="#sec-2">click/input/submitの使いどころ</a></li>
+  <li><a href="#sec-3">フォーム値の取り出しと検証</a></li>
+  <li><a href="#sec-4">イベント伝播（バブリング）を軽く理解</a></li>
+  <li><a href="#sec-5">二重送信や連打への対策</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>addEventListenerの基本</h3>
+  <p>今回できるようになることとして、addEventListenerでDOM要素にイベントを付けて、クリック・入力・送信を扱えるようになります。</p>
+<p>addEventListenerは要素に対して複数の処理を安全に追加でき、既存のonclickを上書きしない点が便利です。イベントハンドラは第一引数にイベント名、第二引数にコールバック関数を渡します。</p>
+<p>CodePenの場合はHTML欄に要素、JS欄にスクリプトを置くと簡単に試せます。</p>
+<p>貼り付け場所：CodePenを想定する場合はHTML欄に必要なタグ（下のHTMLブロック）を、JS欄にJavaScriptコードを貼ってください。</p>
+
+<pre><code class="language-html">&lt;!-- HTML欄：CodePenのHTMLに貼ります --&gt;
+&lt;form id="myForm"&gt;
+  &lt;input id="name" name="name" placeholder="名前を入力" /&gt;
+  &lt;button id="submitBtn" type="submit"&gt;送信&lt;/button&gt;
+&lt;/form&gt;
+&lt;div id="out"&gt;&lt;/div&gt;
+&lt;button id="btn"&gt;単独ボタン&lt;/button&gt;
+&lt;div id="container"&gt;
+  &lt;button class="child"&gt;子ボタン&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>最小コード：</p>
+
+<pre><code class="language-javascript">// JS欄：最小コード（10〜30行）
+const form = document.getElementById('myForm');
+const nameInput = document.getElementById('name');
+const out = document.getElementById('out');
+const submitBtn = document.getElementById('submitBtn');
+
+nameInput.addEventListener('input', () =&gt; {
+  out.textContent = `入力中: ${nameInput.value}`;
+});
+
+form.addEventListener('submit', (e) =&gt; {
+  e.preventDefault(); // フォームのデフォルト送信を止める
+  if (!nameInput.value.trim()) {
+    out.textContent = '名前を入力してください';
+    return;
+  }
+  submitBtn.disabled = true; // 二重送信防止（簡易）
+  out.textContent = `送信しました: ${nameInput.value}`;
+});
+</code></pre>
+</section>
+
+<section id="sec-2">
+  <h3>click/input/submitの使いどころ</h3>
+  <p>clickは任意の要素の押下検知に向いています。inputはテキスト入力の変更を逐次扱う時に使い、submitはフォーム全体の検証と送信処理に適しています。</p>
+<p>たとえばエンターで送る場合はsubmitにまとめると自然です。inputでリアルタイムなフィードバックを出し、submitで最終チェックとサーバ送信処理をする使い分けが一般的です。</p>
+<p>実行方法：CodePenのRunボタン、あるいはブラウザでHTMLを開いてJSを読み込むことで動作します（CodePenならJS欄を貼って実行するだけです）。</p>
+</section>
+
+<section id="sec-3">
+  <h3>フォーム値の取り出しと検証</h3>
+  <p>フォーム値は要素のvalueプロパティから安全に取り出します。必須チェックはtrimで空白だけの入力を弾くのが基本で、HTMLのrequired属性やConstraint Validation APIを併用するとアクセシビリティが向上します。カスタム検証では正規表現でパターンをチェックし、エラーメッセージを画面に出すとユーザーが理解しやすくなります。</p>
+<p>確認方法：画面の#outに表示されるメッセージとブラウザのConsoleログで期待通りかを確認してください（Console.logを追加すると詳細が見えます）。</p>
+</section>
+
+<section id="sec-4">
+  <h3>イベント伝播（バブリング）を軽く理解</h3>
+  <p>子要素で発生したイベントは親要素へ伝わる（バブリング）仕様です。親で一括処理するイベント委譲（イベントデリゲーション）は大量の同種要素に対して有効です。</p>
+<p>一方、子の処理だけで止めたい場合は<code>event.stopPropagation()</code>で伝播を止めます。下の応用コードで<code>container</code>に<code>click</code>を付け、どの子が押されたか判定する例を示します。</p>
+
+<pre><code class="language-javascript">// 応用：イベント委譲と伝播の例（JS欄に追記して試してください）
+const container = document.getElementById('container');
+container.addEventListener('click', (e) =&gt; {
+  const target = e.target;
+  if (target.classList.contains('child')) {
+    out.textContent = '子ボタンが押されました';
+  }
+});
+document.getElementById('btn').addEventListener('click', (e) =&gt; {
+  e.stopPropagation(); // 親に伝播させたくない時
+  out.textContent = '単独ボタンが押されました';
+});
+</code></pre>
+
+<p>使い分けの基準として、複数の似た要素のイベントは親にまとめる（委譲）とコードがシンプルになります。個別に異なる振る舞いが必要なら、個別に<code>addEventListener</code>を付けると分かりやすくなります。</p>
+</section>
+
+<section id="sec-5">
+  <h3>二重送信や連打への対策</h3>
+  <p>送信ボタンをdisabledにして送信中フラグを立て、サーバ側でも同一リクエストの重複を検出するのが安全な組み合わせです。</p>
+<p>UIでは送信直後にボタンを無効化し、処理完了後に再度有効化するなどユーザーの操作感を保ちます。</p>
+<p>短時間の連打を抑えるには、タイムアウトで再有効化する方法も有用です。</p>
+<p>よくあるミスとして、スクリプトをHTMLの&lt;head&gt;に置いてDOM要素が存在しない状態でquerySelectorを呼ぶとnullになり、イベントが付かないことが多いです。</p>
+<p>直し方は&lt;script&gt;を&lt;/body&gt;直前に置くか、DOMContentLoadedで待つことです。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>addEventListenerは複数のハンドラを安全に追加でき、CodePenのJS欄で試せます。</p></li>
+  <li><p>clickは任意要素、inputは逐次入力、submitはフォーム全体で使い分けます。</p></li>
+  <li><p>フォーム値はvalueで取得し、trimや正規表現で検証すると堅牢になります。</p></li>
+  <li><p>イベントはバブリングするため、委譲やstopPropagationで制御できます。</p></li>
+  <li><p>二重送信はUI側（disabledやフラグ）とサーバ側の両方で対策すると安全です。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>

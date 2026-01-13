@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript：配列（map/filterが使えるようになる）</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=1767406624605">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>JavaScript：配列（map/filterが使えるようになる）</h1>
+        <nav><a href="/posts/JavaScript/">JavaScript記事一覧</a></nav>
+        <p class="meta">投稿日：2026-01-13</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/genba/audio/301.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+  <li><a href="#sec-1">配列の基本（追加・削除・参照）</a></li>
+  <li><a href="#sec-2">破壊的変更と非破壊（Reactで重要）</a></li>
+  <li><a href="#sec-3">mapで「変換」、filterで「絞り込み」</a></li>
+  <li><a href="#sec-4">find/some/everyで判定する</a></li>
+  <li><a href="#sec-5">reduceは必要な範囲だけ</a></li>
+  <li><a href="#sec-6">注意（ここだけ）</a></li>
+  <li><a href="#sec-7">要約</a></li>
+</ol>
+      </section>
+
+      <section id="sec-1">
+  <h3>配列の基本（追加・削除・参照）</h3>
+  <p>配列は順序付きのデータ集合です。基本操作は短く覚えます。</p>
+<ul>
+  <li>追加：push（末尾へ）です。</li>
+  <li>削除：pop（末尾から取り出す）です。</li>
+  <li>参照：arr[index]（0始まり）です。</li>
+</ul>
+<p>最小サンプル（ブラウザでボタンを押すと出力）です。</p>
+<pre><code class="language-html">&lt;!-- HTML --&gt;
+&lt;button id="run"&gt;実行&lt;/button&gt;
+&lt;pre id="output"&gt;&lt;/pre&gt;
+&lt;script&gt;
+const out = msg =&gt; {
+  const el = document.getElementById('output');
+  console.log(msg);
+  el.textContent += msg + '\n';
+};
+document.getElementById('run').addEventListener('click', () =&gt; {
+  const nums = [1,2,3];
+  out('初期: ' + JSON.stringify(nums));
+  nums.push(4); out('push後: ' + JSON.stringify(nums));
+  out('popで取れた: ' + nums.pop());
+  out('nums[1]: ' + nums[1]);
+});
+&lt;/script&gt;
+</code></pre>
+<p>実行で配列の追加・削除・参照の挙動を確認できます。</p>
+</section>
+
+<section id="sec-2">
+  <h3>破壊的変更と非破壊（Reactで重要）</h3>
+  <p>配列操作は「元を変えるか（破壊的）」「新しい配列を返すか（非破壊）」で分かれます。Reactなど参照比較で差分を検出する場面では非破壊が基本です。</p>
+
+<p>破壊的：push, pop, splice, sort, reverse（元の配列が変わります）<br>非破壊：map, filter, slice, concat, spread（...）など（新しい配列を返します）</p>
+
+<p>例：コピーしてから追加する（非破壊）</p>
+<pre><code>const a = [10,20,30];
+const b = [...a, 40]; // aは変わらない
+a.push(40); // aが変わる（破壊的）
+</code></pre>
+
+<p>ポイント：sort()やreverse()は「新配列が返る」と誤解されやすく、Stateを直接変えてしまうミスが多いです。必要ならコピーしてから使うとよいです（[...arr].sort()）。</p>
+</section>
+
+<section id="sec-3">
+  <h3>mapで「変換」、filterで「絞り込み」</h3>
+  <p>mapとfilterは読みやすく、組み合わせやすい非破壊メソッドです。</p>
+<ul>
+  <li>mapは各要素を変換して、同じ長さの新配列を作ります。</li>
+  <li>filterは条件で要素を絞り込み、長さが短くなることがある新配列を作ります。</li>
+</ul>
+<p>例です。</p>
+<pre><code class="language-js">const users = [{id:1,name:'A',active:true},{id:2,name:'B',active:false}];
+const names = users.map(u =&gt; u.name); // ['A','B']
+const active = users.filter(u =&gt; u.active); // activeなユーザーだけ
+const activeNames = users.filter(u=&gt;u.active).map(u=&gt;u.name); // ['A']</code></pre>
+<p>更新（idで一致する要素だけ更新）はmap、削除はfilterが自然です。</p>
+</section>
+
+<section id="sec-4">
+  <h3>find/some/everyで判定する</h3>
+  <p>検索・存在チェック・全件チェックは専用メソッドが明確です。</p>
+<ul>
+  <li>find：条件に合う最初の要素が返ります（見つからなければ undefined になります）。</li>
+  <li>some：条件に合う要素が1つでもあるかどうかが boolean で返ります。</li>
+  <li>every：全要素が条件を満たすかどうかが boolean で返ります。</li>
+</ul>
+<p>例：</p>
+<pre><code class="language-js">const items = [{sku:'A',stock:3},{sku:'B',stock:0}];
+items.find(i=&gt;i.stock===0); // {sku:'B',stock:0} or undefined
+items.some(i=&gt;i.stock===0); // true
+items.every(i=&gt;i.stock&gt;0);  // false
+</code></pre>
+<p>findの戻り値は undefined になるケースを考慮して扱うことがポイントです。</p>
+</section>
+
+<section id="sec-5">
+  <h3>reduceは必要な範囲だけ</h3>
+  <p>reduceは「配列を1つの値（数、オブジェクト、Mapなど）に畳み込む」ための強力なツールです。ですが何でもreduceにするのは可読性低下の元なので、目的が「集約」かどうかで使うか判断します。</p>
+
+<p>例：合計と集計オブジェクトです。</p>
+
+<pre><code>const cart = [{name:'B',price:1200,qty:2},{name:'P',price:200,qty:3}];
+const total = cart.reduce((s,it)=&gt;s+it.price*it.qty,0); // 3000
+const byName = cart.reduce((acc,it)=&gt;{acc[it.name]=it.qty;return acc;},{});
+</code></pre>
+
+<p>変換はmap、絞り込みはfilter、集約が目的ならreduceと覚えておくと良いです。</p>
+
+<p>最小コード： このあとに示す短いJavaScriptコードを使います。</p>
+
+<p>貼り付け場所： CodePenならHTML欄にボタンと出力用div、JS欄にJavaScriptを貼ります（同じブロックに混在させません）。HTMLファイルなら&lt;body&gt;の最後（&lt;/body&gt;直前）に&lt;script&gt;を置くか、DOMContentLoaded内で実行します。</p>
+
+<p>実行方法： ブラウザで開くか、CodePenのRunで実行します。Consoleで結果を見ます。</p>
+
+<p>確認方法： console.logの出力や画面表示が想定どおりかで確認します（必要なら簡単な条件チェックもします）。</p>
+
+<p>よくあるミス： Consoleを開いていないため出力が見えない、または変数名のスペル違いでReferenceErrorになることがあります。</p>
+
+<p>使い分けの基準： 繰り返しはfor/for...of、変換はmap、絞り込みはfilterのように目的で使い分けます。</p>
+</section>
+
+<section id="sec-6">
+  <h3>注意（ここだけ）</h3>
+  <ul>
+  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
+</ul>
+</section>
+
+      <section id="sec-7">
+  <h3>要約</h3>
+  <ol>
+  <li><p>配列はpushやpopで要素を追加・削除し、arr[index]で参照するのが基本です。</p></li>
+  <li><p>破壊的変更と非破壊を区別し、Reactなど参照比較がある場面では非破壊の操作を優先するのがポイントです。</p></li>
+  <li><p>mapは「変換」、filterは「絞り込み」に使い、組み合わせて使うと意図が伝わりやすいです。</p></li>
+  <li><p>find/some/everyで検索・存在確認・全件チェックを明確にできます。findは未発見時にundefinedを返す点は要チェックです。</p></li>
+  <li><p>reduceは合計やグルーピングなど「集約」が目的のときに限定して使うと読みやすいです。</p></li>
+</ol>
+</section>
+    </article>
+  </main>
+</body>
+</html>
