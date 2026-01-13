@@ -121,8 +121,10 @@ render();
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
-</ul>
+    <li><p>JSONは「キーも値も基本ダブルクォート」です。シングルクォートや末尾カンマはエラーになります。</p></li>
+    <li><p><code>JSON.parse</code> は壊れた入力で例外を投げるので、外部データや保存データは <code>try/catch</code> で守ります。</p></li>
+    <li><p>ユーザー入力を <code>innerHTML</code> に入れるのは避けます。基本は <code>textContent</code> を使います（XSS対策）。</p></li>
+  </ul>
 </section>
 
       <section id="sec-7">

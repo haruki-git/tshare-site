@@ -130,8 +130,10 @@ document.getElementById("btn").addEventListener("click", () =&gt; {
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
-</ul>
+    <li><p>浅いコピー（<code>{...obj}</code>）はネストしたオブジェクトまで複製しません。内部を編集すると元も変わる可能性があります。</p></li>
+    <li><p>キーが動的（変数）ならドット記法ではなくブラケット記法（<code>obj[key]</code>）を使います。</p></li>
+    <li><p>存在しないプロパティ参照は <code>undefined</code> になります。深い参照は <code>obj?.a?.b</code> のように安全にたどると落ちにくいです。</p></li>
+  </ul>
 </section>
 
       <section id="sec-7">

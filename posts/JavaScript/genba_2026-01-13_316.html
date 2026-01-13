@@ -198,6 +198,15 @@ log("hello");
         </div>
       </section>
 
+      <section id="sec-6">
+      <h3>注意（ここだけ）</h3>
+      <ul>
+        <li><p>ブラウザでES Modulesを使う場合、<code>&lt;script type="module"&gt;</code> が必要です（通常scriptと挙動が違います）。</p></li>
+        <li><p><code>import</code> はローカルファイル直開き（file://）だと制限で動かないことがあります。基本は開発サーバ前提です。</p></li>
+        <li><p>会社PCでnpm導入ができない場合は、概念理解に留め、実行は個人環境や許可された環境で行うのが安全です。</p></li>
+      </ul>
+    </section>
+
       <footer style="margin-top:14px;">
         <p class="meta" style="margin:0;">以上。</p>
       </footer>

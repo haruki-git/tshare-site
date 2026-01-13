@@ -106,8 +106,10 @@ document.getElementById('btn2').addEventListener('click', () =&gt; {
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
-</ul>
+    <li><p>アロー関数は <code>this</code> を「外側のスコープから引き継ぐ」ため、メソッド用途で安易に置き換えると挙動が変わります。</p></li>
+    <li><p>コールバックに渡す関数は「呼び出し結果」ではなく「関数そのもの」を渡します（<code>fn</code> と <code>fn()</code> を混同しない）。</p></li>
+    <li><p>引数が増えたら、オブジェクト引数（<code>{...}</code>）にまとめると呼び出し側のミスを減らせます。</p></li>
+  </ul>
 </section>
 
       <section id="sec-7">

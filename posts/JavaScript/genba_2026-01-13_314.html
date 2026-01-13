@@ -131,8 +131,10 @@ function loadData(){
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
-</ul>
+    <li><p>localStorageは「文字列しか保存できない」ので、オブジェクトは <code>JSON.stringify</code> → <code>JSON.parse</code> が前提です。</p></li>
+    <li><p>保存データは壊れたり古い形式のまま残ることがあります。読み込みは <code>try/catch</code> と「初期値フォールバック」を用意します。</p></li>
+    <li><p>容量は無限ではありません。大きいデータ（画像や大量ログ）を入れる用途には向きません。</p></li>
+  </ul>
 </section>
 
       <section id="sec-7">

@@ -124,8 +124,10 @@ document.getElementById('btn').addEventListener('click', (e) =&gt; {
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
-</ul>
+    <li><p><code>submit</code> はページ遷移するので、SPA風に扱うなら <code>event.preventDefault()</code> が必要です。</p></li>
+    <li><p>入力イベントは連発します。重い処理を入れるなら、軽い検証だけにするか、間引き（debounce）を検討します。</p></li>
+    <li><p>連打で二重実行が起きるなら、ボタンを一時的にdisabledにするなど「再入防止」を入れます。</p></li>
+  </ul>
 </section>
 
       <section id="sec-7">

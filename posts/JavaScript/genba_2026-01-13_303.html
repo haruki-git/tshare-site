@@ -107,8 +107,10 @@ document.getElementById('check').addEventListener('click', () =&gt; {
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
-</ul>
+    <li><p><code>typeof null</code> は歴史的事情で <code>"object"</code> になります（null判定は <code>value === null</code> を使います）。</p></li>
+    <li><p><code>NaN</code> は「自分自身とも等しくない」ので <code>value === NaN</code> は常にfalseです。判定は <code>Number.isNaN(value)</code> を使います。</p></li>
+    <li><p>小数は誤差が出ます（例：<code>0.1 + 0.2 !== 0.3</code>）。金額などは「整数（円・最小単位）」で扱うのが安全です。</p></li>
+  </ul>
 </section>
 
       <section id="sec-7">

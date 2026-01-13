@@ -107,8 +107,10 @@ document.getElementById('btn').addEventListener('click', clickHandler);
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li><p>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</p></li>
-</ul>
+    <li><p><code>var</code> は関数スコープで巻き上げ（hoist）され、意図しない上書きが起きやすいので基本は避けます。</p></li>
+    <li><p><code>const</code> は「再代入禁止」なだけで、中身（オブジェクト/配列）の変更は可能です。凍結が必要なら <code>Object.freeze</code> を検討します（浅い凍結に注意）。</p></li>
+    <li><p>グローバル（最上位）に変数を置くと名前衝突の原因になります。なるべく関数やモジュールの内側に閉じます。</p></li>
+  </ul>
 </section>
 
       <section id="sec-7">

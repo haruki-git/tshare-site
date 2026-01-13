@@ -119,8 +119,10 @@ btn.addEventListener('click', () =&gt; {
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
-</ul>
+    <li><p><code>if (x = 1)</code> のような「代入」を条件に書くミスが起きがちです。比較は <code>===</code> を基本にします。</p></li>
+    <li><p><code>switch</code> は <code>break</code> を忘れるとフォールスルーします。意図がない限り必ず入れます。</p></li>
+    <li><p>ループの「回数・境界（&lt; と &lt;=）」はバグの温床です。配列は <code>i &lt; arr.length</code> を基本にします。</p></li>
+  </ul>
 </section>
 
       <section id="sec-7">

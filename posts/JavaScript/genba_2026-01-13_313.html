@@ -147,8 +147,10 @@ document.getElementById('btn5').onclick = ()=&gt;{
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
-</ul>
+    <li><p><code>setTimeout</code> の順序は「待ち時間が短い順に即実行」ではなく、キューの都合で前後します。ログで順序を確認しながら学ぶのが安全です。</p></li>
+    <li><p><code>async/await</code> でも例外は起きます。非同期処理は <code>try/catch</code> で包まないと「落ちた理由」が見えづらくなります。</p></li>
+    <li><p>並列（<code>Promise.all</code>）は一つでも失敗すると全体が失敗扱いになります。必要なら個別に失敗を吸収する設計にします。</p></li>
+  </ul>
 </section>
 
       <section id="sec-7">

@@ -111,8 +111,10 @@ render();
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
-</ul>
+    <li><p><code>querySelector</code> が <code>null</code> を返すと、その後の <code>.textContent</code> で落ちます。取得結果がある前提なら早めにチェックします。</p></li>
+    <li><p>表示は基本 <code>textContent</code> を使い、<code>innerHTML</code> は最小限にします（意図しないHTML注入を防ぐ）。</p></li>
+    <li><p>DOMを何度も直接更新すると重くなりがちです。まず state を作り、最後にまとめて render する形が安定します。</p></li>
+  </ul>
 </section>
 
       <section id="sec-7">

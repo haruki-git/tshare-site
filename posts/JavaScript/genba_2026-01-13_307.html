@@ -142,8 +142,10 @@ const byName = cart.reduce((acc,it)=&gt;{acc[it.name]=it.qty;return acc;},{});
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>
-  <li>破壊的な操作（削除・上書き）をする前に、対象をコピーしてバックアップを作ってから進めます。</li>
-</ul>
+    <li><p><code>sort()</code> / <code>reverse()</code> / <code>splice()</code> は配列を破壊的に変更します。元を残したいならコピーしてから使います（例：<code>[...arr].sort()</code>）。</p></li>
+    <li><p><code>for...in</code> は配列向きではありません（キー列挙なので順序や拡張プロパティで事故ります）。配列は <code>for...of</code> や <code>map</code> を使います。</p></li>
+    <li><p><code>map</code> / <code>filter</code> 内で外側の変数を書き換えると追跡が難しくなります。できるだけ「入力→出力」を純粋にします。</p></li>
+  </ul>
 </section>
 
       <section id="sec-7">
