@@ -1,32 +1,34 @@
 {
-  "date": "2026-01-12",
-  "generatedAtJST": "2026-01-12T07:15:40.296+09:00",
+  "date": "2026-01-13",
+  "generatedAtJST": "2026-01-13T15:01:03.574+09:00",
   "items": [
     {
-      "url": "https://www.digitimes.com/news/a20260108PD221/data-center-power-supply-nvidia-2026.html",
+      "url": "https://www.digitimes.com/news/a20260108PD238/revenue-sales-power-supply-2025-demand.html",
       "source": "Digitimes",
-      "publishedAt": "2026-01-10T14:43:33Z",
-      "title": "AI-driven surge in computing power transforms data center energy architecture",
-      "title_ja": "AIによる計算能力の急増がデータセンターのエネルギー構造を変革",
-      "summary_ja": "AI技術の進化に伴い、データセンターにおける計算能力が飛躍的に向上している。これにより、エネルギー需要と供給構造にも大きな影響が出ている。専門家は、今後数年でデータセンターのエネルギー管理が変わると予測している。",
+      "publishedAt": "2026-01-12T01:53:24Z",
+      "title": "Taiwan's CyberPower shifts focus to AI-driven data center power as sales dip",
+      "title_ja": "台湾のサイバー電源、売上減少を受けAI駆動のデータセンター電源に注力",
+      "summary_ja": "台湾のサイバー電源は、売上の減少に直面し、AI駆動のデータセンター向け電源に焦点を移しています。このシフトは、将来の需要に対応するための戦略であり、競争力を維持するためには不可欠とされています。これにより、同社は市場の変化に柔軟に対応できる体制を整えることを目指しています。",
       "key_points": [
-        "AIの進化がデータセンターでの計算能力を押し上げている",
-        "エネルギー供給の構造が変化しつつある",
-        "専門家は今後のエネルギー管理の変革を予測している"
+        "サイバー電源の売上が減少している。",
+        "AI駆動の電源ソリューションにシフト。",
+        "データセンター需要の変化に対応。",
+        "今後の技術革新を見据えた戦略的な方向転換。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを収集、保存、処理するための施設。"
+          "term": "AI",
+          "explain_ja": "人工知能。機械学習やデータ解析を用いた自動化技術。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能。機械が人間の知能を模倣する技術。"
+          "term": "データセンター",
+          "explain_ja": "コンピュータシステムや関連コンポーネントを集中管理する施設。"
         }
       ],
       "personal_actions": [
-        "現在のデータセンターのエネルギー管理ポリシーを確認する",
-        "新しいAI技術の導入を検討する"
+        "自社の電源管理システムの見直しを行う。",
+        "AI技術を活用した効率化の可能性を検討する。",
+        "データセンターのニーズに合った電源ソリューションを調査する。"
       ],
       "tags": [
         "DC",
@@ -34,77 +36,72 @@
       ]
     },
     {
-      "url": "https://uk.pcmag.com/graphics-cards/162510/can-the-zeus-gpu-really-outshine-nvidias-rtx-5090",
-      "source": "PCMag.com",
-      "publishedAt": "2026-01-10T13:00:00Z",
-      "title": "Can the Zeus GPU Really Outshine Nvidia's RTX 5090?",
-      "title_ja": "Zeus GPUは本当にNvidiaのRTX 5090を超えられるのか？",
-      "summary_ja": "グラフィックスプロセッサースタートアップのBolt GraphicsがCES 2026でZeus GPUを発表しました。Nvidia RTX 5090を上回るパス・トレース性能や低消費電力、大容量のメモリを謳っていますが、実際の製品はまだ公開されていません。そのため、実現可能性には疑問が残ります。",
+      "url": "https://www.newser.com/story/381721/to-power-data-centers-meta-turns-to-nuclear-power.html",
+      "source": "Newser",
+      "publishedAt": "2026-01-11T15:00:00Z",
+      "title": "To Power Data Centers, Meta Goes Nuclear",
+      "title_ja": "データセンターの電力供給にメタが原子力を選択",
+      "summary_ja": "メタは、AIデータセンターの電力供給のために3つの原子力発電契約を締結した。この契約により、約500万世帯分のエネルギーを確保することができる。新しいデータセンター「プロメテウス」は、2026年に稼働を開始する予定で、2035年までにクリーンエネルギーを660万キロワット分供給する計画。また、この動きはミッドアトランティック地域の電力供給にポジティブな影響を与えると期待されている。",
       "key_points": [
-        "Bolt GraphicsのZeus GPUは、Nvidia RTX 5090を超える性能を約束している。",
-        "ZeusはRISC-Vコマンドプロセッサを搭載し、PCIe 5 x16インターフェースを使用。",
-        "最大384GBのメモリをサポートし、エンタープライズ向けの500Gbps以上のネットワークインターフェースを持つ。",
-        "実際のハードウェアによるデモが待たれる中、パフォーマンス主張は大きい。",
-        "開発者キットは2025年第4四半期、サーバーアクセスは2026年第3四半期、量産は2026年第4四半期を予定している。"
+        "メタがTerraPower、Oklo、Vistraとの契約を締結し、データセンターの電力を原子力で確保。",
+        "新しいデータセンター「プロメテウス」は1ギガワットのクラスターで、今年稼働予定。",
+        "契約によって2035年までに最大660万キロワットのクリーンエネルギーを供給する計画。",
+        "電力供給の確保はミッドアトランティック地域の電気料金に影響を及ぼす可能性がある。",
+        "Okloとの契約で、オハイオ州に1.2ギガワットの発電キャンパスを開発予定。"
       ],
       "glossary": [
         {
-          "term": "SIMD",
-          "explain_ja": "Single Instruction Multiple Dataの略で、単一の命令で複数のデータに対して処理を行う技術。"
+          "term": "Natrium",
+          "explain_ja": "新しいタイプの原子炉の設計。メタとの契約により開発される予定。"
         },
         {
-          "term": "RISC-V",
-          "explain_ja": "オープンソースの命令セットアーキテクチャで、主に教育やデータセンター向けに利用される。"
+          "term": "ギガワット",
+          "explain_ja": "電力の単位。1ギガワットは約750,000世帯分の電力量に相当。"
         },
         {
-          "term": "PCIe 5",
-          "explain_ja": "第5世代のPCI Express規格で、高速なデータ転送を可能にするインターフェース。"
-        },
-        {
-          "term": "LPDDR5X",
-          "explain_ja": "低電力DDRメモリの一種で、主にモバイルデバイスや高性能コンピューティングに使用される。"
+          "term": "クリーンエネルギー",
+          "explain_ja": "環境負荷の少ないエネルギー源のこと。再生可能エネルギーの一部。"
         }
       ],
       "personal_actions": [
-        "Bolt Graphicsの最新情報を定期的に確認し、Zeusの実際のパフォーマンスを待つ。",
-        "業界ニュースに目を光らせ、Zeusに関するデモやベンチマークの発表をチェックする。",
-        "新しいGPU技術やパフォーマンス比較について学び続ける。"
+        "新しい電力供給の動きについて社内で情報を共有し、影響を確認する。",
+        "地域の電力需要や料金の動向をモニタリングし、必要に応じて対策を検討する。",
+        "メタのデータセンターの開発状況をフォローし、関連する技術的な情報を更新する。"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://hardware.slashdot.org/story/26/01/09/2329256/meta-signs-deals-with-three-nuclear-companies-for-6-gw-of-power",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-01-10T07:00:00Z",
-      "title": "Meta Signs Deals With Three Nuclear Companies For 6+ GW of Power - Slashdot",
-      "title_ja": "Metaが3つの原子力企業と6GW以上の電力契約を締結",
-      "summary_ja": "Metaはデータセンターのために、6ギガワット以上の長期原子力契約を締結しました。これには新興企業と中小企業、既存の原子力発電所を運営する大手企業が含まれます。この契約により、Metaは2030年代初頭に1〜4ギガワットの発電能力を追加するパートナーを求めていました。新たな電力供給は、データセンターが集中するPJМインタコネクションを通じて行われる予定です。",
+      "url": "https://www.cnbc.com/2026/01/11/bloom-energy-ai-data-center-power-stock-bubble.html",
+      "source": "CNBC",
+      "publishedAt": "2026-01-11T14:19:35Z",
+      "title": "How the AI data center bubble story is playing out inside one booming energy stock",
+      "title_ja": "AIデータセンター市場におけるブルームエネルギーの株価バブルの行方",
+      "summary_ja": "ブルームエネルギーの株は、AIデータセンター向けの onsite power の生成によって急騰していますが、バブルリスクを回避できるかが問われています。背景にはAIデータセンターの需要増加があります。これにより、同社の事業がどのように影響を受けるかが注目されています。",
       "key_points": [
-        "Metaが原子力企業3社と6GW以上の電力契約を締結",
-        "契約はOklo、TerraPower、Vistraの3社と締結された",
-        "Vistraとの契約では既存の発電所から2.1GWを調達",
-        "Okloは2030年までに1.2GWの電力供給を目指す",
-        "TerraPowerは2032年にMetaへの電力供給を計画"
+        "ブルームエネルギーはAIデータセンター向けに onsite power を生成している。",
+        "同社の株価は急騰しているが、バブルのリスクが懸念されている。",
+        "AIデータセンターの需要増加がビジネスを支えている。"
       ],
       "glossary": [
         {
-          "term": "SMR",
-          "explain_ja": "小型モジュール炉（Small Modular Reactor）の略で、小型かつモジュール化された原子炉の一種。"
+          "term": "Bloom Energy",
+          "explain_ja": "エネルギー生成の技術を提供する企業で、特に燃料電池や持続可能な発電に注力している。"
         },
         {
-          "term": "PJMインタコネクション",
-          "explain_ja": "13の中東部および中西部州をカバーする電力グリッド。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能に特化した計算リソースを提供するデータセンター。"
         }
       ],
       "personal_actions": [
-        "データセンターのエネルギー供給の安定性について確認する",
-        "新しい電力供給による影響を評価するための社内会議を計画する",
-        "メンテナンスやアップグレードに必要な設備投資を見直す"
+        "ブルームエネルギーの株式動向を定期的に確認する。",
+        "AIデータセンター向けのエネルギー供給のトレンドを把握しておく。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
