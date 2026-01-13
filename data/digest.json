@@ -1,103 +1,109 @@
 {
-  "date": "2026-01-13",
-  "generatedAtJST": "2026-01-13T15:01:03.574+09:00",
+  "date": "2026-01-14",
+  "generatedAtJST": "2026-01-14T07:15:47.765+09:00",
   "items": [
     {
-      "url": "https://www.digitimes.com/news/a20260108PD238/revenue-sales-power-supply-2025-demand.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-01-12T01:53:24Z",
-      "title": "Taiwan's CyberPower shifts focus to AI-driven data center power as sales dip",
-      "title_ja": "台湾のサイバー電源、売上減少を受けAI駆動のデータセンター電源に注力",
-      "summary_ja": "台湾のサイバー電源は、売上の減少に直面し、AI駆動のデータセンター向け電源に焦点を移しています。このシフトは、将来の需要に対応するための戦略であり、競争力を維持するためには不可欠とされています。これにより、同社は市場の変化に柔軟に対応できる体制を整えることを目指しています。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180569298",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-01-12T19:32:22Z",
+      "title": "Mark Zuckerberg announces new 'Meta Compute' initiative for its data center and AI projects - Slashdot",
+      "title_ja": "マーク・ザッカーバーグ、データセンターとAIプロジェクトのための新しい「Meta Compute」イニシアチブを発表",
+      "summary_ja": "マーク・ザッカーバーグが新たに「Meta Compute」イニシアチブを発表し、Metaのインフラ投資を強化する方針を示しました。このイニシアチブの主導は、Santosh Janardhanが担当し、Dina Powell McCormickが政府とのパートナーシップ推進に関与します。Metaはまた、AI「スーパーインテリジェンス」の野心を念頭に置いた大規模なインフラ投資を計画しており、2028年までにAIインフラと雇用に6000億ドルを費やすことを目指しています。",
       "key_points": [
-        "サイバー電源の売上が減少している。",
-        "AI駆動の電源ソリューションにシフト。",
-        "データセンター需要の変化に対応。",
-        "今後の技術革新を見据えた戦略的な方向転換。"
+        "新しい「Meta Compute」イニシアチブが発表された。",
+        "Dina Powell McCormickがMetaのインフラ投資を監督する役割を担う。",
+        "Metaは今後の数十年で数十ギガワット以上のエネルギーを構築する計画。",
+        "AI「スーパーインテリジェンス」の実現に向けて大規模なインフラ投資を進めている。",
+        "Zuckerbergは2028年までに6000億ドルをAIインフラと雇用に費やす見込み。"
+      ],
+      "glossary": [
+        {
+          "term": "Meta Compute",
+          "explain_ja": "Metaが発表した、新しいインフラストラクチャ会社のイニシアチブで、主にデータセンターとAIプロジェクトに焦点を当てている。"
+        },
+        {
+          "term": "スーパーインテリジェンス",
+          "explain_ja": "AIシステムが人間の知能を超える能力を持つとされる概念。"
+        },
+        {
+          "term": "ギガワット",
+          "explain_ja": "電力の単位であり、1ギガワットは10億ワットに相当する。"
+        }
+      ],
+      "personal_actions": [
+        "Metaのインフラ投資計画を注視し、業界の変化に対応する。",
+        "自社のデータセンターにおけるエネルギー効率の向上策を検討する。",
+        "新しいAIプロジェクトに関連するスキル向上を図る。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.livemint.com/companies/news/who-is-dina-powell-mccormick-former-trump-adviser-to-take-charge-of-meta-s-ai-strategy-and-expansion-11768229247259.html",
+      "source": "Livemint",
+      "publishedAt": "2026-01-12T15:40:34Z",
+      "title": "Who is Dina Powell McCormick? Former Trump adviser to take charge of Meta’s AI strategy and expansion",
+      "title_ja": "ディナ・パウエル・マッコーマックとは？元トランプ大統領顧問がメタのAI戦略を担当",
+      "summary_ja": "ディナ・パウエル・マッコーマックが新たにメタのAI戦略と拡張に関する上級役職に就任する。彼女はAIイニシアチブやデータセンター投資の重要な役割を担い、グローバルなインフラ拡大を加速させる予定だ。マーク・ザッカーバーグCEOのもと、パウエルはメタの次の成長段階に寄与する見込み。",
+      "key_points": [
+        "ディナ・パウエル・マッコーマックがメタの新たな大統領兼副会長に就任。",
+        "AIやデータセンター投資を中心とした戦略的パートナーシップを推進。",
+        "25年以上の金融と公共政策の経験を持つ。",
+        "ゴールドマンサックスでの経験を生かして、メタのAIインフラ戦略を指導。",
+        "以前にメタの取締役を務めており、同社の運営に精通。",
+        "ザッカーバーグCEOは彼女の国際的な財務経験を強調。"
       ],
       "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能。機械学習やデータ解析を用いた自動化技術。"
+          "explain_ja": "人工知能（Artificial Intelligence）の略。人間の知的な作業を自動化する技術。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "コンピュータシステムや関連コンポーネントを集中管理する施設。"
+          "explain_ja": "データやアプリケーションを管理・保存するための専用の施設。"
+        },
+        {
+          "term": "公共政策",
+          "explain_ja": "政府が社会的な問題に対応するために策定する方針や計画。"
         }
       ],
       "personal_actions": [
-        "自社の電源管理システムの見直しを行う。",
-        "AI技術を活用した効率化の可能性を検討する。",
-        "データセンターのニーズに合った電源ソリューションを調査する。"
+        "メタのAIやデータセンター投資に関する最新情報を確認する。",
+        "関連する業界ニュースをモニタリングし、影響を把握する。",
+        "企業の戦略的パートナーシップの動向に注意を払う。"
       ],
       "tags": [
-        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://www.newser.com/story/381721/to-power-data-centers-meta-turns-to-nuclear-power.html",
-      "source": "Newser",
-      "publishedAt": "2026-01-11T15:00:00Z",
-      "title": "To Power Data Centers, Meta Goes Nuclear",
-      "title_ja": "データセンターの電力供給にメタが原子力を選択",
-      "summary_ja": "メタは、AIデータセンターの電力供給のために3つの原子力発電契約を締結した。この契約により、約500万世帯分のエネルギーを確保することができる。新しいデータセンター「プロメテウス」は、2026年に稼働を開始する予定で、2035年までにクリーンエネルギーを660万キロワット分供給する計画。また、この動きはミッドアトランティック地域の電力供給にポジティブな影響を与えると期待されている。",
+      "url": "https://www.technologyreview.com/2026/01/12/1129982/hyperscale-ai-data-centers-energy-usage-2026-breakthrough-technology/",
+      "source": "MIT Technology Review",
+      "publishedAt": "2026-01-12T11:00:00Z",
+      "title": "Hyperscale AI data centers: 10 Breakthrough Technologies 2026",
+      "title_ja": "ハイパースケールAIデータセンター：2026年の10の画期的技術",
+      "summary_ja": "2026年には、AIの進展を支えるためのハイパースケールデータセンターが急増する見込みです。これらの施設は、巨大なコンピュータラックが詰まったスーパースケールの建物で構成されています。これらは、AI技術における新たなインフラとして注目されており、エネルギー消費や効率の向上が求められています。",
       "key_points": [
-        "メタがTerraPower、Oklo、Vistraとの契約を締結し、データセンターの電力を原子力で確保。",
-        "新しいデータセンター「プロメテウス」は1ギガワットのクラスターで、今年稼働予定。",
-        "契約によって2035年までに最大660万キロワットのクリーンエネルギーを供給する計画。",
-        "電力供給の確保はミッドアトランティック地域の電気料金に影響を及ぼす可能性がある。",
-        "Okloとの契約で、オハイオ州に1.2ギガワットの発電キャンパスを開発予定。"
+        "ハイパースケールデータセンターが急増している。",
+        "AIの発展を支えるために設計された。",
+        "エネルギー消費が重要な課題となっている。",
+        "新たなインフラの形態として注目される。"
       ],
       "glossary": [
         {
-          "term": "Natrium",
-          "explain_ja": "新しいタイプの原子炉の設計。メタとの契約により開発される予定。"
+          "term": "ハイパースケールデータセンター",
+          "explain_ja": "大規模なコンピュータシステムやストレージを持つデータセンターのこと。"
         },
         {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位。1ギガワットは約750,000世帯分の電力量に相当。"
-        },
-        {
-          "term": "クリーンエネルギー",
-          "explain_ja": "環境負荷の少ないエネルギー源のこと。再生可能エネルギーの一部。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）に関する技術や研究。"
         }
       ],
       "personal_actions": [
-        "新しい電力供給の動きについて社内で情報を共有し、影響を確認する。",
-        "地域の電力需要や料金の動向をモニタリングし、必要に応じて対策を検討する。",
-        "メタのデータセンターの開発状況をフォローし、関連する技術的な情報を更新する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.cnbc.com/2026/01/11/bloom-energy-ai-data-center-power-stock-bubble.html",
-      "source": "CNBC",
-      "publishedAt": "2026-01-11T14:19:35Z",
-      "title": "How the AI data center bubble story is playing out inside one booming energy stock",
-      "title_ja": "AIデータセンター市場におけるブルームエネルギーの株価バブルの行方",
-      "summary_ja": "ブルームエネルギーの株は、AIデータセンター向けの onsite power の生成によって急騰していますが、バブルリスクを回避できるかが問われています。背景にはAIデータセンターの需要増加があります。これにより、同社の事業がどのように影響を受けるかが注目されています。",
-      "key_points": [
-        "ブルームエネルギーはAIデータセンター向けに onsite power を生成している。",
-        "同社の株価は急騰しているが、バブルのリスクが懸念されている。",
-        "AIデータセンターの需要増加がビジネスを支えている。"
-      ],
-      "glossary": [
-        {
-          "term": "Bloom Energy",
-          "explain_ja": "エネルギー生成の技術を提供する企業で、特に燃料電池や持続可能な発電に注力している。"
-        },
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能に特化した計算リソースを提供するデータセンター。"
-        }
-      ],
-      "personal_actions": [
-        "ブルームエネルギーの株式動向を定期的に確認する。",
-        "AIデータセンター向けのエネルギー供給のトレンドを把握しておく。"
+        "最新のデータセンターに関するトレンドを調査する。",
+        "エネルギー効率を考慮したシステム設計を検討する。"
       ],
       "tags": [
         "DC",

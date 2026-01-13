@@ -36,22 +36,28 @@
 </ol>
       </section>
 
-      <section id="sec-1">
+<section id="sec-1">
   <h3>number / string / boolean / null / undefined</h3>
+
   <p>今回できるようになることとして、基本的な値の種類を見分けて、型による振る舞いの違いでバグを減らせるようになります。</p>
-<p>number（数値）は計算に使い、string（文字列）はテキスト、boolean（真偽）は条件分岐に使います。</p>
-<p>nullは「値がないことを明示」し、undefinedは「値が未定義または未設定」を表します。これらが混ざると思わぬ挙動になるため、使い分けが重要です。</p>
+  <p>number（数値）は計算に使い、string（文字列）はテキスト、boolean（真偽）は条件分岐に使います。</p>
+  <p>nullは「値がないことを明示」し、undefinedは「値が未定義または未設定」を表します。これらが混ざると思わぬ挙動になるため、使い分けが重要です。</p>
 
-<p>貼り付け場所：CodePenを想定する場合はHTML欄とJS欄に分けて貼り付けます。HTML欄にはボタンと出力要素（例：#check, #result）を用意します。</p>
+  <p>
+    この最小例は、ボタンを押すと <code>typeof</code> の結果をまとめて表示し、
+    「数値のゼロ」と「文字列のゼロ」が別物であること、<code>null</code> と <code>undefined</code> の違いを目で確認できるようにするデモです。
+  </p>
 
-<pre><code>&lt;!-- HTML欄（CodePenのHTMLエリアに貼ってください） --&gt;
+  <p>貼り付け場所：CodePenを想定する場合はHTML欄とJS欄に分けて貼り付けます。HTML欄にはボタンと出力要素（例：#check, #result）を用意します。</p>
+
+  <pre><code class="language-html">&lt;!-- HTML欄（CodePenのHTMLエリアに貼ってください） --&gt;
 &lt;button id="check"&gt;型チェック実行&lt;/button&gt;
 &lt;div id="result"&gt;&lt;/div&gt;
 </code></pre>
 
-<p>最小コード：</p>
+  <p>最小コード：</p>
 
-<pre><code>// JS欄（CodePenのJSエリアに貼ってください）
+  <pre><code class="language-javascript">// JS欄（CodePenのJSエリアに貼ってください）
 const out = document.getElementById('result');
 document.getElementById('check').addEventListener('click', () =&gt; {
   const a = 0;           // number
@@ -66,6 +72,24 @@ document.getElementById('check').addEventListener('click', () =&gt; {
   ].join('\n');
 });
 </code></pre>
+
+  <p>確認方法：ボタンを押して、表示が次のようになればOKです。特に <code>null</code> が <code>object</code> と表示される点は、JavaScriptの仕様として覚えておくと混乱が減ります。</p>
+  <p>実行結果：</p>
+
+  <pre><code>a:0 (number)
+b:0 (string)
+c:null (object)
+d:undefined (undefined)</code></pre>
+
+  <p>
+    結果の説明：<br>
+    1つ目。<code>a</code> は数値のゼロなので、<code>typeof a</code> は <code>number</code> になります。数値は足し算などの計算に使われます。<br>
+    2つ目。<code>b</code> は文字列のゼロなので、<code>typeof b</code> は <code>string</code> になります。見た目が同じ「0」でも、文字列は計算ではなくテキストとして扱われます。<br>
+    3つ目。<code>c</code> は <code>null</code> なので、本来は「値がないことを明示」という意味です。ただしJavaScriptの歴史的な理由で、<code>typeof null</code> は <code>object</code> と表示されます（これは例外として覚えておくのが安全です）。<br>
+    4つ目。<code>d</code> は <code>undefined</code> なので、<code>typeof d</code> は <code>undefined</code> になります。これは「値が未設定・未定義」の状態を表します。<br>
+    まとめると、<strong>見た目が似ていても型が違うと扱いが変わる</strong>ので、<code>typeof</code> で確認できるようにしておくとバグを減らせます。
+  </p>
+
 </section>
 
 <section id="sec-2">
@@ -79,30 +103,119 @@ document.getElementById('check').addEventListener('click', () =&gt; {
 <section id="sec-3">
   <h3>暗黙の型変換で起きる事故例</h3>
   <p>暗黙の型変換（coercion）は便利ですが、意図しない結果を生みます。</p>
-<p>たとえば <pre><code>"" + 1</code></pre> は <pre><code>"1"</code></pre> になりますが、<pre><code>"" - 1</code></pre> は <pre><code>-1</code></pre>（文字列が数値に変換されます）になります。</p>
-<p>また、<pre><code>[] == 0</code></pre> が真になるなど直感に反する比較が起こります。</p>
-<p>文字列連結や数値計算を行うときは、明示的な変換（<pre><code>Number()</code></pre> / <pre><code>String()</code></pre>）を使うと事故が減ります。</p>
+
+  <p>例：プラスは「文字列連結」になりやすく、マイナスは「数値計算」になりやすいです。</p>
+  <pre><code class="language-javascript">"" + 1   // "1"
+"" - 1   // -1</code></pre>
+
+  <p>また、直感に反する比較が起こることがあります。</p>
+  <pre><code class="language-javascript">[] == 0  // true</code></pre>
+
+  <p>文字列連結や数値計算を行うときは、明示的な変換（<code>Number()</code> / <code>String()</code>）を使うと事故が減ります。</p>
+
+  <p>明示的な変換の例：</p>
+  <pre><code class="language-javascript">// 数値にする
+Number("10")      // 10
+Number("")        // 0
+Number("abc")     // NaN（数値にできない）
+
+// 文字列にする
+String(10)        // "10"
+String(null)      // "null"</code></pre>
+
+  <p>よくある安全な書き方（足し算を必ず数値にする）：</p>
+  <pre><code class="language-javascript">const a = "10";
+const b = "2";
+const sum = Number(a) + Number(b); // 12</code></pre>
+
+  <p>入力値（フォームなど）は基本文字列なので、計算前に数値へ変換し、必要なら <code>Number.isNaN()</code> でチェックします。</p>
 </section>
 
 <section id="sec-4">
   <h3>NaNとInfinityの扱い</h3>
-  <p>計算で想定外の値になることがあります。0/0 は NaN（Not-a-Number）になり、1/0 は Infinity になります。NaN は自分自身とも等しくない特徴があり、NaN === NaN は偽です。isNaN() や Number.isNaN()、Number.isFinite() を使って検査し、無効な計算結果を早めに処理すると安全性が高まります。</p>
+  <p>
+    計算で想定外の値になることがあります。0/0 は NaN（Not-a-Number）になり、1/0 は Infinity になります。
+    NaN は自分自身とも等しくない特徴があり、NaN === NaN は偽です。
+    isNaN() や Number.isNaN()、Number.isFinite() を使って検査し、無効な計算結果を早めに処理すると安全性が高まります。
+  </p>
+
+  <p>最小の実例：</p>
+  <pre><code class="language-javascript">const x = 0 / 0;   // NaN
+const y = 1 / 0;   // Infinity
+const z = Number("abc"); // NaN
+
+// isNaN は「数値に変換してから」判定するので、文字列でも true になり得る
+console.log(isNaN("abc"));          // true
+
+// Number.isNaN は「本当に NaN か」だけを見る（より安全）
+console.log(Number.isNaN(z));       // true
+console.log(Number.isNaN("abc"));   // false
+
+// 有限かどうか（NaN と Infinity をまとめて弾ける）
+console.log(Number.isFinite(x));    // false
+console.log(Number.isFinite(y));    // false
+console.log(Number.isFinite(123));  // true
+
+// 無効な計算結果を早めに処理する例
+function safeDiv(a, b) {
+  const r = a / b;
+  if (!Number.isFinite(r)) return 0; // NaN / Infinity をまとめて回避
+  return r;
+}
+
+console.log(safeDiv(10, 2)); // 5
+console.log(safeDiv(1, 0));  // 0
+console.log(safeDiv(0, 0));  // 0</code></pre>
 </section>
 
 <section id="sec-5">
   <h3>型を確認する（typeofの基本）</h3>
-  <p>typeof 演算子はプリミティブの型確認に便利で、typeof 123 は <code>"number"</code>、typeof <code>"a"</code> は <code>"string"</code>、typeof true は <code>"boolean"</code> を返します。</p>
-<p>ただし typeof null が <code>"object"</code> を返す歴史的事情があるため、null 判定は値比較（<code>x === null</code>）で行うのが確実です。</p>
-<p>配列は typeof で <code>"object"</code> になるので、<code>Array.isArray()</code> を使うと配列判定ができます。</p>
 
-<p>実行方法：ブラウザで開くか、CodePenのRunで実行します。Consoleで結果を見ます。</p>
+  <p>
+    目次 1 では「型の違いを目で確認する」体験をしました。ここでは実務で使うために、
+    <code>typeof</code> を「いつ」「どう使うか」と、例外（null・配列）だけ押さえます。
+  </p>
 
-<p>確認方法：console.logの出力や画面表示が想定どおりかで確認します（必要なら簡単な条件チェックもします）。</p>
+  <p><strong>基本：</strong>値が何っぽいかを手早く知りたいときに <code>typeof</code> を使います。</p>
+  <pre><code class="language-javascript">typeof 123    // "number"
+typeof "a"    // "string"
+typeof true   // "boolean"
+typeof undefined // "undefined"</code></pre>
 
-<p>よくあるミス：Consoleを開いていないため出力が見えない、または変数名のスペル違いでReferenceErrorになることがあります。</p>
+  <p>
+    <strong>注意1（null）：</strong><code>typeof null</code> は歴史的事情で <code>"object"</code> になります。
+    なので null 判定は <code>x === null</code> のように値比較で行うのが確実です。
+  </p>
+  <pre><code class="language-javascript">const x = null;
+console.log(typeof x);     // "object"（例外）
+console.log(x === null);   // true（これが確実）</code></pre>
 
-<p>使い分けの基準：繰り返しはfor/for...of、変換はmap、絞り込みはfilterのように目的で使い分けます。</p>
+  <p>
+    <strong>注意2（配列）：</strong>配列も <code>typeof</code> だと <code>"object"</code> になります。
+    配列かどうかは <code>Array.isArray()</code> を使います。
+  </p>
+  <pre><code class="language-javascript">const a = [1, 2, 3];
+console.log(typeof a);          // "object"
+console.log(Array.isArray(a));  // true</code></pre>
+
+  <p>
+    <strong>よくある使い方：</strong>関数の引数が想定どおりかを早めにチェックして、変な値なら止めます。
+    これだけで「後半で謎のエラーになる」事故が減ります。
+  </p>
+  <pre><code class="language-javascript">function addSafe(n) {
+  if (typeof n !== "number") return 0; // 早めに回避
+  return n + 1;
+}
+
+console.log(addSafe(10));   // 11
+console.log(addSafe("10")); // 0</code></pre>
+
+  <p>実行方法：ブラウザで開くか、CodePenのRunで実行します。Consoleで結果を見ます。</p>
+  <p>確認方法：console.logの出力が想定どおりかを確認します。</p>
+
+  <p>よくあるミス：Consoleを開いていないため出力が見えない、または変数名のスペル違いでReferenceErrorになることがあります。</p>
 </section>
+
 
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
