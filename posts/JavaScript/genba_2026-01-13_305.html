@@ -38,7 +38,7 @@
 
       <section id="sec-1">
   <h3>if/elseの基本と読みやすい並べ方</h3>
-  <p>今回できるようになることとして、条件分岐を読みやすく書き、ネストを減らすコツを使えるようになります。</p>
+  <p>条件分岐を読みやすく書き、ネストを減らすコツを使えるようになりましょう。</p>
 <p>if/elseは条件が少ないときに直感的で使いやすいです。</p>
 <p>複数条件は else if を使って上から順に判定しますが、深い入れ子（ネスト）は可読性を下げます。</p>
 <p>早期return（ガード節）やフラットな条件チェーンを使うと読みやすくなります。</p>
@@ -74,36 +74,66 @@
 &lt;pre id="out"&gt;&lt;/pre&gt;
 </code></pre>
 
-<pre><code class="language-javascript">const btn = document.getElementById('run');
+<pre><code class="language-javascript">// ボタン要素（id="run"）と、結果表示用の要素（id="out"）を取得
+const btn = document.getElementById('run');
 const out = document.getElementById('out');
 
+// 入力された文字（input）を受け取り、判定結果の文章を返す関数
 function analyze(input) {
+  // 入力が空、または数字として扱えないならメッセージを返して終了
   if (input === '' || isNaN(input)) return '入力が必要です';
+
+  // 文字を数字に変換
   const n = Number(input);
+
+  // ここに結果の文章を追加していく（\n は改行）
   let s = '';
-  if (n &gt; 0) s += 'positive\n';
-  else if (n &lt; 0) s += 'negative\n';
+
+  // n が正/負/ゼロ どれかを判定
+  if (n > 0) s += 'positive\n';
+  else if (n < 0) s += 'negative\n';
   else s += 'zero\n';
 
+  // n を 3 で割った余り（n % 3）で分岐
   switch (n % 3) {
-    case 0: s += 'mod 3 == 0\n'; break;
-    default: s += 'mod 3 != 0\n';
+    case 0:
+      s += 'mod 3 == 0\n'; // 3で割り切れる
+      break;
+    default:
+      s += 'mod 3 != 0\n'; // 3で割り切れない
   }
 
-  for (let i = 0; i &lt; Math.min(n, 5); i++) {
+  // i を 0 から増やしながら繰り返す（最大5回まで）
+  // Math.min(n, 5) なので、n が大きくても 5 回で止まる
+  for (let i = 0; i < Math.min(n, 5); i++) {
+    // i が 2 のときだけスキップして次の回へ
     if (i === 2) continue;
+
+    // バッククォート `...` を使うと、${i} のように変数を文字に混ぜられる
     s += `for i=${i}\n`;
   }
 
+  // 配列（複数の値をまとめたもの）を用意
   const arr = [10, 20, 30];
+
+  // 配列の中身を1つずつ取り出して文章に追加
   for (const v of arr) s += `of:${v}\n`;
 
+  // 条件が true の間、繰り返す（ここでは 0 と 1 の2回）
   let i = 0;
-  while (i &lt; 2) { s += `while:${i}\n`; i++; }
+  while (i < 2) {
+    s += `while:${i}\n`;
+    i++; // i を 1 増やす
+  }
+
+  // ここまで作った文章を返す
   return s;
 }
 
-btn.addEventListener('click', () =&gt; {
+// ボタンが押されたら実行する処理
+btn.addEventListener('click', () => {
+  // id="num" の入力欄の文字を取り出して analyze に渡す
+  // 返ってきた文章を out に表示する
   out.textContent = analyze(document.getElementById('num').value);
 });
 </code></pre>

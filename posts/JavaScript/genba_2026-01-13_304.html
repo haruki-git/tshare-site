@@ -25,10 +25,11 @@
         <h2>目次</h2>
         <ol>
   <li><a href="#sec-1">letとconst（再代入・再宣言）</a></li>
-  <li><a href="#sec-2">ブロックスコープの考え方</a></li>
+  <li><a href="#sec-2">スコープとブロックスコープ</a></li>
   <li><a href="#sec-3">関数スコープとグローバル汚染</a></li>
   <li><a href="#sec-4">参照型の落とし穴（constでも中身は変わる）</a></li>
   <li><a href="#sec-5">安全な命名と整理のコツ</a></li>
+  <li><a href="#sec-5-1">これまでの内容を整理したコード例</a></li>
   <li><a href="#sec-6">注意（ここだけ）</a></li>
   <li><a href="#sec-7">要約</a></li>
 </ol>
@@ -36,64 +37,151 @@
 
       <section id="sec-1">
   <h3>letとconst（再代入・再宣言）</h3>
-  <p>今回できるようになることとして、letとconstの違いを理解して適切に使い分けられるようになります。</p>
+  <p>letとconstの違いを理解すると、適切に使い分けられるようになります。</p>
 <p>constは再代入が禁止で、letは再代入が可能です。</p>
 <p>どちらも同じ名前で再宣言はできません（同じスコープ内）。</p>
 <p>短い例を実行して違いを確かめると感覚がつかめます。</p>
-<p>貼り付け場所：CodePenを想定する場合、HTMLはHTML欄に、スクリプトはJS欄に貼り付けます。</p>
-<p>ローカルで試す場合はHTML欄のボタンと出力要素を含む部分をindex.htmlに置き、JSは&lt;script&gt;で読み込みます。</p>
+<pre><code>// 短い実例（CodePenのJS欄で試す）
+// 同じスコープ内で再宣言
+let a = 1;
+//let a = 2;  // SyntaxError
+
+const b = 1;
+//const b = 2;  // SyntaxError
+
+// 同じスコープ内で再代入
+let c = 1;
+c = 2;  // 代入できる
+
+const d = 1;
+d = 2;  // TypeError
+</code></pre>
+<p>貼り付け場所：CodePenのJS欄に貼り付けます。</p>
 </section>
 
 <section id="sec-2">
-  <h3>ブロックスコープの考え方</h3>
-  <p>ブロックスコープとは中括弧({})内だけ有効な変数範囲で、let/constはこれを持ちます。</p>
-<p>ifやforの中で定義したlet変数は外から見えないため、同じ名前を他で使っても衝突しにくくなります。</p>
-<p>短いブロック例を動かして挙動を確認すると理解が深まります。</p>
+<h3>スコープとブロックスコープ</h3>
+<p>まず、スコープとは「その変数名を参照できる有効範囲」のことです。どこからその変数を使えるか、という境界を表します。</p>
+  <p>ブロックスコープとは中括弧（{ }）内だけ有効な変数範囲で、let/constはこれを持ちます。</p>
+  <p>ifやforの中で宣言したlet/constは、そのブロックの外からは参照できません。つまり「ブロックの中で作った変数は、外では使えない」というルールです。</p>
+  <p>この性質のおかげで、処理の一部だけで使う一時変数を外に漏らさずに済み、別の場所で同じ名前を使っても衝突しにくくなります。</p>
+  <p>補足：ブロックが分かれていれば同じ名前を使える場合があります（外側と内側で別スコープになるため）。ただし、読み手が混乱しやすいので同名の使い回し（シャドーイング）は必要なときだけにします。</p>
+  <p>補足：ほぼ過去の遺物となっている var という変数宣言もあります。詳細の説明は省きますがスコープの仕組み（関数スコープ）などの影響で意図しない挙動になりやすいため、新規のコードでは基本的に var は使わず、let/const を使いましょう。</p>
 </section>
 
 <section id="sec-3">
   <h3>関数スコープとグローバル汚染</h3>
-  <p>関数内でvarを使わない、あるいは宣言を忘れて代入すると暗黙的にグローバル変数になり、他のスクリプトを壊しやすくなります。</p>
-<p>関数スコープは関数単位で有効範囲が決まるため、ローカルにするなら必ずlet/constで宣言します。</p>
-<p>小さな関数でグローバルが生える例を確認してください。</p>
+  <p>注意したいのは「宣言なし代入」です。関数内でも、<code>foo = 1</code> のように <code>let/const/var</code> を付けずに代入すると、暗黙的にグローバル変数になり、他のスクリプトを壊しやすくなります（厳格モードの<code>'use strict'</code> ではエラーになります）。</p>
+  <p>また、<code>var</code> はブロックスコープではなく関数スコープのため、<code>if</code> や <code>for</code> の中で宣言しても関数全体から見えてしまい、意図しない範囲で使えてしまうことがあります。新規のコードでは基本的に <code>let/const</code> を使うのが安全です。</p>
+  <p>関数スコープは関数単位で有効範囲が決まるため、ローカルにするなら必ず <code>let/const</code> で宣言します。</p>
 </section>
 
 <section id="sec-4">
   <h3>参照型の落とし穴（constでも中身は変わる）</h3>
-  <p>constで宣言したオブジェクトや配列は参照が固定されるだけで、内部のプロパティや要素は変更できます。</p>
-<p>オブジェクトの再代入はできませんが、プロパティの変更やpushは可能です。</p>
-<p>これを誤解すると「constでも値が変わった」と感じるため、参照と中身の違いを意識するとよいです。</p>
+<p>const は「変数に別の値を入れ直す（再代入）」ができない、という意味です。</p>
+<p>ただし、const に入っているのがオブジェクトや配列のような「中身を持つ値」の場合、中身を書き換えることはできます。つまり「入れ物の付け替え」は禁止でも、「入れ物の中身の変更」は可能です。</p>
+<p>この違いを知らないと「constなのに変わった」と感じるので、「変えられないのは変数そのもの（入れ替え）」だと覚えると混乱しにくいです。</p>
 </section>
 
 <section id="sec-5">
   <h3>安全な命名と整理のコツ</h3>
   <p>命名は何を表すか一目で分かるようにして、グローバル変数は避けます。接頭辞やキャメルケースで役割を出し、関数は動詞＋目的語、変数は名詞にします。ファイル内で使う小さなヘルパー関数は名前空間（オブジェクト）にまとめると衝突が減ります。</p>
 
-<p>最小コード：</p>
-<pre><code>// 短い実例（CodePenのJS欄に貼る）
-const MAX = 3;
-let count = 0;
-const user = {name: 'A'};
+  <p><strong>用語メモ：</strong></p>
+  <ul>
+    <li>
+      <p><strong>グローバル変数</strong>：どこからでも参照できる変数のことです（スクリプトの一番外側で作った変数など）。便利に見えますが、別の場所で同じ名前を使ってしまうと上書きや衝突が起きやすいので、できるだけ関数やブロックの中に閉じて使います。</p>
+    </li>
+    <li>
+      <p><strong>キャメルケース</strong>：単語をつなげるときに、2語目以降の先頭を大文字にする書き方です。例：<code>userName</code>、<code>saveDraft</code>、<code>maxRetryCount</code>。JavaScriptでは変数名や関数名でよく使われます。</p>
+    </li>
+    <li>
+      <p><strong>ヘルパー関数</strong>：本筋の処理（メインの処理）を助けるための「小さな便利関数」です。たとえば「文字列を整形する」「入力チェックをする」「日付を表示用に変換する」など、何度も出てくる細かい処理を関数にして再利用します。</p>
+    </li>
+  </ul>
+<section id="sec-5-1">
+  <h3>これまでの内容を整理したコード例</h3>
+<p>下記のコード例は、命名と整理の考え方を体感するためのミニ例です。</p>
+<p>■ 動作</p>
+<ul>
+  <li><p>画面に「クリック」ボタンと表示欄を用意します。</p></li>
+  <li>
+    <p>ボタンを押すたびに、次の処理を行います。</p>
+    <ul>
+      <li><p><code>count</code> を 1 増やす</p></li>
+      <li><p><code>userName</code> を <code>"B"</code> に更新する</p></li>
+      <li><p>表示欄を <code>count=..., user=...</code> の形式で更新し直す</p></li>
+      <li><p>条件付きで Console にメッセージを出す（動作確認用）</p></li>
+    </ul>
+  </li>
+</ul>
 
-function clickHandler() {
-  // ブロックスコープ
-  if (count &lt; MAX) {
-    let inside = 'visible';
-    console.log('inside:', inside);
+<p>■ 整理ポイント</p>
+<ul>
+  <li><p><strong>グローバルを増やさない</strong>：外に出る名前は <code>CounterApp</code> だけにして、衝突しにくくします。</p></li>
+  <li><p><strong>状態をまとめる</strong>：<code>state</code>（count と userName）に集約して、変数を散らばらせません。</p></li>
+  <li><p><strong>ヘルパー関数</strong>：<code>getEl()</code> や <code>render()</code> のような共通処理を関数にして再利用します。</p></li>
+  <li><p><strong>必要最小限だけ公開</strong>：外から呼べるのは <code>mount()</code> だけにして、内部の変数や関数を隠します。</p></li>
+</ul>
+
+<pre><code>// 実例（CodePenのJS欄に貼る）
+// 目的：グローバルを増やさず、命名と整理（まとめ方）を体感する例
+
+const CounterApp = (function () {
+  // 固定値は変更しないので const
+  const MAX_COUNT = 3;
+
+  // プログラムの挙動（表示や処理の結果）に影響する、途中で変わる値をまとめる
+  // {} は「入れ物（オブジェクト）」を作るための記法
+  const state = { count: 0, userName: "A" };
+
+  // ---- ヘルパー関数（小さな便利関数）----
+  function getEl(id) {
+    return document.getElementById(id);
   }
-  // 参照型の中身は変えられる
-  user.name = 'B';
-  count++;
-  document.getElementById('out').textContent = `count=${count}, user=${user.name}`;
-}
 
-document.getElementById('btn').addEventListener('click', clickHandler);
+  function render() {
+    getEl("out").textContent = "count=" + state.count + ", user=" + state.userName;
+  }
+
+  // ---- メインの処理（イベント処理）----
+  function onClick() {
+    // ブロックスコープ（ifの中だけの一時変数）
+    if (state.count < MAX_COUNT) {
+      const message = "クリックしました";
+      console.log(message);
+    }
+
+    // const のオブジェクトでも中身は更新できる
+    state.userName = "B";
+
+    // 値が変わるので count を更新（数値の更新は let ではなく state 内で行う）
+    state.count = state.count + 1;
+
+    render();
+  }
+
+  function mount() {
+    getEl("btn").addEventListener("click", onClick);
+    render();
+  }
+
+  // 外に公開するのは必要最小限にする（入口を絞って安全にする）
+  // ここでは mount 関数だけを返し、state など内部の値や関数は外から触れないようにする
+  // その結果、外側では CounterApp.mount() だけが呼べる
+  return { mount: mount };
+})();
+
+CounterApp.mount();
 </code></pre>
 
 <pre><code>&lt;!-- HTML欄に貼る（CodePenのHTML欄） --&gt;
 &lt;button id="btn"&gt;クリック&lt;/button&gt;
 &lt;div id="out"&gt;count=0, user=A&lt;/div&gt;
 </code></pre>
+
+
+
 
 <p>実行方法は、CodePenにHTMLをHTML欄、JavaScriptをJS欄にそれぞれ貼り付けてRunボタンを押すか、ローカルならindex.htmlをブラウザで開きます。</p>
 

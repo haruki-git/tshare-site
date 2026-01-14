@@ -36,7 +36,7 @@
 
       <section id="sec-1">
   <h3>scriptの書き方（HTMLとJSのつなぎ方）</h3>
-  <p>今回できるようになることとして、ブラウザでJavaScriptを動かしてConsoleと画面の両方で結果を確認できるようになります。HTML内に&lt;script&gt;を書く方法と、外部ファイル（またはCodePenのJS欄）を使う方法を説明します。基本は「HTMLに要素を置く→JSで参照して操作する」です。ここでは簡単なボタンで数を増やし、画面表示とConsole出力を両方行う最小の例を示します。</p>
+  <p>ブラウザでJavaScriptを動かしてConsoleと画面の両方で結果を確認していきます。HTML内に&lt;script&gt;を書く方法と、外部ファイル（またはCodePenのJS欄）を使う方法を説明します。基本は「HTMLに要素を置く→JSで参照して操作する」です。ここでは簡単なボタンで数を増やし、画面表示とConsole出力を両方行う最小の例を示します。</p>
 
 <p>最小コード：</p>
 <pre><code class="language-html">&lt;!-- HTML欄（CodePenのHTML欄へ貼る） --&gt;
@@ -65,7 +65,8 @@ btn.addEventListener('click', function () {
 <p>Browserの開発者ツール（DevTools）のConsoleタブを開き、クリックなどの操作をしてログが出るか確認します。</p>
 <p>長いオブジェクトはconsole.tableやconsole.dirで見やすくなりますが、まずはconsole.logで期待する値が出るかを確認します。</p>
 <p>ログは先に仕込んで後から消す習慣が便利です。</p>
-<p>実行方法は、CodePenなら画面右上のRunで実行し、ローカルならHTMLをブラウザで開きます。</p>
+<p>実行方法は、CodePenなら画面左下のConsoleを押し開いておき、画面右上のRunで実行。ローカルならHTMLをブラウザで開きます。</p>
+<p>CodePenでRunボタンがない場合は、右上のSettings → Behavior → Auto-Updating PreviewをOffにします。</p>
 <p>ボタンをクリックするなどでイベントを発生させると、JavaScriptが動きます。</p>
 </section>
 

@@ -38,25 +38,27 @@
 
       <section id="sec-1">
   <h3>関数宣言と関数式の違い</h3>
-  <p>今回できるようになることとして、関数宣言と関数式の使い分けと実行順の違いがわかることです。</p>
-<p>関数宣言（function doX(){...}）はホイスティング（先上げ）により、スコープ内のどこでも呼べます。</p>
-<p>関数式（const doY = function(){...} や const doZ = () =&gt; {...}）は、代入後でないと呼べません。</p>
+  <p>関数宣言と関数式の使い分けと実行順の違いを説明していきます。</p>
+<p><p>関数宣言（function doX(){...}）は、先に登録されるので、書いた場所より前でも呼べます。</p>
+<p>関数式（const doY = function(){...} や const doZ = () => {...}）は、変数に入れて作るので、その行を実行した後でないと呼べません。</p>
 <p>定義の置き場所でエラーが出ることが多いので、読みやすさを優先して宣言か式かを決めます。</p>
 </section>
 
 <section id="sec-2">
-  <h3>アロー関数の基本（短縮形）</h3>
-  <p>アロー関数は書き方が短くなり、特に短い処理で見やすくなります（(a,b)=&gt;a+b）です。</p>
-<p>波括弧を省略すると即値を返しますが、複数行にする場合は波括弧とreturnが必要です。</p>
-<p>thisの扱いが通常の関数と違うため、イベントやコールバックで便利になる一方で、メソッドには向かないことがあります（後述で簡単に触れます）です。</p>
+  <h3>アロー関数の基本（短縮形a）</h3>
+  <p>アロー関数は、関数を短く書ける書き方です。短い処理を1行で書くときに読みやすくなります。</p>
+  <p>例：<code>(a, b) =&gt; a + b</code> は「a と b を足した結果を返す関数」です。</p>
+  <p>書き方には2パターンあります。1行で書く場合は、波括弧（{ }）と <code>return</code> を省略できます（その1行の結果がそのまま返ります）。</p>
+  <p>複数行にする場合は、波括弧（{ }）を書き、必要なら <code>return</code> で返す値を指定します。</p>
+  <p>補足：アロー関数は <code>this</code> の扱いが通常の <code>function</code> と違うため、使う場所によっては便利ですが、メソッドとして使うと意図とずれることがあります（ここでは「違いがある」とだけ覚えればOKです）。</p>
 </section>
 
 <section id="sec-3">
   <h3>引数・戻り値・デフォルト引数</h3>
-  <p>関数は入力（引数）を受け取り、処理して戻り値を返します。</p>
-<p>引数は複数にでき、省略された場合に備えてデフォルト引数（<code>function f(a=1){...}</code>）を設定できます。</p>
-<p>戻り値がない場合は<code>undefined</code>が返る点は要チェックです。</p>
-<p>副作用（DOM操作やconsole）をするか、純粋関数として値だけ扱うかで設計が変わります。</p>
+  <p>関数は「入力（引数）」を受け取り、処理した結果を「戻り値」として返します。</p>
+  <p>引数は複数渡せます。また、引数が省略されたときのために「デフォルト値」を決めておけます（例：<code>function f(a = 1) { ... }</code>）。</p>
+  <p>関数の中で <code>return</code> を書かなかった場合、戻り値は <code>undefined</code> になります。</p>
+  <p>関数には2タイプあります。値だけを返す関数（結果が追いやすい）と、画面を書き換える・Consoleに出すなどの処理も行う関数です。どちらにするかで、書き方や見通しが変わります。</p>
 </section>
 
 <section id="sec-4">
@@ -77,15 +79,31 @@ const double = x =&gt; x*2;                                // アロー（短縮
 function greet(name='guest'){ return `Hello ${name}`; } // デフォルト引数
 function operate(a,b,op){ return op(a,b); }            // コールバック受け取り
 
-// DOM操作とイベントで確認
-document.getElementById('btn').addEventListener('click', function(){
-  const res = operate(2,3,add);
-  document.getElementById('out').textContent = '結果: ' + res;
-  console.log('traditional this:', this);
+// コールバック（関数を引数で受け取る）の確認
+// クリックすると operate(2,3,add) を実行し、結果を画面に表示する（表示は動作確認用）
+// ついでに this の違いを Console に出して、function とアロー関数の差を確認する
+document.getElementById('btn').addEventListener('click', function () {
+  const res = operate(2, 3, add);
+  document.getElementById('out').textContent = '結果：' + res;
+  console.log('traditional this：', this);
 });
-document.getElementById('btn2').addEventListener('click', () =&gt; {
-  console.log('arrow this:', this);
-});</code></pre>
+
+// ※this確認用は別ボタン（btn2）
+// ※アロー関数でも、要素が欲しいなら event.currentTarget を使えばOK
+document.getElementById('btn2').addEventListener('click', (e) => {
+  console.log('arrow this：', this);                // 外側の this（ボタンではない）
+  console.log('currentTarget：', e.currentTarget);  // クリックされた要素（btn2）
+});
+
+
+// memo
+// アロー関数は“thisを使う場合に、入れ子でズレないようにする” ための対策をしており、外側のthisをそのまま固定で使う。 
+// そのため、イベントで押した要素をthisで取りたい場合などは、素直な動作にならないためfunctionを使うのが一般的。 
+// とりあえず、 下記で覚えておけばOK。
+// thisを使いたいなら：function () { ... } 
+// thisを使わないなら：アローでもOK
+// 要素が欲しいなら：event.currentTarget を使う（アローでもOK）
+</code></pre>
 
 <pre><code>&lt;button id="btn"&gt;計算&lt;/button&gt;
 &lt;button id="btn2"&gt;this確認&lt;/button&gt;

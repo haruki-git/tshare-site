@@ -44,21 +44,34 @@
   <li>削除：pop（末尾から取り出す）です。</li>
   <li>参照：arr[index]（0始まり）です。</li>
 </ul>
-<p>最小サンプル（ブラウザでボタンを押すと出力）です。</p>
+<p>最小サンプル（CodePenのHTML欄に書きブラウザでボタンを押すと出力）です。</p>
 <pre><code class="language-html">&lt;!-- HTML --&gt;
 &lt;button id="run"&gt;実行&lt;/button&gt;
 &lt;pre id="output"&gt;&lt;/pre&gt;
 &lt;script&gt;
-const out = msg =&gt; {
-  const el = document.getElementById('output');
-  console.log(msg);
-  el.textContent += msg + '\n';
+// 画面（#output）とConsoleに同じ内容を出すための関数（出力用）
+const out = msg => {
+  const el = document.getElementById('output'); // 表示先の要素を取得
+  console.log(msg);                             // Consoleにも出す（確認用）
+  el.textContent += msg + '\n';                 // 画面に追記（\nは改行）
 };
-document.getElementById('run').addEventListener('click', () =&gt; {
-  const nums = [1,2,3];
+
+// 「実行」ボタン（#run）を押したら、配列の基本操作を順に試す
+document.getElementById('run').addEventListener('click', () => {
+  // 配列：複数の値を順番にまとめる（0番から数える）(実行の度に初期化する)
+  const nums = [1, 2, 3];
+
+  // 現在の配列を表示（JSON.stringifyで配列を文字列にして見やすくする）
   out('初期: ' + JSON.stringify(nums));
-  nums.push(4); out('push後: ' + JSON.stringify(nums));
+
+  // push：末尾に追加（元の配列が変わる）
+  nums.push(4);
+  out('push後: ' + JSON.stringify(nums));
+
+  // pop：末尾を取り出して削除（取り出した値が戻り値）
   out('popで取れた: ' + nums.pop());
+
+  // nums[1]：2番目の要素（インデックス1）を取り出す
   out('nums[1]: ' + nums[1]);
 });
 &lt;/script&gt;
@@ -73,9 +86,16 @@ document.getElementById('run').addEventListener('click', () =&gt; {
 <p>破壊的：push, pop, splice, sort, reverse（元の配列が変わります）<br>非破壊：map, filter, slice, concat, spread（...）など（新しい配列を返します）</p>
 
 <p>例：コピーしてから追加する（非破壊）</p>
-<pre><code>const a = [10,20,30];
-const b = [...a, 40]; // aは変わらない
-a.push(40); // aが変わる（破壊的）
+<pre><code>const a = [10, 20, 30];
+
+// ...a は「a の中身を展開して並べる」なので、新しい配列を作れる（a自体は変わらない）
+const b = [...a, 40];  // b = [10, 20, 30, 40]
+
+// push は元の配列 a に直接追加するので、a が変わる（破壊的）
+a.push(40);            // a = [10, 20, 30, 40]
+
+console.log(b)
+console.log(a)
 </code></pre>
 
 <p>ポイント：sort()やreverse()は「新配列が返る」と誤解されやすく、Stateを直接変えてしまうミスが多いです。必要ならコピーしてから使うとよいです（[...arr].sort()）。</p>
@@ -89,10 +109,26 @@ a.push(40); // aが変わる（破壊的）
   <li>filterは条件で要素を絞り込み、長さが短くなることがある新配列を作ります。</li>
 </ul>
 <p>例です。</p>
-<pre><code class="language-js">const users = [{id:1,name:'A',active:true},{id:2,name:'B',active:false}];
-const names = users.map(u =&gt; u.name); // ['A','B']
-const active = users.filter(u =&gt; u.active); // activeなユーザーだけ
-const activeNames = users.filter(u=&gt;u.active).map(u=&gt;u.name); // ['A']</code></pre>
+<pre><code class="language-js">// 実例（CodePenのJS欄に貼る）
+const users = [
+  // ユーザーの一覧：id / 名前 / 利用中か（true=利用中）
+  { id: 1, name: 'A', active: true },
+  { id: 2, name: 'B', active: false }
+];
+
+// map：配列の各要素を「変換」して、新しい配列を作る（ここでは名前だけ取り出す）
+const names = users.map(u => u.name); // ['A', 'B']
+
+// filter：条件に合う要素だけを「残して」新しい配列を作る（ここでは active が true の人だけ）
+const active = users.filter(u => u.active); // [{id:1,name:'A',active:true}]
+
+// 組み合わせ：まず active の人だけに絞って、その後に名前だけ取り出す
+const activeNames = users.filter(u => u.active).map(u => u.name); // ['A']
+
+console.log('names:', names);
+console.log('active:', active);
+console.log('activeNames:', activeNames);
+</code></pre>
 <p>更新（idで一致する要素だけ更新）はmap、削除はfilterが自然です。</p>
 </section>
 
@@ -105,10 +141,28 @@ const activeNames = users.filter(u=&gt;u.active).map(u=&gt;u.name); // ['A']</co
   <li>every：全要素が条件を満たすかどうかが boolean で返ります。</li>
 </ul>
 <p>例：</p>
-<pre><code class="language-js">const items = [{sku:'A',stock:3},{sku:'B',stock:0}];
-items.find(i=&gt;i.stock===0); // {sku:'B',stock:0} or undefined
-items.some(i=&gt;i.stock===0); // true
-items.every(i=&gt;i.stock&gt;0);  // false
+<pre><code class="language-js">// 実例（CodePenのJS欄に貼る）
+// 在庫データ（sku＝商品コード、stock＝在庫数）
+const items = [
+  { sku: 'A', stock: 3 },
+  { sku: 'B', stock: 0 }
+];
+
+// find：条件に合う「最初の1件」を返す（なければ undefined）
+const firstOutOfStock = items.find(i => i.stock === 0);
+// → { sku: 'B', stock: 0 }
+
+// some：条件に合うものが「1つでもあるか」を true/false で返す
+const hasOutOfStock = items.some(i => i.stock === 0);
+// → true（在庫0の商品がある）
+
+// every：全てが条件を満たすかを true/false で返す
+const allInStock = items.every(i => i.stock > 0);
+// → false（在庫0があるので「全て在庫あり」ではない）
+
+console.log('firstOutOfStock:', firstOutOfStock);
+console.log('hasOutOfStock:', hasOutOfStock);
+console.log('allInStock:', allInStock);
 </code></pre>
 <p>findの戻り値は undefined になるケースを考慮して扱うことがポイントです。</p>
 </section>
@@ -119,16 +173,33 @@ items.every(i=&gt;i.stock&gt;0);  // false
 
 <p>例：合計と集計オブジェクトです。</p>
 
-<pre><code>const cart = [{name:'B',price:1200,qty:2},{name:'P',price:200,qty:3}];
-const total = cart.reduce((s,it)=&gt;s+it.price*it.qty,0); // 3000
-const byName = cart.reduce((acc,it)=&gt;{acc[it.name]=it.qty;return acc;},{});
+<pre><code>// 実例（CodePenのJS欄に貼る）
+// カートの中身（name=商品名、price=単価、qty=個数）
+const cart = [
+  { name: 'B', price: 1200, qty: 2 },
+  { name: 'P', price: 200,  qty: 3 }
+];
+
+// reduce：配列を「1つの結果」にまとめるときに使う（合計・集計など）
+
+// 例1：合計金額を計算する（s は合計、it は各商品）
+// 初期値 0 から始めて、(単価×個数) を足していく
+const total = cart.reduce((s, it) => s + it.price * it.qty, 0); // 3000
+
+// 例2：商品名ごとの個数をまとめたオブジェクトを作る（acc が集計結果）
+// acc['B']=2, acc['P']=3 のように入れていき、最後に acc を返す
+const byName = cart.reduce((acc, it) => {
+  acc[it.name] = it.qty;
+  return acc;
+}, {});
+
+console.log('total:', total);     // 3000
+console.log('byName:', byName);   // {B: 2, P: 3}
 </code></pre>
 
 <p>変換はmap、絞り込みはfilter、集約が目的ならreduceと覚えておくと良いです。</p>
 
-<p>最小コード： このあとに示す短いJavaScriptコードを使います。</p>
-
-<p>貼り付け場所： CodePenならHTML欄にボタンと出力用div、JS欄にJavaScriptを貼ります（同じブロックに混在させません）。HTMLファイルなら&lt;body&gt;の最後（&lt;/body&gt;直前）に&lt;script&gt;を置くか、DOMContentLoaded内で実行します。</p>
+<p>貼り付け場所： 今回は、CodePenなら目次1のコードはHTML欄のみ、その他の例はJS欄のみへの貼付けで動作します。</p>
 
 <p>実行方法： ブラウザで開くか、CodePenのRunで実行します。Consoleで結果を見ます。</p>
 
