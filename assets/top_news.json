@@ -1,113 +1,101 @@
 {
-  "date": "2026-01-14",
-  "generatedAtJST": "2026-01-14T07:15:47.765+09:00",
+  "date": "2026-01-15",
+  "generatedAtJST": "2026-01-15T07:15:37.717+09:00",
   "items": [
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180569298",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-01-12T19:32:22Z",
-      "title": "Mark Zuckerberg announces new 'Meta Compute' initiative for its data center and AI projects - Slashdot",
-      "title_ja": "マーク・ザッカーバーグ、データセンターとAIプロジェクトのための新しい「Meta Compute」イニシアチブを発表",
-      "summary_ja": "マーク・ザッカーバーグが新たに「Meta Compute」イニシアチブを発表し、Metaのインフラ投資を強化する方針を示しました。このイニシアチブの主導は、Santosh Janardhanが担当し、Dina Powell McCormickが政府とのパートナーシップ推進に関与します。Metaはまた、AI「スーパーインテリジェンス」の野心を念頭に置いた大規模なインフラ投資を計画しており、2028年までにAIインフラと雇用に6000億ドルを費やすことを目指しています。",
+      "url": "https://financialpost.com/pmn/business-pmn/new-york-tells-data-centers-they-must-pay-more-for-power",
+      "source": "Financial Post",
+      "publishedAt": "2026-01-13T19:17:36Z",
+      "title": "New York Tells Data Centers They Must Pay More for Power",
+      "title_ja": "ニューヨーク、データセンターに電力コストの負担増を要求",
+      "summary_ja": "ニューヨーク州はデータセンター運営者に対し、電力コストの負担を増やすことを求めています。これは、電力需要の急増が家庭の電気料金を押し上げるのを防ぐための措置です。この新たなルールは、エネルギー効率とのバランスを取るために重要です。",
       "key_points": [
-        "新しい「Meta Compute」イニシアチブが発表された。",
-        "Dina Powell McCormickがMetaのインフラ投資を監督する役割を担う。",
-        "Metaは今後の数十年で数十ギガワット以上のエネルギーを構築する計画。",
-        "AI「スーパーインテリジェンス」の実現に向けて大規模なインフラ投資を進めている。",
-        "Zuckerbergは2028年までに6000億ドルをAIインフラと雇用に費やす見込み。"
+        "ニューヨーク州、データセンターに電力コストの増加を要求",
+        "家庭の電気料金上昇を抑える目的",
+        "エネルギー効率の観点からの重要な施策"
       ],
       "glossary": [
         {
-          "term": "Meta Compute",
-          "explain_ja": "Metaが発表した、新しいインフラストラクチャ会社のイニシアチブで、主にデータセンターとAIプロジェクトに焦点を当てている。"
+          "term": "データセンター",
+          "explain_ja": "企業や組織がデータを保存、管理、処理するための施設。"
         },
         {
-          "term": "スーパーインテリジェンス",
-          "explain_ja": "AIシステムが人間の知能を超える能力を持つとされる概念。"
-        },
-        {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位であり、1ギガワットは10億ワットに相当する。"
+          "term": "電力コスト",
+          "explain_ja": "電気料金や電力供給に関連する費用のこと。"
         }
       ],
       "personal_actions": [
-        "Metaのインフラ投資計画を注視し、業界の変化に対応する。",
-        "自社のデータセンターにおけるエネルギー効率の向上策を検討する。",
-        "新しいAIプロジェクトに関連するスキル向上を図る。"
+        "データセンターの電力使用状況を確認する",
+        "エネルギー効率の改善策を検討する"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://www.livemint.com/companies/news/who-is-dina-powell-mccormick-former-trump-adviser-to-take-charge-of-meta-s-ai-strategy-and-expansion-11768229247259.html",
-      "source": "Livemint",
-      "publishedAt": "2026-01-12T15:40:34Z",
-      "title": "Who is Dina Powell McCormick? Former Trump adviser to take charge of Meta’s AI strategy and expansion",
-      "title_ja": "ディナ・パウエル・マッコーマックとは？元トランプ大統領顧問がメタのAI戦略を担当",
-      "summary_ja": "ディナ・パウエル・マッコーマックが新たにメタのAI戦略と拡張に関する上級役職に就任する。彼女はAIイニシアチブやデータセンター投資の重要な役割を担い、グローバルなインフラ拡大を加速させる予定だ。マーク・ザッカーバーグCEOのもと、パウエルはメタの次の成長段階に寄与する見込み。",
+      "url": "https://www.breitbart.com/tech/2026/01/13/trump-big-tech-must-pay-their-own-way-protect-consumers-from-rising-energy-costs-caused-by-ai-data-centers/",
+      "source": "Breitbart News",
+      "publishedAt": "2026-01-13T19:06:47Z",
+      "title": "Trump: Big Tech Must 'Pay Their Own Way,' Protect Consumers from Rising Energy Costs Caused by AI Data Centers",
+      "title_ja": "トランプ氏：ビッグテックは「自らの費用を払うべき」AIデータセンターによる電気料金の上昇から消費者を守れ",
+      "summary_ja": "トランプ氏は、マイクロソフトがAIオペレーションのためのデータセンター建設による電気料金の上昇から消費者を守るための対策を講じることを発表しました。大手テクノロジー企業には「自分の費用を支払う」責任があるとトランプ氏は強調しています。技術の急成長が消費者に逆風をもたらさないよう、追加の発表が予定されています。",
       "key_points": [
-        "ディナ・パウエル・マッコーマックがメタの新たな大統領兼副会長に就任。",
-        "AIやデータセンター投資を中心とした戦略的パートナーシップを推進。",
-        "25年以上の金融と公共政策の経験を持つ。",
-        "ゴールドマンサックスでの経験を生かして、メタのAIインフラ戦略を指導。",
-        "以前にメタの取締役を務めており、同社の運営に精通。",
-        "ザッカーバーグCEOは彼女の国際的な財務経験を強調。"
+        "トランプ氏がマイクロソフトの電力消費に関する取り組みを発表。",
+        "AI関連データセンターの建設が消費者の電気料金に影響を与える懸念が高まっている。",
+        "マイクロソフトは地域住民からのフィードバックに基づき計画を調整する意向を示している。",
+        "トランプ政権は、テクノロジー企業の拡大に伴う消費者保護を重視した政策を進める意向。",
+        "AIの発展に伴う電力需要の増加が地域の電力網に圧力をかけている。"
       ],
       "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。人間の知的な作業を自動化する技術。"
+          "explain_ja": "人工知能。機械が人間の知能を模倣し、学習や問題解決を行う技術。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データやアプリケーションを管理・保存するための専用の施設。"
-        },
-        {
-          "term": "公共政策",
-          "explain_ja": "政府が社会的な問題に対応するために策定する方針や計画。"
+          "explain_ja": "データを保存・処理・配信するための施設。AI技術の発展により、電力消費が増加している。"
         }
       ],
       "personal_actions": [
-        "メタのAIやデータセンター投資に関する最新情報を確認する。",
-        "関連する業界ニュースをモニタリングし、影響を把握する。",
-        "企業の戦略的パートナーシップの動向に注意を払う。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.technologyreview.com/2026/01/12/1129982/hyperscale-ai-data-centers-energy-usage-2026-breakthrough-technology/",
-      "source": "MIT Technology Review",
-      "publishedAt": "2026-01-12T11:00:00Z",
-      "title": "Hyperscale AI data centers: 10 Breakthrough Technologies 2026",
-      "title_ja": "ハイパースケールAIデータセンター：2026年の10の画期的技術",
-      "summary_ja": "2026年には、AIの進展を支えるためのハイパースケールデータセンターが急増する見込みです。これらの施設は、巨大なコンピュータラックが詰まったスーパースケールの建物で構成されています。これらは、AI技術における新たなインフラとして注目されており、エネルギー消費や効率の向上が求められています。",
-      "key_points": [
-        "ハイパースケールデータセンターが急増している。",
-        "AIの発展を支えるために設計された。",
-        "エネルギー消費が重要な課題となっている。",
-        "新たなインフラの形態として注目される。"
-      ],
-      "glossary": [
-        {
-          "term": "ハイパースケールデータセンター",
-          "explain_ja": "大規模なコンピュータシステムやストレージを持つデータセンターのこと。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）に関する技術や研究。"
-        }
-      ],
-      "personal_actions": [
-        "最新のデータセンターに関するトレンドを調査する。",
-        "エネルギー効率を考慮したシステム設計を検討する。"
+        "地域の電力会社やテクノロジー企業が行っている新しい取り組みを確認する。",
+        "AIデータセンターの建設が地域に与える影響について情報収集する。",
+        "電力消費の増加に備えた省エネ対策を検討する。"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/compute/optimizing-storage-performance-for-amazon-eks-on-aws-outposts/",
+      "source": "Amazon.com",
+      "publishedAt": "2026-01-13T18:57:12Z",
+      "title": "Optimizing storage performance for Amazon EKS on AWS Outposts",
+      "title_ja": "AWS Outposts上のAmazon EKSにおけるストレージパフォーマンスの最適化",
+      "summary_ja": "AWS Outposts上でのAmazon EKSにおいて、ストレージパフォーマンスを最適化する方法が紹介されました。高性能なストレージソリューションを導入することで、アプリケーションのパフォーマンスを向上させることが期待されます。これにより、オンプレミス環境でのKubernetesワークロード管理がさらに効率的になるでしょう。",
+      "key_points": [
+        "AWS Outpostsを利用したAmazon EKSの導入",
+        "ストレージパフォーマンス向上のための具体的手法",
+        "アプリケーションのパフォーマンス改善が期待される",
+        "Kubernetesワークロード管理の効率化"
+      ],
+      "glossary": [
+        {
+          "term": "Amazon EKS",
+          "explain_ja": "AmazonのElastic Kubernetes Serviceであり、Kubernetesの管理が容易になるサービス。"
+        },
+        {
+          "term": "AWS Outposts",
+          "explain_ja": "AWSのインフラをオンプレミスで利用可能とするサービス。"
+        }
+      ],
+      "personal_actions": [
+        "AWS OutpostsとEKSを利用しているか確認する",
+        "ストレージパフォーマンスの現状を分析する",
+        "最適化手法を調査して実施する"
+      ],
+      "tags": [
+        "インフラ"
       ]
     }
   ]
