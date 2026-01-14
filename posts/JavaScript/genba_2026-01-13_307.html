@@ -86,7 +86,8 @@ document.getElementById('run').addEventListener('click', () => {
 <p>破壊的：push, pop, splice, sort, reverse（元の配列が変わります）<br>非破壊：map, filter, slice, concat, spread（...）など（新しい配列を返します）</p>
 
 <p>例：コピーしてから追加する（非破壊）</p>
-<pre><code>const a = [10, 20, 30];
+<pre><code>// 例（CodePenのJS欄に貼る）
+const a = [10, 20, 30];
 
 // ...a は「a の中身を展開して並べる」なので、新しい配列を作れる（a自体は変わらない）
 const b = [...a, 40];  // b = [10, 20, 30, 40]
@@ -109,7 +110,7 @@ console.log(a)
   <li>filterは条件で要素を絞り込み、長さが短くなることがある新配列を作ります。</li>
 </ul>
 <p>例です。</p>
-<pre><code class="language-js">// 実例（CodePenのJS欄に貼る）
+<pre><code class="language-js">// 例（CodePenのJS欄に貼る）
 const users = [
   // ユーザーの一覧：id / 名前 / 利用中か（true=利用中）
   { id: 1, name: 'A', active: true },
@@ -141,7 +142,7 @@ console.log('activeNames:', activeNames);
   <li>every：全要素が条件を満たすかどうかが boolean で返ります。</li>
 </ul>
 <p>例：</p>
-<pre><code class="language-js">// 実例（CodePenのJS欄に貼る）
+<pre><code class="language-js">// 例（CodePenのJS欄に貼る）
 // 在庫データ（sku＝商品コード、stock＝在庫数）
 const items = [
   { sku: 'A', stock: 3 },
@@ -173,7 +174,7 @@ console.log('allInStock:', allInStock);
 
 <p>例：合計と集計オブジェクトです。</p>
 
-<pre><code>// 実例（CodePenのJS欄に貼る）
+<pre><code>// 例（CodePenのJS欄に貼る）
 // カートの中身（name=商品名、price=単価、qty=個数）
 const cart = [
   { name: 'B', price: 1200, qty: 2 },
