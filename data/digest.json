@@ -1,65 +1,35 @@
 {
-  "date": "2026-01-15",
-  "generatedAtJST": "2026-01-15T07:15:37.717+09:00",
+  "date": "2026-01-16",
+  "generatedAtJST": "2026-01-16T07:15:41.693+09:00",
   "items": [
     {
-      "url": "https://financialpost.com/pmn/business-pmn/new-york-tells-data-centers-they-must-pay-more-for-power",
-      "source": "Financial Post",
-      "publishedAt": "2026-01-13T19:17:36Z",
-      "title": "New York Tells Data Centers They Must Pay More for Power",
-      "title_ja": "ニューヨーク、データセンターに電力コストの負担増を要求",
-      "summary_ja": "ニューヨーク州はデータセンター運営者に対し、電力コストの負担を増やすことを求めています。これは、電力需要の急増が家庭の電気料金を押し上げるのを防ぐための措置です。この新たなルールは、エネルギー効率とのバランスを取るために重要です。",
+      "url": "https://www.theregister.com/2026/01/14/datacenter_expansion_power_limit/",
+      "source": "Theregister.com",
+      "publishedAt": "2026-01-14T18:01:28Z",
+      "title": "Ignore rosy datacenter expansion projections – there isn't enough power",
+      "title_ja": "データセンターの拡張は電力不足で制約を受ける見込み",
+      "summary_ja": "電力の不足がデータセンターの拡張を制限し、業界の成長予測が楽観的すぎる可能性があります。Uptime Instituteの報告書によると、2026年以降、電力はデータセンター成長の決定的な制約になるとしています。新たな発電能力の追加が困難な中で、データセンターの成長が遅れる可能性があります。",
       "key_points": [
-        "ニューヨーク州、データセンターに電力コストの増加を要求",
-        "家庭の電気料金上昇を抑える目的",
-        "エネルギー効率の観点からの重要な施策"
+        "Uptime Instituteの報告によると、データセンター成長は電力不足の影響を受ける。",
+        "AI需要により、2026年末までにグローバルなデータセンター電力負荷が10GWに達する見込み。",
+        "プロジェクトのスケールが大きく、数百メガワットやギガワットの施設が計画されている。",
+        "発電用ガスタービンの供給に対する需要が高く、3〜4年の納期待ちが発生している。",
+        "カーボンキャプチャー＆ストレージシステムの導入が進みつつあるが、コストが懸念されている。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "企業や組織がデータを保存、管理、処理するための施設。"
+          "term": "Uptime Institute",
+          "explain_ja": "データセンター業界の研究と教育を行う機関で、業界のトレンドや課題を報告する。"
         },
         {
-          "term": "電力コスト",
-          "explain_ja": "電気料金や電力供給に関連する費用のこと。"
+          "term": "CCS (Carbon Capture and Storage)",
+          "explain_ja": "二酸化炭素を捕集し、貯蔵する技術で、温室効果ガスの排出を削減するために使用される。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力使用状況を確認する",
-        "エネルギー効率の改善策を検討する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.breitbart.com/tech/2026/01/13/trump-big-tech-must-pay-their-own-way-protect-consumers-from-rising-energy-costs-caused-by-ai-data-centers/",
-      "source": "Breitbart News",
-      "publishedAt": "2026-01-13T19:06:47Z",
-      "title": "Trump: Big Tech Must 'Pay Their Own Way,' Protect Consumers from Rising Energy Costs Caused by AI Data Centers",
-      "title_ja": "トランプ氏：ビッグテックは「自らの費用を払うべき」AIデータセンターによる電気料金の上昇から消費者を守れ",
-      "summary_ja": "トランプ氏は、マイクロソフトがAIオペレーションのためのデータセンター建設による電気料金の上昇から消費者を守るための対策を講じることを発表しました。大手テクノロジー企業には「自分の費用を支払う」責任があるとトランプ氏は強調しています。技術の急成長が消費者に逆風をもたらさないよう、追加の発表が予定されています。",
-      "key_points": [
-        "トランプ氏がマイクロソフトの電力消費に関する取り組みを発表。",
-        "AI関連データセンターの建設が消費者の電気料金に影響を与える懸念が高まっている。",
-        "マイクロソフトは地域住民からのフィードバックに基づき計画を調整する意向を示している。",
-        "トランプ政権は、テクノロジー企業の拡大に伴う消費者保護を重視した政策を進める意向。",
-        "AIの発展に伴う電力需要の増加が地域の電力網に圧力をかけている。"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能。機械が人間の知能を模倣し、学習や問題解決を行う技術。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データを保存・処理・配信するための施設。AI技術の発展により、電力消費が増加している。"
-        }
-      ],
-      "personal_actions": [
-        "地域の電力会社やテクノロジー企業が行っている新しい取り組みを確認する。",
-        "AIデータセンターの建設が地域に与える影響について情報収集する。",
-        "電力消費の増加に備えた省エネ対策を検討する。"
+        "データセンターの電力供給計画や資源調達の見直しを行う。",
+        "エネルギー効率を最適化するための技術や方法を検討する。",
+        "カーボンフットプリントを把握し、持続可能なエネルギーへの移行を進める。"
       ],
       "tags": [
         "DC",
@@ -67,35 +37,68 @@
       ]
     },
     {
-      "url": "https://aws.amazon.com/blogs/compute/optimizing-storage-performance-for-amazon-eks-on-aws-outposts/",
-      "source": "Amazon.com",
-      "publishedAt": "2026-01-13T18:57:12Z",
-      "title": "Optimizing storage performance for Amazon EKS on AWS Outposts",
-      "title_ja": "AWS Outposts上のAmazon EKSにおけるストレージパフォーマンスの最適化",
-      "summary_ja": "AWS Outposts上でのAmazon EKSにおいて、ストレージパフォーマンスを最適化する方法が紹介されました。高性能なストレージソリューションを導入することで、アプリケーションのパフォーマンスを向上させることが期待されます。これにより、オンプレミス環境でのKubernetesワークロード管理がさらに効率的になるでしょう。",
+      "url": "https://it.slashdot.org/story/26/01/14/1655234/bezoss-vision-of-rented-cloud-pcs-looks-less-far-fetched",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-01-14T16:55:00Z",
+      "title": "Bezos's Vision of Rented Cloud PCs Looks Less Far-Fetched",
+      "title_ja": "ベゾスのレンタルクラウドPCのビジョンが現実味を帯びる",
+      "summary_ja": "ジェフ・ベゾスは、ローカルPCハードウェアを過去の遺物と見なしており、中央集権型のユーティリティがユーザーのニーズを満たす未来を予見しています。この視点は、クラウドコンピューティングの進展と整合しており、レンタルPCサービスの需要が高まることが予想されます。結果として、PCの使用方法が変わり、中央集権的なサービスに対する依存が強まる可能性があります。",
       "key_points": [
-        "AWS Outpostsを利用したAmazon EKSの導入",
-        "ストレージパフォーマンス向上のための具体的手法",
-        "アプリケーションのパフォーマンス改善が期待される",
-        "Kubernetesワークロード管理の効率化"
+        "ジェフ・ベゾスはローカルPCを過去の遺物と見なしている。",
+        "彼は中央集権型のユーティリティの未来を視野に入れている。",
+        "クラウドコンピューティングの進展が影響を与えている。",
+        "レンタルPCサービスの需要が増加する可能性がある。",
+        "PCの使用方法が変わることが予想される。"
       ],
       "glossary": [
         {
-          "term": "Amazon EKS",
-          "explain_ja": "AmazonのElastic Kubernetes Serviceであり、Kubernetesの管理が容易になるサービス。"
+          "term": "クラウドPC",
+          "explain_ja": "インターネットを通じて提供されるコンピュータリソース。"
         },
         {
-          "term": "AWS Outposts",
-          "explain_ja": "AWSのインフラをオンプレミスで利用可能とするサービス。"
+          "term": "中央集権型ユーティリティ",
+          "explain_ja": "ユーザーにサービスを集中管理して提供するモデル。"
         }
       ],
       "personal_actions": [
-        "AWS OutpostsとEKSを利用しているか確認する",
-        "ストレージパフォーマンスの現状を分析する",
-        "最適化手法を調査して実施する"
+        "ローカルPCの使用状況を見直し、クラウドサービスの導入を検討する。",
+        "レンタルPCサービスの選択肢を調査し、必要に応じて比較検討する。"
       ],
       "tags": [
-        "インフラ"
+        "その他"
+      ]
+    },
+    {
+      "url": "https://www.barchart.com/story/news/37039794/a-2-65-billion-reason-to-buy-bloom-energy-stock-in-january-2026",
+      "source": "Barchart.com",
+      "publishedAt": "2026-01-14T14:00:02Z",
+      "title": "A $2.65 Billion Reason to Buy Bloom Energy Stock in January 2026",
+      "title_ja": "2026年1月にBloom Energy株を買うべき2.65億ドルの理由",
+      "summary_ja": "Bloom Energyはデータセンターの電力需要から直接恩恵を受ける立場にあり、パートナーシップ契約が結ばれました。このような背景から、株の価値が上昇しています。しかし、過剰な期待が価格に織り込まれていることも懸念されます。したがって、投資戦略の見直しが求められています。",
+      "key_points": [
+        "Bloom Energyはデータセンター向け電力需要の恩恵を受ける。",
+        "2.65億ドルの契約が進行中。",
+        "株価は期待値を反映してすでに上昇している。",
+        "過剰なバリュエーションが懸念される。",
+        "長期にわたる投資戦略の見直しが必要。"
+      ],
+      "glossary": [
+        {
+          "term": "Bloom Energy",
+          "explain_ja": "持続可能なエネルギーを提供する企業で、燃料電池技術に特化している。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "サーバーと関連機器を収容する施設で、電力需要が高い。"
+        }
+      ],
+      "personal_actions": [
+        "Bloom Energy株への投資を検討する際、最新の市場状況をチェックする。",
+        "パートナーシップ契約の詳しい内容を理解する。",
+        "アナリストの評価や予測を比較検討し、投資判断に役立てる。"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
