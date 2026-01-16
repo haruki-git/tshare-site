@@ -1,104 +1,107 @@
 {
-  "date": "2026-01-16",
-  "generatedAtJST": "2026-01-16T07:15:41.693+09:00",
+  "date": "2026-01-17",
+  "generatedAtJST": "2026-01-17T07:15:45.919+09:00",
   "items": [
     {
-      "url": "https://www.theregister.com/2026/01/14/datacenter_expansion_power_limit/",
-      "source": "Theregister.com",
-      "publishedAt": "2026-01-14T18:01:28Z",
-      "title": "Ignore rosy datacenter expansion projections – there isn't enough power",
-      "title_ja": "データセンターの拡張は電力不足で制約を受ける見込み",
-      "summary_ja": "電力の不足がデータセンターの拡張を制限し、業界の成長予測が楽観的すぎる可能性があります。Uptime Instituteの報告書によると、2026年以降、電力はデータセンター成長の決定的な制約になるとしています。新たな発電能力の追加が困難な中で、データセンターの成長が遅れる可能性があります。",
+      "url": "https://wattsupwiththat.com/2026/01/15/meta-does-it-right-with-nuclear-power/",
+      "source": "Wattsupwiththat.com",
+      "publishedAt": "2026-01-15T22:00:00Z",
+      "title": "Meta Does It Right With Nuclear Power",
+      "title_ja": "Metaが原子力発電を有効活用",
+      "summary_ja": "Metaは、データセンターの電力需要を満たすため、Vistra、Terra Power、Okloの3つの原子力企業と提携を発表しました。この取り組みにより、地域への電力供給も強化される予定です。原子力発電の利用は、持続可能なエネルギー源として注目されています。",
       "key_points": [
-        "Uptime Instituteの報告によると、データセンター成長は電力不足の影響を受ける。",
-        "AI需要により、2026年末までにグローバルなデータセンター電力負荷が10GWに達する見込み。",
-        "プロジェクトのスケールが大きく、数百メガワットやギガワットの施設が計画されている。",
-        "発電用ガスタービンの供給に対する需要が高く、3〜4年の納期待ちが発生している。",
-        "カーボンキャプチャー＆ストレージシステムの導入が進みつつあるが、コストが懸念されている。"
+        "MetaがVistra、Terra Power、Okloと提携",
+        "データセンター向けの電力生産を拡大",
+        "地域に余剰電力を供給予定",
+        "原子力発電による持続可能性の強化",
+        "エネルギー市場へのインパクトが期待される"
       ],
       "glossary": [
         {
-          "term": "Uptime Institute",
-          "explain_ja": "データセンター業界の研究と教育を行う機関で、業界のトレンドや課題を報告する。"
-        },
-        {
-          "term": "CCS (Carbon Capture and Storage)",
-          "explain_ja": "二酸化炭素を捕集し、貯蔵する技術で、温室効果ガスの排出を削減するために使用される。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの電力供給計画や資源調達の見直しを行う。",
-        "エネルギー効率を最適化するための技術や方法を検討する。",
-        "カーボンフットプリントを把握し、持続可能なエネルギーへの移行を進める。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://it.slashdot.org/story/26/01/14/1655234/bezoss-vision-of-rented-cloud-pcs-looks-less-far-fetched",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-01-14T16:55:00Z",
-      "title": "Bezos's Vision of Rented Cloud PCs Looks Less Far-Fetched",
-      "title_ja": "ベゾスのレンタルクラウドPCのビジョンが現実味を帯びる",
-      "summary_ja": "ジェフ・ベゾスは、ローカルPCハードウェアを過去の遺物と見なしており、中央集権型のユーティリティがユーザーのニーズを満たす未来を予見しています。この視点は、クラウドコンピューティングの進展と整合しており、レンタルPCサービスの需要が高まることが予想されます。結果として、PCの使用方法が変わり、中央集権的なサービスに対する依存が強まる可能性があります。",
-      "key_points": [
-        "ジェフ・ベゾスはローカルPCを過去の遺物と見なしている。",
-        "彼は中央集権型のユーティリティの未来を視野に入れている。",
-        "クラウドコンピューティングの進展が影響を与えている。",
-        "レンタルPCサービスの需要が増加する可能性がある。",
-        "PCの使用方法が変わることが予想される。"
-      ],
-      "glossary": [
-        {
-          "term": "クラウドPC",
-          "explain_ja": "インターネットを通じて提供されるコンピュータリソース。"
-        },
-        {
-          "term": "中央集権型ユーティリティ",
-          "explain_ja": "ユーザーにサービスを集中管理して提供するモデル。"
-        }
-      ],
-      "personal_actions": [
-        "ローカルPCの使用状況を見直し、クラウドサービスの導入を検討する。",
-        "レンタルPCサービスの選択肢を調査し、必要に応じて比較検討する。"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://www.barchart.com/story/news/37039794/a-2-65-billion-reason-to-buy-bloom-energy-stock-in-january-2026",
-      "source": "Barchart.com",
-      "publishedAt": "2026-01-14T14:00:02Z",
-      "title": "A $2.65 Billion Reason to Buy Bloom Energy Stock in January 2026",
-      "title_ja": "2026年1月にBloom Energy株を買うべき2.65億ドルの理由",
-      "summary_ja": "Bloom Energyはデータセンターの電力需要から直接恩恵を受ける立場にあり、パートナーシップ契約が結ばれました。このような背景から、株の価値が上昇しています。しかし、過剰な期待が価格に織り込まれていることも懸念されます。したがって、投資戦略の見直しが求められています。",
-      "key_points": [
-        "Bloom Energyはデータセンター向け電力需要の恩恵を受ける。",
-        "2.65億ドルの契約が進行中。",
-        "株価は期待値を反映してすでに上昇している。",
-        "過剰なバリュエーションが懸念される。",
-        "長期にわたる投資戦略の見直しが必要。"
-      ],
-      "glossary": [
-        {
-          "term": "Bloom Energy",
-          "explain_ja": "持続可能なエネルギーを提供する企業で、燃料電池技術に特化している。"
+          "term": "原子力発電",
+          "explain_ja": "原子核の反応からエネルギーを生み出す発電方式。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "サーバーと関連機器を収容する施設で、電力需要が高い。"
+          "explain_ja": "デジタルデータを集中管理・保存・処理する施設。"
+        },
+        {
+          "term": "パートナーシップ",
+          "explain_ja": "異なる企業や団体が協力して目標を達成するための関係。"
         }
       ],
       "personal_actions": [
-        "Bloom Energy株への投資を検討する際、最新の市場状況をチェックする。",
-        "パートナーシップ契約の詳しい内容を理解する。",
-        "アナリストの評価や予測を比較検討し、投資判断に役立てる。"
+        "利用している電力の供給源を確認する",
+        "地域のエネルギー効率を見直す",
+        "データセンターの運用について関心を持つ"
       ],
       "tags": [
-        "その他"
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.techpowerup.com/345248/cpi-intros-versaedge-wall-mount-data-center-cabinet-a-next-gen-edge-infrastructure-solution",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-01-15T18:44:27Z",
+      "title": "CPI Intros VersaEdge Wall-Mount Data Center Cabinet - a Next-Gen Edge Infrastructure Solution",
+      "title_ja": "CPIがVersaEdge壁掛けデータセンターキャビネットを発表 - 次世代エッジインフラソリューション",
+      "summary_ja": "CPIは新しいVersaEdge壁掛けキャビネットを発表しました。この製品は分散型コンピューティング環境の展開と管理を大幅に簡素化するために設計されています。BICSI Winter 2026での公開デビューを控え、モジュール設計や高度な熱管理性能が特徴です。",
+      "key_points": [
+        "モジュール化されたスケーラブルデザインで多様なエッジ展開に対応。",
+        "高度な熱管理機能により、最大10kWのパッシブ熱放散をサポート。",
+        "迅速な展開と簡素なメンテナンスを実現。",
+        "エンタープライズグレードのセキュリティ機能を備える。",
+        "統合されたケーブル管理機能により、整理されたレイアウトをサポート。"
+      ],
+      "glossary": [
+        {
+          "term": "VersaEdge",
+          "explain_ja": "CPIが発表した壁掛けデータセンターキャビネットの名称。"
+        },
+        {
+          "term": "BICSI",
+          "explain_ja": "Building Industry Consulting Service Internationalの略称で、通信インフラに関する業界団体。"
+        }
+      ],
+      "personal_actions": [
+        "VersaEdgeの詳細を確認し、導入可能性を評価する。",
+        "エッジコンピューティング環境の現在のニーズを見直す。",
+        "今後の技術展示会への参加を計画する。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180585466",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-01-15T15:53:17Z",
+      "title": "Why your power bill is spiking faster than a nearby data center’s - The Washington Post - Slashdot",
+      "title_ja": "データセンターの電気料金が急上昇する理由",
+      "summary_ja": "最近、電気料金が急上昇していることが問題視されています。一方で、近くのデータセンターは電気料金の上昇が少ない状況にあります。この差が生じる理由は、地域の電力需要やデータセンターの許可取得手続きに関連しています。",
+      "key_points": [
+        "電気料金の急上昇が家庭に影響を及ぼす。",
+        "データセンターはその影響を比較的受けにくい傾向がある。",
+        "地域の電力需要がデータセンターの運営に影響を与える。",
+        "データセンターの許可取得に関する政策が進展している。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データを管理・保存・処理するための施設。通常、大量の電力を消費する。"
+        },
+        {
+          "term": "電気料金",
+          "explain_ja": "電力供給に対する料金。地域や需給状況により変動する。"
+        }
+      ],
+      "personal_actions": [
+        "最近の電気料金の動向を確認し、コスト削減のための対策を講じる。",
+        "地域の電力供給状況やデータセンターの影響を調査する。",
+        "エネルギー効率の良い機器や方法を導入することを検討する。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]

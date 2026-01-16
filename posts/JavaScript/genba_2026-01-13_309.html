@@ -83,7 +83,17 @@ console.log(`ユーザー: ${parsed.name}、タグ数: ${parsed.tags.length}`);<
 
 <p>貼り付け場所は、CodePenの「HTML」欄にHTML、「JS」欄にJavaScriptを貼り付けます。ローカルなら同等のHTMLファイルでも問題ありません。</p>
 
-<pre><code>// データ（状態）
+<pre><code>// HTML欄
+  &lt;div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;"&gt;
+  &lt;input id="input" placeholder="名前を入力（例：佐藤）" /&gt;
+  &lt;button id="btn"&gt;更新&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p id="out" style="margin-top:12px;"&gt;&lt;/p&gt;
+</code></pre>
+
+<pre><code>// JS欄
+// データ（状態）
 const state = {
   user: { name: "田中" },
   tags: ["js", "json"]
@@ -136,8 +146,6 @@ render();
   <li><p>JSONはダブルクォート必須・末尾カンマ不可などの“厳密な形式”があり、そこがエラー原因になりやすいです。</p></li>
   <li><p>データ（state）と画面表示（render/DOM）を分離すると、変更に強い実装になります。</p></li>
 </ul>
-<pre><code>
-</code></pre>
 </section>
     </article>
   </main>
