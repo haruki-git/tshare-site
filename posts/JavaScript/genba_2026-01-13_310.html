@@ -157,6 +157,65 @@ finally{ console.log('終了'); }</code></pre>
 <p>使い分けの基準：繰り返しはfor/for...of、変換はmap、絞り込みはfilterのように目的で使い分けます。</p>
 </section>
 
+<pre><code class="language-html">&lt;!-- HTML欄（CodePenのHTML） --&gt;
+&lt;button id="btn"&gt;実行&lt;/button&gt;
+&lt;input id="input" placeholder="例：田中" /&gt;
+&lt;pre id="out"&gt;&lt;/pre&gt;
+</code></pre>
+
+<pre><code class="language-js">// JS欄（CodePenのJS）
+// 1) 状態（いまのデータ）を1か所にまとめて持つ
+//    ここを書き換えると、表示も変わるようにする
+const state = { user: { name: "田中" } };
+
+// 2) 表示担当：state → 文字 → 画面
+//    step は「今どの段階か」を目印に出すだけ（切り分け用）
+function render(step) {
+  // Consoleで「どこまで動いたか」と「中身」を見る
+  console.log("[render]", step, JSON.stringify(state));
+
+  // 画面にも同じ情報を出す（Consoleが見れない時の保険）
+  document.getElementById("out").textContent =
+    `step=${step}\nname=${state.user.name}`;
+}
+
+// 3) 操作担当：ボタンが押されたら、入力を読んで state を更新して render
+document.getElementById("btn").addEventListener("click", () => {
+  console.log("[click] start"); // 入口ログ：クリックが動いたか
+
+  try {
+    // 入力欄から文字を取る（前後の空白はtrimで削る）
+    const input = document.getElementById("input").value.trim();
+    console.log("[click] input=", input); // 入力が取れてるか
+
+    // 空なら更新しない（空更新でバグりやすいのでガード）
+    if (!input) {
+      console.warn("[click] empty input (更新しない)");
+      render("empty"); // 空だったことが分かる表示
+      return;
+    }
+
+    // 更新点：連続する空白を1個にしてから保存（整形）
+    // 例）"田中   太郎" → "田中 太郎"
+    state.user.name = input.replace(/\s+/g, " ");
+    console.log("[click] updated name=", state.user.name); // 更新できたか
+
+    // 更新したら再描画（state→画面）
+    render("ok");
+  } catch (e) {
+    // 握りつぶさない：画面には短く、Consoleには詳細（スタック付き）
+    document.getElementById("out").textContent = "エラー（Console参照）";
+    console.error("[click] error", e);
+  } finally {
+    // 必ず通る：最後にログ（後片付けや終了確認に使う）
+    console.log("[click] end");
+  }
+});
+
+// 4) 初期表示（ページを開いた瞬間の表示）
+render("init");
+</code></pre>
+
 <section id="sec-6">
   <h3>注意（ここだけ）</h3>
   <ul>

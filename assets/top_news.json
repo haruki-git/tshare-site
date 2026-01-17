@@ -1,107 +1,98 @@
 {
-  "date": "2026-01-17",
-  "generatedAtJST": "2026-01-17T07:15:45.919+09:00",
+  "date": "2026-01-18",
+  "generatedAtJST": "2026-01-18T07:15:58.524+09:00",
   "items": [
     {
-      "url": "https://wattsupwiththat.com/2026/01/15/meta-does-it-right-with-nuclear-power/",
-      "source": "Wattsupwiththat.com",
-      "publishedAt": "2026-01-15T22:00:00Z",
-      "title": "Meta Does It Right With Nuclear Power",
-      "title_ja": "Metaが原子力発電を有効活用",
-      "summary_ja": "Metaは、データセンターの電力需要を満たすため、Vistra、Terra Power、Okloの3つの原子力企業と提携を発表しました。この取り組みにより、地域への電力供給も強化される予定です。原子力発電の利用は、持続可能なエネルギー源として注目されています。",
+      "url": "https://fortune.com/2026/01/16/trump-says-he-will-make-tech-firms-pay-for-power-ai-data-centers/",
+      "source": "Fortune",
+      "publishedAt": "2026-01-16T21:30:09Z",
+      "title": "Trump says he’ll make tech firms pay for power. They’d love to",
+      "title_ja": "トランプ氏、テック企業に電力コストを負担させる意向。企業側は歓迎する見込み",
+      "summary_ja": "トランプ氏は、テクノロジー企業に電力の支払いをさせる計画を示しました。データセンターの開発者たちは、全国の電力網から電力を購入したいとすでに表明しています。この政策が実施されると、企業のコスト構造に影響を与える可能性があります。",
       "key_points": [
-        "MetaがVistra、Terra Power、Okloと提携",
-        "データセンター向けの電力生産を拡大",
-        "地域に余剰電力を供給予定",
-        "原子力発電による持続可能性の強化",
-        "エネルギー市場へのインパクトが期待される"
+        "トランプ氏がテック企業に電力支払いを求める意向を表明",
+        "データセンター開発者は全国の電力網から電力を買いたいと願望",
+        "この政策は企業のコストに影響を及ぼす可能性"
       ],
       "glossary": [
         {
-          "term": "原子力発電",
-          "explain_ja": "原子核の反応からエネルギーを生み出す発電方式。"
-        },
-        {
           "term": "データセンター",
-          "explain_ja": "デジタルデータを集中管理・保存・処理する施設。"
+          "explain_ja": "データを保存・管理するための施設で、企業やサービスプロバイダによって運営される。"
         },
         {
-          "term": "パートナーシップ",
-          "explain_ja": "異なる企業や団体が協力して目標を達成するための関係。"
+          "term": "電力網",
+          "explain_ja": "電力を生成し、消費地に供給するためのインフラストラクチャ。"
         }
       ],
       "personal_actions": [
-        "利用している電力の供給源を確認する",
-        "地域のエネルギー効率を見直す",
-        "データセンターの運用について関心を持つ"
+        "自社の電力消費を見直し、効率化を図る",
+        "データセンターと電力供給契約の条件を確認する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.techpowerup.com/345248/cpi-intros-versaedge-wall-mount-data-center-cabinet-a-next-gen-edge-infrastructure-solution",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-01-15T18:44:27Z",
-      "title": "CPI Intros VersaEdge Wall-Mount Data Center Cabinet - a Next-Gen Edge Infrastructure Solution",
-      "title_ja": "CPIがVersaEdge壁掛けデータセンターキャビネットを発表 - 次世代エッジインフラソリューション",
-      "summary_ja": "CPIは新しいVersaEdge壁掛けキャビネットを発表しました。この製品は分散型コンピューティング環境の展開と管理を大幅に簡素化するために設計されています。BICSI Winter 2026での公開デビューを控え、モジュール設計や高度な熱管理性能が特徴です。",
+      "url": "https://www.tomshardware.com/tech-industry/microsoft-built-a-community-first-ai-infrastructure-framework-for-its-data-center-projects-new-policy-may-be-the-blueprint-for-u-s-hyperscalers-to-follow",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-01-16T16:17:23Z",
+      "title": "Microsoft built a ‘Community-First AI Infrastructure’ framework for its data center projects — new policy may be the blueprint for U.S hyperscalers to follow",
+      "title_ja": "マイクロソフト、データセンタープロジェクトのための「コミュニティファーストAIインフラ」フレームワークを構築",
+      "summary_ja": "マイクロソフトは、チェックのないAIインフラの拡張に反対し、周辺コミュニティを支える必要があると主張しています。この新しい方針は、他のAIハイパースケーラーが従うべき青写真となる可能性があります。",
       "key_points": [
-        "モジュール化されたスケーラブルデザインで多様なエッジ展開に対応。",
-        "高度な熱管理機能により、最大10kWのパッシブ熱放散をサポート。",
-        "迅速な展開と簡素なメンテナンスを実現。",
-        "エンタープライズグレードのセキュリティ機能を備える。",
-        "統合されたケーブル管理機能により、整理されたレイアウトをサポート。"
+        "マイクロソフトはAIインフラの無制限な拡張に反対している",
+        "新しいフレームワークはコミュニティ支援を重視している",
+        "この方針が他の企業に影響を与える可能性がある"
       ],
       "glossary": [
         {
-          "term": "VersaEdge",
-          "explain_ja": "CPIが発表した壁掛けデータセンターキャビネットの名称。"
+          "term": "AIインフラ",
+          "explain_ja": "人工知能を支えるための技術基盤やインフラストラクチャ。"
         },
         {
-          "term": "BICSI",
-          "explain_ja": "Building Industry Consulting Service Internationalの略称で、通信インフラに関する業界団体。"
+          "term": "ハイパースケーラー",
+          "explain_ja": "大規模にクラウドサービスを提供する企業やデータセンター。"
         }
       ],
       "personal_actions": [
-        "VersaEdgeの詳細を確認し、導入可能性を評価する。",
-        "エッジコンピューティング環境の現在のニーズを見直す。",
-        "今後の技術展示会への参加を計画する。"
+        "自社のデータセンター運営において、コミュニティへの影響を考慮する。",
+        "最新のAIインフラに関するポリシーを確認し、必要に応じて見直す。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180585466",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-01-15T15:53:17Z",
-      "title": "Why your power bill is spiking faster than a nearby data center’s - The Washington Post - Slashdot",
-      "title_ja": "データセンターの電気料金が急上昇する理由",
-      "summary_ja": "最近、電気料金が急上昇していることが問題視されています。一方で、近くのデータセンターは電気料金の上昇が少ない状況にあります。この差が生じる理由は、地域の電力需要やデータセンターの許可取得手続きに関連しています。",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/second-generation-aws-outposts-racks-additional-aws-regions",
+      "source": "Amazon.com",
+      "publishedAt": "2026-01-16T15:00:00Z",
+      "title": "Second-generation AWS Outposts racks are now supported in additional AWS Regions",
+      "title_ja": "第二世代AWS Outpostsラックが追加のAWSリージョンでサポート開始",
+      "summary_ja": "第二世代AWS Outpostsラックが南アメリカ（サンパウロ）およびヨーロッパ（ストックホルム）リージョンでサポートされることになりました。これにより、ユーザーは自社のオンプレミスデータセンターにAWSインフラを拡張し、ハイブリッド体験を享受できます。新たに対応したリージョンにより、企業は遅延やデータ居住要件に最適化されたワークロードを実行できる柔軟性が増します。",
       "key_points": [
-        "電気料金の急上昇が家庭に影響を及ぼす。",
-        "データセンターはその影響を比較的受けにくい傾向がある。",
-        "地域の電力需要がデータセンターの運営に影響を与える。",
-        "データセンターの許可取得に関する政策が進展している。"
+        "第二世代AWS Outpostsラックが新たにサポートされたリージョンは南アメリカ（サンパウロ）とヨーロッパ（ストックホルム）。",
+        "Outpostsはオンプレミスシステムへの低遅延アクセスを提供しつつ、AWSリージョンとの接続も可能。",
+        "顧客はデータ居住要件を満たすために、オンプレミスにデータを保持しながらAWSサービスを利用。",
+        "この地域拡張により、顧客のOutpostsが接続可能なAWSリージョンの選択肢が増加。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを管理・保存・処理するための施設。通常、大量の電力を消費する。"
+          "term": "AWS Outposts",
+          "explain_ja": "AWSのインフラストラクチャをオンプレミスに拡張するサービス。"
         },
         {
-          "term": "電気料金",
-          "explain_ja": "電力供給に対する料金。地域や需給状況により変動する。"
+          "term": "ハイブリッドクラウド",
+          "explain_ja": "オンプレミスとクラウド環境を組み合わせたITインフラストラクチャのモデル。"
         }
       ],
       "personal_actions": [
-        "最近の電気料金の動向を確認し、コスト削減のための対策を講じる。",
-        "地域の電力供給状況やデータセンターの影響を調査する。",
-        "エネルギー効率の良い機器や方法を導入することを検討する。"
+        "新しいリージョンでのOutpostsラックの利用可能性を調査する。",
+        "自社のデータ居住要件を確認し、Outpostsの導入を検討する。",
+        "低遅延を必要とするアプリケーションがある場合、Outpostsを利用する計画を立てる。"
       ],
       "tags": [
-        "DC"
+        "その他"
       ]
     }
   ]
