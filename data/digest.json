@@ -1,98 +1,117 @@
 {
-  "date": "2026-01-18",
-  "generatedAtJST": "2026-01-18T07:15:58.524+09:00",
+  "date": "2026-01-19",
+  "generatedAtJST": "2026-01-19T07:15:48.350+09:00",
   "items": [
     {
-      "url": "https://fortune.com/2026/01/16/trump-says-he-will-make-tech-firms-pay-for-power-ai-data-centers/",
-      "source": "Fortune",
-      "publishedAt": "2026-01-16T21:30:09Z",
-      "title": "Trump says he’ll make tech firms pay for power. They’d love to",
-      "title_ja": "トランプ氏、テック企業に電力コストを負担させる意向。企業側は歓迎する見込み",
-      "summary_ja": "トランプ氏は、テクノロジー企業に電力の支払いをさせる計画を示しました。データセンターの開発者たちは、全国の電力網から電力を購入したいとすでに表明しています。この政策が実施されると、企業のコスト構造に影響を与える可能性があります。",
+      "url": "https://www.thehindubusinessline.com/companies/cg-power-bags-900-crore-us-data-centre-order-enters-global-market/article70519862.ece",
+      "source": "BusinessLine",
+      "publishedAt": "2026-01-17T17:49:48Z",
+      "title": "CG Power bags ₹900 crore US data centre order",
+      "title_ja": "CGパワー、インドのデータセンター受注で900クロール獲得",
+      "summary_ja": "CGパワーがアメリカのTallgrass Integrated Logistics Solutions LLCから900クロール（約99.2百万ドル）のデータセンタープロジェクト受注を決定しました。この受注はCGのグローバルデータセンター市場への参入を示す重要なマイルストーンです。受注内容は、ハイパースケールデータセンター用の電力変圧器の供給で、12から20ヶ月の納期が設定されています。",
       "key_points": [
-        "トランプ氏がテック企業に電力支払いを求める意向を表明",
-        "データセンター開発者は全国の電力網から電力を買いたいと願望",
-        "この政策は企業のコストに影響を及ぼす可能性"
+        "CGパワーがTallgrassから900クロールのデータセンター受注を獲得",
+        "初のグローバルデータセンター市場への参入",
+        "受注内容はハイパースケール用の電力変圧器",
+        "納期は12〜20ヶ月、FASムンバイ港での供給",
+        "インドの先端施設で設計・製造・テストを実施",
+        "企業の信頼性と性能を強化する機会"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存・管理するための施設で、企業やサービスプロバイダによって運営される。"
+          "term": "CG Power and Industrial Solutions Limite",
+          "explain_ja": "インドの主要なエンジニアリングコングロマリット."
         },
         {
-          "term": "電力網",
-          "explain_ja": "電力を生成し、消費地に供給するためのインフラストラクチャ。"
+          "term": "Tallgrass Integrated Logistics Solutions",
+          "explain_ja": "アメリカの物流ソリューション会社."
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保存・処理を行うための施設."
         }
       ],
       "personal_actions": [
-        "自社の電力消費を見直し、効率化を図る",
-        "データセンターと電力供給契約の条件を確認する"
+        "CGパワーのデータセンタープロジェクトに関する最新情報をチェックする",
+        "電力変圧器の技術基準について学ぶ",
+        "グローバルデータセンター市場の動向を把握する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.tomshardware.com/tech-industry/microsoft-built-a-community-first-ai-infrastructure-framework-for-its-data-center-projects-new-policy-may-be-the-blueprint-for-u-s-hyperscalers-to-follow",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-01-16T16:17:23Z",
-      "title": "Microsoft built a ‘Community-First AI Infrastructure’ framework for its data center projects — new policy may be the blueprint for U.S hyperscalers to follow",
-      "title_ja": "マイクロソフト、データセンタープロジェクトのための「コミュニティファーストAIインフラ」フレームワークを構築",
-      "summary_ja": "マイクロソフトは、チェックのないAIインフラの拡張に反対し、周辺コミュニティを支える必要があると主張しています。この新しい方針は、他のAIハイパースケーラーが従うべき青写真となる可能性があります。",
+      "url": "https://www.cnbc.com/2026/01/17/ai-power-demand-markets-investor-risk.html",
+      "source": "CNBC",
+      "publishedAt": "2026-01-17T15:28:47Z",
+      "title": "Smaller companies are rising quickly to challenge Big Tech as AI 's best trade",
+      "title_ja": "小規模企業がAIの最良取引としてビッグテックに挑戦する急成長",
+      "summary_ja": "小規模企業がAI市場で急速に成長し、ビッグテックに挑戦しています。信頼できる電力供給、原子力投資、データセンターの効率、グリッドの能力が、AIをテーマにした株式のリターンの核心要因となっています。これにより、投資家に新たなリスクと機会が生まれています。",
       "key_points": [
-        "マイクロソフトはAIインフラの無制限な拡張に反対している",
-        "新しいフレームワークはコミュニティ支援を重視している",
-        "この方針が他の企業に影響を与える可能性がある"
+        "小規模企業がAI市場で急成長中",
+        "信頼できる電力供給が株式リターンの核心要因",
+        "原子力投資が重要な役割を果たす",
+        "データセンターの効率が株価に影響",
+        "新たなグリッド能力が求められている"
       ],
       "glossary": [
         {
-          "term": "AIインフラ",
-          "explain_ja": "人工知能を支えるための技術基盤やインフラストラクチャ。"
+          "term": "AI",
+          "explain_ja": "人工知能の略称で、機械が知能を持つかのように振る舞う技術。"
         },
         {
-          "term": "ハイパースケーラー",
-          "explain_ja": "大規模にクラウドサービスを提供する企業やデータセンター。"
+          "term": "データセンター",
+          "explain_ja": "コンピュータシステムと関連する機器を収容する施設で、ビジネスのデジタルデータ管理を行う。"
+        },
+        {
+          "term": "グリッド",
+          "explain_ja": "電力を供給するための大規模な送電ネットワーク。"
         }
       ],
       "personal_actions": [
-        "自社のデータセンター運営において、コミュニティへの影響を考慮する。",
-        "最新のAIインフラに関するポリシーを確認し、必要に応じて見直す。"
+        "データセンターの電力効率を評価する",
+        "AI関連の小規模企業への投資可能性を検討する",
+        "原子力投資の情報を収集する"
       ],
       "tags": [
-        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/second-generation-aws-outposts-racks-additional-aws-regions",
-      "source": "Amazon.com",
-      "publishedAt": "2026-01-16T15:00:00Z",
-      "title": "Second-generation AWS Outposts racks are now supported in additional AWS Regions",
-      "title_ja": "第二世代AWS Outpostsラックが追加のAWSリージョンでサポート開始",
-      "summary_ja": "第二世代AWS Outpostsラックが南アメリカ（サンパウロ）およびヨーロッパ（ストックホルム）リージョンでサポートされることになりました。これにより、ユーザーは自社のオンプレミスデータセンターにAWSインフラを拡張し、ハイブリッド体験を享受できます。新たに対応したリージョンにより、企業は遅延やデータ居住要件に最適化されたワークロードを実行できる柔軟性が増します。",
+      "url": "https://me.pcmag.com/en/ai/34772/xais-data-center-may-have-acted-illegally-as-epa-clarifies-turbine-loophole",
+      "source": "PCMag.com",
+      "publishedAt": "2026-01-17T14:19:51Z",
+      "title": "Updated EPA Rules Put xAI's 'Colossus' AI Data Center in Legal Limbo",
+      "title_ja": "EPAの新ルールでxAIのデータセンターが法的な不確実性に直面",
+      "summary_ja": "Elon MuskのAI企業xAIは、メンフィスにあるデータセンターでメタンガスタービンを利用していたことが、環境保護庁(EPA)の新たな規則変更により違法の可能性が出てきた。これにより、同社は約40億ドルを投じて建設中のColossus 1データセンターにおける運営が厳格に規制されることとなる。環境保護団体は法的措置を検討しており、今後の影響が懸念される。",
       "key_points": [
-        "第二世代AWS Outpostsラックが新たにサポートされたリージョンは南アメリカ（サンパウロ）とヨーロッパ（ストックホルム）。",
-        "Outpostsはオンプレミスシステムへの低遅延アクセスを提供しつつ、AWSリージョンとの接続も可能。",
-        "顧客はデータ居住要件を満たすために、オンプレミスにデータを保持しながらAWSサービスを利用。",
-        "この地域拡張により、顧客のOutpostsが接続可能なAWSリージョンの選択肢が増加。"
+        "xAIはメタンガスタービンを使用しているが、EPAの新規則で運営方法が問題視されている。",
+        "新しいガイダンスでは、ポータブルタービンでも許可が必要とされる。",
+        "xAIは以前、365日以上同じ場所にいなければ許可なしで運営していたと報道されている。",
+        "南部環境法律センターなどが法的措置を検討している。",
+        "AIデータセンターの急増が電力消費と価格に与える影響も懸念されている。"
       ],
       "glossary": [
         {
-          "term": "AWS Outposts",
-          "explain_ja": "AWSのインフラストラクチャをオンプレミスに拡張するサービス。"
+          "term": "EPA",
+          "explain_ja": "アメリカの環境保護庁。環境保護に関する法律の施行を担当する機関。"
         },
         {
-          "term": "ハイブリッドクラウド",
-          "explain_ja": "オンプレミスとクラウド環境を組み合わせたITインフラストラクチャのモデル。"
+          "term": "メタンガスタービン",
+          "explain_ja": "メタンを燃料とするタービン、発電に利用されるが、環境への影響が問題視される。"
+        },
+        {
+          "term": "NOx",
+          "explain_ja": "窒素酸化物の総称で、大気汚染の原因となる物質。"
         }
       ],
       "personal_actions": [
-        "新しいリージョンでのOutpostsラックの利用可能性を調査する。",
-        "自社のデータ居住要件を確認し、Outpostsの導入を検討する。",
-        "低遅延を必要とするアプリケーションがある場合、Outpostsを利用する計画を立てる。"
+        "社内のエネルギー消費量と環境影響を再評価する。",
+        "データセンターの運営方法が最新の規制に準拠しているか確認する。"
       ],
       "tags": [
-        "その他"
+        "DC",
+        "AI"
       ]
     }
   ]
