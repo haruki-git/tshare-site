@@ -1,117 +1,101 @@
 {
-  "date": "2026-01-19",
-  "generatedAtJST": "2026-01-19T07:15:48.350+09:00",
+  "date": "2026-01-20",
+  "generatedAtJST": "2026-01-20T07:15:36.855+09:00",
   "items": [
     {
-      "url": "https://www.thehindubusinessline.com/companies/cg-power-bags-900-crore-us-data-centre-order-enters-global-market/article70519862.ece",
-      "source": "BusinessLine",
-      "publishedAt": "2026-01-17T17:49:48Z",
-      "title": "CG Power bags ₹900 crore US data centre order",
-      "title_ja": "CGパワー、インドのデータセンター受注で900クロール獲得",
-      "summary_ja": "CGパワーがアメリカのTallgrass Integrated Logistics Solutions LLCから900クロール（約99.2百万ドル）のデータセンタープロジェクト受注を決定しました。この受注はCGのグローバルデータセンター市場への参入を示す重要なマイルストーンです。受注内容は、ハイパースケールデータセンター用の電力変圧器の供給で、12から20ヶ月の納期が設定されています。",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_a97100b2-a6ee-4224-bdea-8d9d9ba1faef",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-01-18T20:09:16Z",
+      "title": "Monolithic Power Systems (MPWR) Emerges as High-Conviction AI Data Center Power Play",
+      "title_ja": "モノリシック・パワー・システムズ(MPWR)、AIデータセンターの有力選択肢として浮上",
+      "summary_ja": "モノリシック・パワー・システムズ(MPWR)がAIデータセンター向けの注目選手として位置付けられています。この進展は、AI技術の需要の高まりとともに、データセンターの電力管理の重要性が増していることに起因しています。これにより、MPWRは成長の機会を迎えると考えられています。",
       "key_points": [
-        "CGパワーがTallgrassから900クロールのデータセンター受注を獲得",
-        "初のグローバルデータセンター市場への参入",
-        "受注内容はハイパースケール用の電力変圧器",
-        "納期は12〜20ヶ月、FASムンバイ港での供給",
-        "インドの先端施設で設計・製造・テストを実施",
-        "企業の信頼性と性能を強化する機会"
+        "MPWRはAIデータセンター向けの主要な選択肢として注目されている。",
+        "AI技術の需要増加がデータセンターの電力管理の重要性を高めている。",
+        "MPWRは今後の成長の機会を捉えている。"
       ],
       "glossary": [
         {
-          "term": "CG Power and Industrial Solutions Limite",
-          "explain_ja": "インドの主要なエンジニアリングコングロマリット."
+          "term": "Monolithic Power Systems (MPWR)",
+          "explain_ja": "電力管理ソリューションを提供する企業で、特にAIデータセンター向けの製品に注力している。"
         },
         {
-          "term": "Tallgrass Integrated Logistics Solutions",
-          "explain_ja": "アメリカの物流ソリューション会社."
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データの保存・処理を行うための施設."
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能を活用するために最適化されたデータセンターのこと。"
         }
       ],
       "personal_actions": [
-        "CGパワーのデータセンタープロジェクトに関する最新情報をチェックする",
-        "電力変圧器の技術基準について学ぶ",
-        "グローバルデータセンター市場の動向を把握する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.cnbc.com/2026/01/17/ai-power-demand-markets-investor-risk.html",
-      "source": "CNBC",
-      "publishedAt": "2026-01-17T15:28:47Z",
-      "title": "Smaller companies are rising quickly to challenge Big Tech as AI 's best trade",
-      "title_ja": "小規模企業がAIの最良取引としてビッグテックに挑戦する急成長",
-      "summary_ja": "小規模企業がAI市場で急速に成長し、ビッグテックに挑戦しています。信頼できる電力供給、原子力投資、データセンターの効率、グリッドの能力が、AIをテーマにした株式のリターンの核心要因となっています。これにより、投資家に新たなリスクと機会が生まれています。",
-      "key_points": [
-        "小規模企業がAI市場で急成長中",
-        "信頼できる電力供給が株式リターンの核心要因",
-        "原子力投資が重要な役割を果たす",
-        "データセンターの効率が株価に影響",
-        "新たなグリッド能力が求められている"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能の略称で、機械が知能を持つかのように振る舞う技術。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "コンピュータシステムと関連する機器を収容する施設で、ビジネスのデジタルデータ管理を行う。"
-        },
-        {
-          "term": "グリッド",
-          "explain_ja": "電力を供給するための大規模な送電ネットワーク。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの電力効率を評価する",
-        "AI関連の小規模企業への投資可能性を検討する",
-        "原子力投資の情報を収集する"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://me.pcmag.com/en/ai/34772/xais-data-center-may-have-acted-illegally-as-epa-clarifies-turbine-loophole",
-      "source": "PCMag.com",
-      "publishedAt": "2026-01-17T14:19:51Z",
-      "title": "Updated EPA Rules Put xAI's 'Colossus' AI Data Center in Legal Limbo",
-      "title_ja": "EPAの新ルールでxAIのデータセンターが法的な不確実性に直面",
-      "summary_ja": "Elon MuskのAI企業xAIは、メンフィスにあるデータセンターでメタンガスタービンを利用していたことが、環境保護庁(EPA)の新たな規則変更により違法の可能性が出てきた。これにより、同社は約40億ドルを投じて建設中のColossus 1データセンターにおける運営が厳格に規制されることとなる。環境保護団体は法的措置を検討しており、今後の影響が懸念される。",
-      "key_points": [
-        "xAIはメタンガスタービンを使用しているが、EPAの新規則で運営方法が問題視されている。",
-        "新しいガイダンスでは、ポータブルタービンでも許可が必要とされる。",
-        "xAIは以前、365日以上同じ場所にいなければ許可なしで運営していたと報道されている。",
-        "南部環境法律センターなどが法的措置を検討している。",
-        "AIデータセンターの急増が電力消費と価格に与える影響も懸念されている。"
-      ],
-      "glossary": [
-        {
-          "term": "EPA",
-          "explain_ja": "アメリカの環境保護庁。環境保護に関する法律の施行を担当する機関。"
-        },
-        {
-          "term": "メタンガスタービン",
-          "explain_ja": "メタンを燃料とするタービン、発電に利用されるが、環境への影響が問題視される。"
-        },
-        {
-          "term": "NOx",
-          "explain_ja": "窒素酸化物の総称で、大気汚染の原因となる物質。"
-        }
-      ],
-      "personal_actions": [
-        "社内のエネルギー消費量と環境影響を再評価する。",
-        "データセンターの運営方法が最新の規制に準拠しているか確認する。"
+        "MPWRの最新の製品や技術動向を確認する。",
+        "AIデータセンターにおける電力管理の最適化に関する情報を収集する。"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://finance.yahoo.com/news/oracle-orcl-gains-analyst-support-111611735.html",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-01-18T11:16:11Z",
+      "title": "Oracle (ORCL) Gains Analyst Support with Cloud Growth, AI Adoption, and Data Center Expansion",
+      "title_ja": "オラクル（ORCL）がクラウド成長、AI導入、データセンター拡張でアナリストの支持を得る",
+      "summary_ja": "オラクルは最新のアナリストの支持を受けている。70％以上のアナリストが同社の株に対して強気の見方を示しており、クラウドサービスの成長やAIの導入、データセンターの拡張がその要因だ。これにより、投資家からの関心が高まり、オラクルの市場競争力が強化される可能性がある。",
+      "key_points": [
+        "オラクルの株は70%以上のアナリストが強気の見方を持つ",
+        "クラウド成長が重要な推進要因とされる",
+        "AIの導入が企業の競争力を高める要素となる",
+        "データセンターの拡張計画が進行中である",
+        "投資家からの関心が高まり、市場競争力が強化される可能性がある"
+      ],
+      "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略。機械が人間の知的作業を模倣する技術。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "企業がデータを保存、管理、処理するための施設で、クラウドサービスを支える基盤。"
+        }
+      ],
+      "personal_actions": [
+        "オラクル関連の最新ニュースを定期的に確認する",
+        "クラウドサービスの導入状況を把握する",
+        "AI技術の利用可能性を社内で検討する"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/india/metro-expansion-to-ease-congestion-and-reduce-pollution-making-delhi-more-modern-cm-rekha-gupta/articleshow/126646379.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-01-18T14:51:31Z",
+      "title": "Metro expansion to ease congestion and reduce pollution, making Delhi more modern: CM Rekha Gupta",
+      "title_ja": "メトロ拡張で渋滞緩和と汚染削減、近代化を進めるデリー：CMレクハ・グプタ",
+      "summary_ja": "デリーのCMレクハ・グプタの指導の下、デリー政府はメトロネットワークの大規模拡張を決定しました。この拡張は、渋滞の緩和と汚染の削減を目的としています。今後の発展により、デリーがより現代的な都市へと進化することが期待されています。",
+      "key_points": [
+        "デリー政府がメトロネットワークのさらなる拡張を決定した。",
+        "フェーズIVの残りの3つの回廊の資金が発表された。",
+        "拡張により渋滞が緩和され、環境汚染が減少すると期待されている。",
+        "デリーの近代化に向けた重要なステップと位置付けられている。"
+      ],
+      "glossary": [
+        {
+          "term": "Metro",
+          "explain_ja": "デリーの都市交通システムで、地下鉄として機能している。"
+        },
+        {
+          "term": "Phase IV",
+          "explain_ja": "デリーのメトロ拡張計画の一部で、さらに3つの回廊を含む。"
+        }
+      ],
+      "personal_actions": [
+        "地域のメトロ計画に関する最新情報を確認する。",
+        "新しいメトロ路線が開通する際の日程をチェックし、利用を計画する。"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
