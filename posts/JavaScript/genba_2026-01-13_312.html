@@ -41,6 +41,8 @@
 <p>CodePenの場合はHTML欄に要素、JS欄にスクリプトを置くと簡単に試せます。</p>
 <p>貼り付け場所：CodePenを想定する場合はHTML欄に必要なタグ（下のHTMLブロック）を、JS欄にJavaScriptコードを貼ってください。</p>
 
+<p>最小コード：</p>
+
 <pre><code class="language-html">&lt;!-- HTML欄：CodePenのHTMLに貼ります --&gt;
 &lt;form id="myForm"&gt;
   &lt;input id="name" name="name" placeholder="名前を入力" /&gt;
@@ -53,27 +55,32 @@
 &lt;/div&gt;
 </code></pre>
 
-<p>最小コード：</p>
+<pre><code class="language-javascript">// JS欄
+// まず「使うDOM」を取って変数に入れる（毎回探すより読みやすい）
+const form = document.getElementById('myForm');      // form全体
+const nameInput = document.getElementById('name');   // 名前入力欄
+const out = document.getElementById('out');          // 表示先（メッセージ欄）
+const submitBtn = document.getElementById('submitBtn'); // 送信ボタン
 
-<pre><code class="language-javascript">// JS欄：最小コード（10〜30行）
-const form = document.getElementById('myForm');
-const nameInput = document.getElementById('name');
-const out = document.getElementById('out');
-const submitBtn = document.getElementById('submitBtn');
-
-nameInput.addEventListener('input', () =&gt; {
-  out.textContent = `入力中: ${nameInput.value}`;
+// 入力中（キー入力のたび）に、今の内容を画面に出す
+nameInput.addEventListener('input', () => {
+  out.textContent = `入力中: ${nameInput.value}`; // value が入力欄の中身
 });
 
-form.addEventListener('submit', (e) =&gt; {
-  e.preventDefault(); // フォームのデフォルト送信を止める
+// 送信ボタン or Enterでフォーム送信されたときの処理
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); // 本来の「ページ遷移して送信」を止めて、JSで処理する
+
+  // 空文字やスペースだけはNGにしたいので trim() で前後スペースを除く
   if (!nameInput.value.trim()) {
-    out.textContent = '名前を入力してください';
-    return;
+    out.textContent = '名前を入力してください'; // エラー表示
+    return; // ここで終了（下の「送信した」処理はしない）
   }
-  submitBtn.disabled = true; // 二重送信防止（簡易）
-  out.textContent = `送信しました: ${nameInput.value}`;
+
+  submitBtn.disabled = true; // 連打で二重送信しないようにボタンを無効化（簡易）
+  out.textContent = `送信しました: ${nameInput.value}`; // 成功メッセージ
 });
+
 </code></pre>
 </section>
 
@@ -96,15 +103,31 @@ form.addEventListener('submit', (e) =&gt; {
 <p>一方、子の処理だけで止めたい場合は<code>event.stopPropagation()</code>で伝播を止めます。下の応用コードで<code>container</code>に<code>click</code>を付け、どの子が押されたか判定する例を示します。</p>
 
 <pre><code class="language-javascript">// 応用：イベント委譲と伝播の例（JS欄に追記して試してください）
+
+// 親要素（container）に「まとめて」clickを付ける：これがイベント委譲
 const container = document.getElementById('container');
-container.addEventListener('click', (e) =&gt; {
+
+container.addEventListener('click', (e) => {
+  // e.target は「実際にクリックされた要素」（ここでは button.child など）
   const target = e.target;
+
+  // クリックされた要素が .child を持っているなら「子ボタン」と判断する
   if (target.classList.contains('child')) {
     out.textContent = '子ボタンが押されました';
   }
+
+  // ※ポイント：
+  // 子ボタンに直接 addEventListener しなくても、
+  // 親（container）1つで子ボタンのクリックを拾える
+  // （子ボタンが増えてもコードを増やさなくてよい）
 });
-document.getElementById('btn').addEventListener('click', (e) =&gt; {
+
+// 「単独ボタン」には直接 click を付ける（委譲ではなく通常の付け方）
+document.getElementById('btn').addEventListener('click', (e) => {
+  // click は「子 → 親 → document…」の順で上に伝わる（バブリング）
+  // ここで止めると、上の親ハンドラ（container側など）に届かない
   e.stopPropagation(); // 親に伝播させたくない時
+
   out.textContent = '単独ボタンが押されました';
 });
 </code></pre>

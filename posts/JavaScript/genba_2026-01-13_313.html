@@ -21,149 +21,240 @@
         <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
       </section>
 
-      
       <section id="sec-toc">
         <h2>目次</h2>
         <ol>
-  <li><a href="#sec-1">setTimeout/setIntervalで非同期を体感</a></li>
-  <li><a href="#sec-2">Promiseの基本（then/catch）</a></li>
-  <li><a href="#sec-3">async/awaitの書き方</a></li>
-  <li><a href="#sec-4">例外処理（try/catch）との組み合わせ</a></li>
-  <li><a href="#sec-5">並列実行（Promise.all）の考え方（軽く）</a></li>
-  <li><a href="#sec-6">注意（ここだけ）</a></li>
-  <li><a href="#sec-7">要約</a></li>
-</ol>
+          <li><a href="#sec-0">非同期とは？</a></li>
+          <li><a href="#sec-1">setTimeout/setIntervalで非同期を体感</a></li>
+          <li><a href="#sec-2">Promiseの基本（then/catch）</a></li>
+          <li><a href="#sec-3">async/awaitの書き方</a></li>
+          <li><a href="#sec-4">例外処理（try/catch）との組み合わせ</a></li>
+          <li><a href="#sec-5">並列実行（Promise.all）の考え方（軽く）</a></li>
+          <li><a href="#sec-6">注意（ここだけ）</a></li>
+          <li><a href="#sec-7">要約</a></li>
+        </ol>
+      </section>
+      
+      <section id="sec-0">
+        <h3>非同期とは？</h3>
+
+        <p>
+          非同期（ひどうき）とは、<strong>「待ちが発生する処理を始めても、そこで止まらずに先へ進める」</strong>ことです。
+          たとえば「1秒待つ」「読み込みを待つ」のような処理は、終わるまで待っていると画面が固まってしまいます。
+          そこでJavaScriptは、待ちが必要な処理は<strong>いったん予約して</strong>、他の処理を先に進められるようにしています。
+        </p>
+
+        <p>
+          このページではネットワーク通信は使わず、<code>setTimeout</code>（あとで1回実行）と
+          <code>setInterval</code>（一定間隔で繰り返し）を使って「予約 → 後から実行される」感覚を体験します。
+          その上で、<strong>Promise / then-catch / async-await</strong> によって「後から返ってくる結果」を
+          きれいに扱う方法を学びます。
+        </p>
+
+        <p class="meta" style="opacity:0.85; margin-top:8px;">
+          見るポイント：ログの<strong>順番</strong>です。ボタンを押した直後に出るログと、しばらくしてから出るログが混ざったら、
+          「待っている間も先に進めている（＝非同期）」状態です。
+        </p>
+      </section>
+
+      <!-- このページ単体でも動くデモ（sec-5の説明と連動） -->
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">デモ（このページでそのまま動きます）</h2>
+        <p class="meta" style="margin-top:0; opacity:0.85;">
+          ボタンを押して、<code>#out</code> と Console のログの「順番」を見てください。
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;">
+          <button id="btn1">setTimeout/Interval</button>
+          <button id="btn2">Promise then/catch</button>
+          <button id="btn3">async/await</button>
+          <button id="btn4">try/catchでエラー</button>
+          <button id="btn5">Promise.all</button>
+          <button id="btnClear">クリア</button>
+        </div>
+       <pre id="out" style="background:#f7f7f7; color:#111; padding:8px; margin-top:10px; white-space:pre-wrap; border:1px solid rgba(0,0,0,.15);"></pre>
       </section>
 
       <section id="sec-1">
-  <h3>setTimeout/setIntervalで非同期を体感</h3>
-  <p>この小項目「setTimeout/setIntervalで非同期を体感」は、JavaScriptで「処理の対象をどう決めるか」と結びつけて考えると理解しやすいです。</p>
-<p>途中に空の要素があるか、基準にするキーが何かで、最終的な件数や判定が変わります。</p>
-<p>まずは最小例で「今どんな値が入っているか」をConsoleに出してから、条件分岐やループを調整すると迷いにくいです。</p>
-<pre><code class="language-js">// 例：配列の中身を確認してから、条件を固める
-const items = ["ok", "", "避けたい例", null, "ok"];
-const cleaned = items.filter(x =&gt; typeof x === "string" &amp;&amp; x.trim() !== "");
-console.log("raw=", items);
-console.log("cleaned=", cleaned);
-</code></pre>
-</section>
+        <h3>setTimeout/setIntervalで非同期を体感</h3>
+        <p>非同期は「いま実行せず、あとで実行する予約」です。</p>
+        <p><code>setTimeout</code> は「1回だけ遅らせる予約」、<code>setInterval</code> は「一定間隔で繰り返す予約」です。</p>
+        <p>まずは <strong>ログの順番</strong> に注目してください。ボタンを押した直後のログと、あとから出るログが混ざったら「非同期っぽさ」を掴めています。</p>
+        <p class="meta" style="opacity:0.85;">観察ポイント：<code>tick</code> が何回出て、いつ止まるか。</p>
+      </section>
 
-<section id="sec-2">
-  <h3>Promiseの基本（then/catch）</h3>
-  <p>この小項目「Promiseの基本（then/catch）」は、JavaScriptで「処理の対象をどう決めるか」と結びつけて考えると理解しやすいです。</p>
-<p>途中に空の要素があるか、基準にするキーが何かで、最終的な件数や判定が変わります。</p>
-<p>まずは最小例で「今どんな値が入っているか」をConsoleに出してから、条件分岐やループを調整すると迷いにくいです。</p>
-<pre><code class="language-js">// 例：配列の中身を確認してから、条件を固める
-const items = ["ok", "", "避けたい例", null, "ok"];
-const cleaned = items.filter(x =&gt; typeof x === "string" &amp;&amp; x.trim() !== "");
-console.log("raw=", items);
-console.log("cleaned=", cleaned);
-</code></pre>
-</section>
+      <section id="sec-2">
+        <h3>Promiseの基本（then/catch）</h3>
+        <p>Promiseは「将来の結果（成功 or 失敗）を表す箱」です。</p>
+        <p><code>then</code> は成功した結果を受け取り、<code>catch</code> は失敗（reject）を受け取ります。</p>
+        <p>この小項目では「あとから届く結果を、後処理としてつなぐ」感覚を掴みます。</p>
+        <p class="meta" style="opacity:0.85;">観察ポイント：<code>700ms完了 then</code> が後から出ること。</p>
+      </section>
 
-<section id="sec-3">
-  <h3>async/awaitの書き方</h3>
-  <p>この小項目「async/awaitの書き方」は、JavaScriptで「処理の対象をどう決めるか」と結びつけて考えると理解しやすいです。</p>
-<p>途中に空の要素があるか、基準にするキーが何かで、最終的な件数や判定が変わります。</p>
-<p>まずは最小例で「今どんな値が入っているか」をConsoleに出してから、条件分岐やループを調整すると迷いにくいです。</p>
+      <section id="sec-3">
+        <h3>async/awaitの書き方</h3>
+        <p><code>async/await</code> は Promise を「上から順に読む」書き方にできます（同期っぽく見える）。</p>
+        <p><code>await</code> は「ここで結果が出るまで待つ」ように見えますが、UI全体を止めるわけではありません。</p>
+        <p>thenチェーンが長くなると読みづらいので、順番が大事な処理は <code>await</code> が読みやすいです。</p>
+        <p class="meta" style="opacity:0.85;">観察ポイント：<code>async開始</code> →（少し待つ）→ <code>awaitで待った:500ms</code> の順番。</p>
+      </section>
 
-<pre><code class="language-js">// 例：配列の中身を確認してから、条件を固める
-const items = ["ok", "", "避けたい例", null, "ok"];
-const cleaned = items.filter(x =&gt; typeof x === "string" &amp;&amp; x.trim() !== "");
-console.log("raw=", items);
-console.log("cleaned=", cleaned);
-</code></pre>
-</section>
+      <section id="sec-4">
+        <h3>例外処理（try/catch）との組み合わせ</h3>
+        <p>非同期の失敗は放置すると「どこで失敗したか」が見えづらくなります。</p>
+        <p><code>await</code> する処理を <code>try/catch</code> で包むと、失敗理由をその場で拾えてデバッグが楽です。</p>
+        <p>この小項目では「reject（失敗）を catch で受け取る」流れを確認します。</p>
+        <p class="meta" style="opacity:0.85;">観察ポイント：エラーが <code>catchで受けた:失敗</code> になること。</p>
+      </section>
 
-<section id="sec-4">
-  <h3>例外処理（try/catch）との組み合わせ</h3>
-  <p>この小項目「例外処理（try/catch）との組み合わせ」は、JavaScriptで「処理の対象をどう決めるか」と結びつけて考えると理解しやすいです。</p>
-<p>途中に空の要素があるか、基準にするキーが何かで、最終的な件数や判定が変わります。</p>
-<p>まずは最小例で「今どんな値が入っているか」をConsoleに出してから、条件分岐やループを調整すると迷いにくいです。</p>
-<pre><code class="language-js">// 例：配列の中身を確認してから、条件を固める
-const items = ["ok", "", "避けたい例", null, "ok"];
-const cleaned = items.filter(x =&gt; typeof x === "string" &amp;&amp; x.trim() !== "");
-console.log("raw=", items);
-console.log("cleaned=", cleaned);
-</code></pre>
-</section>
+      <section id="sec-5">
+        <h3>並列実行（Promise.all）の考え方（軽く）</h3>
+        <p>独立した非同期処理を同時に始めて全て終わるのを待つときにPromise.allを使います。個別にawaitするより高速になることが多く、結果は配列で返ります。要チェックとして、1つでもrejectすると全体がrejectになります。</p>
 
-<section id="sec-5">
-  <h3>並列実行（Promise.all）の考え方（軽く）</h3>
-  <p>独立した非同期処理を同時に始めて全て終わるのを待つときにPromise.allを使います。個別にawaitするより高速になることが多く、結果は配列で返ります。要チェックとして、1つでもrejectすると全体がrejectになります。</p>
+        <p>最小コード：</p>
 
-<p>最小コード：</p>
-<pre><code class="language-javascript">const out = document.getElementById('out');
-const log = m=&gt;{console.log(m); out.textContent += m + '\n';};
-function wait(ms){ return new Promise(res=&gt;setTimeout(()=&gt;res(ms), ms)); }
 
-document.getElementById('btn1').onclick = ()=&gt;{
-  log('setTimeout開始');
-  setTimeout(()=&gt;log('1秒後'),1000);
-  const id = setInterval(()=&gt;log('tick'),300);
-  setTimeout(()=&gt;{clearInterval(id); log('interval停止');},1100);
-};
-
-document.getElementById('btn2').onclick = ()=&gt;{
-  wait(700).then(ms=&gt;log(ms+'ms完了 then')).catch(e=&gt;log('thenエラー:'+e));
-};
-
-document.getElementById('btn3').onclick = async ()=&gt;{
-  log('async開始');
-  const v = await wait(500);
-  log('awaitで待った:'+v+'ms');
-};
-
-document.getElementById('btn4').onclick = async ()=&gt;{
-  try{
-    await new Promise((_,rej)=&gt;setTimeout(()=&gt;rej(new Error('失敗')),400));
-  }catch(e){
-    log('catchで受けた:'+e.message);
-  }
-};
-
-document.getElementById('btn5').onclick = ()=&gt;{
-  Promise.all([wait(300),wait(600)]).then(a=&gt;log('Promise.all完了:'+a.join(',')));
-};</code></pre>
-
-<pre><code class="language-html">&lt;button id="btn1"&gt;setTimeout/Interval&lt;/button&gt;
+<pre><code class="language-html">&lt;!-- HTML欄：CodePenのHTMLに貼ります --&gt;
+&lt;button id="btn1"&gt;setTimeout/Interval&lt;/button&gt;
 &lt;button id="btn2"&gt;Promise then/catch&lt;/button&gt;
 &lt;button id="btn3"&gt;async/await&lt;/button&gt;
 &lt;button id="btn4"&gt;try/catchでエラー&lt;/button&gt;
 &lt;button id="btn5"&gt;Promise.all&lt;/button&gt;
-&lt;pre id="out" style="background:#f7f7f7;padding:8px;"&gt;&lt;/pre&gt;</code></pre>
+&lt;pre id="out"&gt;&lt;/pre&gt;</code></pre>
 
-<p>貼り付け場所は、CodePenならHTML欄にHTMLを、JS欄にJSを貼ります。ローカルでは&lt;body&gt;内にHTMLを置き、&lt;script&gt;でJSを読み込む形にします。</p>
+<pre><code class="language-js">// JS欄
+const out = document.getElementById('out');     // 画面にログを出す場所
+const log = m => {                              // 観察用：Console + 画面に同じログを出す
+  console.log(m);
+  out.textContent += m + '\n';
+};
 
-<p>実行方法は、ページを開いて各ボタンを押すと#outとConsoleにログが出ます。期待どおりのタイミングやエラー表示が確認できればOKです。</p>
+function wait(ms){
+  // 「ms ミリ秒たったら成功する Promise」を返す（= 待ちをPromise化）
+  return new Promise(res => setTimeout(() => res(ms), ms));
+}
 
-<p>確認方法は、#outに順にログが出ることと、Consoleにも同じログが出ることを見ます。</p>
+document.getElementById('btn1').onclick = () => {
+  log('setTimeout開始');                          // これはすぐ出る（同期的に実行）
 
-<p>よくあるミスは、HTMLの要素IDとJSの参照を合わせ忘れることです。その場合はonclickが未定義になりやすいので、DOMContentLoadedで初期化するかIDを一致させます。</p>
+  // 1秒後に実行を「予約」するだけ（今は止まらない）
+  setTimeout(() => log('1秒後'), 1000);
 
-<p>使い分けの基準は、順次処理はasync/awaitが読みやすく、短いチェーンはthen/catchでもよいです。独立処理の同時実行はPromise.allを使い、繰り返しは状況に応じてsetIntervalか逐次setTimeoutを選びます。</p>
-</section>
+  // 0.3秒ごとに繰り返し実行を予約（止めない限り tick が増える）
+  const id = setInterval(() => log('tick'), 300);
 
-<section id="sec-6">
-  <h3>注意（ここだけ）</h3>
-  <ul>
-    <li><p><code>setTimeout</code> の順序は「待ち時間が短い順に即実行」ではなく、キューの都合で前後します。ログで順序を確認しながら学ぶのが安全です。</p></li>
-    <li><p><code>async/await</code> でも例外は起きます。非同期処理は <code>try/catch</code> で包まないと「落ちた理由」が見えづらくなります。</p></li>
-    <li><p>並列（<code>Promise.all</code>）は一つでも失敗すると全体が失敗扱いになります。必要なら個別に失敗を吸収する設計にします。</p></li>
-  </ul>
-</section>
+  // 1.1秒後に interval を止める（clearIntervalしないと永遠に動く）
+  setTimeout(() => { clearInterval(id); log('interval停止'); }, 1100);
+};
+
+document.getElementById('btn2').onclick = () => {
+  // wait(700) は「700ms後に成功するPromise」
+  // then：成功したときに後から実行される／catch：失敗したとき
+  wait(700)
+    .then(ms => log(ms + 'ms完了 then'))
+    .catch(e => log('thenエラー:' + e));
+};
+
+document.getElementById('btn3').onclick = async () => {
+  log('async開始');                                 // これはすぐ出る
+
+  // await：Promiseの完了を「待つ」ように見えるが、UI/他の処理は止めない
+  const v = await wait(500);
+
+  log('awaitで待った:' + v + 'ms');                 // 完了後に続きが実行される
+};
+
+document.getElementById('btn4').onclick = async () => {
+  try{
+    // 400ms後にわざと失敗(reject)させるPromise
+    await new Promise((_, rej) =>
+      setTimeout(() => rej(new Error('失敗')), 400)
+    );
+  }catch(e){
+    // await中の失敗は try/catch で受け取れる（非同期でも理由が追える）
+    log('catchで受けた:' + e.message);
+  }
+};
+
+document.getElementById('btn5').onclick = () => {
+  // Promise.all：複数のPromiseを「同時に開始」して、全部終わったら then が1回だけ動く
+  Promise.all([wait(300), wait(600)])
+    .then(a => log('Promise.all完了:' + a.join(',')));
+};
+</code></pre>
+
+        <p>貼り付け場所は、CodePenならHTML欄にHTMLを、JS欄にJSを貼ります。ローカルでは&lt;body&gt;内にHTMLを置き、&lt;script&gt;でJSを読み込む形にします。</p>
+        <p>実行方法は、ページを開いて各ボタンを押すと#outとConsoleにログが出ます。期待どおりのタイミングやエラー表示が確認できればOKです。</p>
+        <p>確認方法は、#outに順にログが出ることと、Consoleにも同じログが出ることを見ます。</p>
+        <p>よくあるミスは、HTMLの要素IDとJSの参照を合わせ忘れることです。その場合はonclickが未定義になりやすいので、DOMContentLoadedで初期化するかIDを一致させます。</p>
+        <p>使い分けの基準は、順次処理はasync/awaitが読みやすく、短いチェーンはthen/catchでもよいです。独立処理の同時実行はPromise.allを使い、繰り返しは状況に応じてsetIntervalか逐次setTimeoutを選びます。</p>
+      </section>
+
+      <section id="sec-6">
+        <h3>注意（ここだけ）</h3>
+        <ul>
+          <li><p><code>setTimeout</code> の順序は「待ち時間が短い順に即実行」ではなく、キューの都合で前後します。ログで順序を確認しながら学ぶのが安全です。</p></li>
+          <li><p><code>async/await</code> でも例外は起きます。非同期処理は <code>try/catch</code> で包まないと「落ちた理由」が見えづらくなります。</p></li>
+          <li><p>並列（<code>Promise.all</code>）は一つでも失敗すると全体が失敗扱いになります。必要なら個別に失敗を吸収する設計にします。</p></li>
+        </ul>
+      </section>
 
       <section id="sec-7">
-  <h3>要約</h3>
-  <ul>
-  <li>setTimeoutは遅延実行で、setIntervalは繰り返し実行ですが、どちらもUIをブロックしません。</li>
-  <li>Promiseは非同期の結果を表し、then/catchで処理を繋げます。</li>
-  <li>async/awaitでPromiseを同期風に書けるため、可読性が上がります。</li>
-  <li>awaitとtry/catchを組み合わせると、自然な例外処理ができます。</li>
-  <li>Promise.allで並列実行して効率化できますが、1つの失敗で全体が失敗します。</li>
-</ul>
-</section>
+        <h3>要約</h3>
+        <ul>
+          <li>setTimeoutは遅延実行で、setIntervalは繰り返し実行ですが、どちらもUIをブロックしません。</li>
+          <li>Promiseは非同期の結果を表し、then/catchで処理を繋げます。</li>
+          <li>async/awaitでPromiseを同期風に書けるため、可読性が上がります。</li>
+          <li>awaitとtry/catchを組み合わせると、自然な例外処理ができます。</li>
+          <li>Promise.allで並列実行して効率化できますが、1つの失敗で全体が失敗します。</li>
+        </ul>
+      </section>
+
     </article>
   </main>
+
+  <!-- このページ単体で動くように、実体のJSを配置 -->
+  <script>
+    const out = document.getElementById('out');
+    const log = (m) => { console.log(m); out.textContent += m + '\n'; };
+
+    function wait(ms){
+      return new Promise(res => setTimeout(() => res(ms), ms));
+    }
+
+    document.getElementById('btnClear').onclick = () => { out.textContent = ''; };
+
+    document.getElementById('btn1').onclick = () => {
+      log('setTimeout開始');
+      setTimeout(() => log('1秒後'), 1000);
+
+      const id = setInterval(() => log('tick'), 300);
+      setTimeout(() => { clearInterval(id); log('interval停止'); }, 1100);
+    };
+
+    document.getElementById('btn2').onclick = () => {
+      wait(700)
+        .then(ms => log(ms + 'ms完了 then'))
+        .catch(e => log('thenエラー:' + e));
+    };
+
+    document.getElementById('btn3').onclick = async () => {
+      log('async開始');
+      const v = await wait(500);
+      log('awaitで待った:' + v + 'ms');
+    };
+
+    document.getElementById('btn4').onclick = async () => {
+      try{
+        await new Promise((_, rej) => setTimeout(() => rej(new Error('失敗')), 400));
+      }catch(e){
+        log('catchで受けた:' + e.message);
+      }
+    };
+
+    document.getElementById('btn5').onclick = () => {
+      Promise.all([wait(300), wait(600)])
+        .then(a => log('Promise.all完了:' + a.join(',')));
+    };
+  </script>
 </body>
 </html>

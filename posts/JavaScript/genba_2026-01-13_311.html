@@ -70,7 +70,7 @@
   <p>UI更新は小さなrender関数にまとめると、状態と表示の整合性が保ちやすくなります。状態（オブジェクトや配列）を更新したらrenderを呼び出してDOMをまとめて更新する設計がシンプルです。部分的に再描画する場合は、差分更新か必要な要素だけ書き換える工夫をするとパフォーマンスが安定します。少なくとも「状態を変更→render呼び出し」の流れを守ることをお勧めします。</p>
 
 <p>貼り付け場所：CodePenを想定する場合はHTML欄にHTMLを、JS欄にJavaScriptを貼り付けてください。HTML欄にはボタン（#btn）や表示エリア（#out）を用意してあります。</p>
-
+<p>最小コード：</p>
 <pre><code>&lt;!-- HTML欄に貼る（CodePenのHTML欄） --&gt;
 &lt;div id="app"&gt;
   &lt;button id="btn"&gt;切替&lt;/button&gt;
@@ -78,7 +78,23 @@
 &lt;/div&gt;
 </code></pre>
 
-<p>最小コード：</p>
+<pre><code>/* CSS欄に貼る（CodePenのCSS欄） */
+.box {
+  padding: 12px;
+  border: 2px solid #888;
+  border-radius: 8px;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.box.active {
+  background: #ffe08a;
+  border-color: #ff9900;
+  transform: scale(1.05);
+  font-weight: bold;
+}
+</code></pre>
+
 
 <pre><code>// JS欄に貼る（CodePenのJS欄）
 const btn = document.querySelector('#btn');
