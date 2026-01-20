@@ -1,66 +1,37 @@
 {
-  "date": "2026-01-20",
-  "generatedAtJST": "2026-01-20T07:15:36.855+09:00",
+  "date": "2026-01-21",
+  "generatedAtJST": "2026-01-21T07:15:48.797+09:00",
   "items": [
     {
-      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_a97100b2-a6ee-4224-bdea-8d9d9ba1faef",
-      "source": "Yahoo Entertainment",
-      "publishedAt": "2026-01-18T20:09:16Z",
-      "title": "Monolithic Power Systems (MPWR) Emerges as High-Conviction AI Data Center Power Play",
-      "title_ja": "モノリシック・パワー・システムズ(MPWR)、AIデータセンターの有力選択肢として浮上",
-      "summary_ja": "モノリシック・パワー・システムズ(MPWR)がAIデータセンター向けの注目選手として位置付けられています。この進展は、AI技術の需要の高まりとともに、データセンターの電力管理の重要性が増していることに起因しています。これにより、MPWRは成長の機会を迎えると考えられています。",
+      "url": "https://oilprice.com/Energy/Energy-General/Washington-Pivots-to-Gas-Coal-and-Nuclear-for-AI-Baseload-Power.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-01-19T22:00:00Z",
+      "title": "Washington Pivots to Gas, Coal and Nuclear for AI Baseload Power",
+      "title_ja": "ワシントンがAIのベースロード電力にガス、石炭、核を選択",
+      "summary_ja": "トランプ政権は、データセンターの拡張を支えるために天然ガス、石炭、そして核エネルギーを新たに選択する意向を示しました。これは、クリーンエネルギーへの移行を進める中での明確な方向転換を表しています。この選択は、エネルギー供給の安定性を重視し、AI関連の需要に対応するための重要なステップとされています。",
       "key_points": [
-        "MPWRはAIデータセンター向けの主要な選択肢として注目されている。",
-        "AI技術の需要増加がデータセンターの電力管理の重要性を高めている。",
-        "MPWRは今後の成長の機会を捉えている。"
+        "トランプ政権が天然ガス、石炭、核を優先する方針を示した。",
+        "データセンターの拡張を支えるための新しい発電方法として採用される。",
+        "クリーンエネルギーへの移行と安定供給の両立が求められている。"
       ],
       "glossary": [
         {
-          "term": "Monolithic Power Systems (MPWR)",
-          "explain_ja": "電力管理ソリューションを提供する企業で、特にAIデータセンター向けの製品に注力している。"
+          "term": "ベースロード電力",
+          "explain_ja": "需要に応じて常に供給される電力のこと。"
         },
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能を活用するために最適化されたデータセンターのこと。"
-        }
-      ],
-      "personal_actions": [
-        "MPWRの最新の製品や技術動向を確認する。",
-        "AIデータセンターにおける電力管理の最適化に関する情報を収集する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://finance.yahoo.com/news/oracle-orcl-gains-analyst-support-111611735.html",
-      "source": "Yahoo Entertainment",
-      "publishedAt": "2026-01-18T11:16:11Z",
-      "title": "Oracle (ORCL) Gains Analyst Support with Cloud Growth, AI Adoption, and Data Center Expansion",
-      "title_ja": "オラクル（ORCL）がクラウド成長、AI導入、データセンター拡張でアナリストの支持を得る",
-      "summary_ja": "オラクルは最新のアナリストの支持を受けている。70％以上のアナリストが同社の株に対して強気の見方を示しており、クラウドサービスの成長やAIの導入、データセンターの拡張がその要因だ。これにより、投資家からの関心が高まり、オラクルの市場競争力が強化される可能性がある。",
-      "key_points": [
-        "オラクルの株は70%以上のアナリストが強気の見方を持つ",
-        "クラウド成長が重要な推進要因とされる",
-        "AIの導入が企業の競争力を高める要素となる",
-        "データセンターの拡張計画が進行中である",
-        "投資家からの関心が高まり、市場競争力が強化される可能性がある"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。機械が人間の知的作業を模倣する技術。"
+          "term": "トランプ政権",
+          "explain_ja": "2017年から2021年までのアメリカ合衆国の政権。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "企業がデータを保存、管理、処理するための施設で、クラウドサービスを支える基盤。"
+          "explain_ja": "情報処理やデータの保存を行う施設。"
         }
       ],
       "personal_actions": [
-        "オラクル関連の最新ニュースを定期的に確認する",
-        "クラウドサービスの導入状況を把握する",
-        "AI技術の利用可能性を社内で検討する"
+        "最新のエネルギー政策に注目し、関連する方針の変更を確認する。",
+        "データセンターの電力供給に関する講演やセミナーに参加して情報を収集する。",
+        "再生可能エネルギーの導入状況を社内で確認し、持続可能な選択肢を検討する。"
       ],
       "tags": [
         "DC",
@@ -68,34 +39,70 @@
       ]
     },
     {
-      "url": "https://timesofindia.indiatimes.com/india/metro-expansion-to-ease-congestion-and-reduce-pollution-making-delhi-more-modern-cm-rekha-gupta/articleshow/126646379.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-01-18T14:51:31Z",
-      "title": "Metro expansion to ease congestion and reduce pollution, making Delhi more modern: CM Rekha Gupta",
-      "title_ja": "メトロ拡張で渋滞緩和と汚染削減、近代化を進めるデリー：CMレクハ・グプタ",
-      "summary_ja": "デリーのCMレクハ・グプタの指導の下、デリー政府はメトロネットワークの大規模拡張を決定しました。この拡張は、渋滞の緩和と汚染の削減を目的としています。今後の発展により、デリーがより現代的な都市へと進化することが期待されています。",
+      "url": "https://siliconangle.com/2026/01/19/openai-reveals-data-center-capacity-tripled-1-9gw-2025/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-01-19T21:18:53Z",
+      "title": "OpenAI reveals its data center capacity tripled to 1.9GW in 2025 - SiliconANGLE",
+      "title_ja": "OpenAI、データセンターの容量が2025年に1.9GWに三倍増加したと発表",
+      "summary_ja": "OpenAIは、2025年までにデータセンターの容量が約1.9GWに達したと発表しました。同社の年次収益は20億ドルを超え、2024年の6億ドルから大幅に増加しました。この成長はデータセンターへの投資と直接関連しており、効率性とコスト削減も目指しています。",
       "key_points": [
-        "デリー政府がメトロネットワークのさらなる拡張を決定した。",
-        "フェーズIVの残りの3つの回廊の資金が発表された。",
-        "拡張により渋滞が緩和され、環境汚染が減少すると期待されている。",
-        "デリーの近代化に向けた重要なステップと位置付けられている。"
+        "OpenAIのデータセンターの容量は200MWから約1.9GWに成長。",
+        "年次収益は2024年の6ビリオンドルから20ビリオンドルへと急増。",
+        "コスト効率を向上させるためにさまざまなハードウェアを組み合わせている。",
+        "2025年には80億ドルの損失が見込まれている。",
+        "広告を収益源として取り入れる計画がある。"
       ],
       "glossary": [
         {
-          "term": "Metro",
-          "explain_ja": "デリーの都市交通システムで、地下鉄として機能している。"
+          "term": "データセンター",
+          "explain_ja": "データを保存および処理するための使用される施設。"
         },
         {
-          "term": "Phase IV",
-          "explain_ja": "デリーのメトロ拡張計画の一部で、さらに3つの回廊を含む。"
+          "term": "GW",
+          "explain_ja": "ギガワットの略で、電力の単位。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能の略で、人間の知能を模倣するコンピュータシステムのこと。"
         }
       ],
       "personal_actions": [
-        "地域のメトロ計画に関する最新情報を確認する。",
-        "新しいメトロ路線が開通する際の日程をチェックし、利用を計画する。"
+        "データセンターの容量や効率性向上に関連する最新の技術トレンドを確認する。",
+        "AI業界の収益モデルについて学び、今後の動向を把握する。",
+        "コスト削減のための新しいハードウェア技術を調査する。"
       ],
       "tags": [
-        "その他"
+        "DC"
+      ]
+    },
+    {
+      "url": "https://financialpost.com/pmn/business-pmn/bces-data-center-rollout-moving-faster-than-expected-ceo-says",
+      "source": "Financial Post",
+      "publishedAt": "2026-01-19T16:06:31Z",
+      "title": "BCE’s Data Center Rollout Moving Faster Than Expected, CEO Says",
+      "title_ja": "BCEのデータセンター展開が予想以上のスピードで進行中、CEOが発言",
+      "summary_ja": "BCEは、カナダにおけるデータセンターの需要が高まっていることを受けて、人工知能ビジネスの進展を加速させている。新しい施設の建設は予想を上回るスケジュールで進んでいるとのこと。これにより、BCEは競争力を高める可能性がある。",
+      "key_points": [
+        "BCEがデータセンターの需要に応じて事業を迅速に進めている。",
+        "新しい人工知能ビジネスが展開されている。",
+        "施設の建設がスケジュールよりも早く進行中である。"
+      ],
+      "glossary": [
+        {
+          "term": "BCE Inc.",
+          "explain_ja": "カナダの大手通信会社で、データセンターなどのインフラを提供している。"
+        },
+        {
+          "term": "人工知能 (AI)",
+          "explain_ja": "人間の知的行動を模倣できる技術やシステムのこと。"
+        }
+      ],
+      "personal_actions": [
+        "BCEのデータセンターの進展状況を定期的にチェックする。",
+        "新しいAIビジネスに関連する情報を収集する。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
