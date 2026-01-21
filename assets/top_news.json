@@ -1,105 +1,109 @@
 {
-  "date": "2026-01-21",
-  "generatedAtJST": "2026-01-21T07:15:48.797+09:00",
+  "date": "2026-01-22",
+  "generatedAtJST": "2026-01-22T07:15:36.401+09:00",
   "items": [
     {
-      "url": "https://oilprice.com/Energy/Energy-General/Washington-Pivots-to-Gas-Coal-and-Nuclear-for-AI-Baseload-Power.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-01-19T22:00:00Z",
-      "title": "Washington Pivots to Gas, Coal and Nuclear for AI Baseload Power",
-      "title_ja": "ワシントンがAIのベースロード電力にガス、石炭、核を選択",
-      "summary_ja": "トランプ政権は、データセンターの拡張を支えるために天然ガス、石炭、そして核エネルギーを新たに選択する意向を示しました。これは、クリーンエネルギーへの移行を進める中での明確な方向転換を表しています。この選択は、エネルギー供給の安定性を重視し、AI関連の需要に対応するための重要なステップとされています。",
+      "url": "https://financialpost.com/globe-newswire/tfi-delivering-rapid-data-center-related-growth",
+      "source": "Financial Post",
+      "publishedAt": "2026-01-20T22:00:52Z",
+      "title": "TFI Delivering Rapid Data Center Related Growth",
+      "title_ja": "TFI、データセンター関連の急成長を支援",
+      "summary_ja": "TFI International Inc.は、データセンターおよび電力網の顧客をさらにサポートするために新たに最高商業責任者を任命した。これにより、同社の成長が加速する見込みである。北米の運輸・物流業界のリーダーとして、TFIはデータセンター需要に応える体制を強化している。",
       "key_points": [
-        "トランプ政権が天然ガス、石炭、核を優先する方針を示した。",
-        "データセンターの拡張を支えるための新しい発電方法として採用される。",
-        "クリーンエネルギーへの移行と安定供給の両立が求められている。"
+        "TFI International Inc.が最高商業責任者を新たに任命",
+        "データセンター及び電力網に焦点を当てたサービスの強化",
+        "北米の運輸・物流業界の先頭を走る企業としての地位",
+        "急成長するデータセンター市場への対応",
+        "顧客サービスの強化に向けた戦略的な動き"
       ],
       "glossary": [
         {
-          "term": "ベースロード電力",
-          "explain_ja": "需要に応じて常に供給される電力のこと。"
-        },
-        {
-          "term": "トランプ政権",
-          "explain_ja": "2017年から2021年までのアメリカ合衆国の政権。"
+          "term": "TFI International Inc.",
+          "explain_ja": "北米で運輸および物流業務を行う企業。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "情報処理やデータの保存を行う施設。"
+          "explain_ja": "データの保管と管理を行うIT施設。"
+        },
+        {
+          "term": "最高商業責任者",
+          "explain_ja": "企業の商業戦略を統括する役職。"
         }
       ],
       "personal_actions": [
-        "最新のエネルギー政策に注目し、関連する方針の変更を確認する。",
-        "データセンターの電力供給に関する講演やセミナーに参加して情報を収集する。",
-        "再生可能エネルギーの導入状況を社内で確認し、持続可能な選択肢を検討する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://siliconangle.com/2026/01/19/openai-reveals-data-center-capacity-tripled-1-9gw-2025/",
-      "source": "SiliconANGLE News",
-      "publishedAt": "2026-01-19T21:18:53Z",
-      "title": "OpenAI reveals its data center capacity tripled to 1.9GW in 2025 - SiliconANGLE",
-      "title_ja": "OpenAI、データセンターの容量が2025年に1.9GWに三倍増加したと発表",
-      "summary_ja": "OpenAIは、2025年までにデータセンターの容量が約1.9GWに達したと発表しました。同社の年次収益は20億ドルを超え、2024年の6億ドルから大幅に増加しました。この成長はデータセンターへの投資と直接関連しており、効率性とコスト削減も目指しています。",
-      "key_points": [
-        "OpenAIのデータセンターの容量は200MWから約1.9GWに成長。",
-        "年次収益は2024年の6ビリオンドルから20ビリオンドルへと急増。",
-        "コスト効率を向上させるためにさまざまなハードウェアを組み合わせている。",
-        "2025年には80億ドルの損失が見込まれている。",
-        "広告を収益源として取り入れる計画がある。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データを保存および処理するための使用される施設。"
-        },
-        {
-          "term": "GW",
-          "explain_ja": "ギガワットの略で、電力の単位。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能の略で、人間の知能を模倣するコンピュータシステムのこと。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの容量や効率性向上に関連する最新の技術トレンドを確認する。",
-        "AI業界の収益モデルについて学び、今後の動向を把握する。",
-        "コスト削減のための新しいハードウェア技術を調査する。"
+        "TFIのプレスリリースや公式サイトを確認し、新しい戦略の詳細を把握する。",
+        "業界新聞や専門誌でデータセンター市場の動向を調査する。",
+        "社内のデータセンター関連プロジェクトの進捗を確認し、必要なリソースを見直す。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://financialpost.com/pmn/business-pmn/bces-data-center-rollout-moving-faster-than-expected-ceo-says",
-      "source": "Financial Post",
-      "publishedAt": "2026-01-19T16:06:31Z",
-      "title": "BCE’s Data Center Rollout Moving Faster Than Expected, CEO Says",
-      "title_ja": "BCEのデータセンター展開が予想以上のスピードで進行中、CEOが発言",
-      "summary_ja": "BCEは、カナダにおけるデータセンターの需要が高まっていることを受けて、人工知能ビジネスの進展を加速させている。新しい施設の建設は予想を上回るスケジュールで進んでいるとのこと。これにより、BCEは競争力を高める可能性がある。",
+      "url": "https://post.rlsbb.to/termius-9-35-4/",
+      "source": "Rlsbb.to",
+      "publishedAt": "2026-01-20T18:35:31Z",
+      "title": "Termius 9.35.4 – ReleaseBB",
+      "title_ja": "Termius 9.35.4 ー リリース情報",
+      "summary_ja": "Termiusは、人気のあるクロスプラットフォームSSHクライアントです。Raspberry PiやLinuxマシン、UNIXサーバーを簡単に管理できます。バージョン9.35.4では、リリースノートが未公開のため新機能は不明ですが、アプリは広告なしで提供されます。",
       "key_points": [
-        "BCEがデータセンターの需要に応じて事業を迅速に進めている。",
-        "新しい人工知能ビジネスが展開されている。",
-        "施設の建設がスケジュールよりも早く進行中である。"
+        "全主要モバイルとデスクトップシステムで利用可能",
+        "ECDSAやed25519鍵、chacha20-poly1305暗号をサポート",
+        "サーバーのタグ付けやグループ設定が可能",
+        "12色のテーマやフォント調整可能",
+        "ポートフォワーディングで接続を暗号化"
       ],
       "glossary": [
         {
-          "term": "BCE Inc.",
-          "explain_ja": "カナダの大手通信会社で、データセンターなどのインフラを提供している。"
+          "term": "SSH",
+          "explain_ja": "Secure Shellの略で、安全なリモートログインおよびその他のネットワークサービスを提供するプロトコルです。"
         },
         {
-          "term": "人工知能 (AI)",
-          "explain_ja": "人間の知的行動を模倣できる技術やシステムのこと。"
+          "term": "ポートフォワーディング",
+          "explain_ja": "特定のポートに受信したトラフィックを別のポートに転送する技術で、主に接続の暗号化に使用されます。"
         }
       ],
       "personal_actions": [
-        "BCEのデータセンターの進展状況を定期的にチェックする。",
-        "新しいAIビジネスに関連する情報を収集する。"
+        "Termiusを最新バージョンにアップデートする",
+        "サーバーの整理とタグ付けを行う",
+        "設定を確認し、必要に応じてポートフォワーディングを設定する"
+      ],
+      "tags": [
+        "インフラ"
+      ]
+    },
+    {
+      "url": "https://www.theregister.com/2026/01/20/texas_datacenter_hotspot/",
+      "source": "Theregister.com",
+      "publishedAt": "2026-01-20T16:50:52Z",
+      "title": "Power scarcity drives datacenters to Texas, where the juice is",
+      "title_ja": "電力不足がデータセンターをテキサスへと誘う",
+      "summary_ja": "テキサス州は、豊富な電力供給によってデータセンターの主要市場として成長が期待されています。2026年のデータセンターパワーレポートによると、2028年までにテキサスのITキャパシティは40 GWを超える見込みです。一方で、他の州は電力供給の制約に直面しており、マクロ経済に大きな影響を及ぼす可能性があります。",
+      "key_points": [
+        "テキサス州はデータセンターの新たな中心地となる見込み。",
+        "データセンターのITインフラ需要は年々増加し、2028年までに150 GW達成が予想されている。",
+        "他州は電力供給制約によりシェアが50％以上減少する可能性がある。",
+        "運用者はオンサイト発電を選択し、エネルギーの独立性を高める方向へ動いている。",
+        "新設データセンターのスケールが拡大し、2030年には1 GWを超えるキャンパスが増加する見込み。"
+      ],
+      "glossary": [
+        {
+          "term": "ハイパースケール",
+          "explain_ja": "大規模なクラウドサービス提供者やデータセンターを指す用語。"
+        },
+        {
+          "term": "オンサイト発電",
+          "explain_ja": "データセンター内で直接電力を生成する方法。"
+        },
+        {
+          "term": "ガスタービン",
+          "explain_ja": "ガスを燃焼させて発電する技術であり、データセンターでの利用に広く用いられている。"
+        }
+      ],
+      "personal_actions": [
+        "近隣のデータセンターの電力供給状況や拡張計画を確認する。",
+        "電力需要に対応するためのオンサイト発電の選択肢を検討する。",
+        "AI要件に基づいた電力戦略を見直す。"
       ],
       "tags": [
         "DC"
