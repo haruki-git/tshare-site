@@ -62,34 +62,73 @@
 &lt;div id="list"&gt;&lt;/div&gt;
 </code></pre>
 
-<pre><code>// JS欄
+<pre><code class="language-js">// JS欄
+// state = 画面の「元データ」を1か所に集約する（DOMから状態を読み取らない方針）
 let state = { todos: [] };
+
+// render = state → 画面（DOM） への変換を「1本化」する場所
 function render() {
+  // 描画先（ここだけDOMを触るルールに寄せる）
   const out = document.getElementById('list');
-  out.innerHTML = state.todos.map(t =&gt;
-    `&lt;div data-id="${t.id}"&gt;&lt;input type="checkbox" ${t.done?'checked':''}&gt; ${t.text}&lt;/div&gt;`
-  ).join('');
+
+  // stateからHTML文字列を作る（DOMを逐次いじらず、まとめて作って入れ替える）
+  // data-id に「どのtodoか」を持たせる（クリック時にstate更新へつなぐため）
+  out.innerHTML = state.todos.map(t =&gt; `
+      &lt;div data-id=&quot;${t.id}&quot;&gt;
+         &lt;input type=&quot;checkbox&quot; ${t.done ? 'checked' : ''}&gt;
+         ${t.text}
+       &lt;/div&gt;`
+    ).join('');
+
+  // 描画し直すと要素が作り直されるので、イベントも貼り直す必要がある
   attachHandlers();
 }
+
+// handler側の処理：stateを更新して、最後にrender()を呼ぶだけにする
 function addTodo(text) {
-  state = { ...state, todos: [...state.todos, { id: Date.now(), text, done: false }] };
+  // 破壊的変更を避ける：新しいstateを作って「差し替える」
+  // todosも新配列にして「追加」を表現する
+  state = {
+    ...state,
+    todos: [...state.todos, { id: Date.now(), text, done: false }]
+  };
+
+  // 画面更新は必ず render 経由（ここが設計の芯）
   render();
 }
+
 function toggleTodo(id) {
-  state = { ...state, todos: state.todos.map(t =&gt; t.id===id? { ...t, done: !t.done } : t) };
+  // mapで「対象だけ」doneを反転した新配列を作る（元の配列は触らない）
+  state = {
+    ...state,
+    todos: state.todos.map(t =&gt;
+      t.id === id ? { ...t, done: !t.done } : t
+    )
+  };
+
+  // stateが変わったら render（DOM更新ロジックは散らさない）
   render();
 }
+
 function attachHandlers() {
+  // render後に作られたDOMに対してイベントを結び直す
   document.querySelectorAll('#list div').forEach(el =&gt; {
-    el.querySelector('input').onclick = () =&gt; toggleTodo(Number(el.dataset.id));
+    // checkbox クリック → data-id を取り出す → state更新（toggleTodo）へ
+    el.querySelector('input').onclick = () =&gt;
+      toggleTodo(Number(el.dataset.id));
   });
 }
+
+// 「追加」ボタンのイベント：やることは入力取得 → state更新関数を呼ぶだけ
 document.getElementById('addBtn').onclick = () =&gt; {
-  const v = document.getElementById('todoInput').value.trim();
-  if (v) addTodo(v);
+  const v = document.getElementById('todoInput').value.trim(); // 入力の前後空白を除去
+  if (v) addTodo(v); // 空なら何もしない（変な空項目を防ぐ）
 };
+
+// 初回表示：state（空）を元にまず描画して、以降は state→render の流れで回す
 render();
 </code></pre>
+
 </section>
 
 <section id="sec-4">
