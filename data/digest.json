@@ -1,109 +1,111 @@
 {
-  "date": "2026-01-22",
-  "generatedAtJST": "2026-01-22T07:15:36.401+09:00",
+  "date": "2026-01-23",
+  "generatedAtJST": "2026-01-23T07:15:35.010+09:00",
   "items": [
     {
-      "url": "https://financialpost.com/globe-newswire/tfi-delivering-rapid-data-center-related-growth",
-      "source": "Financial Post",
-      "publishedAt": "2026-01-20T22:00:52Z",
-      "title": "TFI Delivering Rapid Data Center Related Growth",
-      "title_ja": "TFI、データセンター関連の急成長を支援",
-      "summary_ja": "TFI International Inc.は、データセンターおよび電力網の顧客をさらにサポートするために新たに最高商業責任者を任命した。これにより、同社の成長が加速する見込みである。北米の運輸・物流業界のリーダーとして、TFIはデータセンター需要に応える体制を強化している。",
+      "url": "http://commercialobserver.com/2026/01/prologis-industrial-logistics-data-center-leasing-development/",
+      "source": "Commercial Observer",
+      "publishedAt": "2026-01-21T19:55:39Z",
+      "title": "Prologis Leased More Space Than Ever Last Year While Ramping Up Data Center Growth",
+      "title_ja": "Prologis、データセンター成長を加速し、過去最高の賃貸スペースを契約",
+      "summary_ja": "Prologisは2025年、データセンターの拡張を加速し、過去最高の賃貸契約を達成しました。サンフランシスコ本社の同社は、228百万平方フィートの新しいテナント契約を締結し、データセンターの電力供給容量を5.7ギガワットに拡大しました。今後、さらに4～5億ドルの新規開発プロジェクトを開始する予定で、その40%がデータセンターに向けられています。",
       "key_points": [
-        "TFI International Inc.が最高商業責任者を新たに任命",
-        "データセンター及び電力網に焦点を当てたサービスの強化",
-        "北米の運輸・物流業界の先頭を走る企業としての地位",
-        "急成長するデータセンター市場への対応",
-        "顧客サービスの強化に向けた戦略的な動き"
+        "Prologisは2025年に228百万平方フィートの賃貸契約を締結",
+        "データセンターの電力供給容量を5.7ギガワットに拡大",
+        "2026年にはさらに新規プロジェクトに4〜5億ドルを投資予定",
+        "南カリフォルニアの市場で需要が回復しつつあると報告",
+        "長年CEOを務めたHamid Moghadamの後任がDaniel Letterに交代"
       ],
       "glossary": [
         {
-          "term": "TFI International Inc.",
-          "explain_ja": "北米で運輸および物流業務を行う企業。"
+          "term": "FFO (Funds from Operations)",
+          "explain_ja": "不動産投資信託（REIT）の業績指標で、運用の利益を示す。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの保管と管理を行うIT施設。"
+          "term": "Core FFO",
+          "explain_ja": "基本業務からの収益を反映する指標で、REITの健全性を測る。"
         },
         {
-          "term": "最高商業責任者",
-          "explain_ja": "企業の商業戦略を統括する役職。"
+          "term": "NOP (Net Operating Income)",
+          "explain_ja": "不動産の営業収益から費用を引いた利益で、資産の収益性を示す。"
+        },
+        {
+          "term": "Acquisitions",
+          "explain_ja": "企業が他社や資産を買収することで、成長戦略として採用されることが多い。"
+        },
+        {
+          "term": "Dispositions",
+          "explain_ja": "不動産や資産の売却活動。"
         }
       ],
       "personal_actions": [
-        "TFIのプレスリリースや公式サイトを確認し、新しい戦略の詳細を把握する。",
-        "業界新聞や専門誌でデータセンター市場の動向を調査する。",
-        "社内のデータセンター関連プロジェクトの進捗を確認し、必要なリソースを見直す。"
+        "プロロジスの最新の財務報告書を定期的にチェックし、市場動向に注目する",
+        "データセンター開発の新しい機会について社内チームで意見を共有する",
+        "南カリフォルニア地域の市場状況を把握し、顧客の新たなニーズに応える準備をする"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://post.rlsbb.to/termius-9-35-4/",
-      "source": "Rlsbb.to",
-      "publishedAt": "2026-01-20T18:35:31Z",
-      "title": "Termius 9.35.4 – ReleaseBB",
-      "title_ja": "Termius 9.35.4 ー リリース情報",
-      "summary_ja": "Termiusは、人気のあるクロスプラットフォームSSHクライアントです。Raspberry PiやLinuxマシン、UNIXサーバーを簡単に管理できます。バージョン9.35.4では、リリースノートが未公開のため新機能は不明ですが、アプリは広告なしで提供されます。",
+      "url": "https://fortune.com/2026/01/21/trump-says-mark-zuckerberg-showed-him-a-manhattan-sized-ai-data-center/",
+      "source": "Fortune",
+      "publishedAt": "2026-01-21T16:51:57Z",
+      "title": "Trump says Mark Zuckerberg showed him a ‘Manhattan-sized’ AI data center",
+      "title_ja": "トランプ氏、マーク・ザッカーバーグが「マンハッタンサイズ」のAIデータセンターを見せたと語る",
+      "summary_ja": "トランプ氏はダボスのエリートたちに対し、メタ社のAIインフラが米国のテクノロジー大手が自前で電力を生み出す必要性を示していると述べた。この発言は、テクノロジー分野での自立と持続可能性の重要性を反映している。結果として、今後の政策決定に影響を与える可能性がある。",
       "key_points": [
-        "全主要モバイルとデスクトップシステムで利用可能",
-        "ECDSAやed25519鍵、chacha20-poly1305暗号をサポート",
-        "サーバーのタグ付けやグループ設定が可能",
-        "12色のテーマやフォント調整可能",
-        "ポートフォワーディングで接続を暗号化"
+        "トランプ氏がダボスでの発言を通じてメタのAIデータセンターについて言及した。",
+        "データセンターは「マンハッタンサイズ」と形容されている。",
+        "テクノロジー企業が自ら電力を生成する必要性が強調された。",
+        "AIインフラの拡張が米国のエネルギー政策に影響を及ぼす可能性がある。"
       ],
       "glossary": [
         {
-          "term": "SSH",
-          "explain_ja": "Secure Shellの略で、安全なリモートログインおよびその他のネットワークサービスを提供するプロトコルです。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能の処理を行うために特化したデータセンター。"
         },
         {
-          "term": "ポートフォワーディング",
-          "explain_ja": "特定のポートに受信したトラフィックを別のポートに転送する技術で、主に接続の暗号化に使用されます。"
+          "term": "メタ",
+          "explain_ja": "Facebookなどを運営する、米国のテクノロジー企業。"
         }
       ],
       "personal_actions": [
-        "Termiusを最新バージョンにアップデートする",
-        "サーバーの整理とタグ付けを行う",
-        "設定を確認し、必要に応じてポートフォワーディングを設定する"
+        "自社のエネルギー効率や再生可能エネルギーの活用状況を確認する。",
+        "AIやデータセンターの導入に関する最近の動向を調査する。"
       ],
       "tags": [
-        "インフラ"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.theregister.com/2026/01/20/texas_datacenter_hotspot/",
-      "source": "Theregister.com",
-      "publishedAt": "2026-01-20T16:50:52Z",
-      "title": "Power scarcity drives datacenters to Texas, where the juice is",
-      "title_ja": "電力不足がデータセンターをテキサスへと誘う",
-      "summary_ja": "テキサス州は、豊富な電力供給によってデータセンターの主要市場として成長が期待されています。2026年のデータセンターパワーレポートによると、2028年までにテキサスのITキャパシティは40 GWを超える見込みです。一方で、他の州は電力供給の制約に直面しており、マクロ経済に大きな影響を及ぼす可能性があります。",
+      "url": "https://www.kpbs.org/news/environment/2026/01/21/the-plan-to-build-a-massive-data-center-in-imperial-county-without-environmental-review",
+      "source": "KPBS",
+      "publishedAt": "2026-01-21T14:00:00Z",
+      "title": "The plan to build massive data center in Imperial County — without environmental review",
+      "title_ja": "環境審査なしで進められる帝国郡の大規模データセンター計画",
+      "summary_ja": "南カリフォルニアの企業家が、全国的にコンピュータパワーの需要が高まる中で、環境審査なしに帝国郡での大規模データセンターの計画を加速させようとしています。過去の法的問題を抱える人物である彼は、プロジェクトを迅速に進める意向を示しています。この計画は、地域の環境への影響が懸念される中で進行しており、その影響が注目されています。",
       "key_points": [
-        "テキサス州はデータセンターの新たな中心地となる見込み。",
-        "データセンターのITインフラ需要は年々増加し、2028年までに150 GW達成が予想されている。",
-        "他州は電力供給制約によりシェアが50％以上減少する可能性がある。",
-        "運用者はオンサイト発電を選択し、エネルギーの独立性を高める方向へ動いている。",
-        "新設データセンターのスケールが拡大し、2030年には1 GWを超えるキャンパスが増加する見込み。"
+        "南カリフォルニアの起業家がデータセンター建設を計画",
+        "環境審査なしに進行中",
+        "過去に法的トラブルを抱える人物が関与",
+        "全国でコンピュータパワーの需要が急増",
+        "地域環境への影響が懸念されている"
       ],
       "glossary": [
         {
-          "term": "ハイパースケール",
-          "explain_ja": "大規模なクラウドサービス提供者やデータセンターを指す用語。"
+          "term": "データセンター",
+          "explain_ja": "データの保管と管理を行う施設。通信や計算の中心となる。"
         },
         {
-          "term": "オンサイト発電",
-          "explain_ja": "データセンター内で直接電力を生成する方法。"
-        },
-        {
-          "term": "ガスタービン",
-          "explain_ja": "ガスを燃焼させて発電する技術であり、データセンターでの利用に広く用いられている。"
+          "term": "環境審査",
+          "explain_ja": "開発計画が環境に与える影響を評価するプロセス。"
         }
       ],
       "personal_actions": [
-        "近隣のデータセンターの電力供給状況や拡張計画を確認する。",
-        "電力需要に対応するためのオンサイト発電の選択肢を検討する。",
-        "AI要件に基づいた電力戦略を見直す。"
+        "地域の環境影響についての情報を確認する",
+        "データセンター計画に対する地域の意見や反対運動を調べる"
       ],
       "tags": [
         "DC"
