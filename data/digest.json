@@ -1,78 +1,36 @@
 {
-  "date": "2026-01-23",
-  "generatedAtJST": "2026-01-23T07:15:35.010+09:00",
+  "date": "2026-01-24",
+  "generatedAtJST": "2026-01-24T07:15:35.758+09:00",
   "items": [
     {
-      "url": "http://commercialobserver.com/2026/01/prologis-industrial-logistics-data-center-leasing-development/",
-      "source": "Commercial Observer",
-      "publishedAt": "2026-01-21T19:55:39Z",
-      "title": "Prologis Leased More Space Than Ever Last Year While Ramping Up Data Center Growth",
-      "title_ja": "Prologis、データセンター成長を加速し、過去最高の賃貸スペースを契約",
-      "summary_ja": "Prologisは2025年、データセンターの拡張を加速し、過去最高の賃貸契約を達成しました。サンフランシスコ本社の同社は、228百万平方フィートの新しいテナント契約を締結し、データセンターの電力供給容量を5.7ギガワットに拡大しました。今後、さらに4～5億ドルの新規開発プロジェクトを開始する予定で、その40%がデータセンターに向けられています。",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/congress-wants-veto-power-over-trump-administration-for-ai-chip-exports-new-proposed-ai-overwatch-act-would-shift-ultimate-control-of-high-performance-chip-exports",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-01-22T14:08:13Z",
+      "title": "Congress wants veto power over Trump administration for AI chip exports — new proposed AI Overwatch Act would shift ultimate control of high-performance chip exports",
+      "title_ja": "AIチップ輸出に関する議会の拒否権を求める",
+      "summary_ja": "米国の議員たちは、最も性能の高いAMDとNvidiaのデータセンター向けAIプロセッサの輸出に対する議会の承認と拒否権を確立する法案「AI Overwatch Act」を進めています。この法案は、中国やその他の敵対的国への輸出に対する制限を強化することを目的としています。これにより、AI技術の流出を防止し、国家安全保障を強化する狙いがあります。",
       "key_points": [
-        "Prologisは2025年に228百万平方フィートの賃貸契約を締結",
-        "データセンターの電力供給容量を5.7ギガワットに拡大",
-        "2026年にはさらに新規プロジェクトに4〜5億ドルを投資予定",
-        "南カリフォルニアの市場で需要が回復しつつあると報告",
-        "長年CEOを務めたHamid Moghadamの後任がDaniel Letterに交代"
+        "AI Overwatch Actが提案され、AMDとNvidiaのAIプロセッサに対する輸出制限を強化する。",
+        "議会の承認と拒否権が必要になることで、輸出プロセスが厳しく管理される。",
+        "主に中国や敵対的国への輸出に対する対応を目的とする。"
       ],
       "glossary": [
         {
-          "term": "FFO (Funds from Operations)",
-          "explain_ja": "不動産投資信託（REIT）の業績指標で、運用の利益を示す。"
+          "term": "AI Overwatch Act",
+          "explain_ja": "米国議会が提案した法案で、AIチップの輸出に対する承認制度を設けることを目的とする。"
         },
         {
-          "term": "Core FFO",
-          "explain_ja": "基本業務からの収益を反映する指標で、REITの健全性を測る。"
+          "term": "AMD",
+          "explain_ja": "Advanced Micro Devicesの略で、コンピュータプロセッサおよび関連デバイスを製造する企業。"
         },
         {
-          "term": "NOP (Net Operating Income)",
-          "explain_ja": "不動産の営業収益から費用を引いた利益で、資産の収益性を示す。"
-        },
-        {
-          "term": "Acquisitions",
-          "explain_ja": "企業が他社や資産を買収することで、成長戦略として採用されることが多い。"
-        },
-        {
-          "term": "Dispositions",
-          "explain_ja": "不動産や資産の売却活動。"
+          "term": "Nvidia",
+          "explain_ja": "グラフィックスプロセッサを主に製造する米国の企業で、AI処理にも強みを持つ。"
         }
       ],
       "personal_actions": [
-        "プロロジスの最新の財務報告書を定期的にチェックし、市場動向に注目する",
-        "データセンター開発の新しい機会について社内チームで意見を共有する",
-        "南カリフォルニア地域の市場状況を把握し、顧客の新たなニーズに応える準備をする"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://fortune.com/2026/01/21/trump-says-mark-zuckerberg-showed-him-a-manhattan-sized-ai-data-center/",
-      "source": "Fortune",
-      "publishedAt": "2026-01-21T16:51:57Z",
-      "title": "Trump says Mark Zuckerberg showed him a ‘Manhattan-sized’ AI data center",
-      "title_ja": "トランプ氏、マーク・ザッカーバーグが「マンハッタンサイズ」のAIデータセンターを見せたと語る",
-      "summary_ja": "トランプ氏はダボスのエリートたちに対し、メタ社のAIインフラが米国のテクノロジー大手が自前で電力を生み出す必要性を示していると述べた。この発言は、テクノロジー分野での自立と持続可能性の重要性を反映している。結果として、今後の政策決定に影響を与える可能性がある。",
-      "key_points": [
-        "トランプ氏がダボスでの発言を通じてメタのAIデータセンターについて言及した。",
-        "データセンターは「マンハッタンサイズ」と形容されている。",
-        "テクノロジー企業が自ら電力を生成する必要性が強調された。",
-        "AIインフラの拡張が米国のエネルギー政策に影響を及ぼす可能性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能の処理を行うために特化したデータセンター。"
-        },
-        {
-          "term": "メタ",
-          "explain_ja": "Facebookなどを運営する、米国のテクノロジー企業。"
-        }
-      ],
-      "personal_actions": [
-        "自社のエネルギー効率や再生可能エネルギーの活用状況を確認する。",
-        "AIやデータセンターの導入に関する最近の動向を調査する。"
+        "最新の法案に関する情報を追跡し、輸出規制の動向を確認する。",
+        "自社で使用しているAIプロセッサの調達源を把握し、リスクを評価する。"
       ],
       "tags": [
         "DC",
@@ -80,32 +38,68 @@
       ]
     },
     {
-      "url": "https://www.kpbs.org/news/environment/2026/01/21/the-plan-to-build-a-massive-data-center-in-imperial-county-without-environmental-review",
-      "source": "KPBS",
-      "publishedAt": "2026-01-21T14:00:00Z",
-      "title": "The plan to build massive data center in Imperial County — without environmental review",
-      "title_ja": "環境審査なしで進められる帝国郡の大規模データセンター計画",
-      "summary_ja": "南カリフォルニアの企業家が、全国的にコンピュータパワーの需要が高まる中で、環境審査なしに帝国郡での大規模データセンターの計画を加速させようとしています。過去の法的問題を抱える人物である彼は、プロジェクトを迅速に進める意向を示しています。この計画は、地域の環境への影響が懸念される中で進行しており、その影響が注目されています。",
+      "url": "https://www.businessinsider.com/citadel-ceo-ken-griffin-ai-hype-outpacing-productivity-2026-1",
+      "source": "Business Insider",
+      "publishedAt": "2026-01-22T13:56:46Z",
+      "title": "Citadel's CEO on the AI boom: 'Is it hype? Of course'",
+      "title_ja": "シタデルのCEO、AIブームについて：「これは過剰宣伝か？もちろん」",
+      "summary_ja": "シタデルのCEOケン・グリフィンは、AIがテクノロジーチームに力を移動させたと述べています。しかし、現在のツールはしばしば期待に応えられず、大規模なデータセンターへの投資が進む中でその状況は続いています。この現象は、AI技術の実用性と期待のギャップを浮き彫りにしています。",
       "key_points": [
-        "南カリフォルニアの起業家がデータセンター建設を計画",
-        "環境審査なしに進行中",
-        "過去に法的トラブルを抱える人物が関与",
-        "全国でコンピュータパワーの需要が急増",
-        "地域環境への影響が懸念されている"
+        "ケン・グリフィンはAIの過剰宣伝を認めている。",
+        "AI技術はテクノロジーチームに権限を与えたが、実際の効果は限定的。",
+        "データセンターへの投資は増加しているが、ツールの性能は期待通りでない。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保管と管理を行う施設。通信や計算の中心となる。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略で、人間の知能を模倣するコンピュータシステム。"
         },
         {
-          "term": "環境審査",
-          "explain_ja": "開発計画が環境に与える影響を評価するプロセス。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを保管、管理、処理するための施設。"
         }
       ],
       "personal_actions": [
-        "地域の環境影響についての情報を確認する",
-        "データセンター計画に対する地域の意見や反対運動を調べる"
+        "使用しているAIツールの効果を再評価する。",
+        "データセンターの投資が業務の成果にどのように影響しているかを分析する。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.tomshardware.com/pc-components/cooling/3d-printed-passive-cooler-can-deliver-600-watts-of-cooling-for-data-centers-with-no-fans-or-pumps-provides-reusable-heat-exceeds-project-performance-expectations-by-50-percent",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-01-22T11:20:00Z",
+      "title": "3D-printed fan-less and pump-less liquid cooler can deliver 600 watts of cooling for data centers — passive design provides reusable heat, exceeds project performance expectations by 50%",
+      "title_ja": "ファンレス・ポンプレスの3Dプリント冷却器、データセンター向けに600Wの冷却を実現",
+      "summary_ja": "新たに開発された3Dプリントのパッシブ冷却器が、データセンターのチップから600ワットの冷却を提供できることが確認されました。この冷却器はファンやポンプを使用せず、パッシブデザインを採用しています。また、プロジェクトの性能期待値を50％上回る結果を示しました。これにより、データセンターの冷却技術における新たな可能性が開かれます。",
+      "key_points": [
+        "3Dプリント技術によるファンレス・ポンプレスの冷却器",
+        "データセンター向けに600Wの冷却能力を実現",
+        "パッシブデザインで再利用可能な熱を提供",
+        "プロジェクトの性能期待値を50％上回る結果を達成",
+        "冷却器の効率性向上に寄与する可能性",
+        "データセンターのエネルギー消費削減に貢献する可能性"
+      ],
+      "glossary": [
+        {
+          "term": "3Dプリント",
+          "explain_ja": "3Dモデルから物体を製造する技術。"
+        },
+        {
+          "term": "パッシブ冷却",
+          "explain_ja": "外部の電力を使用せず、自然の原理に基づいて熱を管理する冷却方法。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "企業や組織が大規模な情報処理やデータ保存を行うための施設。"
+        }
+      ],
+      "personal_actions": [
+        "新しい冷却技術の導入を検討している場合、最新のパッシブ冷却ソリューションを調査する。",
+        "現在の冷却システムの性能を評価し、改善点を特定する。",
+        "データセンターの冷却戦略について話し合うミーティングを設ける。"
       ],
       "tags": [
         "DC"
