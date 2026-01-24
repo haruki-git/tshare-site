@@ -1,36 +1,35 @@
 {
-  "date": "2026-01-24",
-  "generatedAtJST": "2026-01-24T07:15:35.758+09:00",
+  "date": "2026-01-25",
+  "generatedAtJST": "2026-01-25T07:15:35.416+09:00",
   "items": [
     {
-      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/congress-wants-veto-power-over-trump-administration-for-ai-chip-exports-new-proposed-ai-overwatch-act-would-shift-ultimate-control-of-high-performance-chip-exports",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-01-22T14:08:13Z",
-      "title": "Congress wants veto power over Trump administration for AI chip exports — new proposed AI Overwatch Act would shift ultimate control of high-performance chip exports",
-      "title_ja": "AIチップ輸出に関する議会の拒否権を求める",
-      "summary_ja": "米国の議員たちは、最も性能の高いAMDとNvidiaのデータセンター向けAIプロセッサの輸出に対する議会の承認と拒否権を確立する法案「AI Overwatch Act」を進めています。この法案は、中国やその他の敵対的国への輸出に対する制限を強化することを目的としています。これにより、AI技術の流出を防止し、国家安全保障を強化する狙いがあります。",
+      "url": "https://cryptoslate.com/stop-shaming-bitcoin-when-daily-streaming-ai-and-social-media-scrolling-shown-to-consume-double-the-energy/",
+      "source": "CryptoSlate",
+      "publishedAt": "2026-01-23T20:30:25Z",
+      "title": "Exposing a dirty secret: What uses more power, Bitcoin, streaming, AI, or social media?",
+      "title_ja": "ビットコイン、ストリーミング、AI、ソーシャルメディアのエネルギー消費比較",
+      "summary_ja": "ビットコインのマイニングは2025年に約171 TWhの電力を消費し、データセンター全体のエネルギー使用量の16%を占めています。一方、伝統的なデータセンターは448 TWhから1,050 TWhの間のエネルギーを消費しており、推定は分析者によって異なります。このデータは、ビットコインのエネルギー消費がストリーミングやAI、ソーシャルメディアと比較してどのような位置付けにあるかを示唆しています。",
       "key_points": [
-        "AI Overwatch Actが提案され、AMDとNvidiaのAIプロセッサに対する輸出制限を強化する。",
-        "議会の承認と拒否権が必要になることで、輸出プロセスが厳しく管理される。",
-        "主に中国や敵対的国への輸出に対する対応を目的とする。"
+        "ビットコインマイニングは2025年に171 TWhを消費する。",
+        "データセンター全体の消費は448 TWhから1,050 TWhに達する。",
+        "ビットコインはデータセンター全体の16%のエネルギーを占める。",
+        "ストリーミングやAI、ソーシャルメディアとの比較がなされている。",
+        "エネルギー消費の視点からビットコインを再評価する必要がある。"
       ],
       "glossary": [
         {
-          "term": "AI Overwatch Act",
-          "explain_ja": "米国議会が提案した法案で、AIチップの輸出に対する承認制度を設けることを目的とする。"
+          "term": "TWh",
+          "explain_ja": "テラワット時。エネルギーの単位で、1テラワットの出力を1時間維持したときの電力量を示す。"
         },
         {
-          "term": "AMD",
-          "explain_ja": "Advanced Micro Devicesの略で、コンピュータプロセッサおよび関連デバイスを製造する企業。"
-        },
-        {
-          "term": "Nvidia",
-          "explain_ja": "グラフィックスプロセッサを主に製造する米国の企業で、AI処理にも強みを持つ。"
+          "term": "データセンター",
+          "explain_ja": "データの保存・管理・処理を行う施設で、サーバーやストレージ装置が多数設置されている。"
         }
       ],
       "personal_actions": [
-        "最新の法案に関する情報を追跡し、輸出規制の動向を確認する。",
-        "自社で使用しているAIプロセッサの調達源を把握し、リスクを評価する。"
+        "自社のデータセンターのエネルギー消費を見直す。",
+        "ビットコインマイニングやその影響を職場で議論する。",
+        "エネルギー効率向上のための具体策を検討する。"
       ],
       "tags": [
         "DC",
@@ -38,71 +37,72 @@
       ]
     },
     {
-      "url": "https://www.businessinsider.com/citadel-ceo-ken-griffin-ai-hype-outpacing-productivity-2026-1",
-      "source": "Business Insider",
-      "publishedAt": "2026-01-22T13:56:46Z",
-      "title": "Citadel's CEO on the AI boom: 'Is it hype? Of course'",
-      "title_ja": "シタデルのCEO、AIブームについて：「これは過剰宣伝か？もちろん」",
-      "summary_ja": "シタデルのCEOケン・グリフィンは、AIがテクノロジーチームに力を移動させたと述べています。しかし、現在のツールはしばしば期待に応えられず、大規模なデータセンターへの投資が進む中でその状況は続いています。この現象は、AI技術の実用性と期待のギャップを浮き彫りにしています。",
+      "url": "https://www.cnbc.com/2026/01/23/greenland-data-center-trump-greenmet.html",
+      "source": "CNBC",
+      "publishedAt": "2026-01-23T15:10:01Z",
+      "title": "A former Trump official wants to build a massive data center in a remote corner of Greenland. Will it work?",
+      "title_ja": "トランプ元官僚がグリーンランドに巨大データセンターを建設予定、実現するか？",
+      "summary_ja": "トランプ元官僚がグリーンランドの辺鄙な場所に巨額のデータセンターを計画しています。この施設は2028年末までに1.5ギガワットの容量を目指していますが、建設はまだ始まっていません。そこで、成功の可否が注目されています。",
       "key_points": [
-        "ケン・グリフィンはAIの過剰宣伝を認めている。",
-        "AI技術はテクノロジーチームに権限を与えたが、実際の効果は限定的。",
-        "データセンターへの投資は増加しているが、ツールの性能は期待通りでない。"
+        "トランプ元官僚によるデータセンター計画",
+        "グリーンランドの辺鄙な場所で建設予定",
+        "2028年末までに1.5ギガワットの容量を目指す",
+        "建設はまだ未着手である",
+        "多くの期待と疑問が交錯している"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略で、人間の知能を模倣するコンピュータシステム。"
+          "term": "データセンター",
+          "explain_ja": "デジタルデータを保存・管理・処理するための施設。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを保管、管理、処理するための施設。"
+          "term": "ギガワット",
+          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する。"
+        },
+        {
+          "term": "トランプ元官僚",
+          "explain_ja": "ドナルド・トランプ政権下での職務を持っていた政府関係者。"
         }
       ],
       "personal_actions": [
-        "使用しているAIツールの効果を再評価する。",
-        "データセンターの投資が業務の成果にどのように影響しているかを分析する。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.tomshardware.com/pc-components/cooling/3d-printed-passive-cooler-can-deliver-600-watts-of-cooling-for-data-centers-with-no-fans-or-pumps-provides-reusable-heat-exceeds-project-performance-expectations-by-50-percent",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-01-22T11:20:00Z",
-      "title": "3D-printed fan-less and pump-less liquid cooler can deliver 600 watts of cooling for data centers — passive design provides reusable heat, exceeds project performance expectations by 50%",
-      "title_ja": "ファンレス・ポンプレスの3Dプリント冷却器、データセンター向けに600Wの冷却を実現",
-      "summary_ja": "新たに開発された3Dプリントのパッシブ冷却器が、データセンターのチップから600ワットの冷却を提供できることが確認されました。この冷却器はファンやポンプを使用せず、パッシブデザインを採用しています。また、プロジェクトの性能期待値を50％上回る結果を示しました。これにより、データセンターの冷却技術における新たな可能性が開かれます。",
-      "key_points": [
-        "3Dプリント技術によるファンレス・ポンプレスの冷却器",
-        "データセンター向けに600Wの冷却能力を実現",
-        "パッシブデザインで再利用可能な熱を提供",
-        "プロジェクトの性能期待値を50％上回る結果を達成",
-        "冷却器の効率性向上に寄与する可能性",
-        "データセンターのエネルギー消費削減に貢献する可能性"
-      ],
-      "glossary": [
-        {
-          "term": "3Dプリント",
-          "explain_ja": "3Dモデルから物体を製造する技術。"
-        },
-        {
-          "term": "パッシブ冷却",
-          "explain_ja": "外部の電力を使用せず、自然の原理に基づいて熱を管理する冷却方法。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "企業や組織が大規模な情報処理やデータ保存を行うための施設。"
-        }
-      ],
-      "personal_actions": [
-        "新しい冷却技術の導入を検討している場合、最新のパッシブ冷却ソリューションを調査する。",
-        "現在の冷却システムの性能を評価し、改善点を特定する。",
-        "データセンターの冷却戦略について話し合うミーティングを設ける。"
+        "データセンターの最新動向をチェックする",
+        "地域的なインフラ関連情報を確認する",
+        "新規エネルギー計画に関する議論をフォローする"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://blog.cloudflare.com/route-leak-incident-january-22-2026/",
+      "source": "Cloudflare.com",
+      "publishedAt": "2026-01-23T14:00:00Z",
+      "title": "Route leak incident on January 22, 2026",
+      "title_ja": "2026年1月22日のルートリークインシデント",
+      "summary_ja": "2026年1月22日に、マイアミのデータセンターにおいて自動化されたルーティングポリシーの構成エラーにより、一部のBGPプレフィックスが意図せず漏洩しました。このインシデントはネットワークの安定性に影響を与え、今後の対策として構成の見直しを行う必要があります。",
+      "key_points": [
+        "マイアミのデータセンターでの自動化されたルーティングポリシーの構成エラー",
+        "BGPプレフィックスが意図せず漏洩した",
+        "ネットワークの安定性に影響を及ぼした",
+        "今後の対策として構成見直しを実施する"
+      ],
+      "glossary": [
+        {
+          "term": "BGP",
+          "explain_ja": "Border Gateway Protocolの略で、インターネットのルーティングプロトコルの一つ。"
+        },
+        {
+          "term": "ルートリーク",
+          "explain_ja": "本来の経路とは異なる経路でトラフィックが流れる現象。"
+        }
+      ],
+      "personal_actions": [
+        "ルーティングポリシーの設定を再確認する",
+        "監視ツールのアラート設定を見直す",
+        "類似のエラーを防ぐための内部トレーニングを実施する"
+      ],
+      "tags": [
+        "インフラ"
       ]
     }
   ]
