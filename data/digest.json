@@ -1,100 +1,122 @@
 {
-  "date": "2026-01-26",
-  "generatedAtJST": "2026-01-26T07:16:00.906+09:00",
+  "date": "2026-01-27",
+  "generatedAtJST": "2026-01-27T07:15:43.117+09:00",
   "items": [
     {
-      "url": "https://www.commondreams.org/opinion/energy-prices-dc",
-      "source": "Common Dreams",
-      "publishedAt": "2026-01-24T13:57:02Z",
-      "title": "Power Bills Are Bankrupting DC Residents—but There's a Path to Affordability for All",
-      "title_ja": "電気料金がワシントンDCの住民を破産させている—皆が手に入れるための道がある",
-      "summary_ja": "ワシントンDCの住民は高騰する電気料金に苦しんでおり、これは生活費危機の主な要因の一つとなっている。2026年には、手頃な価格が重要な課題として政治的な関心を引き続き集めるだろう。これにより、今後の中間選挙でも影響を及ぼす可能性がある。",
+      "url": "https://www.rigzone.com/news/tennet_uniper_partner_for_power_station_for_frankfurt_region-25-jan-2026-182841-article/",
+      "source": "Rigzone",
+      "publishedAt": "2026-01-25T11:00:01Z",
+      "title": "TenneT, Uniper Partner for Power Station for Frankfurt Region",
+      "title_ja": "TenneTとUniperがフランクフルト地域の発電所を共同開発",
+      "summary_ja": "TenneTとUniperがドイツ・グロースクロッツェンブルクで新たな中央ネットワークノードの開発に合意しました。このプロジェクトは、フランクフルト地域のデータセンターの需要増加に対応するためのもので、380kVのスイッチヤードを建設し、電力送電能力の拡大を目指します。2030年の運用開始を目指し、地域の持続可能な電力供給に寄与することが期待されています。",
       "key_points": [
-        "電気料金の高騰がワシントンDCの住民に深刻な経済的影響を与えている。",
-        "2026年の選挙では、手頃な電気料金が主要な政治的テーマとなる見込み。",
-        "生活費危機の主な要因の一つとして、電気料金が挙げられる。"
+        "UniperがTenneTに対し、スタウディンガー発電所の一部土地を売却",
+        "新たな380kVスイッチヤードの建設により、ラインマイン地域の電力供給を強化",
+        "プロジェクトにより送電容量を50％以上増加させる計画",
+        "フランクフルトの電力供給を持続可能にするための基盤を形成",
+        "2030年のサービス開始を予定"
       ],
       "glossary": [
         {
-          "term": "電気料金",
-          "explain_ja": "電気の使用量に基づいて請求される料金で、特に生活費に大きな影響を与える。"
+          "term": "380kV",
+          "explain_ja": "380キロボルトは、高圧送電に用いられる電圧の一種で、大規模な電力送電で利用される。"
         },
         {
-          "term": "生活費危機",
-          "explain_ja": "経済的な理由で日常生活を維持することが困難になる状況。"
+          "term": "スイッチヤード",
+          "explain_ja": "電力網において、電気の流れを制御するための設備である。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "情報処理やデータストレージのための設備で、大量の電力を消費することがある。"
         }
       ],
       "personal_actions": [
-        "自宅の電力使用量を見直して効率的な使用を心がける。",
-        "地域の助成金や支援プログラムを調べ、申請可能なものを確保する。"
+        "地域の電力供給計画に関する最新情報を確認する",
+        "自社の電力需要予測を見直し、必要な設備投資を計画する",
+        "社内の持続可能なエネルギー対策を検討する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://researchbuzz.me/2026/01/24/ron-signs-search-bench-datacenter-construction-more-saturday-researchbuzz-january-24-2026/",
-      "source": "Researchbuzz.me",
-      "publishedAt": "2026-01-24T13:01:53Z",
-      "title": "Ron Signs, Search Bench, Datacenter Construction, More: Saturday ResearchBuzz, January 24, 2026",
-      "title_ja": "ロン・サインズ、サーチ・ベンチ、データセンター建設など：2026年1月24日土曜日のリサーチバズ",
-      "summary_ja": "アイスストームが迫っているが、状況は電力が供給されている限り続く見込みです。地域の天候関連ニュースを確認するためのリソースも紹介されています。これにより、利用者は安全に注意を払い、地域の情報を得ることができます。",
+      "url": "https://www.digitimes.com/news/a20260123PD224/demand-2026-cooling-growth-taiwan.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-01-25T00:37:22Z",
+      "title": "Fan motor demand drives growth for Taiwan analog chip makers",
+      "title_ja": "台湾のアナログチップメーカーにおけるファンモーター需要の成長",
+      "summary_ja": "台湾のアナログチップメーカーは、ファンモーターの需要により成長が期待されています。データセンターやさまざまな冷却システムの需要増加が背景にあります。この成長は、台湾の半導体産業全体に影響を及ぼす可能性があります。",
       "key_points": [
-        "アイスストームが想定されている",
-        "電力が供給される限り、状況は続く見込み",
-        "地域の天候関連ニュースへのリンクが提供されている"
+        "台湾のアナログチップメーカーの成長がファンモーター需要から見込まれる",
+        "データセンターや冷却システムの需要増加が背景",
+        "台湾の半導体産業にプラスの影響を及ぼす可能性あり"
       ],
       "glossary": [
         {
-          "term": "アイスストーム",
-          "explain_ja": "氷の雨が降る気象現象で、交通や電力に影響を及ぼすことがある。"
+          "term": "アナログチップ",
+          "explain_ja": "連続的な信号を処理する半導体デバイス。"
         },
         {
-          "term": "ローカルニュース",
-          "explain_ja": "地域に特化したニュースの報道で、地元の事柄に重点を置く。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを保管・管理するための施設。"
+        },
+        {
+          "term": "冷却システム",
+          "explain_ja": "電子機器を冷却するための技術。"
         }
       ],
       "personal_actions": [
-        "地域の天候情報を確認する",
-        "停電に備えて非常用の電源を用意する",
-        "周囲の安全を確認して移動を控える"
+        "データセンターの冷却システムの見直しを行う",
+        "アナログチップの最新動向をチェックする",
+        "台湾の関連ニュースをフォローする"
       ],
       "tags": [
-        "DC"
+        "その他"
       ]
     },
     {
-      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/new-ai-data-center-buildout-being-done-in-secret-location-to-avoid-backlash-from-local-residents-ex-crypto-mining-company-doesnt-want-publicity-for-its-latest-project",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-01-24T13:00:00Z",
-      "title": "New AI data center buildout being done in secret location to avoid backlash from local residents — ex-crypto mining company doesn’t want publicity for its latest project",
-      "title_ja": "新たなAIデータセンターが秘密裏に建設中、地域住民の反発を避けるために公開を控える",
-      "summary_ja": "Applied Digitalは、新しい430 MWのAIデータセンターの場所を秘密にしており、地域住民が「全国メディアの注目」に対応する時間を与える意図があるようです。この動きは、かつてのクリプトマイニング会社によるもので、最新プロジェクトへの関心を避けるための戦略とされています。結果として、地元コミュニティとの摩擦を緩和しようとしています。",
+      "url": "http://status.digitalocean.com/incidents/4rdkylf7z0q0",
+      "source": "Digitalocean.com",
+      "publishedAt": "2026-01-25T09:38:29Z",
+      "title": "Network Maintenance - NYC3",
+      "title_ja": "ネットワークメンテナンス - NYC3",
+      "summary_ja": "2026年1月27日09:00 UTCから12:00 UTCまで、NYC3地域においてネットワークインフラの変更が行われます。このメンテナンスは性能とスケーラビリティの向上を目的としており、Downtimeは発生しない見込みです。ただし、予期しない設定ミスがあった場合、一部の顧客に一時的なネットワークの乱れが生じる可能性があります。サポートが必要な場合は、クラウドサポートページからチケットを送信してください。",
       "key_points": [
-        "Applied Digitalが430 MWのAIデータセンターを建設中。",
-        "建設場所は秘密にされており、地域住民への影響を考慮。",
-        "全国メディアの注目から逃れるための戦略とされる。",
-        "過去にクリプトマイニングを行っていた企業が関与。",
-        "地域コミュニティとの摩擦を避ける意図がある。"
+        "メンテナンス日時: 2026年1月27日09:00 UTC〜12:00 UTC",
+        "NYC3地域のコアネットワークインフラを改善",
+        "Dropletsや関連サービスにはダウンタイムは発生しない見込み",
+        "設定ミスがあった場合、一時的なネットワーク障害の可能性あり",
+        "問題が発生した場合は、サポートページから問い合わせ可能"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能の処理を行うための専用施設で、膨大な計算能力が求められる。"
+          "term": "Droplet",
+          "explain_ja": "DigitalOceanの仮想マシンサービス。"
         },
         {
-          "term": "430 MW",
-          "explain_ja": "データセンターの電力消費能力を示す単位で、430メガワットを意味する。"
+          "term": "Managed Database",
+          "explain_ja": "DigitalOceanが提供する管理型データベースサービス。"
+        },
+        {
+          "term": "Load Balancer",
+          "explain_ja": "トラフィックを複数のサーバーに分散するためのサービス。"
+        },
+        {
+          "term": "App Platform",
+          "explain_ja": "アプリケーションの構築とホスティングを提供するDigitalOceanのサービス。"
+        },
+        {
+          "term": "Managed Kubernetes",
+          "explain_ja": "Kubernetesの管理型サービス。"
         }
       ],
       "personal_actions": [
-        "周辺のデータセンターの建設計画についての情報を確認する。",
-        "地域住民として、インフラ開発に関するフィードバックを地域の当局へ提出する。",
-        "新しいプロジェクトに関するメディア報道を定期的にチェックする。"
+        "メンテナンスの日時をカレンダーに記入しておく",
+        "Dropletsや関連サービスを使用している場合、その動作を確認しておく",
+        "メンテナンス中に問題が起きた場合のためにサポートページのリンクをブックマークしておく"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "インフラ"
       ]
     }
   ]
