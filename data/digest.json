@@ -1,119 +1,97 @@
 {
-  "date": "2026-01-27",
-  "generatedAtJST": "2026-01-27T07:15:43.117+09:00",
+  "date": "2026-01-28",
+  "generatedAtJST": "2026-01-28T07:15:33.332+09:00",
   "items": [
     {
-      "url": "https://www.rigzone.com/news/tennet_uniper_partner_for_power_station_for_frankfurt_region-25-jan-2026-182841-article/",
-      "source": "Rigzone",
-      "publishedAt": "2026-01-25T11:00:01Z",
-      "title": "TenneT, Uniper Partner for Power Station for Frankfurt Region",
-      "title_ja": "TenneTとUniperがフランクフルト地域の発電所を共同開発",
-      "summary_ja": "TenneTとUniperがドイツ・グロースクロッツェンブルクで新たな中央ネットワークノードの開発に合意しました。このプロジェクトは、フランクフルト地域のデータセンターの需要増加に対応するためのもので、380kVのスイッチヤードを建設し、電力送電能力の拡大を目指します。2030年の運用開始を目指し、地域の持続可能な電力供給に寄与することが期待されています。",
+      "url": "https://www.wired.com/story/tiktok-ice-videos-censorship-allegations-algorithm/",
+      "source": "Wired",
+      "publishedAt": "2026-01-26T21:49:21Z",
+      "title": "TikTok Data Center Outage Triggers Trust Crisis for New US Owners",
+      "title_ja": "TikTokのデータセンター障害が新しい米国オーナーへの信頼危機を引き起こす",
+      "summary_ja": "TikTokのデータセンターの障害が、所有権移行と重なり、ユーザーに疑念を生じさせました。特に、ミネソタ州のICE（移民査察執行局）のラウンドアップを批判する動画が故意に検閲されているのではないかとの疑念が広がっています。これにより、新しいオーナーへの信頼が揺らいでいます。",
       "key_points": [
-        "UniperがTenneTに対し、スタウディンガー発電所の一部土地を売却",
-        "新たな380kVスイッチヤードの建設により、ラインマイン地域の電力供給を強化",
-        "プロジェクトにより送電容量を50％以上増加させる計画",
-        "フランクフルトの電力供給を持続可能にするための基盤を形成",
-        "2030年のサービス開始を予定"
+        "TikTokのデータセンターで技術的な障害が発生",
+        "障害は所有権移行と同時期に発生",
+        "ユーザーはICEに対する批判が検閲されていると疑問視",
+        "崩れた信頼が新しいオーナーに影響を及ぼす可能性",
+        "プラットフォームの透明性要求が高まる"
       ],
       "glossary": [
         {
-          "term": "380kV",
-          "explain_ja": "380キロボルトは、高圧送電に用いられる電圧の一種で、大規模な電力送電で利用される。"
-        },
-        {
-          "term": "スイッチヤード",
-          "explain_ja": "電力網において、電気の流れを制御するための設備である。"
+          "term": "ICE",
+          "explain_ja": "アメリカの移民査察執行局で、移民法を執行する機関です。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "情報処理やデータストレージのための設備で、大量の電力を消費することがある。"
+          "explain_ja": "データを管理・保管するための施設で、サーバーやストレージが設置されています。"
         }
       ],
       "personal_actions": [
-        "地域の電力供給計画に関する最新情報を確認する",
-        "自社の電力需要予測を見直し、必要な設備投資を計画する",
-        "社内の持続可能なエネルギー対策を検討する"
+        "障害の影響を受けた動画の有無を確認する",
+        "プラットフォームの透明性に関する情報を収集する"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "インフラ"
       ]
     },
     {
-      "url": "https://www.digitimes.com/news/a20260123PD224/demand-2026-cooling-growth-taiwan.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-01-25T00:37:22Z",
-      "title": "Fan motor demand drives growth for Taiwan analog chip makers",
-      "title_ja": "台湾のアナログチップメーカーにおけるファンモーター需要の成長",
-      "summary_ja": "台湾のアナログチップメーカーは、ファンモーターの需要により成長が期待されています。データセンターやさまざまな冷却システムの需要増加が背景にあります。この成長は、台湾の半導体産業全体に影響を及ぼす可能性があります。",
+      "url": "https://www.theregister.com/2026/01/26/tiktok_outage_datacenter_power/",
+      "source": "Theregister.com",
+      "publishedAt": "2026-01-26T20:34:48Z",
+      "title": "US ownership of TikTok off to a rocky start as outage continues into second day",
+      "title_ja": "TikTokの米国法人、停電の影響でサービス障害が続く",
+      "summary_ja": "TikTokは米国での事業運営が始まったばかりだが、データセンターの停電によりサービスに大規模な障害が発生している。ユーザーはアプリやウェブサイトにアクセスできず、不適切な投稿が表示されるなどの問題を報告している。新たに設立された米国法人がサービスの安定化を図っているものの、その影響は国内外のユーザーにも広がる状況だ。",
       "key_points": [
-        "台湾のアナログチップメーカーの成長がファンモーター需要から見込まれる",
-        "データセンターや冷却システムの需要増加が背景",
-        "台湾の半導体産業にプラスの影響を及ぼす可能性あり"
+        "TikTokの新しい米国法人がデータセンターの停電のためサービス障害を報告",
+        "多くのユーザーがアプリにアクセスできず、不適切な投稿が表示される問題に直面",
+        "大規模な冬の嵐がアメリカ全土を襲い、障害の要因と考えられている",
+        "新法人はサービスの安定化に向けて作業中だが、依然として問題が解決していない",
+        "ユーザーの間で外部の情報流通制限に関する憶測も浮上している"
       ],
       "glossary": [
         {
-          "term": "アナログチップ",
-          "explain_ja": "連続的な信号を処理する半導体デバイス。"
+          "term": "TikTok USDS Joint Venture",
+          "explain_ja": "TikTokの米国事業部門で、新たに設立された米国主体の合弁会社。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "大量のデータを保管・管理するための施設。"
-        },
-        {
-          "term": "冷却システム",
-          "explain_ja": "電子機器を冷却するための技術。"
+          "explain_ja": "データを保存、管理、運用するための施設。"
         }
       ],
       "personal_actions": [
-        "データセンターの冷却システムの見直しを行う",
-        "アナログチップの最新動向をチェックする",
-        "台湾の関連ニュースをフォローする"
+        "現在のサービス状況や障害の進捗について公式アナウンスを確認する。",
+        "影響を受けたユーザーからの情報を収集し、問題の支援に役立てる。"
       ],
       "tags": [
-        "その他"
+        "インフラ"
       ]
     },
     {
-      "url": "http://status.digitalocean.com/incidents/4rdkylf7z0q0",
-      "source": "Digitalocean.com",
-      "publishedAt": "2026-01-25T09:38:29Z",
-      "title": "Network Maintenance - NYC3",
-      "title_ja": "ネットワークメンテナンス - NYC3",
-      "summary_ja": "2026年1月27日09:00 UTCから12:00 UTCまで、NYC3地域においてネットワークインフラの変更が行われます。このメンテナンスは性能とスケーラビリティの向上を目的としており、Downtimeは発生しない見込みです。ただし、予期しない設定ミスがあった場合、一部の顧客に一時的なネットワークの乱れが生じる可能性があります。サポートが必要な場合は、クラウドサポートページからチケットを送信してください。",
+      "url": "https://www.techradar.com/computing/websites-apps/were-sorry-for-this-disruption-and-hope-to-resolve-it-soon-tiktoks-usa-arm-explains-why-its-still-not-working-for-many",
+      "source": "TechRadar",
+      "publishedAt": "2026-01-26T20:32:46Z",
+      "title": "‘We're sorry for this disruption and hope to resolve it soon’: TikTok’s USA arm explains why it’s still not working for many",
+      "title_ja": "「この混乱をお詫び申し上げ、早急に解決を目指します」: TikTokの米国部門、未解決の問題を説明",
+      "summary_ja": "多くの米国のTikTokユーザーがフィード、アップロード、再生の問題を引き続き経験しています。この問題は、同社が報告されたデータセンターの outage を受けて、サービスを復旧するために取り組んでいることによるものです。影響を受けたユーザーは、正確な復旧時期について不安を抱えています。",
       "key_points": [
-        "メンテナンス日時: 2026年1月27日09:00 UTC〜12:00 UTC",
-        "NYC3地域のコアネットワークインフラを改善",
-        "Dropletsや関連サービスにはダウンタイムは発生しない見込み",
-        "設定ミスがあった場合、一時的なネットワーク障害の可能性あり",
-        "問題が発生した場合は、サポートページから問い合わせ可能"
+        "TikTokの米国ユーザーがサービスの不具合を抱えている。",
+        "問題はデータセンターの障害に起因している。",
+        "サービスの復旧に向けて努力中であることを説明している。"
       ],
       "glossary": [
         {
-          "term": "Droplet",
-          "explain_ja": "DigitalOceanの仮想マシンサービス。"
+          "term": "データセンター",
+          "explain_ja": "コンピューターシステムや関連情報の管理を行う施設。"
         },
         {
-          "term": "Managed Database",
-          "explain_ja": "DigitalOceanが提供する管理型データベースサービス。"
-        },
-        {
-          "term": "Load Balancer",
-          "explain_ja": "トラフィックを複数のサーバーに分散するためのサービス。"
-        },
-        {
-          "term": "App Platform",
-          "explain_ja": "アプリケーションの構築とホスティングを提供するDigitalOceanのサービス。"
-        },
-        {
-          "term": "Managed Kubernetes",
-          "explain_ja": "Kubernetesの管理型サービス。"
+          "term": "outage",
+          "explain_ja": "サービスの停止または利用不能な状態。"
         }
       ],
       "personal_actions": [
-        "メンテナンスの日時をカレンダーに記入しておく",
-        "Dropletsや関連サービスを使用している場合、その動作を確認しておく",
-        "メンテナンス中に問題が起きた場合のためにサポートページのリンクをブックマークしておく"
+        "TikTokの公式情報を定期的にチェックする。",
+        "問題が解決するまで、他のソーシャルメディアプラットフォームを利用する。"
       ],
       "tags": [
         "インフラ"
