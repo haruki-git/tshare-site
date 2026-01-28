@@ -1,100 +1,118 @@
 {
-  "date": "2026-01-28",
-  "generatedAtJST": "2026-01-28T07:15:33.332+09:00",
+  "date": "2026-01-29",
+  "generatedAtJST": "2026-01-29T07:15:58.359+09:00",
   "items": [
     {
-      "url": "https://www.wired.com/story/tiktok-ice-videos-censorship-allegations-algorithm/",
-      "source": "Wired",
-      "publishedAt": "2026-01-26T21:49:21Z",
-      "title": "TikTok Data Center Outage Triggers Trust Crisis for New US Owners",
-      "title_ja": "TikTokのデータセンター障害が新しい米国オーナーへの信頼危機を引き起こす",
-      "summary_ja": "TikTokのデータセンターの障害が、所有権移行と重なり、ユーザーに疑念を生じさせました。特に、ミネソタ州のICE（移民査察執行局）のラウンドアップを批判する動画が故意に検閲されているのではないかとの疑念が広がっています。これにより、新しいオーナーへの信頼が揺らいでいます。",
+      "url": "https://cointelegraph.com/news/ai-data-centers-local-resistance-bitcoin-mining",
+      "source": "Cointelegraph",
+      "publishedAt": "2026-01-27T21:49:50Z",
+      "title": "AI Data Centers Face Local Pushback Seen in Bitcoin Mining",
+      "title_ja": "AIデータセンターが直面する地域社会の抵抗—ビットコインマイニングの前例",
+      "summary_ja": "AIデータセンターの展開が進む中、地域社会からの抵抗が高まっています。ビットコインマイニングでも同様の問題が見られ、特に電力消費やインフラへの負担が懸念されています。この動きは、AI関連企業がコミュニティに優しいインフラ戦略を採用するきっかけになるかもしれません。",
       "key_points": [
-        "TikTokのデータセンターで技術的な障害が発生",
-        "障害は所有権移行と同時期に発生",
-        "ユーザーはICEに対する批判が検閲されていると疑問視",
-        "崩れた信頼が新しいオーナーに影響を及ぼす可能性",
-        "プラットフォームの透明性要求が高まる"
+        "ビットコインマイニングと同様に、AIデータセンターも地域からの反発を受けている。",
+        "特にテキサス、ジョージア、イリノイ、ミシシッピ州でのエネルギー需要が問題視されている。",
+        "約640億ドルのデータセンター計画が地域の反対によって遅延または中止されている。",
+        "MicrosoftとOpenAIは、エネルギーコストに責任を持つ姿勢を示している。",
+        "ビットコインマイニング企業もAIおよび高性能コンピューティングへの転換が進んでいる。"
       ],
       "glossary": [
         {
-          "term": "ICE",
-          "explain_ja": "アメリカの移民査察執行局で、移民法を執行する機関です。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能に特化したデータセンターで、高い電力消費が特徴。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを管理・保管するための施設で、サーバーやストレージが設置されています。"
+          "term": "ビットコインマイニング",
+          "explain_ja": "ビットコインの取引を検証するためにコンピュータを用いるプロセス。"
+        },
+        {
+          "term": "地域社会",
+          "explain_ja": "特定の地域に住む人々を指し、そのインフラや環境への影響を懸念することがある。"
         }
       ],
       "personal_actions": [
-        "障害の影響を受けた動画の有無を確認する",
-        "プラットフォームの透明性に関する情報を収集する"
+        "自社のデータセンター計画が地域社会に与える影響を評価する。",
+        "地域の関心を理解し、コミュニケーションを強化する。",
+        "電力消費の予測を再評価し、持続可能なソリューションを検討する。"
       ],
       "tags": [
         "DC",
-        "インフラ"
+        "AI"
       ]
     },
     {
-      "url": "https://www.theregister.com/2026/01/26/tiktok_outage_datacenter_power/",
-      "source": "Theregister.com",
-      "publishedAt": "2026-01-26T20:34:48Z",
-      "title": "US ownership of TikTok off to a rocky start as outage continues into second day",
-      "title_ja": "TikTokの米国法人、停電の影響でサービス障害が続く",
-      "summary_ja": "TikTokは米国での事業運営が始まったばかりだが、データセンターの停電によりサービスに大規模な障害が発生している。ユーザーはアプリやウェブサイトにアクセスできず、不適切な投稿が表示されるなどの問題を報告している。新たに設立された米国法人がサービスの安定化を図っているものの、その影響は国内外のユーザーにも広がる状況だ。",
+      "url": "https://www.techpowerup.com/345714/seagate-technology-reports-fiscal-second-quarter-2026-financial-results",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-01-27T21:33:52Z",
+      "title": "Seagate Technology Reports Fiscal Second Quarter 2026 Financial Results",
+      "title_ja": "シーゲート・テクノロジー、第2四半期2026年度の財務結果を報告",
+      "summary_ja": "シーゲート・テクノロジーは2026年度第2四半期の財務結果を発表し、売上高と利益の両方で予想を上回ったことを明らかにしました。この好調な業績は、データセンターの需要と新しいストレージ製品の立ち上げによるものです。AIの普及により、エクサバイトスケールでのストレージソリューションの必要性が高まっています。",
       "key_points": [
-        "TikTokの新しい米国法人がデータセンターの停電のためサービス障害を報告",
-        "多くのユーザーがアプリにアクセスできず、不適切な投稿が表示される問題に直面",
-        "大規模な冬の嵐がアメリカ全土を襲い、障害の要因と考えられている",
-        "新法人はサービスの安定化に向けて作業中だが、依然として問題が解決していない",
-        "ユーザーの間で外部の情報流通制限に関する憶測も浮上している"
+        "第2四半期のキャッシュフローは723百万ドル、フリーキャッシュフローは607百万ドル。",
+        "取締役会は四半期配当を1株あたり0.74ドルとすることを決定。",
+        "次四半期の収益予想は29億ドル、非GAAPの希薄化EPSは3.40ドルと予測。",
+        "シーゲートは500百万ドルの転換社債を償還し、154百万ドルの現金配当を支払った。",
+        "AIアプリケーションによるデータ需要の増加が見込まれる。"
       ],
       "glossary": [
         {
-          "term": "TikTok USDS Joint Venture",
-          "explain_ja": "TikTokの米国事業部門で、新たに設立された米国主体の合弁会社。"
+          "term": "非GAAP EPS",
+          "explain_ja": "一般会計原則に基づかない1株当たり利益。特定の費用を除外した数値。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存、管理、運用するための施設。"
+          "term": "キャッシュフロー",
+          "explain_ja": "企業が一定期間内に得た現金の流れを示す指標。"
         }
       ],
       "personal_actions": [
-        "現在のサービス状況や障害の進捗について公式アナウンスを確認する。",
-        "影響を受けたユーザーからの情報を収集し、問題の支援に役立てる。"
+        "会社の財務状況を定期的に確認する。",
+        "今後の配当支払いに関する情報を追跡する。",
+        "シーゲートの投資家向けウェブキャストを視聴して最新情報を得る。"
       ],
       "tags": [
-        "インフラ"
+        "AI"
       ]
     },
     {
-      "url": "https://www.techradar.com/computing/websites-apps/were-sorry-for-this-disruption-and-hope-to-resolve-it-soon-tiktoks-usa-arm-explains-why-its-still-not-working-for-many",
-      "source": "TechRadar",
-      "publishedAt": "2026-01-26T20:32:46Z",
-      "title": "‘We're sorry for this disruption and hope to resolve it soon’: TikTok’s USA arm explains why it’s still not working for many",
-      "title_ja": "「この混乱をお詫び申し上げ、早急に解決を目指します」: TikTokの米国部門、未解決の問題を説明",
-      "summary_ja": "多くの米国のTikTokユーザーがフィード、アップロード、再生の問題を引き続き経験しています。この問題は、同社が報告されたデータセンターの outage を受けて、サービスを復旧するために取り組んでいることによるものです。影響を受けたユーザーは、正確な復旧時期について不安を抱えています。",
+      "url": "https://me.pcmag.com/en/social-media-1/34942/california-governor-to-probe-tiktok-over-alleged-censorship-of-anti-trump-videos",
+      "source": "PCMag.com",
+      "publishedAt": "2026-01-27T19:51:46Z",
+      "title": "California Governor to Probe TikTok Over Alleged Censorship of Anti-Trump Videos",
+      "title_ja": "カリフォルニア州知事がトランプ批判動画の検閲を巡るTikTok調査を開始",
+      "summary_ja": "カリフォルニア州知事のギャビン・ニューサムは、トランプ政権に批判的な動画投稿で問題が発生したとユーザーから報告を受け、TikTokの調査を開始すると発表した。TikTokは米データセンターの停電を理由に障害を説明したが、最近の中国からアメリカへの事業移行を受けて、検閲への懸念が浮上している。この問題はTikTokへの信頼を損ない、アプリを削除するユーザーが増加している。",
       "key_points": [
-        "TikTokの米国ユーザーがサービスの不具合を抱えている。",
-        "問題はデータセンターの障害に起因している。",
-        "サービスの復旧に向けて努力中であることを説明している。"
+        "カリフォルニア州知事がTikTokの検閲を調査する意向を表明した",
+        "TikTokは停電が原因で機能に問題があったと主張している",
+        "トランプ氏に批判的な投稿が抑圧されているとの報告あり",
+        "TikTokユーザーのアプリ削除が150%増加",
+        "知事は州の司法長官にTikTokの行動が法律に違反しているか調査を依頼",
+        "批判的意見もあり、データ障害の調査に対する否定的見解"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "コンピューターシステムや関連情報の管理を行う施設。"
+          "term": "TikTok",
+          "explain_ja": "ショートビデオ共有アプリ。ユーザーがクリエイティブな動画を作成・共有できるプラットフォーム。"
         },
         {
-          "term": "outage",
-          "explain_ja": "サービスの停止または利用不能な状態。"
+          "term": "ICE",
+          "explain_ja": "米国の移民・関税執行局。移民法の執行を担当している。"
+        },
+        {
+          "term": "ByteDance",
+          "explain_ja": "TikTokの親会社で、中国に本社を置くテクノロジー企業。"
+        },
+        {
+          "term": "USDS Joint Venture",
+          "explain_ja": "TikTokの米国事業に関する合弁企業。"
         }
       ],
       "personal_actions": [
-        "TikTokの公式情報を定期的にチェックする。",
-        "問題が解決するまで、他のソーシャルメディアプラットフォームを利用する。"
+        "TikTokのコンテンツや機能に関する影響を把握するため、利用状況を確認する",
+        "SNSでの投稿に対する反響をモニタリングし、問題が起きた場合に状況を報告する",
+        "関連する法律や規制の情報を確認し、必要に応じて更新を受ける"
       ],
       "tags": [
-        "インフラ"
+        "その他"
       ]
     }
   ]
