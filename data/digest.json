@@ -1,118 +1,109 @@
 {
-  "date": "2026-01-29",
-  "generatedAtJST": "2026-01-29T07:15:58.359+09:00",
+  "date": "2026-01-30",
+  "generatedAtJST": "2026-01-30T07:15:50.129+09:00",
   "items": [
     {
-      "url": "https://cointelegraph.com/news/ai-data-centers-local-resistance-bitcoin-mining",
-      "source": "Cointelegraph",
-      "publishedAt": "2026-01-27T21:49:50Z",
-      "title": "AI Data Centers Face Local Pushback Seen in Bitcoin Mining",
-      "title_ja": "AIデータセンターが直面する地域社会の抵抗—ビットコインマイニングの前例",
-      "summary_ja": "AIデータセンターの展開が進む中、地域社会からの抵抗が高まっています。ビットコインマイニングでも同様の問題が見られ、特に電力消費やインフラへの負担が懸念されています。この動きは、AI関連企業がコミュニティに優しいインフラ戦略を採用するきっかけになるかもしれません。",
+      "url": "https://reason.com/2026/01/28/tiktok-users-say-theyre-being-censored-after-new-owners-were-announced-the-company-says-its-a-tech-issue/",
+      "source": "Reason",
+      "publishedAt": "2026-01-28T16:56:11Z",
+      "title": "TikTok Users Say They're Being Censored After New Owners Were Announced. The Company Says It's a Tech Issue.",
+      "title_ja": "TikTokユーザーが新オーナー発表後に検閲されていると主張",
+      "summary_ja": "TikTokのユーザーが新しいオーナーの発表後にコンテンツの検閲を受けていると訴えています。これに対し、TikTok側はそれが技術的な問題によるものであると説明しています。ゼロビューの投稿が検閲の懸念を引き起こしていますが、データセンターの障害がより簡単な理由である可能性があります。",
       "key_points": [
-        "ビットコインマイニングと同様に、AIデータセンターも地域からの反発を受けている。",
-        "特にテキサス、ジョージア、イリノイ、ミシシッピ州でのエネルギー需要が問題視されている。",
-        "約640億ドルのデータセンター計画が地域の反対によって遅延または中止されている。",
-        "MicrosoftとOpenAIは、エネルギーコストに責任を持つ姿勢を示している。",
-        "ビットコインマイニング企業もAIおよび高性能コンピューティングへの転換が進んでいる。"
+        "ユーザーがコンテンツの検閲を訴える",
+        "新オーナー発表後に問題が顕在化",
+        "TikTokは技術的な問題を理由として説明",
+        "ゼロビューの投稿が増加している",
+        "データセンターの障害が影響している可能性"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能に特化したデータセンターで、高い電力消費が特徴。"
+          "term": "ゼロビュー",
+          "explain_ja": "投稿が一切のビューを獲得していない状態。この現象が検閲の懸念を喚起。"
         },
         {
-          "term": "ビットコインマイニング",
-          "explain_ja": "ビットコインの取引を検証するためにコンピュータを用いるプロセス。"
-        },
-        {
-          "term": "地域社会",
-          "explain_ja": "特定の地域に住む人々を指し、そのインフラや環境への影響を懸念することがある。"
+          "term": "データセンター",
+          "explain_ja": "データの保存や管理を行う施設。ここでの障害が問題の根本原因とされている。"
         }
       ],
       "personal_actions": [
-        "自社のデータセンター計画が地域社会に与える影響を評価する。",
-        "地域の関心を理解し、コミュニケーションを強化する。",
-        "電力消費の予測を再評価し、持続可能なソリューションを検討する。"
+        "現在のアカウントのパフォーマンスを確認",
+        "投稿時のアナリティクスデータをチェック",
+        "技術的な問題が解決されるまでのフォローアップを行う"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180676810",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-01-28T12:12:06Z",
+      "title": "Windscribe review: Despite the annoyances, it has the right idea - Slashdot",
+      "title_ja": "Windscribeレビュー: 不満はあるが正しい方向性を持ったVPN",
+      "summary_ja": "Windscribeは、ユーザーの自主性を重んじる一方で、独特なデザインが問題視されています。69カ国にサーバーを持ち、強力な無料プランも提供しているものの、操作性には難があるとの評価です。総じて、Windscribeはよく機能するVPNであるものの、見た目と使い勝手の改善が求められています。",
+      "key_points": [
+        "Windscribeは69カ国にサーバーを展開するVPN。",
+        "ユニークなデザインが一部で評判だが、使い勝手には課題がある。",
+        "競争力のある価格設定で、強力な無料プランも提供。",
+        "セキュリティは高く、ログもほとんど保持しない。",
+        "スピードは一貫しており、主に安定したパフォーマンスを発揮。"
+      ],
+      "glossary": [
+        {
+          "term": "VPN",
+          "explain_ja": "Virtual Private Networkの略で、インターネット接続を暗号化し、プライバシーを保護する技術。"
+        },
+        {
+          "term": "WireGuard",
+          "explain_ja": "新しいVPNプロトコルで、高速かつ安全な通信を提供します。"
+        }
+      ],
+      "personal_actions": [
+        "Windscribeの無料プランを試用して、自分に合った機能があるか確認する。",
+        "アプリの設定を調整し、使いやすさを最適化するために試してみる。",
+        "セキュリティとプライバシーについての口コミや評価をチェックして、他のVPNとの比較を行う。"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://oilprice.com/Interviews/The-7-Trillion-Data-Centre-Boom-Has-A-100GW-Power-Problem.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-01-28T11:00:00Z",
+      "title": "The $7 Trillion Data Centre Boom Has A 100GW Power Problem",
+      "title_ja": "7兆ドルのデータセンター boom が抱える100GWの電力問題",
+      "summary_ja": "最近のデータセンターの拡大は、電力供給の制約に直面しています。特に、電力の供給元や価格がプロジェクトの進行に大きく影響しています。BitZero社は、低コストの電力を確保し、インフラを整えたことにより、競争力を保っています。",
+      "key_points": [
+        "AIインフラにおいては、電力のコストと可用性が重要",
+        "BitZeroは1GW以上の低コスト電力を確保している",
+        "データセンター事業への進出は、ビットコイン採掘の利益を補完する戦略",
+        "電力へのアクセス保証が、新プロジェクトの成功に不可欠",
+        "データセンターの需要増加により、ビットコイン採掘も恩恵を受ける"
+      ],
+      "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能のこと。データセンター需要を高める要因として重要視される。"
+        },
+        {
+          "term": "Bitzero",
+          "explain_ja": "低コスト電力を活用するビットコイン採掘及びデータセンター運営会社。"
+        },
+        {
+          "term": "kWh",
+          "explain_ja": "キロワット時。電力使用量の単位。"
+        }
+      ],
+      "personal_actions": [
+        "施設の電力供給計画を確認する",
+        "データセンターへの電力接続状況を見直す",
+        "低コスト電力契約の状況を評価する"
       ],
       "tags": [
         "DC",
         "AI"
-      ]
-    },
-    {
-      "url": "https://www.techpowerup.com/345714/seagate-technology-reports-fiscal-second-quarter-2026-financial-results",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-01-27T21:33:52Z",
-      "title": "Seagate Technology Reports Fiscal Second Quarter 2026 Financial Results",
-      "title_ja": "シーゲート・テクノロジー、第2四半期2026年度の財務結果を報告",
-      "summary_ja": "シーゲート・テクノロジーは2026年度第2四半期の財務結果を発表し、売上高と利益の両方で予想を上回ったことを明らかにしました。この好調な業績は、データセンターの需要と新しいストレージ製品の立ち上げによるものです。AIの普及により、エクサバイトスケールでのストレージソリューションの必要性が高まっています。",
-      "key_points": [
-        "第2四半期のキャッシュフローは723百万ドル、フリーキャッシュフローは607百万ドル。",
-        "取締役会は四半期配当を1株あたり0.74ドルとすることを決定。",
-        "次四半期の収益予想は29億ドル、非GAAPの希薄化EPSは3.40ドルと予測。",
-        "シーゲートは500百万ドルの転換社債を償還し、154百万ドルの現金配当を支払った。",
-        "AIアプリケーションによるデータ需要の増加が見込まれる。"
-      ],
-      "glossary": [
-        {
-          "term": "非GAAP EPS",
-          "explain_ja": "一般会計原則に基づかない1株当たり利益。特定の費用を除外した数値。"
-        },
-        {
-          "term": "キャッシュフロー",
-          "explain_ja": "企業が一定期間内に得た現金の流れを示す指標。"
-        }
-      ],
-      "personal_actions": [
-        "会社の財務状況を定期的に確認する。",
-        "今後の配当支払いに関する情報を追跡する。",
-        "シーゲートの投資家向けウェブキャストを視聴して最新情報を得る。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://me.pcmag.com/en/social-media-1/34942/california-governor-to-probe-tiktok-over-alleged-censorship-of-anti-trump-videos",
-      "source": "PCMag.com",
-      "publishedAt": "2026-01-27T19:51:46Z",
-      "title": "California Governor to Probe TikTok Over Alleged Censorship of Anti-Trump Videos",
-      "title_ja": "カリフォルニア州知事がトランプ批判動画の検閲を巡るTikTok調査を開始",
-      "summary_ja": "カリフォルニア州知事のギャビン・ニューサムは、トランプ政権に批判的な動画投稿で問題が発生したとユーザーから報告を受け、TikTokの調査を開始すると発表した。TikTokは米データセンターの停電を理由に障害を説明したが、最近の中国からアメリカへの事業移行を受けて、検閲への懸念が浮上している。この問題はTikTokへの信頼を損ない、アプリを削除するユーザーが増加している。",
-      "key_points": [
-        "カリフォルニア州知事がTikTokの検閲を調査する意向を表明した",
-        "TikTokは停電が原因で機能に問題があったと主張している",
-        "トランプ氏に批判的な投稿が抑圧されているとの報告あり",
-        "TikTokユーザーのアプリ削除が150%増加",
-        "知事は州の司法長官にTikTokの行動が法律に違反しているか調査を依頼",
-        "批判的意見もあり、データ障害の調査に対する否定的見解"
-      ],
-      "glossary": [
-        {
-          "term": "TikTok",
-          "explain_ja": "ショートビデオ共有アプリ。ユーザーがクリエイティブな動画を作成・共有できるプラットフォーム。"
-        },
-        {
-          "term": "ICE",
-          "explain_ja": "米国の移民・関税執行局。移民法の執行を担当している。"
-        },
-        {
-          "term": "ByteDance",
-          "explain_ja": "TikTokの親会社で、中国に本社を置くテクノロジー企業。"
-        },
-        {
-          "term": "USDS Joint Venture",
-          "explain_ja": "TikTokの米国事業に関する合弁企業。"
-        }
-      ],
-      "personal_actions": [
-        "TikTokのコンテンツや機能に関する影響を把握するため、利用状況を確認する",
-        "SNSでの投稿に対する反響をモニタリングし、問題が起きた場合に状況を報告する",
-        "関連する法律や規制の情報を確認し、必要に応じて更新を受ける"
-      ],
-      "tags": [
-        "その他"
       ]
     }
   ]
