@@ -1,105 +1,107 @@
 {
-  "date": "2026-01-30",
-  "generatedAtJST": "2026-01-30T07:15:50.129+09:00",
+  "date": "2026-01-31",
+  "generatedAtJST": "2026-01-31T07:15:39.162+09:00",
   "items": [
     {
-      "url": "https://reason.com/2026/01/28/tiktok-users-say-theyre-being-censored-after-new-owners-were-announced-the-company-says-its-a-tech-issue/",
-      "source": "Reason",
-      "publishedAt": "2026-01-28T16:56:11Z",
-      "title": "TikTok Users Say They're Being Censored After New Owners Were Announced. The Company Says It's a Tech Issue.",
-      "title_ja": "TikTokユーザーが新オーナー発表後に検閲されていると主張",
-      "summary_ja": "TikTokのユーザーが新しいオーナーの発表後にコンテンツの検閲を受けていると訴えています。これに対し、TikTok側はそれが技術的な問題によるものであると説明しています。ゼロビューの投稿が検閲の懸念を引き起こしていますが、データセンターの障害がより簡単な理由である可能性があります。",
+      "url": "https://www.businessinsider.com/how-blackstone-qts-data-center-bets-are-driving-growth-2026-1",
+      "source": "Business Insider",
+      "publishedAt": "2026-01-29T18:49:37Z",
+      "title": "Data centers power Blackstone's $1.3 trillion investment empire",
+      "title_ja": "データセンターがブラックストーンの1.3兆ドル投資帝国を支える",
+      "summary_ja": "ブラックストーンはデータセンターへの投資から大きなリターンを得ており、AIブームにさらに注力する方針を示しています。データセンターは同社の成長戦略の中心であり、リスクを取った投資が見込まれています。この動きは、テクノロジー分野全体に影響を与える可能性があります。",
       "key_points": [
-        "ユーザーがコンテンツの検閲を訴える",
-        "新オーナー発表後に問題が顕在化",
-        "TikTokは技術的な問題を理由として説明",
-        "ゼロビューの投稿が増加している",
-        "データセンターの障害が影響している可能性"
+        "ブラックストーンはデータセンターへの投資から高いリターンを得ている。",
+        "AIブームに対応して、さらに投資を強化する予定。",
+        "データセンターは同社の成長戦略の基盤となっている。"
       ],
       "glossary": [
         {
-          "term": "ゼロビュー",
-          "explain_ja": "投稿が一切のビューを獲得していない状態。この現象が検閲の懸念を喚起。"
+          "term": "ブラックストーン",
+          "explain_ja": "アメリカの投資会社で、巨額の資産運用を行っている。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データの保存や管理を行う施設。ここでの障害が問題の根本原因とされている。"
-        }
-      ],
-      "personal_actions": [
-        "現在のアカウントのパフォーマンスを確認",
-        "投稿時のアナリティクスデータをチェック",
-        "技術的な問題が解決されるまでのフォローアップを行う"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180676810",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-01-28T12:12:06Z",
-      "title": "Windscribe review: Despite the annoyances, it has the right idea - Slashdot",
-      "title_ja": "Windscribeレビュー: 不満はあるが正しい方向性を持ったVPN",
-      "summary_ja": "Windscribeは、ユーザーの自主性を重んじる一方で、独特なデザインが問題視されています。69カ国にサーバーを持ち、強力な無料プランも提供しているものの、操作性には難があるとの評価です。総じて、Windscribeはよく機能するVPNであるものの、見た目と使い勝手の改善が求められています。",
-      "key_points": [
-        "Windscribeは69カ国にサーバーを展開するVPN。",
-        "ユニークなデザインが一部で評判だが、使い勝手には課題がある。",
-        "競争力のある価格設定で、強力な無料プランも提供。",
-        "セキュリティは高く、ログもほとんど保持しない。",
-        "スピードは一貫しており、主に安定したパフォーマンスを発揮。"
-      ],
-      "glossary": [
-        {
-          "term": "VPN",
-          "explain_ja": "Virtual Private Networkの略で、インターネット接続を暗号化し、プライバシーを保護する技術。"
+          "explain_ja": "データを保存・管理するための施設で、クラウドサービスの基盤となる。"
         },
-        {
-          "term": "WireGuard",
-          "explain_ja": "新しいVPNプロトコルで、高速かつ安全な通信を提供します。"
-        }
-      ],
-      "personal_actions": [
-        "Windscribeの無料プランを試用して、自分に合った機能があるか確認する。",
-        "アプリの設定を調整し、使いやすさを最適化するために試してみる。",
-        "セキュリティとプライバシーについての口コミや評価をチェックして、他のVPNとの比較を行う。"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://oilprice.com/Interviews/The-7-Trillion-Data-Centre-Boom-Has-A-100GW-Power-Problem.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-01-28T11:00:00Z",
-      "title": "The $7 Trillion Data Centre Boom Has A 100GW Power Problem",
-      "title_ja": "7兆ドルのデータセンター boom が抱える100GWの電力問題",
-      "summary_ja": "最近のデータセンターの拡大は、電力供給の制約に直面しています。特に、電力の供給元や価格がプロジェクトの進行に大きく影響しています。BitZero社は、低コストの電力を確保し、インフラを整えたことにより、競争力を保っています。",
-      "key_points": [
-        "AIインフラにおいては、電力のコストと可用性が重要",
-        "BitZeroは1GW以上の低コスト電力を確保している",
-        "データセンター事業への進出は、ビットコイン採掘の利益を補完する戦略",
-        "電力へのアクセス保証が、新プロジェクトの成功に不可欠",
-        "データセンターの需要増加により、ビットコイン採掘も恩恵を受ける"
-      ],
-      "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能のこと。データセンター需要を高める要因として重要視される。"
-        },
-        {
-          "term": "Bitzero",
-          "explain_ja": "低コスト電力を活用するビットコイン採掘及びデータセンター運営会社。"
-        },
-        {
-          "term": "kWh",
-          "explain_ja": "キロワット時。電力使用量の単位。"
+          "explain_ja": "人工知能のことで、機械が人間のような知的活動を行う技術。"
         }
       ],
       "personal_actions": [
-        "施設の電力供給計画を確認する",
-        "データセンターへの電力接続状況を見直す",
-        "低コスト電力契約の状況を評価する"
+        "データセンターの最新の投資動向に注目する。",
+        "AI技術の導入を検討することで、ビジネスの成長を促進する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.rawstory.com/this-republican-hellraiser-is-taking-on-her-own-party-for-rural-texas/",
+      "source": "Raw Story",
+      "publishedAt": "2026-01-29T18:10:15Z",
+      "title": "This Republican hellraiser is taking on her own party for rural Texas",
+      "title_ja": "共和党の反乱者がテキサスの田舎を守るために立ち上がる",
+      "summary_ja": "スザンヌ・ベルスナイダーは、30年前にテキサスパナハンドルで育った若き共和党員であり、現在は自身の党に立ち向かっています。当時彼女はオースティンで共和党の力を推進する仕事をしていましたが、今彼女は困難な状況にある地元のために戦っています。彼女の活動は、地域社会のニーズに応えることを目指しており、党内の対立にもかかわらず進められています。",
+      "key_points": [
+        "スザンヌ・ベルスナイダーはテキサスパナハンドル出身の共和党員",
+        "彼女は地元のために党内の課題に立ち向かう",
+        "オースティンでの活動から地元に戻った経歴がある",
+        "共和党の主要政治家と関わっていた過去がある",
+        "地域社会のニーズに重点を置いて活動を進めている"
+      ],
+      "glossary": [
+        {
+          "term": "共和党",
+          "explain_ja": "アメリカの主要政党の一つで、保守的な政治方針を持つ。"
+        },
+        {
+          "term": "テキサスパナハンドル",
+          "explain_ja": "テキサス州の北部に位置する地域で、農業や田舎のコミュニティが特徴。"
+        }
+      ],
+      "personal_actions": [
+        "地域の政治活動や候補者に関心を持つ",
+        "地元の問題解決に向けた集会やイベントに参加する",
+        "自身の声を政治に反映できる方法を探る"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://www.theregister.com/2026/01/29/ai_datacenter_boom_tripled_us_gas_power_builds/",
+      "source": "Theregister.com",
+      "publishedAt": "2026-01-29T17:39:55Z",
+      "title": "AI datacenter boom triples US gas power builds, filling the air with more CO2",
+      "title_ja": "AIデータセンターの急増が米国のガス発電所の建設を三倍に",
+      "summary_ja": "AIデータセンターの急増によって、米国のガス発電所の開発が再び活況を呈しています。2025年のデータによると、米国は世界のガス発電の約4分の1を占め、ガス発電所プロジェクトがほぼ三倍に増加しました。この動きは、再生可能エネルギーへの移行や炭素排出削減の努力を危うくし、地球温暖化対策に深刻な影響を与える可能性があります。",
+      "key_points": [
+        "2025年に米国のガス発電所開発が急増し、ほぼ3倍になった。",
+        "米国は世界で最大のガス発電プロジェクトを抱え、全体の約25％を占める。",
+        "新たに開発される発電所は、今後の温室効果ガス排出に大きな影響を及ぼす見込み。",
+        "AIデータセンターの需要が、新たな化石燃料発電所の建設につながっている。",
+        "米国の企業が化石燃料に依存する中、持続可能なエネルギーへの移行がさらに難しくなる可能性がある。"
+      ],
+      "glossary": [
+        {
+          "term": "ガス発電所",
+          "explain_ja": "天然ガスを燃料として使用する発電所で、炭素排出量が相対的に少ない。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "大量のデータ処理や保存のための施設で、電力消費が非常に高い。"
+        },
+        {
+          "term": "CO₂排出",
+          "explain_ja": "二酸化炭素の排出を指し、地球温暖化の原因となる主要な温室効果ガスの一つ。"
+        }
+      ],
+      "personal_actions": [
+        "ガス発電の新プロジェクトが環境に与える影響を理解し、持続可能なエネルギーに関する情報を収集する。",
+        "地元のエネルギー政策に関心を持ち、持続可能な選択肢をサポートする。",
+        "AIやデジタルインフラの環境への影響について、同僚やコミュニティで議論を促す。"
       ],
       "tags": [
         "DC",
