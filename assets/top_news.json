@@ -1,39 +1,66 @@
 {
-  "date": "2026-02-02",
-  "generatedAtJST": "2026-02-02T07:15:56.325+09:00",
+  "date": "2026-02-03",
+  "generatedAtJST": "2026-02-03T07:15:45.838+09:00",
   "items": [
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180709762",
+      "url": "https://www.tomshardware.com/tech-industry/spacex-formalizes-plan-to-build-1-million-satellite-orbital-data-center-system-fcc-filing-sketches-out-plans-but-over-packed-orbits-could-be-limiting-factor",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-02-01T14:55:55Z",
+      "title": "SpaceX formalizes plan to build 1 million satellite Orbital Data Center System — FCC filing sketches out plans, but over-packed orbits could be limiting factor",
+      "title_ja": "SpaceX、1000万の衛星を使った軌道データセンターシステムの計画を正式化",
+      "summary_ja": "SpaceXがFCCへの申請で、AIデータセンターとして機能する100万の衛星を打ち上げる計画を発表しました。このシステムは、100ギガワットの計算能力を提供することを目的としています。しかし、過密な軌道が課題となる可能性があります。衛星の数が増えることで、運用に関する新たな挑戦が生まれるでしょう。",
+      "key_points": [
+        "SpaceXは100万の衛星を打ち上げる計画を発表。",
+        "この衛星ネットワークはAIデータセンターとして機能する。",
+        "提供される計算能力は100ギガワットに達する見込み。",
+        "過密な衛星軌道が運用の妨げになる可能性あり。",
+        "FCCへの正式な申請が行われた。"
+      ],
+      "glossary": [
+        {
+          "term": "FCC",
+          "explain_ja": "米国連邦通信委員会。通信や放送に関する規制を担当する政府機関。"
+        },
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能の処理を行うためのデータセンター。大量のデータ処理能力が求められる。"
+        }
+      ],
+      "personal_actions": [
+        "SpaceXからの公式発表や関連情報を定期的に確認する。",
+        "過密な衛星軌道問題に関する最新の研究や動向をフォローする。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://slashdot.org/submission/17344548/spacex-wants-to-launch-a-constellation-of-a-million-satellites-to-power-ai-needs",
       "source": "Slashdot.org",
-      "publishedAt": "2026-01-31T18:12:59Z",
+      "publishedAt": "2026-02-01T14:05:59Z",
       "title": "SpaceX wants to launch a constellation of a million satellites to power AI needs - Slashdot",
-      "title_ja": "SpaceXがAI向けに100万基の衛星コンステレーションを打ち上げる計画",
-      "summary_ja": "SpaceXは、現在軌道上にある衛星の数を100倍にする計画を発表しました。FCCに提出された申請では、太陽光発電を利用した「軌道データセンター」を構築することが目的とされています。この計画は、急増するAIのコンピューティングニーズに対応するためのものです。具体的には、50kmごとの狭い軌道シェルで操作される最大100万基の衛星が要求されています。",
+      "title_ja": "SpaceX、AIニーズに応えるための100万衛星の巨大コンステレーション計画を発表",
+      "summary_ja": "SpaceXは、AIのニーズに応えるために100万基の衛星を打ち上げる計画を発表しました。この数は現在軌道上にある衛星の約100倍に相当します。この取り組みは、宇宙デブリの問題や宇宙環境に与える影響についての懸念を引き起こしています。",
       "key_points": [
-        "SpaceXは100万基の衛星を打ち上げるためのFCC申請を提出。",
-        "提案されたデータセンターは太陽光を利用し、AI用のコンピューティング能力を提供。",
-        "現在、SpaceXは11,000基のStarlink衛星を打ち上げており、9,600基以上が軌道上にあるとされる。",
-        "FCCは過去にSpaceXの要求を制限しており、今回もその可能性がある。",
-        "2022年にはさらに7,500基のStarlink衛星の打ち上げが承認されている。"
+        "SpaceXがAIニーズ向けに100万基の衛星を打ち上げる計画を発表",
+        "この衛星数は現在の軌道衛星の約100倍",
+        "宇宙デブリの問題が懸念されている",
+        "急速な技術進展が求められている"
       ],
       "glossary": [
         {
-          "term": "FCC",
-          "explain_ja": "連邦通信委員会（Federal Communications Commission）の略で、アメリカ合衆国の通信および放送の規制機関です。"
+          "term": "宇宙デブリ",
+          "explain_ja": "軌道上に存在する不要な人工物や破片のこと。"
         },
         {
-          "term": "衛星コンステレーション",
-          "explain_ja": "複数の衛星を連携させて構築されるネットワークで、通信やデータ処理などを行います。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略で、機械が人間の知能を模倣する技術です。"
+          "term": "コンステレーション",
+          "explain_ja": "特定の目的のために配置された一群の衛星のこと。"
         }
       ],
       "personal_actions": [
-        "最新のSpaceXの動向をフォローして、衛星通信の将来に関する情報を集める。",
-        "自社のAI技術やデータセンターの需要を再評価して、将来的な投資計画を考える。",
-        "同様の再生可能エネルギーを活用したテクノロジーの導入可能性を検討する。"
+        "現在の衛星通信の状況について調査する",
+        "宇宙デブリに関する最新情報を確認する"
       ],
       "tags": [
         "DC",
@@ -41,85 +68,39 @@
       ]
     },
     {
-      "url": "https://freerepublic.com/focus/f-news/4364827/posts",
-      "source": "Freerepublic.com",
-      "publishedAt": "2026-01-31T11:27:11Z",
-      "title": "SpaceX wants to turn Space into the World’s Biggest AI Data Center.",
-      "title_ja": "スペースX、宇宙を世界最大のAIデータセンターにする計画を発表",
-      "summary_ja": "スペースXが、宇宙に約100万基の衛星を展開し、オービタルデータセンターとして機能させる計画を進めています。この衛星ネットワークは、AIデータ処理を支えるための大規模な計算能力を提供することを目的としています。太陽エネルギーを利用することで、メンテナンスコストを低減し、地球上のデータセンターに比べて環境への影響を抑えることが可能です。このプロジェクトは、急成長するAIや機械学習の需要に応えるために重要なステップとされています。",
+      "url": "https://apnews.com/article/ai-human-chatbot-chile-quiliai-data-centers-water-a798d7d1ae3b2fd7646ec5dbfc8a18dd",
+      "source": "Associated Press",
+      "publishedAt": "2026-01-31T23:06:34Z",
+      "title": "A chatbot entirely powered by humans, not artificial intelligence? This Chilean community shows why",
+      "title_ja": "人間が完全に運営するチャットボットとは？チリのコミュニティが示す理由",
+      "summary_ja": "チリの首都近郊のコミュニティで、完全に人間によって運営されるチャットボットの実験が行われた。この取り組みは、環境影響や水の使用に対する啓発を目的としている。50名以上のメンバーが参加し、質問に答えたり、ユーモラスな画像を生成したりすることで、その必要性を示そうとしている。",
       "key_points": [
-        "スペースXは宇宙に約100万基の衛星を展開予定。",
-        "衛星はAIデータ処理のための大規模な計算パワーを提供。",
-        "太陽エネルギーを利用し、運営コストが低減。",
-        "衛星は500kmから2000kmの高度で運用される。",
-        "高速レーザーリンクで衛星同士及びスターリンクネットワークと接続。",
-        "地上の許可されたステーションにデータをルーティング。"
+        "チリのコミュニティが人間操作のチャットボットを試みる。",
+        "約50人が参加して環境問題に対する意識を高めようとする。",
+        "チャットボットは質問に答えたり、画像を生成したりする機能を持つ。",
+        "このプロジェクトは水の使用と環境負荷を強調することが目的である。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能。コンピュータが人間の知能を模倣して学習や推論を行う技術。"
+          "term": "チャットボット",
+          "explain_ja": "ユーザーとの対話を自動的に行うためのプログラム。"
         },
         {
-          "term": "オービタルデータセンター",
-          "explain_ja": "宇宙にあるデータセンターで、衛星を通じてデータ処理を行う施設。"
+          "term": "環境影響",
+          "explain_ja": "特定の活動が自然環境に与える影響を指す。"
         },
         {
-          "term": "スターリンク",
-          "explain_ja": "スペースXの衛星インターネットサービス。"
+          "term": "水の使用",
+          "explain_ja": "特に産業やシステムが使用する水の量についての概念。"
         }
       ],
       "personal_actions": [
-        "プロジェクトの進捗を定期的にチェックする。",
-        "倫理的なAI技術の利用について考察を深める。",
-        "宇宙インフラの影響を理解するためのリソースを調査する。"
+        "地元での環境問題に対する取り組みを確認する。",
+        "持続可能な水の使用に関する情報を調べる。",
+        "環境保護活動に参加または支援する。"
       ],
       "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://me.pcmag.com/en/networking/35021/spacex-eyes-1-million-satellites-for-orbital-data-center-push",
-      "source": "PCMag.com",
-      "publishedAt": "2026-01-31T03:56:09Z",
-      "title": "SpaceX Eyes 1 Million Satellites for Orbital Data Center Push",
-      "title_ja": "SpaceX、1百万の衛星を打ち上げ orbitalデータセンター計画を推進",
-      "summary_ja": "SpaceXは、地球周回のデータセンターネットワークを確立するために、最大1百万の衛星を打ち上げる許可を連邦通信委員会に申請しました。この計画は、既存のStarlink衛星ネットワークを大幅に上回るもので、AIモデルや関連アプリケーションを支えるための計算能力を提供することを目的としています。今回の提案は、AIコンピューティングパワーの需要が急激に増加する中で、より効率的なデータセンターのソリューションとなることが期待されています。",
-      "key_points": [
-        "SpaceXは最大1百万の衛星を打ち上げる申請をFCCに提出した。",
-        "新しい衛星はサンシンクロナス軌道で運用され、太陽エネルギーを利用する。",
-        "データセンターは光学リンクを使い、既存のStarlinkシステムと通信する。",
-        "この計画はAIデータセンターのエネルギーコストの増加に対処するために提案された。",
-        "SpaceXは、Starshipを使用して迅速に打ち上げを行うと発表。",
-        "ただし、計画は前例のないスケールであり、FCCからの厳しい審査が予想される。"
-      ],
-      "glossary": [
-        {
-          "term": "FCC",
-          "explain_ja": "連邦通信委員会。アメリカの通信業界を規制する機関です。"
-        },
-        {
-          "term": "Starlink",
-          "explain_ja": "SpaceXが展開しているインターネットアクセスを提供するための衛星ネットワークです。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能。人間の知能を模倣する技術を指します。"
-        },
-        {
-          "term": "orbital data center",
-          "explain_ja": "宇宙に設置されるデータセンターで、地球規模の計算能力を提供することを目的としています。"
-        }
-      ],
-      "personal_actions": [
-        "新しい衛星通信技術とAIの進展についての情報を定期的に確認する。",
-        "SpaceXの公開株式会社情報を追跡して、投資機会を検討する。",
-        "宇宙産業の動向を把握し、関連技術への理解を深める。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     }
   ]
