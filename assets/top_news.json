@@ -1,76 +1,40 @@
 {
-  "date": "2026-02-06",
-  "generatedAtJST": "2026-02-06T07:15:42.155+09:00",
+  "date": "2026-02-07",
+  "generatedAtJST": "2026-02-07T07:16:05.140+09:00",
   "items": [
     {
-      "url": "https://fortune.com/2026/02/04/over-a-million-people-are-losing-power-during-a-freezing-snowstorm-while-data-centers-nearby-guzzle-electricity/",
-      "source": "Fortune",
-      "publishedAt": "2026-02-04T21:39:12Z",
-      "title": "Over a million people are losing power during a freezing snowstorm while data centers nearby guzzle electricity",
-      "title_ja": "寒波による停電中、近隣のデータセンターが大量の電力を消費",
-      "summary_ja": "寒波の影響で100万人以上が停電していますが、その近くにあるデータセンターが大量の電力を消費しています。データセンターに関する契約条件は、しばしば公開されていません。この状況は、公共のインフラとの関係や優先順位に疑問を投げかけています。",
+      "url": "https://wccftech.com/elon-musk-says-the-current-pace-of-ai-expansion-will-force-the-need-for-orbital-data-centers/",
+      "source": "Wccftech",
+      "publishedAt": "2026-02-05T18:56:23Z",
+      "title": "Elon Musk Says the Current Pace of AI Expansion Will “Force” the Need for Orbital Data Centers, But Chips Will Then Become the Major Bottleneck",
+      "title_ja": "イーロン・マスク、AIの急成長が軌道上データセンターの必要性を「強制」すると述べる",
+      "summary_ja": "イーロン・マスクは、AIの拡張のペースが地球上のエネルギー制約を越えて、軌道上でのデータセンターの必要性を生じさせると主張しています。地球上では電力供給がデータセンターの発展を妨げている一方、宇宙ではチップが主な制約となると予測しています。この新しいアプローチは、AIインフラの進化における重要なステップとなる可能性があります。",
       "key_points": [
-        "冷たい雪嵐で100万人以上が停電中。",
-        "近隣のデータセンターが多くの電力を消費。",
-        "データセンターと地方政府の契約は公開されていない。",
-        "公共インフラにおける電力の優先順位が問題視されている。",
-        "重要なインフラに対する影響が考慮されるべき。"
+        "マスクは、地球でのエネルギー不足がAIの進展を妨げていると指摘。",
+        "今後36ヶ月で、AIに最も経済的に魅力的な場所は宇宙になると予測。",
+        "米国のデータセンター消費電力は、2030年までに12%に達する可能性がある。",
+        "軌道上のデータセンターは、AIの進展におけるエネルギーのボトleneckを解消すると主張。",
+        "チップの供給が主要な課題になるとの見解。",
+        "Starcloud社がすでに地球外にNVIDIAのH100を展開している。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "大量のデータを保存・管理する施設で、常に電力を必要とします。"
+          "explain_ja": "データを保存、処理、管理するための施設。AIの運用に必要な計算資源を提供する。"
         },
         {
-          "term": "稼働条件",
-          "explain_ja": "データセンターが運営される際の条件や契約内容を指します。"
+          "term": "AI",
+          "explain_ja": "人工知能の略称。人間の知能を模倣することで、様々なタスクを自動化する技術。"
+        },
+        {
+          "term": "チップ",
+          "explain_ja": "電子デバイスに用いられる半導体の集積回路。AI処理における重要な要素。"
         }
       ],
       "personal_actions": [
-        "地域の電力供給状況を確認する。",
-        "データセンターとの関係を理解するための情報を収集する。",
-        "公共サービスが状況に対応しているか確認する。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://abcnews.go.com/US/wireStory/musk-vows-put-data-centers-space-run-solar-129860857",
-      "source": "ABC News",
-      "publishedAt": "2026-02-04T20:38:48Z",
-      "title": "Musk vows to put data centers in space, run them on solar power",
-      "title_ja": "Elon Musk、データセンターを宇宙に設置し太陽光で運営する計画を発表",
-      "summary_ja": "Elon Muskは、宇宙にデータセンターを設置し、太陽光エネルギーで運営する計画を発表しました。この構想により、AIやチャットボットの利用拡大を促進し、地上の電力網への負担を軽減することを目指しています。しかし、この計画には技術的、財政的、環境的な課題が多く存在します。専門家によると、宇宙での熱管理や宇宙ゴミ問題が大きな障害となる可能性があります。",
-      "key_points": [
-        "Muskは宇宙に100万台の衛星を設置し、太陽光でデータセンターを運営する狙い。",
-        "宇宙にデータセンターを設置することで、電力網への負荷を軽減できると期待。",
-        "宇宙の真空状態での熱管理や宇宙ゴミの影響が課題として指摘されている。",
-        "既存の衛星技術やリペアの難しさが計画の実現可能性に影響を与える。",
-        "競合他社も宇宙データセンターの研究を進めているが、Muskはロケット打ち上げの資源を持つ優位性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データの処理・保管を行うための施設。"
-        },
-        {
-          "term": "宇宙ゴミ",
-          "explain_ja": "宇宙での人工物の廃棄物で、衛星やロケットの破片が含まれる。"
-        },
-        {
-          "term": "太陽光エネルギー",
-          "explain_ja": "太陽光を利用して発電するエネルギー。"
-        },
-        {
-          "term": "GPU",
-          "explain_ja": "グラフィックス処理に特化したプロセッサ。AI計算に利用される。"
-        }
-      ],
-      "personal_actions": [
-        "宇宙データセンター関連の最新情報をフォローし、技術の進展を確認する。",
-        "自社のデータセンターの電力使用効率を見直す機会を検討する。",
-        "宇宙産業の動向に注目し、自社の戦略に反映させる。"
+        "AI関連のインフラ計画について最新情報を収集する。",
+        "チップ供給の現状について、主要なメーカーの動向を確認する。",
+        "データセンターによるエネルギー消費についての情報を整理し、将来の展望を考える。"
       ],
       "tags": [
         "DC",
@@ -78,30 +42,69 @@
       ]
     },
     {
-      "url": "https://finance.yahoo.com/news/goldman-sachs-sees-data-center-140020512.html",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_59b3e94b-31be-4b92-bd64-e2ecc5891632",
       "source": "Yahoo Entertainment",
-      "publishedAt": "2026-02-04T14:00:20Z",
-      "title": "Goldman Sachs Sees Data Center Demand Driving Continued Upside at Jabil (JBL)",
-      "title_ja": "ゴールドマン・サックス、データセンター需要がジャビルの成長を促進と予測",
-      "summary_ja": "ゴールドマン・サックスがJabil Inc.の株価目標を引き上げ、その成長はデータセンターの需要に支えられると見ています。Jabilは現在、データセンター向けのサービスを強化しており、特にHVAC関連株として注目されています。この動きは、同社の業績向上に寄与する可能性があります。",
+      "publishedAt": "2026-02-05T14:24:55Z",
+      "title": "Your privacy choices",
+      "title_ja": "プライバシーに関する選択肢",
+      "summary_ja": "Yahooは利用者のプライバシーを重視しています。ウェブサイトやアプリを使用する際には、クッキーを利用し、ユーザー認証やセキュリティ確保を行っています。利用者はクッキーの使用に関し、全てを受け入れるか拒否するか、またはカスタマイズする選択が可能です。",
       "key_points": [
-        "ゴールドマン・サックスがJabilの株価目標を引き上げた。",
-        "データセンターの需要がJabilの成長を促進すると予測。",
-        "JabilはHVAC関連の企業として投資家に注目されている。"
+        "Yahooはクッキーを使用してサービスを提供する。",
+        "クッキーによる情報収集は、ユーザー認証やセキュリティ対策に利用される。",
+        "全てのデータ処理を受け入れるか拒否するかの選択が可能。",
+        "カスタマイズしたプライバシー設定も利用可能。",
+        "同意はいつでも変更または撤回できる。"
       ],
       "glossary": [
         {
-          "term": "HVAC",
-          "explain_ja": "Heating, Ventilation, and Air Conditioningの略で、空調設備全般を指す。"
+          "term": "クッキー",
+          "explain_ja": "ウェブサイトがユーザーのデバイスに保存するデータで、使用履歴や設定情報を保持するために使われる。"
         },
         {
-          "term": "Jabil Inc.",
-          "explain_ja": "アメリカの電子機器製造会社で、様々な業界向けの製造サービスを提供している。"
+          "term": "プライバシーポリシー",
+          "explain_ja": "企業が利用者の個人情報の取り扱い方について説明する文書。"
         }
       ],
       "personal_actions": [
-        "自社のデータセンター設備の需要予測を再評価する。",
-        "HVACシステムの効率を確認し、必要な改善策を検討する。"
+        "自社のプライバシーポリシーを見直す。",
+        "クッキーの設定を確認し、必要に応じて変更する。"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://financialpost.com/pmn/business-wire-news-releases-pmn/cvc-dif-and-northleaf-divest-us-data-center-portfolio-vault-digital-infrastructure-to-igneo-infrastructure-partners",
+      "source": "Financial Post",
+      "publishedAt": "2026-02-05T13:04:47Z",
+      "title": "CVC DIF and Northleaf Divest US Data Center Portfolio, Vault Digital Infrastructure, to Igneo Infrastructure Partners",
+      "title_ja": "CVC DIFとノースリーフ、米データセンター資産をIgneoインフラパートナーズに売却",
+      "summary_ja": "CVC DIFとノースリーフが、米国のデータセンター資産をIgneoインフラパートナーズに売却しました。このポートフォリオは、CVC DIFとノースリーフの戦略的な投資の成果です。該当する資産の売却は、デジタルインフラ市場への影響を及ぼす可能性があります。",
+      "key_points": [
+        "CVC DIFとノースリーフが米データセンターを売却",
+        "売却先はIgneoインフラパートナーズ",
+        "Vault Digital Infrastructureは共同出資企業",
+        "CVC DIFはノースリーフと共に、魅力的なポートフォリオを構築",
+        "今回の取引はデジタルインフラ市場に寄与する可能性"
+      ],
+      "glossary": [
+        {
+          "term": "CVC DIF",
+          "explain_ja": "CVC Capital Partnersが運営するインフラファンドの一つ。"
+        },
+        {
+          "term": "Northleaf",
+          "explain_ja": "プライベートエクイティとインフラ投資を行うカナダの投資会社。"
+        },
+        {
+          "term": "デジタルインフラ",
+          "explain_ja": "インターネットやデータ通信を支えるインフラストラクチャー全般。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの運用に関する内外の動向を確認する",
+        "自社のデジタルインフラ戦略を再評価する",
+        "資産運用の見直しについて議論する"
       ],
       "tags": [
         "DC"
