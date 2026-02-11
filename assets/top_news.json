@@ -1,39 +1,71 @@
 {
-  "date": "2026-02-11",
-  "generatedAtJST": "2026-02-11T07:15:39.731+09:00",
+  "date": "2026-02-12",
+  "generatedAtJST": "2026-02-12T07:15:55.378+09:00",
   "items": [
     {
-      "url": "https://www.theregister.com/2026/02/09/azure_west_us_disruption/",
+      "url": "https://www.theregister.com/2026/02/10/microsoft_high_temperature_superconductors_hopium/",
       "source": "Theregister.com",
-      "publishedAt": "2026-02-09T14:45:59Z",
-      "title": "Azure power hiccup gives Windows admins a rare break from updates",
-      "title_ja": "Azureの電力問題でWindows管理者が一時的な更新中断を経験",
-      "summary_ja": "MicrosoftのAzureデータセンターでの電力事故が原因で、Windows Updateが影響を受けるサービス中断が発生しました。2月7日から8日にかけて、複数のAzureサービスが遅延やタイムアウトに見舞われ、特にMicrosoft StoreやWindows Updateに影響がありました。この影響で、一部の管理者は更新業務からの短い休止を経験しましたが、Microsoftは問題を解決したと報告しています。",
+      "publishedAt": "2026-02-10T21:45:48Z",
+      "title": "Microsoft touts far-off high-temperature superconducting tech for datacenter efficiency",
+      "title_ja": "マイクロソフト、高温超伝導技術によるデータセンター効率化を目指す",
+      "summary_ja": "マイクロソフトは、高温超伝導（HTS）電力供給システムを使って、データセンターの電力消費を低減する新たな方法を発表しました。この技術は、従来の銅やアルミニウムのワイヤーに代わるもので、効率的な電力供給が期待されています。しかし、HTSの普及には高コストや技術的な課題も存在します。現在、同社は技術の開発と評価を行っており、実用化には時間を要する見込みです。",
       "key_points": [
-        "Azureの西部地域で電力の中断が発生",
-        "影響を受けたサービスにはAzure Kubernetes ServiceやMicrosoft Storeが含まれる",
-        "管理者は更新業務から約三時間の休止を体験",
-        "現在も一部のサーバに残る遅延問題が存在",
-        "Microsoftは最近、複数のサービス中断に見舞われている"
+        "マイクロソフトは、高温超伝導電力供給システムを導入することでデータセンターの効率を向上させることを目指している。",
+        "HTSケーブルはほぼ完全に電気抵抗がないため、損失のない電力供給を実現する。",
+        "この技術により、物理的なスペースを増やさずに電力密度を高めることが可能になる。",
+        "現在、HTSは開発と評価の段階にあり、商業化には数年かかると予想されている。",
+        "マイクロソフトは、HTSを使ったシステムの開発にVeirという企業に投資している。"
       ],
       "glossary": [
         {
-          "term": "Azure",
-          "explain_ja": "Microsoftが提供するクラウドコンピューティングサービスのプラットフォーム。"
+          "term": "高温超伝導（HTS）",
+          "explain_ja": "電気抵抗がほぼゼロになる物質で、効果的な電力供給を可能にする技術。"
         },
         {
-          "term": "UPS",
-          "explain_ja": "無停電電源装置。停電時に重要な機器に電力を供給するための装置。"
-        },
-        {
-          "term": "Windows Update",
-          "explain_ja": "Windowsオペレーティングシステムの更新プログラムを提供するサービス。"
+          "term": "データセンター",
+          "explain_ja": "コンピュータシステムや関連機器を集中的に管理・運営するための施設。"
         }
       ],
       "personal_actions": [
-        "Azureサービスのステータスを定期的に確認する",
-        "Windows Updateの履歴をチェックして問題がないか確認する",
-        "バックアップ電源システムの状態を定期的に点検する"
+        "HTS技術の進展を追い、将来的な導入に向けた情報を収集する。",
+        "現行の電力供給システムの効率化について、設備の評価を行う。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.techpowerup.com/346202/carbice-darknx-partner-to-advance-reliability-and-performance-of-ai-data-centers",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-02-10T18:30:26Z",
+      "title": "Carbice & DarkNX Partner Up to Advance Reliability & Performance of AI Data Centers",
+      "title_ja": "CarbiceとDarkNXがAIデータセンターの信頼性とパフォーマンス向上に向けて提携",
+      "summary_ja": "CarbiceとDarkNXは、次世代AIデータセンターの開発に向けた戦略的パートナーシップを発表しました。この提携により、Carbiceはデータセンター設計の専門家としての地位を確立し、長期的なパフォーマンス検証を通じて次世代のAIインフラをサポートします。この取り組みは、エネルギー効率を高め、CO₂排出量を大幅に削減することを目指しています。",
+      "key_points": [
+        "Carbiceは、データセンター設計におけるシステムレベルの専門知識を提供。",
+        "提携により、より信頼性が高く、高性能なAIインフラを実現。",
+        "Carbiceの冷却技術は、無駄な電力消費を削減し、CO₂排出を抑制。",
+        "DarkNXは、Carbiceの材料と技術を活用してデータセンターのコストを削減。",
+        "両社の協力は、次世代のAIデータセンターを未来にわたり脆弱性のないものにすることを目指す。"
+      ],
+      "glossary": [
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能の処理に特化したサーバーとインフラを持つデータセンター。"
+        },
+        {
+          "term": "冷却技術",
+          "explain_ja": "機器の過熱を防ぐための技術。性能維持や効率化に貢献する。"
+        },
+        {
+          "term": "CO₂排出量",
+          "explain_ja": "二酸化炭素の排出量。環境への影響を考慮するための重要な指標。"
+        }
+      ],
+      "personal_actions": [
+        "最新の冷却技術や材料についての情報を定期的に確認する。",
+        "パートナーシップが発表されたデータセンター設計の事例を調査する。",
+        "エネルギー効率に関する社内の方針を見直し、最適化を提案する。"
       ],
       "tags": [
         "DC",
@@ -41,69 +73,44 @@
       ]
     },
     {
-      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-6-in-amazon-bedrock-aws-builder-id-sign-in-with-apple-and-more-february-9-2026/",
-      "source": "Amazon.com",
-      "publishedAt": "2026-02-09T20:42:04Z",
-      "title": "AWS Weekly Roundup: Claude Opus 4.6 in Amazon Bedrock, AWS Builder ID Sign in with Apple, and more (February 9, 2026)",
-      "title_ja": "AWS週間まとめ：Amazon BedrockにおけるClaude Opus 4.6、AWS Builder IDのAppleサインインなど（2026年2月9日）",
-      "summary_ja": "AWSの最新情報として、今回は新しいコンピューティングインスタンスやネットワークセキュリティの価格引き下げが発表された。特に、Amazon EC2ではカスタムインテルXeon 6プロセッサを使った新しいインスタンスが導入された。これにより、コスト効率の良いリソース管理が期待される。",
+      "url": "https://www.techpowerup.com/346202/carbice-darknx-partner-up-to-advance-reliability-performance-of-ai-data-centers",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-02-10T18:30:26Z",
+      "title": "Carbice & DarkNX Partner Up to Advance Reliability & Performance of AI Data Centers",
+      "title_ja": "CarbiceとDarkNXがAIデータセンターの信頼性と性能向上に向けた提携",
+      "summary_ja": "Carbiceは、次世代AIデータセンターの開発を目指すDarkNXと戦略的パートナーシップを結びました。この提携により、Carbiceはデータセンター設計の専門家としての役割を強化し、冷却技術を通じてエネルギー効率を向上させます。結果として、システムの信頼性が増し、ライフサイクル排出量が大幅に削減されることが期待されています。",
       "key_points": [
-        "Amazon EC2に新しいC8id, M8id, R8idインスタンスが追加された。",
-        "AWS Network Firewallの価格が引き下げられた。",
-        "Amazon DynamoDBのグローバルテーブルに関する新しい機能が紹介された。"
+        "Carbiceは、データセンター設計におけるシステムレベルの専門知識を提供。",
+        "DarkNXの300MWデータセンターキャンパスでCarbiceの冷却技術が採用される。",
+        "コスト削減とエネルギー効率向上を目的としたタスクを実施。",
+        "Carbice Labがデータ収集および長期性能検証を支援。",
+        "パートナーシップにより、信頼性の高いAIインフラの構築が進む。"
       ],
       "glossary": [
         {
-          "term": "EC2",
-          "explain_ja": "Amazon Elastic Compute Cloudの略で、スケーラブルなコンピューティング能力を提供するサービス。"
+          "term": "Carbice",
+          "explain_ja": "カーボンナノチューブと高度な製造ソリューションに特化した企業。"
         },
         {
-          "term": "AWS",
-          "explain_ja": "Amazon Web Servicesの略で、クラウドコンピューティングサービスを提供するプラットフォーム。"
+          "term": "DarkNX",
+          "explain_ja": "次世代のAIデータセンターを構築するデジタルインフラ企業。"
         },
         {
-          "term": "DynamoDB",
-          "explain_ja": "フルマネージドなNoSQLデータベースサービスで、大規模なアプリケーション向けに高いパフォーマンスを提供。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能関連の処理に特化したデータセンター。"
+        },
+        {
+          "term": "冷却技術",
+          "explain_ja": "システムや機器の温度を制御し、性能を維持するための技術。"
         }
       ],
       "personal_actions": [
-        "新しいEC2インスタンスの利用可能性を確認し、リソースの最適化を図る。",
-        "AWS Network Firewallの利用状況を見直し、コスト削減の可能性を探る。",
-        "DynamoDBの新機能について学び、プロジェクトへの適用を検討する。"
+        "自社のデータセンターの冷却技術の性能を確認する。",
+        "パートナーシップを活用した新しい技術導入の可能性を検討する。",
+        "定期的な性能検証のプロセスを整備する。"
       ],
       "tags": [
-        "インフラ"
-      ]
-    },
-    {
-      "url": "https://www.tomshardware.com/software/linux/torvalds-confirms-linux-kernel-7-0-is-almost-ready-for-release-bringing-many-performance-improvements-with-it-desktop-use-and-gaming-may-see-boost-ubuntu-26-04-lts-hopes-to-use-as-default-kernel",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-02-09T17:52:16Z",
-      "title": "Torvalds confirms Linux Kernel 7.0 is almost ready for release, bringing many performance improvements with it — desktop use and gaming may see boost, Ubuntu 26.04 LTS hopes to use as default Kernel",
-      "title_ja": "トーバルズ、Linuxカーネル7.0のリリースがほぼ準備完了と確認 - デスクトップ使用やゲーム性能向上の期待",
-      "summary_ja": "Linuxカーネル7.0がほぼリリース準備を整えたことがトーバルズによって確認されました。この新しいバージョンは、複数のパフォーマンス向上をもたらすとされています。特にデスクトップ使用とゲームにおいてパフォーマンスの向上が期待されており、Ubuntu 26.04 LTSでもこのカーネルがデフォルトで使用される見込みです。",
-      "key_points": [
-        "Linuxカーネル7.0のリリースがほぼ完了。",
-        "パフォーマンスの向上が目指されている。",
-        "デスクトップ使用とゲームにおいて性能向上が期待される。",
-        "Ubuntu 26.04 LTSがこのカーネルをデフォルトとして使用する予定。"
-      ],
-      "glossary": [
-        {
-          "term": "Linuxカーネル",
-          "explain_ja": "Linuxオペレーティングシステムの中核部分で、ハードウェアとソフトウェア間の管理を行う。"
-        },
-        {
-          "term": "Ubuntu 26.04 LTS",
-          "explain_ja": "Ubuntuの長期サポート版で、安定性とセキュリティが重視されるLinuxディストリビューションの一つ。"
-        }
-      ],
-      "personal_actions": [
-        "Linuxカーネルの最新情報を定期的にチェックする。",
-        "使用しているLinuxディストリビューションのアップデートを確認する。",
-        "新しいカーネルのテスト環境を準備する。"
-      ],
-      "tags": [
+        "DC",
         "インフラ"
       ]
     }
