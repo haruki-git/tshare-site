@@ -1,117 +1,107 @@
 {
-  "date": "2026-02-12",
-  "generatedAtJST": "2026-02-12T07:15:55.378+09:00",
+  "date": "2026-02-13",
+  "generatedAtJST": "2026-02-13T07:15:43.822+09:00",
   "items": [
     {
-      "url": "https://www.theregister.com/2026/02/10/microsoft_high_temperature_superconductors_hopium/",
-      "source": "Theregister.com",
-      "publishedAt": "2026-02-10T21:45:48Z",
-      "title": "Microsoft touts far-off high-temperature superconducting tech for datacenter efficiency",
-      "title_ja": "マイクロソフト、高温超伝導技術によるデータセンター効率化を目指す",
-      "summary_ja": "マイクロソフトは、高温超伝導（HTS）電力供給システムを使って、データセンターの電力消費を低減する新たな方法を発表しました。この技術は、従来の銅やアルミニウムのワイヤーに代わるもので、効率的な電力供給が期待されています。しかし、HTSの普及には高コストや技術的な課題も存在します。現在、同社は技術の開発と評価を行っており、実用化には時間を要する見込みです。",
+      "url": "https://www.channelnewsasia.com/business/anthropic-shoulder-some-costs-data-center-expansions-threaten-raise-power-bills-5924596",
+      "source": "CNA",
+      "publishedAt": "2026-02-11T21:18:35Z",
+      "title": "Anthropic to shoulder some costs as data center expansions threaten to raise power bills",
+      "title_ja": "Anthropic、データセンターの拡張による電力料金上昇を抑えるためのコストを負担",
+      "summary_ja": "AI企業のAnthropicは、水曜日にデータセンターの影響を抑えるための取り組みを発表しました。これにより、消費者のエネルギー価格に対する影響を制限することを目的としています。データセンターの拡張は、AI技術に必要なパワーを消費するインフラに対する投資の増加を伴います。",
       "key_points": [
-        "マイクロソフトは、高温超伝導電力供給システムを導入することでデータセンターの効率を向上させることを目指している。",
-        "HTSケーブルはほぼ完全に電気抵抗がないため、損失のない電力供給を実現する。",
-        "この技術により、物理的なスペースを増やさずに電力密度を高めることが可能になる。",
-        "現在、HTSは開発と評価の段階にあり、商業化には数年かかると予想されている。",
-        "マイクロソフトは、HTSを使ったシステムの開発にVeirという企業に投資している。"
+        "Anthropicはデータセンターの拡張に伴うコストを一部負担することを決定した。",
+        "この取り組みは消費者エネルギー価格への影響を抑えることを目的とする。",
+        "AI技術の発展に伴い、エネルギー消費が増加している。",
+        "データセンターの電力需要が高まる中、企業の負担が増加する可能性がある。",
+        "Anthropicは、持続可能なエネルギー管理についての主導的な立場を示している。"
       ],
       "glossary": [
         {
-          "term": "高温超伝導（HTS）",
-          "explain_ja": "電気抵抗がほぼゼロになる物質で、効果的な電力供給を可能にする技術。"
+          "term": "データセンター",
+          "explain_ja": "情報を集約・管理する施設で、サーバーやネットワーク機器が設置されている。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能の略で、人間の知的作業を模倣または代行する技術。"
+        }
+      ],
+      "personal_actions": [
+        "自社のデータセンターのエネルギー効率に関する現状を確認する。",
+        "大規模なインフラ拡張に対するコスト管理策を見直す。",
+        "エネルギー使用の最適化に向けた取り組みを検討する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.channelnewsasia.com/business/meta-begins-construction-10-billion-indiana-data-center-boost-ai-capabilities-5924216",
+      "source": "CNA",
+      "publishedAt": "2026-02-11T18:04:45Z",
+      "title": "Meta begins construction of $10 billion Indiana data center to boost AI capabilities",
+      "title_ja": "メタ、AI能力向上のためインディアナ州に100億ドルのデータセンター建設開始",
+      "summary_ja": "メタは、AIのための計算能力を強化する目的で、インディアナ州に100億ドルのデータセンターの建設を開始したと発表しました。このデータセンターは、大量のコンピューティングパワーを確保するための重要なステップとされています。投資の背景には、AI技術の急速な発展とそれに伴う需要の増加があります。",
+      "key_points": [
+        "メタは100億ドルのデータセンターをインディアナ州に建設中。",
+        "このデータセンターは、AIに必要な計算能力を支持するためのもの。",
+        "メタのAI野望を支えるためのコンピューティングパワーの確保が目的。"
+      ],
+      "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能。自動的に学習し、推論を行うコンピュータシステムを指す。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "コンピュータシステムや関連機器を集中的に管理・運営するための施設。"
+          "explain_ja": "大量のデータを保存・管理・処理するための専門施設。"
         }
       ],
       "personal_actions": [
-        "HTS技術の進展を追い、将来的な導入に向けた情報を収集する。",
-        "現行の電力供給システムの効率化について、設備の評価を行う。"
+        "AI関連の技術トレンドを追い、業務にどう活用できるかを検討する。",
+        "最新のデータセンター技術について学び、セキュリティや効率向上のアイデアを探る。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.storagereview.com/news/trane-technologies-to-acquire-liquidstack-to-expand-its-data-center-liquid-cooling-portfolio",
+      "source": "Storagereview.com",
+      "publishedAt": "2026-02-11T15:40:31Z",
+      "title": "Trane Technologies to Acquire LiquidStack to Expand its Data Center Liquid Cooling Portfolio",
+      "title_ja": "トレインテクノロジーズ、データセンター用液体冷却ポートフォリオ拡大のためLiquidStackを買収",
+      "summary_ja": "トレインテクノロジーズは、データセンター向けの熱管理能力を強化するためにLiquidStackの買収契約を締結した。LiquidStackは、高密度計算環境向けの液体冷却技術で知られる企業である。今回の買収により、トレインはデータセンターの冷却ソリューションを一段と強化し、グローバルにスケールすることを目指す。",
+      "key_points": [
+        "トレインテクノロジーズがLiquidStackを買収し、データセンターの熱管理能力を深める。",
+        "LiquidStackは高密度計算向けの液体冷却ソリューションを提供している。",
+        "今回の買収は2023年のマイノリティ投資を基にしている。",
+        "LiquidStack CEOは引き続き経営を担い、同社はトレインの商業HVACビジネスユニット内で運営される。",
+        "統合冷却ソリューションが全体のデータセンターエコシステムでの熱管理能力を向上させることを目指している。"
+      ],
+      "glossary": [
+        {
+          "term": "液体冷却",
+          "explain_ja": "液体を用いてコンピュータの熱を管理する技術。特に高密度な計算環境での効率が求められる。"
+        },
+        {
+          "term": "高密度計算",
+          "explain_ja": "大量のデータ処理を行うための密度が高いコンピュータシステム。"
+        },
+        {
+          "term": "トレインテクノロジーズ",
+          "explain_ja": "エネルギー効率の高い冷却システムを提供する企業で、最近LiquidStackを買収した。"
+        }
+      ],
+      "personal_actions": [
+        "自社の熱管理システムの効率を評価し、改善点を検討する。",
+        "新技術を導入した場合の影響をシミュレーションする。",
+        "液体冷却技術に関する社内トレーニングを計画する。"
       ],
       "tags": [
         "DC"
-      ]
-    },
-    {
-      "url": "https://www.techpowerup.com/346202/carbice-darknx-partner-to-advance-reliability-and-performance-of-ai-data-centers",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-02-10T18:30:26Z",
-      "title": "Carbice & DarkNX Partner Up to Advance Reliability & Performance of AI Data Centers",
-      "title_ja": "CarbiceとDarkNXがAIデータセンターの信頼性とパフォーマンス向上に向けて提携",
-      "summary_ja": "CarbiceとDarkNXは、次世代AIデータセンターの開発に向けた戦略的パートナーシップを発表しました。この提携により、Carbiceはデータセンター設計の専門家としての地位を確立し、長期的なパフォーマンス検証を通じて次世代のAIインフラをサポートします。この取り組みは、エネルギー効率を高め、CO₂排出量を大幅に削減することを目指しています。",
-      "key_points": [
-        "Carbiceは、データセンター設計におけるシステムレベルの専門知識を提供。",
-        "提携により、より信頼性が高く、高性能なAIインフラを実現。",
-        "Carbiceの冷却技術は、無駄な電力消費を削減し、CO₂排出を抑制。",
-        "DarkNXは、Carbiceの材料と技術を活用してデータセンターのコストを削減。",
-        "両社の協力は、次世代のAIデータセンターを未来にわたり脆弱性のないものにすることを目指す。"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能の処理に特化したサーバーとインフラを持つデータセンター。"
-        },
-        {
-          "term": "冷却技術",
-          "explain_ja": "機器の過熱を防ぐための技術。性能維持や効率化に貢献する。"
-        },
-        {
-          "term": "CO₂排出量",
-          "explain_ja": "二酸化炭素の排出量。環境への影響を考慮するための重要な指標。"
-        }
-      ],
-      "personal_actions": [
-        "最新の冷却技術や材料についての情報を定期的に確認する。",
-        "パートナーシップが発表されたデータセンター設計の事例を調査する。",
-        "エネルギー効率に関する社内の方針を見直し、最適化を提案する。"
-      ],
-      "tags": [
-        "DC",
-        "インフラ"
-      ]
-    },
-    {
-      "url": "https://www.techpowerup.com/346202/carbice-darknx-partner-up-to-advance-reliability-performance-of-ai-data-centers",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-02-10T18:30:26Z",
-      "title": "Carbice & DarkNX Partner Up to Advance Reliability & Performance of AI Data Centers",
-      "title_ja": "CarbiceとDarkNXがAIデータセンターの信頼性と性能向上に向けた提携",
-      "summary_ja": "Carbiceは、次世代AIデータセンターの開発を目指すDarkNXと戦略的パートナーシップを結びました。この提携により、Carbiceはデータセンター設計の専門家としての役割を強化し、冷却技術を通じてエネルギー効率を向上させます。結果として、システムの信頼性が増し、ライフサイクル排出量が大幅に削減されることが期待されています。",
-      "key_points": [
-        "Carbiceは、データセンター設計におけるシステムレベルの専門知識を提供。",
-        "DarkNXの300MWデータセンターキャンパスでCarbiceの冷却技術が採用される。",
-        "コスト削減とエネルギー効率向上を目的としたタスクを実施。",
-        "Carbice Labがデータ収集および長期性能検証を支援。",
-        "パートナーシップにより、信頼性の高いAIインフラの構築が進む。"
-      ],
-      "glossary": [
-        {
-          "term": "Carbice",
-          "explain_ja": "カーボンナノチューブと高度な製造ソリューションに特化した企業。"
-        },
-        {
-          "term": "DarkNX",
-          "explain_ja": "次世代のAIデータセンターを構築するデジタルインフラ企業。"
-        },
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能関連の処理に特化したデータセンター。"
-        },
-        {
-          "term": "冷却技術",
-          "explain_ja": "システムや機器の温度を制御し、性能を維持するための技術。"
-        }
-      ],
-      "personal_actions": [
-        "自社のデータセンターの冷却技術の性能を確認する。",
-        "パートナーシップを活用した新しい技術導入の可能性を検討する。",
-        "定期的な性能検証のプロセスを整備する。"
-      ],
-      "tags": [
-        "DC",
-        "インフラ"
       ]
     }
   ]
