@@ -1,104 +1,118 @@
 {
-  "date": "2026-02-14",
-  "generatedAtJST": "2026-02-14T07:15:59.770+09:00",
+  "date": "2026-02-15",
+  "generatedAtJST": "2026-02-15T07:15:54.396+09:00",
   "items": [
     {
-      "url": "https://richmond.com/news/state-regional/government-politics/article_5280a71d-c046-45a1-95b9-c39ee575058f.html",
-      "source": "Richmond.com",
-      "publishedAt": "2026-02-12T20:30:00Z",
-      "title": "Data center requests for power soar, Dominion reports",
-      "title_ja": "データセンターの電力需要が急増、ドミニオンが報告",
-      "summary_ja": "データセンターによる電力供給のリクエストが前年に比べて75%増加しています。現在、ドミニオン社には約70,000メガワットの電力が求められています。この急増はデータセンターの増加とともに、エネルギーインフラへの圧力を高める可能性があります。",
+      "url": "http://electrek.co/2026/02/13/google-secures-1-gw-solar-deal-as-texas-data-center-load-surges/",
+      "source": "Electrek",
+      "publishedAt": "2026-02-13T21:51:24Z",
+      "title": "Google secures 1 GW solar deal as Texas data‑center load surges",
+      "title_ja": "テキサスのデータセンター電力需要急増に伴い、グーグルが1GWの太陽光発電契約を締結",
+      "summary_ja": "グーグルはテキサス州のデータセンターを支えるために、TotalEnergiesと1GWの太陽光発電契約を結びました。この契約は、805MWのWichita太陽光発電所と195MWのMustang Creekサイトからの電力供給に基づいています。この動きは、大規模なテクノロジー企業が再生可能エネルギーへの直接契約を進めていることを示唆しています。",
       "key_points": [
-        "データセンターの電力需要が前年に比べて75%増加",
-        "現在求められている電力量は約70,000メガワット",
-        "データセンターの増加が影響している",
-        "ドミニオン社はこの状況に対応する必要がある"
+        "グーグルがテキサス州でのデータセンター向けに1GWの太陽光発電契約を締結",
+        "長期電力購入契約（PPA）により、28テラワット時の電力を15年間供給",
+        "新規発電プロジェクトに依存し、地域の電力グリッドへの貢献を目指す",
+        "TotalEnergiesの米国の再生可能エネルギー及びストレージ容量は約10GWに達する",
+        "データセンターの24時間需要には依然としてグリッドからの電力供給が必要"
       ],
       "glossary": [
         {
-          "term": "メガワット",
-          "explain_ja": "電力の単位であり、1メガワットは100万ワットに相当します。"
+          "term": "PPA",
+          "explain_ja": "長期電力購入契約（Power Purchase Agreement）は、電力の買い手と売り手が将来の電力供給を約束する契約です。"
         },
         {
-          "term": "ドミニオン社",
-          "explain_ja": "アメリカのエネルギー企業で、主に電気と天然ガスを供給している。"
+          "term": "ERCOT",
+          "explain_ja": "テキサス州独自の電力市場であるElectric Reliability Council of Texasの略称です。"
+        },
+        {
+          "term": "GW",
+          "explain_ja": "ギガワット（Gigawatt）の略で、電力の単位です。1GWは10億ワットに相当します。"
         }
       ],
       "personal_actions": [
-        "電力の供給状況やインフラの安定性を確認する",
-        "データセンターへの依存度を見直す",
-        "持続可能なエネルギー源の導入を検討する"
+        "自社のデータセンターの電力需要を再評価し、持続可能なエネルギー対策を検討する",
+        "新たな発電源の契約状況について、供給業者と定期的に確認する",
+        "地域の電力供給に関する動向を把握し、長期的な電力戦略を策定する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.commondreams.org/news/bernie-sanders-ai",
-      "source": "Common Dreams",
-      "publishedAt": "2026-02-12T20:15:15Z",
-      "title": "‘What a Surprise’: Sanders Undeterred by Bezos-Owned Washington Post's Dismissal of AI Data Center Pause",
-      "title_ja": "サンダース、AIデータセンター停止の提案を拒否するワシントン・ポストの評価に動じず",
-      "summary_ja": "サンダース上院議員は、ワシントン・ポストにおいて「サンダースの最悪のアイデア」として扱われるも、AIデータセンター建設の一時停止を求める姿勢を崩さない。彼の提案は進歩的な政策として注目されており、業界への影響が懸念されている。さらなる議論を呼ぶ中、彼の主張は依然として強い支持を得ている。",
+      "url": "https://www.techpowerup.com/346372/micron-9650-pcie-gen-6-ssds-enters-mass-production",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-02-13T17:25:47Z",
+      "title": "Micron 9650 PCIe Gen 6 SSDs Enters Mass Production",
+      "title_ja": "Micron 9650 PCIe Gen 6 SSDの量産開始",
+      "summary_ja": "Micronは9650 NVMe SSDの量産を開始し、これが最初のPCIe Gen 6データセンター向けドライブとなります。このシリーズは2025年7月に初めて発表され、Micron G9 TLC NANDや独自のSSDコントローラーASICを搭載しています。9650はPCIe Gen 5の2倍の性能を持ち、AIトレーニングや推論作業向けに特化した展開が期待されています。",
       "key_points": [
-        "サンダース議員はAIデータセンターの建設停止を提案している。",
-        "ワシントン・ポストがそれを「最悪のアイデア」と評価した。",
-        "サンダースはこの批判を気にせず、提案を続けている。",
-        "提案は進歩的政策として注目を集めている。",
-        "業界に対する影響が懸念されている。"
+        "9650 SSDは初のPCIe Gen 6データセンター向けドライブ。",
+        "最大28 GB/sのシーケンシャルリード速度を実現。",
+        "シーケンシャルライティング速度は14 GB/s、ランダムリードは550万IOPS。",
+        "25ワットの消費電力でPCIe Gen 5の2倍の性能。",
+        "E1.SおよびE3.Sフォーマットで利用可能で、E1.Sは液体冷却にも対応。"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能（AI）関連のプログラムやサービスを運用するためのデータセンター。"
+          "term": "NVMe",
+          "explain_ja": "Non-Volatile Memory Expressの略で、高速なストレージ接続プロトコルの一つ。"
         },
         {
-          "term": "モラトリアム",
-          "explain_ja": "一時的な停止または中断を意味する用語。"
+          "term": "ASIC",
+          "explain_ja": "Application-Specific Integrated Circuitの略で、特定の用途向けに設計された集積回路。"
+        },
+        {
+          "term": "IOPS",
+          "explain_ja": "Input/Output Operations Per Secondの略で、ストレージデバイスの性能を示す指標。"
+        },
+        {
+          "term": "TLC NAND",
+          "explain_ja": "Triple-Level Cell NANDの略で、1つのセルに3ビットのデータを格納できるフラッシュメモリ技術。"
         }
       ],
       "personal_actions": [
-        "AIデータセンターに関する地域の動向を確認する。",
-        "議員にこの提案についての意見を送る。"
+        "新しいSSDの性能向上について社内で検討する。",
+        "システムのPCIe Gen 6対応状況を確認する。",
+        "AIワークロードに対するストレージ要件を見直す。"
       ],
       "tags": [
-        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://www.notebookcheck.net/Samsung-ships-priciest-AI-memory-Nvidia-ever-ordered-as-HBM4-exceeds-key-specifications.1225439.0.html",
-      "source": "Notebookcheck.net",
-      "publishedAt": "2026-02-12T18:17:00Z",
-      "title": "Samsung ships priciest AI memory Nvidia ever ordered as HBM4 exceeds key specifications",
-      "title_ja": "Samsung、Nvidiaが史上最も高価なAIメモリを出荷、HBM4が重要仕様を超える",
-      "summary_ja": "Samsungは次世代HBM4メモリの商業出荷を開始し、NvidiaのAIデータセンター向けに供給されます。このHBM4メモリは、JEDECおよびNvidiaの仕様を上回る性能を示しています。Nvidiaは、これまでのHBM3Eの2倍の価格である約500ドルをSamsungに支払っています。",
+      "url": "https://alltoc.com/tech/why-will-anthropic-cover-local-electricity-costs",
+      "source": "Alltoc.com",
+      "publishedAt": "2026-02-13T04:02:33Z",
+      "title": "Why will Anthropic cover local electricity costs?",
+      "title_ja": "Anthropicが地域の電力コストを負担する理由とは？",
+      "summary_ja": "Anthropicは、データセンターの拡張によって近隣住民の電力料金が増加しないように約束しました。この取り組みには、電力網のアップグレードへの投資、新たな発電資源の構築または調達、消費者の電力料金の増加分の直接補填が含まれます。AI企業によるデータセンターの急増に対する地域の反発を緩和する目的があり、この方針が実行されれば、AI企業の拡張について新たな基準が定まる可能性があります。",
       "key_points": [
-        "HBM4メモリは最大13 Gbpsの速度を実現",
-        "総帯域幅は3.3 TB/sで、Nvidiaの要求を大きく超える",
-        "新しいプロセス技術によりエネルギー効率が40%改善",
-        "最大36 GBのメモリ容量を持つ12層スタックが提供される",
-        "Samsungは需要に応じてメモリ供給を安定化させる計画"
+        "Anthropicは周辺地域の電力コストを負担することを発表。",
+        "地域の電力網のアップグレードや新たな電力資源の構築を約束。",
+        "消費者の電力料金の増加分を直接補填する方針。",
+        "地域住民や当局の反発を避けるための取り組み。",
+        "具体的な実施方法や対象地域に関する詳細は不明。",
+        "AI企業の拡大による地域社会への影響に対する新たな基準となる可能性。"
       ],
       "glossary": [
         {
-          "term": "HBM4",
-          "explain_ja": "次世代の高帯域幅メモリで、主にデータセンター向けのAIアプリケーションに使用される。"
+          "term": "データセンター",
+          "explain_ja": "情報処理やストレージのための設備を持つ場所。"
         },
         {
-          "term": "JEDEC",
-          "explain_ja": "Joint Electron Device Engineering Councilの略で、半導体業界の標準化団体。"
+          "term": "電力網",
+          "explain_ja": "電気を供給するための発電所、送電線、変電所などのネットワーク。"
         },
         {
-          "term": "DRAM",
-          "explain_ja": "Dynamic Random-Access Memoryの略で、コンピュータのメモリとして広く使用される。"
+          "term": "AI",
+          "explain_ja": "人工知能。機械が人間のように学習や判断をする能力。"
         }
       ],
       "personal_actions": [
-        "最新のHBM4メモリの動向を確認し、AIインフラの最適化を検討する",
-        "Nvidiaの最新GPUに対応するための機器のアップグレードを計画する",
-        "エネルギー効率向上のために、冷却システムの見直しを行う"
+        "地域の電力供給や電気料金の状況を確認する。",
+        "Anthropicの取り組みについて地域住民で話し合う。",
+        "電力の使用に関する地元の方針や取り組みに関心を持つ。"
       ],
       "tags": [
         "AI"
