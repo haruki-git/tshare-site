@@ -1,118 +1,108 @@
 {
-  "date": "2026-02-15",
-  "generatedAtJST": "2026-02-15T07:15:54.396+09:00",
+  "date": "2026-02-16",
+  "generatedAtJST": "2026-02-16T07:15:56.340+09:00",
   "items": [
     {
-      "url": "http://electrek.co/2026/02/13/google-secures-1-gw-solar-deal-as-texas-data-center-load-surges/",
-      "source": "Electrek",
-      "publishedAt": "2026-02-13T21:51:24Z",
-      "title": "Google secures 1 GW solar deal as Texas data‑center load surges",
-      "title_ja": "テキサスのデータセンター電力需要急増に伴い、グーグルが1GWの太陽光発電契約を締結",
-      "summary_ja": "グーグルはテキサス州のデータセンターを支えるために、TotalEnergiesと1GWの太陽光発電契約を結びました。この契約は、805MWのWichita太陽光発電所と195MWのMustang Creekサイトからの電力供給に基づいています。この動きは、大規模なテクノロジー企業が再生可能エネルギーへの直接契約を進めていることを示唆しています。",
+      "url": "https://www.tomshardware.com/pc-components/ssds/worlds-first-pcie-6-0-ssd-enters-mass-production-with-28gb-s-speeds-micron-9650-series-ssds-support-air-and-liquid-cooling",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-02-14T12:00:00Z",
+      "title": "First PCIe 6.0 SSD enters mass production with 28GB/s speeds, 5.5 million IOPS, and liquid cooling — Micron 9650 Series SSDs support air and liquid cooling",
+      "title_ja": "世界初のPCIe 6.0 SSDが量産開始、28GB/sの速度と5.5百万IOPSを実現",
+      "summary_ja": "Micronが世界初の量産PCIe 6.0データセンターSSDを発表しました。Micron 9650シリーズは、最大28GB/sの速度を誇ります。この技術革新により、データセンターのパフォーマンスが大幅に向上することが期待されます。",
       "key_points": [
-        "グーグルがテキサス州でのデータセンター向けに1GWの太陽光発電契約を締結",
-        "長期電力購入契約（PPA）により、28テラワット時の電力を15年間供給",
-        "新規発電プロジェクトに依存し、地域の電力グリッドへの貢献を目指す",
-        "TotalEnergiesの米国の再生可能エネルギー及びストレージ容量は約10GWに達する",
-        "データセンターの24時間需要には依然としてグリッドからの電力供給が必要"
+        "Micronが初の量産PCIe 6.0 SSDを発表",
+        "Micron 9650シリーズは最大28GB/sの速度を持つ",
+        "5.5百万IOPSを実現",
+        "空冷と水冷の両方に対応",
+        "データセンター向けの技術革新"
       ],
       "glossary": [
         {
-          "term": "PPA",
-          "explain_ja": "長期電力購入契約（Power Purchase Agreement）は、電力の買い手と売り手が将来の電力供給を約束する契約です。"
+          "term": "PCIe 6.0",
+          "explain_ja": "次世代のPCI Expressインターフェース規格で、高速データ転送を実現する。"
         },
         {
-          "term": "ERCOT",
-          "explain_ja": "テキサス州独自の電力市場であるElectric Reliability Council of Texasの略称です。"
+          "term": "IOPS",
+          "explain_ja": "Input/Output Operations Per Secondの略で、ストレージの性能指標の一つ。"
         },
         {
-          "term": "GW",
-          "explain_ja": "ギガワット（Gigawatt）の略で、電力の単位です。1GWは10億ワットに相当します。"
+          "term": "SSD",
+          "explain_ja": "Solid State Driveの略で、フラッシュメモリを使用した記憶装置。"
         }
       ],
       "personal_actions": [
-        "自社のデータセンターの電力需要を再評価し、持続可能なエネルギー対策を検討する",
-        "新たな発電源の契約状況について、供給業者と定期的に確認する",
-        "地域の電力供給に関する動向を把握し、長期的な電力戦略を策定する"
+        "新しいPCIe 6.0 SSDの導入を検討する",
+        "データセンターのインフラを最新技術に合わせてアップグレードする",
+        "SSDの冷却システムの適正評価を行う"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.techpowerup.com/346372/micron-9650-pcie-gen-6-ssds-enters-mass-production",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-02-13T17:25:47Z",
-      "title": "Micron 9650 PCIe Gen 6 SSDs Enters Mass Production",
-      "title_ja": "Micron 9650 PCIe Gen 6 SSDの量産開始",
-      "summary_ja": "Micronは9650 NVMe SSDの量産を開始し、これが最初のPCIe Gen 6データセンター向けドライブとなります。このシリーズは2025年7月に初めて発表され、Micron G9 TLC NANDや独自のSSDコントローラーASICを搭載しています。9650はPCIe Gen 5の2倍の性能を持ち、AIトレーニングや推論作業向けに特化した展開が期待されています。",
+      "url": "https://fortune.com/2026/02/14/forgent-ipo-bring-sexy-back-electrical-equipment-power-ai-boom/",
+      "source": "Fortune",
+      "publishedAt": "2026-02-14T11:02:00Z",
+      "title": "Forgent’s IPO is ‘bringing sexy back’ to the electrical equipment helping power the AI boom, CEO says",
+      "title_ja": "ForgentのIPOが電気機器を再注目させるとCEOが語る",
+      "summary_ja": "ForgentのIPOは、AIブームを支える電気機器に再び注目を集めています。データセンターと電力網の拡大を背景に、Forgentは全国規模で製造を拡大しています。この成長は、業界全体にポジティブな影響を与える可能性があります。",
       "key_points": [
-        "9650 SSDは初のPCIe Gen 6データセンター向けドライブ。",
-        "最大28 GB/sのシーケンシャルリード速度を実現。",
-        "シーケンシャルライティング速度は14 GB/s、ランダムリードは550万IOPS。",
-        "25ワットの消費電力でPCIe Gen 5の2倍の性能。",
-        "E1.SおよびE3.Sフォーマットで利用可能で、E1.Sは液体冷却にも対応。"
+        "ForgentがIPOを実施し注目を集めている。",
+        "データセンターと電力網の拡大が背景にある。",
+        "AIブームが電気機器への需要を高めている。",
+        "全国規模での製造拡大を進めている。"
       ],
       "glossary": [
         {
-          "term": "NVMe",
-          "explain_ja": "Non-Volatile Memory Expressの略で、高速なストレージ接続プロトコルの一つ。"
+          "term": "IPO",
+          "explain_ja": "企業が株式を公開し、一般投資家に販売するプロセス。"
         },
         {
-          "term": "ASIC",
-          "explain_ja": "Application-Specific Integrated Circuitの略で、特定の用途向けに設計された集積回路。"
+          "term": "データセンター",
+          "explain_ja": "データの保存、処理、管理を行う施設。"
         },
         {
-          "term": "IOPS",
-          "explain_ja": "Input/Output Operations Per Secondの略で、ストレージデバイスの性能を示す指標。"
-        },
-        {
-          "term": "TLC NAND",
-          "explain_ja": "Triple-Level Cell NANDの略で、1つのセルに3ビットのデータを格納できるフラッシュメモリ技術。"
+          "term": "電力網",
+          "explain_ja": "電気エネルギーを供給するためのインフラ。"
         }
       ],
       "personal_actions": [
-        "新しいSSDの性能向上について社内で検討する。",
-        "システムのPCIe Gen 6対応状況を確認する。",
-        "AIワークロードに対するストレージ要件を見直す。"
+        "Forgentの製品やサービスについて最新情報を確認する。",
+        "電気機器業界のトレンドを把握し、ビジネスにどう影響するか考察する。"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://alltoc.com/tech/why-will-anthropic-cover-local-electricity-costs",
-      "source": "Alltoc.com",
-      "publishedAt": "2026-02-13T04:02:33Z",
-      "title": "Why will Anthropic cover local electricity costs?",
-      "title_ja": "Anthropicが地域の電力コストを負担する理由とは？",
-      "summary_ja": "Anthropicは、データセンターの拡張によって近隣住民の電力料金が増加しないように約束しました。この取り組みには、電力網のアップグレードへの投資、新たな発電資源の構築または調達、消費者の電力料金の増加分の直接補填が含まれます。AI企業によるデータセンターの急増に対する地域の反発を緩和する目的があり、この方針が実行されれば、AI企業の拡張について新たな基準が定まる可能性があります。",
+      "url": "https://www.ubergizmo.com/2026/02/lenovo-legion-y700-2026/",
+      "source": "Ubergizmo",
+      "publishedAt": "2026-02-14T17:44:33Z",
+      "title": "Lenovo Unveils AI-Enhanced Legion Y700 (2026): A New Benchmark For Compact Gaming Tablets",
+      "title_ja": "Lenovo、AI強化のLegion Y700（2026）を発表：コンパクトゲーミングタブレットの新たな基準",
+      "summary_ja": "Lenovoは、モバイルゲーマー向けの課題を解決するAIを搭載したLegion Y700の2026年モデルを発表しました。このタブレットは、ネットワーク遅延を安定化させる「Super Internet 3.0」スイートを特徴とし、iOSデバイスとのファイル共有をスムーズに行うことができます。さらに、AIにより眼精疲労を軽減する機能も実装されており、ゲーム体験の質を向上させています。",
       "key_points": [
-        "Anthropicは周辺地域の電力コストを負担することを発表。",
-        "地域の電力網のアップグレードや新たな電力資源の構築を約束。",
-        "消費者の電力料金の増加分を直接補填する方針。",
-        "地域住民や当局の反発を避けるための取り組み。",
-        "具体的な実施方法や対象地域に関する詳細は不明。",
-        "AI企業の拡大による地域社会への影響に対する新たな基準となる可能性。"
+        "AIを活用した「Super Internet 3.0」により、ネットワーク遅延が改善される。",
+        "タブレットは8.8インチの3K解像度（3040 x 1904）と165 Hzのリフレッシュレートを備える。",
+        "2640 Hzのタッチサンプリングレートで、ほぼゼロの入力遅延を実現。",
+        "AI適応型の目の保護機能が搭載され、周囲の環境に応じた画面設定が行われる。",
+        "Qualcommの次世代Snapdragon 8 Elite Gen 5を搭載予定。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "情報処理やストレージのための設備を持つ場所。"
+          "term": "Super Internet 3.0",
+          "explain_ja": "AIを利用した接続エンジンで、ネットワークの遅延を安定させる機能を持つ。"
         },
         {
-          "term": "電力網",
-          "explain_ja": "電気を供給するための発電所、送電線、変電所などのネットワーク。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能。機械が人間のように学習や判断をする能力。"
+          "term": "AI適応型目の保護",
+          "explain_ja": "周囲の環境に応じて画面の色温度や輝度を調整するシステム。"
         }
       ],
       "personal_actions": [
-        "地域の電力供給や電気料金の状況を確認する。",
-        "Anthropicの取り組みについて地域住民で話し合う。",
-        "電力の使用に関する地元の方針や取り組みに関心を持つ。"
+        "待機時間や家庭のネットワーク負荷を考慮し、効果的な接続環境を整える。",
+        "ゲームプレイ中の目の疲労を軽減するために、適切な明るさでプレイする。",
+        "新しいタブレットの詳細な仕様や発売日について、公式情報を定期的に確認する。"
       ],
       "tags": [
         "AI"
