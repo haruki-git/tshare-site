@@ -1,111 +1,106 @@
 {
-  "date": "2026-02-16",
-  "generatedAtJST": "2026-02-16T07:15:56.340+09:00",
+  "date": "2026-02-17",
+  "generatedAtJST": "2026-02-17T07:15:43.226+09:00",
   "items": [
     {
-      "url": "https://www.tomshardware.com/pc-components/ssds/worlds-first-pcie-6-0-ssd-enters-mass-production-with-28gb-s-speeds-micron-9650-series-ssds-support-air-and-liquid-cooling",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-02-14T12:00:00Z",
-      "title": "First PCIe 6.0 SSD enters mass production with 28GB/s speeds, 5.5 million IOPS, and liquid cooling — Micron 9650 Series SSDs support air and liquid cooling",
-      "title_ja": "世界初のPCIe 6.0 SSDが量産開始、28GB/sの速度と5.5百万IOPSを実現",
-      "summary_ja": "Micronが世界初の量産PCIe 6.0データセンターSSDを発表しました。Micron 9650シリーズは、最大28GB/sの速度を誇ります。この技術革新により、データセンターのパフォーマンスが大幅に向上することが期待されます。",
+      "url": "https://www.businessenglishpod.com/2026/02/15/business-english-news-61-data-centers/",
+      "source": "Businessenglishpod.com",
+      "publishedAt": "2026-02-15T18:11:24Z",
+      "title": "Business English News 61 – Data Centers",
+      "title_ja": "ビジネス英語ニュース第61回 – データセンター",
+      "summary_ja": "データセンターに関するビジネス英語の語彙を紹介しています。特にエネルギーの効率性や持続可能性が重要なトピックとして取り上げられています。企業がコスト削減及び環境への影響を軽減するためにどう取り組むべきかについて考察されます。",
       "key_points": [
-        "Micronが初の量産PCIe 6.0 SSDを発表",
-        "Micron 9650シリーズは最大28GB/sの速度を持つ",
-        "5.5百万IOPSを実現",
-        "空冷と水冷の両方に対応",
-        "データセンター向けの技術革新"
+        "データセンターのエネルギー効率の重要性",
+        "持続可能な運営方式の実装",
+        "企業におけるコスト削減の戦略"
       ],
       "glossary": [
         {
-          "term": "PCIe 6.0",
-          "explain_ja": "次世代のPCI Expressインターフェース規格で、高速データ転送を実現する。"
+          "term": "データセンター",
+          "explain_ja": "データを保存、管理、配信するための専門的な施設。"
         },
         {
-          "term": "IOPS",
-          "explain_ja": "Input/Output Operations Per Secondの略で、ストレージの性能指標の一つ。"
+          "term": "エネルギー効率",
+          "explain_ja": "エネルギーの使用効率を高めること。"
         },
         {
-          "term": "SSD",
-          "explain_ja": "Solid State Driveの略で、フラッシュメモリを使用した記憶装置。"
+          "term": "持続可能性",
+          "explain_ja": "環境への影響を最小限に抑えつつ、経済や社会の発展を続ける能力。"
         }
       ],
       "personal_actions": [
-        "新しいPCIe 6.0 SSDの導入を検討する",
-        "データセンターのインフラを最新技術に合わせてアップグレードする",
-        "SSDの冷却システムの適正評価を行う"
+        "最新のエネルギー効率基準を確認する",
+        "データセンターの運営における持続可能なプラクティスを学ぶ",
+        "コスト削減のための戦略を社内で議論する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://fortune.com/2026/02/14/forgent-ipo-bring-sexy-back-electrical-equipment-power-ai-boom/",
-      "source": "Fortune",
-      "publishedAt": "2026-02-14T11:02:00Z",
-      "title": "Forgent’s IPO is ‘bringing sexy back’ to the electrical equipment helping power the AI boom, CEO says",
-      "title_ja": "ForgentのIPOが電気機器を再注目させるとCEOが語る",
-      "summary_ja": "ForgentのIPOは、AIブームを支える電気機器に再び注目を集めています。データセンターと電力網の拡大を背景に、Forgentは全国規模で製造を拡大しています。この成長は、業界全体にポジティブな影響を与える可能性があります。",
+      "url": "https://www.techradar.com/pro/microsoft-has-some-bright-ideas-for-keeping-future-data-centers-cool-but-will-they-ever-really-come-to-fruition",
+      "source": "TechRadar",
+      "publishedAt": "2026-02-15T17:05:00Z",
+      "title": "Microsoft has some bright ideas for keeping future data centers cool - but will they ever really come to fruition?",
+      "title_ja": "マイクロソフト、未来のデータセンターを涼しく保つアイデアを提案",
+      "summary_ja": "マイクロソフトは、未来のデータセンターをより涼しく保つための革新的なアイデアを提案しています。具体的には、高温超伝導ケーブルを活用したエネルギー損失の減少と効率的なデータセンター運営の実現を目指しています。これらの取り組みは、持続可能な電力供給の実現にもつながる可能性があります。今後、これらのアイデアが実際に実現するかが注目されています。",
       "key_points": [
-        "ForgentがIPOを実施し注目を集めている。",
-        "データセンターと電力網の拡大が背景にある。",
-        "AIブームが電気機器への需要を高めている。",
-        "全国規模での製造拡大を進めている。"
+        "マイクロソフトは高温超伝導ケーブルを提案",
+        "エネルギー損失の減少を目指す",
+        "データセンターの効率と持続可能性が向上",
+        "コンパクトな電力供給が可能になるかも",
+        "実現可能性が期待されているが不透明"
       ],
       "glossary": [
         {
-          "term": "IPO",
-          "explain_ja": "企業が株式を公開し、一般投資家に販売するプロセス。"
+          "term": "高温超伝導",
+          "explain_ja": "超伝導が比較的高い温度で発生する現象で、エネルギー損失を大幅に減少させる可能性がある。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データの保存、処理、管理を行う施設。"
-        },
-        {
-          "term": "電力網",
-          "explain_ja": "電気エネルギーを供給するためのインフラ。"
+          "explain_ja": "データを管理、保存、処理するための専用施設。"
         }
       ],
       "personal_actions": [
-        "Forgentの製品やサービスについて最新情報を確認する。",
-        "電気機器業界のトレンドを把握し、ビジネスにどう影響するか考察する。"
+        "最新のデータセンター関連の技術トレンドを追う",
+        "エネルギー効率向上の施策を検討する",
+        "高温超伝導に関する研究動向をチェックする"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://www.ubergizmo.com/2026/02/lenovo-legion-y700-2026/",
-      "source": "Ubergizmo",
-      "publishedAt": "2026-02-14T17:44:33Z",
-      "title": "Lenovo Unveils AI-Enhanced Legion Y700 (2026): A New Benchmark For Compact Gaming Tablets",
-      "title_ja": "Lenovo、AI強化のLegion Y700（2026）を発表：コンパクトゲーミングタブレットの新たな基準",
-      "summary_ja": "Lenovoは、モバイルゲーマー向けの課題を解決するAIを搭載したLegion Y700の2026年モデルを発表しました。このタブレットは、ネットワーク遅延を安定化させる「Super Internet 3.0」スイートを特徴とし、iOSデバイスとのファイル共有をスムーズに行うことができます。さらに、AIにより眼精疲労を軽減する機能も実装されており、ゲーム体験の質を向上させています。",
+      "url": "https://www.bostonherald.com/2026/02/15/with-electricity-bills-rising-some-states-consider-new-data-center-laws/",
+      "source": "Boston Herald",
+      "publishedAt": "2026-02-15T15:00:48Z",
+      "title": "With electricity bills rising, some states consider new data center laws",
+      "title_ja": "電気料金の高騰に伴い、一部の州が新たなデータセンター法を検討",
+      "summary_ja": "アメリカ全体で電気料金が急騰する中、各州はデータセンターの影響を再評価し始めています。オレゴン州はすでにデータセンターに対する特別料金の法案を成立させ、他の州も同様の動きを見せています。これにより、データセンターの建設や運営が他の利用者に与える経済的負担を軽減することが期待されています。",
       "key_points": [
-        "AIを活用した「Super Internet 3.0」により、ネットワーク遅延が改善される。",
-        "タブレットは8.8インチの3K解像度（3040 x 1904）と165 Hzのリフレッシュレートを備える。",
-        "2640 Hzのタッチサンプリングレートで、ほぼゼロの入力遅延を実現。",
-        "AI適応型の目の保護機能が搭載され、周囲の環境に応じた画面設定が行われる。",
-        "Qualcommの次世代Snapdragon 8 Elite Gen 5を搭載予定。"
+        "データセンターが電力消費に与える影響が問題視され、特別料金の導入が進んでいる。",
+        "複数州で新たな法案が進行中で、長期契約や財務保証が求められている。",
+        "データセンターの電力需要は急増しており、企業の投資が2030年までに約7兆ドルに達する見込み。",
+        "州によっては新しいデータセンターの建設を一時停止する動きもある。",
+        "消費者団体は、データセンターのコストを一般家庭に転嫁することを懸念している。"
       ],
       "glossary": [
         {
-          "term": "Super Internet 3.0",
-          "explain_ja": "AIを利用した接続エンジンで、ネットワークの遅延を安定させる機能を持つ。"
+          "term": "データセンター",
+          "explain_ja": "データを保存・処理するための大量のサーバーを施設した場所。"
         },
         {
-          "term": "AI適応型目の保護",
-          "explain_ja": "周囲の環境に応じて画面の色温度や輝度を調整するシステム。"
+          "term": "特別料金",
+          "explain_ja": "特定の業種や顧客に対して設定される異なる電気料金。"
         }
       ],
       "personal_actions": [
-        "待機時間や家庭のネットワーク負荷を考慮し、効果的な接続環境を整える。",
-        "ゲームプレイ中の目の疲労を軽減するために、適切な明るさでプレイする。",
-        "新しいタブレットの詳細な仕様や発売日について、公式情報を定期的に確認する。"
+        "自社のインフラコストに対する影響を確認するため、州の新法について情報収集する。",
+        "データセンターに関連する企業との取引における電力コストの影響を分析する。",
+        "新たな料金体系について社内での対策を検討する。"
       ],
       "tags": [
-        "AI"
+        "DC"
       ]
     }
   ]
