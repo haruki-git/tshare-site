@@ -1,106 +1,119 @@
 {
-  "date": "2026-02-17",
-  "generatedAtJST": "2026-02-17T07:15:43.226+09:00",
+  "date": "2026-02-18",
+  "generatedAtJST": "2026-02-18T07:15:56.541+09:00",
   "items": [
     {
-      "url": "https://www.businessenglishpod.com/2026/02/15/business-english-news-61-data-centers/",
-      "source": "Businessenglishpod.com",
-      "publishedAt": "2026-02-15T18:11:24Z",
-      "title": "Business English News 61 – Data Centers",
-      "title_ja": "ビジネス英語ニュース第61回 – データセンター",
-      "summary_ja": "データセンターに関するビジネス英語の語彙を紹介しています。特にエネルギーの効率性や持続可能性が重要なトピックとして取り上げられています。企業がコスト削減及び環境への影響を軽減するためにどう取り組むべきかについて考察されます。",
+      "url": "https://www.breitbart.com/tech/2026/02/16/trump-administration-creating-plan-for-tech-companies-to-pay-full-costs-of-ai-data-center-power-water-usage/",
+      "source": "Breitbart News",
+      "publishedAt": "2026-02-16T19:06:30Z",
+      "title": "Trump Administration Creating Plan for Tech Companies to Pay Full Costs of AI Data Center Power, Water Usage",
+      "title_ja": "トランプ政権、テクノロジー企業にAIデータセンターの電力・水使用コスト全額負担を求める計画を策定中",
+      "summary_ja": "トランプ政権は、データセンターが関連する光熱費とインフラコストを全て負担することを求める方針を検討しています。これは、AIインフラが電力網に与える影響と電気料金の上昇に対処するための措置です。大手テクノロジー企業が支出を内部化し、地域のインフラの改善にも貢献することが求められています。",
       "key_points": [
-        "データセンターのエネルギー効率の重要性",
-        "持続可能な運営方式の実装",
-        "企業におけるコスト削減の戦略"
+        "トランプ政権がデータセンターのコスト負担を強化する方針を発表。",
+        "保安顧問のピーター・ナバロが、技術企業が電気代やインフラ費用を全額支払うべきだと発言。",
+        "データセンター運営に伴う電気料金が2025年に前年比6.9%上昇。",
+        "米国最大の電力網PJミッションが、データセンター関連の新しい発電所の資金調達を求める合意を結ぶ。",
+        "トランプ大統領が、テクノロジー企業に「自ら費用を負担する」よう奨励。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存、管理、配信するための専門的な施設。"
+          "term": "PJMインターコネクション",
+          "explain_ja": "米国最大の電力網オペレーターで、データセンターが集中する地域を管理している。"
         },
         {
-          "term": "エネルギー効率",
-          "explain_ja": "エネルギーの使用効率を高めること。"
-        },
-        {
-          "term": "持続可能性",
-          "explain_ja": "環境への影響を最小限に抑えつつ、経済や社会の発展を続ける能力。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能に関連するデータを処理・保存するための大規模な電力消費施設。"
         }
       ],
       "personal_actions": [
-        "最新のエネルギー効率基準を確認する",
-        "データセンターの運営における持続可能なプラクティスを学ぶ",
-        "コスト削減のための戦略を社内で議論する"
+        "データセンターの電力消費に関する最新情報を確認する。",
+        "地域の電気料金の変動を把握し、影響を受ける可能性のあるビジネス戦略を考慮する。",
+        "エネルギー効率を向上させるための内部プロジェクトを検討する。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.techradar.com/pro/microsoft-has-some-bright-ideas-for-keeping-future-data-centers-cool-but-will-they-ever-really-come-to-fruition",
-      "source": "TechRadar",
-      "publishedAt": "2026-02-15T17:05:00Z",
-      "title": "Microsoft has some bright ideas for keeping future data centers cool - but will they ever really come to fruition?",
-      "title_ja": "マイクロソフト、未来のデータセンターを涼しく保つアイデアを提案",
-      "summary_ja": "マイクロソフトは、未来のデータセンターをより涼しく保つための革新的なアイデアを提案しています。具体的には、高温超伝導ケーブルを活用したエネルギー損失の減少と効率的なデータセンター運営の実現を目指しています。これらの取り組みは、持続可能な電力供給の実現にもつながる可能性があります。今後、これらのアイデアが実際に実現するかが注目されています。",
+      "url": "https://www.techpowerup.com/346425/amds-state-of-the-art-helios-rack-scale-ai-architecture-heading-to-india",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-02-16T14:24:32Z",
+      "title": "AMD's State-of-the-Art \"Helios\" Rack-scale AI Architecture Heading to India",
+      "title_ja": "AMDの最先端「Helios」ラックスケールAIアーキテクチャがインドへ進出",
+      "summary_ja": "AMDとTata Consultancy Services（TCS）が戦略的コラボレーションを拡大し、インドの国策AIイニシアティブを支えるラックスケールAIインフラ設計を共同開発します。新しいAMD「Helios」プラットフォームは、次世代のAMD EPYCプロセッサやGPUを活用し、AI向けのデータセンター計画を提供します。この取り組みにより、インドにおけるAIの大規模展開が加速し、企業の運用効率も向上することが期待されています。",
       "key_points": [
-        "マイクロソフトは高温超伝導ケーブルを提案",
-        "エネルギー損失の減少を目指す",
-        "データセンターの効率と持続可能性が向上",
-        "コンパクトな電力供給が可能になるかも",
-        "実現可能性が期待されているが不透明"
+        "AMDとTCSが戦略的コラボレーションを拡大。",
+        "「Helios」プラットフォームを基盤としたAIインフラ設計を共同開発。",
+        "次世代AMD EPYCプロセッサとGPUを使用。",
+        "200MWのキャパシティを支えるAI対応データセンターブループリントを提供。",
+        "TCSのHyperVaultがAIインフラの提供を目指す。"
       ],
       "glossary": [
         {
-          "term": "高温超伝導",
-          "explain_ja": "超伝導が比較的高い温度で発生する現象で、エネルギー損失を大幅に減少させる可能性がある。"
+          "term": "AI",
+          "explain_ja": "人工知能の略。コンピュータが人間の知的な行動を模倣する技術。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データを管理、保存、処理するための専用施設。"
+          "explain_ja": "サーバーなどのIT機器を収容し、運用するための施設。"
+        },
+        {
+          "term": "EPYC",
+          "explain_ja": "AMDが開発したサーバー用プロセッサのブランド名。"
         }
       ],
       "personal_actions": [
-        "最新のデータセンター関連の技術トレンドを追う",
-        "エネルギー効率向上の施策を検討する",
-        "高温超伝導に関する研究動向をチェックする"
+        "自社のAIインフラストラクチャの現状を確認する。",
+        "AIプロジェクトのスケーラビリティを再評価する。",
+        "次世代のハードウェア導入に向けた計画を立てる。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.bostonherald.com/2026/02/15/with-electricity-bills-rising-some-states-consider-new-data-center-laws/",
-      "source": "Boston Herald",
-      "publishedAt": "2026-02-15T15:00:48Z",
-      "title": "With electricity bills rising, some states consider new data center laws",
-      "title_ja": "電気料金の高騰に伴い、一部の州が新たなデータセンター法を検討",
-      "summary_ja": "アメリカ全体で電気料金が急騰する中、各州はデータセンターの影響を再評価し始めています。オレゴン州はすでにデータセンターに対する特別料金の法案を成立させ、他の州も同様の動きを見せています。これにより、データセンターの建設や運営が他の利用者に与える経済的負担を軽減することが期待されています。",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/02/announcing-amazon-ec2-hpc8a-instances/",
+      "source": "Amazon.com",
+      "publishedAt": "2026-02-16T21:30:00Z",
+      "title": "Announcing new high performance computing Amazon EC2 Hpc8a instances",
+      "title_ja": "新しい高性能コンピューティングAmazon EC2 Hpc8aインスタンスの発表",
+      "summary_ja": "AWSは、5世代AMD EPYCプロセッサを搭載した次世代の高性能コンピューティングインスタンスであるAmazon EC2 Hpc8aインスタンスを発表しました。このインスタンスは最大4.5GHzの周波数を持ち、Hpc7aインスタンスに比べて最大40%のパフォーマンス向上と25%のコストパフォーマンスの改善を実現します。Hpc8aは、複雑な計算を要するワークロードを加速し、コスト最適化にも貢献します。",
       "key_points": [
-        "データセンターが電力消費に与える影響が問題視され、特別料金の導入が進んでいる。",
-        "複数州で新たな法案が進行中で、長期契約や財務保証が求められている。",
-        "データセンターの電力需要は急増しており、企業の投資が2030年までに約7兆ドルに達する見込み。",
-        "州によっては新しいデータセンターの建設を一時停止する動きもある。",
-        "消費者団体は、データセンターのコストを一般家庭に転嫁することを懸念している。"
+        "Hpc8aインスタンスは5世代AMD EPYCプロセッサを使用。",
+        "最大周波数は4.5GHzで、性能向上が顕著。",
+        "192コア、768 GiBメモリ、300 GbpsのEFAネットワーク帯域幅を提供。",
+        "Hpc7aインスタンスと比べて最大42%のメモリ帯域幅向上。",
+        "主に流体力学、天気予測、有限要素法解析に最適。",
+        "現在、US East（オハイオ）およびヨーロッパ（ストックホルム）で利用可能。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存・処理するための大量のサーバーを施設した場所。"
+          "term": "HPC",
+          "explain_ja": "高性能コンピューティングの略。大規模で複雑な計算を行うための技術やシステムを指す。"
         },
         {
-          "term": "特別料金",
-          "explain_ja": "特定の業種や顧客に対して設定される異なる電気料金。"
+          "term": "EFA",
+          "explain_ja": "Elastic Fabric Adapter。低遅延かつ高スループットなネットワーク通信を可能にするインターフェース。"
+        },
+        {
+          "term": "AMD EPYC",
+          "explain_ja": "AMD社のサーバー向けプロセッサシリーズで、高い性能と効率性を備えている。"
+        },
+        {
+          "term": "CFD",
+          "explain_ja": "計算流体力学の略。流体の挙動を数値的に解析する技術。"
         }
       ],
       "personal_actions": [
-        "自社のインフラコストに対する影響を確認するため、州の新法について情報収集する。",
-        "データセンターに関連する企業との取引における電力コストの影響を分析する。",
-        "新たな料金体系について社内での対策を検討する。"
+        "Hpc8aインスタンスの性能を活用するための計算需要を評価する。",
+        "AWS Management ConsoleからHpc8aインスタンスを試してみる。",
+        "最新のAWS機能を把握するために、AWSニュースブログを定期的に確認する。"
       ],
       "tags": [
-        "DC"
+        "その他"
       ]
     }
   ]
