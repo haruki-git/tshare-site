@@ -1,119 +1,121 @@
 {
-  "date": "2026-02-18",
-  "generatedAtJST": "2026-02-18T07:15:56.541+09:00",
+  "date": "2026-02-19",
+  "generatedAtJST": "2026-02-19T07:15:51.388+09:00",
   "items": [
     {
-      "url": "https://www.breitbart.com/tech/2026/02/16/trump-administration-creating-plan-for-tech-companies-to-pay-full-costs-of-ai-data-center-power-water-usage/",
-      "source": "Breitbart News",
-      "publishedAt": "2026-02-16T19:06:30Z",
-      "title": "Trump Administration Creating Plan for Tech Companies to Pay Full Costs of AI Data Center Power, Water Usage",
-      "title_ja": "トランプ政権、テクノロジー企業にAIデータセンターの電力・水使用コスト全額負担を求める計画を策定中",
-      "summary_ja": "トランプ政権は、データセンターが関連する光熱費とインフラコストを全て負担することを求める方針を検討しています。これは、AIインフラが電力網に与える影響と電気料金の上昇に対処するための措置です。大手テクノロジー企業が支出を内部化し、地域のインフラの改善にも貢献することが求められています。",
+      "url": "https://www.techpowerup.com/346493/meta-partners-with-nvidia-to-deploy-millions-of-blackwell-and-rubin-gpus",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-02-17T21:32:09Z",
+      "title": "Meta Partners with NVIDIA to Deploy Millions of Blackwell and Rubin GPUs",
+      "title_ja": "Meta、NVIDIAと提携しブラックウェルおよびルビンGPUを数百万台導入",
+      "summary_ja": "NVIDIAとMetaは、オンプレミスやクラウド、AIインフラを対象とした戦略的パートナーシップを発表しました。この提携により、MetaはAIインフラの長期戦略に基づいて、NVIDIAのブラックウェルおよびルビンGPUを数百万台導入し、データセンターを最適化することができます。これにより、Metaは大規模なAIソリューションをさらに強化し、パフォーマンスと効率を向上させることが期待されます。",
       "key_points": [
-        "トランプ政権がデータセンターのコスト負担を強化する方針を発表。",
-        "保安顧問のピーター・ナバロが、技術企業が電気代やインフラ費用を全額支払うべきだと発言。",
-        "データセンター運営に伴う電気料金が2025年に前年比6.9%上昇。",
-        "米国最大の電力網PJミッションが、データセンター関連の新しい発電所の資金調達を求める合意を結ぶ。",
-        "トランプ大統領が、テクノロジー企業に「自ら費用を負担する」よう奨励。"
+        "MetaはNVIDIAとの提携で数百万台のBlackwellとRubin GPUを導入する。",
+        "ArmベースのNVIDIA Grace CPUの大規模デプロイメントも進行中。",
+        "NVIDIA Spectrum-X Ethernetスイッチを利用して、データセンターのネットワーク性能を向上させる。",
+        "WhatsAppに対してNVIDIA Confidential Computingを採用し、ユーザーデータの機密性を確保する。",
+        "AIモデルの最適化を目的とした、両社のエンジニアチームによる深い共同設計を実施。"
       ],
       "glossary": [
         {
-          "term": "PJMインターコネクション",
-          "explain_ja": "米国最大の電力網オペレーターで、データセンターが集中する地域を管理している。"
+          "term": "NVIDIA Blackwell",
+          "explain_ja": "最新のNVIDIA GPUアーキテクチャの一つで、高性能な処理が可能。"
         },
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能に関連するデータを処理・保存するための大規模な電力消費施設。"
+          "term": "NVIDIA Rubin",
+          "explain_ja": "次世代のNVIDIA GPUで、特にAI処理に最適化されている。"
+        },
+        {
+          "term": "Confidential Computing",
+          "explain_ja": "データの機密性を保ちながら、処理や分析を行う技術。"
+        },
+        {
+          "term": "Spectrum-X Ethernet",
+          "explain_ja": "NVIDIAが提供する新しいEthernetスイッチのファミリーで、高速かつ低遅延のネットワーク性能を実現。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力消費に関する最新情報を確認する。",
-        "地域の電気料金の変動を把握し、影響を受ける可能性のあるビジネス戦略を考慮する。",
-        "エネルギー効率を向上させるための内部プロジェクトを検討する。"
+        "データセンターのAIインフラについて現行のシステムを見直す。",
+        "NVIDIAの最新技術に関するセミナーやウェビナーに参加して、知識を更新する。",
+        "パートナー企業との情報共有を強化し、AI導入のベストプラクティスを確立する。"
       ],
       "tags": [
-        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://www.techpowerup.com/346425/amds-state-of-the-art-helios-rack-scale-ai-architecture-heading-to-india",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-02-16T14:24:32Z",
-      "title": "AMD's State-of-the-Art \"Helios\" Rack-scale AI Architecture Heading to India",
-      "title_ja": "AMDの最先端「Helios」ラックスケールAIアーキテクチャがインドへ進出",
-      "summary_ja": "AMDとTata Consultancy Services（TCS）が戦略的コラボレーションを拡大し、インドの国策AIイニシアティブを支えるラックスケールAIインフラ設計を共同開発します。新しいAMD「Helios」プラットフォームは、次世代のAMD EPYCプロセッサやGPUを活用し、AI向けのデータセンター計画を提供します。この取り組みにより、インドにおけるAIの大規模展開が加速し、企業の運用効率も向上することが期待されています。",
+      "url": "https://alltoc.com/tech/why-are-memory-and-hdd-shortages-affecting-devices",
+      "source": "Alltoc.com",
+      "publishedAt": "2026-02-17T21:02:58Z",
+      "title": "Why are memory and HDD shortages affecting devices?",
+      "title_ja": "メモリとHDDの不足がデバイスに影響を及ぼしている理由",
+      "summary_ja": "AI需要が供給チェーンに影響を与えており、メモリとストレージの需要の急増が消費者デバイスの利用可能性と価格を変化させています。データセンターやAI関連の顧客によって、多くの生産がすでに予約済みであり、ノートパソコンやゲーム機のメーカーは在庫制限に直面しています。これにより、新製品の出荷遅延や価格の上昇が予測され、消費者にとっては選択肢が狭まりつつあります。",
       "key_points": [
-        "AMDとTCSが戦略的コラボレーションを拡大。",
-        "「Helios」プラットフォームを基盤としたAIインフラ設計を共同開発。",
-        "次世代AMD EPYCプロセッサとGPUを使用。",
-        "200MWのキャパシティを支えるAI対応データセンターブループリントを提供。",
-        "TCSのHyperVaultがAIインフラの提供を目指す。"
+        "AIインフラに関連するメモリとストレージの需要が急増している。",
+        "ハイパースケーラーとAIデータセンターがDRAMやNANDフラッシュの大口契約を結んでいる。",
+        "HDDの供給がほぼ完売しており、メモリ供給も限られている。",
+        "ゲーミングハードウェアへの影響が見込まれている。",
+        "消費者は新しいデバイスの在庫不足と価格上昇を経験している。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略。コンピュータが人間の知的な行動を模倣する技術。"
+          "term": "DRAM",
+          "explain_ja": "動的ランダムアクセスメモリの略で、コンピュータで一般的に使用されるメモリ技術です。"
         },
+        {
+          "term": "NANDフラッシュ",
+          "explain_ja": "データ保存に用いる不揮発性メモリの一種で、スマートフォンやSSDで広く利用されています。"
+        },
+        {
+          "term": "HDD",
+          "explain_ja": "ハードディスクドライブの略で、データを磁気的に保存する記憶装置です。"
+        }
+      ],
+      "personal_actions": [
+        "現在のデバイスのパフォーマンスを確認し、必要に応じてアップグレードを検討する。",
+        "在庫不足を考慮し、必要なハードウェアを早めに購入する。",
+        "代替品として中古市場やリファービッシュ製品を検討する。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "http://commercialobserver.com/2026/02/texas-overtake-virginia-america-data-center-development-capital/",
+      "source": "Commercial Observer",
+      "publishedAt": "2026-02-17T17:22:25Z",
+      "title": "Texas Poised to Overtake Virginia as America’s Data Center Development Capital",
+      "title_ja": "テキサス、アメリカのデータセンター開発の中心地としてバージニアを追い越す見込み",
+      "summary_ja": "テキサスが2025年のデータセンター報告により、2030年までにバージニアを超えて最大のデータセンターマーケットになる可能性が高いとされています。テキサスには現在、6.5GWのデータセンターが開発中で、主要なエネルギーリソースが豊富なことが成長の要因とされています。この市場の成長は、ハイパースケーラー企業からの需要によって加速しており、今後のデータセンター開発はさらに拡大する見込みです。",
+      "key_points": [
+        "テキサスは2030年までにバージニアを超え、最大のデータセンターマーケットになる可能性がある。",
+        "テキサスには6.5GWのデータセンターが開発中であり、エネルギー資源が豊富。",
+        "米国のデータセンターの空室率は2025年に1%を維持。",
+        "データセンターのリース料金は2020年以来60%上昇。",
+        "ハイパースケーラー企業は北米のデータセンター需要の65%を占めている。",
+        "データセンターへの資金調達は2025年に750億ドルに達し、前年から大幅に増加。"
+      ],
+      "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "サーバーなどのIT機器を収容し、運用するための施設。"
+          "explain_ja": "データの保存、処理、配信を行う施設のこと。"
         },
         {
-          "term": "EPYC",
-          "explain_ja": "AMDが開発したサーバー用プロセッサのブランド名。"
+          "term": "GW",
+          "explain_ja": "ギガワットの略。電力の単位で、1GWは10億ワット。"
+        },
+        {
+          "term": "ハイパースケーラー",
+          "explain_ja": "大規模なクラウドサービスを提供する事業者や企業を指す。"
         }
       ],
       "personal_actions": [
-        "自社のAIインフラストラクチャの現状を確認する。",
-        "AIプロジェクトのスケーラビリティを再評価する。",
-        "次世代のハードウェア導入に向けた計画を立てる。"
+        "現在のデータセンターの稼働状況やリース状況を確認する。",
+        "テキサス地域の電力資源や土地利用のポテンシャルを調査する。",
+        "データセンターに関連するハイパースケーラー企業の動きに注目する。"
       ],
       "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/02/announcing-amazon-ec2-hpc8a-instances/",
-      "source": "Amazon.com",
-      "publishedAt": "2026-02-16T21:30:00Z",
-      "title": "Announcing new high performance computing Amazon EC2 Hpc8a instances",
-      "title_ja": "新しい高性能コンピューティングAmazon EC2 Hpc8aインスタンスの発表",
-      "summary_ja": "AWSは、5世代AMD EPYCプロセッサを搭載した次世代の高性能コンピューティングインスタンスであるAmazon EC2 Hpc8aインスタンスを発表しました。このインスタンスは最大4.5GHzの周波数を持ち、Hpc7aインスタンスに比べて最大40%のパフォーマンス向上と25%のコストパフォーマンスの改善を実現します。Hpc8aは、複雑な計算を要するワークロードを加速し、コスト最適化にも貢献します。",
-      "key_points": [
-        "Hpc8aインスタンスは5世代AMD EPYCプロセッサを使用。",
-        "最大周波数は4.5GHzで、性能向上が顕著。",
-        "192コア、768 GiBメモリ、300 GbpsのEFAネットワーク帯域幅を提供。",
-        "Hpc7aインスタンスと比べて最大42%のメモリ帯域幅向上。",
-        "主に流体力学、天気予測、有限要素法解析に最適。",
-        "現在、US East（オハイオ）およびヨーロッパ（ストックホルム）で利用可能。"
-      ],
-      "glossary": [
-        {
-          "term": "HPC",
-          "explain_ja": "高性能コンピューティングの略。大規模で複雑な計算を行うための技術やシステムを指す。"
-        },
-        {
-          "term": "EFA",
-          "explain_ja": "Elastic Fabric Adapter。低遅延かつ高スループットなネットワーク通信を可能にするインターフェース。"
-        },
-        {
-          "term": "AMD EPYC",
-          "explain_ja": "AMD社のサーバー向けプロセッサシリーズで、高い性能と効率性を備えている。"
-        },
-        {
-          "term": "CFD",
-          "explain_ja": "計算流体力学の略。流体の挙動を数値的に解析する技術。"
-        }
-      ],
-      "personal_actions": [
-        "Hpc8aインスタンスの性能を活用するための計算需要を評価する。",
-        "AWS Management ConsoleからHpc8aインスタンスを試してみる。",
-        "最新のAWS機能を把握するために、AWSニュースブログを定期的に確認する。"
-      ],
-      "tags": [
-        "その他"
+        "DC"
       ]
     }
   ]
