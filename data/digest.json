@@ -1,121 +1,111 @@
 {
-  "date": "2026-02-19",
-  "generatedAtJST": "2026-02-19T07:15:51.388+09:00",
+  "date": "2026-02-20",
+  "generatedAtJST": "2026-02-20T07:15:49.333+09:00",
   "items": [
     {
-      "url": "https://www.techpowerup.com/346493/meta-partners-with-nvidia-to-deploy-millions-of-blackwell-and-rubin-gpus",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-02-17T21:32:09Z",
-      "title": "Meta Partners with NVIDIA to Deploy Millions of Blackwell and Rubin GPUs",
-      "title_ja": "Meta、NVIDIAと提携しブラックウェルおよびルビンGPUを数百万台導入",
-      "summary_ja": "NVIDIAとMetaは、オンプレミスやクラウド、AIインフラを対象とした戦略的パートナーシップを発表しました。この提携により、MetaはAIインフラの長期戦略に基づいて、NVIDIAのブラックウェルおよびルビンGPUを数百万台導入し、データセンターを最適化することができます。これにより、Metaは大規模なAIソリューションをさらに強化し、パフォーマンスと効率を向上させることが期待されます。",
+      "url": "https://financialpost.com/pmn/business-pmn/pritzker-plans-to-halt-data-center-tax-perks-as-power-bills-soar",
+      "source": "Financial Post",
+      "publishedAt": "2026-02-18T21:57:11Z",
+      "title": "Pritzker Plans to Halt Data Center Tax Perks as Power Bills Soar",
+      "title_ja": "プリッツカー知事、電力料金急騰を受けデータセンター税優遇措置の一時停止を計画",
+      "summary_ja": "イリノイ州のJBプリッツカー知事は、急騰する電力料金を抑えるためにデータセンターへの優遇措置を一時停止することを検討しています。この決定は、州内のエネルギーコストの上昇が影響しています。この政策変更は、データセンター業界に大きな影響を与える可能性があります。",
       "key_points": [
-        "MetaはNVIDIAとの提携で数百万台のBlackwellとRubin GPUを導入する。",
-        "ArmベースのNVIDIA Grace CPUの大規模デプロイメントも進行中。",
-        "NVIDIA Spectrum-X Ethernetスイッチを利用して、データセンターのネットワーク性能を向上させる。",
-        "WhatsAppに対してNVIDIA Confidential Computingを採用し、ユーザーデータの機密性を確保する。",
-        "AIモデルの最適化を目的とした、両社のエンジニアチームによる深い共同設計を実施。"
-      ],
-      "glossary": [
-        {
-          "term": "NVIDIA Blackwell",
-          "explain_ja": "最新のNVIDIA GPUアーキテクチャの一つで、高性能な処理が可能。"
-        },
-        {
-          "term": "NVIDIA Rubin",
-          "explain_ja": "次世代のNVIDIA GPUで、特にAI処理に最適化されている。"
-        },
-        {
-          "term": "Confidential Computing",
-          "explain_ja": "データの機密性を保ちながら、処理や分析を行う技術。"
-        },
-        {
-          "term": "Spectrum-X Ethernet",
-          "explain_ja": "NVIDIAが提供する新しいEthernetスイッチのファミリーで、高速かつ低遅延のネットワーク性能を実現。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターのAIインフラについて現行のシステムを見直す。",
-        "NVIDIAの最新技術に関するセミナーやウェビナーに参加して、知識を更新する。",
-        "パートナー企業との情報共有を強化し、AI導入のベストプラクティスを確立する。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://alltoc.com/tech/why-are-memory-and-hdd-shortages-affecting-devices",
-      "source": "Alltoc.com",
-      "publishedAt": "2026-02-17T21:02:58Z",
-      "title": "Why are memory and HDD shortages affecting devices?",
-      "title_ja": "メモリとHDDの不足がデバイスに影響を及ぼしている理由",
-      "summary_ja": "AI需要が供給チェーンに影響を与えており、メモリとストレージの需要の急増が消費者デバイスの利用可能性と価格を変化させています。データセンターやAI関連の顧客によって、多くの生産がすでに予約済みであり、ノートパソコンやゲーム機のメーカーは在庫制限に直面しています。これにより、新製品の出荷遅延や価格の上昇が予測され、消費者にとっては選択肢が狭まりつつあります。",
-      "key_points": [
-        "AIインフラに関連するメモリとストレージの需要が急増している。",
-        "ハイパースケーラーとAIデータセンターがDRAMやNANDフラッシュの大口契約を結んでいる。",
-        "HDDの供給がほぼ完売しており、メモリ供給も限られている。",
-        "ゲーミングハードウェアへの影響が見込まれている。",
-        "消費者は新しいデバイスの在庫不足と価格上昇を経験している。"
-      ],
-      "glossary": [
-        {
-          "term": "DRAM",
-          "explain_ja": "動的ランダムアクセスメモリの略で、コンピュータで一般的に使用されるメモリ技術です。"
-        },
-        {
-          "term": "NANDフラッシュ",
-          "explain_ja": "データ保存に用いる不揮発性メモリの一種で、スマートフォンやSSDで広く利用されています。"
-        },
-        {
-          "term": "HDD",
-          "explain_ja": "ハードディスクドライブの略で、データを磁気的に保存する記憶装置です。"
-        }
-      ],
-      "personal_actions": [
-        "現在のデバイスのパフォーマンスを確認し、必要に応じてアップグレードを検討する。",
-        "在庫不足を考慮し、必要なハードウェアを早めに購入する。",
-        "代替品として中古市場やリファービッシュ製品を検討する。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "http://commercialobserver.com/2026/02/texas-overtake-virginia-america-data-center-development-capital/",
-      "source": "Commercial Observer",
-      "publishedAt": "2026-02-17T17:22:25Z",
-      "title": "Texas Poised to Overtake Virginia as America’s Data Center Development Capital",
-      "title_ja": "テキサス、アメリカのデータセンター開発の中心地としてバージニアを追い越す見込み",
-      "summary_ja": "テキサスが2025年のデータセンター報告により、2030年までにバージニアを超えて最大のデータセンターマーケットになる可能性が高いとされています。テキサスには現在、6.5GWのデータセンターが開発中で、主要なエネルギーリソースが豊富なことが成長の要因とされています。この市場の成長は、ハイパースケーラー企業からの需要によって加速しており、今後のデータセンター開発はさらに拡大する見込みです。",
-      "key_points": [
-        "テキサスは2030年までにバージニアを超え、最大のデータセンターマーケットになる可能性がある。",
-        "テキサスには6.5GWのデータセンターが開発中であり、エネルギー資源が豊富。",
-        "米国のデータセンターの空室率は2025年に1%を維持。",
-        "データセンターのリース料金は2020年以来60%上昇。",
-        "ハイパースケーラー企業は北米のデータセンター需要の65%を占めている。",
-        "データセンターへの資金調達は2025年に750億ドルに達し、前年から大幅に増加。"
+        "プリッツカー知事がデータセンターの税優遇措置を一時停止したい意向を示す。",
+        "急騰する電力料金が背景にある。",
+        "政策変更はデータセンター業界に影響を及ぼす可能性がある。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データの保存、処理、配信を行う施設のこと。"
+          "explain_ja": "データの保管、管理、処理を行うための施設。"
         },
         {
-          "term": "GW",
-          "explain_ja": "ギガワットの略。電力の単位で、1GWは10億ワット。"
+          "term": "税優遇措置",
+          "explain_ja": "特定の産業や企業に対して税金の軽減や優遇を提供する制度。"
         },
         {
-          "term": "ハイパースケーラー",
-          "explain_ja": "大規模なクラウドサービスを提供する事業者や企業を指す。"
+          "term": "電力料金",
+          "explain_ja": "電力の使用に対して顧客が支払う料金。"
         }
       ],
       "personal_actions": [
-        "現在のデータセンターの稼働状況やリース状況を確認する。",
-        "テキサス地域の電力資源や土地利用のポテンシャルを調査する。",
-        "データセンターに関連するハイパースケーラー企業の動きに注目する。"
+        "地域の電力料金の動向を把握する。",
+        "データセンターへの影響を考慮し、業務計画を見直す。",
+        "省エネルギー対策を検討する。"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://www.theregister.com/2026/02/18/google_ormat_geothermal_datacenter_deal/",
+      "source": "Theregister.com",
+      "publishedAt": "2026-02-18T19:41:33Z",
+      "title": "Google digs deep to power AI expansion with 150 MW geothermal deal",
+      "title_ja": "Googleが150MWの地熱発電契約を結びAI拡張を加速",
+      "summary_ja": "Googleは、データセンターの電力需要の増加に対応するため、Ormat TechnologiesとNV Energyとの間で新たに150MWの地熱発電供給契約を結びました。この契約は、グリーンエネルギーの利用を拡大し、データセンターの炭素排出を削減することを目的としています。今後、この地熱発電が2030年までに稼働し、データセンターの成長を支える重要なエネルギー源となるでしょう。",
+      "key_points": [
+        "Googleは地熱エネルギーの利用に取り組んでおり、2008年からの歴史がある。",
+        "Ormat Technologiesは150MWの地熱エネルギー供給をNV Energyと合意した。",
+        "Fervo Energyは2023年に最初の強化地熱プラントを稼働させた。",
+        "地熱発電は、2030年までにデータセンターの需要の64％を補える可能性がある。",
+        "ただし、ビットバーンオペレーターは地域の電力源より20%高いプレミアムを支払う必要がある。"
+      ],
+      "glossary": [
+        {
+          "term": "地熱発電",
+          "explain_ja": "地球内部の熱を利用して発電する方法。再生可能エネルギーの一種。"
+        },
+        {
+          "term": "NV Energy",
+          "explain_ja": "ネバダ州の電力供給会社。地域の電力網を管理している。"
+        },
+        {
+          "term": "Fervo Energy",
+          "explain_ja": "強化地熱プラントを開発・運営する企業。"
+        }
+      ],
+      "personal_actions": [
+        "地熱エネルギーの利用状況についての最新情報を確認する。",
+        "AIデータセンターの電力効率について調査する。",
+        "他の再生可能エネルギーのオプションを評価する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.notebookcheck.net/American-sodium-ion-battery-company-targets-residential-and-AI-data-center-ESS-without-Chinese-imports.1229717.0.html",
+      "source": "Notebookcheck.net",
+      "publishedAt": "2026-02-18T19:12:00Z",
+      "title": "US-based sodium-ion battery factory to target energy storage without Chinese imports",
+      "title_ja": "アメリカのナトリウムイオン電池会社、住宅用およびAIデータセンター向けのエネルギー貯蔵を目指す",
+      "summary_ja": "アメリカのSyntropic Powerが、ナトリウムイオン電池の国内生産に着手し、住宅用バックアップからAIデータセンター向けまで幅広いエネルギー貯蔵システムを提供する計画を発表しました。中国の輸入に依存しないサプライチェーンの構築を目指し、連邦の規制を回避します。この新技術は安全性が高く、寿命も長いため、特に需要が高まっています。2026年には2GWhの貯蔵能力を持つパイロットを展開予定です。",
+      "key_points": [
+        "Syntropic Powerはアメリカ国内でナトリウムイオン電池の生産を開始する。",
+        "住宅用バックアップやAIデータセンター向けのエネルギー貯蔵システムを発売予定。",
+        "中国製品に依存せず、国内供給網を活用する方針。",
+        "ナトリウムイオン電池は、安全で寿命が長く、現在再評価されている。",
+        "2026年には2GWhのパイロットプロジェクトを予定している。"
+      ],
+      "glossary": [
+        {
+          "term": "ナトリウムイオン電池",
+          "explain_ja": "リチウムの代わりにナトリウムを使用した電池技術で、安全性が高く寿命が長い。"
+        },
+        {
+          "term": "FEOC",
+          "explain_ja": "Foreign Entity of Concernの略で、アメリカの連邦規制により、特定の外国製品に制限を課す。"
+        }
+      ],
+      "personal_actions": [
+        "自社のエネルギー貯蔵ニーズを評価し、ナトリウムイオン電池の導入を検討する。",
+        "現行のエネルギー供給元やシステムがFEOCの影響を受けていないか確認する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
