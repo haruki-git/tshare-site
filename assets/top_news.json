@@ -1,107 +1,109 @@
 {
-  "date": "2026-02-20",
-  "generatedAtJST": "2026-02-20T07:15:49.333+09:00",
+  "date": "2026-02-21",
+  "generatedAtJST": "2026-02-21T07:15:39.465+09:00",
   "items": [
     {
-      "url": "https://financialpost.com/pmn/business-pmn/pritzker-plans-to-halt-data-center-tax-perks-as-power-bills-soar",
-      "source": "Financial Post",
-      "publishedAt": "2026-02-18T21:57:11Z",
-      "title": "Pritzker Plans to Halt Data Center Tax Perks as Power Bills Soar",
-      "title_ja": "プリッツカー知事、電力料金急騰を受けデータセンター税優遇措置の一時停止を計画",
-      "summary_ja": "イリノイ州のJBプリッツカー知事は、急騰する電力料金を抑えるためにデータセンターへの優遇措置を一時停止することを検討しています。この決定は、州内のエネルギーコストの上昇が影響しています。この政策変更は、データセンター業界に大きな影響を与える可能性があります。",
+      "url": "http://electrek.co/2026/02/19/data-centers-are-becoming-power-plants-this-nj-project-proves-it/",
+      "source": "Electrek",
+      "publishedAt": "2026-02-19T22:12:19Z",
+      "title": "Data centers are becoming power plants – this NJ project proves it",
+      "title_ja": "データセンターが発電所に変わる - このニュージャージーのプロジェクトが証明",
+      "summary_ja": "Iron Mountainはニュージャージーのデータセンターに23メガワット時のバッテリーを設置する契約を結びました。このプロジェクトは、データセンターが電力を固定された負荷としてではなく、制御可能な資産として管理し始めていることを示しています。これにより、コスト削減と信頼性向上が可能となります。",
       "key_points": [
-        "プリッツカー知事がデータセンターの税優遇措置を一時停止したい意向を示す。",
-        "急騰する電力料金が背景にある。",
-        "政策変更はデータセンター業界に影響を及ぼす可能性がある。"
+        "Iron Mountainは、既存の太陽光発電システムとバッテリーを組み合わせたプロジェクトを推進している。",
+        "データセンターは、電力供給を管理する新しい役割を果たしつつある。",
+        "EPRIは、2030年までにデータセンターがアメリカの電力消費の9%を占めると予想している。",
+        "このような現場のシステムは、持続可能性と信頼性の向上に貢献する。",
+        "ピーク時の電力量の需要を緩和するために、蓄えたエネルギーを適切に放出できる。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保管、管理、処理を行うための施設。"
+          "term": "MWh",
+          "explain_ja": "メガワット時（MWh）はエネルギーの単位で、1メガワットの電力を1時間使用した場合のエネルギー量を示す。"
         },
         {
-          "term": "税優遇措置",
-          "explain_ja": "特定の産業や企業に対して税金の軽減や優遇を提供する制度。"
+          "term": "バッテリー貯蔵システム",
+          "explain_ja": "エネルギーを蓄えておくための装置で、需要が高い時に電力を供給することができる。"
         },
         {
-          "term": "電力料金",
-          "explain_ja": "電力の使用に対して顧客が支払う料金。"
+          "term": "カーボンフリーエネルギー",
+          "explain_ja": "二酸化炭素を排出せずに生成されるエネルギーのこと。"
         }
       ],
       "personal_actions": [
-        "地域の電力料金の動向を把握する。",
-        "データセンターへの影響を考慮し、業務計画を見直す。",
-        "省エネルギー対策を検討する。"
+        "データセンターのエネルギー管理システムについての理解を深めるため、関連ドキュメントを確認する。",
+        "エネルギー効率を高めるための新しい技術や戦略について情報収集を行う。",
+        "社内での電力使用状況を見直し、持続可能なエネルギー利用を促進する施策を検討する。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.theregister.com/2026/02/18/google_ormat_geothermal_datacenter_deal/",
-      "source": "Theregister.com",
-      "publishedAt": "2026-02-18T19:41:33Z",
-      "title": "Google digs deep to power AI expansion with 150 MW geothermal deal",
-      "title_ja": "Googleが150MWの地熱発電契約を結びAI拡張を加速",
-      "summary_ja": "Googleは、データセンターの電力需要の増加に対応するため、Ormat TechnologiesとNV Energyとの間で新たに150MWの地熱発電供給契約を結びました。この契約は、グリーンエネルギーの利用を拡大し、データセンターの炭素排出を削減することを目的としています。今後、この地熱発電が2030年までに稼働し、データセンターの成長を支える重要なエネルギー源となるでしょう。",
+      "url": "https://www.channelnewsasia.com/business/southern-co-raises-spending-plan-7-data-center-power-demand-swells-5941351",
+      "source": "CNA",
+      "publishedAt": "2026-02-19T20:04:15Z",
+      "title": "Southern Co raises spending plan by 7% as data center power demand swells",
+      "title_ja": "サザン社、データセンターの電力需要増加を受けて支出計画を7%引き上げ",
+      "summary_ja": "サザン社は、データセンターや工業メーカーへの電力販売が増加していることを受けて、5年間の支出計画を約7%引き上げることを発表した。これにより、同社は投資を強化し、電力供給能力の向上を図る。データセンターの需要増加は、電力インフラの改善につながる可能性がある。",
       "key_points": [
-        "Googleは地熱エネルギーの利用に取り組んでおり、2008年からの歴史がある。",
-        "Ormat Technologiesは150MWの地熱エネルギー供給をNV Energyと合意した。",
-        "Fervo Energyは2023年に最初の強化地熱プラントを稼働させた。",
-        "地熱発電は、2030年までにデータセンターの需要の64％を補える可能性がある。",
-        "ただし、ビットバーンオペレーターは地域の電力源より20%高いプレミアムを支払う必要がある。"
+        "サザン社が支出計画を7%増加。",
+        "データセンターと工業メーカーへの電力需要が高まっている。",
+        "米国の公共事業はインフラ投資に注力。",
+        "支出増加は電力供給能力の向上を目的としている。",
+        "需要増に伴い、今後の投資計画が重要となる。"
       ],
       "glossary": [
         {
-          "term": "地熱発電",
-          "explain_ja": "地球内部の熱を利用して発電する方法。再生可能エネルギーの一種。"
+          "term": "データセンター",
+          "explain_ja": "データの保存や管理を行う施設。"
         },
         {
-          "term": "NV Energy",
-          "explain_ja": "ネバダ州の電力供給会社。地域の電力網を管理している。"
-        },
-        {
-          "term": "Fervo Energy",
-          "explain_ja": "強化地熱プラントを開発・運営する企業。"
+          "term": "公共事業",
+          "explain_ja": "公共の電力やガスを供給する企業。"
         }
       ],
       "personal_actions": [
-        "地熱エネルギーの利用状況についての最新情報を確認する。",
-        "AIデータセンターの電力効率について調査する。",
-        "他の再生可能エネルギーのオプションを評価する。"
+        "地元の電力会社の新しい情報を確認する。",
+        "データセンターのバランスを考慮した電力消費を見直す。",
+        "インフラの改善に向けた地域の計画を把握する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://www.notebookcheck.net/American-sodium-ion-battery-company-targets-residential-and-AI-data-center-ESS-without-Chinese-imports.1229717.0.html",
-      "source": "Notebookcheck.net",
-      "publishedAt": "2026-02-18T19:12:00Z",
-      "title": "US-based sodium-ion battery factory to target energy storage without Chinese imports",
-      "title_ja": "アメリカのナトリウムイオン電池会社、住宅用およびAIデータセンター向けのエネルギー貯蔵を目指す",
-      "summary_ja": "アメリカのSyntropic Powerが、ナトリウムイオン電池の国内生産に着手し、住宅用バックアップからAIデータセンター向けまで幅広いエネルギー貯蔵システムを提供する計画を発表しました。中国の輸入に依存しないサプライチェーンの構築を目指し、連邦の規制を回避します。この新技術は安全性が高く、寿命も長いため、特に需要が高まっています。2026年には2GWhの貯蔵能力を持つパイロットを展開予定です。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180827508",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-02-19T17:12:08Z",
+      "title": "Orbital AI data centers could work, but they might ruin Earth in the process - Slashdot",
+      "title_ja": "オービタルAIデータセンターの可能性と地球への影響",
+      "summary_ja": "イーロン・マスクがSpaceXとxAIの統合を発表し、100万基の衛星を用いたオービタルデータセンター構想が浮上した。この計画は実現可能とされるが、低軌道の環境や持続可能性に深刻な影響を及ぼす懸念がある。専門家は、宇宙でのデータ処理には熱管理や放射線の影響などの課題が存在すると警告している。",
       "key_points": [
-        "Syntropic Powerはアメリカ国内でナトリウムイオン電池の生産を開始する。",
-        "住宅用バックアップやAIデータセンター向けのエネルギー貯蔵システムを発売予定。",
-        "中国製品に依存せず、国内供給網を活用する方針。",
-        "ナトリウムイオン電池は、安全で寿命が長く、現在再評価されている。",
-        "2026年には2GWhのパイロットプロジェクトを予定している。"
+        "マスクは洪水に発表した100万基の衛星を使ったデータセンター構想を提案。",
+        "衛星データセンターは持続可能性や環境に重大な影響を及ぼす可能性がある。",
+        "熱管理と放射線の影響が主な課題として浮上している。",
+        "データセンターが必要とする維持管理コストの高騰が懸念されている。",
+        "Kessler症候群による宇宙ゴミの問題が深刻化する可能性がある。"
       ],
       "glossary": [
         {
-          "term": "ナトリウムイオン電池",
-          "explain_ja": "リチウムの代わりにナトリウムを使用した電池技術で、安全性が高く寿命が長い。"
+          "term": "Kessler syndrome",
+          "explain_ja": "宇宙における衝突が連鎖的に起こる現象で、低軌道の宇宙ゴミ問題を示す。"
         },
         {
-          "term": "FEOC",
-          "explain_ja": "Foreign Entity of Concernの略で、アメリカの連邦規制により、特定の外国製品に制限を課す。"
+          "term": "GPU",
+          "explain_ja": "グラフィック処理ユニットで、データセンターでは計算処理に使われる。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能。データセンターでの処理能力向上が期待される。"
         }
       ],
       "personal_actions": [
-        "自社のエネルギー貯蔵ニーズを評価し、ナトリウムイオン電池の導入を検討する。",
-        "現行のエネルギー供給元やシステムがFEOCの影響を受けていないか確認する。"
+        "宇宙関連の最新ニュースを定期的に確認する。",
+        "データセンターや宇宙ゴミに関する法規制の動向を追う。",
+        "自身が使用する技術の使用効率や環境への影響を再評価する。"
       ],
       "tags": [
         "DC",
