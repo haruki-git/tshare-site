@@ -1,88 +1,37 @@
 {
-  "date": "2026-02-22",
-  "generatedAtJST": "2026-02-22T07:16:09.636+09:00",
+  "date": "2026-02-23",
+  "generatedAtJST": "2026-02-23T07:15:34.623+09:00",
   "items": [
     {
-      "url": "https://uk.pcmag.com/graphics-cards/163287/amd-gpu-prices-fall-in-japan-turns-out-there-is-a-limit-to-what-people-will-pay",
-      "source": "PCMag.com",
-      "publishedAt": "2026-02-20T20:41:22Z",
-      "title": "AMD GPU Prices Fall in Japan. Turns Out There Is a Limit to What People Will Pay",
-      "title_ja": "AMDのGPU価格が日本で下落、消費者が支払う限界を示す",
-      "summary_ja": "日本でAMDのGPU価格が最大20%下落しました。これは、消費者が購入を控えた結果であり、需要の減少が小売業者に価格を引き下げさせました。この傾向は、価格設定に対する消費者の反発が影響していることを示唆しています。今後、AMDおよびNvidiaの小売価格が上昇する可能性があるため、注意が必要です。",
+      "url": "https://spectrum.ieee.org/ai-data-centers-hts-superconductors",
+      "source": "Ieee.org",
+      "publishedAt": "2026-02-21T14:00:02Z",
+      "title": "AI Data Centers Turn to High-Temperature Superconductors",
+      "title_ja": "AIデータセンターが高温超伝導体に注目",
+      "summary_ja": "AIデータセンターは電力生成の世界に変革をもたらしています。現在建設中の数に対して、電力網のキャパシティは不足しています。従来の送電・配電ネットワークはこの需要に応えられず、高温超伝導体の導入が検討されています。",
       "key_points": [
-        "AMD GPUの価格が日本で20%下落した。",
-        "2025年12月にはGPUの価格が40%上昇し、消費者の反発があった。",
-        "米国ではトップAMDカードの価格は安定しているが、依然としてMSRPを上回っている。",
-        "消費者の需要が低下したため、小売業者が価格を調整した可能性がある。",
-        "今後、AMDとNvidiaは推奨小売価格を最大10%引き上げる可能性がある。"
+        "AIデータセンターの電力需要が急増している。",
+        "現在の電力網ではこの需要を満たせない。",
+        "高温超伝導体が新たな解決策として浮上している。",
+        "従来の送電・配電ネットワークの限界が明らかに。"
       ],
       "glossary": [
-        {
-          "term": "AMD",
-          "explain_ja": "米国の半導体企業で、グラフィックカードやプロセッサを製造している。"
-        },
-        {
-          "term": "GPU",
-          "explain_ja": "グラフィック処理ユニットの略で、画像や動画の処理を行うための専用プロセッサ。"
-        },
-        {
-          "term": "MSRP",
-          "explain_ja": "メーカー希望小売価格の略で、製造業者が定めた小売価格。"
-        },
-        {
-          "term": "VRAM",
-          "explain_ja": "ビデオRAMの略で、グラフィックカードが画像を処理するために必要なメモリ。"
-        },
-        {
-          "term": "Nvidia",
-          "explain_ja": "米国のテクノロジー企業で、GPUやAI関連技術を開発している。"
-        }
-      ],
-      "personal_actions": [
-        "現在のGPU価格動向を確認し、購入のタイミングを計る。",
-        "自分の使用目的に合ったGPUのスペックを再評価する。",
-        "AMDおよびNvidiaの価格改定の最新情報を追う。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/AI-Boom-Faces-Power-Crisis-Without-Global-Renewable-Surge.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-02-20T12:00:00Z",
-      "title": "AI Boom Faces Power Crisis Without Global Renewable Surge",
-      "title_ja": "AIブームは世界的再生可能エネルギーの拡大なしに電力危機に直面",
-      "summary_ja": "AIおよびデータセンターの急成長は、再生可能エネルギーの導入を加速しないと、多くの人々がエネルギー貧困に陥る危険性がある。エンビジョン社の創設者は、AIインフラからの電力需要が再生可能エネルギーの重要性を再定義していると指摘。国際エネルギー機関の報告によれば、電力需要は2020年代末まで急成長し続ける見込みである。これに対応するため、投資の拡充が求められている。",
-      "key_points": [
-        "AIブームが電力需要を急増させている。",
-        "再生可能エネルギーの導入が欠かせないとエンビジョン社の創設者が警告。",
-        "全世界で2,500 GWの再生可能エネルギー計画が進行中だが、接続待ちの状態。",
-        "米国の電力需要は2030年までに年平均2%成長すると予測されている。",
-        "データセンターの拡大が電力需要の急増の一因。"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能のこと。データ分析や自動化などさまざまな分野で利用される技術。"
-        },
         {
           "term": "データセンター",
-          "explain_ja": "データを保存・管理するための施設。クラウドサービスや企業のIT基盤に必要不可欠。"
+          "explain_ja": "情報やデータを管理・保存するための施設。"
         },
         {
-          "term": "再生可能エネルギー",
-          "explain_ja": "太陽光や風力など、自然から得られるエネルギー源。持続可能な形で利用できる。"
+          "term": "超伝導体",
+          "explain_ja": "電気抵抗がゼロになる物質。"
         },
         {
-          "term": "IEA",
-          "explain_ja": "国際エネルギー機関。エネルギー政策に関する情報を提供し、国際的な協力を促進する。"
+          "term": "高温超伝導体",
+          "explain_ja": "比較的高い温度で超伝導特性を示す材料。"
         }
       ],
       "personal_actions": [
-        "再生可能エネルギーの導入状況を確認する。",
-        "エネルギー効率の高い設備を導入する計画を立てる。",
-        "データセンターのエネルギー使用状況を評価する。"
+        "現在の電力管理政策を確認する。",
+        "高温超伝導技術に関する最新情報を追う。"
       ],
       "tags": [
         "DC",
@@ -90,36 +39,71 @@
       ]
     },
     {
-      "url": "https://economictimes.indiatimes.com/markets/expert-view/deven-choksey-on-reliances-110-billion-ai-bet-and-what-it-means-for-investors-and-indias-tech-future/articleshow/128596031.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-02-20T06:48:40Z",
-      "title": "Deven Choksey on Reliance's $110 billion AI bet and what it means for investors and India's tech future",
-      "title_ja": "デヴェン・チョクシーが語る、リライアンスの1100億ドルのAI投資とその影響",
-      "summary_ja": "リライアンス・インダストリーズは、データセンターとAIインフラに1100億ドルを投資する計画です。この投資は、安価な太陽光発電を利用したコンピューティングを目指しています。2030年までに1ギガワットのデータセンター容量をターゲットとしており、これによりインドの技術未来と投資家に対して重要な影響を与える見込みです。",
+      "url": "https://www.tomshardware.com/tech-industry/big-tech/datacenter-developers-leverage-natural-gas-to-sidestep-power-grids-short-term-solution-might-increase-carbon-emissions-and-prove-costly-in-the-long-run",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-02-21T13:00:00Z",
+      "title": "Data center developers building private natural gas 'Shadow Grid' power plants to sidestep strained grids — off-grid GW Ranch project in Texas will reportedly use as much power as Chicago",
+      "title_ja": "データセンター開発者が天然ガスの「シャドーグリッド」発電所を構築、電力網を回避",
+      "summary_ja": "データセンターの開発者は、電力網の逼迫を回避するために、天然ガスを使用した私設発電所「シャドーグリッド」を構築しています。この取り組みは、テキサスのGW Ranchプロジェクトで、シカゴと同等の電力を使用するとされています。ただし、これは長期的にはコストがかかり、炭素排出を増加させる可能性があります。",
       "key_points": [
-        "リライアンス・インダストリーズが1100億ドルの投資を計画",
-        "投資はデータセンターとAIインフラに焦点を当てている",
-        "安価な太陽光エネルギーの利用が目的",
-        "2030年までに1ギガワットのデータセンター容量を目指す",
-        "この動きはインドの技術と投資に大きな影響を与える可能性がある"
+        "電力網の逼迫を回避するため、天然ガス発電所を利用するデータセンターが増加中。",
+        "テキサスのGW Ranchプロジェクトはシカゴ並みの電力を必要とする。",
+        "この措置は短期的には効果的な解決策だが、炭素排出の増加につながる可能性がある。",
+        "長期的にはコストがかさむ恐れがある。",
+        "シャドーグリッドの利用は、環境政策への影響を考慮する必要がある。"
       ],
       "glossary": [
         {
-          "term": "リライアンス・インダストリーズ",
-          "explain_ja": "インドの大手企業で、エネルギー、情報通信、デジタルサービスなどを手掛けている。"
+          "term": "シャドーグリッド",
+          "explain_ja": "私設の発電所で、公共の電力網を利用せずに運営されるシステム。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略称。コンピュータが人間のように学習、推論、判断を行う技術。"
+          "term": "天然ガス",
+          "explain_ja": "化石燃料の一種で、電力発電のためによく使用される。"
+        },
+        {
+          "term": "GW Ranch",
+          "explain_ja": "テキサスに位置するデータセンタープロジェクトで、大規模な電力を必要とする。"
         }
       ],
       "personal_actions": [
-        "データセンター投資のトレンドをフォローし、関連する技術の進展を確認する",
-        "自社のAI導入について社内で検討し、リライアンスの動向を参考にする",
-        "再生可能エネルギーの利用状況を見直し、効率的なエネルギー活用を考慮する"
+        "自社の発電方法やエネルギー源を見直し、持続可能な選択肢を検討する。",
+        "電力需要のトレンドを確認し、将来の需要に備えた計画を立てる。",
+        "炭素排出削減のための技術や戦略を調査し、導入の可能性を探る。"
       ],
       "tags": [
-        "AI"
+        "DC"
+      ]
+    },
+    {
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180833556",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-02-20T22:32:29Z",
+      "title": "Trump adviser drops bombshell on Meta, Microsoft - thestreet.com - Slashdot",
+      "title_ja": "トランプ顧問、MetaとMicrosoftに衝撃の発言",
+      "summary_ja": "トランプの顧問がMetaやMicrosoftに対する重要な発言を行いました。詳細な内容は不明ですが、この発言が業界に与える影響は大きいと考えられます。特に、テクノロジー企業の規制や運営に関する議論を加速させる可能性があります。",
+      "key_points": [
+        "トランプの顧問がMetaとMicrosoftに関して重要な発言をした",
+        "具体的な内容は公開されていない",
+        "業界への影響が期待される"
+      ],
+      "glossary": [
+        {
+          "term": "Meta",
+          "explain_ja": "Facebookを運営する親会社で、SNSサービスや関連技術を展開している。"
+        },
+        {
+          "term": "Microsoft",
+          "explain_ja": "ソフトウェア、ハードウェア、クラウドサービスなどを提供する大手テクノロジー企業。"
+        }
+      ],
+      "personal_actions": [
+        "最新の業界ニュースに目を通す",
+        "MetaやMicrosoftの動向を確認する",
+        "テクノロジー企業に関する規制についての理解を深める"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
