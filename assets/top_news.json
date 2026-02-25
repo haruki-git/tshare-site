@@ -1,112 +1,105 @@
 {
-  "date": "2026-02-25",
-  "generatedAtJST": "2026-02-25T07:15:41.772+09:00",
+  "date": "2026-02-26",
+  "generatedAtJST": "2026-02-26T07:15:59.185+09:00",
   "items": [
     {
-      "url": "https://www.digitimes.com/news/a20260223VL209/openai-infrastructure-data-center-capacity-oracle.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-02-23T03:07:11Z",
-      "title": "Stargate delays push OpenAI to seek cloud compute alternatives",
-      "title_ja": "Stargateの遅延がOpenAIをクラウドコンピューティングの代替手段に追いやる",
-      "summary_ja": "OpenAIはStargateデータセンター事業の停滞により、計算リソースの確保に苦慮しており、クラウドパートナーや代替ハードウェアを求めています。この事業は、2025年初頭に発表された5000億ドルの共同プロジェクトで、10GWのAI計算能力を提供することを目的としていましたが、現在はほとんど進展がありません。これにより、OpenAIは計算能力の目標を下回り、経済的な見通しを大きく変更せざるを得なくなっています。",
+      "url": "https://techcrunch.com/2026/02/24/googles-new-1-9gw-clean-energy-deal-includes-massive-100-hour-battery/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-02-24T21:36:00Z",
+      "title": "Google’s new 1.9GW clean energy deal includes massive 100-hour battery | TechCrunch",
+      "title_ja": "Googleの新しい1.9GWクリーンエネルギー契約は巨大な100時間バッテリーを含む",
+      "summary_ja": "Googleは新たに1.9GWのクリーンエネルギー契約を締結し、Form Energyの鉄空気バッテリーを利用して、風力と太陽光の電力を24時間供給する。これにより、データセンターの持続可能性が向上し、再生可能エネルギーの活用が促進される。この取り組みは、クリーンエネルギーへの移行を加速する重要なステップとなる。",
       "key_points": [
-        "OpenAIはStargateプロジェクトの失敗に直面し、計算能力の確保に奔走している。",
-        "初期のデータセンター建設計画が資金調達の難航により中止された。",
-        "Oracleとの提携により、4.5GWのデータセンターを共同開発することになった。",
-        "OpenAIは、追加のクラウド計算契約を結び、Nvidia以外のハードウェアパートナーとの関係も強化している。",
-        "計算能力の目標を達成できず、支出予測を増加させる結果となった。",
-        "競争が激化する中で、OpenAIはインフラ担当者を新たに採用し、戦略を見直している。"
+        "Googleは1.9GWのクリーンエネルギー契約を締結した。",
+        "Form Energyの鉄空気バッテリーが使用される。",
+        "バッテリーは風力と太陽光のエネルギーを24時間供給する。",
+        "この契約はデータセンターの持続可能性を高める。",
+        "再生可能エネルギーの利用が促進される。"
       ],
       "glossary": [
         {
-          "term": "Stargate",
-          "explain_ja": "OpenAIがOracleおよびSoftBankと共同で進めているデータセンター事業で、10GWのAI計算能力を提供する予定だった。"
+          "term": "クリーンエネルギー",
+          "explain_ja": "環境負荷が少ないエネルギー源の総称で、再生可能なエネルギーを含む。"
         },
         {
-          "term": "GW",
-          "explain_ja": "ギガワットの略で、電力の単位。1GWは10億ワットに相当する。"
+          "term": "バッテリー",
+          "explain_ja": "電気エネルギーを化学的に蓄え、必要に応じて放出する装置。"
         },
         {
-          "term": "Cloud Computing",
-          "explain_ja": "インターネット経由で提供される計算リソースやサービスを指す。"
+          "term": "鉄空気バッテリー",
+          "explain_ja": "鉄と空気を反応させて電気を生成する、エネルギー密度の高いバッテリー。"
         }
       ],
       "personal_actions": [
-        "現在のクラウドサービスのパートナーシップがどのように進展しているかを確認する。",
-        "計算リソースの必要性を評価し、適切なサプライヤーとの関係構築を考える。",
-        "競合他社の動向を定期的にチェックし、自社の戦略に反映させる。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.ycombinator.com/companies/sim/jobs/Rj8TVRM-software-engineer-platform",
-      "source": "Hacker News",
-      "publishedAt": "2026-02-23T21:00:28Z",
-      "title": "Software Engineer, Platform at Sim | Y Combinator",
-      "title_ja": "Simのプラットフォーム向けソフトウェアエンジニア募集 | Y Combinator",
-      "summary_ja": "Simは、AIエージェントを構築、配備、オーケストレーションするためのオープンソースプラットフォームです。70,000人以上の開発者が利用しており、視覚的なFigmaのようなキャンバスでアイデアをプロダクショングレードのワークフローに変えています。この役割では、プラットフォームのフロントエンドアーキテクチャを担当し、開発者が視覚的にエージェントを作成するためのインタラクションモデルを設計します。",
-      "key_points": [
-        "Simは70,000人以上の開発者に利用されているオープンソースプラットフォーム。",
-        "フロントエンドアーキテクチャの設計と開発責任を持つ。",
-        "視覚的なドラッグアンドドロップのワークフローエディタを提供。",
-        "製品に対する思考とユーザーエクスペリエンスに重点を置いている。",
-        "バックエンド作業も含まれるフルスタックエンジニアを求めている。"
-      ],
-      "glossary": [
-        {
-          "term": "AIエージェント",
-          "explain_ja": "人工知能を活用してタスクを自動化するプログラムまたはシステム。"
-        },
-        {
-          "term": "フロントエンドアーキテクチャ",
-          "explain_ja": "ユーザーが直接触れる部分の設計と構築の基盤。"
-        },
-        {
-          "term": "リアルタイムシステム",
-          "explain_ja": "データの更新や処理を即時に行うことができるシステム。"
-        }
-      ],
-      "personal_actions": [
-        "プラットフォームの使用感を確認し、自身の開発フローを可視化する。",
-        "必要なスキルや経験を持つ人材を社内で探してみる。",
-        "オープンソースプロジェクトへの貢献を考える。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.commondreams.org/news/el-mencho-killing-violence-mexico",
-      "source": "Common Dreams",
-      "publishedAt": "2026-02-23T16:57:43Z",
-      "title": "US-Backed Killing of Cartel Boss Unleashes Wave of Violence Across Mexico",
-      "title_ja": "米国支援によるカルテルボスの殺害がメキシコ全土での暴力を引き起こす",
-      "summary_ja": "メキシコの治安部隊が米国の支援を受けて、有力カルテル幹部のエル・メンチョを殺害した。これにより、メキシコはすぐに暴力と混乱に見舞われた。この殺害は、国内の治安状況に深刻な影響を及ぼす恐れがある。",
-      "key_points": [
-        "米国の支援を受けたメキシコの治安部隊が、エル・メンチョを殺害。",
-        "殺害後、メキシコ全土で暴力の波が広がった。",
-        "エル・メンチョはメキシコで最も権力のあるカルテルボスの一人であった。",
-        "治安状況が悪化する可能性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "エル・メンチョ",
-          "explain_ja": "本名ネメシオ・オセゲラ・セルバンテス。メキシコの麻薬カルテル「ジャリスコ新世代カルテル」のボス。"
-        },
-        {
-          "term": "カルテル",
-          "explain_ja": "麻薬を含む違法なビジネスを行う犯罪組織。"
-        }
-      ],
-      "personal_actions": [
-        "地域の治安情報を常に確認する。",
-        "地元の暴力に関する報道に注意を払う。",
-        "危険な地域への立ち入りを避ける。"
+        "データセンターのエネルギー管理施策を確認する。",
+        "再生可能エネルギーの利用状況を把握する。",
+        "鉄空気バッテリーに関する最新情報を追う。"
       ],
       "tags": [
         "その他"
+      ]
+    },
+    {
+      "url": "https://billmckibben.substack.com/p/my-native-intelligence-considers",
+      "source": "Substack.com",
+      "publishedAt": "2026-02-24T19:06:50Z",
+      "title": "Why Pausing the Data Center Buildout Is the (Humanly) Intelligent Choice",
+      "title_ja": "データセンターの建設を一時停止することが賢明な選択である理由",
+      "summary_ja": "データセンターの建設に関する議論が難航している中、ある明確な見解が浮かび上がってきた。持続可能性やリソース管理、社会的影響を考慮することが重要視されている。これに基づき、データセンターの建設を一時停止することが人間的に賢明な選択となる可能性が指摘されている。",
+      "key_points": [
+        "データセンターの拡張に対する懸念が高まっている。",
+        "持続可能なリソース管理の重要性が強調されている。",
+        "社会的影響に対する配慮が求められている。",
+        "一時停止することがより良い結果をもたらす可能性がある。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データを保管・処理するための施設。"
+        },
+        {
+          "term": "持続可能性",
+          "explain_ja": "現在のニーズを満たしつつ、未来の世代のために環境を守る考え方。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターにおける資源使用状況を見直す。",
+        "持続可能な方法でのデータ管理について社内で議論する。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.commondreams.org/news/denver-data-center",
+      "source": "Common Dreams",
+      "publishedAt": "2026-02-24T17:48:47Z",
+      "title": "Praising Denver and Other Cities for Leading the Way, Sanders Renews Call for National Data Center Moratorium",
+      "title_ja": "サンダース氏、デンバーなどのリーダーシップを称賛し、全国的なデータセンターの一時停止を呼びかける",
+      "summary_ja": "デンバーのマイク・ジョンストン市長はAI推進者であるが、建設の一時停止を発表。サンダース氏は、持続可能性や資源管理への配慮から全国的なデータセンターのMoratoriumを求めている。これにより環境への影響が軽減される可能性がある。",
+      "key_points": [
+        "デンバー市はAI技術の推進を目指す",
+        "ジョンストン市長はデータセンター建設のMoratoriumを発表",
+        "サンダース氏は持続可能な開発のための全国的な呼びかけを行う",
+        "データセンターの建設が環境に与える影響が問題視されている"
+      ],
+      "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能。データを処理し、意思決定を行う技術。"
+        },
+        {
+          "term": "Moratorium",
+          "explain_ja": "一時停止。特定の行動や活動を無期限で停止すること。"
+        }
+      ],
+      "personal_actions": [
+        "地域のデータセンターの影響を確認する",
+        "持続可能な技術導入に関する情報を集める"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
