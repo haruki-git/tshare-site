@@ -1,101 +1,117 @@
 {
-  "date": "2026-02-26",
-  "generatedAtJST": "2026-02-26T07:15:59.185+09:00",
+  "date": "2026-02-27",
+  "generatedAtJST": "2026-02-27T07:15:46.575+09:00",
   "items": [
     {
-      "url": "https://techcrunch.com/2026/02/24/googles-new-1-9gw-clean-energy-deal-includes-massive-100-hour-battery/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-02-24T21:36:00Z",
-      "title": "Google’s new 1.9GW clean energy deal includes massive 100-hour battery | TechCrunch",
-      "title_ja": "Googleの新しい1.9GWクリーンエネルギー契約は巨大な100時間バッテリーを含む",
-      "summary_ja": "Googleは新たに1.9GWのクリーンエネルギー契約を締結し、Form Energyの鉄空気バッテリーを利用して、風力と太陽光の電力を24時間供給する。これにより、データセンターの持続可能性が向上し、再生可能エネルギーの活用が促進される。この取り組みは、クリーンエネルギーへの移行を加速する重要なステップとなる。",
+      "url": "https://www.cnbc.com/2026/02/25/trump-tech-ai-data-center-electricity-price-pledge.html",
+      "source": "CNBC",
+      "publishedAt": "2026-02-25T18:40:32Z",
+      "title": "Big Tech companies to meet Trump at White House to sign pledge on data center power costs",
+      "title_ja": "ビッグテック企業がホワイトハウスでトランプとデータセンターの電力コストに関する誓約を締結",
+      "summary_ja": "ビッグテック企業がトランプ前大統領とともにデータセンターの電力コストに関する誓約を締結するため、3月4日にホワイトハウスで会合を持つ。出席する企業には、Amazon、Google、Meta、Microsoft、xAI、Oracle、OpenAIが含まれる。これは、電力コストの課題に対処するための重要な一歩と見なされ、業界全体に影響を及ぼす可能性がある。",
       "key_points": [
-        "Googleは1.9GWのクリーンエネルギー契約を締結した。",
-        "Form Energyの鉄空気バッテリーが使用される。",
-        "バッテリーは風力と太陽光のエネルギーを24時間供給する。",
-        "この契約はデータセンターの持続可能性を高める。",
-        "再生可能エネルギーの利用が促進される。"
-      ],
-      "glossary": [
-        {
-          "term": "クリーンエネルギー",
-          "explain_ja": "環境負荷が少ないエネルギー源の総称で、再生可能なエネルギーを含む。"
-        },
-        {
-          "term": "バッテリー",
-          "explain_ja": "電気エネルギーを化学的に蓄え、必要に応じて放出する装置。"
-        },
-        {
-          "term": "鉄空気バッテリー",
-          "explain_ja": "鉄と空気を反応させて電気を生成する、エネルギー密度の高いバッテリー。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターのエネルギー管理施策を確認する。",
-        "再生可能エネルギーの利用状況を把握する。",
-        "鉄空気バッテリーに関する最新情報を追う。"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://billmckibben.substack.com/p/my-native-intelligence-considers",
-      "source": "Substack.com",
-      "publishedAt": "2026-02-24T19:06:50Z",
-      "title": "Why Pausing the Data Center Buildout Is the (Humanly) Intelligent Choice",
-      "title_ja": "データセンターの建設を一時停止することが賢明な選択である理由",
-      "summary_ja": "データセンターの建設に関する議論が難航している中、ある明確な見解が浮かび上がってきた。持続可能性やリソース管理、社会的影響を考慮することが重要視されている。これに基づき、データセンターの建設を一時停止することが人間的に賢明な選択となる可能性が指摘されている。",
-      "key_points": [
-        "データセンターの拡張に対する懸念が高まっている。",
-        "持続可能なリソース管理の重要性が強調されている。",
-        "社会的影響に対する配慮が求められている。",
-        "一時停止することがより良い結果をもたらす可能性がある。"
+        "ビッグテック企業がホワイトハウスで会合を開催",
+        "トランプ前大統領との電力コスト誓約を締結",
+        "参加企業には主要なテクノロジー企業が名を連ねる",
+        "電力コスト課題への対処が目的",
+        "業界全体への影響が期待される"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを保管・処理するための施設。"
+          "explain_ja": "データを保存、管理、配信するための施設で、コンピュータやネットワーク機器が備えられている。"
         },
         {
-          "term": "持続可能性",
-          "explain_ja": "現在のニーズを満たしつつ、未来の世代のために環境を守る考え方。"
+          "term": "ビッグテック",
+          "explain_ja": "Amazon、Google、Facebook、Apple、Microsoftなどの大手テクノロジー企業を指す。"
         }
       ],
       "personal_actions": [
-        "データセンターにおける資源使用状況を見直す。",
-        "持続可能な方法でのデータ管理について社内で議論する。"
+        "データセンターの電力効率化に向けた取り組みを検討する",
+        "自社の電力消費を見直し、最適化の余地を探る"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.commondreams.org/news/denver-data-center",
-      "source": "Common Dreams",
-      "publishedAt": "2026-02-24T17:48:47Z",
-      "title": "Praising Denver and Other Cities for Leading the Way, Sanders Renews Call for National Data Center Moratorium",
-      "title_ja": "サンダース氏、デンバーなどのリーダーシップを称賛し、全国的なデータセンターの一時停止を呼びかける",
-      "summary_ja": "デンバーのマイク・ジョンストン市長はAI推進者であるが、建設の一時停止を発表。サンダース氏は、持続可能性や資源管理への配慮から全国的なデータセンターのMoratoriumを求めている。これにより環境への影響が軽減される可能性がある。",
+      "url": "https://www.channelnewsasia.com/business/white-house-host-big-tech-in-pledge-rein-in-power-costs-5953091",
+      "source": "CNA",
+      "publishedAt": "2026-02-25T17:07:58Z",
+      "title": "White House to host Big Tech in pledge to rein in power costs",
+      "title_ja": "ホワイトハウス、ビッグテックを招待し電力コスト抑制の誓約を発表",
+      "summary_ja": "ホワイトハウスは、消費者を上昇する電気料金から守るために、データセンターやAI企業を招待して契約を結ぶことを計画しています。これにはMicrosoft、Anthropic、Meta Platformsなどが含まれます。この取り組みは、ビッグテック企業の影響力を抑制し、電力費の透明性を高めることを目的としています。",
       "key_points": [
-        "デンバー市はAI技術の推進を目指す",
-        "ジョンストン市長はデータセンター建設のMoratoriumを発表",
-        "サンダース氏は持続可能な開発のための全国的な呼びかけを行う",
-        "データセンターの建設が環境に与える影響が問題視されている"
+        "ホワイトハウスがビッグテック企業を招待する予定",
+        "目的は電力コストの上昇から消費者を守ること",
+        "参加企業にはMicrosoft、Anthropic、Meta Platformsが含まれる",
+        "契約は3月の初めに正式化される",
+        "取り組みは電力費の透明性を高める狙いあり"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能。データを処理し、意思決定を行う技術。"
+          "term": "ビッグテック",
+          "explain_ja": "大手テクノロジー企業の総称。通常はAmazon、Apple、Facebook（Meta）、Google、Microsoftなどを指す。"
         },
         {
-          "term": "Moratorium",
-          "explain_ja": "一時停止。特定の行動や活動を無期限で停止すること。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略。コンピュータや機械が知的な行動を行う技術。"
+        },
+        {
+          "term": "電力コスト",
+          "explain_ja": "電気の使用にかかる費用。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンターの影響を確認する",
-        "持続可能な技術導入に関する情報を集める"
+        "社内の電力使用状況を見直し、コスト削減の余地がないか確認する。",
+        "新しい契約やプランでの電力コストを調査する。",
+        "エネルギー効率の良い機器やサービスへの切り替えを検討する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.techpowerup.com/346761/dell-introduces-the-poweredge-xr9700-closed-loop-liquid-cooled-fully-enclosed-server",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-02-25T17:05:02Z",
+      "title": "Dell Introduces the PowerEdge XR9700 Closed-Loop Liquid-Cooled, Fully-Enclosed Server",
+      "title_ja": "Dell、クローズドループ液冷方式の完全密閉型サーバー「PowerEdge XR9700」を発表",
+      "summary_ja": "Dell Technologiesは、初のクローズドループ液冷式で完全密閉型のPowerEdge XR9700サーバーを発表しました。このサーバーは、保護されていない屋外環境でCloud RANやエッジAIワークロードを実行するために設計されており、ユーティリティポールや屋上に取り付けることができます。この製品により、通信事業者はコンパクトな設計で高性能なコンピューティングを提供し、新たなネットワーク拡張の可能性が広がります。",
+      "key_points": [
+        "PowerEdge XR9700は、厳しい環境に耐えることができるIP66等級の完全密閉型サーバー。",
+        "クローズドループ液冷システムにより、-40°Cから46°Cの範囲で安定した運用が可能。",
+        "最大15の5Gセクターをサポートし、Cloud RANやエッジAIワークロードを実行できる処理能力。",
+        "Dellの既存の管理ツールやソフトウェアスタックと統合されている。",
+        "2026年の下半期にグローバルでの提供開始予定。"
+      ],
+      "glossary": [
+        {
+          "term": "PowerEdge XR9700",
+          "explain_ja": "Dellの新しいクローズドループ液冷式密閉サーバー。"
+        },
+        {
+          "term": "Cloud RAN",
+          "explain_ja": "クラウドベースで運用される無線アクセスネットワーク。"
+        },
+        {
+          "term": "IP66",
+          "explain_ja": "防水と防塵性能を示す等級で、完全に密閉されていることを意味する。"
+        },
+        {
+          "term": "5G",
+          "explain_ja": "第5世代移動通信システム。"
+        },
+        {
+          "term": "エッジAI",
+          "explain_ja": "データの生成・消費地点で実行される人工知能アプリケーション。"
+        }
+      ],
+      "personal_actions": [
+        "現場での新しいサーバーの設置計画を考慮し、適切な環境を選定する。",
+        "既存の通信インフラへの統合可能性を評価する。",
+        "液冷技術の利点を理解し、他の機器への適用を検討する。"
       ],
       "tags": [
         "DC",
