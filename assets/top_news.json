@@ -1,121 +1,107 @@
 {
-  "date": "2026-02-27",
-  "generatedAtJST": "2026-02-27T07:15:46.575+09:00",
+  "date": "2026-02-28",
+  "generatedAtJST": "2026-02-28T07:15:44.920+09:00",
   "items": [
     {
-      "url": "https://www.cnbc.com/2026/02/25/trump-tech-ai-data-center-electricity-price-pledge.html",
-      "source": "CNBC",
-      "publishedAt": "2026-02-25T18:40:32Z",
-      "title": "Big Tech companies to meet Trump at White House to sign pledge on data center power costs",
-      "title_ja": "ビッグテック企業がホワイトハウスでトランプとデータセンターの電力コストに関する誓約を締結",
-      "summary_ja": "ビッグテック企業がトランプ前大統領とともにデータセンターの電力コストに関する誓約を締結するため、3月4日にホワイトハウスで会合を持つ。出席する企業には、Amazon、Google、Meta、Microsoft、xAI、Oracle、OpenAIが含まれる。これは、電力コストの課題に対処するための重要な一歩と見なされ、業界全体に影響を及ぼす可能性がある。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180865172",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-02-26T22:13:06Z",
+      "title": "Trump announced a major deal on data centers. It’s still unclear what’s in it. - Politico - Slashdot",
+      "title_ja": "トランプがデータセンターに関する重要な契約を発表、内容は不明",
+      "summary_ja": "トランプ氏が新たなデータセンターに関する主要な契約を発表しましたが、その詳細については不明です。発表には大手テクノロジー企業の電力コストに関する新たな基準が含まれる可能性があります。契約内容が明らかになることで、データセンター業界やAI関連企業への影響が予想されます。",
       "key_points": [
-        "ビッグテック企業がホワイトハウスで会合を開催",
-        "トランプ前大統領との電力コスト誓約を締結",
-        "参加企業には主要なテクノロジー企業が名を連ねる",
-        "電力コスト課題への対処が目的",
-        "業界全体への影響が期待される"
+        "トランプ氏がデータセンターに関する契約を発表。",
+        "契約の詳細は依然として不明。",
+        "テクノロジー企業への新たな電力コストの基準が提案される可能性。",
+        "AI企業は契約に関与する予定。",
+        "業界の注目が集まっている。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを保存、管理、配信するための施設で、コンピュータやネットワーク機器が備えられている。"
+          "explain_ja": "データを管理・保管するための専門施設。"
         },
         {
           "term": "ビッグテック",
-          "explain_ja": "Amazon、Google、Facebook、Apple、Microsoftなどの大手テクノロジー企業を指す。"
+          "explain_ja": "大規模なテクノロジー企業を指す言葉。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力効率化に向けた取り組みを検討する",
-        "自社の電力消費を見直し、最適化の余地を探る"
+        "契約の詳細発表を待ち、それに基づいてビジネス戦略を検討する。",
+        "電力コストの変化に備えたコスト分析を行う。",
+        "業界の動向を定期的にチェックし、情報をアップデートする。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.telecompetitor.com/lsc-upgrades-ai-infrastructure-with-dark-fiber-route-from-st-louis-to-tulsa/",
+      "source": "Telecompetitor",
+      "publishedAt": "2026-02-26T19:15:31Z",
+      "title": "LSC upgrades AI infrastructure with dark fiber route from St. Louis to Tulsa",
+      "title_ja": "LSC、セントルイスからタルサへのダークファイバールートでAIインフラを強化",
+      "summary_ja": "Light Source Communications（LSC）は、セントルイスとタルサを結ぶ500マイルの長距離ダークファイバールートを発表しました。この新しいインフラは、AIやHPCアプリケーションの需要に応えるために、ダイバーシティと容量を向上させます。2027年第3四半期の完成を見込んでおり、セントルイスとタルサのデータセンターを直接接続します。",
+      "key_points": [
+        "新しいダークファイバールートはセントルイスとタルサをつなぎ、500マイルの長さがある。",
+        "ルートには8つのライン増幅器（ILA）が設置されており、信号強度を向上させる。",
+        "このインフラはAIやML、HPCアプリケーションに必要な大容量と低遅延を提供する。",
+        "全てのファイバー網は100%地下に埋設されており、高いセキュリティと稼働率を保証。",
+        "LSCは、インディアナポリス、ラスベガス、フェニックスにおいてもダークファイバーネットワークを拡大中。"
+      ],
+      "glossary": [
+        {
+          "term": "ダークファイバー",
+          "explain_ja": "使用されていない光ファイバーケーブルで、データ通信のために使われる。"
+        },
+        {
+          "term": "HPC",
+          "explain_ja": "高性能計算（High-Performance Computing）の略で、大規模な計算を迅速に実行するための技術。"
+        },
+        {
+          "term": "ILAs",
+          "explain_ja": "インライン増幅器（In-Line Amplifiers）の略で、信号を強化する装置。"
+        }
+      ],
+      "personal_actions": [
+        "社内のデータインフラストラクチャにおけるダークファイバーの需要を評価する。",
+        "新しいダークファイバーのルートが完成した際の業務への影響を分析する。",
+        "セキュリティ対策を見直し、信頼性を高めるための準備を行う。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://fortune.com/2026/02/26/why-pennsylvania-sits-at-the-center-of-the-big-data-center-power-problem/",
+      "source": "Fortune",
+      "publishedAt": "2026-02-26T15:46:07Z",
+      "title": "Why Pennsylvania sits at the center of the big data-center power problem",
+      "title_ja": "ペンシルベニアがビッグデータセンター電力問題の中心にある理由",
+      "summary_ja": "ペンシルベニアは古くて遅いインフラを抱え、ミッドアトランティックおよびミッドウェスタン地域の電力網の中央に位置しています。これにより、データセンターの電力需要が増加する中で、大きな問題が生じる可能性があります。電力の安定供給とインフラの強化が求められています。",
+      "key_points": [
+        "ペンシルベニアは古い電力インフラを持つ。",
+        "地域の電力網に位置することで、電力需給の問題が生じる。",
+        "データセンターの増加が電力負荷を加速させる可能性がある。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保存、処理を行うための施設。"
+        },
+        {
+          "term": "電力網",
+          "explain_ja": "電力を供給するための送電線や変電所などのネットワーク。"
+        }
+      ],
+      "personal_actions": [
+        "現在の電力インフラの情報を確認する。",
+        "データセンターの電力供給計画をレビューする。",
+        "電力需要の予測を立て、リスク管理策を策定する。"
       ],
       "tags": [
         "DC"
-      ]
-    },
-    {
-      "url": "https://www.channelnewsasia.com/business/white-house-host-big-tech-in-pledge-rein-in-power-costs-5953091",
-      "source": "CNA",
-      "publishedAt": "2026-02-25T17:07:58Z",
-      "title": "White House to host Big Tech in pledge to rein in power costs",
-      "title_ja": "ホワイトハウス、ビッグテックを招待し電力コスト抑制の誓約を発表",
-      "summary_ja": "ホワイトハウスは、消費者を上昇する電気料金から守るために、データセンターやAI企業を招待して契約を結ぶことを計画しています。これにはMicrosoft、Anthropic、Meta Platformsなどが含まれます。この取り組みは、ビッグテック企業の影響力を抑制し、電力費の透明性を高めることを目的としています。",
-      "key_points": [
-        "ホワイトハウスがビッグテック企業を招待する予定",
-        "目的は電力コストの上昇から消費者を守ること",
-        "参加企業にはMicrosoft、Anthropic、Meta Platformsが含まれる",
-        "契約は3月の初めに正式化される",
-        "取り組みは電力費の透明性を高める狙いあり"
-      ],
-      "glossary": [
-        {
-          "term": "ビッグテック",
-          "explain_ja": "大手テクノロジー企業の総称。通常はAmazon、Apple、Facebook（Meta）、Google、Microsoftなどを指す。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。コンピュータや機械が知的な行動を行う技術。"
-        },
-        {
-          "term": "電力コスト",
-          "explain_ja": "電気の使用にかかる費用。"
-        }
-      ],
-      "personal_actions": [
-        "社内の電力使用状況を見直し、コスト削減の余地がないか確認する。",
-        "新しい契約やプランでの電力コストを調査する。",
-        "エネルギー効率の良い機器やサービスへの切り替えを検討する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.techpowerup.com/346761/dell-introduces-the-poweredge-xr9700-closed-loop-liquid-cooled-fully-enclosed-server",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-02-25T17:05:02Z",
-      "title": "Dell Introduces the PowerEdge XR9700 Closed-Loop Liquid-Cooled, Fully-Enclosed Server",
-      "title_ja": "Dell、クローズドループ液冷方式の完全密閉型サーバー「PowerEdge XR9700」を発表",
-      "summary_ja": "Dell Technologiesは、初のクローズドループ液冷式で完全密閉型のPowerEdge XR9700サーバーを発表しました。このサーバーは、保護されていない屋外環境でCloud RANやエッジAIワークロードを実行するために設計されており、ユーティリティポールや屋上に取り付けることができます。この製品により、通信事業者はコンパクトな設計で高性能なコンピューティングを提供し、新たなネットワーク拡張の可能性が広がります。",
-      "key_points": [
-        "PowerEdge XR9700は、厳しい環境に耐えることができるIP66等級の完全密閉型サーバー。",
-        "クローズドループ液冷システムにより、-40°Cから46°Cの範囲で安定した運用が可能。",
-        "最大15の5Gセクターをサポートし、Cloud RANやエッジAIワークロードを実行できる処理能力。",
-        "Dellの既存の管理ツールやソフトウェアスタックと統合されている。",
-        "2026年の下半期にグローバルでの提供開始予定。"
-      ],
-      "glossary": [
-        {
-          "term": "PowerEdge XR9700",
-          "explain_ja": "Dellの新しいクローズドループ液冷式密閉サーバー。"
-        },
-        {
-          "term": "Cloud RAN",
-          "explain_ja": "クラウドベースで運用される無線アクセスネットワーク。"
-        },
-        {
-          "term": "IP66",
-          "explain_ja": "防水と防塵性能を示す等級で、完全に密閉されていることを意味する。"
-        },
-        {
-          "term": "5G",
-          "explain_ja": "第5世代移動通信システム。"
-        },
-        {
-          "term": "エッジAI",
-          "explain_ja": "データの生成・消費地点で実行される人工知能アプリケーション。"
-        }
-      ],
-      "personal_actions": [
-        "現場での新しいサーバーの設置計画を考慮し、適切な環境を選定する。",
-        "既存の通信インフラへの統合可能性を評価する。",
-        "液冷技術の利点を理解し、他の機器への適用を検討する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
       ]
     }
   ]
