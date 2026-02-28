@@ -1,35 +1,40 @@
 {
-  "date": "2026-02-28",
-  "generatedAtJST": "2026-02-28T07:15:44.920+09:00",
+  "date": "2026-03-01",
+  "generatedAtJST": "2026-03-01T07:15:30.993+09:00",
   "items": [
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180865172",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-02-26T22:13:06Z",
-      "title": "Trump announced a major deal on data centers. It’s still unclear what’s in it. - Politico - Slashdot",
-      "title_ja": "トランプがデータセンターに関する重要な契約を発表、内容は不明",
-      "summary_ja": "トランプ氏が新たなデータセンターに関する主要な契約を発表しましたが、その詳細については不明です。発表には大手テクノロジー企業の電力コストに関する新たな基準が含まれる可能性があります。契約内容が明らかになることで、データセンター業界やAI関連企業への影響が予想されます。",
+      "url": "https://www.theregister.com/2026/02/27/oak_ridge_datacenter_power/",
+      "source": "Theregister.com",
+      "publishedAt": "2026-02-27T18:56:06Z",
+      "title": "Oak Ridge spawns institute to curb AI datacenter power surge",
+      "title_ja": "オークリッジ、AIデータセンターの電力需要抑制のための研究所を設立",
+      "summary_ja": "オークリッジ国立研究所（ORNL）は、AIデータセンターからの増大する電力需要を緩和するため、次世代データセンター研究所（NGDCI）を立ち上げる。この研究所は、エネルギーや高性能コンピューティング、サイバーセキュリティを中心とした研究を通じて、効率的で安全なAIインフラの構築を目指している。今後報告される成果は、米国のみならず全球的に影響を与える可能性がある。",
       "key_points": [
-        "トランプ氏がデータセンターに関する契約を発表。",
-        "契約の詳細は依然として不明。",
-        "テクノロジー企業への新たな電力コストの基準が提案される可能性。",
-        "AI企業は契約に関与する予定。",
-        "業界の注目が集まっている。"
+        "ORNLが次世代データセンター研究所（NGDCI）を設立。",
+        "AIデータセンターの電力需要が今後10年間で2倍〜3倍に増加する見込み。",
+        "研究分野には、熱管理、電力システムアーキテクチャ、サイバーセキュリティなどが含まれる。",
+        "データセンターの冷却技術が全体の40〜60%のエネルギーを消費しているとのこと。",
+        "ORNLは、米国の電力網が将来の需要増加に対応するための新しい計画と運用アプローチが必要とされると指摘。",
+        "AIインフラの影響を予測するために統合システムモデリングが行われる。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを管理・保管するための専門施設。"
+          "term": "NGDCI",
+          "explain_ja": "次世代データセンター研究所（Next Generation Data Centers Institute）の略で、AIデータセンターの電力需要問題に取り組むための研究機関。"
         },
         {
-          "term": "ビッグテック",
-          "explain_ja": "大規模なテクノロジー企業を指す言葉。"
+          "term": "ORNL",
+          "explain_ja": "オークリッジ国立研究所（Oak Ridge National Laboratory）の略称で、米国の連邦研究センター。"
+        },
+        {
+          "term": "サイバーインフォームドエンジニアリング",
+          "explain_ja": "サイバーセキュリティを考慮に入れたエンジニアリング手法。"
         }
       ],
       "personal_actions": [
-        "契約の詳細発表を待ち、それに基づいてビジネス戦略を検討する。",
-        "電力コストの変化に備えたコスト分析を行う。",
-        "業界の動向を定期的にチェックし、情報をアップデートする。"
+        "現在運用中のデータセンターのエネルギー管理を見直す。",
+        "新しい冷却技術の導入可能性を検討する。",
+        "サイバーセキュリティ対策の強化を行う。"
       ],
       "tags": [
         "DC",
@@ -37,71 +42,77 @@
       ]
     },
     {
-      "url": "https://www.telecompetitor.com/lsc-upgrades-ai-infrastructure-with-dark-fiber-route-from-st-louis-to-tulsa/",
-      "source": "Telecompetitor",
-      "publishedAt": "2026-02-26T19:15:31Z",
-      "title": "LSC upgrades AI infrastructure with dark fiber route from St. Louis to Tulsa",
-      "title_ja": "LSC、セントルイスからタルサへのダークファイバールートでAIインフラを強化",
-      "summary_ja": "Light Source Communications（LSC）は、セントルイスとタルサを結ぶ500マイルの長距離ダークファイバールートを発表しました。この新しいインフラは、AIやHPCアプリケーションの需要に応えるために、ダイバーシティと容量を向上させます。2027年第3四半期の完成を見込んでおり、セントルイスとタルサのデータセンターを直接接続します。",
+      "url": "https://economictimes.indiatimes.com/opinion/et-commentary/view-data-centres-may-drain-us-dry/articleshow/128861794.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-02-27T18:19:07Z",
+      "title": "View: Data centres may drain us dry",
+      "title_ja": "データセンターが私たちを枯渇させる可能性",
+      "summary_ja": "インドは、急成長するデータセンター産業、特にAI施設の影響で、水不足が深刻な課題となっています。このデータセンターの拡大は、限られた淡水資源を消耗し、地下水の枯渇を招く恐れがあります。このままでは、水資源への負担が増大し、地域の持続可能性が危機に瀕します。",
       "key_points": [
-        "新しいダークファイバールートはセントルイスとタルサをつなぎ、500マイルの長さがある。",
-        "ルートには8つのライン増幅器（ILA）が設置されており、信号強度を向上させる。",
-        "このインフラはAIやML、HPCアプリケーションに必要な大容量と低遅延を提供する。",
-        "全てのファイバー網は100%地下に埋設されており、高いセキュリティと稼働率を保証。",
-        "LSCは、インディアナポリス、ラスベガス、フェニックスにおいてもダークファイバーネットワークを拡大中。"
+        "インドのデータセンター産業が急成長中",
+        "特にAI関連施設が水不足を悪化させる危険性",
+        "限られた淡水資源と高い地下水抽出が問題",
+        "成長が持続可能性に与える影響が懸念される"
       ],
       "glossary": [
         {
-          "term": "ダークファイバー",
-          "explain_ja": "使用されていない光ファイバーケーブルで、データ通信のために使われる。"
+          "term": "データセンター",
+          "explain_ja": "情報を保存、管理、処理する施設。"
         },
         {
-          "term": "HPC",
-          "explain_ja": "高性能計算（High-Performance Computing）の略で、大規模な計算を迅速に実行するための技術。"
-        },
-        {
-          "term": "ILAs",
-          "explain_ja": "インライン増幅器（In-Line Amplifiers）の略で、信号を強化する装置。"
+          "term": "AI施設",
+          "explain_ja": "人工知能の処理とデータ分析を行うための特化したデータセンター。"
         }
       ],
       "personal_actions": [
-        "社内のデータインフラストラクチャにおけるダークファイバーの需要を評価する。",
-        "新しいダークファイバーのルートが完成した際の業務への影響を分析する。",
-        "セキュリティ対策を見直し、信頼性を高めるための準備を行う。"
+        "地元の水資源管理について理解を深める",
+        "データセンターの影響を意識したレビュープロセスに参加する",
+        "持続可能な水利用の推進に関わる議論に参加する"
       ],
       "tags": [
         "AI"
       ]
     },
     {
-      "url": "https://fortune.com/2026/02/26/why-pennsylvania-sits-at-the-center-of-the-big-data-center-power-problem/",
-      "source": "Fortune",
-      "publishedAt": "2026-02-26T15:46:07Z",
-      "title": "Why Pennsylvania sits at the center of the big data-center power problem",
-      "title_ja": "ペンシルベニアがビッグデータセンター電力問題の中心にある理由",
-      "summary_ja": "ペンシルベニアは古くて遅いインフラを抱え、ミッドアトランティックおよびミッドウェスタン地域の電力網の中央に位置しています。これにより、データセンターの電力需要が増加する中で、大きな問題が生じる可能性があります。電力の安定供給とインフラの強化が求められています。",
+      "url": "https://www.theregister.com/2026/02/27/datacenter_uk_grid_demand/",
+      "source": "Theregister.com",
+      "publishedAt": "2026-02-27T13:13:14Z",
+      "title": "50 GW of datacenter demand queues up for UK grid access",
+      "title_ja": "英国の電力網へのデータセンター需要が50 GWに達する見込み",
+      "summary_ja": "約140のデータセンターが英国の電力網への接続を待っており、要求される電力は現在の全体的なピーク電力使用量を上回るとされています。Ofgemは、需要接続プロセスの改善に向けた意見を募集しており、多くの非現実的なプロジェクトが行列に含まれていると報告しています。政府はAI成長ゾーンを設立し、データセンターの迅速な建設を促進する方針です。",
       "key_points": [
-        "ペンシルベニアは古い電力インフラを持つ。",
-        "地域の電力網に位置することで、電力需給の問題が生じる。",
-        "データセンターの増加が電力負荷を加速させる可能性がある。"
+        "英国の電力網への接続を待つデータセンターは約140あり、合計の電力需要は50 GW。",
+        "Ofgemは需要接続の改革を進めており、非現実的なプロジェクトの排除を目指している。",
+        "政府は最新のAI Opportunities Action Planを通じ、AI成長ゾーンの設立を進めている。",
+        "存続が難しいプロジェクトを削減し、戦略的に重要なデータセンターに優先順位を付ける方針。",
+        "AI Energy Councilを設置し、新しいクリーン電力源の投資を促進している。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、処理を行うための施設。"
+          "term": "Ofgem",
+          "explain_ja": "イギリスのエネルギー規制機関。電力とガス市場の監督を行う。"
         },
         {
-          "term": "電力網",
-          "explain_ja": "電力を供給するための送電線や変電所などのネットワーク。"
+          "term": "AI Opportunities Action Plan",
+          "explain_ja": "AI関連産業の回復を目的とした政府の施策。"
+        },
+        {
+          "term": "AI Growth Zones",
+          "explain_ja": "データセンターの建設を促進するための特別な地域。"
+        },
+        {
+          "term": "Demand Connections Reform",
+          "explain_ja": "需要接続プロセスを改善するための取り組み。"
         }
       ],
       "personal_actions": [
-        "現在の電力インフラの情報を確認する。",
-        "データセンターの電力供給計画をレビューする。",
-        "電力需要の予測を立て、リスク管理策を策定する。"
+        "接続待機中のプロジェクトの進捗状況を確認する。",
+        "自社のデータセンター計画の現実性を評価し、必要に応じて調整する。",
+        "Ofgemの最新の方針や改革について情報収集を行う。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
