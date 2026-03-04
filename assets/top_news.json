@@ -1,80 +1,106 @@
 {
-  "date": "2026-03-04",
-  "generatedAtJST": "2026-03-04T07:15:41.581+09:00",
+  "date": "2026-03-05",
+  "generatedAtJST": "2026-03-05T07:15:45.025+09:00",
   "items": [
     {
-      "url": "https://www.telecompetitor.com/wow-expands-southeastern-alabama-network-with-2-39m-state-grant/",
-      "source": "Telecompetitor",
-      "publishedAt": "2026-03-02T20:05:45Z",
-      "title": "WOW! expands southeastern Alabama network with $2.39M state grant",
-      "title_ja": "WOW!がアラバマ州南東部のネットワークを2.39百万ドルの州助成金で拡大",
-      "summary_ja": "WOW! Internet, TV & Phoneは、アラバマ州ヒューストンおよびヘンリー郡でのファイバー網の完成を発表しました。この拡張は、アラバマ州経済社会事業局（ADECA）からの239万ドルの助成金とWOW!からの102万ドルの寄付によって実現しました。この取り組みにより、以前はインターネットアクセスがなかった15％以上の住民や事業者がサービスを受けられるようになります。",
+      "url": "https://www.techpowerup.com/347011/seagate-delivers-next-generation-mozaic-4-hard-drives-with-44-tb-capacity",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-03-03T20:28:56Z",
+      "title": "Seagate Delivers Next-Generation Mozaic 4+ Hard Drives with 44 TB Capacity",
+      "title_ja": "Seagate、44 TB容量の次世代Mozaic 4+ハードドライブを発表",
+      "summary_ja": "Seagateは、次世代のMozaic 4+プラットフォームを発表し、44 TBのストレージ容量を持つハードドライブを提供しています。これは業界唯一の熱支援磁気記録（HAMR）を使用したストレージプラットフォームであり、すでに二つの主要ハイパースケールクラウドプロバイダーでの展開が進行中です。この新しいプラットフォームは、データセンターのインフラにおける大容量データの効率的な管理を可能にします。",
       "key_points": [
-        "アラバマ州南東部でのファイバー網の拡張に239万ドルの助成金を受けた。",
-        "このプロジェクトにより、15%以上の住民がインターネットアクセスを獲得。",
-        "WOW!のCEOは、高性能で信頼性のある接続を提供することが目標だと述べている。",
-        "対象地域の新規および既存顧客が特別価格でサービスを受けられる。",
-        "WOW!はモバイルサービスやビジネスソリューションも提供。"
+        "Mozaic 4+は最大44 TBのハードドライブ容量をサポート。",
+        "熱支援磁気記録（HAMR）技術を基盤としたプラットフォーム。",
+        "データセンターの効率を約47%向上させる能力。",
+        "エネルギー消費を抑えつつ、データの保存と再活性化を持続可能に。",
+        "大規模なAIモデルのトレーニングに必要なストレージを提供。"
       ],
       "glossary": [
         {
-          "term": "ADECA",
-          "explain_ja": "アラバマ州経済社会事業局。州の経済発展と地域社会の改善に関わる機関。"
+          "term": "HAMR",
+          "explain_ja": "熱支援磁気記録（Heat-Assisted Magnetic Recording）は、データの記録密度を向上させるための技術です。"
         },
         {
-          "term": "ファイバー網",
-          "explain_ja": "光ファイバーを使用したインターネット接続手段。高速かつ信頼性の高い通信を提供。"
+          "term": "ハイパースケール",
+          "explain_ja": "大規模なデータセンター運営を指し、数千台以上のサーバーを使用する環境です。"
         }
       ],
       "personal_actions": [
-        "自社ネットワークの拡張計画を確認し、必要な設備投資を検討する。",
-        "地域のインターネット利用状況を把握し、顧客に提供するサービスの向上を図る。",
-        "ファイバーインフラの拡張を支援するための助成金制度について調査する。"
+        "最新のストレージ技術に関する社内トレーニングを受ける。",
+        "データセンターの効率改善策を上司に提案する。",
+        "HAMR技術の導入を検討する企業との連携を強化する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.theverge.com/tech/888647/tiktok-us-oracle-outage-march-2026",
+      "source": "The Verge",
+      "publishedAt": "2026-03-03T20:26:21Z",
+      "title": "Another Oracle outage is messing up US TikTok",
+      "title_ja": "再び発生したOracleの障害が米国TikTokに影響",
+      "summary_ja": "米国版TikTokが再びOracleの障害により影響を受けている。この障害は、2月の同様の障害から約1ヶ月後に発生した。問題はバージニア州アシュバーンにあるOracleのデータセンターで始まり、サービスの中断が発生している。",
+      "key_points": [
+        "Oracleの障害が米国版TikTokに影響",
+        "前回の障害から約1ヶ月後の発生",
+        "問題発生はバージニア州アシュバーンのデータセンター"
+      ],
+      "glossary": [
+        {
+          "term": "Oracle",
+          "explain_ja": "データベース管理システムやクラウドサービスを提供する企業。"
+        },
+        {
+          "term": "TikTok",
+          "explain_ja": "短編動画を共有するソーシャルメディアプラットフォーム。"
+        }
+      ],
+      "personal_actions": [
+        "Oracleのサービスアップデート情報を確認する",
+        "影響を受けるサービスのバックアップ手段を考慮する"
       ],
       "tags": [
         "インフラ"
       ]
     },
     {
-      "url": "https://www.c-sharpcorner.com/article/qualcomm-ai-wearables-claude-outage-openai-military-deal-daily-tech-updates/",
-      "source": "C-sharpcorner.com",
-      "publishedAt": "2026-03-02T17:10:26Z",
-      "title": "Qualcomm AI Wearables, Claude Outage & OpenAI Military Deal | Daily Tech Updates – Mar 2, 2026",
-      "title_ja": "QualcommのAIウェアラブル、Claudeの障害、およびOpenAIの軍事契約 | 日々の技術更新 – 2026年3月2日",
-      "summary_ja": "QualcommはMWC 2026でSnapdragon Wear Eliteを発表しました。同時に、Claudeはグローバルな障害に直面し、AppleはM4iPad Airを公開しました。AWSの中東データセンターも被害を受けており、OpenAIは米軍との提携を擁護しています。",
+      "url": "https://alltoc.com/tech/why-did-aws-middle-east-data-centers-go-offline",
+      "source": "Alltoc.com",
+      "publishedAt": "2026-03-03T18:03:14Z",
+      "title": "Why did AWS Middle East data centers go offline?",
+      "title_ja": "AWS中東データセンターがオフラインになった理由",
+      "summary_ja": "AWSの中東データセンターがドローン攻撃を受け、多くのサービスがオフラインになりました。アラブ首長国連邦とバーレーンで、少なくとも一つのデータセンターに物理的な損傷が生じ、回復には数時間かかる見込みです。この事態は、地域依存の顧客にとって大きな影響を及ぼします。",
       "key_points": [
-        "QualcommがMWC 2026でSnapdragon Wear Eliteを発表",
-        "Claudeがグローバルな障害に直面",
-        "AppleがM4 iPad Airを発表",
-        "AWSの中東データセンターが影響を受けた",
-        "OpenAIが米軍とのパートナーシップを擁護"
+        "ドローン攻撃が中東のAWSインフラに直撃",
+        "物理的損傷が確認され、サービスがダウン",
+        "地域依存の顧客は特に影響を受ける",
+        "サービスの回復には数時間を要する見込み",
+        "今後の地域の冗長性や供給者の多様化が必要"
       ],
       "glossary": [
         {
-          "term": "Snapdragon Wear Elite",
-          "explain_ja": "Qualcommが開発したウェアラブルデバイス向けのプロセッサー。"
-        },
-        {
-          "term": "Claude",
-          "explain_ja": "AIシステムの一種で、Nameは具体的なプロダクト名に依存します。"
-        },
-        {
-          "term": "OpenAI",
-          "explain_ja": "人工知能の研究と開発を行う企業で、様々な技術を提供。"
-        },
-        {
           "term": "AWS",
-          "explain_ja": "Amazon Web Servicesの略で、クラウドコンピューティングサービスを提供するプラットフォーム。"
+          "explain_ja": "Amazon Web Servicesの略称で、クラウドコンピューティングサービスを提供する。"
+        },
+        {
+          "term": "ドローン攻撃",
+          "explain_ja": "無人航空機を利用した攻撃で、特定のターゲットに物理的なダメージを与える行為。"
+        },
+        {
+          "term": "可用性ゾーン",
+          "explain_ja": "データセンター内の独立した電源、冷却システムを持つ領域で、サービスの冗長性を高めるために使用される。"
         }
       ],
       "personal_actions": [
-        "Snapdragon Wear Eliteに関する最新情報を確認する",
-        "Claudeの障害状況を監視し、影響を受けたサービスを確認する",
-        "OpenAIの軍事提携についてのニュースを追跡する"
+        "プロバイダーのステータスダッシュボードを確認し、システムの整合性チェックを行う。",
+        "地域冗長性やバックアップ戦略を見直す。",
+        "災害発生時の対応訓練を実施する。"
       ],
       "tags": [
-        "DC",
-        "インフラ"
+        "DC"
       ]
     }
   ]
