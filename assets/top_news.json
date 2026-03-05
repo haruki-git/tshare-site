@@ -1,35 +1,83 @@
 {
-  "date": "2026-03-05",
-  "generatedAtJST": "2026-03-05T07:15:45.025+09:00",
+  "date": "2026-03-06",
+  "generatedAtJST": "2026-03-06T07:15:45.992+09:00",
   "items": [
     {
-      "url": "https://www.techpowerup.com/347011/seagate-delivers-next-generation-mozaic-4-hard-drives-with-44-tb-capacity",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-03-03T20:28:56Z",
-      "title": "Seagate Delivers Next-Generation Mozaic 4+ Hard Drives with 44 TB Capacity",
-      "title_ja": "Seagate、44 TB容量の次世代Mozaic 4+ハードドライブを発表",
-      "summary_ja": "Seagateは、次世代のMozaic 4+プラットフォームを発表し、44 TBのストレージ容量を持つハードドライブを提供しています。これは業界唯一の熱支援磁気記録（HAMR）を使用したストレージプラットフォームであり、すでに二つの主要ハイパースケールクラウドプロバイダーでの展開が進行中です。この新しいプラットフォームは、データセンターのインフラにおける大容量データの効率的な管理を可能にします。",
+      "url": "https://www.smartdatacollective.com/unique-capabilities-of-edge-computing-in-iot/",
+      "source": "Smartdatacollective.com",
+      "publishedAt": "2026-03-04T19:27:10Z",
+      "title": "Unique Capabilities of Edge Computing in IoT",
+      "title_ja": "IoTにおけるエッジコンピューティングのユニークな能力",
+      "summary_ja": "エッジコンピューティングは、IoTインフラの次の時代を担う可能性を秘めています。企業はクラウドへの依存を減らし、データのローカル化とセキュリティ強化を求めています。エッジコンピューティングにより、リアルタイム分析、データ主権、AIのプライバシー強化といった多くの利点が得られ、IoTの生産性とセキュリティが向上します。",
       "key_points": [
-        "Mozaic 4+は最大44 TBのハードドライブ容量をサポート。",
-        "熱支援磁気記録（HAMR）技術を基盤としたプラットフォーム。",
-        "データセンターの効率を約47%向上させる能力。",
-        "エネルギー消費を抑えつつ、データの保存と再活性化を持続可能に。",
-        "大規模なAIモデルのトレーニングに必要なストレージを提供。"
+        "エッジコンピューティングはデータのローカル分析やリアルタイム処理を可能にする。",
+        "デバイス間通信や協調動作が促進され、効率が向上する。",
+        "データ主権の強化とコンプライアンスの遵守が求められ、エッジ環境が適している。",
+        "消費データの有効活用が進み、長期予測の精度向上に寄与する。",
+        "AIモデルの訓練をローカルで行うことで、サイバーセキュリティが強化される。"
       ],
       "glossary": [
         {
-          "term": "HAMR",
-          "explain_ja": "熱支援磁気記録（Heat-Assisted Magnetic Recording）は、データの記録密度を向上させるための技術です。"
+          "term": "エッジコンピューティング",
+          "explain_ja": "データ処理をネットワークの端（エッジ）で行うことで、遅延を減らし、効率を向上させる技術。"
         },
         {
-          "term": "ハイパースケール",
-          "explain_ja": "大規模なデータセンター運営を指し、数千台以上のサーバーを使用する環境です。"
+          "term": "IoT (Internet of Things)",
+          "explain_ja": "インターネットを通じて相互接続された物理デバイスの総称。"
+        },
+        {
+          "term": "フェデレーテッドラーニング",
+          "explain_ja": "データを中央サーバーに送信せずに、エッジデバイスで共同学習を行う機械学習の一形態。"
+        },
+        {
+          "term": "D2D (Device-to-Device)",
+          "explain_ja": "デバイス同士が中央のハブを介さずに直接通信する技術。"
+        },
+        {
+          "term": "デジタルツイン",
+          "explain_ja": "物理的オブジェクトやシステムのリアルタイムなデジタルモデル。"
         }
       ],
       "personal_actions": [
-        "最新のストレージ技術に関する社内トレーニングを受ける。",
-        "データセンターの効率改善策を上司に提案する。",
-        "HAMR技術の導入を検討する企業との連携を強化する。"
+        "エッジコンピューティングの導入を検討する。",
+        "ローカルデータのセキュリティ対策を見直す。",
+        "リアルタイム分析向けのインフラを整備する。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.tomshardware.com/tech-industry/taiwan-expects-power-demand-to-increase-by-more-than-5gw-by-2030-enough-to-power-nearly-4-million-homes-rise-in-electricity-consumption-driven-by-semiconductor-manufacturing-and-ai-data-center-deployments",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-03-04T16:43:19Z",
+      "title": "Taiwan expects power demand to increase by more than 5GW by 2030, enough to power nearly 4 million homes — rise in electricity consumption driven by semiconductor manufacturing and AI data center deployments",
+      "title_ja": "台湾、2030年までに電力需要が5GW以上増加する見込み",
+      "summary_ja": "台湾は2030年までに電力需要が5GW以上増加すると予測しており、これは約400万世帯分の電力に相当します。この増加は、半導体製造とAIデータセンターの展開によって引き起こされる電力消費の増加によるものです。新しい半導体ファブやデータセンターが、台湾の電力需要をさらに押し上げています。",
+      "key_points": [
+        "台湾の電力需要は2030年までに5GW以上増加する見込み",
+        "この増加は約400万世帯が利用可能な電力量に相当",
+        "半導体製造とAIデータセンターの展開が消費増加の主因",
+        "新しい電源と電力インフラが必要とされる"
+      ],
+      "glossary": [
+        {
+          "term": "GW",
+          "explain_ja": "ギガワット。電力の単位で、1000メガワットに相当する。"
+        },
+        {
+          "term": "半導体ファブ",
+          "explain_ja": "半導体を製造する工場のこと。"
+        },
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能関連の処理を行うための専用のデータセンター。"
+        }
+      ],
+      "personal_actions": [
+        "地元の電力会社からの新しい電力供給の計画を確認する",
+        "半導体製造やAIデータセンターの影響を把握するための情報を収集する",
+        "今後の電力需要の増加に備えたエネルギー効率の良い設備を検討する"
       ],
       "tags": [
         "DC",
@@ -37,70 +85,37 @@
       ]
     },
     {
-      "url": "https://www.theverge.com/tech/888647/tiktok-us-oracle-outage-march-2026",
-      "source": "The Verge",
-      "publishedAt": "2026-03-03T20:26:21Z",
-      "title": "Another Oracle outage is messing up US TikTok",
-      "title_ja": "再び発生したOracleの障害が米国TikTokに影響",
-      "summary_ja": "米国版TikTokが再びOracleの障害により影響を受けている。この障害は、2月の同様の障害から約1ヶ月後に発生した。問題はバージニア州アシュバーンにあるOracleのデータセンターで始まり、サービスの中断が発生している。",
+      "url": "https://www.techpowerup.com/347044/sk-telecom-and-panmnesia-to-develop-next-gen-cxl-based-data-center-architecture",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-03-04T16:36:43Z",
+      "title": "SK Telecom and Panmnesia to Develop Next-Gen CXL-Based Data Center Architecture",
+      "title_ja": "SKテレコムとパンムネシア、次世代CXLベースのデータセンターアーキテクチャを開発",
+      "summary_ja": "SKテレコムとパンムネシアは、CXL技術を基にした次世代AIデータセンターアーキテクチャの共同開発に合意しました。従来のデータセンター設計の効率性の限界を認識し、リソースの柔軟な分配を図る新しいアプローチが求められています。この協力により、コスト効率と性能の向上が期待されています。",
       "key_points": [
-        "Oracleの障害が米国版TikTokに影響",
-        "前回の障害から約1ヶ月後の発生",
-        "問題発生はバージニア州アシュバーンのデータセンター"
+        "SKテレコムとパンムネシアがCXLベースのデータセンターアーキテクチャのMOUを締結。",
+        "従来の固定サーバー構成から脱却し、リソースを柔軟に分配するアプローチを提案。",
+        "CXL技術を用いることで、従来のネットワークを介さず効率的にリソースを接続。",
+        "データセンターのGPUおよびメモリ利用率の向上を目指す。",
+        "年内にAIモデルの実行を通じてアーキテクチャの検証を計画。"
       ],
       "glossary": [
         {
-          "term": "Oracle",
-          "explain_ja": "データベース管理システムやクラウドサービスを提供する企業。"
+          "term": "CXL",
+          "explain_ja": "Compute Express Linkの略で、CPUと周辺機器を高効率で接続するためのインターフェース技術。"
         },
         {
-          "term": "TikTok",
-          "explain_ja": "短編動画を共有するソーシャルメディアプラットフォーム。"
+          "term": "MOU",
+          "explain_ja": "Memorandum of Understandingの略で、合意書や覚書を指す。"
         }
       ],
       "personal_actions": [
-        "Oracleのサービスアップデート情報を確認する",
-        "影響を受けるサービスのバックアップ手段を考慮する"
+        "CXL技術の導入に向けた最新の情報を追跡し、リソース管理の改善に向けた計画を立てる。",
+        "データセンターの現行アーキテクチャの評価を行い、改善点を洗い出す。",
+        "パンムネシアの技術を取り入れる可能性を検討し、競争力向上に向けた戦略を策定する。"
       ],
       "tags": [
-        "インフラ"
-      ]
-    },
-    {
-      "url": "https://alltoc.com/tech/why-did-aws-middle-east-data-centers-go-offline",
-      "source": "Alltoc.com",
-      "publishedAt": "2026-03-03T18:03:14Z",
-      "title": "Why did AWS Middle East data centers go offline?",
-      "title_ja": "AWS中東データセンターがオフラインになった理由",
-      "summary_ja": "AWSの中東データセンターがドローン攻撃を受け、多くのサービスがオフラインになりました。アラブ首長国連邦とバーレーンで、少なくとも一つのデータセンターに物理的な損傷が生じ、回復には数時間かかる見込みです。この事態は、地域依存の顧客にとって大きな影響を及ぼします。",
-      "key_points": [
-        "ドローン攻撃が中東のAWSインフラに直撃",
-        "物理的損傷が確認され、サービスがダウン",
-        "地域依存の顧客は特に影響を受ける",
-        "サービスの回復には数時間を要する見込み",
-        "今後の地域の冗長性や供給者の多様化が必要"
-      ],
-      "glossary": [
-        {
-          "term": "AWS",
-          "explain_ja": "Amazon Web Servicesの略称で、クラウドコンピューティングサービスを提供する。"
-        },
-        {
-          "term": "ドローン攻撃",
-          "explain_ja": "無人航空機を利用した攻撃で、特定のターゲットに物理的なダメージを与える行為。"
-        },
-        {
-          "term": "可用性ゾーン",
-          "explain_ja": "データセンター内の独立した電源、冷却システムを持つ領域で、サービスの冗長性を高めるために使用される。"
-        }
-      ],
-      "personal_actions": [
-        "プロバイダーのステータスダッシュボードを確認し、システムの整合性チェックを行う。",
-        "地域冗長性やバックアップ戦略を見直す。",
-        "災害発生時の対応訓練を実施する。"
-      ],
-      "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
