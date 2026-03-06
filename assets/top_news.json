@@ -1,83 +1,35 @@
 {
-  "date": "2026-03-06",
-  "generatedAtJST": "2026-03-06T07:15:45.992+09:00",
+  "date": "2026-03-07",
+  "generatedAtJST": "2026-03-07T07:15:43.021+09:00",
   "items": [
     {
-      "url": "https://www.smartdatacollective.com/unique-capabilities-of-edge-computing-in-iot/",
-      "source": "Smartdatacollective.com",
-      "publishedAt": "2026-03-04T19:27:10Z",
-      "title": "Unique Capabilities of Edge Computing in IoT",
-      "title_ja": "IoTにおけるエッジコンピューティングのユニークな能力",
-      "summary_ja": "エッジコンピューティングは、IoTインフラの次の時代を担う可能性を秘めています。企業はクラウドへの依存を減らし、データのローカル化とセキュリティ強化を求めています。エッジコンピューティングにより、リアルタイム分析、データ主権、AIのプライバシー強化といった多くの利点が得られ、IoTの生産性とセキュリティが向上します。",
+      "url": "https://www.cnet.com/tech/services-and-software/ai-data-center-electricity-costs-white-house-ratepayer-protection-pledge/",
+      "source": "CNET",
+      "publishedAt": "2026-03-05T20:54:12Z",
+      "title": "Big Tech Promises to Pay for AI Data Center Power, but Who Will Enforce It?",
+      "title_ja": "ビッグテック、AIデータセンターの電力費用を負担すると約束も、誰がこれを監視するのか？",
+      "summary_ja": "ビッグテック企業がAIデータセンターの電力費用を負担することを約束しましたが、これは法的拘束力のない誓約に過ぎません。この決定は、利益を追求する中で環境への配慮を示すものとされています。しかし、実際にこの約束を監視する仕組みが欠けているため、実効性については懸念が残ります。",
       "key_points": [
-        "エッジコンピューティングはデータのローカル分析やリアルタイム処理を可能にする。",
-        "デバイス間通信や協調動作が促進され、効率が向上する。",
-        "データ主権の強化とコンプライアンスの遵守が求められ、エッジ環境が適している。",
-        "消費データの有効活用が進み、長期予測の精度向上に寄与する。",
-        "AIモデルの訓練をローカルで行うことで、サイバーセキュリティが強化される。"
+        "ビッグテック企業が電力費用の負担を約束。",
+        "この誓約は法的拘束力がない。",
+        "環境への配慮を示す試みとされている。",
+        "実効性を監視する仕組みが不足している。",
+        "約束の遵守が問われる状況にある。"
       ],
       "glossary": [
         {
-          "term": "エッジコンピューティング",
-          "explain_ja": "データ処理をネットワークの端（エッジ）で行うことで、遅延を減らし、効率を向上させる技術。"
-        },
-        {
-          "term": "IoT (Internet of Things)",
-          "explain_ja": "インターネットを通じて相互接続された物理デバイスの総称。"
-        },
-        {
-          "term": "フェデレーテッドラーニング",
-          "explain_ja": "データを中央サーバーに送信せずに、エッジデバイスで共同学習を行う機械学習の一形態。"
-        },
-        {
-          "term": "D2D (Device-to-Device)",
-          "explain_ja": "デバイス同士が中央のハブを介さずに直接通信する技術。"
-        },
-        {
-          "term": "デジタルツイン",
-          "explain_ja": "物理的オブジェクトやシステムのリアルタイムなデジタルモデル。"
-        }
-      ],
-      "personal_actions": [
-        "エッジコンピューティングの導入を検討する。",
-        "ローカルデータのセキュリティ対策を見直す。",
-        "リアルタイム分析向けのインフラを整備する。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.tomshardware.com/tech-industry/taiwan-expects-power-demand-to-increase-by-more-than-5gw-by-2030-enough-to-power-nearly-4-million-homes-rise-in-electricity-consumption-driven-by-semiconductor-manufacturing-and-ai-data-center-deployments",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-03-04T16:43:19Z",
-      "title": "Taiwan expects power demand to increase by more than 5GW by 2030, enough to power nearly 4 million homes — rise in electricity consumption driven by semiconductor manufacturing and AI data center deployments",
-      "title_ja": "台湾、2030年までに電力需要が5GW以上増加する見込み",
-      "summary_ja": "台湾は2030年までに電力需要が5GW以上増加すると予測しており、これは約400万世帯分の電力に相当します。この増加は、半導体製造とAIデータセンターの展開によって引き起こされる電力消費の増加によるものです。新しい半導体ファブやデータセンターが、台湾の電力需要をさらに押し上げています。",
-      "key_points": [
-        "台湾の電力需要は2030年までに5GW以上増加する見込み",
-        "この増加は約400万世帯が利用可能な電力量に相当",
-        "半導体製造とAIデータセンターの展開が消費増加の主因",
-        "新しい電源と電力インフラが必要とされる"
-      ],
-      "glossary": [
-        {
-          "term": "GW",
-          "explain_ja": "ギガワット。電力の単位で、1000メガワットに相当する。"
-        },
-        {
-          "term": "半導体ファブ",
-          "explain_ja": "半導体を製造する工場のこと。"
+          "term": "非拘束的誓約",
+          "explain_ja": "法的な効力がない約束で、実施されることが必ずしも保障されていない。"
         },
         {
           "term": "AIデータセンター",
-          "explain_ja": "人工知能関連の処理を行うための専用のデータセンター。"
+          "explain_ja": "人工知能の運用に特化したデータセンターで、大量の電力を消費する。"
         }
       ],
       "personal_actions": [
-        "地元の電力会社からの新しい電力供給の計画を確認する",
-        "半導体製造やAIデータセンターの影響を把握するための情報を収集する",
-        "今後の電力需要の増加に備えたエネルギー効率の良い設備を検討する"
+        "AIデータセンターが所在する地域の電力政策を確認する。",
+        "企業の持続可能性に関する取り組みを調査する。",
+        "使用しているサービスの環境影響について情報を収集する。"
       ],
       "tags": [
         "DC",
@@ -85,36 +37,70 @@
       ]
     },
     {
-      "url": "https://www.techpowerup.com/347044/sk-telecom-and-panmnesia-to-develop-next-gen-cxl-based-data-center-architecture",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-03-04T16:36:43Z",
-      "title": "SK Telecom and Panmnesia to Develop Next-Gen CXL-Based Data Center Architecture",
-      "title_ja": "SKテレコムとパンムネシア、次世代CXLベースのデータセンターアーキテクチャを開発",
-      "summary_ja": "SKテレコムとパンムネシアは、CXL技術を基にした次世代AIデータセンターアーキテクチャの共同開発に合意しました。従来のデータセンター設計の効率性の限界を認識し、リソースの柔軟な分配を図る新しいアプローチが求められています。この協力により、コスト効率と性能の向上が期待されています。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180913622",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-03-05T19:52:37Z",
+      "title": "Trump gets data center companies to pledge to pay for power generation - Slashdot",
+      "title_ja": "トランプがデータセンター企業に発電資金の誓約を促す",
+      "summary_ja": "トランプ前大統領がデータセンター企業に対し、発電のための資金を提供することを誓約させました。しかし、この誓約には強制力がなく、経済的妥当性も疑問視されています。結果として、実際に影響が出るかは不透明です。",
       "key_points": [
-        "SKテレコムとパンムネシアがCXLベースのデータセンターアーキテクチャのMOUを締結。",
-        "従来の固定サーバー構成から脱却し、リソースを柔軟に分配するアプローチを提案。",
-        "CXL技術を用いることで、従来のネットワークを介さず効率的にリソースを接続。",
-        "データセンターのGPUおよびメモリ利用率の向上を目指す。",
-        "年内にAIモデルの実行を通じてアーキテクチャの検証を計画。"
+        "トランプ前大統領がデータセンター企業に発電支援の誓約を求めた。",
+        "誓約には法的な強制力がない。",
+        "経済的妥当性に対する疑問が寄せられている。",
+        "実施後の実際の影響は不明である。"
       ],
       "glossary": [
         {
-          "term": "CXL",
-          "explain_ja": "Compute Express Linkの略で、CPUと周辺機器を高効率で接続するためのインターフェース技術。"
+          "term": "データセンター",
+          "explain_ja": "コンピュータシステムや関連するコンポーネントを集中的に配置し、データの管理と保管を行う施設である。"
         },
         {
-          "term": "MOU",
-          "explain_ja": "Memorandum of Understandingの略で、合意書や覚書を指す。"
+          "term": "発電",
+          "explain_ja": "電気エネルギーを生産するプロセス。"
         }
       ],
       "personal_actions": [
-        "CXL技術の導入に向けた最新の情報を追跡し、リソース管理の改善に向けた計画を立てる。",
-        "データセンターの現行アーキテクチャの評価を行い、改善点を洗い出す。",
-        "パンムネシアの技術を取り入れる可能性を検討し、競争力向上に向けた戦略を策定する。"
+        "データセンターの電力供給に関する最新の動向を確認する。",
+        "発電についての経済的妥当性を評価する取り組みを調査する。"
       ],
       "tags": [
-        "DC",
+        "DC"
+      ]
+    },
+    {
+      "url": "https://nypost.com/2026/03/05/business/larry-ellisons-oracle-slashing-thousands-of-jobs-due-to-ai-cash-crunch-report/",
+      "source": "New York Post",
+      "publishedAt": "2026-03-05T19:11:40Z",
+      "title": "Larry Ellison’s Oracle slashing thousands of jobs due to AI cash crunch: report",
+      "title_ja": "ラリー・エリソンのオラクル、AIキャッシュクランチの影響で数千人の人員削減",
+      "summary_ja": "オラクルはAI関連の資金不足を受けて、数千人の人員削減を行うとの報告が出ている。データセンターの拡張がOpenAIやElon MuskのxAI、Metaなどの顧客に必要とされる中で、投資家は資金調達の方法について懸念を抱いている。これにより、オラクルの運営に影響が出る可能性がある。",
+      "key_points": [
+        "オラクルが数千人の人員削減を計画している。",
+        "AI関連の資金不足が原因とされている。",
+        "データセンターの拡張が必要とされている。",
+        "OpenAIやElon MuskのxAI、Metaが顧客に含まれる。",
+        "投資家の懸念が高まっている。"
+      ],
+      "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略称で、人間の知的活動を模倣する技術。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "サーバーやストレージを保管・管理するための施設。"
+        },
+        {
+          "term": "資金不足",
+          "explain_ja": "必要な資金が不足している状態。"
+        }
+      ],
+      "personal_actions": [
+        "AI関連のプロジェクトの影響を受けるか確認する。",
+        "現在のデータセンターの運用状況を評価する。",
+        "顧客のニーズに応じた資金調達の計画を見直す。"
+      ],
+      "tags": [
         "AI"
       ]
     }
