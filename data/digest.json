@@ -1,35 +1,33 @@
 {
-  "date": "2026-03-07",
-  "generatedAtJST": "2026-03-07T07:15:43.021+09:00",
+  "date": "2026-03-08",
+  "generatedAtJST": "2026-03-08T07:15:59.569+09:00",
   "items": [
     {
-      "url": "https://www.cnet.com/tech/services-and-software/ai-data-center-electricity-costs-white-house-ratepayer-protection-pledge/",
-      "source": "CNET",
-      "publishedAt": "2026-03-05T20:54:12Z",
-      "title": "Big Tech Promises to Pay for AI Data Center Power, but Who Will Enforce It?",
-      "title_ja": "ビッグテック、AIデータセンターの電力費用を負担すると約束も、誰がこれを監視するのか？",
-      "summary_ja": "ビッグテック企業がAIデータセンターの電力費用を負担することを約束しましたが、これは法的拘束力のない誓約に過ぎません。この決定は、利益を追求する中で環境への配慮を示すものとされています。しかし、実際にこの約束を監視する仕組みが欠けているため、実効性については懸念が残ります。",
+      "url": "https://www.channelnewsasia.com/business/oracle-and-openai-drop-texas-data-center-expansion-plan-bloomberg-news-reports-5977826",
+      "source": "CNA",
+      "publishedAt": "2026-03-06T20:18:20Z",
+      "title": "Oracle and OpenAI drop Texas data center expansion plan, Bloomberg News reports",
+      "title_ja": "オラクルとオープンAI、テキサスのデータセンター拡張計画を中止",
+      "summary_ja": "オラクルとオープンAIは、テキサスでのAIデータセンター拡張計画を中止しました。この決定は、資金調達に関する交渉の遅延とオープンAIのニーズの変化によるものです。この中止は、両者のプロジェクトに影響を及ぼす可能性があります。",
       "key_points": [
-        "ビッグテック企業が電力費用の負担を約束。",
-        "この誓約は法的拘束力がない。",
-        "環境への配慮を示す試みとされている。",
-        "実効性を監視する仕組みが不足している。",
-        "約束の遵守が問われる状況にある。"
+        "オラクルとオープンAIはテキサスでのデータセンター拡張を中止。",
+        "中止の理由は資金調達の交渉の遅延とオープンAIのニーズの変化。",
+        "この決定は、Stargateプロジェクトに影響を与える可能性がある。"
       ],
       "glossary": [
         {
-          "term": "非拘束的誓約",
-          "explain_ja": "法的な効力がない約束で、実施されることが必ずしも保障されていない。"
+          "term": "AI",
+          "explain_ja": "人工知能の略称で、コンピュータシステムが人間の知的作業を模倣する技術。"
         },
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能の運用に特化したデータセンターで、大量の電力を消費する。"
+          "term": "Stargateプロジェクト",
+          "explain_ja": "オラクルとオープンAIが共同で進めている大規模なデータセンター関連プロジェクト。"
         }
       ],
       "personal_actions": [
-        "AIデータセンターが所在する地域の電力政策を確認する。",
-        "企業の持続可能性に関する取り組みを調査する。",
-        "使用しているサービスの環境影響について情報を収集する。"
+        "プロジェクト進捗を定期的に確認するための情報収集。",
+        "関連する交渉状況を把握し、ビジネス戦略を見直す。",
+        "データセンターのリソース計画を再評価する。"
       ],
       "tags": [
         "DC",
@@ -37,68 +35,75 @@
       ]
     },
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180913622",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-03-05T19:52:37Z",
-      "title": "Trump gets data center companies to pledge to pay for power generation - Slashdot",
-      "title_ja": "トランプがデータセンター企業に発電資金の誓約を促す",
-      "summary_ja": "トランプ前大統領がデータセンター企業に対し、発電のための資金を提供することを誓約させました。しかし、この誓約には強制力がなく、経済的妥当性も疑問視されています。結果として、実際に影響が出るかは不透明です。",
+      "url": "https://www.forrester.com/blogs/when-the-cloud-comes-to-town-how-energy-communities-and-accountability-need-a-rethink/",
+      "source": "Forrester.com",
+      "publishedAt": "2026-03-06T17:53:07Z",
+      "title": "When The Cloud Comes To Town: How Energy, Communities, And Accountability Need A Rethink",
+      "title_ja": "クラウドが街にやってきた: エネルギー、コミュニティ、そして責任の再考",
+      "summary_ja": "AI駆動のデータセンターの急成長は、デジタルインフラのローカルな課題を顕在化させています。データセンターの需要は2030年までに三倍になる見込みで、これに伴う電力需要が地域コミュニティに影響を与えています。誠実な運営が地域への負担を軽減し、社会におけるデータセンターの役割や責任の再考が求められています。",
       "key_points": [
-        "トランプ前大統領がデータセンター企業に発電支援の誓約を求めた。",
-        "誓約には法的な強制力がない。",
-        "経済的妥当性に対する疑問が寄せられている。",
-        "実施後の実際の影響は不明である。"
+        "AIは2030年までに年間1.3〜1.7ギガトンの炭素排出を追加する可能性がある。",
+        "データセンターは米国の電力使用量の4%を占め、特にバージニア州では26%に達している。",
+        "AIの需要によりエネルギー供給が重要な課題となっている。",
+        "データセンターがもたらす経済的利益は地域によって不均等で、環境への影響も問題視されている。",
+        "Microsoftは地域への影響を軽減するための取り組みを進めている。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "コンピュータシステムや関連するコンポーネントを集中的に配置し、データの管理と保管を行う施設である。"
+          "explain_ja": "デジタルデータを保存、処理、管理するための施設、通常は大量の電力を消費する。"
         },
         {
-          "term": "発電",
-          "explain_ja": "電気エネルギーを生産するプロセス。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略。データ分析や判断を自動化する技術。"
+        },
+        {
+          "term": "電力需要",
+          "explain_ja": "データセンターや他のインフラによって必要とされる電力の量。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力供給に関する最新の動向を確認する。",
-        "発電についての経済的妥当性を評価する取り組みを調査する。"
+        "データセンターの電力供給の状況について地域の情報を確認する。",
+        "AIシステムの使用時に環境への影響を考慮した選択を行う。",
+        "データセンターの地域経済への貢献について議論に参加する。"
       ],
       "tags": [
-        "DC"
+        "AI"
       ]
     },
     {
-      "url": "https://nypost.com/2026/03/05/business/larry-ellisons-oracle-slashing-thousands-of-jobs-due-to-ai-cash-crunch-report/",
-      "source": "New York Post",
-      "publishedAt": "2026-03-05T19:11:40Z",
-      "title": "Larry Ellison’s Oracle slashing thousands of jobs due to AI cash crunch: report",
-      "title_ja": "ラリー・エリソンのオラクル、AIキャッシュクランチの影響で数千人の人員削減",
-      "summary_ja": "オラクルはAI関連の資金不足を受けて、数千人の人員削減を行うとの報告が出ている。データセンターの拡張がOpenAIやElon MuskのxAI、Metaなどの顧客に必要とされる中で、投資家は資金調達の方法について懸念を抱いている。これにより、オラクルの運営に影響が出る可能性がある。",
+      "url": "https://www.forrester.com/blogs/when-the-cloud-comes-to-town-how-energy-communities-and-accountability-need-a-re-think/",
+      "source": "Forrester.com",
+      "publishedAt": "2026-03-06T17:53:07Z",
+      "title": "When The Cloud Comes To Town: How Energy, Communities, And Accountability Need A Rethink",
+      "title_ja": "クラウドが来るとき：エネルギー、コミュニティ、そして責任の再考が必要",
+      "summary_ja": "AI駆動のデータセンターの急速な拡大は、目に見えないデジタルインフラを地元での大きな課題に変えている。AIがもたらす炭素排出量の増加やデータセンターの電力需要の急増が懸念されており、特定地域に集中する影響も浮き彫りになっている。今後、持続可能なインフラのためには、コミュニティとの連携が不可欠となるだろう。",
       "key_points": [
-        "オラクルが数千人の人員削減を計画している。",
-        "AI関連の資金不足が原因とされている。",
-        "データセンターの拡張が必要とされている。",
-        "OpenAIやElon MuskのxAI、Metaが顧客に含まれる。",
-        "投資家の懸念が高まっている。"
+        "AIによりデータセンターの電力消費が増加し、2030年には米国のデータセンターが国全体の9%の電力を消費すると予測される。",
+        "データセンターは地域社会に経済的利益をもたらすが、一方で電力需要や環境への負担も増加する。",
+        "Microsoftの新しい取り組みは、電力コスト増加を阻止することで地域社会の支持を得ることを目指している。",
+        "データセンターの「ソフト」と「ハード」の影響を区別することが重要である。",
+        "インフラのコストは、それを創造する者が負担すべきという原則が浮上している。",
+        "責任を共有することが、環境的および社会的影響を最小限に抑えるための鍵となる。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略称で、人間の知的活動を模倣する技術。"
-        },
-        {
           "term": "データセンター",
-          "explain_ja": "サーバーやストレージを保管・管理するための施設。"
+          "explain_ja": "コンピュータや関連環境の集合体で、データの蓄積、処理、配信を行う施設。"
         },
         {
-          "term": "資金不足",
-          "explain_ja": "必要な資金が不足している状態。"
+          "term": "AI",
+          "explain_ja": "人工知能の略。機械が人間の知能を模倣し、学習や推論を行う技術。"
+        },
+        {
+          "term": "電力需要",
+          "explain_ja": "特定の時期に必要とされる電力の量。"
         }
       ],
       "personal_actions": [
-        "AI関連のプロジェクトの影響を受けるか確認する。",
-        "現在のデータセンターの運用状況を評価する。",
-        "顧客のニーズに応じた資金調達の計画を見直す。"
+        "地域の電力消費状況を把握し、データセンターの影響を考慮する。",
+        "エネルギー効率の高い機器を導入することで個々の消費を見直す。",
+        "地域のコミュニティ活動に参加し、インフラへの新しい取り組みをサポートする。"
       ],
       "tags": [
         "AI"
