@@ -1,33 +1,33 @@
 {
-  "date": "2026-03-08",
-  "generatedAtJST": "2026-03-08T07:15:59.569+09:00",
+  "date": "2026-03-09",
+  "generatedAtJST": "2026-03-09T07:15:30.345+09:00",
   "items": [
     {
-      "url": "https://www.channelnewsasia.com/business/oracle-and-openai-drop-texas-data-center-expansion-plan-bloomberg-news-reports-5977826",
-      "source": "CNA",
-      "publishedAt": "2026-03-06T20:18:20Z",
-      "title": "Oracle and OpenAI drop Texas data center expansion plan, Bloomberg News reports",
-      "title_ja": "オラクルとオープンAI、テキサスのデータセンター拡張計画を中止",
-      "summary_ja": "オラクルとオープンAIは、テキサスでのAIデータセンター拡張計画を中止しました。この決定は、資金調達に関する交渉の遅延とオープンAIのニーズの変化によるものです。この中止は、両者のプロジェクトに影響を及ぼす可能性があります。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180922438",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-03-07T04:52:25Z",
+      "title": "Trump gets data center companies to pledge to pay for power generation - Ars Technica - Slashdot",
+      "title_ja": "トランプがデータセンター企業に発電資金の誓約をさせる",
+      "summary_ja": "トランプ前大統領は、データセンター企業に対して発電資金を供出することを誓約させました。この取り組みは、特にAI産業に焦点を当てており、エネルギー使用の規制を求める声も高まっています。これにより、データセンターの運営におけるエネルギー問題への対処が期待されています。",
       "key_points": [
-        "オラクルとオープンAIはテキサスでのデータセンター拡張を中止。",
-        "中止の理由は資金調達の交渉の遅延とオープンAIのニーズの変化。",
-        "この決定は、Stargateプロジェクトに影響を与える可能性がある。"
+        "トランプ前大統領がデータセンター企業と発電資金に関する誓約を結んだ",
+        "この取り組みはAI産業にも影響を与える",
+        "メリーランド州の連邦議員がAI企業のエネルギー使用規制を支持している"
       ],
       "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能の略称で、コンピュータシステムが人間の知的作業を模倣する技術。"
+          "explain_ja": "人工知能のことで、コンピュータが人間のように学習や判断を行う技術です。"
         },
         {
-          "term": "Stargateプロジェクト",
-          "explain_ja": "オラクルとオープンAIが共同で進めている大規模なデータセンター関連プロジェクト。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを保存・管理するための設備で、サーバーやストレージが集められています。"
         }
       ],
       "personal_actions": [
-        "プロジェクト進捗を定期的に確認するための情報収集。",
-        "関連する交渉状況を把握し、ビジネス戦略を見直す。",
-        "データセンターのリソース計画を再評価する。"
+        "エネルギー使用効率の高い技術や設備の導入を検討する",
+        "AI関連の運用を行っている場合は、エネルギー管理策を見直す",
+        "データセンターの運営におけるエネルギー効率のベストプラクティスを調べる"
       ],
       "tags": [
         "DC",
@@ -35,77 +35,35 @@
       ]
     },
     {
-      "url": "https://www.forrester.com/blogs/when-the-cloud-comes-to-town-how-energy-communities-and-accountability-need-a-rethink/",
-      "source": "Forrester.com",
-      "publishedAt": "2026-03-06T17:53:07Z",
-      "title": "When The Cloud Comes To Town: How Energy, Communities, And Accountability Need A Rethink",
-      "title_ja": "クラウドが街にやってきた: エネルギー、コミュニティ、そして責任の再考",
-      "summary_ja": "AI駆動のデータセンターの急成長は、デジタルインフラのローカルな課題を顕在化させています。データセンターの需要は2030年までに三倍になる見込みで、これに伴う電力需要が地域コミュニティに影響を与えています。誠実な運営が地域への負担を軽減し、社会におけるデータセンターの役割や責任の再考が求められています。",
+      "url": "https://nextbigwhat.com/oracle-and-openai-abandon-texas-data-center-expansion-plans/",
+      "source": "Nextbigwhat.com",
+      "publishedAt": "2026-03-07T03:09:57Z",
+      "title": "Oracle and OpenAI abandon Texas data center expansion plans",
+      "title_ja": "OracleとOpenAI、テキサスのデータセンター拡張計画を中止",
+      "summary_ja": "OracleとOpenAIは、テキサスにある重要なAIデータセンターの拡張計画を中止しました。この決定は、資金調達に関する交渉が長引き、OpenAIからの要件の変化に起因しています。この中止は、両社の今後の戦略や競争状況に影響を及ぼす可能性があります。",
       "key_points": [
-        "AIは2030年までに年間1.3〜1.7ギガトンの炭素排出を追加する可能性がある。",
-        "データセンターは米国の電力使用量の4%を占め、特にバージニア州では26%に達している。",
-        "AIの需要によりエネルギー供給が重要な課題となっている。",
-        "データセンターがもたらす経済的利益は地域によって不均等で、環境への影響も問題視されている。",
-        "Microsoftは地域への影響を軽減するための取り組みを進めている。"
+        "OracleとOpenAI、テキサスにおけるデータセンター拡張を中止",
+        "中止の理由は資金調達交渉の長期化と要件の変化",
+        "両社の協力関係に重要なシフトが生じる",
+        "AI分野における戦略に影響を与える可能性"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "デジタルデータを保存、処理、管理するための施設、通常は大量の電力を消費する。"
-        },
-        {
           "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。データ分析や判断を自動化する技術。"
+          "explain_ja": "人工知能。機械が人間のように学習や判断を行う技術。"
         },
         {
-          "term": "電力需要",
-          "explain_ja": "データセンターや他のインフラによって必要とされる電力の量。"
+          "term": "データセンター",
+          "explain_ja": "データを集中管理・保管する施設。サーバーやストレージなどが設置されている。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力供給の状況について地域の情報を確認する。",
-        "AIシステムの使用時に環境への影響を考慮した選択を行う。",
-        "データセンターの地域経済への貢献について議論に参加する。"
+        "社内でのAIプロジェクトの進捗状況を確認する",
+        "データセンターの運用戦略について再評価する",
+        "競合他社の動向をウォッチする"
       ],
       "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.forrester.com/blogs/when-the-cloud-comes-to-town-how-energy-communities-and-accountability-need-a-re-think/",
-      "source": "Forrester.com",
-      "publishedAt": "2026-03-06T17:53:07Z",
-      "title": "When The Cloud Comes To Town: How Energy, Communities, And Accountability Need A Rethink",
-      "title_ja": "クラウドが来るとき：エネルギー、コミュニティ、そして責任の再考が必要",
-      "summary_ja": "AI駆動のデータセンターの急速な拡大は、目に見えないデジタルインフラを地元での大きな課題に変えている。AIがもたらす炭素排出量の増加やデータセンターの電力需要の急増が懸念されており、特定地域に集中する影響も浮き彫りになっている。今後、持続可能なインフラのためには、コミュニティとの連携が不可欠となるだろう。",
-      "key_points": [
-        "AIによりデータセンターの電力消費が増加し、2030年には米国のデータセンターが国全体の9%の電力を消費すると予測される。",
-        "データセンターは地域社会に経済的利益をもたらすが、一方で電力需要や環境への負担も増加する。",
-        "Microsoftの新しい取り組みは、電力コスト増加を阻止することで地域社会の支持を得ることを目指している。",
-        "データセンターの「ソフト」と「ハード」の影響を区別することが重要である。",
-        "インフラのコストは、それを創造する者が負担すべきという原則が浮上している。",
-        "責任を共有することが、環境的および社会的影響を最小限に抑えるための鍵となる。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "コンピュータや関連環境の集合体で、データの蓄積、処理、配信を行う施設。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能の略。機械が人間の知能を模倣し、学習や推論を行う技術。"
-        },
-        {
-          "term": "電力需要",
-          "explain_ja": "特定の時期に必要とされる電力の量。"
-        }
-      ],
-      "personal_actions": [
-        "地域の電力消費状況を把握し、データセンターの影響を考慮する。",
-        "エネルギー効率の高い機器を導入することで個々の消費を見直す。",
-        "地域のコミュニティ活動に参加し、インフラへの新しい取り組みをサポートする。"
-      ],
-      "tags": [
+        "DC",
         "AI"
       ]
     }
