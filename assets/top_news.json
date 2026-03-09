@@ -1,70 +1,105 @@
 {
-  "date": "2026-03-09",
-  "generatedAtJST": "2026-03-09T07:15:30.345+09:00",
+  "date": "2026-03-10",
+  "generatedAtJST": "2026-03-10T07:15:37.112+09:00",
   "items": [
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=180922438",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-03-07T04:52:25Z",
-      "title": "Trump gets data center companies to pledge to pay for power generation - Ars Technica - Slashdot",
-      "title_ja": "トランプがデータセンター企業に発電資金の誓約をさせる",
-      "summary_ja": "トランプ前大統領は、データセンター企業に対して発電資金を供出することを誓約させました。この取り組みは、特にAI産業に焦点を当てており、エネルギー使用の規制を求める声も高まっています。これにより、データセンターの運営におけるエネルギー問題への対処が期待されています。",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openais-massive-stargate-data-center-canceled-as-firm-cant-reach-terms-with-oracle-operator-struggles-with-reliability-issues-meta-said-to-be-interested-in-snatching-excess-capacity",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-03-08T15:49:32Z",
+      "title": "OpenAI's massive Stargate data center canceled as firm can't reach terms with Oracle, operator struggles with reliability issues — Meta said to be interested in snatching excess capacity",
+      "title_ja": "OpenAIの巨大Stargateデータセンターが中止、Oracleとの条件不成立と運営側の信頼性問題が影響—Metaが余剰容量の獲得に興味を示す",
+      "summary_ja": "OpenAIは、Oracleとの条件に合意できず、Stargateデータセンターの大規模拡張を中止しました。この中止は、ファイナンス条件やOpenAIの容量予測の急激な低下が要因です。一方、Metaはこの未拡張のスペースを確保する可能性を示唆しています。",
       "key_points": [
-        "トランプ前大統領がデータセンター企業と発電資金に関する誓約を結んだ",
-        "この取り組みはAI産業にも影響を与える",
-        "メリーランド州の連邦議員がAI企業のエネルギー使用規制を支持している"
+        "OpenAIはStargateデータセンターの大規模拡張を中止した。",
+        "Oracleとの条件交渉が不成立となった。",
+        "運営側には信頼性の問題があった。",
+        "Metaは未拡張のスペースを取得しようとしている。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能のことで、コンピュータが人間のように学習や判断を行う技術です。"
+          "term": "Stargate data center",
+          "explain_ja": "OpenAIが計画していたデータセンターの名称。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを保存・管理するための設備で、サーバーやストレージが集められています。"
+          "term": "Oracle",
+          "explain_ja": "データベース管理システムを提供する企業。"
+        },
+        {
+          "term": "Meta",
+          "explain_ja": "Facebookの親会社であり、テクノロジーとデジタルサービスを提供する企業。"
         }
       ],
       "personal_actions": [
-        "エネルギー使用効率の高い技術や設備の導入を検討する",
-        "AI関連の運用を行っている場合は、エネルギー管理策を見直す",
-        "データセンターの運営におけるエネルギー効率のベストプラクティスを調べる"
+        "データセンターの信頼性と運営状況を確認する。",
+        "新たなパートナーシップの動向を追う。",
+        "自社のデータリソースの最適化を検討する。"
       ],
       "tags": [
         "DC",
-        "AI"
+        "インフラ"
       ]
     },
     {
-      "url": "https://nextbigwhat.com/oracle-and-openai-abandon-texas-data-center-expansion-plans/",
-      "source": "Nextbigwhat.com",
-      "publishedAt": "2026-03-07T03:09:57Z",
-      "title": "Oracle and OpenAI abandon Texas data center expansion plans",
-      "title_ja": "OracleとOpenAI、テキサスのデータセンター拡張計画を中止",
-      "summary_ja": "OracleとOpenAIは、テキサスにある重要なAIデータセンターの拡張計画を中止しました。この決定は、資金調達に関する交渉が長引き、OpenAIからの要件の変化に起因しています。この中止は、両社の今後の戦略や競争状況に影響を及ぼす可能性があります。",
+      "url": "https://economictimes.indiatimes.com/tech/technology/kkr-eyes-multibillion-dollar-sale-of-data-center-cooling-company-ft-reports/articleshow/129275094.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-03-08T14:37:22Z",
+      "title": "KKR eyes multibillion-dollar sale of data center cooling company: Report",
+      "title_ja": "KKR、データセンター冷却会社の数十億ドル規模の売却を検討中：報道",
+      "summary_ja": "KKRがデータセンター冷却会社CoolITの数十億ドル規模の売却を検討していることが報じられました。現在、売却は初期段階にあり、取引に至るかどうかは不明です。複数のバイヤーが候補として挙げられています。",
       "key_points": [
-        "OracleとOpenAI、テキサスにおけるデータセンター拡張を中止",
-        "中止の理由は資金調達交渉の長期化と要件の変化",
-        "両社の協力関係に重要なシフトが生じる",
-        "AI分野における戦略に影響を与える可能性"
+        "KKRがCoolITの売却を計画中",
+        "売却は初期段階で取引の保証はない",
+        "複数のバイヤーが候補とされている"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能。機械が人間のように学習や判断を行う技術。"
+          "term": "KKR",
+          "explain_ja": "KKRは世界的な投資会社で、プライベート・エクイティ市場での大手です。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを集中管理・保管する施設。サーバーやストレージなどが設置されている。"
+          "term": "CoolIT",
+          "explain_ja": "CoolITはデータセンター向けの冷却技術を提供する企業です。"
         }
       ],
       "personal_actions": [
-        "社内でのAIプロジェクトの進捗状況を確認する",
-        "データセンターの運用戦略について再評価する",
-        "競合他社の動向をウォッチする"
+        "データセンターの冷却システムの現状を確認する",
+        "他の冷却技術の市場動向を調査する",
+        "KKRやCoolITに関する最新の情報を追う"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.tomshardware.com/desktops/servers/us-startup-plans-to-build-data-centers-inside-ocean-based-wind-turbines-servers-water-cooled-via-chilly-north-sea-each-leg-houses-a-data-center-firm-set-to-launch-three-legged-prototype-in-norways-north-sea-this-year",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-03-08T13:52:07Z",
+      "title": "US startup plans to build data centers inside ocean-based wind turbines, servers water cooled via chilly North Sea — each leg houses a data center, firm set to launch three-legged prototype in Norway’s North Sea this year",
+      "title_ja": "米スタートアップが海上風力タービン内にデータセンターを構築予定、北海の冷たい水でサーバーを冷却",
+      "summary_ja": "米国のスタートアップが海上風力タービン内にデータセンターを組み込む計画を発表しました。各タービンの脚には最大12メガワットのデータセンターが設置され、海風から直接電力を供給します。また、北海の冷水を利用してサーバーの冷却を行います。この新しい構想により、再生可能エネルギーを活用したデータ処理が期待されています。",
+      "key_points": [
+        "海上風力タービン内にデータセンターを設置する計画",
+        "各タービンの脚には最大12メガワットのデータセンターを設置可能",
+        "冷たい北海の水を使用してサーバーの冷却を実施",
+        "風からの電力供給により持続可能な運用が実現",
+        "ノルウェーの北海で今年、新しいプロトタイプが稼働予定"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保管、管理、流通を行う施設。"
+        },
+        {
+          "term": "海上風力タービン",
+          "explain_ja": "海の上に設置された風力発電装置。"
+        }
+      ],
+      "personal_actions": [
+        "海上風力発電の最新情報を確認する",
+        "データセンターの持続可能な運用に関する資料を調べる"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
