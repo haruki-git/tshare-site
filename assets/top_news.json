@@ -1,123 +1,119 @@
 {
-  "date": "2026-03-12",
-  "generatedAtJST": "2026-03-12T07:15:44.912+09:00",
+  "date": "2026-03-13",
+  "generatedAtJST": "2026-03-13T07:15:58.617+09:00",
   "items": [
     {
-      "url": "https://www.channelnewsasia.com/business/oracle-sees-ai-boom-through-least-2027-sending-shares-up-8-5985046",
-      "source": "CNA",
-      "publishedAt": "2026-03-10T20:11:09Z",
-      "title": "Oracle sees AI boom through at least 2027, sending shares up 8%",
-      "title_ja": "Oracle、AIブームを2027年まで見込むことで株価8%上昇",
-      "summary_ja": "Oracleは、AIデータセンターのブームが2027年まで同社の収益を高めると予測し、これが株価を8%押し上げた。背景には、投資家の不安を和らげる結果が含まれている。AI分野の成長が期待される中、Oracleは市場予測を上回る業績を見込んでいる。",
+      "url": "https://uk.pcmag.com/batteries-power/163754/google-and-tesla-want-to-reshape-the-power-grid-for-the-modern-age",
+      "source": "PCMag.com",
+      "publishedAt": "2026-03-11T21:00:32Z",
+      "title": "Google and Tesla Want to Reshape the Power Grid for the Modern Age",
+      "title_ja": "グーグルとテスラが現代の電力網の再構築を目指す",
+      "summary_ja": "グーグルとテスラが、データセンター開発業者のVerrusや他のエネルギー関連企業と提携し、電力網の利用効率を向上させることを目指しています。彼らは、現在の電力網が多くの時間未使用であると主張し、新技術によりその余剰容量を活用する機会があると述べています。これにより、電力料金の削減や経済成長の支援が期待されています。",
       "key_points": [
-        "OracleはAIデータセンターのブームが2027年まで続くと予測。",
-        "株価は延長取引で8%上昇した。",
-        "投資家の懸念を軽減する結果となった。",
-        "市場予測を上回る収益を見込んでいる。"
+        "グーグルとテスラが提携し「Utilize」グループを結成。",
+        "現在の電力網は18%未満の生成電力しか利用されないことも。",
+        "新技術があれば余剰の電力を活用できるチャンスがある。",
+        "グループは政策立案者や業界と連携し、電力網の効率化を進める方針。",
+        "構成メンバーにはCarrier、Sparkfund、Renew Home、Spanなどが含まれる。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略で、コンピュータが人間のように学習や推論を行う技術。"
+          "term": "Utilize",
+          "explain_ja": "グリッドの利用効率化を目指す企業グループ。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを集中管理、処理するための施設。"
+          "term": "Virtual Power Plant",
+          "explain_ja": "分散型エネルギー資源を統合管理する仕組み。"
         },
         {
-          "term": "株価",
-          "explain_ja": "企業の株式の市場での価値。"
+          "term": "HVAC",
+          "explain_ja": "暖房、換気、空調を管理するシステム。"
         }
       ],
       "personal_actions": [
-        "OracleのAI戦略に注目し、関連情報を収集する。",
-        "データセンター投資の動向を確認する。"
+        "データセンターでのエネルギー利用効率を見直す。",
+        "最新のグリッド管理技術の導入を検討する。",
+        "再生可能エネルギーの使用を促進する方策を立案する。"
       ],
       "tags": [
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://developers.slashdot.org/story/26/03/10/0510223/openai-is-walking-away-from-expanding-its-stargate-data-center-with-oracle",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-03-10T18:00:00Z",
-      "title": "OpenAI Is Walking Away From Expanding Its Stargate Data Center With Oracle - Slashdot",
-      "title_ja": "OpenAI、OracleとのStargateデータセンター拡張を断念",
-      "summary_ja": "OpenAIは、OracleとのAIデータセンター拡張計画を撤回しています。新世代のNvidia GPUが稼働する前に、現行の施設が稼働する可能性が低いためです。この決定は、AIチップの進化スピードとデータセンターの構築速度が釣り合わない現実を反映しています。Oracleは、この報道に対して既存のプロジェクトは予定通り進行中と述べていますが、拡張計画についてはコメントしていません。",
+      "url": "https://www.commondreams.org/newswire/ferc-undermines-trumps-useless-big-tech-ratepayer-pledge",
+      "source": "Common Dreams",
+      "publishedAt": "2026-03-11T19:41:03Z",
+      "title": "FERC Undermines Trump’s Useless Big Tech Ratepayer Pledge",
+      "title_ja": "FERCがトランプ政権の無意味なビッグテック料金感謝の約束を弱体化",
+      "summary_ja": "FERCは、データセンターとの送電料金合意を承認し、家庭が電気料金の値上げにさらされる危険を明らかにしました。この決定は、電力利用者に対し不利な影響を与える可能性があります。結果として、消費者の負担が増加する恐れがあります。",
       "key_points": [
-        "OpenAIはOracleとのStargateデータセンター拡張を中止。",
-        "新しいNvidia GPUの登場が施設の稼働前に予想されている。",
-        "現在のAbileneサイトは、NvidiaのBlackwellプロセッサを使用予定。",
-        "Oracleはこの報道を否定するが、拡張計画については沈黙。",
-        "Oracleは数十億ドルを投じてサイトの取得と建設を実施。"
+        "FERCが送電料金合意を承認",
+        "家庭への電気料金値上げのリスクを示唆",
+        "トランプ政権のビッグテックに対する約束が弱体化",
+        "データセンターと電力会社の利害関係の影響が懸念される",
+        "消費者の経済的負担の増加が予測される"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）、コンピュータが人間の知能を模倣する技術。"
+          "term": "FERC",
+          "explain_ja": "連邦エネルギー規制委員会。アメリカの電力とガスの貿易を規制する政府機関。"
         },
         {
-          "term": "Nvidia",
-          "explain_ja": "アメリカの半導体メーカー、主にグラフィックス処理装置（GPU）を製造。"
+          "term": "ビッグテック",
+          "explain_ja": "大手テクノロジー企業。"
         },
         {
-          "term": "GPU",
-          "explain_ja": "グラフィックス処理ユニット（Graphics Processing Unit）、画像処理を専門に行うプロセッサ。"
-        },
-        {
-          "term": "Oracle",
-          "explain_ja": "アメリカのテクノロジー企業、データベースソフトウェアやクラウドシステムを提供。"
-        },
-        {
-          "term": "Blackwell",
-          "explain_ja": "Nvidiaが開発中の次世代GPUアーキテクチャ。"
-        }
-      ],
-      "personal_actions": [
-        "Nvidiaの新しいGPUについて最新情報を確認する。",
-        "データセンターの進捗状況に関するOracleの公式発表をモニタリングする。",
-        "AI関連プロジェクトの需要予測を見直す。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://developers.slashdot.org/story/26/03/10/0510223/oracle-is-walking-away-from-expanding-its-stargate-data-center-with-oracle",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-03-10T18:00:00Z",
-      "title": "OpenAI Is Walking Away From Expanding Its Stargate Data Center With Oracle - Slashdot",
-      "title_ja": "OpenAI、OracleとのStargateデータセンター拡張計画を見直し",
-      "summary_ja": "OpenAIは、OracleとのAIデータセンター拡張計画を中止すると報じられています。これは、最新のNvidia GPUが稼働する前に施設が完成する可能性があるためです。この市場の現実はAI業界とOracleの負債にリスクをもたらします。OpenAIは、他の場所での最新世代のチップによる拡張アクセスを希望しています。",
-      "key_points": [
-        "OpenAIはOracleとのデータセンター拡張を中止した。",
-        "最新のNvidia GPUが稼働する前に施設が完成する可能性がある。",
-        "Oracleは建設に数十億ドルを費やしているが、拡張計画については言及していない。",
-        "現在のAbileneサイトはNvidiaのBlackwellプロセッサを使用する予定で、稼働には1年かかる見込み。",
-        "OpenAIはより新しいNvidiaチップのクラスターとの拡張を希望している。"
-      ],
-      "glossary": [
-        {
-          "term": "Nvidia GPU",
-          "explain_ja": "Nvidiaが製造するグラフィック処理ユニットで、主にAIやゲーム処理に使用される。"
+          "term": "送電料金",
+          "explain_ja": "電力供給のために課せられる料金。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データの管理や保存を目的とした施設。サーバーやストレージが設置されている。"
-        },
-        {
-          "term": "OpenAI",
-          "explain_ja": "人工知能の研究開発を行う企業。"
+          "explain_ja": "データを集約、保管、管理するための施設。"
         }
       ],
       "personal_actions": [
-        "最新のGPU技術に関する市場動向を確認する。",
-        "データセンターの拡張計画に関連する業界ニュースを追う。",
-        "Oracleの既存プロジェクトの進捗状況をチェックする。"
+        "データセンターの新たな料金規定に関する最新情報を確認する",
+        "電力使用の見直しを行い、節約できる部分を探す",
+        "地域のエネルギー政策について意見を集め、行動を呼びかける"
       ],
       "tags": [
-        "DC",
+        "その他"
+      ]
+    },
+    {
+      "url": "https://www.newser.com/story/385183/state-oks-xais-gas-turbines-despite-local-backlash.html",
+      "source": "Newser",
+      "publishedAt": "2026-03-11T15:35:00Z",
+      "title": "Locals Don't Want xAI's Gas Turbines, but Here They Come",
+      "title_ja": "住民はxAIのガスタービンを望まずとも、設置が決定",
+      "summary_ja": "エロン・マスクのAI事業は、ミシシッピ州で41基のメタンタービンを運用する許可を得ました。地元住民や環境団体からの強い反発がある中、運営はAIスーパコンピュータの電力供給を目的としています。この決定は、地域の空気質の悪化や住民の健康への影響が懸念されています。",
+      "key_points": [
+        "ミシシッピ州の規制当局がxAIに41基のメタンタービンの運用を許可。",
+        "地域住民からの強い反発があり、環境団体やNAACPが訴訟を起こしている。",
+        "新たに運営されるタービンは州内でも最大規模の化石燃料プラントになる可能性。",
+        "住民は健康への影響を懸念し、コミュニティの意見が無視されたと主張。",
+        "規制当局やxAIからの公式なコメントはまだない。"
+      ],
+      "glossary": [
+        {
+          "term": "xAI",
+          "explain_ja": "エロン・マスクが設立したAI関連企業。"
+        },
+        {
+          "term": "メタンタービン",
+          "explain_ja": "メタンガスを燃料とするタービン。"
+        },
+        {
+          "term": "NAACP",
+          "explain_ja": "全米有色人種地位協会。人権のための団体。"
+        }
+      ],
+      "personal_actions": [
+        "地域の環境動向を調査し、地元の影響を理解する。",
+        "関連する公聴会や意見募集に参加し、声を上げる。",
+        "健康への影響について情報を収集し、近隣住民と共有する。"
+      ],
+      "tags": [
         "AI"
       ]
     }
