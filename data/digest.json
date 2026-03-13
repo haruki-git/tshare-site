@@ -1,120 +1,125 @@
 {
-  "date": "2026-03-13",
-  "generatedAtJST": "2026-03-13T07:15:58.617+09:00",
+  "date": "2026-03-14",
+  "generatedAtJST": "2026-03-14T07:16:02.250+09:00",
   "items": [
     {
-      "url": "https://uk.pcmag.com/batteries-power/163754/google-and-tesla-want-to-reshape-the-power-grid-for-the-modern-age",
-      "source": "PCMag.com",
-      "publishedAt": "2026-03-11T21:00:32Z",
-      "title": "Google and Tesla Want to Reshape the Power Grid for the Modern Age",
-      "title_ja": "グーグルとテスラが現代の電力網の再構築を目指す",
-      "summary_ja": "グーグルとテスラが、データセンター開発業者のVerrusや他のエネルギー関連企業と提携し、電力網の利用効率を向上させることを目指しています。彼らは、現在の電力網が多くの時間未使用であると主張し、新技術によりその余剰容量を活用する機会があると述べています。これにより、電力料金の削減や経済成長の支援が期待されています。",
+      "url": "https://www.techpowerup.com/347335/optical-scale-up-consortium-established-to-create-an-open-specification-for-ai-infrastructure",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-03-12T19:40:42Z",
+      "title": "Optical Scale-up Consortium Established to Create an Open Specification for AI Infrastructure",
+      "title_ja": "光スケールアップコンソーシアムがAIインフラ向けオープンスペックの策定を発表",
+      "summary_ja": "光コンピュート相互接続（OCI）マルチソース合意（MSA）グループが設立され、AMD、Broadcom、Meta、Microsoft、NVIDIA、およびOpenAIが創設メンバーとして参加しています。この業界コンソーシアムは、AIインフラ向けの光ベースのスケールアップを促進するためのオープンなエコシステムの実現を目指しています。相互接続のボトルネックを解消し、柔軟なマルチベンダー基盤を構築することで、AIの将来への影響が期待されています。",
       "key_points": [
-        "グーグルとテスラが提携し「Utilize」グループを結成。",
-        "現在の電力網は18%未満の生成電力しか利用されないことも。",
-        "新技術があれば余剰の電力を活用できるチャンスがある。",
-        "グループは政策立案者や業界と連携し、電力網の効率化を進める方針。",
-        "構成メンバーにはCarrier、Sparkfund、Renew Home、Spanなどが含まれる。"
+        "OCI MSAは、光ベースのスケールアップアーキテクチャへの移行を促進する。",
+        "オープンで相互運用可能なインターフェースプロトコルにより、プラグアンドプレイエコシステムを実現。",
+        "高密度インターフェースに関する標準化されたロードマップを提供。",
+        "複数ベンダーの光相互接続の展開を容易にする。",
+        "AIクラスタの設計における電力とコスト制約への対応が求められている。"
       ],
       "glossary": [
         {
-          "term": "Utilize",
-          "explain_ja": "グリッドの利用効率化を目指す企業グループ。"
+          "term": "OCI",
+          "explain_ja": "光コンピュート相互接続の略で、光ベースのデータ通信技術を指します。"
         },
         {
-          "term": "Virtual Power Plant",
-          "explain_ja": "分散型エネルギー資源を統合管理する仕組み。"
+          "term": "MSA",
+          "explain_ja": "マルチソース合意の略で、業界内での標準化を目的とした協力体制を指します。"
         },
         {
-          "term": "HVAC",
-          "explain_ja": "暖房、換気、空調を管理するシステム。"
+          "term": "LLM",
+          "explain_ja": "大規模言語モデルの略で、AI技術の一環として使用される高度な言語処理モデルです。"
+        },
+        {
+          "term": "BiDi",
+          "explain_ja": "双方向通信を表し、データが双方向で同時に流れることを可能にする技術です。"
         }
       ],
       "personal_actions": [
-        "データセンターでのエネルギー利用効率を見直す。",
-        "最新のグリッド管理技術の導入を検討する。",
-        "再生可能エネルギーの使用を促進する方策を立案する。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.commondreams.org/newswire/ferc-undermines-trumps-useless-big-tech-ratepayer-pledge",
-      "source": "Common Dreams",
-      "publishedAt": "2026-03-11T19:41:03Z",
-      "title": "FERC Undermines Trump’s Useless Big Tech Ratepayer Pledge",
-      "title_ja": "FERCがトランプ政権の無意味なビッグテック料金感謝の約束を弱体化",
-      "summary_ja": "FERCは、データセンターとの送電料金合意を承認し、家庭が電気料金の値上げにさらされる危険を明らかにしました。この決定は、電力利用者に対し不利な影響を与える可能性があります。結果として、消費者の負担が増加する恐れがあります。",
-      "key_points": [
-        "FERCが送電料金合意を承認",
-        "家庭への電気料金値上げのリスクを示唆",
-        "トランプ政権のビッグテックに対する約束が弱体化",
-        "データセンターと電力会社の利害関係の影響が懸念される",
-        "消費者の経済的負担の増加が予測される"
-      ],
-      "glossary": [
-        {
-          "term": "FERC",
-          "explain_ja": "連邦エネルギー規制委員会。アメリカの電力とガスの貿易を規制する政府機関。"
-        },
-        {
-          "term": "ビッグテック",
-          "explain_ja": "大手テクノロジー企業。"
-        },
-        {
-          "term": "送電料金",
-          "explain_ja": "電力供給のために課せられる料金。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データを集約、保管、管理するための施設。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの新たな料金規定に関する最新情報を確認する",
-        "電力使用の見直しを行い、節約できる部分を探す",
-        "地域のエネルギー政策について意見を集め、行動を呼びかける"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://www.newser.com/story/385183/state-oks-xais-gas-turbines-despite-local-backlash.html",
-      "source": "Newser",
-      "publishedAt": "2026-03-11T15:35:00Z",
-      "title": "Locals Don't Want xAI's Gas Turbines, but Here They Come",
-      "title_ja": "住民はxAIのガスタービンを望まずとも、設置が決定",
-      "summary_ja": "エロン・マスクのAI事業は、ミシシッピ州で41基のメタンタービンを運用する許可を得ました。地元住民や環境団体からの強い反発がある中、運営はAIスーパコンピュータの電力供給を目的としています。この決定は、地域の空気質の悪化や住民の健康への影響が懸念されています。",
-      "key_points": [
-        "ミシシッピ州の規制当局がxAIに41基のメタンタービンの運用を許可。",
-        "地域住民からの強い反発があり、環境団体やNAACPが訴訟を起こしている。",
-        "新たに運営されるタービンは州内でも最大規模の化石燃料プラントになる可能性。",
-        "住民は健康への影響を懸念し、コミュニティの意見が無視されたと主張。",
-        "規制当局やxAIからの公式なコメントはまだない。"
-      ],
-      "glossary": [
-        {
-          "term": "xAI",
-          "explain_ja": "エロン・マスクが設立したAI関連企業。"
-        },
-        {
-          "term": "メタンタービン",
-          "explain_ja": "メタンガスを燃料とするタービン。"
-        },
-        {
-          "term": "NAACP",
-          "explain_ja": "全米有色人種地位協会。人権のための団体。"
-        }
-      ],
-      "personal_actions": [
-        "地域の環境動向を調査し、地元の影響を理解する。",
-        "関連する公聴会や意見募集に参加し、声を上げる。",
-        "健康への影響について情報を収集し、近隣住民と共有する。"
+        "OCI MSAの仕様を確認し、社内の光相互接続の可能性を検討する。",
+        "新技術の導入を見越して、社内のハードウェアアップグレード計画を見直す。",
+        "次世代AIインフラのニーズに対応するための技術動向を注視する。"
       ],
       "tags": [
         "AI"
+      ]
+    },
+    {
+      "url": "https://www.breitbart.com/tech/2026/03/12/openai-partners-with-building-trades-unions-to-support-ai-infrastructure-expansion/",
+      "source": "Breitbart News",
+      "publishedAt": "2026-03-12T17:43:06Z",
+      "title": "OpenAI Partners with Building Trades Unions to Support AI Infrastructure Expansion",
+      "title_ja": "OpenAI、建設労働組合と提携しAIインフラ拡張を支援",
+      "summary_ja": "OpenAIは、北米建設労働組合（NABTU）と提携し、アメリカ国内でのデータセンター建設を加速すると発表した。この提携は、技術者の確保を目指しており、組合の仕事を創出し、 apprenticeshipプログラムを拡充することを目的としている。AI業界は、インフラ整備における労働力不足に直面しており、この協力が行われることによって地域経済にも良い影響を与える可能性がある。",
+      "key_points": [
+        "OpenAIがNABTUと提携しデータセンター建設を促進",
+        "提携により、組合の雇用創出と技術者育成を目指す",
+        "2030年までに10ギガワットのコンピュート能力が必要とされる",
+        "OpenAIは5年間でNABTUのプログラムに150万ドルを支援",
+        "AI業界の競争を背景に急速なインフラ拡大が求められている"
+      ],
+      "glossary": [
+        {
+          "term": "NABTU",
+          "explain_ja": "北米建設労働組合の略称で、建設業界の労働者を代表する組織。"
+        },
+        {
+          "term": "apprenticeship",
+          "explain_ja": "職業訓練の一形態で、職場での実務を通じて技術を学ぶ制度。"
+        },
+        {
+          "term": "gigawatts",
+          "explain_ja": "電力の単位。特に大規模なエネルギー供給を表すのに用いられる。"
+        }
+      ],
+      "personal_actions": [
+        "地域の建設労働組合の活動に参加して、スキルや知識を習得する",
+        "AI関連のトレーニングプログラムを探して参加する",
+        "地域経済における技術者需要について情報を収集する"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "http://electrek.co/2026/03/12/tesla-ai6-chip-delayed-samsung-2nm-production-slips/",
+      "source": "Electrek",
+      "publishedAt": "2026-03-12T17:41:51Z",
+      "title": "Tesla AI6 chip delayed ~6 months as Samsung 2nm production slips",
+      "title_ja": "テスラAI6チップ、サムスンの2nm生産遅延により約6ヶ月の遅れ",
+      "summary_ja": "テスラの次世代AI6チップの量産が約6ヶ月遅延することが明らかになった。原因は、サムスンの2nmプロセスでのマルチプロジェクトウェーハ（MPW）ランの延期である。これにより、テスラの自動運転車両やロボットに搭載予定のこのチップの市場投入は2028年以降になる見込みで、テスラの半導体戦略に影響を及ぼすことが懸念されている。",
+      "key_points": [
+        "AI6チップの量産は2027年後半に延期。",
+        "サムスンの2nmラインのMPWランが約6ヶ月遅延。",
+        "他の顧客にも影響が広がっている。",
+        "テスラはサムスンに対して165億ドルの契約を結んでいる。",
+        "AI5チップの量産も2027年中頃に遅延。",
+        "サムスンの半導体事業は利益目標に圧力がかかっている。"
+      ],
+      "glossary": [
+        {
+          "term": "AI6チップ",
+          "explain_ja": "テスラが自動運転車両やロボットに使用するために設計された次世代プロセッサ。"
+        },
+        {
+          "term": "サムスン",
+          "explain_ja": "韓国のテクノロジー企業で、半導体の製造を行っている。"
+        },
+        {
+          "term": "2nmプロセス",
+          "explain_ja": "半導体製造技術の一つで、トランジスタの寸法を2ナノメートルに縮小したもの。"
+        },
+        {
+          "term": "MPWラン",
+          "explain_ja": "マルチプロジェクトウェーハの略で、複数のプロジェクトのデザインを同時に製造するウェーハのこと。"
+        }
+      ],
+      "personal_actions": [
+        "サプライチェーンの影響を再評価し、今後の計画に反映させる。",
+        "AI関連のプロジェクトでの予算とタイムラインを見直す。",
+        "サムスンや他の半導体製造パートナーの進捗状況を定期的に確認する。"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
