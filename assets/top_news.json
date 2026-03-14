@@ -1,125 +1,115 @@
 {
-  "date": "2026-03-14",
-  "generatedAtJST": "2026-03-14T07:16:02.250+09:00",
+  "date": "2026-03-15",
+  "generatedAtJST": "2026-03-15T07:15:50.023+09:00",
   "items": [
     {
-      "url": "https://www.techpowerup.com/347335/optical-scale-up-consortium-established-to-create-an-open-specification-for-ai-infrastructure",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-03-12T19:40:42Z",
-      "title": "Optical Scale-up Consortium Established to Create an Open Specification for AI Infrastructure",
-      "title_ja": "光スケールアップコンソーシアムがAIインフラ向けオープンスペックの策定を発表",
-      "summary_ja": "光コンピュート相互接続（OCI）マルチソース合意（MSA）グループが設立され、AMD、Broadcom、Meta、Microsoft、NVIDIA、およびOpenAIが創設メンバーとして参加しています。この業界コンソーシアムは、AIインフラ向けの光ベースのスケールアップを促進するためのオープンなエコシステムの実現を目指しています。相互接続のボトルネックを解消し、柔軟なマルチベンダー基盤を構築することで、AIの将来への影響が期待されています。",
+      "url": "https://www.techtarget.com/searchenterpriseai/feature/Is-GenAI-villain-and-hero-in-data-center-power-drama",
+      "source": "Techtarget.com",
+      "publishedAt": "2026-03-13T15:52:00Z",
+      "title": "Is GenAI villain and hero in data center power drama?",
+      "title_ja": "GenAIはデータセンターの電力問題で悪者か英雄か？",
+      "summary_ja": "GenAIのインフラ要求はハイパースケーラーや大規模データセンターの電力需要を増加させている。この一方で、GenAIやAIベースの自動化は消費管理にも寄与する可能性がある。今後のデータセンター運営において、これらの技術がどのようにバランスを取るのかが注目される。",
       "key_points": [
-        "OCI MSAは、光ベースのスケールアップアーキテクチャへの移行を促進する。",
-        "オープンで相互運用可能なインターフェースプロトコルにより、プラグアンドプレイエコシステムを実現。",
-        "高密度インターフェースに関する標準化されたロードマップを提供。",
-        "複数ベンダーの光相互接続の展開を容易にする。",
-        "AIクラスタの設計における電力とコスト制約への対応が求められている。"
+        "GenAIのインフラ要求が電力需要を増大させる",
+        "ハイパースケーラーに対する影響が広がっている",
+        "AIベースの自動化による消費管理の可能性",
+        "データセンターの電力効率向上が求められる"
       ],
       "glossary": [
         {
-          "term": "OCI",
-          "explain_ja": "光コンピュート相互接続の略で、光ベースのデータ通信技術を指します。"
+          "term": "GenAI",
+          "explain_ja": "生成型AIの略称、特定の入力に基づいて新しいデータを生成するAI技術。"
         },
         {
-          "term": "MSA",
-          "explain_ja": "マルチソース合意の略で、業界内での標準化を目的とした協力体制を指します。"
+          "term": "ハイパースケーラー",
+          "explain_ja": "大規模にクラウドサービスを提供する企業やデータセンターのこと。"
         },
         {
-          "term": "LLM",
-          "explain_ja": "大規模言語モデルの略で、AI技術の一環として使用される高度な言語処理モデルです。"
-        },
-        {
-          "term": "BiDi",
-          "explain_ja": "双方向通信を表し、データが双方向で同時に流れることを可能にする技術です。"
+          "term": "AIベースの自動化",
+          "explain_ja": "人工知能を用いた自動化技術で、効率的なプロセス管理を目的とする。"
         }
       ],
       "personal_actions": [
-        "OCI MSAの仕様を確認し、社内の光相互接続の可能性を検討する。",
-        "新技術の導入を見越して、社内のハードウェアアップグレード計画を見直す。",
-        "次世代AIインフラのニーズに対応するための技術動向を注視する。"
+        "データセンターの電力使用量を定期的に監視する",
+        "AI技術による消費管理の導入を検討する",
+        "新しいインフラ要求に関する知識をアップデートしておく"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://www.breitbart.com/tech/2026/03/12/openai-partners-with-building-trades-unions-to-support-ai-infrastructure-expansion/",
-      "source": "Breitbart News",
-      "publishedAt": "2026-03-12T17:43:06Z",
-      "title": "OpenAI Partners with Building Trades Unions to Support AI Infrastructure Expansion",
-      "title_ja": "OpenAI、建設労働組合と提携しAIインフラ拡張を支援",
-      "summary_ja": "OpenAIは、北米建設労働組合（NABTU）と提携し、アメリカ国内でのデータセンター建設を加速すると発表した。この提携は、技術者の確保を目指しており、組合の仕事を創出し、 apprenticeshipプログラムを拡充することを目的としている。AI業界は、インフラ整備における労働力不足に直面しており、この協力が行われることによって地域経済にも良い影響を与える可能性がある。",
+      "url": "https://cointelegraph.com/news/ai-power-demand-nuclear-revival-bitcoin-mining",
+      "source": "Cointelegraph",
+      "publishedAt": "2026-03-13T15:40:40Z",
+      "title": "AI Power Demand Fuels Nuclear Revival — Bitcoin Miners Were Early Adopters",
+      "title_ja": "AIの電力需要が核エネルギーの復活を促進 — ビットコインマイナーは早期採用者",
+      "summary_ja": "アメリカでは、AIとデータセンターの拡大が安定かつ大規模な電力への需要を高め、核エネルギーが再注目されています。主要なユーティリティ企業は、AIハイパースケーラーとの長期的な電力契約が核の復活に寄与していると指摘しています。ビットコインマイナーも、核エネルギーの重要性を早期に認識し、その利用を拡大しています。",
       "key_points": [
-        "OpenAIがNABTUと提携しデータセンター建設を促進",
-        "提携により、組合の雇用創出と技術者育成を目指す",
-        "2030年までに10ギガワットのコンピュート能力が必要とされる",
-        "OpenAIは5年間でNABTUのプログラムに150万ドルを支援",
-        "AI業界の競争を背景に急速なインフラ拡大が求められている"
+        "アメリカで核エネルギーが注目を集めている。",
+        "AIハイパースケーラーが核発電所を支援し、24時間のカーボンフリー電力を確保。",
+        "ビットコインマイナーは、早期に核エネルギーを利用した高性能コンピューティングを試行。",
+        "小型モジュール炉(SMR)の導入が進んでいる。",
+        "持続可能なエネルギー源がビットコインマイニングの52.4%を占める。"
       ],
       "glossary": [
         {
-          "term": "NABTU",
-          "explain_ja": "北米建設労働組合の略称で、建設業界の労働者を代表する組織。"
+          "term": "核エネルギー",
+          "explain_ja": "核反応を利用して発電を行うエネルギー源。"
         },
         {
-          "term": "apprenticeship",
-          "explain_ja": "職業訓練の一形態で、職場での実務を通じて技術を学ぶ制度。"
+          "term": "ビットコインマイニング",
+          "explain_ja": "ビットコインの取引を承認し、新たなビットコインを生成するプロセス。"
         },
         {
-          "term": "gigawatts",
-          "explain_ja": "電力の単位。特に大規模なエネルギー供給を表すのに用いられる。"
+          "term": "AIハイパースケーラー",
+          "explain_ja": "人工知能を活用し、大規模なデータセンターを運営する企業。"
+        },
+        {
+          "term": "小型モジュール炉(SMR)",
+          "explain_ja": "従来の原子炉よりも小型で迅速に展開できる核反応炉。"
         }
       ],
       "personal_actions": [
-        "地域の建設労働組合の活動に参加して、スキルや知識を習得する",
-        "AI関連のトレーニングプログラムを探して参加する",
-        "地域経済における技術者需要について情報を収集する"
+        "ビットコインマイニングと核エネルギーに関連する最新の動向を確認する。",
+        "社内でAIと電力の需給について議論する機会を設ける。",
+        "ビットコインマイニングの電源を持続可能な方法で確保する戦略を検討する。"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "http://electrek.co/2026/03/12/tesla-ai6-chip-delayed-samsung-2nm-production-slips/",
-      "source": "Electrek",
-      "publishedAt": "2026-03-12T17:41:51Z",
-      "title": "Tesla AI6 chip delayed ~6 months as Samsung 2nm production slips",
-      "title_ja": "テスラAI6チップ、サムスンの2nm生産遅延により約6ヶ月の遅れ",
-      "summary_ja": "テスラの次世代AI6チップの量産が約6ヶ月遅延することが明らかになった。原因は、サムスンの2nmプロセスでのマルチプロジェクトウェーハ（MPW）ランの延期である。これにより、テスラの自動運転車両やロボットに搭載予定のこのチップの市場投入は2028年以降になる見込みで、テスラの半導体戦略に影響を及ぼすことが懸念されている。",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/maharashtra-eyes-five-fold-expansion-of-data-centre-capacity-by-2030/articleshow/129555155.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-03-13T13:25:16Z",
+      "title": "Maharashtra eyes five-fold expansion of data centre capacity by 2030",
+      "title_ja": "マハーラーシュトラ州、2030年までにデータセンターの容量を5倍に拡大予定",
+      "summary_ja": "マハーラーシュトラ州が2030年までにデータセンターの容量を5倍に拡張することを目指しています。この州はインド全体のデータセンターの大部分を占めており、政策の優遇やインフラの整備、優秀な人材によって支えられています。この取り組みは、州の経済成長やテクノロジー産業の発展に寄与すると期待されています。",
       "key_points": [
-        "AI6チップの量産は2027年後半に延期。",
-        "サムスンの2nmラインのMPWランが約6ヶ月遅延。",
-        "他の顧客にも影響が広がっている。",
-        "テスラはサムスンに対して165億ドルの契約を結んでいる。",
-        "AI5チップの量産も2027年中頃に遅延。",
-        "サムスンの半導体事業は利益目標に圧力がかかっている。"
+        "マハーラーシュトラ州はインドのデータセンターの大部分を占めている。",
+        "政策の優遇、インフラの整備、スキルの高い人材が揃っている。",
+        "2030年までにデータセンターの容量を5倍に拡張する計画。",
+        "州の経済成長とテクノロジー産業の発展に寄与が見込まれる。"
       ],
       "glossary": [
         {
-          "term": "AI6チップ",
-          "explain_ja": "テスラが自動運転車両やロボットに使用するために設計された次世代プロセッサ。"
+          "term": "データセンター",
+          "explain_ja": "データを保存、管理、配信するための施設で、大規模なコンピュータ機器を使用する。"
         },
         {
-          "term": "サムスン",
-          "explain_ja": "韓国のテクノロジー企業で、半導体の製造を行っている。"
-        },
-        {
-          "term": "2nmプロセス",
-          "explain_ja": "半導体製造技術の一つで、トランジスタの寸法を2ナノメートルに縮小したもの。"
-        },
-        {
-          "term": "MPWラン",
-          "explain_ja": "マルチプロジェクトウェーハの略で、複数のプロジェクトのデザインを同時に製造するウェーハのこと。"
+          "term": "インフラ",
+          "explain_ja": "社会や経済活動を支えるための基本的な設備や構造。"
         }
       ],
       "personal_actions": [
-        "サプライチェーンの影響を再評価し、今後の計画に反映させる。",
-        "AI関連のプロジェクトでの予算とタイムラインを見直す。",
-        "サムスンや他の半導体製造パートナーの進捗状況を定期的に確認する。"
+        "地域のデータセンター関連の政策や計画を確認する。",
+        "スキル向上のための関連トレーニングやセミナーに参加する。"
       ],
       "tags": [
-        "その他"
+        "DC"
       ]
     }
   ]
