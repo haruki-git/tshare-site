@@ -1,38 +1,34 @@
 {
-  "date": "2026-03-15",
-  "generatedAtJST": "2026-03-15T07:15:50.023+09:00",
+  "date": "2026-03-16",
+  "generatedAtJST": "2026-03-16T07:15:34.062+09:00",
   "items": [
     {
-      "url": "https://www.techtarget.com/searchenterpriseai/feature/Is-GenAI-villain-and-hero-in-data-center-power-drama",
-      "source": "Techtarget.com",
-      "publishedAt": "2026-03-13T15:52:00Z",
-      "title": "Is GenAI villain and hero in data center power drama?",
-      "title_ja": "GenAIはデータセンターの電力問題で悪者か英雄か？",
-      "summary_ja": "GenAIのインフラ要求はハイパースケーラーや大規模データセンターの電力需要を増加させている。この一方で、GenAIやAIベースの自動化は消費管理にも寄与する可能性がある。今後のデータセンター運営において、これらの技術がどのようにバランスを取るのかが注目される。",
+      "url": "https://www.digitimes.com/news/a20260311PD223/browave-cpo-demand-capacity-data-center.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-03-14T06:59:59Z",
+      "title": "Browave eyes 10x monthly CPO capacity surge by 2027 amid AI data center demand",
+      "title_ja": "Browave、AIデータセンター需要に対応し2027年までに月間CPO能力を10倍に拡大計画",
+      "summary_ja": "Browaveは、AIによるデータセンター需要の急増を受けて、2027年までに月間CPO（チャップテリー商品オプティマイザー）能力を10倍に引き上げる計画を発表しました。これにより、AI関連の開発と運用向けソリューションを提供し、市場での競争力を強化する狙いです。この拡大は、データセンターのインフラの進化と共に、AI処理の需要を満たすために不可欠とされています。",
       "key_points": [
-        "GenAIのインフラ要求が電力需要を増大させる",
-        "ハイパースケーラーに対する影響が広がっている",
-        "AIベースの自動化による消費管理の可能性",
-        "データセンターの電力効率向上が求められる"
+        "Browaveは2027年までにCPO能力を10倍にする計画を発表。",
+        "AIデータセンター需要の急増が背景。",
+        "市場での競争力強化を目指す。",
+        "CPOはAI関連の開発や運用に重要な役割を果たす。",
+        "データセンターインフラの進化に伴う必要性。"
       ],
       "glossary": [
         {
-          "term": "GenAI",
-          "explain_ja": "生成型AIの略称、特定の入力に基づいて新しいデータを生成するAI技術。"
+          "term": "CPO",
+          "explain_ja": "チャップテリー商品オプティマイザーの略で、データセンターでの最適な商品管理システム。"
         },
         {
-          "term": "ハイパースケーラー",
-          "explain_ja": "大規模にクラウドサービスを提供する企業やデータセンターのこと。"
-        },
-        {
-          "term": "AIベースの自動化",
-          "explain_ja": "人工知能を用いた自動化技術で、効率的なプロセス管理を目的とする。"
+          "term": "AI",
+          "explain_ja": "人工知能の略で、機械が人間のように学習、思考、判断できる技術を指します。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力使用量を定期的に監視する",
-        "AI技術による消費管理の導入を検討する",
-        "新しいインフラ要求に関する知識をアップデートしておく"
+        "最新のデータセンター技術やAIの動向を定期的に確認する。",
+        "CPOの役割や運用方法についての理解を深める。"
       ],
       "tags": [
         "DC",
@@ -40,76 +36,34 @@
       ]
     },
     {
-      "url": "https://cointelegraph.com/news/ai-power-demand-nuclear-revival-bitcoin-mining",
-      "source": "Cointelegraph",
-      "publishedAt": "2026-03-13T15:40:40Z",
-      "title": "AI Power Demand Fuels Nuclear Revival — Bitcoin Miners Were Early Adopters",
-      "title_ja": "AIの電力需要が核エネルギーの復活を促進 — ビットコインマイナーは早期採用者",
-      "summary_ja": "アメリカでは、AIとデータセンターの拡大が安定かつ大規模な電力への需要を高め、核エネルギーが再注目されています。主要なユーティリティ企業は、AIハイパースケーラーとの長期的な電力契約が核の復活に寄与していると指摘しています。ビットコインマイナーも、核エネルギーの重要性を早期に認識し、その利用を拡大しています。",
+      "url": "https://www.cbsnews.com/video/alabama-community-pushing-back-against-solar-farm-power-ai/",
+      "source": "CBS News",
+      "publishedAt": "2026-03-14T00:43:05Z",
+      "title": "Alabama community pushing back against solar farm to power AI",
+      "title_ja": "アラバマ州のコミュニティ、AIデータセンターのための太陽光発電所に反対",
+      "summary_ja": "アラバマ州のあるコミュニティが、州内の人工知能（AI）データセンターに電力を供給するための太陽光発電所に反発しています。この反発の背景には、地元住民の懸念があるとされています。地域社会の反応は、再生可能エネルギーとテクノロジーの発展に対する態度を示しています。",
       "key_points": [
-        "アメリカで核エネルギーが注目を集めている。",
-        "AIハイパースケーラーが核発電所を支援し、24時間のカーボンフリー電力を確保。",
-        "ビットコインマイナーは、早期に核エネルギーを利用した高性能コンピューティングを試行。",
-        "小型モジュール炉(SMR)の導入が進んでいる。",
-        "持続可能なエネルギー源がビットコインマイニングの52.4%を占める。"
+        "アラバマ州のコミュニティが太陽光発電所に反発している。",
+        "発電所はAIデータセンターへの電力供給を目的としている。",
+        "地域住民の懸念が反対運動の背景にある。"
       ],
       "glossary": [
         {
-          "term": "核エネルギー",
-          "explain_ja": "核反応を利用して発電を行うエネルギー源。"
+          "term": "AI",
+          "explain_ja": "人工知能のことで、機械が人間のように学習・推論を行う技術。"
         },
-        {
-          "term": "ビットコインマイニング",
-          "explain_ja": "ビットコインの取引を承認し、新たなビットコインを生成するプロセス。"
-        },
-        {
-          "term": "AIハイパースケーラー",
-          "explain_ja": "人工知能を活用し、大規模なデータセンターを運営する企業。"
-        },
-        {
-          "term": "小型モジュール炉(SMR)",
-          "explain_ja": "従来の原子炉よりも小型で迅速に展開できる核反応炉。"
-        }
-      ],
-      "personal_actions": [
-        "ビットコインマイニングと核エネルギーに関連する最新の動向を確認する。",
-        "社内でAIと電力の需給について議論する機会を設ける。",
-        "ビットコインマイニングの電源を持続可能な方法で確保する戦略を検討する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/maharashtra-eyes-five-fold-expansion-of-data-centre-capacity-by-2030/articleshow/129555155.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-03-13T13:25:16Z",
-      "title": "Maharashtra eyes five-fold expansion of data centre capacity by 2030",
-      "title_ja": "マハーラーシュトラ州、2030年までにデータセンターの容量を5倍に拡大予定",
-      "summary_ja": "マハーラーシュトラ州が2030年までにデータセンターの容量を5倍に拡張することを目指しています。この州はインド全体のデータセンターの大部分を占めており、政策の優遇やインフラの整備、優秀な人材によって支えられています。この取り組みは、州の経済成長やテクノロジー産業の発展に寄与すると期待されています。",
-      "key_points": [
-        "マハーラーシュトラ州はインドのデータセンターの大部分を占めている。",
-        "政策の優遇、インフラの整備、スキルの高い人材が揃っている。",
-        "2030年までにデータセンターの容量を5倍に拡張する計画。",
-        "州の経済成長とテクノロジー産業の発展に寄与が見込まれる。"
-      ],
-      "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを保存、管理、配信するための施設で、大規模なコンピュータ機器を使用する。"
-        },
-        {
-          "term": "インフラ",
-          "explain_ja": "社会や経済活動を支えるための基本的な設備や構造。"
+          "explain_ja": "多数のサーバを集中的に配置し、データの管理や処理を行う施設。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンター関連の政策や計画を確認する。",
-        "スキル向上のための関連トレーニングやセミナーに参加する。"
+        "地域住民の声を集めて、発電所計画に対する意見をまとめる。",
+        "地元の関係者と話し合い、懸念点を具体的に明らかにする。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
