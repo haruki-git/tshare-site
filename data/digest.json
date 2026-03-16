@@ -1,68 +1,121 @@
 {
-  "date": "2026-03-16",
-  "generatedAtJST": "2026-03-16T07:15:34.062+09:00",
+  "date": "2026-03-17",
+  "generatedAtJST": "2026-03-17T07:16:09.842+09:00",
   "items": [
     {
-      "url": "https://www.digitimes.com/news/a20260311PD223/browave-cpo-demand-capacity-data-center.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-03-14T06:59:59Z",
-      "title": "Browave eyes 10x monthly CPO capacity surge by 2027 amid AI data center demand",
-      "title_ja": "Browave、AIデータセンター需要に対応し2027年までに月間CPO能力を10倍に拡大計画",
-      "summary_ja": "Browaveは、AIによるデータセンター需要の急増を受けて、2027年までに月間CPO（チャップテリー商品オプティマイザー）能力を10倍に引き上げる計画を発表しました。これにより、AI関連の開発と運用向けソリューションを提供し、市場での競争力を強化する狙いです。この拡大は、データセンターのインフラの進化と共に、AI処理の需要を満たすために不可欠とされています。",
+      "url": "https://economictimes.indiatimes.com/news/company/corporate-trends/punjab-investors-summit-nahar-group-leads-with-rs-1500-cr-investment-in-textiles-renewables-and-data-centre/articleshow/129593184.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-03-15T17:23:21Z",
+      "title": "Punjab Investors' Summit: Nahar Group to invest Rs 1,500 cr across textiles, renewables, data centre",
+      "title_ja": "パンジャブ投資サミット：ナハールグループがテキスタイル、再生可能エネルギー、データセンターに1500クロール投資",
+      "summary_ja": "ナハールグループが1500クロールを投資し、パンジャブ州モハリにデータセンターを設置する計画です。他にもアリスダナ工業やティナールが大規模な投資を発表しました。また、プラクシャ大学は5000クロールの拡張計画を立てています。これにより、地域の経済成長が期待されます。",
       "key_points": [
-        "Browaveは2027年までにCPO能力を10倍にする計画を発表。",
-        "AIデータセンター需要の急増が背景。",
-        "市場での競争力強化を目指す。",
-        "CPOはAI関連の開発や運用に重要な役割を果たす。",
-        "データセンターインフラの進化に伴う必要性。"
+        "ナハールグループが1500クロールをパンジャブ州モハリに投資。",
+        "投資はテキスタイル、再生可能エネルギー、データセンターに分かれる。",
+        "アリスダナ工業とティナールも重要な投資を発表。",
+        "プラクシャ大学が5000クロールの拡張を計画。",
+        "パンジャブ州における総合的な経済成長が見込まれる。"
       ],
       "glossary": [
         {
-          "term": "CPO",
-          "explain_ja": "チャップテリー商品オプティマイザーの略で、データセンターでの最適な商品管理システム。"
+          "term": "データセンター",
+          "explain_ja": "データの保存や管理を行うための専用施設。企業のITインフラに不可欠。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略で、機械が人間のように学習、思考、判断できる技術を指します。"
+          "term": "クロール",
+          "explain_ja": "インドの通貨単位。1クロールは100万ルピーに相当。"
         }
       ],
       "personal_actions": [
-        "最新のデータセンター技術やAIの動向を定期的に確認する。",
-        "CPOの役割や運用方法についての理解を深める。"
+        "投資対象の産業に関連する最新の技術やトレンドを調査する。",
+        "地域のビジネス環境と投資動向を定期的にチェックする。",
+        "データセンターの設置に伴うITインフラの準備状況を確認する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "その他"
       ]
     },
     {
-      "url": "https://www.cbsnews.com/video/alabama-community-pushing-back-against-solar-farm-power-ai/",
-      "source": "CBS News",
-      "publishedAt": "2026-03-14T00:43:05Z",
-      "title": "Alabama community pushing back against solar farm to power AI",
-      "title_ja": "アラバマ州のコミュニティ、AIデータセンターのための太陽光発電所に反対",
-      "summary_ja": "アラバマ州のあるコミュニティが、州内の人工知能（AI）データセンターに電力を供給するための太陽光発電所に反発しています。この反発の背景には、地元住民の懸念があるとされています。地域社会の反応は、再生可能エネルギーとテクノロジーの発展に対する態度を示しています。",
+      "url": "https://rogs.me/2026/03/how-i-deploy-my-projects-to-a-single-vps-with-gitea-nginx-and-docker/",
+      "source": "Rogs.me",
+      "publishedAt": "2026-03-15T05:00:00Z",
+      "title": "How I deploy my projects to a single VPS with Gitea, NGINX and Docker",
+      "title_ja": "Gitea、NGINX、Dockerを用いて単一VPSにプロジェクトをデプロイする方法",
+      "summary_ja": "このガイドでは、著者がGitea、NGINX、Dockerを使ってどのように単一VPS上で多くのプロジェクトを運用しているかを紹介します。著者はHetznerのVPSを利用しており、リソースの効率性を最大化する様々なサービスを展開しています。このアプローチにより、コストを抑えつつ、柔軟で簡易的な運用が可能になります。",
       "key_points": [
-        "アラバマ州のコミュニティが太陽光発電所に反発している。",
-        "発電所はAIデータセンターへの電力供給を目的としている。",
-        "地域住民の懸念が反対運動の背景にある。"
+        "著者はHetznerのVPSを使用しており、月額€7-8で運用。",
+        "すべてのサービスは手動でセットアップされており、管理はシンプル。",
+        "ウェブサーバーにはNGINXを使用し、SSL証明書はCertbotを通じて自動管理。",
+        "GiteaをGitサーバーとして自己ホスティングし、CI/CDパイプラインをGitea Actionsで実行。",
+        "Dockerで複数のサービスをコンテナ化して運用し、Watchtowerを使って自動更新。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能のことで、機械が人間のように学習・推論を行う技術。"
+          "term": "VPS",
+          "explain_ja": "仮想専用サーバーのこと。物理サーバーを仮想的に分割し、各ユーザーが独自にOSやアプリケーションを構成できる。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "多数のサーバを集中的に配置し、データの管理や処理を行う施設。"
+          "term": "Gitea",
+          "explain_ja": "自己ホスティング可能なGitサービスで、GitHubによく似たインターフェースを持つ。"
+        },
+        {
+          "term": "NGINX",
+          "explain_ja": "高性能なHTTPサーバーおよびリバースプロキシサーバー。負荷分散やSSL管理にも対応。"
+        },
+        {
+          "term": "Docker",
+          "explain_ja": "アプリケーションをコンテナとして実行し、異なる環境間での移植性を高める仮想化技術。"
+        },
+        {
+          "term": "Certbot",
+          "explain_ja": "Let’s Encryptを利用してSSL/TLS証明書を自動取得・更新するためのツール。"
         }
       ],
       "personal_actions": [
-        "地域住民の声を集めて、発電所計画に対する意見をまとめる。",
-        "地元の関係者と話し合い、懸念点を具体的に明らかにする。"
+        "現在のVPSのリソース使用状況を確認し、無駄がないか見直す。",
+        "GiteaやNGINXの設定をバックアップしておく。",
+        "Dockerコンテナの管理にWatchtowerを導入し、自動更新を設定する。"
       ],
       "tags": [
-        "DC",
+        "インフラ"
+      ]
+    },
+    {
+      "url": "https://www.phoronix.com/news/Linux-7.0-rc4-Released",
+      "source": "Phoronix",
+      "publishedAt": "2026-03-15T21:18:00Z",
+      "title": "Linux 7.0-rc4 Released With Hang Fixes, Resolves At Least One Performance Regression",
+      "title_ja": "Linux 7.0-rc4リリース、ハング修正やパフォーマンス回帰の解決",
+      "summary_ja": "Linux 7.0の安定版リリースが約1ヶ月後に控え、Linux 7.0-rc4が公開されました。このリリースでは、Rust言語の準備やハングの修正、Linux 6.19以降のmm/cidスケジューラーのパフォーマンス回帰の解決が含まれています。他にも、RDNA4 GPUを使用した計算ワークロード後のAMD GPUのアイドル/消費電力バグの修正などが行われています。これは、Ubuntu 26.04 LTSやFedora 44など、2026年上半期のLinuxディストリビューションにも影響を与える重要なアップデートです。",
+      "key_points": [
+        "Linux 7.0-rc4が公開され、不具合修正が行われた。",
+        "mm/cidスケジューラーにおけるパフォーマンス回帰が解決された。",
+        "RDNA4 GPUのアイドル消費電力バグが修正された。",
+        "Rust言語リリースに向けた準備が進められている。",
+        "リリースサイズが通常よりもやや大きくなった。",
+        "Linux 7.0はUbuntu 26.04 LTSやFedora 44に使用される予定。"
+      ],
+      "glossary": [
+        {
+          "term": "Linux 7.0-rc4",
+          "explain_ja": "Linuxカーネルのリリース候補版であり、最終版に向けた段階を示す。"
+        },
+        {
+          "term": "RDNA4",
+          "explain_ja": "AMDのGPUアーキテクチャの一つで、高性能なグラフィック処理を提供する。"
+        },
+        {
+          "term": "EPP",
+          "explain_ja": "Energy Performance Preferencesの略で、消費電力と性能のバランスを設定する指標。"
+        }
+      ],
+      "personal_actions": [
+        "最新のLinuxカーネルを使用している場合、7.0-rc4へのアップデートを検討する。",
+        "修正された不具合が自システムに影響を与える可能性があるか確認する。",
+        "Rust言語を使用したアプリケーションの準備状況を見直す。"
+      ],
+      "tags": [
+        "インフラ",
         "AI"
       ]
     }
