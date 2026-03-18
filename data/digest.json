@@ -1,125 +1,114 @@
 {
-  "date": "2026-03-18",
-  "generatedAtJST": "2026-03-18T07:16:00.987+09:00",
+  "date": "2026-03-19",
+  "generatedAtJST": "2026-03-19T07:15:47.855+09:00",
   "items": [
     {
-      "url": "https://www.techpowerup.com/347426/supermicro-reveals-dcbbs-with-new-nvidia-vera-rubin-nvl72-hgx-rubin-nvl8-and-vera-cpu-systems",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-03-16T21:00:14Z",
-      "title": "Supermicro Reveals DCBBS with New NVIDIA Vera Rubin NVL72, HGX Rubin NVL8, and Vera CPU Systems",
-      "title_ja": "Supermicro、NVIDIA Vera Rubin NVL72およびHGX Rubin NVL8と新しいCPUシステムを発表",
-      "summary_ja": "Supermicroは、NVIDIA Vera Rubinプラットフォームを使用した新しいシステムポートフォリオを発表しました。データセンターがAI工場に変革する中で、急速なデプロイメントが求められています。新しいDCBBS技術スタックにより、顧客は次世代AI工場の迅速な立ち上げが可能になります。",
+      "url": "https://techcrunch.com/2026/03/17/googles-data-center-power-playbook-comes-into-focus/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-03-17T16:51:44Z",
+      "title": "Google’s data center power playbook comes into focus | TechCrunch",
+      "title_ja": "Googleのデータセンター電力戦略が明らかに",
+      "summary_ja": "Googleは長年にわたり、クリーンエネルギーを調達してきましたが、最近の契約では戦略の変更が見られます。これにより、データセンターに対するアプローチが進化しています。新たな契約は、持続可能な運用に向けたGoogleの取り組みを強調しています。",
       "key_points": [
-        "SupermicroはNVIDIA Vera Rubin NVL72およびHGX Rubin NVL8を含むシステムを発表。",
-        "DCBBS技術により、液冷インフラが強化され、AI工場向けの効率的なデプロイを実現。",
-        "2UのHGX Rubin NVL8システムは、多様なCPU選択肢を提供し、大規模なAIトレーニングに対応。",
-        "新しいVera CPUシステムは、高エネルギー効率を持つAI計算ノードを構築。",
-        "BlueField-4プロセッサに基づくコンテキストメモリストレージプラットフォームが新登場。"
+        "Googleはクリーンエネルギーの調達を続けている。",
+        "最近の契約では新しい戦略が示されている。",
+        "データセンターの運用方法が進化している。",
+        "持続可能性に向けた取り組みが強調されている。"
       ],
       "glossary": [
         {
-          "term": "DCBBS",
-          "explain_ja": "データセンター構築ブロックソリューションと称され、超高効率なインフラを提供する技術。"
+          "term": "クリーンエネルギー",
+          "explain_ja": "再生可能エネルギー源から生成された電力で、環境への影響が少ない。"
         },
         {
-          "term": "NVL72",
-          "explain_ja": "NVIDIA Vera Rubinプラットフォーム上に構築されたシステムの一つ。"
-        },
-        {
-          "term": "HGX",
-          "explain_ja": "NVIDIAが提供する高性能GPUプラットフォームで、AIおよびHPC向け。"
-        },
-        {
-          "term": "Vera CPU",
-          "explain_ja": "AI用途のために設計された次世代のCPU。"
-        },
-        {
-          "term": "BlueField-4",
-          "explain_ja": "NVIDIAの次世代プロセッサで、AI推論やデータセンターネットワークに使用される。"
+          "term": "データセンター",
+          "explain_ja": "大規模なデータを保存、管理、処理するための施設。"
         }
       ],
       "personal_actions": [
-        "新しいDCBBS技術を使用したシステムの特徴を理解し、実際のデプロイメントに備える。",
-        "NVIDIA Vera Rubin NVL72とHGX Rubin NVL8の性能を検討し、チーム内で計画を立てる。",
-        "市場での競争力を確保するため、次世代AI工場の必要性を評価する。"
+        "データセンターのエネルギー効率に関する施策を見直す。",
+        "持続可能性に向けた自社の戦略を再評価する。"
       ],
       "tags": [
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://wccftech.com/nvidia-vera-rubin-achieves-40-million-times-more-compute-in-10-years/",
-      "source": "Wccftech",
-      "publishedAt": "2026-03-16T20:12:29Z",
-      "title": "NVIDIA Vera Rubin Achieves 40 Million Times More Compute In 10 Years: 288 GB HBM4, 22 TB/s Bandwidth, 50 PFLOPs of AI Horsepower",
-      "title_ja": "NVIDIA Vera Rubinが10年で4000万倍のコンピュート性能を達成",
-      "summary_ja": "NVIDIAは次世代AIデータセンタープラットフォーム「Vera Rubin」を発表しました。これにより、288 GBのHBM4メモリと22 TB/sの帯域幅を備え、50 PFLOPsのAI処理能力を実現しています。Vera Rubinは今後のAIモデルのトレーニングと展開において重要な役割を果たすと期待されています。",
+      "url": "https://e360.yale.edu/digest/archbald-data-centers",
+      "source": "Yale.edu",
+      "publishedAt": "2026-03-17T15:15:00Z",
+      "title": "The Quiet Pennsylvania Town Facing a Data Center Boom",
+      "title_ja": "データセンター急増に直面するペンシルベニア州の静かな町",
+      "summary_ja": "ペンシルベニア州アーチバルドでは、住民の懸念に反して5つの巨大データセンターが計画されている。これにより、電力網への負担や電気料金の上昇が懸念されているが、地方政府は税収の見込みから計画を進めている。データセンターは地方予算の60%以上を占める税収を生む可能性がある。",
       "key_points": [
-        "Vera Rubinは、7つのチップから構成され、各チップが特定の役割を持つ。",
-        "Vera CPUは、高いシングルスレッドパフォーマンスを実現する初のデータセンターCPU。",
-        "NVIDIA Rubin GPUは、288 GBのHBM4と22 TB/sの帯域幅を持ち、50 PFLOPsのNVFP4計算性能を備える。",
-        "全てのコンポーネントが液冷設計されており、インストール時間が2日から2時間に短縮される。",
-        "Vera Rubinは、主要クラウドプロバイダーを含むパートナーを通じて、今年後半に製品が提供される見込み。"
-      ],
-      "glossary": [
-        {
-          "term": "HBM4",
-          "explain_ja": "第4世代の高帯域幅メモリで、大量のデータ処理をサポートする。"
-        },
-        {
-          "term": "PFLOPs",
-          "explain_ja": "1秒間に10の15乗の浮動小数点演算を行う能力を表す単位。"
-        },
-        {
-          "term": "NVLINK",
-          "explain_ja": "NVIDIAが開発した高帯域のインターコネクト技術。"
-        }
-      ],
-      "personal_actions": [
-        "新型Vera Rubinプラットフォームについての最新情報を確認する。",
-        "自社のデータセンターにおけるAI処理ニーズを再評価する。",
-        "Vera CPUやGPUを使ったトレーニング方法を検討する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.insurancejournal.com/news/national/2026/03/16/862050.htm",
-      "source": "Insurance Journal",
-      "publishedAt": "2026-03-16T14:28:07Z",
-      "title": "US Data Center Boom Slows Due to Power Grid Limits, Consultancy Says",
-      "title_ja": "米国データセンターの成長が電力網の制限で鈍化",
-      "summary_ja": "米国のデータセンター開発は電力網の限界により鈍化している。2025年第4四半期には、データセンターの電力需要が前四半期の半分に減少し、2026年の大手開発者の資本支出も減少する見込みだ。これにより、データセンターの開発がより慎重に進められる可能性がある。",
-      "key_points": [
-        "2025年第4四半期のデータセンター電力需要は約25ギガワットで、前年同期の半分。",
-        "2026年の大手開発者の資本支出は、2023年以来初めて前年を下回る見込み。",
-        "電力網の限界がデータセンター開発に影響を及ぼしている。",
-        "人工知能の普及がデータセンターの需要を急増させているが、電力供給が追いついていない。",
-        "米国のデータセンター開発パイプラインは241ギガワットに達し、前年の160%増。"
+        "アーチバルドに5つのデータセンター計画がある",
+        "データセンターは1130万平方フィート以上を占める",
+        "最大のデータセンターは1.6ギガワットの電力を必要とする",
+        "地方政府は建物の高さ制限を55フィートから90フィートに引き上げた",
+        "データセンターからの税収は地方予算の大きな助けとなる",
+        "公共の反対により一部計画がキャンセルされることもある"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを収納・管理・配信するための専用施設。"
+          "explain_ja": "データを集中管理し、処理、保存するための施設。"
+        },
+        {
+          "term": "アーチバルド",
+          "explain_ja": "ペンシルベニア州の人口8000人未満のボロー。"
         },
         {
           "term": "ギガワット",
-          "explain_ja": "電力の単位で、1ギガワットは約750,000世帯を電力供給できる。"
+          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する。"
         },
         {
-          "term": "電力網",
-          "explain_ja": "電力の生産と供給をつなぐインフラストラクチャー。"
+          "term": "フラッキング",
+          "explain_ja": "シェールガスなどの採掘方法で、地下層に水圧をかけてガスを抽出する。"
+        },
+        {
+          "term": "エネルギー情報局（EIA）",
+          "explain_ja": "アメリカ合衆国のエネルギーに関する統計データを提供する連邦機関。"
         }
       ],
       "personal_actions": [
-        "自社の電力供給契約を見直し、今後の電力供給リスクを評価する。",
-        "データセンター開発の計画における電力供給の確保について再検討する。",
-        "今後のインフラ投資に向けた予算計画を立てる。"
+        "地域の電力供給状況を確認する",
+        "データセンター開発に関する住民会議に参加する",
+        "電力需要の変化について情報収集を行う"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://financialpost.com/globe-newswire/ipronics-announces-a-siph-packaging-and-assembly-manufacturing-line-for-next-generation-ai-optical-circuit-switches-at-fabrinet",
+      "source": "Financial Post",
+      "publishedAt": "2026-03-17T13:22:11Z",
+      "title": "iPronics Announces a SiPh Packaging and Assembly Manufacturing Line for Next Generation AI Optical Circuit Switches at Fabrinet",
+      "title_ja": "iPronics、Fabrinetで次世代AI光回路スイッチのSiPhパッケージングと組立製造ラインを発表",
+      "summary_ja": "iPronicsは、次世代AI光回路スイッチの製造能力を強化するため、Fabrinetとのパートナーシップを強化したことを発表しました。これにより、プログラム可能なシリコンフォトニクス（SiPh）のグローバル製造体制が拡張されます。この進展は、AIデータセンターネットワーキングにおける新技術の導入を支えるものです。",
+      "key_points": [
+        "iPronicsはSiPhパッケージングと組立製造ラインの拡張を発表。",
+        "Fabrinetとのパートナーシップが強化され、製造能力が向上。",
+        "この技術はAIデータセンターネットワーキングに利用される。",
+        "Valenciaでの新しい製造ラインが設立される予定。",
+        "プログラム可能なシリコンフォトニクス技術が主な焦点。"
+      ],
+      "glossary": [
+        {
+          "term": "SiPh",
+          "explain_ja": "シリコンフォトニクスは、光信号を生成・処理・受信するためのシリコン基盤の技術です。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）は、コンピュータが人間の知的タスクを模倣する技術です。"
+        }
+      ],
+      "personal_actions": [
+        "最新のSiPh技術の業界動向を確認する。",
+        "自社のデータセンターにおける光通信技術の採用可能性を検討する。"
+      ],
+      "tags": [
+        "AI"
       ]
     }
   ]
