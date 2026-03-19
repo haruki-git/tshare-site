@@ -1,111 +1,64 @@
 {
-  "date": "2026-03-19",
-  "generatedAtJST": "2026-03-19T07:15:47.855+09:00",
+  "date": "2026-03-20",
+  "generatedAtJST": "2026-03-20T07:15:40.899+09:00",
   "items": [
     {
-      "url": "https://techcrunch.com/2026/03/17/googles-data-center-power-playbook-comes-into-focus/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-03-17T16:51:44Z",
-      "title": "Google’s data center power playbook comes into focus | TechCrunch",
-      "title_ja": "Googleのデータセンター電力戦略が明らかに",
-      "summary_ja": "Googleは長年にわたり、クリーンエネルギーを調達してきましたが、最近の契約では戦略の変更が見られます。これにより、データセンターに対するアプローチが進化しています。新たな契約は、持続可能な運用に向けたGoogleの取り組みを強調しています。",
+      "url": "https://fortune.com/2026/03/18/power-grids-snags-electricity-limits-data-centers/",
+      "source": "Fortune",
+      "publishedAt": "2026-03-18T15:39:41Z",
+      "title": "“A bend in the trajectory”: U.S. data center development has hit snags because the power grid is approaching its limits to support them",
+      "title_ja": "データセンターの発展が限界に直面：米国の電力網のボトleneck",
+      "summary_ja": "米国のデータセンター開発が電力網の限界に近づき、進展に課題が生じています。このエネルギーのボトleneckにより、大手テクノロジー企業は巨額の資本支出の約束を見直す必要があるかもしれません。これは、今後のデータセンターの拡大に影響を及ぼす可能性があります。",
       "key_points": [
-        "Googleはクリーンエネルギーの調達を続けている。",
-        "最近の契約では新しい戦略が示されている。",
-        "データセンターの運用方法が進化している。",
-        "持続可能性に向けた取り組みが強調されている。"
+        "米国のデータセンター開発にエネルギーのボトleneckが発生。",
+        "電力網がデータセンターの要求を支える限界に近づく。",
+        "大手テクノロジー企業が資本支出の見直しを余儀なくされる可能性。"
       ],
       "glossary": [
         {
-          "term": "クリーンエネルギー",
-          "explain_ja": "再生可能エネルギー源から生成された電力で、環境への影響が少ない。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを処理・保管するための施設。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "大規模なデータを保存、管理、処理するための施設。"
+          "term": "電力網",
+          "explain_ja": "電力の供給と配分を調整するためのインフラ。"
         }
       ],
       "personal_actions": [
-        "データセンターのエネルギー効率に関する施策を見直す。",
-        "持続可能性に向けた自社の戦略を再評価する。"
+        "電力使用状況を確認し、効率的に管理する。",
+        "データセンターの新規プロジェクトの動向を把握する。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://e360.yale.edu/digest/archbald-data-centers",
-      "source": "Yale.edu",
-      "publishedAt": "2026-03-17T15:15:00Z",
-      "title": "The Quiet Pennsylvania Town Facing a Data Center Boom",
-      "title_ja": "データセンター急増に直面するペンシルベニア州の静かな町",
-      "summary_ja": "ペンシルベニア州アーチバルドでは、住民の懸念に反して5つの巨大データセンターが計画されている。これにより、電力網への負担や電気料金の上昇が懸念されているが、地方政府は税収の見込みから計画を進めている。データセンターは地方予算の60%以上を占める税収を生む可能性がある。",
+      "url": "https://economictimes.indiatimes.com/industry/cons-products/electronics/indias-semiconductor-push-to-drive-300-billion-market-by-2035-report/articleshow/129647171.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-03-18T04:32:43Z",
+      "title": "India’s semiconductor push to drive $300 billion market by 2035: Report",
+      "title_ja": "インドの半導体推進、2035年までに3000億ドル市場を牽引",
+      "summary_ja": "インドの半導体市場は2035年までに3000億ドルに達すると予測されており、国内需要の60%以上を地元生産が賄う見込みです。この成長はAI、自動車、データセンターの需要によって加速されています。インフラ面の強化も併せて進行しており、企業の投資が活発化しています。",
       "key_points": [
-        "アーチバルドに5つのデータセンター計画がある",
-        "データセンターは1130万平方フィート以上を占める",
-        "最大のデータセンターは1.6ギガワットの電力を必要とする",
-        "地方政府は建物の高さ制限を55フィートから90フィートに引き上げた",
-        "データセンターからの税収は地方予算の大きな助けとなる",
-        "公共の反対により一部計画がキャンセルされることもある"
+        "インドの半導体市場は2035年までに3000億ドルに到達すると予測",
+        "地元生産が国内需要の60%以上を満たす見込み",
+        "AI、自動車、データセンターの成長が市場拡大を助長",
+        "インフラ強化が企業の投資を後押し",
+        "新たな雇用機会の創出が期待される"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを集中管理し、処理、保存するための施設。"
-        },
-        {
-          "term": "アーチバルド",
-          "explain_ja": "ペンシルベニア州の人口8000人未満のボロー。"
-        },
-        {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する。"
-        },
-        {
-          "term": "フラッキング",
-          "explain_ja": "シェールガスなどの採掘方法で、地下層に水圧をかけてガスを抽出する。"
-        },
-        {
-          "term": "エネルギー情報局（EIA）",
-          "explain_ja": "アメリカ合衆国のエネルギーに関する統計データを提供する連邦機関。"
-        }
-      ],
-      "personal_actions": [
-        "地域の電力供給状況を確認する",
-        "データセンター開発に関する住民会議に参加する",
-        "電力需要の変化について情報収集を行う"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://financialpost.com/globe-newswire/ipronics-announces-a-siph-packaging-and-assembly-manufacturing-line-for-next-generation-ai-optical-circuit-switches-at-fabrinet",
-      "source": "Financial Post",
-      "publishedAt": "2026-03-17T13:22:11Z",
-      "title": "iPronics Announces a SiPh Packaging and Assembly Manufacturing Line for Next Generation AI Optical Circuit Switches at Fabrinet",
-      "title_ja": "iPronics、Fabrinetで次世代AI光回路スイッチのSiPhパッケージングと組立製造ラインを発表",
-      "summary_ja": "iPronicsは、次世代AI光回路スイッチの製造能力を強化するため、Fabrinetとのパートナーシップを強化したことを発表しました。これにより、プログラム可能なシリコンフォトニクス（SiPh）のグローバル製造体制が拡張されます。この進展は、AIデータセンターネットワーキングにおける新技術の導入を支えるものです。",
-      "key_points": [
-        "iPronicsはSiPhパッケージングと組立製造ラインの拡張を発表。",
-        "Fabrinetとのパートナーシップが強化され、製造能力が向上。",
-        "この技術はAIデータセンターネットワーキングに利用される。",
-        "Valenciaでの新しい製造ラインが設立される予定。",
-        "プログラム可能なシリコンフォトニクス技術が主な焦点。"
-      ],
-      "glossary": [
-        {
-          "term": "SiPh",
-          "explain_ja": "シリコンフォトニクスは、光信号を生成・処理・受信するためのシリコン基盤の技術です。"
+          "term": "半導体",
+          "explain_ja": "電気の流れを制御できる材料で、電子機器の基本的な構成要素。"
         },
         {
           "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）は、コンピュータが人間の知的タスクを模倣する技術です。"
+          "explain_ja": "人工知能のことで、コンピュータが人間のように学習・推論する能力。"
         }
       ],
       "personal_actions": [
-        "最新のSiPh技術の業界動向を確認する。",
-        "自社のデータセンターにおける光通信技術の採用可能性を検討する。"
+        "自社の半導体依存度を見直し、サプライチェーンの強化を図る",
+        "新たなビジネス機会に備えて市場動向を定期的にチェックする"
       ],
       "tags": [
         "AI"
