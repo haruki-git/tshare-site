@@ -1,67 +1,111 @@
 {
-  "date": "2026-03-20",
-  "generatedAtJST": "2026-03-20T07:15:40.899+09:00",
+  "date": "2026-03-21",
+  "generatedAtJST": "2026-03-21T07:15:40.073+09:00",
   "items": [
     {
-      "url": "https://fortune.com/2026/03/18/power-grids-snags-electricity-limits-data-centers/",
-      "source": "Fortune",
-      "publishedAt": "2026-03-18T15:39:41Z",
-      "title": "“A bend in the trajectory”: U.S. data center development has hit snags because the power grid is approaching its limits to support them",
-      "title_ja": "データセンターの発展が限界に直面：米国の電力網のボトleneck",
-      "summary_ja": "米国のデータセンター開発が電力網の限界に近づき、進展に課題が生じています。このエネルギーのボトleneckにより、大手テクノロジー企業は巨額の資本支出の約束を見直す必要があるかもしれません。これは、今後のデータセンターの拡大に影響を及ぼす可能性があります。",
+      "url": "https://www.techradar.com/pro/googles-signs-data-center-deal-that-comes-with-a-20-year-commitment-to-add-new-clean-power",
+      "source": "TechRadar",
+      "publishedAt": "2026-03-19T18:00:00Z",
+      "title": "Google signs data center deal which includes a 20-year commitment to add new clean power",
+      "title_ja": "Google、20年のクリーン電力追加契約を含むデータセンター契約を締結",
+      "summary_ja": "Googleは、ミシガンに新しいデータセンターを設置する契約を結び、20年間にわたり新たなクリーン電力を追加することを約束しました。このデータセンターはデトロイト地域にクリーンエネルギーへのアクセスを提供する可能性があります。この取り組みは、地域経済の活性化と、持続可能なエネルギー供給に貢献すると期待されています。",
       "key_points": [
-        "米国のデータセンター開発にエネルギーのボトleneckが発生。",
-        "電力網がデータセンターの要求を支える限界に近づく。",
-        "大手テクノロジー企業が資本支出の見直しを余儀なくされる可能性。"
+        "Googleがミシガン州にデータセンターを設置予定",
+        "20年のクリーン電力追加契約を締結",
+        "デトロイト地域へのクリーンエネルギーの提供が見込まれる",
+        "地域経済や環境へのポジティブな影響が期待される"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを処理・保管するための施設。"
+          "term": "クリーンエネルギー",
+          "explain_ja": "化石燃料を使わず、再生可能な資源から生成されるエネルギー。"
         },
         {
-          "term": "電力網",
-          "explain_ja": "電力の供給と配分を調整するためのインフラ。"
+          "term": "データセンター",
+          "explain_ja": "データを保存、管理、配信するための集中型施設。"
         }
       ],
       "personal_actions": [
-        "電力使用状況を確認し、効率的に管理する。",
-        "データセンターの新規プロジェクトの動向を把握する。"
+        "地域のクリーンエネルギーの取り組みを調査する",
+        "新しいデータセンターの進捗を確認する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://economictimes.indiatimes.com/industry/cons-products/electronics/indias-semiconductor-push-to-drive-300-billion-market-by-2035-report/articleshow/129647171.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-03-18T04:32:43Z",
-      "title": "India’s semiconductor push to drive $300 billion market by 2035: Report",
-      "title_ja": "インドの半導体推進、2035年までに3000億ドル市場を牽引",
-      "summary_ja": "インドの半導体市場は2035年までに3000億ドルに達すると予測されており、国内需要の60%以上を地元生産が賄う見込みです。この成長はAI、自動車、データセンターの需要によって加速されています。インフラ面の強化も併せて進行しており、企業の投資が活発化しています。",
+      "url": "https://www.channelnewsasia.com/business/ecolab-nearing-deal-acquire-kkrs-data-center-cooling-company-up-5-billion-wsj-reports-6005031",
+      "source": "CNA",
+      "publishedAt": "2026-03-19T17:22:50Z",
+      "title": "Ecolab nearing deal to acquire KKR's data center cooling company for up to $5 billion, WSJ reports",
+      "title_ja": "Ecolab、KKRのデータセンター冷却会社を最大50億ドルで買収合意間近とWSJ報道",
+      "summary_ja": "EcolabがKKRからデータセンター冷却会社CoolIT Systemsを最大50億ドルで買収する合意に近づいていると報じられました。この買収は、データセンターの冷却技術の重要性が高まる中で進められています。取引の発表は近日中に行われる可能性があります。",
       "key_points": [
-        "インドの半導体市場は2035年までに3000億ドルに到達すると予測",
-        "地元生産が国内需要の60%以上を満たす見込み",
-        "AI、自動車、データセンターの成長が市場拡大を助長",
-        "インフラ強化が企業の投資を後押し",
-        "新たな雇用機会の創出が期待される"
+        "EcolabはKKRからCoolIT Systemsを買収する計画。",
+        "買収額は4.5億ドルから5億ドルの範囲と見込まれている。",
+        "データセンターの冷却技術への需要が増加している。",
+        "取引は間もなく発表される可能性がある。"
       ],
       "glossary": [
         {
-          "term": "半導体",
-          "explain_ja": "電気の流れを制御できる材料で、電子機器の基本的な構成要素。"
+          "term": "Ecolab",
+          "explain_ja": "水とエネルギーの管理、衛生管理サービスを提供する企業。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能のことで、コンピュータが人間のように学習・推論する能力。"
+          "term": "KKR",
+          "explain_ja": "グローバルな投資企業で、プライベートエクイティの分野で知られている。"
+        },
+        {
+          "term": "CoolIT Systems",
+          "explain_ja": "データセンター用の冷却技術を専門とする企業。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データを保存・管理するための設備やインフラを整えた施設。"
         }
       ],
       "personal_actions": [
-        "自社の半導体依存度を見直し、サプライチェーンの強化を図る",
-        "新たなビジネス機会に備えて市場動向を定期的にチェックする"
+        "データセンターの冷却技術に関する最新情報を確認する。",
+        "EcolabやCoolIT Systemsの製品やサービスについて調査する。"
       ],
       "tags": [
-        "AI"
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.channelnewsasia.com/business/ecolab-close-buying-kkrs-data-center-cooling-company-up-5-billion-wsj-reports-6005031",
+      "source": "CNA",
+      "publishedAt": "2026-03-19T17:22:50Z",
+      "title": "Ecolab close to buying KKR's data center cooling company for up to $5 billion, WSJ reports",
+      "title_ja": "Ecolab、KKRのデータセンター冷却会社を最大50億ドルで買収へ",
+      "summary_ja": "EcolabがKKRからデータセンター冷却会社CoolIT Systemsの買収で合意に近づいているとの報道があります。買収額は45億ドルから50億ドルの範囲とされています。この取引は、Ecolabの製品ポートフォリオを強化する一環として、大きな影響を及ぼす可能性があります。",
+      "key_points": [
+        "EcolabがCoolIT Systemsを買収する計画を進行中",
+        "買収額は45億ドルから50億ドルの範囲",
+        "この報道はWall Street Journalによるもの",
+        "取引の発表は近日中が予想されている"
+      ],
+      "glossary": [
+        {
+          "term": "Ecolab",
+          "explain_ja": "水・衛生・エネルギー管理分野のグローバルな企業"
+        },
+        {
+          "term": "KKR",
+          "explain_ja": "大手プライベートエクイティ会社"
+        },
+        {
+          "term": "CoolIT Systems",
+          "explain_ja": "データセンター冷却ソリューションを提供する企業"
+        }
+      ],
+      "personal_actions": [
+        "冷却システムの最新技術についての情報収集を行う",
+        "データセンターのエネルギー効率に関する社内方針を確認する",
+        "クリティカルな冷却インフラの評価を実施する"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
