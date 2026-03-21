@@ -1,111 +1,117 @@
 {
-  "date": "2026-03-21",
-  "generatedAtJST": "2026-03-21T07:15:40.073+09:00",
+  "date": "2026-03-22",
+  "generatedAtJST": "2026-03-22T07:15:51.020+09:00",
   "items": [
     {
-      "url": "https://www.techradar.com/pro/googles-signs-data-center-deal-that-comes-with-a-20-year-commitment-to-add-new-clean-power",
-      "source": "TechRadar",
-      "publishedAt": "2026-03-19T18:00:00Z",
-      "title": "Google signs data center deal which includes a 20-year commitment to add new clean power",
-      "title_ja": "Google、20年のクリーン電力追加契約を含むデータセンター契約を締結",
-      "summary_ja": "Googleは、ミシガンに新しいデータセンターを設置する契約を結び、20年間にわたり新たなクリーン電力を追加することを約束しました。このデータセンターはデトロイト地域にクリーンエネルギーへのアクセスを提供する可能性があります。この取り組みは、地域経済の活性化と、持続可能なエネルギー供給に貢献すると期待されています。",
+      "url": "https://www.clickorlando.com/tech/2026/03/20/trump-officials-announce-10-gigawatt-data-center-gas-plants-for-former-ohio-uranium-site/",
+      "source": "WKMG News 6 & ClickOrlando",
+      "publishedAt": "2026-03-20T21:26:24Z",
+      "title": "Trump officials announce 10-gigawatt data center, gas plants for former Ohio uranium site",
+      "title_ja": "トランプ政権公式、オハイオ州の元ウランサイトに10ギガワットのデータセンターとガスプラントを発表",
+      "summary_ja": "米国エネルギー省は、ソフトバンクとAEPオハイオと連携し、オハイオ州南部にある元ウラン濃縮サイトに大規模なAIデータセンターと発電コンプレックスを開発することを発表しました。このプロジェクトは、エネルギー効率と先進的なAI技術を融合させて新たなインフラを構築します。これにより、地域経済への貢献が期待されています。",
       "key_points": [
-        "Googleがミシガン州にデータセンターを設置予定",
-        "20年のクリーン電力追加契約を締結",
-        "デトロイト地域へのクリーンエネルギーの提供が見込まれる",
-        "地域経済や環境へのポジティブな影響が期待される"
+        "米国エネルギー省が新しいプロジェクトを発表",
+        "ソフトバンクとAEPオハイオがパートナーとして参加",
+        "元ウラン濃縮サイトを利用したデータセンターの開発",
+        "10ギガワットの電力供給を目指す",
+        "AI技術に特化したインフラの構築"
       ],
       "glossary": [
         {
-          "term": "クリーンエネルギー",
-          "explain_ja": "化石燃料を使わず、再生可能な資源から生成されるエネルギー。"
+          "term": "AI",
+          "explain_ja": "人工知能。コンピュータが学習、推論、自己修正を行う能力。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データを保存、管理、配信するための集中型施設。"
+          "explain_ja": "データの収集、保存、処理を行う専門的な施設。"
+        },
+        {
+          "term": "ガスプラント",
+          "explain_ja": "天然ガスを使用して電力を生成する施設。"
+        },
+        {
+          "term": "公私パートナーシップ",
+          "explain_ja": "公共機関と民間企業が協力してプロジェクトを進める形態。"
         }
       ],
       "personal_actions": [
-        "地域のクリーンエネルギーの取り組みを調査する",
-        "新しいデータセンターの進捗を確認する"
+        "地元のインフラプロジェクトに関連する説明会の日程を確認する",
+        "AI技術の進展に備え、自社システムのスケーラビリティを見直す",
+        "エネルギー供給の新たな動向に関する業界ニュースをウォッチする"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.channelnewsasia.com/business/ecolab-nearing-deal-acquire-kkrs-data-center-cooling-company-up-5-billion-wsj-reports-6005031",
-      "source": "CNA",
-      "publishedAt": "2026-03-19T17:22:50Z",
-      "title": "Ecolab nearing deal to acquire KKR's data center cooling company for up to $5 billion, WSJ reports",
-      "title_ja": "Ecolab、KKRのデータセンター冷却会社を最大50億ドルで買収合意間近とWSJ報道",
-      "summary_ja": "EcolabがKKRからデータセンター冷却会社CoolIT Systemsを最大50億ドルで買収する合意に近づいていると報じられました。この買収は、データセンターの冷却技術の重要性が高まる中で進められています。取引の発表は近日中に行われる可能性があります。",
+      "url": "https://siliconangle.com/2026/03/20/vera-rubin-targets-every-wasted-watt-ai-nvidiagtcai/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-03-20T18:40:50Z",
+      "title": "Vera Rubin targets every wasted watt in AI - SiliconANGLE",
+      "title_ja": "NvidiaがVera RubinでAIの無駄な電力をターゲットに",
+      "summary_ja": "Nvidiaは、AIインフラの効率を向上させるためにVera Rubinプラットフォームを発表しました。このプラットフォームは、エネルギーの無駄を排除し、トークンコストを削減することを目指しています。新しいアーキテクチャにより、データセンターのパフォーマンスが向上し、新しいビジネスモデルの創出が期待されています。",
       "key_points": [
-        "EcolabはKKRからCoolIT Systemsを買収する計画。",
-        "買収額は4.5億ドルから5億ドルの範囲と見込まれている。",
-        "データセンターの冷却技術への需要が増加している。",
-        "取引は間もなく発表される可能性がある。"
+        "Vera Rubinは、AIインフラの効率を劇的に改善することが期待されています。",
+        "ダイナミックパワー供給により、エネルギーを無駄なく利用可能です。",
+        "Nvidiaは、コンピューティング、ストレージ、ネットワーク管理を統合して設計しています。",
+        "新しい BlueField-4 STXアーキテクチャは、セキュリティとアクセス制御の拡張を可能にします。",
+        "パートナー企業は、新しいインフラを迅速に市場に投入できるようになっています。"
       ],
       "glossary": [
         {
-          "term": "Ecolab",
-          "explain_ja": "水とエネルギーの管理、衛生管理サービスを提供する企業。"
+          "term": "Vera Rubin",
+          "explain_ja": "Nvidiaが開発した、AIインフラとパワー効率を最適化するプラットフォーム。"
         },
         {
-          "term": "KKR",
-          "explain_ja": "グローバルな投資企業で、プライベートエクイティの分野で知られている。"
+          "term": "ダイナミックパワー供給",
+          "explain_ja": "必要に応じて電力を供給し、エネルギーの無駄を削減する技術。"
         },
         {
-          "term": "CoolIT Systems",
-          "explain_ja": "データセンター用の冷却技術を専門とする企業。"
+          "term": "BlueField-4 STX",
+          "explain_ja": "Nvidiaの新しいストレージアーキテクチャで、データ処理を物理的なデータの近くで行う。"
+        }
+      ],
+      "personal_actions": [
+        "Vera Rubinの導入に向けたインフラ評価を行う。",
+        "ダイナミックパワー管理システムの導入を検討する。",
+        "新しいアーキテクチャに関するトレーニングを受ける。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://siliconangle.com/2026/03/20/voltage-at-scale-key-powering-ai-revolution-nvidiagtcai/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-03-20T18:20:36Z",
+      "title": "Why voltage at scale is key in powering the AI revolution - SiliconANGLE",
+      "title_ja": "AI革命を支えるスケール化された電圧の重要性",
+      "summary_ja": "テキサス・インスツルメンツは、AIインフラの急成長によるエネルギーのボトルネック解消のため、800Vの電力アーキテクチャを推進しています。この移行は、データセンターの電力需要が40%の成長を見込む中で不可欠であり、銅の使用量を大幅に削減します。また、高電圧システムの信頼性も重視されています。これは、AIデータセンターの運用において非常に重要です。",
+      "key_points": [
+        "800V電力アーキテクチャへの移行により、銅の使用量が削減される。",
+        "データセンターの電力需要は年40%の成長が予測されている。",
+        "高電圧システムでは、信頼性が特に重要であり、一つのコンバータの故障が全てのワークロードに影響を与える可能性がある。",
+        "新たな300mmウェハ工場の設立がアメリカ国内で進行中。",
+        "持続可能なエネルギー源への転換が求められている。"
+      ],
+      "glossary": [
+        {
+          "term": "800Vアーキテクチャ",
+          "explain_ja": "データセンターやAIインフラにおける高電圧電力供給方法。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データを保存・管理するための設備やインフラを整えた施設。"
+          "explain_ja": "コンピュータのサーバーが設置され、データが管理される施設。"
         }
       ],
       "personal_actions": [
-        "データセンターの冷却技術に関する最新情報を確認する。",
-        "EcolabやCoolIT Systemsの製品やサービスについて調査する。"
+        "新しい電力アーキテクチャの導入に備え、現在の電源設計を見直す。",
+        "高電圧システムの信頼性向上に向けたメンテナンス計画を策定する。"
       ],
       "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.channelnewsasia.com/business/ecolab-close-buying-kkrs-data-center-cooling-company-up-5-billion-wsj-reports-6005031",
-      "source": "CNA",
-      "publishedAt": "2026-03-19T17:22:50Z",
-      "title": "Ecolab close to buying KKR's data center cooling company for up to $5 billion, WSJ reports",
-      "title_ja": "Ecolab、KKRのデータセンター冷却会社を最大50億ドルで買収へ",
-      "summary_ja": "EcolabがKKRからデータセンター冷却会社CoolIT Systemsの買収で合意に近づいているとの報道があります。買収額は45億ドルから50億ドルの範囲とされています。この取引は、Ecolabの製品ポートフォリオを強化する一環として、大きな影響を及ぼす可能性があります。",
-      "key_points": [
-        "EcolabがCoolIT Systemsを買収する計画を進行中",
-        "買収額は45億ドルから50億ドルの範囲",
-        "この報道はWall Street Journalによるもの",
-        "取引の発表は近日中が予想されている"
-      ],
-      "glossary": [
-        {
-          "term": "Ecolab",
-          "explain_ja": "水・衛生・エネルギー管理分野のグローバルな企業"
-        },
-        {
-          "term": "KKR",
-          "explain_ja": "大手プライベートエクイティ会社"
-        },
-        {
-          "term": "CoolIT Systems",
-          "explain_ja": "データセンター冷却ソリューションを提供する企業"
-        }
-      ],
-      "personal_actions": [
-        "冷却システムの最新技術についての情報収集を行う",
-        "データセンターのエネルギー効率に関する社内方針を確認する",
-        "クリティカルな冷却インフラの評価を実施する"
-      ],
-      "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
