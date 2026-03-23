@@ -1,110 +1,113 @@
 {
-  "date": "2026-03-23",
-  "generatedAtJST": "2026-03-23T07:15:48.850+09:00",
+  "date": "2026-03-24",
+  "generatedAtJST": "2026-03-24T07:15:48.058+09:00",
   "items": [
     {
-      "url": "http://futurism.com/robots-and-machines/staff-brain-data-center-spine-fluid",
-      "source": "Futurism",
-      "publishedAt": "2026-03-21T13:00:00Z",
-      "title": "Staff at New Data Center Powered by Human Brain Cells Need to Swap Out Cerebrospinal Fluid Every Day",
-      "title_ja": "人間の脳細胞で動く新データセンター、毎日脳脊髄液を補充する必要あり",
-      "summary_ja": "新しいデータセンターでは人間の神経細胞が活用されており、技術者は毎日脳脊髄液を補充する必要があります。この生物コンピュータは生物的な制約を持ち、約24時間ごとに液体が depleted します。Cortical Labs は、この新しい技術が伝統的なコンピュータに比べてエネルギー効率が良く、さらに将来的には高速化する可能性があると主張しています。",
+      "url": "https://acecomments.mu.nu/?post=419007",
+      "source": "Acecomments.mu.nu",
+      "publishedAt": "2026-03-22T08:00:00Z",
+      "title": "Daily Tech News 22 March 2026",
+      "title_ja": "2026年3月22日のテクノロジーニュース",
+      "summary_ja": "ソフトバンクがオハイオ州に設計中のデータセンターは、建設に400億ドルのコストがかかり、さらに330億ドルのガスタービン発電所が必要です。このサイトは1956年から2001年まで核燃料の生産に使われていたことから、長いバリアにより核発電の選択肢は却下されています。さらに、Trivyという脆弱性スキャナーがサプライチェーン攻撃を受け、多くのNPMパッケージに自動的に広がるCanisterWormを引き起こしました。",
       "key_points": [
-        "人間の神経細胞を使用した生物コンピュータ CL1。",
-        "毎日脳脊髄液を補充し、特定の環境条件を維持。",
-        "200,000以上の生きた神経細胞でゲーム Doom をプレイ可能。",
-        "エネルギー消費は携帯計算機よりも少ない。",
-        "機器の設置に約1週間かかるが、操作を拡大中。"
+        "ソフトバンクがオハイオに39.2GWのデータセンターを建設予定で、コストは400億ドル。",
+        "330億ドルのガスタービン発電所が必要で、核発電の選択肢は排除されている。",
+        "Trivyスキャナーが脆弱性を持つバージョンにバックドアされ、GitHub認証情報を盗まれた。",
+        "CanisterWormが47のNPMパッケージに影響を与え、サプライチェーン攻撃が発生。",
+        "TrivyのメンテナはGitHubで詳細を発表したが、攻撃者によって削除された。"
       ],
       "glossary": [
         {
-          "term": "Cortical Labs",
-          "explain_ja": "オーストラリアのバイオテクノロジースタートアップ。生物コンピュータの開発を行っている。"
+          "term": "Trivy",
+          "explain_ja": "ソフトウェアの脆弱性をスキャンするためのツール。最近の攻撃でバックドアが仕込まれた。"
         },
         {
-          "term": "CL1",
-          "explain_ja": "Cortical Labs の最初のコードを展開できる生物コンピュータ。"
+          "term": "CanisterWorm",
+          "explain_ja": "自動で広がるマルウェアで、Trivyの攻撃によって引き起こされた。"
         },
         {
-          "term": "脳脊髄液",
-          "explain_ja": "脳を保護し、栄養を供給する液体。生物コンピュータの機能維持に必要。"
+          "term": "サプライチェーン攻撃",
+          "explain_ja": "システムの供給過程を狙った攻撃。これにより、信頼されたソフトウェアが悪用される。"
         }
       ],
       "personal_actions": [
-        "新しい技術の進展に注目し、定期的に最新情報を収集する。",
-        "生物コンピュータのエネルギー効率や用途について理解を深める。",
-        "関連する研究やプロジェクトに参加できる機会を探す。"
+        "Trivyを使用している場合、最新のバージョンをすぐに確認し、アップデートする。",
+        "セキュリティ関連のツールやソフトウェアの信頼性を再検討する。",
+        "コードテストプロセスを見直し、悪意のある変更が取り込まれないように対策を講じる。"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://apnews.com/article/cuba-second-blackout-cf3905bbb8f9663c022fe1c80a5c32b8",
+      "source": "Associated Press",
+      "publishedAt": "2026-03-22T11:00:12Z",
+      "title": "Cuba power grid collapses -- electricity out for 3rd time this month...",
+      "title_ja": "キューバの電力網が崩壊 - 今月3度目の停電",
+      "summary_ja": "キューバは今月3度目の電力網崩壊を迎え、再び広範囲にわたる停電が発生しています。この停電は、共産党政府が老朽化したインフラとアメリカの石油封鎖に対処している中で起こりました。影響を受けるのは多くの市民で、生活に深刻な影響を与えています。",
+      "key_points": [
+        "キューバでは今月3度目の停電が発生。",
+        "原因は老朽化したインフラとアメリカの石油封鎖。",
+        "停電は広範囲に影響を及ぼしている。",
+        "政府はこれらの問題を解決するのに苦労している。",
+        "市民生活への影響が大きい。"
+      ],
+      "glossary": [
+        {
+          "term": "キューバ電力公社",
+          "explain_ja": "キューバで電力供給を行っている国営企業。"
+        },
+        {
+          "term": "インフラ",
+          "explain_ja": "社会の基盤を支えるための物理的構造や施設。"
+        },
+        {
+          "term": "封鎖",
+          "explain_ja": "特定の国家や地域への物資の供給を制限する行為。"
+        }
+      ],
+      "personal_actions": [
+        "地域の電力供給の状況を確認する。",
+        "非常用電源の準備をしておく。",
+        "インフラ改善に向けた地域活動に参加する。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.techradar.com/pro/three-ways-data-centers-can-operate-more-sustainably",
-      "source": "TechRadar",
-      "publishedAt": "2026-03-21T08:00:00Z",
-      "title": "Three ways data centers can operate more sustainably",
-      "title_ja": "データセンターの持続可能な運営方法",
-      "summary_ja": "データセンターの環境負荷を削減するために、冷却方法の改善、循環利用の促進、よりスマートなワークロード管理が重要です。これらの取り組みは、エネルギー効率の向上と資源の最適化につながります。持続可能性を向上させることによって、データセンターはより環境に優しい運営が可能になります。",
+      "url": "https://www.ibtimes.com.au/why-was-playstation-network-down-lately-network-experiences-global-outage-disrupting-online-gaming-1863974",
+      "source": "Ibtimes.com.au",
+      "publishedAt": "2026-03-22T08:01:44Z",
+      "title": "Why Was PlayStation Network Down Lately? Network Experiences Global Outage, Disrupting Online Gaming",
+      "title_ja": "PlayStation Networkが最近ダウンした理由",
+      "summary_ja": "2026年3月21日、Sony Interactive EntertainmentのPlayStation Network（PSN）が広範囲にわたる短期のアウトageを経験しました。この影響で、世界中の数百万のユーザーがオンラインマルチプレイヤー機能やゲーム起動、ソーシャル機能へのアクセスを妨げられました。この種の障害は、オンラインゲームの体験に大きな影響を与える可能性があります。",
       "key_points": [
-        "冷却技術の革新が重要",
-        "資源の循環利用を推進することが必要",
-        "スマートなワークロード管理が効果的"
+        "PSNは2026年3月21日に広範囲な障害を経験した。",
+        "この障害は短期間であったが、数百万ユーザーに影響を及ぼした。",
+        "ユーザーはオンラインマルチプレイヤー機能やゲーム起動にアクセスできなくなった。"
       ],
       "glossary": [
         {
-          "term": "冷却",
-          "explain_ja": "データセンター内の機器を適切な温度に保つための方法。"
+          "term": "PlayStation Network (PSN)",
+          "explain_ja": "Sonyが提供するオンラインゲームとデジタルサービスのプラットフォーム。"
         },
         {
-          "term": "循環利用",
-          "explain_ja": "使用済み資源を再利用することで、廃棄物を削減すること。"
+          "term": "オンラインマルチプレイヤー",
+          "explain_ja": "複数のユーザーがインターネットを通じて同時に参加できるゲーム形式。"
         },
         {
-          "term": "ワークロード管理",
-          "explain_ja": "データ処理の効率を最適化するための手法。"
+          "term": "障害",
+          "explain_ja": "システムやサービスが正常に機能しない状態。"
         }
       ],
       "personal_actions": [
-        "冷却システムの最新技術に関する情報を確認する",
-        "循環利用の取り組みを社内で検討する",
-        "データ処理の効率化を図るためのワークロード分析を始める"
+        "PSNに接続できない場合、公式の障害情報を確認する。",
+        "ゲームやアプリの最新情報をチェックし、必要があれば再起動する。"
       ],
       "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://economictimes.indiatimes.com/news/international/business/softbank-and-aep-plan-massive-ohio-gas-fired-ai-data-center-campus/articleshow/129711524.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-03-21T03:00:30Z",
-      "title": "SoftBank and AEP plan massive Ohio gas-fired AI data center campus",
-      "title_ja": "ソフトバンクとAEPがオハイオ州に大規模なガス発電AIデータセンターキャンパスを計画",
-      "summary_ja": "ソフトバンクとAEPがオハイオ州で大規模なガス発電所とAIデータセンターを建設する計画を発表しました。このプロジェクトは、米国のAI能力の向上とエネルギー安全保障の強化を目指しています。両国の連携により、重要な技術投資が期待されています。",
-      "key_points": [
-        "ソフトバンクとAEPが協力してオハイオ州で新たなプロジェクトを展開。",
-        "ガス発電所とAIデータセンターが連携して構築される。",
-        "この計画は米国のAIとエネルギー政策に寄与することを目的。",
-        "連邦政府所有地にプロジェクトが位置する予定。"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。"
-        },
-        {
-          "term": "AEP",
-          "explain_ja": "American Electric Powerの略。アメリカの電力会社。"
-        }
-      ],
-      "personal_actions": [
-        "プロジェクトの進捗を確認し、自社の技術投資戦略を見直す。",
-        "エネルギー効率の良い技術への移行を検討する。",
-        "AI技術の活用に関する社内のリソースを再評価する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
+        "インフラ"
       ]
     }
   ]
