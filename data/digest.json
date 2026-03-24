@@ -1,113 +1,139 @@
 {
-  "date": "2026-03-24",
-  "generatedAtJST": "2026-03-24T07:15:48.058+09:00",
+  "date": "2026-03-25",
+  "generatedAtJST": "2026-03-25T07:15:42.987+09:00",
   "items": [
     {
-      "url": "https://acecomments.mu.nu/?post=419007",
-      "source": "Acecomments.mu.nu",
-      "publishedAt": "2026-03-22T08:00:00Z",
-      "title": "Daily Tech News 22 March 2026",
-      "title_ja": "2026年3月22日のテクノロジーニュース",
-      "summary_ja": "ソフトバンクがオハイオ州に設計中のデータセンターは、建設に400億ドルのコストがかかり、さらに330億ドルのガスタービン発電所が必要です。このサイトは1956年から2001年まで核燃料の生産に使われていたことから、長いバリアにより核発電の選択肢は却下されています。さらに、Trivyという脆弱性スキャナーがサプライチェーン攻撃を受け、多くのNPMパッケージに自動的に広がるCanisterWormを引き起こしました。",
+      "url": "https://alltoc.com/tech/why-is-softbank-building-a-10gw-ai-datacenter",
+      "source": "Alltoc.com",
+      "publishedAt": "2026-03-23T18:02:29Z",
+      "title": "Why is SoftBank building a 10GW AI datacenter?",
+      "title_ja": "ソフトバンクが10GWのAIデータセンターを建設する理由",
+      "summary_ja": "ソフトバンクは、米国の旧核兵器サイトに10GWのAIデータセンターを計画しています。これはAIモデルのトレーニングとサービスに必要な電力需要の増大を受けたものです。電力とグリッドの制約がAIの成長に影響を及ぼしており、データセンターは信頼性の高い電力供給を確保するために新しい発電源やグリッドのアップグレードを必要としています。",
       "key_points": [
-        "ソフトバンクがオハイオに39.2GWのデータセンターを建設予定で、コストは400億ドル。",
-        "330億ドルのガスタービン発電所が必要で、核発電の選択肢は排除されている。",
-        "Trivyスキャナーが脆弱性を持つバージョンにバックドアされ、GitHub認証情報を盗まれた。",
-        "CanisterWormが47のNPMパッケージに影響を与え、サプライチェーン攻撃が発生。",
-        "TrivyのメンテナはGitHubで詳細を発表したが、攻撃者によって削除された。"
+        "ソフトバンクは10GWのAIデータセンターを計画中。",
+        "AIの計算需要が電力供給と対立している。",
+        "大規模データセンターは発電容量とグリッドのアップグレードを統合している。",
+        "電力の確保がAIインフラの重要な要素となっている。",
+        "データセンターがエネルギープロジェクトのように振る舞う新しい傾向。",
+        "企業はテラワット規模での電力供給を迅速に確保する必要がある。"
       ],
       "glossary": [
         {
-          "term": "Trivy",
-          "explain_ja": "ソフトウェアの脆弱性をスキャンするためのツール。最近の攻撃でバックドアが仕込まれた。"
+          "term": "AI",
+          "explain_ja": "人工知能のことで、データを解析し学習する技術です。"
         },
         {
-          "term": "CanisterWorm",
-          "explain_ja": "自動で広がるマルウェアで、Trivyの攻撃によって引き起こされた。"
+          "term": "GW",
+          "explain_ja": "ギガワットの略で、電力の単位です。"
         },
         {
-          "term": "サプライチェーン攻撃",
-          "explain_ja": "システムの供給過程を狙った攻撃。これにより、信頼されたソフトウェアが悪用される。"
+          "term": "グリッド",
+          "explain_ja": "電力の供給網を指します。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保存、処理を行うための施設です。"
         }
       ],
       "personal_actions": [
-        "Trivyを使用している場合、最新のバージョンをすぐに確認し、アップデートする。",
-        "セキュリティ関連のツールやソフトウェアの信頼性を再検討する。",
-        "コードテストプロセスを見直し、悪意のある変更が取り込まれないように対策を講じる。"
+        "現在の電力供給状況を確認し、必要に応じてリソースを調整する。",
+        "新しいAIプロジェクトを計画する際に電力確保の戦略を考慮する。",
+        "地域の電力会社との関係を強化し、情報を収集する。"
       ],
       "tags": [
-        "その他"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://apnews.com/article/cuba-second-blackout-cf3905bbb8f9663c022fe1c80a5c32b8",
-      "source": "Associated Press",
-      "publishedAt": "2026-03-22T11:00:12Z",
-      "title": "Cuba power grid collapses -- electricity out for 3rd time this month...",
-      "title_ja": "キューバの電力網が崩壊 - 今月3度目の停電",
-      "summary_ja": "キューバは今月3度目の電力網崩壊を迎え、再び広範囲にわたる停電が発生しています。この停電は、共産党政府が老朽化したインフラとアメリカの石油封鎖に対処している中で起こりました。影響を受けるのは多くの市民で、生活に深刻な影響を与えています。",
+      "url": "https://www.theregister.com/2026/03/23/softbank_to_put_mega_server/",
+      "source": "Theregister.com",
+      "publishedAt": "2026-03-23T17:29:23Z",
+      "title": "SoftBank to build massive AI datacenter on former US nuclear weapons site",
+      "title_ja": "ソフトバンク、米国の核兵器跡地に巨大AIデータセンターを建設",
+      "summary_ja": "ソフトバンクのSBエナジーが、オハイオ州の元ポーツマス気体拡散プラントで巨大なデータセンターキャンパスを再開発しています。新たな10GWのサーバーファームと発電施設を追加し、地域の電力網へも供給される予定です。このプロジェクトは、AIインフラ需要の高まりによる価格上昇から消費者を保護する取り組みとして位置づけられています。",
       "key_points": [
-        "キューバでは今月3度目の停電が発生。",
-        "原因は老朽化したインフラとアメリカの石油封鎖。",
-        "停電は広範囲に影響を及ぼしている。",
-        "政府はこれらの問題を解決するのに苦労している。",
-        "市民生活への影響が大きい。"
+        "ソフトバンクはオハイオ州の連邦土地を利用して10GWのデータセンターを建設する。",
+        "新たに10GWの発電能力を追加する計画で、主にガス火力による。",
+        "地域全体の電力インフラを4.2ビリオンドルで拡張する契約をAEPオハイオと締結。",
+        "プロジェクトはAIインフラ需要の影響を考慮した消費者保護策と一致している。",
+        "ポーツマスサイトの浄化にも投資し、地域経済活性化を図る。"
       ],
       "glossary": [
         {
-          "term": "キューバ電力公社",
-          "explain_ja": "キューバで電力供給を行っている国営企業。"
+          "term": "データセンター",
+          "explain_ja": "データの保存や処理を行うための専用施設で、サーバー、ストレージ、ネットワーク機器が設置されている。"
         },
         {
-          "term": "インフラ",
-          "explain_ja": "社会の基盤を支えるための物理的構造や施設。"
+          "term": "ポーツマス気体拡散プラント",
+          "explain_ja": "過去にウラン濃縮のために使用されていた施設で、現在は再開発が進められている。"
         },
         {
-          "term": "封鎖",
-          "explain_ja": "特定の国家や地域への物資の供給を制限する行為。"
+          "term": "エネルギーインフラ",
+          "explain_ja": "電力生成および供給に関する設備やシステムの総称。"
+        },
+        {
+          "term": "AIインフラ",
+          "explain_ja": "人工知能(AI)に必要なコンピュータリソースやネットワークインフラ。"
+        },
+        {
+          "term": "発電能力",
+          "explain_ja": "電力を生産する能力のこと、特に発電所の出力を示す。"
+        },
+        {
+          "term": "ガス火力",
+          "explain_ja": "天然ガスを燃料とする発電方式で、比較的低コストで電力を供給できる。"
         }
       ],
       "personal_actions": [
-        "地域の電力供給の状況を確認する。",
-        "非常用電源の準備をしておく。",
-        "インフラ改善に向けた地域活動に参加する。"
+        "地域の電力インフラの拡充計画に関心を持って調査する。",
+        "AI関連技術の進展に関する最新情報を追う。",
+        "新しいエネルギー供給の動向について学ぶ。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.vladan.fr/starwind-v2v-p2v-converter-version-9-build-848-multi-vm-conversions-full-cli-support-hot-migrations-and-cloud-improvements-make-this-free-tool-a-datacenter-must-have/",
+      "source": "Vladan.fr",
+      "publishedAt": "2026-03-23T15:41:00Z",
+      "title": "StarWind V2V / P2V Converter Version 9 (build 848) – Multi-VM Conversions, Full CLI Support, Hot Migrations, and Cloud Improvements Make This Free Tool a Datacenter Must-Have",
+      "title_ja": "StarWind V2V / P2Vコンバータ バージョン9 (ビルド848) - 複数VMの変換、完全CLIサポート、ホットマイグレーション、クラウド改善が実現した無料ツール",
+      "summary_ja": "StarWindの最新リリース、V2V Converterバージョン9 (ビルド848)は、特にデータセンター管理者にとっての価値を高めています。複数のVMを同時に変換できる機能や、完全なCLIサポートが加わり、ホットマイグレーション能力も強化されました。このツールは、旧サーバーの物理ディスクを仮想環境に移行する際や、コスト削減のためにクラウドからのワークロード移行に役立ちます。",
+      "key_points": [
+        "複数のVMを同時に変換可能",
+        "Windowsゲスト用の自動ドライバー挿入機能を搭載",
+        "AzureとAWSのクラウド変換の改善",
+        "CLIが全主要ハイパーバイザーに対応",
+        "ホットマイグレーションが強化され、稼働中のVMの移行も可能"
+      ],
+      "glossary": [
+        {
+          "term": "V2V",
+          "explain_ja": "仮想マシンのフォーマットを変換するプロセスです。"
+        },
+        {
+          "term": "P2V",
+          "explain_ja": "物理マシンを仮想マシンに変換するプロセスです。"
+        },
+        {
+          "term": "CLI",
+          "explain_ja": "コマンドラインインターフェースの略で、プログラムをテキストで操作するためのインターフェースです。"
+        },
+        {
+          "term": "ホットマイグレーション",
+          "explain_ja": "稼働中の仮想マシンを停止させることなく移行するプロセスです。"
+        }
+      ],
+      "personal_actions": [
+        "最新のStarWind V2V Converterをダウンロードしてインストールする",
+        "CLIコマンドを使用して、簡単なVMの移行をテストする",
+        "複数VMの同時変換を計画して実行するためのスクリプトを準備する"
       ],
       "tags": [
         "DC"
-      ]
-    },
-    {
-      "url": "https://www.ibtimes.com.au/why-was-playstation-network-down-lately-network-experiences-global-outage-disrupting-online-gaming-1863974",
-      "source": "Ibtimes.com.au",
-      "publishedAt": "2026-03-22T08:01:44Z",
-      "title": "Why Was PlayStation Network Down Lately? Network Experiences Global Outage, Disrupting Online Gaming",
-      "title_ja": "PlayStation Networkが最近ダウンした理由",
-      "summary_ja": "2026年3月21日、Sony Interactive EntertainmentのPlayStation Network（PSN）が広範囲にわたる短期のアウトageを経験しました。この影響で、世界中の数百万のユーザーがオンラインマルチプレイヤー機能やゲーム起動、ソーシャル機能へのアクセスを妨げられました。この種の障害は、オンラインゲームの体験に大きな影響を与える可能性があります。",
-      "key_points": [
-        "PSNは2026年3月21日に広範囲な障害を経験した。",
-        "この障害は短期間であったが、数百万ユーザーに影響を及ぼした。",
-        "ユーザーはオンラインマルチプレイヤー機能やゲーム起動にアクセスできなくなった。"
-      ],
-      "glossary": [
-        {
-          "term": "PlayStation Network (PSN)",
-          "explain_ja": "Sonyが提供するオンラインゲームとデジタルサービスのプラットフォーム。"
-        },
-        {
-          "term": "オンラインマルチプレイヤー",
-          "explain_ja": "複数のユーザーがインターネットを通じて同時に参加できるゲーム形式。"
-        },
-        {
-          "term": "障害",
-          "explain_ja": "システムやサービスが正常に機能しない状態。"
-        }
-      ],
-      "personal_actions": [
-        "PSNに接続できない場合、公式の障害情報を確認する。",
-        "ゲームやアプリの最新情報をチェックし、必要があれば再起動する。"
-      ],
-      "tags": [
-        "インフラ"
       ]
     }
   ]
