@@ -1,44 +1,43 @@
 {
-  "date": "2026-03-26",
-  "generatedAtJST": "2026-03-26T07:15:35.425+09:00",
+  "date": "2026-03-27",
+  "generatedAtJST": "2026-03-27T07:15:54.293+09:00",
   "items": [
     {
-      "url": "https://www.techpowerup.com/347670/arm-enters-silicon-business-for-the-first-time-with-data-center-agi-cpu",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-03-24T17:33:35Z",
-      "title": "Arm Enters Silicon Business for the First Time with Data Center AGI CPU",
-      "title_ja": "Arm、データセンター向けAGI CPUのサイリコンビジネスに初参入",
-      "summary_ja": "Armは、エージェントAIのワークロード専用に設計されたデータセンター向けプロセッサ、Arm AGI CPUを発表し、初めてのサイリコンビジネスに参入しました。この新たなAGI CPUシリーズは、3nmプロセスで製造され、136個のNeoverse V3コアを搭載し、300WのTDPで高いメモリ帯域幅を実現します。Armはこの新しいプロセッサで、従来のx86アーキテクチャと比較して、パフォーマンスの向上とコスト削減を図っています。",
+      "url": "https://www.seattlepi.com/business/article/sanders-ocasio-cortez-push-bill-to-impose-ai-22096507.php",
+      "source": "seattlepi.com",
+      "publishedAt": "2026-03-25T18:25:26Z",
+      "title": "Sanders, Ocasio-Cortez push bill to impose AI data center moratorium",
+      "title_ja": "サンダース氏とオカシオ＝コルテス氏、AIデータセンターの一時停止法案を推進",
+      "summary_ja": "サンダース氏とオカシオ＝コルテス氏が、新しいAIデータセンターの構築を一時的に停止する法案を提案しました。この法案は、全国的な労働者や消費者保護、環境への影響を考慮するための安全基準が整うまでの措置です。このような動きは、技術の影響を正しく管理する必要性を示しています。",
       "key_points": [
-        "Arm AGI CPUはデータセンター向けの専用プロセッサで、初めてのサイリコン製品。",
-        "3nmプロセスで最大136コアを搭載し、300WのTDPを実現。",
-        "空冷システムで最大8,160コア、液冷システムで45,000コア以上の密度を提供。",
-        "x86アーキテクチャに比べ、2倍のパフォーマンスを提案し、AIデータセンターでのコスト削減を見込む。",
-        "MetaやOpenAIなどが顧客として確認されている。",
-        "広範なエコシステムの支援を受け、既に初期ユニットが出荷されている。"
+        "新しいAIデータセンターの構築を一時停止する法案が提案された",
+        "法律を通じて労働者と消費者を保護するための全国的な基準を求める",
+        "環境への影響を軽減することを目的としている",
+        "プロジェクトの進行に影響を及ぼす可能性がある",
+        "政治的議論が高まる中での動きとして注目されている"
       ],
       "glossary": [
         {
-          "term": "AGI CPU",
-          "explain_ja": "Armが発表したデータセンター向けのプロセッサで、エージェントAIの workload に特化している。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能（AI）を運用するために必要なデータを収集、保存、処理する施設。"
         },
         {
-          "term": "TDP",
-          "explain_ja": "Thermal Design Powerの略で、デバイスの最大消費電力を示す指標。"
+          "term": "モラトリアム",
+          "explain_ja": "法律や政策の一時的な停止または延期。"
         },
         {
-          "term": "Neoverse V3",
-          "explain_ja": "Armのデータセンター向けプロセッサアーキテクチャで、高性能な処理を提供するために設計されている。"
+          "term": "国民的安全基準",
+          "explain_ja": "国全体で適用される基準や規制。"
         },
         {
-          "term": "PCIe Gen 6",
-          "explain_ja": "次世代の高速インターフェース規格で、データ転送速度を向上させる。"
+          "term": "労働者保護",
+          "explain_ja": "労働者の権利や安全を守るための法律や方針。"
         }
       ],
       "personal_actions": [
-        "AGI CPUに関する仕様や性能を把握し、今後のデータセンター計画に活かす。",
-        "Armのエコシステムに参加する企業の動向を定期的にチェックする。",
-        "競合製品の性能とコストを比較し、導入計画を見直す。"
+        "新しいAIデータセンターの建設が地域に与える影響を調査する",
+        "関連する法案や規制の動向をフォローする",
+        "労働者や消費者の権利についての啓発活動に参加する"
       ],
       "tags": [
         "DC",
@@ -46,43 +45,71 @@
       ]
     },
     {
-      "url": "https://www.channelnewsasia.com/business/microsoft-rent-texas-data-center-dropped-oracle-and-openai-bloomberg-news-reports-6014241",
-      "source": "CNA",
-      "publishedAt": "2026-03-24T16:16:25Z",
-      "title": "Microsoft to rent Texas data center dropped by Oracle and OpenAI, Bloomberg News reports",
-      "title_ja": "Microsoft、OracleとOpenAIが手放したテキサスのデータセンターをレンタル",
-      "summary_ja": "MicrosoftがOracleとOpenAIのために開発されていたテキサスのデータセンターをレンタルすることに合意した。報道によれば、このアビレーンのサイトは約700メガワットの電力を扱う能力がある。データセンターの需要が高まる中、この動きはMicrosoftのクラウドサービスを強化することを目的としている。",
+      "url": "https://financialpost.com/pmn/business-wire-news-releases-pmn/slb-industrializes-ai-for-the-energy-industry-with-nvidia",
+      "source": "Financial Post",
+      "publishedAt": "2026-03-25T12:10:34Z",
+      "title": "SLB Industrializes AI for the Energy Industry with NVIDIA",
+      "title_ja": "SLB、NVIDIAと連携しエネルギー業界向けAIの産業化を進める",
+      "summary_ja": "SLBは、NVIDIAとのテクノロジーコラボレーションを拡張し、エネルギー業界向けのAIの産業化に取り組むことを発表した。両社は、大規模デプロイメント向けのモジュラーデータセンターインフラと生成AIモデルを設計する。これにより、エネルギー業界におけるAIの導入が加速する見込みで、業務効率の向上が期待される。",
       "key_points": [
-        "MicrosoftがOracleとOpenAIからデータセンターを引き継ぐ",
-        "対象のデータセンターはテキサス州アビレーンに所在",
-        "700メガワットの電力供給能力を持つ",
-        "データセンター需要の増加を背景にした決定",
-        "Microsoftのクラウドサービス戦略に重要な要素"
+        "SLBとNVIDIAが協力してAI技術をエネルギー業界に導入",
+        "モジュラーなデータセンターインフラを設計する計画",
+        "生成AIモデルを大規模に展開することを目指す",
+        "エネルギー業界の業務効率向上に寄与する可能性がある"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを集中管理し、処理、保管するための施設。"
+          "term": "SLB",
+          "explain_ja": "グローバルなエネルギー技術企業であり、技術革新を通じてエネルギー業界に貢献している。"
         },
         {
-          "term": "クラウドサービス",
-          "explain_ja": "インターネットを通じて提供されるサーバ、ストレージ、データベースなどのサービス。"
+          "term": "NVIDIA",
+          "explain_ja": "グラフィックス処理ユニット（GPU）を中心とした技術で知られるテクノロジー企業。AIやデータセンター向けのソリューションを提供している。"
         },
         {
-          "term": "Oracle",
-          "explain_ja": "データベース管理システムを提供する企業。"
-        },
-        {
-          "term": "OpenAI",
-          "explain_ja": "人工知能の研究開発を行う企業。"
+          "term": "生成AI",
+          "explain_ja": "新しいデータを生成する能力を持つAI技術。テキスト、画像、音声など多様な形式で利用される。"
         }
       ],
       "personal_actions": [
-        "データセンターのリース契約に関する最新情報を確認する",
-        "自社のクラウドサービス戦略を見直し、必要に応じて対応を検討する"
+        "AI導入に向けた社内のデータインフラの整備状況を確認する",
+        "最新のモジュラーデータセンター技術に関する情報を収集する",
+        "生成AIに関するトレーニングやセミナーの参加を検討する"
       ],
       "tags": [
-        "DC"
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.digitimes.com/news/a20260325PD205/micron-singapore-expansion-data-center-demand-2026.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-03-25T09:21:47Z",
+      "title": "Micron's Singapore expansion could trigger global transformer shortage and delay AI data centers",
+      "title_ja": "マイクロンのシンガポール拡張が引き起こす可能性のある世界的な変圧器不足とAIデータセンターの遅延",
+      "summary_ja": "マイクロンがシンガポールでの拡張を計画していることが、変圧器不足を引き起こす可能性がある。これがAIデータセンターの建設遅延につながることが懸念されている。拡張による部品供給の影響が、データセンター業界全体に波及する可能性がある。",
+      "key_points": [
+        "マイクロンはシンガポールでの拡張を発表した。",
+        "変圧器不足が発生する恐れがある。",
+        "AIデータセンターの建設が遅れる可能性がある。",
+        "拡張による部品供給への影響が懸念されている。"
+      ],
+      "glossary": [
+        {
+          "term": "変圧器",
+          "explain_ja": "電圧を変換するための装置で、電力供給に重要な役割を果たす。"
+        },
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "AIの処理やストレージを目的としたデータセンター。"
+        }
+      ],
+      "personal_actions": [
+        "シンガポールのデータセンター拡張に関する最新情報を確認する。",
+        "変圧器の供給状況を把握するため、サプライヤーとの連絡を行う。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
