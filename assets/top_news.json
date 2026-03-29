@@ -1,39 +1,32 @@
 {
-  "date": "2026-03-29",
-  "generatedAtJST": "2026-03-29T07:15:41.066+09:00",
+  "date": "2026-03-30",
+  "generatedAtJST": "2026-03-30T07:15:34.986+09:00",
   "items": [
     {
-      "url": "https://www.theregister.com/2026/03/27/microsoft_ai_crusoe/",
-      "source": "Theregister.com",
-      "publishedAt": "2026-03-27T20:03:20Z",
-      "title": "Microsoft takes up residence next to OpenAI, Oracle at Crusoe's 900 MW Texas datacenter expansion",
-      "title_ja": "マイクロソフトがクリュソーの900MWテキサスデータセンター拡張に隣接",
-      "summary_ja": "クリュソーは、マイクロソフトのAIニーズを支えるために、テキサス州アビリーンのデータセンターキャンパスに900メガワットの容量を追加する計画を発表しました。この新しいキャンパスは、オラクルとOpenAIの施設に隣接して建設されます。この拡張により、現在のキャパシティが2.1ギガワットに増加する見込みですが、実際に稼働しているのは約200メガワットです。",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/meta-will-fund-seven-new-gas-plants-to-power-its-7gw-louisiana-data-center",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-03-28T12:00:00Z",
+      "title": "Meta to fund seven new natural gas power plants to fuel AI data centers — Entergy partnership to deliver 7 gigawatts of power for Louisiana AI facility",
+      "title_ja": "Meta、AIデータセンターのために7つの新しい天然ガス発電所を設立",
+      "summary_ja": "Metaは、AIデータセンター向けに7つの新しい天然ガス発電所の建設を資金提供することを決定しました。これにより、ルイジアナ州のデータセンターは7ギガワットの電力供給を受けることになります。この動きは、同社のAI関連の開発を支えるための化石燃料インフラを大幅に拡大するものです。",
       "key_points": [
-        "クリュソーはテキサス州アビリーンに900MWのデータセンター拡張計画を発表",
-        "新キャンパスはオラクルとOpenAIの1.2GW施設に隣接する",
-        "拡張後の合計キャパシティは2.1GWになる見込み",
-        "新キャンパスには900MWのオンサイト発電設備を設置予定",
-        "稼働は2026年中頃を予定"
+        "Metaがルイジアナ州のデータセンターのために7つの天然ガス発電所を建設する。",
+        "これにより、データセンターは合計で7ギガワットの電力を供給される。",
+        "新しい発電所は、AI関連のインフラの拡充に寄与する。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、管理、処理を行うための施設で、ITインフラが集約されるところです。"
+          "term": "天然ガス発電所",
+          "explain_ja": "天然ガスを燃料とする発電施設で、効率的に電力を生産する。"
         },
         {
-          "term": "メガワット (MW)",
-          "explain_ja": "発電能力の単位で、1メガワットは1000キロワットに相当します。"
-        },
-        {
-          "term": "オンサイト発電",
-          "explain_ja": "データセンター内部で電力を生成することを指します。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能の処理や学習を行うためのサーバー集約型施設。"
         }
       ],
       "personal_actions": [
-        "データセンターの新しい電力供給源や運用計画を注視する",
-        "マイクロソフトのAI関連プロジェクトの動向をチェックする",
-        "地元のエネルギー政策やデータセンターに関連する議論に参加する"
+        "地域のエネルギー供給計画を確認する。",
+        "新しいインフラによる環境影響について調査する。"
       ],
       "tags": [
         "DC",
@@ -41,72 +34,71 @@
       ]
     },
     {
-      "url": "https://abcnews.com/Technology/wireStory/microsoft-takes-texas-ai-data-center-expansion-after-131477297",
-      "source": "Abcnews.com",
-      "publishedAt": "2026-03-27T19:32:45Z",
-      "title": "Microsoft takes over a Texas AI data center expansion after OpenAI backs away",
-      "title_ja": "MicrosoftがテキサスのAIデータセンター拡張を引き継ぐ OpenAIが撤退",
-      "summary_ja": "MicrosoftがOpenAIの撤退を受け、テキサス州のデータセンター建設プロジェクトを引き継ぐことを発表しました。この新しいプロジェクトにより、両社は国内最大級のAIセンターとなる施設の隣接会場に位置することになります。MicrosoftはAI分野での開発を独自に進めており、建設される二つの新しい建物は合計で2.1ギガワットの計算能力を提供することが期待されています。",
+      "url": "https://www.livemint.com/companies/news/google-nears-massive-financing-agreement-for-anthropics-500-megawatt-data-center-project-report-11774672878301.html",
+      "source": "Livemint",
+      "publishedAt": "2026-03-28T05:42:07Z",
+      "title": "Google nears massive financing agreement for Anthropic's 500-megawatt data center project: Report",
+      "title_ja": "Google、Anthropicの500メガワットデータセンター計画に大規模融資契約の合意間近",
+      "summary_ja": "Googleは、Anthropicのテキサス州データセンターを支援するための数十億ドル規模の契約に近づいているとの報告がある。この契約はまもなく確定する見込みで、融資総額は50億ドルを超える可能性がある。このプロジェクトは、Googleのデータセンター拡張において重要な役割を果たすと期待されている。",
       "key_points": [
-        "Microsoftがテキサス州アビリーンでのデータセンター建設を引き継ぐ。",
-        "OpenAIは新たな拡張計画を断念した。",
-        "新しいプロジェクトには900メガワットの発電能力を持つ発電所が含まれる。",
-        "これにより、合計で10のデータセンター建物が建設される予定。",
-        "MicrosoftはOpenAIの27%の株式を保有しつつ、両社は別々にAI開発を進めている。"
+        "GoogleがAnthropicの500メガワットデータセンターのための融資契約に近づいている。",
+        "契約額は数十億ドルに及ぶと予想されている。",
+        "融資は50億ドルを超える可能性がある。",
+        "契約はまもなく確定する見込み。",
+        "このプロジェクトはGoogleのデータセンター戦略において重要。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略称で、コンピュータやソフトウェアが人間の知能を模倣する技術。"
+          "term": "Anthropic",
+          "explain_ja": "AIを開発する企業で、Googleからの支援を受ける。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "大量のデータを保存・管理するための専用施設。"
+          "explain_ja": "データを保管・管理するための施設。"
         },
         {
-          "term": "メガワット",
-          "explain_ja": "電力の単位で、1メガワットは100万ワットに相当する。"
+          "term": "融資契約",
+          "explain_ja": "企業が資金を調達するための法的合意。"
         }
       ],
       "personal_actions": [
-        "新しいデータセンターの関連情報を定期的にチェックする。",
-        "データセンターの持続可能性に関する最新の発表を確認する。",
-        "AI技術の最新動向を追い続け、業界の変化に対応する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://dailycaller.com/2026/03/27/data-center-transmission-line-cost-doubles-nextera-energy-west-virginia/",
-      "source": "The Daily Caller",
-      "publishedAt": "2026-03-27T17:56:55Z",
-      "title": "Americans On The Hook After Data Center Transmission Line Cost Suddenly Doubles",
-      "title_ja": "データセンター用送電線のコストが突然倍増、アメリカ市民が負担を強いられる",
-      "summary_ja": "ウェストバージニア州のデータセンターに電力を供給するための州間高電圧送電線のコストが、予想外に倍増した。これにより、州の料金支払い者がそのコストの大部分を負担することになると見込まれている。この負担増は、データセンターの運営コストにも影響を及ぼす可能性がある。",
-      "key_points": [
-        "ウェストバージニア州のデータセンター用送電線のコストが倍増した。",
-        "州の料金支払い者が主な負担を強いられる見込み。",
-        "コストの増加は、データセンターの運営経費に影響を与える可能性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "送電線",
-          "explain_ja": "電力を送るための高電圧の線。主に遠距離の電力供給に使用される。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを保存・処理するための施設。サーバーやストレージが集約されている。"
-        }
-      ],
-      "personal_actions": [
-        "コスト増加に備えた電力使用の見直しを行う。",
-        "地元の電力事業者からの情報収集を行う。",
-        "データセンターの運営方針を確認し、影響を把握する。"
+        "プロジェクトの進捗をフォローする。",
+        "データセンターの運用に関するセミナーに参加する。",
+        "新しい技術や開発動向を常にチェックする。"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://www.wftv.com/news/business/microsoft-takes-over/FNHO2B4UQI7YJP2CGRO57EFKJU/",
+      "source": "WFTV Orlando",
+      "publishedAt": "2026-03-28T02:40:28Z",
+      "title": "This website is unavailable in your location. – WFTV",
+      "title_ja": "ウェブサイトへのアクセス不可のお知らせ",
+      "summary_ja": "現在、特定のウェブサイトへのアクセスが制限されています。この制限は米国外からのアクセスのために発生しています。ウェブサイトにアクセスしようとした地域によっては、利用できない場合があります。",
+      "key_points": [
+        "特定のウェブサイトにアクセスしようとしたが、エラーが表示された。",
+        "エラー451は地域の制限に起因している。",
+        "このエラーは米国外からのアクセスを制限していることを示す。"
+      ],
+      "glossary": [
+        {
+          "term": "エラー451",
+          "explain_ja": "地域に基づく制限により、特定のコンテンツへのアクセスができないことを示すエラーコード。"
+        },
+        {
+          "term": "地域制限",
+          "explain_ja": "ウェブサイトへのアクセスが国や地域によって制限されること。"
+        }
+      ],
+      "personal_actions": [
+        "利用可能なVPNサービスを検討して、地域制限を回避する。",
+        "他の情報源を使って同様の情報を探す。",
+        "事情を理解した上で、他のウェブサイトにアクセスする。"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
