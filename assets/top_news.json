@@ -1,116 +1,112 @@
 {
-  "date": "2026-03-31",
-  "generatedAtJST": "2026-03-31T07:15:46.224+09:00",
+  "date": "2026-04-01",
+  "generatedAtJST": "2026-04-01T07:15:48.547+09:00",
   "items": [
     {
-      "url": "https://www.bgr.com/2130238/giant-battery-will-use-rust-to-power-google-data-center/",
-      "source": "BGR",
-      "publishedAt": "2026-03-28T23:17:00Z",
-      "title": "This Giant Battery Will Use Rust Instead Of Lithium To Power A Google Data Center",
-      "title_ja": "錆を利用した巨大バッテリーがGoogleデータセンターに電力を供給",
-      "summary_ja": "Googleはミネソタ州に新しいデータセンターを建設する計画を発表し、そこに革新的なバッテリーシステムを導入します。このバッテリーは、リチウムではなく鉄、空気、そして水を利用して電力を生成し、最大300メガワットの電力を供給します。また、クリーンエネルギーを促進する取り組みの一環として、風力や太陽光発電と連携し、1900メガワットのクリーンエネルギーを提供します。",
+      "url": "https://siliconangle.com/2026/03/30/llm-developer-mistral-ai-raises-830m-debt-financing-add-data-center-capacity/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-03-30T20:32:57Z",
+      "title": "LLM developer Mistral AI raises $830M in debt financing to add data center capacity - SiliconANGLE",
+      "title_ja": "Mistral AI、830百万ドルの借入金調達でデータセンター容量を拡充",
+      "summary_ja": "Mistral AIが830百万ドルの借入金を調達し、フランスのパリ近郊にデータセンターを建設する。新施設は今年後半に稼働予定で、NvidiaのGB300チップを13,800基搭載する。データセンターはAIモデルの推論やトレーニングに使用され、Mistral Large 3などの高度な言語モデルを支える役割を果たす。今後、200メガワットの計算能力を目指している。",
       "key_points": [
-        "Googleは新しいデータセンターに革新的な鉄-空気バッテリーを導入する。",
-        "このバッテリーは300メガワットの電力を提供し、最大100時間の運転が可能。",
-        "バッテリーはリチウムではなく、鉄、空気、水を利用し、再生可能な錆化プロセスを採用。",
-        "プロジェクトは、風力、太陽光、長時間エネルギー貯蔵を使用してクリーンエネルギーを供給する。",
-        "バッテリーのエンクロージャは輸送コンテナの大きさに匹敵する。"
+        "Mistral AIは830百万ドルの借入金を調達した。",
+        "フランスの郊外にデータセンターを建設予定。",
+        "施設はNvidiaのGB300チップを使用し、計44メガワットの計算能力を持つ。",
+        "Mistral Large 3などの言語モデルの推論・トレーニングに使用。",
+        "AIキャンパスもスウェーデンに建設予定で、予算は12億ドル。",
+        "2027年までに200メガワットの計算能力を目指す。"
       ],
       "glossary": [
         {
-          "term": "鉄-空気バッテリー",
-          "explain_ja": "鉄と空気を利用して電力を生成する新タイプのバッテリー。"
+          "term": "Mistral AI",
+          "explain_ja": "オープンソースの大規模言語モデルを開発する企業。"
         },
         {
-          "term": "クリーンエネルギー",
-          "explain_ja": "環境への影響が少ないエネルギー源、例えば風力や太陽光など。"
+          "term": "GB300",
+          "explain_ja": "Nvidia社製の最新チップで、AI推論に特化している。"
         },
         {
-          "term": "長時間エネルギー貯蔵",
-          "explain_ja": "エネルギーを長期間にわたり貯蔵できるシステム。"
+          "term": "LLM",
+          "explain_ja": "大規模言語モデルの略称。自然言語処理において多くのパラメータを持つモデル。"
+        },
+        {
+          "term": "Forge",
+          "explain_ja": "カスタム基盤モデルを構築するためのツールを提供するMistralの製品。"
         }
       ],
       "personal_actions": [
-        "新しいエネルギー貯蔵技術に関する最新情報を調査する。",
-        "他の企業の環境への取り組みを比較検討して、ベストプラクティスを共有する。",
-        "社内で再生可能エネルギーの使用を推進する提案を行う。"
+        "新しいAIモデルの動向を追い、業界の変化に備える。",
+        "Mistral Computeの機能を調査し、自社で利用可能な適用例を検討する。",
+        "データセンターの建設計画についての情報を定期的にチェックする。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://post.rlsbb.to/whyfi-1-3-0/",
-      "source": "Rlsbb.to",
-      "publishedAt": "2026-03-29T20:54:30Z",
-      "title": "WhyFi 1.3.0 – ReleaseBB",
-      "title_ja": "WhyFi 1.3.0 のリリース",
-      "summary_ja": "WhyFi 1.3.0は、Wi-Fiのパフォーマンス問題をリアルタイムで診断するmacOS用の軽量ユーティリティです。このアプリは、接続速度が遅い原因を推測するのではなく、ネットワークを継続的に監視し、問題をわかりやすいカテゴリに分類します。これにより、ユーザーは接続の問題を迅速に特定し、解決するための具体的な対策を得ることができます。",
+      "url": "https://www.techradar.com/pro/its-not-just-a-ram-crisis-panasonic-says-data-center-batteries-are-also-selling-out-months-in-advance",
+      "source": "TechRadar",
+      "publishedAt": "2026-03-30T20:15:00Z",
+      "title": "It's not just a RAM crisis — Panasonic says data center batteries are also selling out months in advance",
+      "title_ja": "パナソニック、データセンターのバッテリーも数ヶ月前から売り切れと報告",
+      "summary_ja": "パナソニックは、データセンター用のバッテリーが数ヶ月先まで売り切れになっていることを報告しています。これは、AIインフラへの需要が高まっているためで、同社はリチウムイオンバッテリーとスーパーキャパシターの生産を拡大しています。データセンターの電力ニーズに対応するための動きが強まっています。",
       "key_points": [
-        "Wi-Fiパフォーマンスの問題をリアルタイムで診断",
-        "接続の問題を信号、ルーターの性能、ISPの問題、DNSの遅延に分類",
-        "バックグラウンドで動作し、作業を妨げない",
-        "macOS 13.0以降に対応",
-        "サイズは4.9MB"
+        "パナソニックがデータセンター用バッテリーの需給状況を発表",
+        "リチウムイオンバッテリーとスーパーキャパシターの生産を拡大中",
+        "AIインフラの需要増加に対応する必要がある",
+        "データセンター業界でのバッテリー不足が懸念されている"
       ],
       "glossary": [
         {
-          "term": "Wi-Fi",
-          "explain_ja": "無線通信を用いたネットワーク接続の一種。ワイヤレスLANの標準的な技術。"
+          "term": "リチウムイオンバッテリー",
+          "explain_ja": "充電式電池の一種で、高エネルギー密度を持つ。"
         },
         {
-          "term": "ISP",
-          "explain_ja": "インターネットサービスプロバイダーの略。インターネット接続サービスを提供する企業。"
+          "term": "スーパーキャパシター",
+          "explain_ja": "エネルギーを迅速に蓄え、放出できるデバイス。"
         }
       ],
       "personal_actions": [
-        "WhyFiをインストールし、Wi-Fiパフォーマンスを診断する",
-        "接続問題に関する詳細な原因を特定し、改善策を試みる",
-        "定期的にネットワークのヘルスをモニタリングする"
+        "データセンターのバッテリー在庫を確認する",
+        "バッテリー供給の短期的なリスクを評価する"
       ],
       "tags": [
-        "インフラ"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.infoq.com/news/2026/03/fosdem-webtransport-vs-websocket/",
-      "source": "InfoQ.com",
-      "publishedAt": "2026-03-29T20:53:00Z",
-      "title": "FOSDEM 2026: Intro to WebTransport - the Next WebSocket?!",
-      "title_ja": "FOSDEM 2026: WebTransport - 次世代WebSocketの紹介",
-      "summary_ja": "WebTransportプロトコルがWebSocketの能力を向上させることがFOSDEM 2026で紹介されました。WebTransportは、低遅延や透過的なネットワーク切り替えを提供し、高頻度の金融データストリーミングやクラウドゲーミングに理想的です。WebSocketが持つパフォーマンスの問題を解決し、迅速な接続確立を可能にするこの新しいプロトコルは、開発者コミュニティでも注目を集めています。",
+      "url": "https://spectrum.ieee.org/modular-data-center",
+      "source": "Ieee.org",
+      "publishedAt": "2026-03-30T14:00:02Z",
+      "title": "The AI Data Centers That Fit on a Truck",
+      "title_ja": "トラックに載るAIデータセンター",
+      "summary_ja": "新しいAIデータセンターは、トラックに搭載可能な形状で設計されており、迅速な展開が可能です。従来のデータセンターのコストを抑えつつ、必要な機能を維持しています。この技術は、急速に変化するデータ処理のニーズに対応するための柔軟なソリューションを提供します。",
       "key_points": [
-        "WebTransportは、WebSocketの代替であり、パフォーマンス問題を解決します。",
-        "プロトコルはHTTP/3とQUICを利用し、低遅延と接続の移行をサポートします。",
-        "WebSocketはTCPに依存し、パケットロス時に全ストリームが停止する問題がありますが、WebTransportはこれを解決します。",
-        "WebTransportは、接続確立をワンRTTで可能にします。",
-        "HTTPSのセキュアなコンテキストが必要であるため、一部の利用ケースが制限される懸念があります。"
+        "AIデータセンターはトラックで移動可能な設計",
+        "従来のデータセンターに比べてコスト削減",
+        "迅速な展開が可能で、柔軟性を提供",
+        "データ処理のニーズに適応したソリューション"
       ],
       "glossary": [
         {
-          "term": "WebSocket",
-          "explain_ja": "双方向通信を可能にするプロトコルで、主にブラウザとサーバー間のリアルタイム通信に使用されます。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能の処理に特化したデータセンター。"
         },
         {
-          "term": "WebTransport",
-          "explain_ja": "WebSocketの代替として設計された新しいプロトコルで、低遅延とさまざまなデータストリームをサポートします。"
-        },
-        {
-          "term": "QUIC",
-          "explain_ja": "UDP上で動作するプロトコルで、低遅延のデータ送信を実現します。"
-        },
-        {
-          "term": "HTTP/3",
-          "explain_ja": "QUICを基にした新しいHTTPプロトコルで、従来のTCPに代わるものです。"
+          "term": "モジュラー型データセンター",
+          "explain_ja": "必要に応じて拡張できる柔軟なデータセンターの形式。"
         }
       ],
       "personal_actions": [
-        "WebTransportの技術仕様を確認して、関連システムへの導入計画を立てる。",
-        "WebSocketとWebTransportの違いをチーム内で共有し、実装の参考にする。",
-        "WebTransportの利用を検討しているアプリケーションのパフォーマンス要件を明確にする。"
+        "移動式データセンターの導入可能性を社内で議論する",
+        "最新のデータセンター技術について情報収集する"
       ],
       "tags": [
-        "その他"
+        "DC",
+        "AI"
       ]
     }
   ]
