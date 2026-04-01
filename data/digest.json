@@ -1,44 +1,80 @@
 {
-  "date": "2026-04-01",
-  "generatedAtJST": "2026-04-01T07:15:48.547+09:00",
+  "date": "2026-04-02",
+  "generatedAtJST": "2026-04-02T07:15:44.497+09:00",
   "items": [
     {
-      "url": "https://siliconangle.com/2026/03/30/llm-developer-mistral-ai-raises-830m-debt-financing-add-data-center-capacity/",
-      "source": "SiliconANGLE News",
-      "publishedAt": "2026-03-30T20:32:57Z",
-      "title": "LLM developer Mistral AI raises $830M in debt financing to add data center capacity - SiliconANGLE",
-      "title_ja": "Mistral AI、830百万ドルの借入金調達でデータセンター容量を拡充",
-      "summary_ja": "Mistral AIが830百万ドルの借入金を調達し、フランスのパリ近郊にデータセンターを建設する。新施設は今年後半に稼働予定で、NvidiaのGB300チップを13,800基搭載する。データセンターはAIモデルの推論やトレーニングに使用され、Mistral Large 3などの高度な言語モデルを支える役割を果たす。今後、200メガワットの計算能力を目指している。",
+      "url": "https://www.techpowerup.com/347892/toshiba-begins-sampling-of-30-34-tb-smr-nearline-hard-disk-drives",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-03-31T12:58:50Z",
+      "title": "Toshiba Begins Sampling of 30-34 TB SMR Nearline Hard Disk Drives",
+      "title_ja": "東芝、30〜34 TBのSMR近接硬盤ドライブのサンプリングを開始",
+      "summary_ja": "東芝は、30〜34 TBのストレージ容量を持つM12シリーズの3.5インチ近接硬盤ドライブのサンプリングを開始しました。この新シリーズは、データセンター向けの高容量・高性能HDDを提供するために設計されています。デジタルサービスやAIなどの影響で、データの生成と保存量が急増している中、データセンターは効率的なシステム構成を支えるHDDの需要が高まっています。",
       "key_points": [
-        "Mistral AIは830百万ドルの借入金を調達した。",
-        "フランスの郊外にデータセンターを建設予定。",
-        "施設はNvidiaのGB300チップを使用し、計44メガワットの計算能力を持つ。",
-        "Mistral Large 3などの言語モデルの推論・トレーニングに使用。",
-        "AIキャンパスもスウェーデンに建設予定で、予算は12億ドル。",
-        "2027年までに200メガワットの計算能力を目指す。"
+        "M12シリーズは、30〜34 TBのストレージを提供する近接硬盤ドライブ。",
+        "SMR技術を採用し、記録密度を高めている。",
+        "ホスト管理SMRアーキテクチャにより、データ処理の効率が向上。",
+        "最大データ転送速度は282 MiB/sで、前世代比で約8%の改善。",
+        "年間550 TBのワークロード評価をサポートし、MTTF/MTBFは250万時間。"
       ],
       "glossary": [
         {
-          "term": "Mistral AI",
-          "explain_ja": "オープンソースの大規模言語モデルを開発する企業。"
+          "term": "SMR",
+          "explain_ja": "Shingled Magnetic Recordingの略で、データトラックを重ねて記録する技術。"
         },
         {
-          "term": "GB300",
-          "explain_ja": "Nvidia社製の最新チップで、AI推論に特化している。"
+          "term": "HDD",
+          "explain_ja": "ハードディスクドライブの略で、デジタルデータを記録・保存する装置。"
         },
         {
-          "term": "LLM",
-          "explain_ja": "大規模言語モデルの略称。自然言語処理において多くのパラメータを持つモデル。"
+          "term": "CMR",
+          "explain_ja": "Conventional Magnetic Recordingの略で、従来のデータ記録方式。"
         },
         {
-          "term": "Forge",
-          "explain_ja": "カスタム基盤モデルを構築するためのツールを提供するMistralの製品。"
+          "term": "MTTF/MTBF",
+          "explain_ja": "平均故障間隔/平均故障率の指標で、製品の信頼性を示す。"
         }
       ],
       "personal_actions": [
-        "新しいAIモデルの動向を追い、業界の変化に備える。",
-        "Mistral Computeの機能を調査し、自社で利用可能な適用例を検討する。",
-        "データセンターの建設計画についての情報を定期的にチェックする。"
+        "データセンター内で使用しているHDDの性能と容量を確認する。",
+        "新しいドライブ技術が導入される2026年の情報をキャッチアップする。",
+        "SMR技術を理解し、データ配置の戦略を見直す。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.businessinsider.com/power-players-data-center-debt-boom-goldman-apollo-smbc-kkr-2026-3",
+      "source": "Business Insider",
+      "publishedAt": "2026-03-31T09:46:01Z",
+      "title": "10 power players behind the data center debt boom",
+      "title_ja": "データセンター債務ブームを支える10人の影響者",
+      "summary_ja": "ウォール街がAIデータセンターに数十億ドルを投資しています。このブームを支えているファイナンス業界の人物たちを紹介します。ApolloやJPMorgan、KKRなどの企業が重要な役割を果たしています。これにより、データセンターの拡大が加速し、業界全体に影響を与えています。",
+      "key_points": [
+        "データセンターへの巨額投資が進行中",
+        "投資家に名を連ねるのはApollo、JPMorgan、KKRなど",
+        "AIの成長がデータセンター需要を促進",
+        "ファイナンス業界の影響者がビジネスモデルを変革",
+        "データセンターの拡大が業界経済に寄与"
+      ],
+      "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能。データ処理や分析を自動化する技術。"
+        },
+        {
+          "term": "ウォール街",
+          "explain_ja": "ニューヨーク市にある金融の中心地。投資銀行や取引所が集まる。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保存、管理、処理を行うための施設。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの最新動向について調査する",
+        "投資先としてのデータセンターの重要性を評価する",
+        "AI技術の最新情報をキャッチアップする"
       ],
       "tags": [
         "DC",
@@ -46,67 +82,40 @@
       ]
     },
     {
-      "url": "https://www.techradar.com/pro/its-not-just-a-ram-crisis-panasonic-says-data-center-batteries-are-also-selling-out-months-in-advance",
-      "source": "TechRadar",
-      "publishedAt": "2026-03-30T20:15:00Z",
-      "title": "It's not just a RAM crisis — Panasonic says data center batteries are also selling out months in advance",
-      "title_ja": "パナソニック、データセンターのバッテリーも数ヶ月前から売り切れと報告",
-      "summary_ja": "パナソニックは、データセンター用のバッテリーが数ヶ月先まで売り切れになっていることを報告しています。これは、AIインフラへの需要が高まっているためで、同社はリチウムイオンバッテリーとスーパーキャパシターの生産を拡大しています。データセンターの電力ニーズに対応するための動きが強まっています。",
+      "url": "https://webminal.org/",
+      "source": "Webminal.org",
+      "publishedAt": "2026-03-31T05:47:01Z",
+      "title": "Webminal — Free Linux Terminal in Your Browser",
+      "title_ja": "ブラウザで利用できる無料のLinuxターミナルWebminal",
+      "summary_ja": "Webminalは、ブラウザ上で実行できる無料のGNU/Linuxターミナルです。ユーザーは、セットアップなしでLinuxコマンドやBashスクリプト、Pythonなどを学び実践できます。統計として、2011年から運営され、50万人以上のユーザーが参加しています。",
       "key_points": [
-        "パナソニックがデータセンター用バッテリーの需給状況を発表",
-        "リチウムイオンバッテリーとスーパーキャパシターの生産を拡大中",
-        "AIインフラの需要増加に対応する必要がある",
-        "データセンター業界でのバッテリー不足が懸念されている"
+        "リアルなLinuxターミナルを提供",
+        "ステップバイステップのガイド付きレッスン",
+        "複数言語（Python、C、Rubyなど）の実行が可能",
+        "MySQLデータベースの作成とクエリ実行",
+        "活発なコミュニティとフォーラム"
       ],
       "glossary": [
         {
-          "term": "リチウムイオンバッテリー",
-          "explain_ja": "充電式電池の一種で、高エネルギー密度を持つ。"
+          "term": "GNU/Linux",
+          "explain_ja": "自由に使用できるオペレーティングシステムで、GNUプロジェクトとLinuxカーネルに基づいています。"
         },
         {
-          "term": "スーパーキャパシター",
-          "explain_ja": "エネルギーを迅速に蓄え、放出できるデバイス。"
+          "term": "Bash",
+          "explain_ja": "Unix系オペレーティングシステムで広く使われるシェルで、コマンドラインインターフェースを提供します。"
+        },
+        {
+          "term": "MySQL",
+          "explain_ja": "広く使用されているリレーショナルデータベース管理システムです。"
         }
       ],
       "personal_actions": [
-        "データセンターのバッテリー在庫を確認する",
-        "バッテリー供給の短期的なリスクを評価する"
+        "Webminalに登録し、Linuxコマンドの基本を練習する",
+        "コミュニティフォーラムで他のユーザーと交流する",
+        "提供されているスクリーンキャストで実践的な学習を行う"
       ],
       "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://spectrum.ieee.org/modular-data-center",
-      "source": "Ieee.org",
-      "publishedAt": "2026-03-30T14:00:02Z",
-      "title": "The AI Data Centers That Fit on a Truck",
-      "title_ja": "トラックに載るAIデータセンター",
-      "summary_ja": "新しいAIデータセンターは、トラックに搭載可能な形状で設計されており、迅速な展開が可能です。従来のデータセンターのコストを抑えつつ、必要な機能を維持しています。この技術は、急速に変化するデータ処理のニーズに対応するための柔軟なソリューションを提供します。",
-      "key_points": [
-        "AIデータセンターはトラックで移動可能な設計",
-        "従来のデータセンターに比べてコスト削減",
-        "迅速な展開が可能で、柔軟性を提供",
-        "データ処理のニーズに適応したソリューション"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能の処理に特化したデータセンター。"
-        },
-        {
-          "term": "モジュラー型データセンター",
-          "explain_ja": "必要に応じて拡張できる柔軟なデータセンターの形式。"
-        }
-      ],
-      "personal_actions": [
-        "移動式データセンターの導入可能性を社内で議論する",
-        "最新のデータセンター技術について情報収集する"
-      ],
-      "tags": [
-        "DC",
-        "AI"
+        "インフラ"
       ]
     }
   ]
