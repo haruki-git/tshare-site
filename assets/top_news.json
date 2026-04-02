@@ -1,80 +1,43 @@
 {
-  "date": "2026-04-02",
-  "generatedAtJST": "2026-04-02T07:15:44.497+09:00",
+  "date": "2026-04-03",
+  "generatedAtJST": "2026-04-03T07:15:46.704+09:00",
   "items": [
     {
-      "url": "https://www.techpowerup.com/347892/toshiba-begins-sampling-of-30-34-tb-smr-nearline-hard-disk-drives",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-03-31T12:58:50Z",
-      "title": "Toshiba Begins Sampling of 30-34 TB SMR Nearline Hard Disk Drives",
-      "title_ja": "東芝、30〜34 TBのSMR近接硬盤ドライブのサンプリングを開始",
-      "summary_ja": "東芝は、30〜34 TBのストレージ容量を持つM12シリーズの3.5インチ近接硬盤ドライブのサンプリングを開始しました。この新シリーズは、データセンター向けの高容量・高性能HDDを提供するために設計されています。デジタルサービスやAIなどの影響で、データの生成と保存量が急増している中、データセンターは効率的なシステム構成を支えるHDDの需要が高まっています。",
+      "url": "https://fortune.com/2026/04/01/microsoft-chevron-exclusivity-powering-west-texas-data-center-complex/",
+      "source": "Fortune",
+      "publishedAt": "2026-04-01T18:51:28Z",
+      "title": "Microsoft and Chevron enter exclusivity deal on powering West Texas AI data center complex",
+      "title_ja": "マイクロソフトとシェブロンがテキサス州西部のAIデータセンター複合施設における独占契約を締結",
+      "summary_ja": "マイクロソフトとシェブロンは、テキサス州のAIデータセンター複合施設における電力供給に関して独占契約を締結した。この複合施設は初期として2.5ギガワットの電力を供給し、需要に応じてその規模を倍増させる可能性がある。この取り組みにより、データセンターの運用効率が向上し、電力供給の安定性が増すことが期待される。",
       "key_points": [
-        "M12シリーズは、30〜34 TBのストレージを提供する近接硬盤ドライブ。",
-        "SMR技術を採用し、記録密度を高めている。",
-        "ホスト管理SMRアーキテクチャにより、データ処理の効率が向上。",
-        "最大データ転送速度は282 MiB/sで、前世代比で約8%の改善。",
-        "年間550 TBのワークロード評価をサポートし、MTTF/MTBFは250万時間。"
+        "マイクロソフトとシェブロンが独占契約を締結",
+        "テキサス州にAIデータセンター複合施設を建設",
+        "初期電力供給量は2.5ギガワット",
+        "今後、電力供給能力は倍増する可能性あり",
+        "データセンター運用の効率化に寄与する見込み"
       ],
       "glossary": [
-        {
-          "term": "SMR",
-          "explain_ja": "Shingled Magnetic Recordingの略で、データトラックを重ねて記録する技術。"
-        },
-        {
-          "term": "HDD",
-          "explain_ja": "ハードディスクドライブの略で、デジタルデータを記録・保存する装置。"
-        },
-        {
-          "term": "CMR",
-          "explain_ja": "Conventional Magnetic Recordingの略で、従来のデータ記録方式。"
-        },
-        {
-          "term": "MTTF/MTBF",
-          "explain_ja": "平均故障間隔/平均故障率の指標で、製品の信頼性を示す。"
-        }
-      ],
-      "personal_actions": [
-        "データセンター内で使用しているHDDの性能と容量を確認する。",
-        "新しいドライブ技術が導入される2026年の情報をキャッチアップする。",
-        "SMR技術を理解し、データ配置の戦略を見直す。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.businessinsider.com/power-players-data-center-debt-boom-goldman-apollo-smbc-kkr-2026-3",
-      "source": "Business Insider",
-      "publishedAt": "2026-03-31T09:46:01Z",
-      "title": "10 power players behind the data center debt boom",
-      "title_ja": "データセンター債務ブームを支える10人の影響者",
-      "summary_ja": "ウォール街がAIデータセンターに数十億ドルを投資しています。このブームを支えているファイナンス業界の人物たちを紹介します。ApolloやJPMorgan、KKRなどの企業が重要な役割を果たしています。これにより、データセンターの拡大が加速し、業界全体に影響を与えています。",
-      "key_points": [
-        "データセンターへの巨額投資が進行中",
-        "投資家に名を連ねるのはApollo、JPMorgan、KKRなど",
-        "AIの成長がデータセンター需要を促進",
-        "ファイナンス業界の影響者がビジネスモデルを変革",
-        "データセンターの拡大が業界経済に寄与"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能。データ処理や分析を自動化する技術。"
-        },
-        {
-          "term": "ウォール街",
-          "explain_ja": "ニューヨーク市にある金融の中心地。投資銀行や取引所が集まる。"
-        },
         {
           "term": "データセンター",
-          "explain_ja": "データの保存、管理、処理を行うための施設。"
+          "explain_ja": "データを保存、管理、処理するための施設。"
+        },
+        {
+          "term": "ギガワット",
+          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する。"
+        },
+        {
+          "term": "電力供給",
+          "explain_ja": "電気エネルギーを供給するプロセス。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能の略で、人間の知的な作業を模倣する技術。"
         }
       ],
       "personal_actions": [
-        "データセンターの最新動向について調査する",
-        "投資先としてのデータセンターの重要性を評価する",
-        "AI技術の最新情報をキャッチアップする"
+        "データセンターの電力供給に関する最新情報を確認する",
+        "AI技術に関連するプロジェクトの進捗をフォローする",
+        "エネルギー供給の安定性に関するリスクを評価する"
       ],
       "tags": [
         "DC",
@@ -82,40 +45,71 @@
       ]
     },
     {
-      "url": "https://webminal.org/",
-      "source": "Webminal.org",
-      "publishedAt": "2026-03-31T05:47:01Z",
-      "title": "Webminal — Free Linux Terminal in Your Browser",
-      "title_ja": "ブラウザで利用できる無料のLinuxターミナルWebminal",
-      "summary_ja": "Webminalは、ブラウザ上で実行できる無料のGNU/Linuxターミナルです。ユーザーは、セットアップなしでLinuxコマンドやBashスクリプト、Pythonなどを学び実践できます。統計として、2011年から運営され、50万人以上のユーザーが参加しています。",
+      "url": "https://economictimes.indiatimes.com/tech/technology/related-digital-nears-16-billion-financing-for-oracle-data-center-report/articleshow/129960552.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-04-01T18:36:13Z",
+      "title": "Related Digital nears $16 billion financing for Oracle data center: Report",
+      "title_ja": "Related Digital、オラクルデータセンターのために160億ドルの資金調達に近づく",
+      "summary_ja": "Related Digitalは、オラクルがOpenAI向けのアプリケーションを支えるためのキャンパスをミシガン州サリンタウンシップに建設するための資金調達を進めています。この資金調達は今月中に最終決定される見込みです。オラクルのデータセンターの設立は、OpenAIとの協力を強化する重要なステップとなるでしょう。",
       "key_points": [
-        "リアルなLinuxターミナルを提供",
-        "ステップバイステップのガイド付きレッスン",
-        "複数言語（Python、C、Rubyなど）の実行が可能",
-        "MySQLデータベースの作成とクエリ実行",
-        "活発なコミュニティとフォーラム"
+        "Related Digitalは160億ドルの資金を集めている。",
+        "資金はミシガン州サリンタウンシップにデータセンターを建設するために使用される。",
+        "オラクルがOpenAI向けのアプリケーションを支えることが目的。",
+        "資金調達は今月中に最終化される見込み。"
       ],
       "glossary": [
         {
-          "term": "GNU/Linux",
-          "explain_ja": "自由に使用できるオペレーティングシステムで、GNUプロジェクトとLinuxカーネルに基づいています。"
+          "term": "Oracle",
+          "explain_ja": "アメリカの多国籍コンピュータ技術企業で、データベースソフトウェア及びハードウェアの製品を提供している。"
         },
         {
-          "term": "Bash",
-          "explain_ja": "Unix系オペレーティングシステムで広く使われるシェルで、コマンドラインインターフェースを提供します。"
-        },
-        {
-          "term": "MySQL",
-          "explain_ja": "広く使用されているリレーショナルデータベース管理システムです。"
+          "term": "OpenAI",
+          "explain_ja": "AIの研究と開発を行う企業で、高度な人工知能技術の開発を目指している。"
         }
       ],
       "personal_actions": [
-        "Webminalに登録し、Linuxコマンドの基本を練習する",
-        "コミュニティフォーラムで他のユーザーと交流する",
-        "提供されているスクリーンキャストで実践的な学習を行う"
+        "データセンターの設立による地域の影響を調査する。",
+        "オラクルの最新の動向を追い、関連するテクノロジーの進展を確認する。"
       ],
       "tags": [
-        "インフラ"
+        "DC"
+      ]
+    },
+    {
+      "url": "https://techcrunch.com/2026/04/01/metas-natural-gas-binge-could-power-south-dakota/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-04-01T18:35:36Z",
+      "title": "Meta’s natural gas binge could power South Dakota | TechCrunch",
+      "title_ja": "メタの天然ガス消費が南ダコタ州に電力を供給する可能性",
+      "summary_ja": "メタが計画しているHyperion AIデータセンターは、10の新しい天然ガスプラントによって電力を供給される予定です。このプロジェクトは、南ダコタ州のエネルギー需要に対応することを目的としています。結果として、地域のエネルギーインフラに大きな影響を与える可能性があります。",
+      "key_points": [
+        "メタのHyperion AIデータセンターが計画中。",
+        "10の新しい天然ガスプラントが稼働予定。",
+        "南ダコタ州への電力供給が強化される。",
+        "地元のエネルギーインフラへの影響が懸念される。"
+      ],
+      "glossary": [
+        {
+          "term": "Hyperion AI",
+          "explain_ja": "メタが計画しているAIデータセンターの名称。"
+        },
+        {
+          "term": "天然ガス",
+          "explain_ja": "燃料として使用される、比較的クリーンな化石燃料。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データを保管・処理するための施設。"
+        }
+      ],
+      "personal_actions": [
+        "地域のエネルギー供給計画を確認する。",
+        "データセンターの影響についてのニュースに目を通す。",
+        "電力消費の効率を見直す。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
