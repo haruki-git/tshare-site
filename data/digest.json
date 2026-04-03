@@ -1,43 +1,34 @@
 {
-  "date": "2026-04-03",
-  "generatedAtJST": "2026-04-03T07:15:46.704+09:00",
+  "date": "2026-04-04",
+  "generatedAtJST": "2026-04-04T07:15:46.217+09:00",
   "items": [
     {
-      "url": "https://fortune.com/2026/04/01/microsoft-chevron-exclusivity-powering-west-texas-data-center-complex/",
-      "source": "Fortune",
-      "publishedAt": "2026-04-01T18:51:28Z",
-      "title": "Microsoft and Chevron enter exclusivity deal on powering West Texas AI data center complex",
-      "title_ja": "マイクロソフトとシェブロンがテキサス州西部のAIデータセンター複合施設における独占契約を締結",
-      "summary_ja": "マイクロソフトとシェブロンは、テキサス州のAIデータセンター複合施設における電力供給に関して独占契約を締結した。この複合施設は初期として2.5ギガワットの電力を供給し、需要に応じてその規模を倍増させる可能性がある。この取り組みにより、データセンターの運用効率が向上し、電力供給の安定性が増すことが期待される。",
+      "url": "https://singularityhub.com/2026/04/02/the-mad-scramble-to-power-ai-is-rewiring-the-us-grid/#article",
+      "source": "Singularity Hub",
+      "publishedAt": "2026-04-02T20:33:32Z",
+      "title": "The Mad Scramble to Power AI Is Rewiring the US Grid",
+      "title_ja": "AIの電力需要増加がアメリカの電力網を再構築",
+      "summary_ja": "データセンターの電力需要が2030年までにほぼ3倍になると予測されています。これを受けて、テクノロジー企業は新たな発電所への投資や独自の「シャドーグリッド」の構築を進めています。この動きは、電力網の構造を大きく変える可能性があります。",
       "key_points": [
-        "マイクロソフトとシェブロンが独占契約を締結",
-        "テキサス州にAIデータセンター複合施設を建設",
-        "初期電力供給量は2.5ギガワット",
-        "今後、電力供給能力は倍増する可能性あり",
-        "データセンター運用の効率化に寄与する見込み"
+        "データセンターの電力需要が2030年までに3倍に達する予測",
+        "テクノロジー企業による新たな発電所の投資",
+        "企業が独自に電力供給網（シャドーグリッド）を構築",
+        "アメリカの電力インフラが変革を迎える可能性",
+        "AIの発展とそのエネルギー需要の関連"
       ],
       "glossary": [
         {
+          "term": "シャドーグリッド",
+          "explain_ja": "企業が自ら構築する独自の電力供給網。"
+        },
+        {
           "term": "データセンター",
-          "explain_ja": "データを保存、管理、処理するための施設。"
-        },
-        {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する。"
-        },
-        {
-          "term": "電力供給",
-          "explain_ja": "電気エネルギーを供給するプロセス。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能の略で、人間の知的な作業を模倣する技術。"
+          "explain_ja": "データを格納・管理するための専用施設。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力供給に関する最新情報を確認する",
-        "AI技術に関連するプロジェクトの進捗をフォローする",
-        "エネルギー供給の安定性に関するリスクを評価する"
+        "データセンターの電力供給に関する最新の情報を確認する",
+        "将来の電力需要に備えて自社のエネルギー計画を見直す"
       ],
       "tags": [
         "DC",
@@ -45,71 +36,77 @@
       ]
     },
     {
-      "url": "https://economictimes.indiatimes.com/tech/technology/related-digital-nears-16-billion-financing-for-oracle-data-center-report/articleshow/129960552.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-04-01T18:36:13Z",
-      "title": "Related Digital nears $16 billion financing for Oracle data center: Report",
-      "title_ja": "Related Digital、オラクルデータセンターのために160億ドルの資金調達に近づく",
-      "summary_ja": "Related Digitalは、オラクルがOpenAI向けのアプリケーションを支えるためのキャンパスをミシガン州サリンタウンシップに建設するための資金調達を進めています。この資金調達は今月中に最終決定される見込みです。オラクルのデータセンターの設立は、OpenAIとの協力を強化する重要なステップとなるでしょう。",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-direct-connect-100g-auckland/",
+      "source": "Amazon.com",
+      "publishedAt": "2026-04-02T16:00:00Z",
+      "title": "AWS Direct Connect announces 100G expansion in Auckland, New Zealand",
+      "title_ja": "AWS Direct Connect、ニュージーランド・オークランドで100Gの拡張を発表",
+      "summary_ja": "AWSは、ニュージーランド・オークランド近郊のDatacom Orbit DH6データセンターで、100Gbpsの専用接続の拡張を発表しました。これにより、プライベートな直接ネットワークアクセスをすべての公共AWSリージョンやAWS GovCloudリージョンに提供します。この拡張は、MACsec暗号化機能を備えたニュージーランドの二番目のAWS Direct Connectロケーションです。",
       "key_points": [
-        "Related Digitalは160億ドルの資金を集めている。",
-        "資金はミシガン州サリンタウンシップにデータセンターを建設するために使用される。",
-        "オラクルがOpenAI向けのアプリケーションを支えることが目的。",
-        "資金調達は今月中に最終化される見込み。"
+        "100 Gbps専用接続を提供するAWS Direct Connectの拡張。",
+        "ニュージーランドのDatacom Orbit DH6データセンターで実施。",
+        "すべての公共AWSリージョン、AWS GovCloudリージョンにアクセス可能。",
+        "MACsec暗号化機能を備えた2番目のロケーション。",
+        "より一貫したネットワーク体験を提供。"
       ],
       "glossary": [
         {
-          "term": "Oracle",
-          "explain_ja": "アメリカの多国籍コンピュータ技術企業で、データベースソフトウェア及びハードウェアの製品を提供している。"
+          "term": "AWS Direct Connect",
+          "explain_ja": "AWSとデータセンター、オフィス、またはコロケーション環境との間にプライベートな物理ネットワーク接続を確立するサービス。"
         },
         {
-          "term": "OpenAI",
-          "explain_ja": "AIの研究と開発を行う企業で、高度な人工知能技術の開発を目指している。"
+          "term": "MACsec",
+          "explain_ja": "データリンク層での通信を暗号化するための技術で、安全性を向上させる。"
         }
       ],
       "personal_actions": [
-        "データセンターの設立による地域の影響を調査する。",
-        "オラクルの最新の動向を追い、関連するテクノロジーの進展を確認する。"
+        "AWS Direct Connectの対象地域を確認し、自社サービスに適した選択肢を検討する。",
+        "現行のネットワーク接続のパフォーマンスをレビューし、必要に応じてアップグレードを提案する。",
+        "新しい接続オプションを導入する際の計画を立て、十分なテストと検証を行う。"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://english.gossiplankanews.com/2026/04/attack-from-iran-on-amazon-aws-data.html",
+      "source": "Gossiplankanews.com",
+      "publishedAt": "2026-04-02T03:35:20Z",
+      "title": "Attack from Iran on Amazon (AWS) data center in Dubai - Data destroyed, Digital services halted",
+      "title_ja": "イランによるアマゾン（AWS）データセンターへの攻撃 - データ破壊、デジタルサービス停止",
+      "summary_ja": "イランは、アメリカとイスラエルによる空爆に応じて、4月1日にUAEのアマゾンウェブサービス（AWS）データセンターに攻撃を行い、データが破壊され、デジタルサービスが一時停止した。この事件は、地政学的な緊張の高まりの中で発生したものである。影響を受けたデータセンターは、地域のデジタルインフラにとって重要であるため、業界全体に波及する可能性がある。",
+      "key_points": [
+        "イランは4月1日にUAEのAWSデータセンターを攻撃した。",
+        "攻撃にはShahed-136ドローンが使用された。",
+        "データが破壊され、デジタルサービスが停止した。",
+        "この攻撃は、米国とイスラエルの空爆への報復として行われた。",
+        "地域のデジタルインフラに対する影響が懸念されている。"
+      ],
+      "glossary": [
+        {
+          "term": "AWS",
+          "explain_ja": "アマゾンウェブサービス。クラウドコンピューティングプラットフォームを提供する。"
+        },
+        {
+          "term": "シャヘッド-136",
+          "explain_ja": "イランが使用するドローンで、攻撃に利用される。"
+        },
+        {
+          "term": "UAE",
+          "explain_ja": "アラブ首長国連邦。中東の国々の連合。"
+        },
+        {
+          "term": "空爆",
+          "explain_ja": "地上目標に対する航空機による爆撃。"
+        }
+      ],
+      "personal_actions": [
+        "AWSデータセンターの最新のセキュリティ対策を確認する。",
+        "地政学的リスクに備えたデータバックアップ戦略を見直す。",
+        "サイバーセキュリティチームと連携し、脅威に対する防御策を強化する。"
       ],
       "tags": [
         "DC"
-      ]
-    },
-    {
-      "url": "https://techcrunch.com/2026/04/01/metas-natural-gas-binge-could-power-south-dakota/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-04-01T18:35:36Z",
-      "title": "Meta’s natural gas binge could power South Dakota | TechCrunch",
-      "title_ja": "メタの天然ガス消費が南ダコタ州に電力を供給する可能性",
-      "summary_ja": "メタが計画しているHyperion AIデータセンターは、10の新しい天然ガスプラントによって電力を供給される予定です。このプロジェクトは、南ダコタ州のエネルギー需要に対応することを目的としています。結果として、地域のエネルギーインフラに大きな影響を与える可能性があります。",
-      "key_points": [
-        "メタのHyperion AIデータセンターが計画中。",
-        "10の新しい天然ガスプラントが稼働予定。",
-        "南ダコタ州への電力供給が強化される。",
-        "地元のエネルギーインフラへの影響が懸念される。"
-      ],
-      "glossary": [
-        {
-          "term": "Hyperion AI",
-          "explain_ja": "メタが計画しているAIデータセンターの名称。"
-        },
-        {
-          "term": "天然ガス",
-          "explain_ja": "燃料として使用される、比較的クリーンな化石燃料。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データを保管・処理するための施設。"
-        }
-      ],
-      "personal_actions": [
-        "地域のエネルギー供給計画を確認する。",
-        "データセンターの影響についてのニュースに目を通す。",
-        "電力消費の効率を見直す。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
       ]
     }
   ]
