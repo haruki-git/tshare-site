@@ -1,34 +1,32 @@
 {
-  "date": "2026-04-04",
-  "generatedAtJST": "2026-04-04T07:15:46.217+09:00",
+  "date": "2026-04-05",
+  "generatedAtJST": "2026-04-05T07:15:46.917+09:00",
   "items": [
     {
-      "url": "https://singularityhub.com/2026/04/02/the-mad-scramble-to-power-ai-is-rewiring-the-us-grid/#article",
-      "source": "Singularity Hub",
-      "publishedAt": "2026-04-02T20:33:32Z",
-      "title": "The Mad Scramble to Power AI Is Rewiring the US Grid",
-      "title_ja": "AIの電力需要増加がアメリカの電力網を再構築",
-      "summary_ja": "データセンターの電力需要が2030年までにほぼ3倍になると予測されています。これを受けて、テクノロジー企業は新たな発電所への投資や独自の「シャドーグリッド」の構築を進めています。この動きは、電力網の構造を大きく変える可能性があります。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=181217420",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-04-03T21:53:17Z",
+      "title": "Trump ignores biggest reasons his AI data center buildout is failing - Slashdot",
+      "title_ja": "トランプがAIデータセンター建設の失敗理由を無視",
+      "summary_ja": "トランプ氏のAIデータセンター建設が困難に直面している。約50%のプロジェクトが遅延しており、その原因には中国による電力インフラの重要性が挙げられている。適切な対策が講じられなければ、プロジェクトはさらに深刻な影響を受ける可能性がある。",
       "key_points": [
-        "データセンターの電力需要が2030年までに3倍に達する予測",
-        "テクノロジー企業による新たな発電所の投資",
-        "企業が独自に電力供給網（シャドーグリッド）を構築",
-        "アメリカの電力インフラが変革を迎える可能性",
-        "AIの発展とそのエネルギー需要の関連"
+        "約50%のデータセンタープロジェクトが遅延している",
+        "中国が電力インフラの鍵を握っている",
+        "トランプ氏はこの状況を無視している"
       ],
       "glossary": [
         {
-          "term": "シャドーグリッド",
-          "explain_ja": "企業が自ら構築する独自の電力供給網。"
+          "term": "データセンター",
+          "explain_ja": "データの保存、管理、処理を行うための施設。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを格納・管理するための専用施設。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）を指し、機械が知的な行動を模倣する技術。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力供給に関する最新の情報を確認する",
-        "将来の電力需要に備えて自社のエネルギー計画を見直す"
+        "プロジェクトの進捗状況を確認する",
+        "電力供給の課題について情報収集する"
       ],
       "tags": [
         "DC",
@@ -36,77 +34,83 @@
       ]
     },
     {
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/04/aws-direct-connect-100g-auckland/",
-      "source": "Amazon.com",
-      "publishedAt": "2026-04-02T16:00:00Z",
-      "title": "AWS Direct Connect announces 100G expansion in Auckland, New Zealand",
-      "title_ja": "AWS Direct Connect、ニュージーランド・オークランドで100Gの拡張を発表",
-      "summary_ja": "AWSは、ニュージーランド・オークランド近郊のDatacom Orbit DH6データセンターで、100Gbpsの専用接続の拡張を発表しました。これにより、プライベートな直接ネットワークアクセスをすべての公共AWSリージョンやAWS GovCloudリージョンに提供します。この拡張は、MACsec暗号化機能を備えたニュージーランドの二番目のAWS Direct Connectロケーションです。",
+      "url": "https://hardware.slashdot.org/story/26/04/03/1558235/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-04-03T16:00:00Z",
+      "title": "Half of Planned US Data Center Builds Have Been Delayed or Canceled - Slashdot",
+      "title_ja": "米国のデータセンター建設計画の半数が延期または中止に",
+      "summary_ja": "米国では、数百億ドルの投資が行われている中、計画されたデータセンターの約半分が延期または中止されています。主な理由は、変圧器やスイッチギア、バッテリーなどの重要な電気機器の入手困難です。これにより、AIデータセンターの構築も影響を受け、輸入先の国々が変わる中、建設の遅延が続いています。",
       "key_points": [
-        "100 Gbps専用接続を提供するAWS Direct Connectの拡張。",
-        "ニュージーランドのDatacom Orbit DH6データセンターで実施。",
-        "すべての公共AWSリージョン、AWS GovCloudリージョンにアクセス可能。",
-        "MACsec暗号化機能を備えた2番目のロケーション。",
-        "より一貫したネットワーク体験を提供。"
+        "米国におけるデータセンター計画の約50%が延期または中止。",
+        "主要な電気機器の不足が原因。",
+        "建設中のデータセンターは計画された容量の約1/3のみ。",
+        "高功率変圧器の納期が最大5年に延びている。",
+        "カナダ、メキシコ、韓国が主要な変圧器供給国に。"
       ],
       "glossary": [
         {
-          "term": "AWS Direct Connect",
-          "explain_ja": "AWSとデータセンター、オフィス、またはコロケーション環境との間にプライベートな物理ネットワーク接続を確立するサービス。"
+          "term": "データセンター",
+          "explain_ja": "データの保存、処理、配信を行う施設。"
         },
         {
-          "term": "MACsec",
-          "explain_ja": "データリンク層での通信を暗号化するための技術で、安全性を向上させる。"
+          "term": "変圧器",
+          "explain_ja": "電圧を変換するための電気機器で、電力供給において重要な役割を担う。"
+        },
+        {
+          "term": "スイッチギア",
+          "explain_ja": "電力の制御と分配を行うための設備。"
+        },
+        {
+          "term": "バッテリー",
+          "explain_ja": "電力を蓄える装置で、災害時のバックアップ電源としても利用される。"
         }
       ],
       "personal_actions": [
-        "AWS Direct Connectの対象地域を確認し、自社サービスに適した選択肢を検討する。",
-        "現行のネットワーク接続のパフォーマンスをレビューし、必要に応じてアップグレードを提案する。",
-        "新しい接続オプションを導入する際の計画を立て、十分なテストと検証を行う。"
+        "新規データセンターのプロジェクト状況を確認する。",
+        "電力供給関連のサプライチェーンのリスクを評価する。",
+        "今後の設備投資計画について再検討する。"
       ],
       "tags": [
-        "その他"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://english.gossiplankanews.com/2026/04/attack-from-iran-on-amazon-aws-data.html",
-      "source": "Gossiplankanews.com",
-      "publishedAt": "2026-04-02T03:35:20Z",
-      "title": "Attack from Iran on Amazon (AWS) data center in Dubai - Data destroyed, Digital services halted",
-      "title_ja": "イランによるアマゾン（AWS）データセンターへの攻撃 - データ破壊、デジタルサービス停止",
-      "summary_ja": "イランは、アメリカとイスラエルによる空爆に応じて、4月1日にUAEのアマゾンウェブサービス（AWS）データセンターに攻撃を行い、データが破壊され、デジタルサービスが一時停止した。この事件は、地政学的な緊張の高まりの中で発生したものである。影響を受けたデータセンターは、地域のデジタルインフラにとって重要であるため、業界全体に波及する可能性がある。",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled-growth-limited-by-shortages-of-power-infrastructure-and-parts-from-china-the-ai-build-out-flips-the-breakers",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-04-03T15:09:28Z",
+      "title": "Half of planned US data center builds have been delayed or canceled, growth limited by shortages of power infrastructure and parts from China — the AI build-out flips the breakers",
+      "title_ja": "米国のデータセンター建設の半数が遅延または中止、AIインフラの成長が電力インフラや中国からの部品不足で制約",
+      "summary_ja": "米国で計画されているデータセンターの半数が遅延または中止されている。これは、AI基盤のための6500億ドルの投資計画にもかかわらず、電力インフラの部品不足が影響しているためだ。この状況は、AI関連の施設構築において大きな障害となっている。",
       "key_points": [
-        "イランは4月1日にUAEのAWSデータセンターを攻撃した。",
-        "攻撃にはShahed-136ドローンが使用された。",
-        "データが破壊され、デジタルサービスが停止した。",
-        "この攻撃は、米国とイスラエルの空爆への報復として行われた。",
-        "地域のデジタルインフラに対する影響が懸念されている。"
+        "米国のデータセンターの半数が計画通りに進んでいない。",
+        "AIインフラの構築に6500億ドルを投資する計画がある。",
+        "電力インフラの部品不足が主要な制約要因となっている。",
+        "中国からの部品も不足している。",
+        "AIビルドアウトが電力供給に影響を与えている。"
       ],
       "glossary": [
         {
-          "term": "AWS",
-          "explain_ja": "アマゾンウェブサービス。クラウドコンピューティングプラットフォームを提供する。"
+          "term": "AI",
+          "explain_ja": "人工知能の略。コンピュータが人間の知的行動を模倣する技術。"
         },
         {
-          "term": "シャヘッド-136",
-          "explain_ja": "イランが使用するドローンで、攻撃に利用される。"
+          "term": "データセンター",
+          "explain_ja": "データを保存、管理、処理するための施設。"
         },
         {
-          "term": "UAE",
-          "explain_ja": "アラブ首長国連邦。中東の国々の連合。"
-        },
-        {
-          "term": "空爆",
-          "explain_ja": "地上目標に対する航空機による爆撃。"
+          "term": "インフラ",
+          "explain_ja": "社会基盤のこと。電力や通信など、機能を支える基本的な設備。"
         }
       ],
       "personal_actions": [
-        "AWSデータセンターの最新のセキュリティ対策を確認する。",
-        "地政学的リスクに備えたデータバックアップ戦略を見直す。",
-        "サイバーセキュリティチームと連携し、脅威に対する防御策を強化する。"
+        "電力インフラの可用性についてチームと確認する。",
+        "部品供給の状況をモニタリングするためのプロセスを見直す。",
+        "AI関連プロジェクトのリソース配分を再評価する。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
