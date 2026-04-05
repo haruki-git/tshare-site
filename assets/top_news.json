@@ -1,32 +1,47 @@
 {
-  "date": "2026-04-05",
-  "generatedAtJST": "2026-04-05T07:15:46.917+09:00",
+  "date": "2026-04-06",
+  "generatedAtJST": "2026-04-06T07:16:07.325+09:00",
   "items": [
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=181217420",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-04-03T21:53:17Z",
-      "title": "Trump ignores biggest reasons his AI data center buildout is failing - Slashdot",
-      "title_ja": "トランプがAIデータセンター建設の失敗理由を無視",
-      "summary_ja": "トランプ氏のAIデータセンター建設が困難に直面している。約50%のプロジェクトが遅延しており、その原因には中国による電力インフラの重要性が挙げられている。適切な対策が講じられなければ、プロジェクトはさらに深刻な影響を受ける可能性がある。",
+      "url": "https://www.techradar.com/pro/korean-startup-backed-by-samsung-and-arm-launches-rack-sized-inference-monsters-claims-6x-lower-power-consumption-and-up-to-75-percent-cheaper-acquisition-cost-compared-to-nvidia",
+      "source": "TechRadar",
+      "publishedAt": "2026-04-04T16:45:00Z",
+      "title": "Korean startup backed by Samsung and Arm launches rack-sized inference monsters, claims \"6x lower power consumption\" and up to 75% cheaper acquisition cost compared to Nvidia",
+      "title_ja": "サムスンとArmが支援する韓国のスタートアップがラックサイズの推論システムを発表、Nvidiaと比較して「6倍の低消費電力」と最大75％のコスト削減を主張",
+      "summary_ja": "韓国のAIインフラスタートアップが新たに展開可能なシステムを発表しました。このシステムは、データセンター業界において大きな効率性とコスト削減の可能性を示唆しています。特に、Nvidiaと比較して消費電力を6倍低減し、取得コストを最大75%削減することが強調されています。",
       "key_points": [
-        "約50%のデータセンタープロジェクトが遅延している",
-        "中国が電力インフラの鍵を握っている",
-        "トランプ氏はこの状況を無視している"
+        "韓国のスタートアップが革新的なAI推論システムを導入。",
+        "サムスンとArmのサポートを受けている。",
+        "提唱されているシステムは、Nvidia製品と比べて6倍の低消費電力を実現。",
+        "取得コストは最大75%削減可能と主張。",
+        "データセンター業界における変革の可能性を秘めている。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、管理、処理を行うための施設。"
+          "term": "推論システム",
+          "explain_ja": "AIモデルが学習した知識を使って新たなデータに対する判断を行うシステム。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）を指し、機械が知的な行動を模倣する技術。"
+          "term": "データセンター",
+          "explain_ja": "コンピュータと関連するコンポーネントを集中的に管理・運用する施設。"
+        },
+        {
+          "term": "サムスン",
+          "explain_ja": "韓国を拠点とする多国籍企業で、半導体と電子機器の製造を行っている。"
+        },
+        {
+          "term": "Arm",
+          "explain_ja": "半導体設計を行う企業で、スマートフォンやその他のデバイスに広範に使用されるプロセッサアーキテクチャを提供。"
+        },
+        {
+          "term": "Nvidia",
+          "explain_ja": "グラフィックス処理ユニット（GPU）を中心に、AI技術にも注力する企業。"
         }
       ],
       "personal_actions": [
-        "プロジェクトの進捗状況を確認する",
-        "電力供給の課題について情報収集する"
+        "新しいAI推論システムに関する情報を集め、導入可能性を検討する。",
+        "データセンターのエネルギー効率改善策を見直す。",
+        "コスト削減戦略をチーム内で話し合う。"
       ],
       "tags": [
         "DC",
@@ -34,83 +49,81 @@
       ]
     },
     {
-      "url": "https://hardware.slashdot.org/story/26/04/03/1558235/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-04-03T16:00:00Z",
-      "title": "Half of Planned US Data Center Builds Have Been Delayed or Canceled - Slashdot",
-      "title_ja": "米国のデータセンター建設計画の半数が延期または中止に",
-      "summary_ja": "米国では、数百億ドルの投資が行われている中、計画されたデータセンターの約半分が延期または中止されています。主な理由は、変圧器やスイッチギア、バッテリーなどの重要な電気機器の入手困難です。これにより、AIデータセンターの構築も影響を受け、輸入先の国々が変わる中、建設の遅延が続いています。",
+      "url": "https://post.rlsbb.to/wing-ftp-server-corporate-8-1-4/",
+      "source": "Rlsbb.to",
+      "publishedAt": "2026-04-04T20:23:52Z",
+      "title": "Wing FTP Server Corporate 8.1.4 – ReleaseBB",
+      "title_ja": "Wing FTP Server Corporate 8.1.4 – ReleaseBB",
+      "summary_ja": "Wing FTP Server Corporate 8.1.4は、Windows、Linux、Mac OS向けの安全で強力なFTPサーバーソフトウェアです。このソフトウェアは、FTP、FTPS、HTTP、HTTPS、SFTPなどの複数のファイル転送プロトコルをサポートしています。管理者はウェブベースのインターフェースを使用して、どこからでもサーバーの管理やパフォーマンス監視が可能です。",
       "key_points": [
-        "米国におけるデータセンター計画の約50%が延期または中止。",
-        "主要な電気機器の不足が原因。",
-        "建設中のデータセンターは計画された容量の約1/3のみ。",
-        "高功率変圧器の納期が最大5年に延びている。",
-        "カナダ、メキシコ、韓国が主要な変圧器供給国に。"
+        "複数のファイル転送プロトコルをサポート",
+        "ウェブベースのクライアントでアクセス可能",
+        "iOSおよびAndroid用アプリあり",
+        "二要素認証に対応",
+        "IPベースのアクセス設定が可能"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、処理、配信を行う施設。"
+          "term": "FTP",
+          "explain_ja": "ファイル転送プロトコルの略称で、ファイルをインターネット経由で転送するための標準プロトコルです。"
         },
         {
-          "term": "変圧器",
-          "explain_ja": "電圧を変換するための電気機器で、電力供給において重要な役割を担う。"
+          "term": "FTPS",
+          "explain_ja": "SSL/TLSを使用したFTPの拡張で、データ転送を暗号化します。"
         },
         {
-          "term": "スイッチギア",
-          "explain_ja": "電力の制御と分配を行うための設備。"
+          "term": "SFTP",
+          "explain_ja": "SSHを使用してファイル転送を行う安全なプロトコルです。"
         },
         {
-          "term": "バッテリー",
-          "explain_ja": "電力を蓄える装置で、災害時のバックアップ電源としても利用される。"
+          "term": "二要素認証",
+          "explain_ja": "ユーザーのログインをより安全にするために、二つの異なる認証要素を要求するセキュリティ対策です。"
         }
       ],
       "personal_actions": [
-        "新規データセンターのプロジェクト状況を確認する。",
-        "電力供給関連のサプライチェーンのリスクを評価する。",
-        "今後の設備投資計画について再検討する。"
+        "Wing FTP Serverの最新バージョンを確認し、アップデートを行う",
+        "二要素認証を設定してセキュリティを強化する",
+        "FTP接続のIPアクセスルールを見直して、不正アクセスを防ぐ"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "インフラ"
       ]
     },
     {
-      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled-growth-limited-by-shortages-of-power-infrastructure-and-parts-from-china-the-ai-build-out-flips-the-breakers",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-04-03T15:09:28Z",
-      "title": "Half of planned US data center builds have been delayed or canceled, growth limited by shortages of power infrastructure and parts from China — the AI build-out flips the breakers",
-      "title_ja": "米国のデータセンター建設の半数が遅延または中止、AIインフラの成長が電力インフラや中国からの部品不足で制約",
-      "summary_ja": "米国で計画されているデータセンターの半数が遅延または中止されている。これは、AI基盤のための6500億ドルの投資計画にもかかわらず、電力インフラの部品不足が影響しているためだ。この状況は、AI関連の施設構築において大きな障害となっている。",
+      "url": "https://seclists.org/nanog/2026/Apr/6",
+      "source": "Seclists.org",
+      "publishedAt": "2026-04-04T18:29:02Z",
+      "title": "Operational feedback on policy redundancy",
+      "title_ja": "ポリシー冗長性に関する運用フィードバック",
+      "summary_ja": "ネットワーク運用におけるポリシーの冗長性の問題が指摘されています。特に、高レベルの要求と特定サービスに対する弱い要求が共存する場合、副次的な要求が前者に包含されてしまう傾向があります。また、火災壁を経由するトラフィックの要求とミドルボックス不要の要求が対立する場合も見られます。これらの問題は、明示的なドキュメントなしに解決されることが多く、運用者への有用なインサイトを提供することが目的です。",
       "key_points": [
-        "米国のデータセンターの半数が計画通りに進んでいない。",
-        "AIインフラの構築に6500億ドルを投資する計画がある。",
-        "電力インフラの部品不足が主要な制約要因となっている。",
-        "中国からの部品も不足している。",
-        "AIビルドアウトが電力供給に影響を与えている。"
+        "高レベルの要求と特定のサービス要求の冗長性。",
+        "トラフィック処理に関する要求の対立が存在。",
+        "問題解決には暗黙の優先順位付けが用いられることが多い。",
+        "最終的なプロジェクト結果の公開予定。",
+        "運用者への支援を目的とした調査。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略。コンピュータが人間の知的行動を模倣する技術。"
+          "term": "ACL",
+          "explain_ja": "アクセス制御リストの略。ネットワークトラフィックの許可や拒否を定義する設定。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存、管理、処理するための施設。"
+          "term": "BGP",
+          "explain_ja": "ボーダーゲートウェイプロトコルの略。インターネットでのルーティング情報を交換するためのプロトコル。"
         },
         {
-          "term": "インフラ",
-          "explain_ja": "社会基盤のこと。電力や通信など、機能を支える基本的な設備。"
+          "term": "ミドルボックス",
+          "explain_ja": "ネットワークトラフィックを処理するための中間装置のこと。"
         }
       ],
       "personal_actions": [
-        "電力インフラの可用性についてチームと確認する。",
-        "部品供給の状況をモニタリングするためのプロセスを見直す。",
-        "AI関連プロジェクトのリソース配分を再評価する。"
+        "現在のネットワークポリシーの冗長性を確認する。",
+        "特定サービスの要求と一般的な要求の相互関係を文書化する。",
+        "トラフィック処理における対立要求の解決プロセスを見直す。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "その他"
       ]
     }
   ]
