@@ -1,69 +1,72 @@
 {
-  "date": "2026-04-10",
-  "generatedAtJST": "2026-04-10T07:15:40.477+09:00",
+  "date": "2026-04-11",
+  "generatedAtJST": "2026-04-11T07:15:47.428+09:00",
   "items": [
     {
-      "url": "https://economictimes.indiatimes.com/tech/technology/cyient-semiconductor-acquires-kinetic-technologies-eyes-data-center-market/articleshow/130119303.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-04-08T16:37:08Z",
-      "title": "Cyient Semiconductor acquires Kinetic Technologies, eyes data center market",
-      "title_ja": "Cyient Semiconductor、Kinetic Technologiesを買収しデータセンター市場を視野に",
-      "summary_ja": "Cyient SemiconductorがKinetic Technologiesを買収したことで、データセンター市場への進出が期待されています。特に、電力に関する分野が注目されているとのことです。この買収により、新たなビジネス機会の創出が見込まれています。",
+      "url": "https://www.seattlepi.com/news/politics/article/renewable-energy-advocates-make-gains-in-fight-22198227.php",
+      "source": "seattlepi.com",
+      "publishedAt": "2026-04-09T20:21:36Z",
+      "title": "Renewable energy advocates make gains in fight over future of big Arizona power utility",
+      "title_ja": "アリゾナの大手電力会社の未来を巡る再生可能エネルギー支援者の成果",
+      "summary_ja": "アリゾナの再生可能エネルギー支援者が、国内最大の公営電力会社が急増する電力需要にどのように対応するかを巡る戦いで成果を上げました。特にデータセンターが集まる地域での議論が進行中です。これにより、再生可能エネルギーの推進が一層重要な課題として浮上しています。",
       "key_points": [
-        "Cyient SemiconductorがKinetic Technologiesを買収",
-        "データセンター市場への進出を狙う",
-        "特に電力関連の分野にフォーカス"
+        "アリゾナで再生可能エネルギーの支持が高まっている",
+        "全国最大の公営電力会社への影響が期待される",
+        "電力需要の急増に対応する必要性がある"
       ],
       "glossary": [
         {
-          "term": "Cyient Semiconductor",
-          "explain_ja": "インドの半導体企業で、技術革新を通じて市場に価値を提供している。"
-        },
-        {
-          "term": "Kinetic Technologies",
-          "explain_ja": "半導体および電力管理ソリューションを提供する企業。"
+          "term": "再生可能エネルギー",
+          "explain_ja": "自然のプロセスで再生されるエネルギー源。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データを保管、処理、配信するための施設。"
+          "explain_ja": "情報を集中管理、保管、処理する施設。"
+        },
+        {
+          "term": "公営電力会社",
+          "explain_ja": "公共の利益を目的とした電力供給を行う企業。"
         }
       ],
       "personal_actions": [
-        "データセンター市場のトレンドを確認する",
-        "関連する競争企業の動向を追跡する"
+        "地域の再生可能エネルギーの取り組みについて調べる",
+        "電力会社の最新の方針や計画を確認する",
+        "再生可能エネルギーを導入した設備を検討する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.theregister.com/2026/04/08/nuclear_investors_ai_demand/",
-      "source": "Theregister.com",
-      "publishedAt": "2026-04-08T11:21:10Z",
-      "title": "Investors are going nuclear to keep UK's AI datacenters fed",
-      "title_ja": "投資家が英国のAIデータセンターを支えるために原子力に注目",
-      "summary_ja": "英国内のデータセンターを支えるために、原子力が新たな投資対象として注目されている。これは、AIインフラの急成長と地政学的なエネルギーの不安定さが影響している。特に、持続可能なベースロード電源を求める動きが強まっており、投資金額は370百万ドルに達する見込みである。",
+      "url": "https://www.ibtimes.com.au/bloom-energy-stock-rockets-73-past-157-ai-data-center-power-crunch-drives-fuel-cell-demand-1865942",
+      "source": "Ibtimes.com.au",
+      "publishedAt": "2026-04-09T18:46:19Z",
+      "title": "Bloom Energy Stock Rockets 7.3% Past $157 as AI Data Center Power Crunch Drives Fuel Cell Demand",
+      "title_ja": "Bloom Energy株価が7.3%上昇し$157を突破、AIデータセンターの電力需要が燃料電池の需要を押し上げる",
+      "summary_ja": "Bloom Energy Corp.の株価が7.3%上昇し、157ドルを超えました。これは、人工知能データセンター向けの信頼できるオンサイト電力の需要が高まっているためです。投資家は、燃料電池メーカーの中での需要を見越して資金を投入しています。",
       "key_points": [
-        "AIインフラの拡大に伴い、原子力への投資が増加している。",
-        "地政学的なエネルギー不安定性が投資動向を後押し。",
-        "トラックシンのレポートによると、2024年には170百万ドルの急増が予想される。",
-        "英国の原子力スタートアップは、特にアビングドンとオックスフォード周辺に集中している。",
-        "持続可能で安定した電源供給を提供することが期待されているが、技術開発には時間がかかる。"
+        "Bloom Energy株が7.3%上昇し、157ドルを超える",
+        "AIデータセンター向けのオンサイト電力需要が増加",
+        "燃料電池技術への関心が高まる中での投資家の反応"
       ],
       "glossary": [
         {
-          "term": "ベースロード電源",
-          "explain_ja": "常に安定して供給できる電力源のこと。"
+          "term": "Bloom Energy",
+          "explain_ja": "ソリッドオキサイド燃料電池を製造する企業。"
         },
         {
-          "term": "小型モジュール炉（SMR）",
-          "explain_ja": "小規模でモジュール化された原子炉。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能関連の処理を行うためのデータセンター。"
+        },
+        {
+          "term": "燃料電池",
+          "explain_ja": "化学エネルギーを電気エネルギーに変換する装置。"
         }
       ],
       "personal_actions": [
-        "自社のエネルギー調達の多様化を検討する。",
-        "データセンター運営における持続可能なエネルギーの利用計画を策定する。",
-        "原子力や再生可能エネルギーに関する最新情報を追う。"
+        "Bloom Energyの財務状況を確認して投資判断を考える",
+        "データセンター向けの電力供給の多様化を検討する",
+        "燃料電池技術の最新動向を追いかける"
       ],
       "tags": [
         "DC",
@@ -71,30 +74,36 @@
       ]
     },
     {
-      "url": "https://www.techtarget.com/searchenterpriseai/tip/How-to-choose-a-data-center-for-AI-workloads",
-      "source": "Techtarget.com",
-      "publishedAt": "2026-04-08T10:18:00Z",
-      "title": "How to choose a data center for AI workloads",
-      "title_ja": "AIワークロードに適したデータセンターの選び方",
-      "summary_ja": "AIワークロードをサポートするデータセンターの選定には、電力やネットワーク容量といった変数が影響します。しかし、すべてのAIワークロードが最も強力なデータセンターの能力を必要とするわけではありません。適切な選択を行うことで、効率的な運用が可能になります。",
+      "url": "https://www.ibtimes.com.au/sandisk-stock-explodes-75-840-ai-data-center-demand-ignites-flash-memory-rally-1865940",
+      "source": "Ibtimes.com.au",
+      "publishedAt": "2026-04-09T18:43:12Z",
+      "title": "SanDisk Stock Explodes 7.5% to $840 as AI Data Center Demand Ignites Flash Memory Rally",
+      "title_ja": "SanDiskの株価が7.5%急上昇、AIデータセンター需要がフラッシュメモリラリーを加速",
+      "summary_ja": "SanDiskの株価が7.5%上昇し、840ドルに達しました。これは、人工知能データセンターにおける高容量ストレージ需要が高まっているためです。この動きは、NANDフラッシュとソリッドステートドライブを専門とする同社にとって、記録的な高値を更新する要因となりました。",
       "key_points": [
-        "データセンターの電力とネットワーク容量がAIワークロードに重要な影響を与える",
-        "すべてのAIワークロードが高性能の施設を必要としない",
-        "選定時に業務の特性を考慮する必要がある"
+        "SanDiskの株価が7.5%上昇し840ドルに達した。",
+        "AIデータセンターにおける高容量ストレージの需要が急増している。",
+        "この需要はフラッシュメモリ市場全体に影響を与えている。",
+        "SanDiskはNANDフラッシュおよびSSDの専門メーカーである。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略称で、人間の知能を模倣することを目的とした技術。"
+          "term": "NANDフラッシュ",
+          "explain_ja": "不揮発性メモリの一種で、データ保存に広く使用されている。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、処理、配信を行うための施設。"
+          "term": "SSD",
+          "explain_ja": "ソリッドステートドライブの略で、データストレージの高速化を実現するデバイス。"
+        },
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能の計算処理を行うために特化したデータセンター。"
         }
       ],
       "personal_actions": [
-        "選定を予定しているデータセンターの電力とネットワーク能力を確認する",
-        "自社のAIワークロードの特性を整理し、それに合ったデータセンターの条件を明確にする"
+        "SanDiskの株価動向を確認し、投資判断を行う。",
+        "AI関連のストレージ需要に影響を与える技術革新を調査する。",
+        "データセンターのストレージ要件に関する最新のトレンドを把握する。"
       ],
       "tags": [
         "DC",
