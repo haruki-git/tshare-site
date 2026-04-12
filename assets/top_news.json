@@ -1,107 +1,105 @@
 {
-  "date": "2026-04-12",
-  "generatedAtJST": "2026-04-12T07:15:33.446+09:00",
+  "date": "2026-04-13",
+  "generatedAtJST": "2026-04-13T07:15:31.841+09:00",
   "items": [
     {
-      "url": "https://oilprice.com/Energy/Energy-General/OpenAI-Freezes-UK-AI-Data-Center-Plans-Over-Power-Prices-Red-Tape.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-04-10T18:00:00Z",
-      "title": "OpenAI Freezes UK AI Data Center Plans Over Power Prices, Red Tape",
-      "title_ja": "OpenAI、英国のAIデータセンター計画を凍結—電力価格と規制の壁",
-      "summary_ja": "OpenAIは、英国での次世代AIインフラの構築計画を凍結しました。その理由は、規制条件と高いエネルギーコストが長期的な投資にとって大きな障害であるとされています。特に英国のエネルギー環境は企業にとって厳しいものであり、この決定は予想外ではありません。",
+      "url": "https://www.digitimes.com/news/a20260411VL202/ai-server-growth-odm-taiwan-ems.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-04-11T20:33:00Z",
+      "title": "How long can the AI server ODM boom last as growth begins to slow",
+      "title_ja": "AIサーバーODMブームの持続可能性と成長の鈍化",
+      "summary_ja": "AIサーバーのODM市場において、成長の鈍化が見られ始めています。ヒントとして、ODM業者はこの変化に対処する必要があり、今後のビジネス戦略を見直すことが求められています。この状況は、業界全体に影響を及ぼし、持続可能な成長を考える上での重要な要素となるでしょう。",
       "key_points": [
-        "OpenAIが英国でのAIデータセンター計画を凍結した。",
-        "高エネルギーコストが主要な障害となっている。",
-        "規制条件も投資の足かせとなっている。",
-        "英国のエネルギー市場は企業にとって厳しい状況にある。",
-        "次世代AIインフラの構築が困難な状況。"
+        "AIサーバーODM市場の成長が鈍化",
+        "ODM業者はビジネス戦略の見直しが必要",
+        "市場の変化への適応が求められる"
+      ],
+      "glossary": [
+        {
+          "term": "ODM",
+          "explain_ja": "OEM（相手先商標製造）と似ているが、自社ブランドで製品を販売する。"
+        },
+        {
+          "term": "AIサーバー",
+          "explain_ja": "人工知能技術を運用するために特化したサーバー。"
+        }
+      ],
+      "personal_actions": [
+        "現在の市場動向を確認し、ビジネス戦略を再評価する",
+        "競合他社の動向を追い、差別化ポイントを見つける"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://financialpost.com/pmn/business-pmn/pjm-targets-15-gigawatts-of-new-power-for-data-center-boom",
+      "source": "Financial Post",
+      "publishedAt": "2026-04-11T16:35:54Z",
+      "title": "PJM Targets 15 Gigawatts of New Power for Data Center Boom",
+      "title_ja": "PJM、データセンターの急増に向けて15000メガワットの新電源を目指す",
+      "summary_ja": "PJMインタコネクションLLCは、人工知能の急増による電力不足に対処するために15000メガワットの新電源確保を目指す緊急提案を行っている。この動きは、データセンターの需要の高まりを背景にしている。新たな電源の確保は、今後のデータセンターの運営における重要な要素となるだろう。",
+      "key_points": [
+        "PJMが15000メガワットの電力供給を求めている。",
+        "人工知能の需要増加が電力不足を引き起こしている。",
+        "新電源の提案は緊急のものである。",
+        "データセンターの拡大に伴う影響が見込まれる。"
+      ],
+      "glossary": [
+        {
+          "term": "PJM Interconnection LLC",
+          "explain_ja": "アメリカの電力市場を運営する会社で、多くの州に電力を供給している。"
+        },
+        {
+          "term": "gigawatt (GW)",
+          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する。"
+        }
+      ],
+      "personal_actions": [
+        "地域の電力供給の状況を把握する。",
+        "データセンターの電力需要について社内で確認する。",
+        "新たな電源供給の提案に関する情報を収集する。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.digitimes.com/news/a20260410VL219/infrastructure-ceo-gitex-data-center-asia.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-04-11T08:13:57Z",
+      "title": "AdaniConneX CEO outlines gigawatt-scale India data center push amid AI infrastructure surge",
+      "title_ja": "アダニコネックスCEO、AIインフラの急増に対応したインドのギガワット規模データセンター推進を発表",
+      "summary_ja": "アダニコネックスのCEOは、AIの成長に伴い、インドにおけるデータセンターのギガワット規模の拡張計画を明らかにしました。インドは急速なデジタル化を進めており、そのためのインフラ強化が急務とされています。このプロジェクトは、地域経済の成長や雇用創出など、広範な影響をもたらすことが予想されます。",
+      "key_points": [
+        "アダニコネックスがインドでギガワット規模のデータセンターを推進",
+        "AIのインフラ需要が急増している背景",
+        "デジタル化の進展に伴うインフラ強化の重要性",
+        "地域経済への影響と雇用創出の可能性",
+        "中長期的な計画としての展望"
       ],
       "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略で、機械が人間の知能を模倣する技術。"
+          "explain_ja": "人工知能（Artificial Intelligence）の略で、コンピュータが人間のように学習や判断を行う技術。"
         },
         {
-          "term": "Stargate",
-          "explain_ja": "OpenAIの次世代AIインフラ構築計画の名称。"
+          "term": "データセンター",
+          "explain_ja": "情報を集中管理・保管する施設で、サーバーや通信機器が設置されている。"
+        },
+        {
+          "term": "ギガワット",
+          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する。大規模な発電所やデータセンターの電力需要を示す。"
         }
       ],
       "personal_actions": [
-        "社内のエネルギーコスト管理を見直す。",
-        "最新の規制動向を確認し、影響を評価する。"
+        "データセンターの設計や設備投資についての最新情報を入手する",
+        "地域のデジタルインフラ整備のニーズを確認する",
+        "自社のAI活用に向けたインフラ準備状況を見直す"
       ],
       "tags": [
         "DC",
         "AI"
-      ]
-    },
-    {
-      "url": "https://www.techpowerup.com/348145/ddr4-prices-finally-cool-with-5-drop-after-2-200-surge",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-04-10T17:39:27Z",
-      "title": "DDR4 Prices Finally Cool With 5% Drop After 2,200% Surge",
-      "title_ja": "DDR4価格が2,200%の急騰後に5%の下落を示す",
-      "summary_ja": "DDR4価格がついに緩和の兆しを見せており、16 Gbスポット価格は3月に5%の修正が見られました。この価格変動は、AIデータセンター拡張による需要増加が原因です。その結果、多くの消費者が大容量RAMを搭載したシステムへのアップグレードを断念しましたが、今後の改善が期待されています。",
-      "key_points": [
-        "DDR4のスポット価格が3月に5%下落。",
-        "昨年2,200%の価格急騰があった。",
-        "AIデータセンターがDDR生産を吸収し、価格上昇を引き起こした。",
-        "契約価格とスポット価格の違いが理解されるべき。",
-        "DDR4とDDR5の供給と需要動態に顕著な違いがある。"
-      ],
-      "glossary": [
-        {
-          "term": "DDR4",
-          "explain_ja": "ダブルデータレート4世代のDRAMで、主にPCやサーバーで使用されるメモリ技術。"
-        },
-        {
-          "term": "スポット価格",
-          "explain_ja": "契約なしで即時の価格提供を行うメモリ取引の形式。"
-        },
-        {
-          "term": "契約価格",
-          "explain_ja": "メモリメーカーが大口購入者（PC OEMなど）と合意する価格。"
-        }
-      ],
-      "personal_actions": [
-        "最新のDDRメモリの価格動向を定期的にチェックする。",
-        "必要なメモリ容量に応じてアップグレードプランを検討する。",
-        "契約や購入のチャンスがある場合、要件を明確にする。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.techtarget.com/searchenterpriseai/feature/GenAI-data-center-infrastructure-reshapes-business-processes",
-      "source": "Techtarget.com",
-      "publishedAt": "2026-04-10T16:36:00Z",
-      "title": "GenAI data center infrastructure reshapes business processes",
-      "title_ja": "GenAIデータセンターインフラがビジネスプロセスを再構築",
-      "summary_ja": "GenAIを支えるデータセンターの構築と改修は、もはや「いつ実施するか」が重要な課題となっています。これは、電力の要件、グリッド接続、モデル訓練、許認可を含む広範な計画を必要とします。このシフトは、企業のビジネスプロセスに深遠な影響を与えると考えられています。",
-      "key_points": [
-        "GenAI向けデータセンターの構築は必須",
-        "電力要件とグリッド接続の重要性",
-        "モデル訓練がプロセスに及ぼす影響",
-        "許認可手続きが新たな課題"
-      ],
-      "glossary": [
-        {
-          "term": "GenAI",
-          "explain_ja": "生成的人工知能（Generative AI）の略。データを基に新しいコンテンツを生成する技術。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データの保存、処理、管理を行う専用施設。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの電力要件を再評価する",
-        "グリッド接続の状態を確認する",
-        "モデル訓練に必要なリソースを整理する"
-      ],
-      "tags": [
-        "DC"
       ]
     }
   ]
