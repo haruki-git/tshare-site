@@ -1,105 +1,112 @@
 {
-  "date": "2026-04-13",
-  "generatedAtJST": "2026-04-13T07:15:31.841+09:00",
+  "date": "2026-04-14",
+  "generatedAtJST": "2026-04-14T07:15:41.582+09:00",
   "items": [
     {
-      "url": "https://www.digitimes.com/news/a20260411VL202/ai-server-growth-odm-taiwan-ems.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-04-11T20:33:00Z",
-      "title": "How long can the AI server ODM boom last as growth begins to slow",
-      "title_ja": "AIサーバーODMブームの持続可能性と成長の鈍化",
-      "summary_ja": "AIサーバーのODM市場において、成長の鈍化が見られ始めています。ヒントとして、ODM業者はこの変化に対処する必要があり、今後のビジネス戦略を見直すことが求められています。この状況は、業界全体に影響を及ぼし、持続可能な成長を考える上での重要な要素となるでしょう。",
+      "url": "https://alltoc.com/tech/whats-happening-with-openais-stargate-uk",
+      "source": "Alltoc.com",
+      "publishedAt": "2026-04-12T12:02:02Z",
+      "title": "What’s happening with OpenAI’s Stargate UK?",
+      "title_ja": "OpenAIのStargate UKに何が起こったのか？",
+      "summary_ja": "OpenAIは、コストと規制の理由からStargate UKデータセンターの計画を一時停止しました。この決定は、大規模なAIインフラ拡張の一環としてのコンピュータ容量の拡大を目指していたため、影響が大きいです。電力コストや許可手続きの遅延が主な障害となり、AI業界全体のインフラ計画にも波及効果が生じる可能性があります。",
       "key_points": [
-        "AIサーバーODM市場の成長が鈍化",
-        "ODM業者はビジネス戦略の見直しが必要",
-        "市場の変化への適応が求められる"
+        "高コストのエネルギーと規制の環境が障害",
+        "データセンターは予測可能な電力料金に依存",
+        "AIインフラ拡張が停滞すると、モデル訓練や推論の時間に影響",
+        "地方の投資計画やサプライチェーンにも影響",
+        "他のAIインフラプロジェクトも同様の課題に直面する可能性"
       ],
       "glossary": [
         {
-          "term": "ODM",
-          "explain_ja": "OEM（相手先商標製造）と似ているが、自社ブランドで製品を販売する。"
+          "term": "Stargate UK",
+          "explain_ja": "OpenAIによる英国におけるデータセンターのプロジェクト。"
         },
         {
-          "term": "AIサーバー",
-          "explain_ja": "人工知能技術を運用するために特化したサーバー。"
+          "term": "AI",
+          "explain_ja": "人工知能。環境や条件に応じて自律的に学習・判断する技術。"
         }
       ],
       "personal_actions": [
-        "現在の市場動向を確認し、ビジネス戦略を再評価する",
-        "競合他社の動向を追い、差別化ポイントを見つける"
+        "データセンターの計画状況に関する最新情報をフォローする",
+        "電力コストや規制動向について業界ニュースをチェックする",
+        "AIインフラ関連のポリシー変更について知識を深める"
       ],
       "tags": [
         "AI"
       ]
     },
     {
-      "url": "https://financialpost.com/pmn/business-pmn/pjm-targets-15-gigawatts-of-new-power-for-data-center-boom",
-      "source": "Financial Post",
-      "publishedAt": "2026-04-11T16:35:54Z",
-      "title": "PJM Targets 15 Gigawatts of New Power for Data Center Boom",
-      "title_ja": "PJM、データセンターの急増に向けて15000メガワットの新電源を目指す",
-      "summary_ja": "PJMインタコネクションLLCは、人工知能の急増による電力不足に対処するために15000メガワットの新電源確保を目指す緊急提案を行っている。この動きは、データセンターの需要の高まりを背景にしている。新たな電源の確保は、今後のデータセンターの運営における重要な要素となるだろう。",
+      "url": "https://freerepublic.com/focus/f-news/4374565/posts",
+      "source": "Freerepublic.com",
+      "publishedAt": "2026-04-12T03:03:14Z",
+      "title": "Elon Musk’s xAI faces fresh opposition after landing permit for Mississippi power plant",
+      "title_ja": "イーロン・マスクのxAI、ミシシッピ州の発電所許可取得後に新たな反対に直面",
+      "summary_ja": "イーロン・マスクのxAIは、ミシシッピ州での新しいメタンガス燃焼発電所建設の許可を巡り、環境団体から法的挑戦を受けています。これらの団体は許可申請に不備があったと主張しており、調査プロセスが急いで行われたと指摘しています。発電所は近隣のメンフィスのデータセンターに電力を供給する予定で、地域経済に大きな影響を及ぼすと考えられています。",
       "key_points": [
-        "PJMが15000メガワットの電力供給を求めている。",
-        "人工知能の需要増加が電力不足を引き起こしている。",
-        "新電源の提案は緊急のものである。",
-        "データセンターの拡大に伴う影響が見込まれる。"
+        "xAIがミシシッピ州にメタンガス発電所建設の許可を取得。",
+        "環境団体が不備のある許可を巡り法的に挑戦。",
+        "xAIの発電所はメンフィスのデータセンターに電力供給を予定。",
+        "プロジェクトはミシシッピ州史上最大の民間投資とされる約200億ドルの投資を含む。",
+        "地域住民からの騒音や汚染への懸念が高まっている。"
       ],
       "glossary": [
         {
-          "term": "PJM Interconnection LLC",
-          "explain_ja": "アメリカの電力市場を運営する会社で、多くの州に電力を供給している。"
+          "term": "xAI",
+          "explain_ja": "イーロン・マスクが関与する人工知能企業。"
         },
         {
-          "term": "gigawatt (GW)",
-          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する。"
+          "term": "メタンガス",
+          "explain_ja": "主に天然ガスに含まれる温室効果ガスの一種。"
+        },
+        {
+          "term": "NAACP",
+          "explain_ja": "アフリカ系アメリカ人の権利擁護のための非営利団体。"
         }
       ],
       "personal_actions": [
-        "地域の電力供給の状況を把握する。",
-        "データセンターの電力需要について社内で確認する。",
-        "新たな電源供給の提案に関する情報を収集する。"
+        "地元の環境問題についての情報を集める。",
+        "企業の環境への影響について意見を持ち、地域社会で話し合う。",
+        "関連する法律や規制の変更について注意深く監視する。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.digitimes.com/news/a20260410VL219/infrastructure-ceo-gitex-data-center-asia.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-04-11T08:13:57Z",
-      "title": "AdaniConneX CEO outlines gigawatt-scale India data center push amid AI infrastructure surge",
-      "title_ja": "アダニコネックスCEO、AIインフラの急増に対応したインドのギガワット規模データセンター推進を発表",
-      "summary_ja": "アダニコネックスのCEOは、AIの成長に伴い、インドにおけるデータセンターのギガワット規模の拡張計画を明らかにしました。インドは急速なデジタル化を進めており、そのためのインフラ強化が急務とされています。このプロジェクトは、地域経済の成長や雇用創出など、広範な影響をもたらすことが予想されます。",
+      "url": "https://www.rte.ie/news/2026/0412/1567852-transport-traffic-disruption/",
+      "source": "RTE",
+      "publishedAt": "2026-04-12T19:03:15Z",
+      "title": "Transport disruption continues after protests",
+      "title_ja": "抗議活動後の交通混乱が続く",
+      "summary_ja": "ダブリンのオコネルストリートが月曜の朝に再開される見込みであるが、ブロックの影響で主要道路が長期間閉鎖されていた。抗議活動は約1週間続き、公共交通機関に多大な影響を及ぼした。交通機関や約1週間の混乱が続いているため、通勤者は最新情報を確認する必要がある。",
       "key_points": [
-        "アダニコネックスがインドでギガワット規模のデータセンターを推進",
-        "AIのインフラ需要が急増している背景",
-        "デジタル化の進展に伴うインフラ強化の重要性",
-        "地域経済への影響と雇用創出の可能性",
-        "中長期的な計画としての展望"
+        "O'Connell Streetは月曜の朝に再開予定。",
+        "抗議活動によって公共交通機関が大幅に影響を受けた。",
+        "Dublin BusやLuasの運行ルートが制限されている。",
+        "一晩の警察作戦でブロックが解除された。",
+        "M1、M8、M11/N11の各所で道路の混乱が報告されている。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略で、コンピュータが人間のように学習や判断を行う技術。"
+          "term": "Dublin Bus",
+          "explain_ja": "ダブリンを中心に運行されている公共バスサービス。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "情報を集中管理・保管する施設で、サーバーや通信機器が設置されている。"
+          "term": "Luas",
+          "explain_ja": "ダブリンで運行されているライトレールトランジットシステム。"
         },
         {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する。大規模な発電所やデータセンターの電力需要を示す。"
+          "term": "Transport Infrastructure Ireland (TII)",
+          "explain_ja": "アイルランドの交通インフラに関する計画と管理を行う組織。"
         }
       ],
       "personal_actions": [
-        "データセンターの設計や設備投資についての最新情報を入手する",
-        "地域のデジタルインフラ整備のニーズを確認する",
-        "自社のAI活用に向けたインフラ準備状況を見直す"
+        "運行状況や交通情報を事前にチェックし、出発時間を調整する。",
+        "旅行を計画する際は、主要道路の閉鎖状況を確認する。",
+        "公共交通機関の最新情報をソーシャルメディアで確認する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "その他"
       ]
     }
   ]
