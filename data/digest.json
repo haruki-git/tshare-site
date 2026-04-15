@@ -1,106 +1,112 @@
 {
-  "date": "2026-04-15",
-  "generatedAtJST": "2026-04-15T07:15:49.302+09:00",
+  "date": "2026-04-16",
+  "generatedAtJST": "2026-04-16T07:16:03.769+09:00",
   "items": [
     {
-      "url": "https://economictimes.indiatimes.com/opinion/et-commentary/gulf-storm-india-should-be-evaluated-as-a-strategic-locational-hedge-for-co-sharing-gcc-data-centre-infra/articleshow/130243269.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-04-13T18:13:55Z",
-      "title": "Gulf storm: India should be evaluated as a strategic locational hedge for co-sharing GCC data centre infra",
-      "title_ja": "インドはGCCデータセンターインフラの共同利用の戦略的拠点として評価されるべき",
-      "summary_ja": "最近の西アジアにおけるクラウドデータセンターへの攻撃が、新たな地政学的リスクを浮き彫りにしている。ハイパースケールプロバイダーは世界的なインフラを再評価しており、インドはデータセンター拡張のための安全で安定した環境を提供している。これにより、インドはGCCとのデータセンターインフラの共同利用において戦略的な位置を得る可能性が高い。",
+      "url": "https://www.channelnewsasia.com/business/naacp-sues-musks-xai-alleging-illegal-operation-gas-turbines-6056721",
+      "source": "CNA",
+      "publishedAt": "2026-04-14T20:12:57Z",
+      "title": "NAACP sues Musk's xAI, alleging illegal operation of gas turbines",
+      "title_ja": "NAACPがムスクのxAIを提訴、ガスタービンの不正運転を主張",
+      "summary_ja": "NAACPは、ムスクが設立したxAIとその子会社を提訴しました。訴えによると、彼らはミシシッピ州で24基以上のガスタービンを不正に運転し、データセンターに電力を供給しているとされています。この行為は地元住民に健康リスクをもたらしていると非難されています。",
       "key_points": [
-        "最近、西アジアのデータセンターが攻撃され、地政学的リスクが浮上している。",
-        "ハイパースケールプロバイダーがグローバルインフラの見直しを進めている。",
-        "インドは安全で安定した環境を提供し、データセンター拡張に適している。",
-        "インドの政策はデータセンターの発展を支援することができる。",
-        "GCC諸国との共同利用において新たな戦略的利点が生まれる可能性がある。"
+        "NAACPがxAIとその子会社を提訴",
+        "ガスタービンを不正運転していると主張",
+        "ミシシッピ州において24基以上のタービンが関与",
+        "地元住民に健康リスクをもたらす可能性がある",
+        "Colossus 2データセンターへの電力供給が問題視されている"
       ],
       "glossary": [
         {
-          "term": "GCC",
-          "explain_ja": "湾岸協力会議（Gulf Cooperation Council）の略で、中東の6つの国の政治的および経済的な協力体。"
+          "term": "NAACP",
+          "explain_ja": "全米黒人地位向上協会。アメリカの最も大きな市民権団体の一つ。"
         },
         {
-          "term": "ハイパースケール",
-          "explain_ja": "大規模なデータセンターやクラウドコンピューティングインフラを指し、多くのサーバーとストレージを備えている。"
+          "term": "xAI",
+          "explain_ja": "イーロン・ムスクが設立した人工知能に関する企業。"
         },
         {
-          "term": "地政学的リスク",
-          "explain_ja": "地理的要因や政治的状況が経済や市場に与える影響を示す概念。"
+          "term": "ガスタービン",
+          "explain_ja": "ガスを燃料とするタービンエンジン。発電や航空機エンジンに使用される。"
         }
       ],
       "personal_actions": [
-        "データセンターのセキュリティポリシーを確認する。",
-        "新たなインフラ機会についてリサーチを行い、戦略を練る。",
-        "地政学的リスクへの対応策をチーム内で話し合う。"
+        "地域の環境影響を確認し、健康への影響を評価する",
+        "地元の住民と連携し、健康リスクについて話し合う",
+        "関連する法的情報や市民団体の活動をフォローする"
       ],
       "tags": [
         "その他"
       ]
     },
     {
-      "url": "https://yro.slashdot.org/story/26/04/13/0335254/maine-set-to-become-first-state-with-data-center-ban",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-04-13T16:00:00Z",
-      "title": "Maine Set To Become First State With Data Center Ban - Slashdot",
-      "title_ja": "メイン州、データセンター建設禁止の初の州に - Slashdot",
-      "summary_ja": "メイン州は、新しいデータセンターの建設を一時的に禁止する法律が進行中であり、これにより初の州となる見込みです。州議会は、2027年11月までの建設をブロックする法案を承認しました。また、この法案にはデータセンターが住民に影響を及ぼさないようにするための助言機関の設立も含まれています。この動きに対して州知事のジャネット・ミルズ氏は、一部地域の免除を提案しましたが、議会で否決されました。",
+      "url": "https://nypost.com/2026/04/14/business/1-4-trillion-utility-spending-spree-to-keep-up-with-ai-data-centers-could-hike-electric-bills-study/",
+      "source": "New York Post",
+      "publishedAt": "2026-04-14T19:46:47Z",
+      "title": "$1.4 trillion utility spending spree to keep up with AI data centers could hike electric bills: study",
+      "title_ja": "AIデータセンター対応で1.4兆ドルの公共事業支出が電気料金を引き上げる可能性：研究",
+      "summary_ja": "米国の公共事業がデータセンターの需要に対応するために、記録的な1.4兆ドルを電力網に投資する計画を立てている。この支出は、米国民の電気料金をさらに引き上げる可能性があるとする新しい研究が発表された。データセンターの急増が電力供給に影響を与えている背景が浮き彫りとなっている。この状況は、消費者に直接的な経済的影響を及ぼすだろう。",
       "key_points": [
-        "メイン州は新しいデータセンター建設の一時禁止法案を承認",
-        "禁止期間は2027年11月まで",
-        "法案にはデータセンターに関するガイドラインを提案する委員会の設立が含まれる",
-        "知事は一部地域の免除を提案したが、議会で否決された",
-        "知事は次の上院選に出馬中で、選挙戦が影響している可能性"
+        "米国の公共事業は1.4兆ドルを電力網に投資予定。",
+        "この投資はデータセンターの急増に対応するためのもの。",
+        "電気料金がさらに上昇する可能性がある。",
+        "研究は消費者への影響を指摘している。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを保管・管理するための施設で、高度な設備や電力が必要な場所。"
+          "explain_ja": "サーバーやストレージなどのコンピュータ機器を集約し、データの管理や処理を行う施設。"
         },
         {
-          "term": "法案",
-          "explain_ja": "議会で議論され、可決されることを目的とした公式な提案。"
+          "term": "公共事業",
+          "explain_ja": "政府が管理する、公共にサービスを提供するための企業や機関。"
         }
       ],
       "personal_actions": [
-        "データセンターに関連するプロジェクトの影響を確認する",
-        "エネルギーコストや地域社会への影響について情報収集する"
+        "地域の電力会社の最新の料金プランを確認する。",
+        "エネルギー効率の良い設備や電化製品を使用することを検討する。",
+        "データセンターに関する地域ニュースを定期的にチェックする。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.ibtimes.com.au/nebius-group-stock-surges-9-ai-factory-expansion-acquisition-talks-ignite-investor-frenzy-1866396",
-      "source": "Ibtimes.com.au",
-      "publishedAt": "2026-04-13T14:46:08Z",
-      "title": "Nebius Group Stock Surges 9% as AI Factory Expansion and Acquisition Talks Ignite Investor Frenzy",
-      "title_ja": "Nebius Group株価が9%上昇、AIファクトリー拡張と買収交渉が投資家の熱狂を呼ぶ",
-      "summary_ja": "Nebius Group NVの株価が月曜日の取引で約9%上昇し、157.91ドルに達しました。これは、急成長中のAIクラウドインフラプロバイダーが積極的なデータセンターの構築や主要顧客の契約獲得に注目されているためです。この動きは投資家の関心をさらに引き起こしています。",
+      "url": "https://www.theregister.com/2026/04/14/oracle_bloom_fuel_cells/",
+      "source": "Theregister.com",
+      "publishedAt": "2026-04-14T17:57:12Z",
+      "title": "Oracle taps Bloom for 2.8 GW of fuel cells to keep datacenter binge going",
+      "title_ja": "オラクル、データセンター拡張のために2.8 GWの燃料電池をBloom社に発注",
+      "summary_ja": "オラクルは米国におけるデータセンターの拡張に向け、Bloom社に最大2.8 GWの燃料電池システムを提供することを決定しました。既に1.2 GWの運用に向けた契約を結び、2027年までの導入が見込まれています。この動きは、オラクルのAIインフラ提供に伴う電力需要の急増に対応するためです。",
       "key_points": [
-        "Nebius Groupの株価が9%上昇。",
-        "株価は157.91ドルに達した。",
-        "同社はデータセンターの拡張を進めている。",
-        "主要顧客のコミットメントが増加している。",
-        "投資家の関心を集めている。"
+        "オラクルはBloom社と最大2.8 GWの燃料電池システム契約を締結",
+        "最初の1.2 GWの容量に関する導入が進行中で、2027年まで続く見込み",
+        "需要の増加により、米国の電力グリッドが圧迫されている",
+        "サーバーファームが自己発電を行う傾向が強まっている",
+        "燃料電池は迅速な導入が可能だが、コストや安全性に関する課題も存在"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。コンピュータが人間のように学習・判断する技術。"
+          "term": "Bloom Energy",
+          "explain_ja": "燃料電池とエネルギーソリューションを提供する企業。"
+        },
+        {
+          "term": "燃料電池",
+          "explain_ja": "化学エネルギーを電気エネルギーに変換する装置で、主に水素を燃料とする。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データの保存、処理、管理を行うための施設。多くのサーバーが集積している。"
+          "explain_ja": "サーバーやストレージなどが設置された施設で、データ処理や保存を行う。"
         }
       ],
       "personal_actions": [
-        "Nebius Groupに関連する最新のニュースを確認する。",
-        "データセンターの拡張や顧客動向について調査する。",
-        "投資ポートフォリオの見直しを行う。"
+        "燃料電池システムの導入状況に注目し、最新情報を確認する",
+        "オラクルのデータセンター関連のニュースを定期的にチェックする",
+        "エネルギー供給の選択肢について社内で話し合う"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     }
