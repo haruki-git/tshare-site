@@ -1,99 +1,108 @@
 {
-  "date": "2026-04-17",
-  "generatedAtJST": "2026-04-17T07:15:47.941+09:00",
+  "date": "2026-04-18",
+  "generatedAtJST": "2026-04-18T07:15:38.987+09:00",
   "items": [
     {
-      "url": "https://www.seattlepi.com/business/article/the-data-center-boom-meets-resistance-in-maine-as-22208020.php",
-      "source": "seattlepi.com",
-      "publishedAt": "2026-04-15T15:53:24Z",
-      "title": "The data center boom meets resistance in Maine as lawmakers pass a yearlong moratorium",
-      "title_ja": "メーン州、データセンターのブームに抵抗—1年間のモラトリアムを可決",
-      "summary_ja": "メーン州の議会は、エネルギーを大量に消費するデータセンターに対する全国初の州法によるモラトリアムを可決した。この措置は、テクノロジー企業の巨大な人工知能データセンターに対する政治的反発の広がりを示しており、ブラックアウトやエネルギーコストの上昇への懸念を引き起こしている。これにより、データセンターの建設や拡張が一時的に停止する影響が予想される。",
+      "url": "https://www.channelnewsasia.com/business/nisource-signs-long-term-power-deal-alphabet-expands-amazon-agreement-6062191",
+      "source": "CNA",
+      "publishedAt": "2026-04-16T21:53:19Z",
+      "title": "NiSource signs long-term power deal with Alphabet, expands Amazon agreement",
+      "title_ja": "NiSourceがAlphabetとの長期電力契約を締結、Amazonとの契約を拡大",
+      "summary_ja": "NiSourceは、Alphabetの子会社との長期エネルギー供給契約を締結した。この契約はインディアナ州北部にある大規模データセンターを支えるためのものである。また、Amazonとの契約も拡大し、電力供給のスピードを向上させる。これにより、データセンターの運営がより効率的になると期待されている。",
       "key_points": [
-        "メーン州の議会がデータセンターの1年間のモラトリアムを可決",
-        "このモラトリアムはエネルギー消費を抑えることを目的としている",
-        "データセンターの建設に対する政治的反発が高まっている",
-        "人工知能データセンターに関連する懸念が背景にある",
-        "ブラックアウトやエネルギーコストの上昇への対策としての措置"
+        "NiSourceがAlphabetとの長期エネルギー契約を発表。",
+        "契約はインディアナ州北部のデータセンターを支えるためのもの。",
+        "Amazonとの契約も拡大し、電力供給の効率を向上させる。",
+        "この取引はデータセンターの運営に重要な影響を与える見込み。"
       ],
       "glossary": [
         {
-          "term": "モラトリアム",
-          "explain_ja": "特定の活動や行動を一時的に停止することを指す。その間に状況の見直しなどが行われる。"
+          "term": "NiSource",
+          "explain_ja": "米国の電力会社であり、電力とガスの供給を行っている。"
+        },
+        {
+          "term": "Alphabet",
+          "explain_ja": "Googleの親会社で、テクノロジー関連の企業を運営している。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "大量のデータを保管、処理、配信するための施設。通常、高い電力を必要とする。"
+          "explain_ja": "コンピュータシステムや関連機器を集中管理する施設。"
         }
       ],
       "personal_actions": [
-        "地域でのデータセンター建設計画に関する情報を収集する",
-        "エネルギー消費の抑制に取り組むデータセンターへの関心を持つ",
-        "地域の政治状況についての理解を深めるために議会の動向を注視する"
+        "関連する電力供給計画や契約内容を確認する。",
+        "長期契約の影響を考慮し、エネルギー政策の変更に備える。",
+        "AlphabetやAmazonに関連するデータセンターの運用状況を把握する。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.ibtimes.com.au/carrier-global-stock-drops-8-residential-hvac-weakness-data-center-boom-offers-2026-hope-1866681",
-      "source": "Ibtimes.com.au",
-      "publishedAt": "2026-04-15T15:45:45Z",
-      "title": "Carrier Global Stock Drops 8% on Residential HVAC Weakness as Data Center Boom Offers 2026 Hope",
-      "title_ja": "キャリア・グローバル株が8%下落、住宅HVACの弱さが影響もデータセンターの成長が2026年に期待",
-      "summary_ja": "キャリア・グローバル社の株価は、住宅用暖房および冷却市場の低迷を受けて8%下落し、約59.48ドルとなった。投資家は、同社の第一四半期の業績報告を控え、この市場の継続的な弱さを懸念している。とはいえ、データセンター市場の成長が2026年に向けた希望を提供しています。",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/airflow-products-maker-madison-air-valued-at-15-7-billion-as-shares-rise-on-nyse-debut/articleshow/130314502.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-04-16T17:37:32Z",
+      "title": "Airflow products maker Madison Air valued at $15.7 billion as shares rise on NYSE debut",
+      "title_ja": "空調製品メーカーMadison AirがNYSE上場で157億ドルの評価",
+      "summary_ja": "Madison Air Solutionsは、NYSEに上場し、株価が18.5%上昇して156.5億ドルの評価に達しました。この成功したIPOは、AI駆動のデータセンター成長に対する強い投資家の関心を示しています。特に米国で今年最大のIPOとなり、業界への影響が注目されています。",
       "key_points": [
-        "キャリア・グローバルの株価が8%下落",
-        "住宅用HVAC市場における持続的な弱さが影響",
-        "第一四半期の業績報告を控える投資家の懸念",
-        "データセンター市場の成長が2026年の希望を示唆"
+        "Madison Air SolutionsがNYSEに上場",
+        "株価が18.5%上昇し、評価額は156.5億ドルに達す",
+        "今年の米国で最大のIPOの成功を収める",
+        "AI駆動のデータセンター成長に向けた投資家の関心が高まる",
+        "空調市場における技術革新の重要性が再確認される"
       ],
       "glossary": [
+        {
+          "term": "IPO",
+          "explain_ja": "新規公開株（Initial Public Offering）の略。企業が株式を公開市場で販売すること。"
+        },
         {
           "term": "HVAC",
-          "explain_ja": "Heating, Ventilation, and Air Conditioningの略。暖房、換気、空調システムを指す。"
+          "explain_ja": "Heating, Ventilation and Air Conditioningの略。空調設備の総称。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "コンピュータやストレージのハードウェアを集中的に管理、運用する施設。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略。機械が人間の知能を模倣する技術。"
         }
       ],
       "personal_actions": [
-        "自社のHVACシステムの健全性を確認し、必要なメンテナンスを計画する。",
-        "データセンターの需要増加に対する自社のサプライチェーンや資源の適応状況を確認する。"
+        "自社のデータセンターの空調設備の最新技術を調査する",
+        "AI駆動の技術を導入する検討を行う",
+        "投資家向けのセミナーや情報収集の機会を探す"
       ],
       "tags": [
-        "DC"
+        "AI"
       ]
     },
     {
-      "url": "https://www.newser.com/story/387388/maine-oks-first-statewide-ban-on-large-data-centers.html",
-      "source": "Newser",
-      "publishedAt": "2026-04-15T15:34:00Z",
-      "title": "Maine OKs First Statewide Ban on Large Data Centers",
-      "title_ja": "メイン州、大規模データセンターの全州禁止を承認",
-      "summary_ja": "メイン州は、電力コストや環境への影響を検討するために、20メガワット以上のデータセンター建設を2027年11月まで停止する全州的な法律を可決しました。新たに創設されるデータセンター調整委員会が影響を評価します。この動きは、電力コストが高い地域でのデータセンター建設に懸念を示すものです。メイン州は他の州でも同様の措置が検討されている中での先駆的な例となりました。",
+      "url": "https://siliconangle.com/2026/04/16/impinj-boosts-edge-computing-power-updated-r700-rain-rfid-reader/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-04-16T16:00:36Z",
+      "title": "Impinj boosts edge computing power in updated R700 RAIN RFID reader - SiliconANGLE",
+      "title_ja": "Impinj、R700 RAIN RFIDリーダーのエッジコンピューティング能力を強化",
+      "summary_ja": "Impinjは、より強力なプロセッサと拡張メモリを搭載したR700 RAIN RFIDリーダーのアップグレードを発表しました。この新しいモデルは、自律型アイテム追跡ソリューションの構築を支援し、より多くのタグ読み取りを効率的に行います。この改良により、企業はネットワーク帯域幅の消費を減らし、応答遅延を改善することが期待されています。",
       "key_points": [
-        "20メガワット以上のデータセンター建設を2027年11月まで禁止する法案が可決。",
-        "新しいデータセンター調整委員会が影響を評価する役割を担う。",
-        "メイン州は既に高い電力価格に悩む地域である。",
-        "数州や地方政府も類似の措置を検討中。",
-        "知事は計画中のプロジェクトには例外を設ける意向を示唆。"
+        "R700リーダーは、1GHzのデュアルコア64ビットARM A53プロセッサを搭載。",
+        "以前のモデルの2倍の処理性能と3倍の埋め込みアプリケーションメモリを有する。",
+        "新しいGen2X機能により、読み取り距離が延長され、特定のタグのみを応答させることが可能に。",
+        "処理をリーダー自体で行うことで、ネットワーク帯域を削減し、応答時間を改善。",
+        "すべてのR700ハードウェアバリアントをカバーする単一ファームウェアバージョンを提供。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存、管理、処理するための施設で、通常、大量の電力を消費する。"
+          "term": "RAIN RFID",
+          "explain_ja": "無線周波数識別（RFID）の一形式で、アイテムの自動追跡に使用される技術。"
         },
         {
-          "term": "メガワット",
-          "explain_ja": "電力の単位で、1メガワットは100万ワットに相当する。"
+          "term": "Gen2X",
+          "explain_ja": "ImpinjのRFIDタグの新世代機能で、読み取る距離とタグ選択の精度を向上させる。"
         }
       ],
       "personal_actions": [
-        "地域の電力使用量を見直し、効率的な使用を心がける。",
-        "今後のデータセンターに関する討論や調査結果をフォローする。",
-        "地域政策に対する意見を持ち、必要に応じて行動を起こす。"
+        "新しいR700リーダーの仕様を確認し、既存システムへの統合可能性を評価する。",
+        "G2X機能を活用したタグ管理のための補助ツールを検討する。",
+        "自身のビジネスにおけるアイテム追跡のニーズを見直し、最新技術がどのように役立つかを検討する。"
       ],
       "tags": [
         "DC"
