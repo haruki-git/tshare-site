@@ -1,111 +1,113 @@
 {
-  "date": "2026-04-18",
-  "generatedAtJST": "2026-04-18T07:15:38.987+09:00",
+  "date": "2026-04-19",
+  "generatedAtJST": "2026-04-19T07:15:53.814+09:00",
   "items": [
     {
-      "url": "https://www.channelnewsasia.com/business/nisource-signs-long-term-power-deal-alphabet-expands-amazon-agreement-6062191",
-      "source": "CNA",
-      "publishedAt": "2026-04-16T21:53:19Z",
-      "title": "NiSource signs long-term power deal with Alphabet, expands Amazon agreement",
-      "title_ja": "NiSourceがAlphabetとの長期電力契約を締結、Amazonとの契約を拡大",
-      "summary_ja": "NiSourceは、Alphabetの子会社との長期エネルギー供給契約を締結した。この契約はインディアナ州北部にある大規模データセンターを支えるためのものである。また、Amazonとの契約も拡大し、電力供給のスピードを向上させる。これにより、データセンターの運営がより効率的になると期待されている。",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/04/sagemaker-hyperpod-flexible-instance-groups/",
+      "source": "Amazon.com",
+      "publishedAt": "2026-04-17T20:03:00Z",
+      "title": "Amazon SageMaker HyperPod now supports flexible instance groups",
+      "title_ja": "Amazon SageMaker HyperPodが柔軟なインスタンスグループをサポート",
+      "summary_ja": "Amazon SageMaker HyperPodは、柔軟なインスタンスグループをサポートし、顧客は単一のインスタンスグループ内で複数のインスタンスタイプとサブネットを指定できるようになりました。これにより、トレーニングおよび推論負荷のオペレーションが簡素化され、運用のオーバーヘッドが軽減されます。新機能は、可用性ゾーンにまたがるインスタンスの最適配分を可能にし、コスト最適化とサブネットの利用促進に寄与します。",
       "key_points": [
-        "NiSourceがAlphabetとの長期エネルギー契約を発表。",
-        "契約はインディアナ州北部のデータセンターを支えるためのもの。",
-        "Amazonとの契約も拡大し、電力供給の効率を向上させる。",
-        "この取引はデータセンターの運営に重要な影響を与える見込み。"
+        "柔軟なインスタンスグループで複数のインスタンスタイプを指定可能",
+        "自動で優先度に基づくインスタンスのフォールバックが実施",
+        "トレーニング顧客はサブネット枯渇を避けられる",
+        "推論顧客は個別のインスタンスグループに再試行する必要がない",
+        "EKSオーケストレーターで利用可能な柔軟なインスタンスグループ"
       ],
       "glossary": [
         {
-          "term": "NiSource",
-          "explain_ja": "米国の電力会社であり、電力とガスの供給を行っている。"
+          "term": "Amazon SageMaker HyperPod",
+          "explain_ja": "機械学習モデルのトレーニングや推論を効率的に行うためのサービス。"
         },
         {
-          "term": "Alphabet",
-          "explain_ja": "Googleの親会社で、テクノロジー関連の企業を運営している。"
+          "term": "インスタンスグループ",
+          "explain_ja": "特定のインスタンスタイプの集合で、特定の目的のために利用される。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "コンピュータシステムや関連機器を集中管理する施設。"
+          "term": "EKS",
+          "explain_ja": "Amazon Elastic Kubernetes Service、Kubernetesを管理する完全マネージド型サービス。"
         }
       ],
       "personal_actions": [
-        "関連する電力供給計画や契約内容を確認する。",
-        "長期契約の影響を考慮し、エネルギー政策の変更に備える。",
-        "AlphabetやAmazonに関連するデータセンターの運用状況を把握する。"
+        "SageMakerの新機能を利用するために柔軟なインスタンスグループの設定を確認する",
+        "現在のインスタンス構成が新機能に適合するか評価する",
+        "トレーニングおよび推論の負荷バランシングを見直す"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/airflow-products-maker-madison-air-valued-at-15-7-billion-as-shares-rise-on-nyse-debut/articleshow/130314502.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-04-16T17:37:32Z",
-      "title": "Airflow products maker Madison Air valued at $15.7 billion as shares rise on NYSE debut",
-      "title_ja": "空調製品メーカーMadison AirがNYSE上場で157億ドルの評価",
-      "summary_ja": "Madison Air Solutionsは、NYSEに上場し、株価が18.5%上昇して156.5億ドルの評価に達しました。この成功したIPOは、AI駆動のデータセンター成長に対する強い投資家の関心を示しています。特に米国で今年最大のIPOとなり、業界への影響が注目されています。",
+      "url": "https://www.digitimes.com/news/a20260417VL210/jabil-optics-transceiver-module-partnership-manufacturing.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-04-17T04:10:56Z",
+      "title": "Sivers and Jabil partner on 1.6T optics to tackle AI power demands",
+      "title_ja": "SiversとJabilがAIの電力需要に対応する1.6T光モジュールで提携",
+      "summary_ja": "SiversとJabilはAIの電力需要を満たすために1.6T光トランシーバーモジュールの製造で提携した。このコラボレーションは、急速に増加するデータ量に対応するための新たなソリューションを提供することを目指している。今後、両社の技術が融合することで、高効率な通信インフラが期待される。",
       "key_points": [
-        "Madison Air SolutionsがNYSEに上場",
-        "株価が18.5%上昇し、評価額は156.5億ドルに達す",
-        "今年の米国で最大のIPOの成功を収める",
-        "AI駆動のデータセンター成長に向けた投資家の関心が高まる",
-        "空調市場における技術革新の重要性が再確認される"
+        "SiversとJabilが提携",
+        "1.6T光トランシーバーモジュールの製造に焦点",
+        "AIの電力需要に対応",
+        "急増するデータ量への対応を目指す",
+        "高効率な通信インフラの構築を期待"
       ],
       "glossary": [
         {
-          "term": "IPO",
-          "explain_ja": "新規公開株（Initial Public Offering）の略。企業が株式を公開市場で販売すること。"
-        },
-        {
-          "term": "HVAC",
-          "explain_ja": "Heating, Ventilation and Air Conditioningの略。空調設備の総称。"
-        },
-        {
           "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。機械が人間の知能を模倣する技術。"
+          "explain_ja": "人工知能（Artificial Intelligence）の略。"
+        },
+        {
+          "term": "光トランシーバー",
+          "explain_ja": "光信号を電気信号に変換するデバイス。"
+        },
+        {
+          "term": "モジュール",
+          "explain_ja": "特定の機能を持つ器具や部品の単位。"
         }
       ],
       "personal_actions": [
-        "自社のデータセンターの空調設備の最新技術を調査する",
-        "AI駆動の技術を導入する検討を行う",
-        "投資家向けのセミナーや情報収集の機会を探す"
+        "新技術の動向を定期的に確認する",
+        "関連するトレーニングに参加する",
+        "業界のイベントに参加して最新情報を得る"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://siliconangle.com/2026/04/16/impinj-boosts-edge-computing-power-updated-r700-rain-rfid-reader/",
-      "source": "SiliconANGLE News",
-      "publishedAt": "2026-04-16T16:00:36Z",
-      "title": "Impinj boosts edge computing power in updated R700 RAIN RFID reader - SiliconANGLE",
-      "title_ja": "Impinj、R700 RAIN RFIDリーダーのエッジコンピューティング能力を強化",
-      "summary_ja": "Impinjは、より強力なプロセッサと拡張メモリを搭載したR700 RAIN RFIDリーダーのアップグレードを発表しました。この新しいモデルは、自律型アイテム追跡ソリューションの構築を支援し、より多くのタグ読み取りを効率的に行います。この改良により、企業はネットワーク帯域幅の消費を減らし、応答遅延を改善することが期待されています。",
+      "url": "https://seclists.org/nanog/2026/Apr/45",
+      "source": "Seclists.org",
+      "publishedAt": "2026-04-17T19:22:39Z",
+      "title": "A NANOG 97 Keynote just Dropped, And it's a Big One",
+      "title_ja": "NANOG 97で重要な基調講演が発表されました",
+      "summary_ja": "NANOG 97大会でCogent Communicationsの創設者、Dave Schaefferが「AIのSRE：トークン化時代におけるネットワークの信頼性エンジニアリング」について講演します。AIスタックにおいてネットワークが重要なボトルネックとなっており、信頼性は単なる稼働時間だけでなく、パフォーマンスやスケールにまで及びます。この新しいルールにより、ネットワークエンジニアへの期待が変わってきています。",
       "key_points": [
-        "R700リーダーは、1GHzのデュアルコア64ビットARM A53プロセッサを搭載。",
-        "以前のモデルの2倍の処理性能と3倍の埋め込みアプリケーションメモリを有する。",
-        "新しいGen2X機能により、読み取り距離が延長され、特定のタグのみを応答させることが可能に。",
-        "処理をリーダー自体で行うことで、ネットワーク帯域を削減し、応答時間を改善。",
-        "すべてのR700ハードウェアバリアントをカバーする単一ファームウェアバージョンを提供。"
+        "講演者はCogent CommunicationsのDave Schaeffer。",
+        "テーマは「AIのSRE：トークン化時代におけるネットワークの信頼性エンジニアリング」。",
+        "AIスタックにおいてネットワークが重要な役割を果たしている。",
+        "信頼性は単なる稼働時間だけでなく、パフォーマンスも重視される。",
+        "ネットワークエンジニアに対する期待が変化している。"
       ],
       "glossary": [
         {
-          "term": "RAIN RFID",
-          "explain_ja": "無線周波数識別（RFID）の一形式で、アイテムの自動追跡に使用される技術。"
+          "term": "SRE",
+          "explain_ja": "Site Reliability Engineering（サイト信頼性エンジニアリング）の略。システムの信頼性を向上させるための技術的な実践を指す。"
         },
         {
-          "term": "Gen2X",
-          "explain_ja": "ImpinjのRFIDタグの新世代機能で、読み取る距離とタグ選択の精度を向上させる。"
+          "term": "トークン化",
+          "explain_ja": "デジタル資産を取引可能な単位に変換するプロセス。"
         }
       ],
       "personal_actions": [
-        "新しいR700リーダーの仕様を確認し、既存システムへの統合可能性を評価する。",
-        "G2X機能を活用したタグ管理のための補助ツールを検討する。",
-        "自身のビジネスにおけるアイテム追跡のニーズを見直し、最新技術がどのように役立つかを検討する。"
+        "ネットワークの信頼性向上のために、現在のインフラ状況を確認する。",
+        "AIスタックにおけるネットワークパフォーマンスのボトルネックを特定する。",
+        "今後の技術会議やセミナーに参加し、新しい情報を得る。"
       ],
       "tags": [
-        "DC"
+        "AI"
       ]
     }
   ]
