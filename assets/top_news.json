@@ -1,105 +1,123 @@
 {
-  "date": "2026-04-20",
-  "generatedAtJST": "2026-04-20T07:15:40.159+09:00",
+  "date": "2026-04-21",
+  "generatedAtJST": "2026-04-21T07:16:00.678+09:00",
   "items": [
     {
-      "url": "https://www.digitimes.com/news/a20260416VL216/cpu-demand-data-center-infrastructure-capacity.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-04-18T00:07:15Z",
-      "title": "Commentary: AI drives CPU crunch, lifting data center demand and pricing",
-      "title_ja": "AIが引き起こすCPU需要の高まり：データセンターの需要と価格上昇",
-      "summary_ja": "AI技術の進展により、CPUの需要が増加し、データセンターの需要と価格が上昇しています。これにより、インフラの整備が急務となり、特に高性能なコンピューティングリソースが求められるようになっています。結果として、データセンター業界全体に影響を与える可能性があります。",
+      "url": "https://www.phoronix.com/news/AMD-Harvested-GPUs-Linux",
+      "source": "Phoronix",
+      "publishedAt": "2026-04-19T13:25:50Z",
+      "title": "Valve Developer Further Improves Old AMD GPUs: HD 7870 XT Finally Working On Linux",
+      "title_ja": "Valveの開発者が古いAMD GPUをさらに改善：HD 7870 XTがLinuxで動作",
+      "summary_ja": "ValveのLinuxグラフィックスドライバーチームのTimur Kristófが、古いAMD Radeon GCN 1.0/1.1グラフィックスカードのサポートを改善しました。これにより、AMD Radeon HD 7870 XTがLinuxで初めて正常に動作するようになりました。このアップデートは、14年越しの問題を解決し、より良いパフォーマンスとRADV Vulkanサポートを提供します。",
       "key_points": [
-        "AI技術の進化がCPU需要を駆動している。",
-        "データセンターの需要が急増している。",
-        "CPUの価格が上昇している。",
-        "高性能コンピューティングリソースが必要とされている。"
+        "ValveのTimur KristófがAMD GPUのサポートを改善",
+        "Radeon HD 7870 XTがLinuxで初めて正常に動作",
+        "AMDGPUドライバの改善によるパフォーマンス向上",
+        "2013年からのバグレポートがあった",
+        "「ハーベストされた」GPUの扱いに変更を加えた",
+        "14年ぶりにRadeon HD 7870 XTがサポートされる"
       ],
       "glossary": [
         {
-          "term": "CPU",
-          "explain_ja": "中央処理装置。コンピュータの心臓部で、計算や処理を行う。"
+          "term": "AMDGPU",
+          "explain_ja": "AMDのグラフィックスカード用Linuxドライバ。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを集中して保管・管理・処理する施設。"
+          "term": "RADV",
+          "explain_ja": "Vulkan APIのためのオープンソースのAMDグラフィックスドライバ。"
+        },
+        {
+          "term": "GCN",
+          "explain_ja": "Graphics Core Nextの略で、AMDのGPUアーキテクチャの名称。"
+        },
+        {
+          "term": "TCC",
+          "explain_ja": "Texture Cache Configurationの略で、GPUのキャッシュ設定を指す。"
         }
       ],
       "personal_actions": [
-        "最新の市場動向を確認する。",
-        "CPUおよびデータセンターサービスの価格を調査する。",
-        "インフラ整備の計画を見直す。"
+        "自分の使用しているGPUがAMDGPUドライバに最適化されているか確認する",
+        "最新のLinuxカーネルやドライバにアップデートする",
+        "古いグラフィックスカードのサポート状況を調べて、新しい情報に目を通す"
       ],
       "tags": [
-        "DC",
+        "インフラ",
         "AI"
       ]
     },
     {
-      "url": "https://www.tweaktown.com/news/111106/valves-proton-11-beta-unlocks-more-playable-games-and-boosts-performance-for-steam-deck-and-linux-fans/index.html",
-      "source": "TweakTown",
-      "publishedAt": "2026-04-18T14:15:01Z",
-      "title": "Valve's Proton 11 beta unlocks more playable games and boosts performance for Steam Deck and Linux fans",
-      "title_ja": "ValveのProton 11ベータ版がSteam DeckとLinuxファンのためにプレイ可能ゲームを増やしパフォーマンスを向上",
-      "summary_ja": "ValveのProton 11.0-beta1は、Steam DeckおよびLinuxゲームの互換性を広げ、パフォーマンスを向上させる。Wine 11に基づいたこのリリースは、NTSyncサポートを追加し、CPUオーバーヘッドを削減、フレームレートを向上。これにより、古いゲームや新しいタイトルが安定して動作する可能性が高まる。",
+      "url": "https://economictimes.indiatimes.com/industry/telecom/telecom-news/ericsson-india-revenue-grows-29-to-rs-4228-crore-in-march-quarter/articleshow/130370713.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-04-19T12:56:38Z",
+      "title": "Ericsson India revenue grows 29% to Rs 4,228 crore in March quarter",
+      "title_ja": "エリクソンインド、2026年3月四半期に29%の収益増加",
+      "summary_ja": "エリクソンインドは2026年3月四半期に29%の収益増加を記録し、4228クロールに達しました。この成長は、インド国内での5G展開とネットワークのアップグレードに支えられています。インドはエリクソンのグローバルな収益において重要な要素となっています。",
       "key_points": [
-        "Proton 11がより広範なゲーム互換性とパフォーマンス向上を提供。",
-        "古いクラシックゲームや新作タイトルのサポートが追加され、Resident EvilやDino Crisisなどが含まれる。",
-        "NTSyncカーネルドライバサポートが導入され、CPUオーバーヘッドが削減され、フレームレートが安定。",
-        "新しいテクニカルアップデートがあり、Arm64ECビルド等が含まれる。",
-        "Xaliaのアップデートにより、ゲームパッドのサポートが改善され、キーボードやマウスなしでの操作が可能に。"
+        "エリクソンインドの収益が4228クロールに達した。",
+        "2026年3月四半期で29%の収益増加を記録。",
+        "5G展開が成長の主要因となっている。",
+        "ネットワークのアップグレードも影響を与えている。",
+        "インド市場はエリクソンにとって重要な貢献先。",
+        "国際的な収益成長に寄与している。"
       ],
       "glossary": [
         {
-          "term": "Proton",
-          "explain_ja": "WindowsゲームをLinux上でプレイするための互換性レイヤー。"
+          "term": "5G",
+          "explain_ja": "第5世代移動通信システム。高速通信と低遅延を特徴とする。"
         },
         {
-          "term": "Wine",
-          "explain_ja": "WindowsアプリケーションをUnix系OSで動作させるための互換性レイヤー。"
+          "term": "エリクソン",
+          "explain_ja": "スウェーデンの通信機器メーカー。世界的な通信網の構築に携わる。"
         },
         {
-          "term": "NTSync",
-          "explain_ja": "WindowsのNT同期モデルをLinuxカーネルに統合するサポート。"
+          "term": "ネットワークアップグレード",
+          "explain_ja": "通信網の性能向上や新技術の導入を行うこと。"
         }
       ],
       "personal_actions": [
-        "Proton 11ベータ版に参加し、新しいゲーム互換性とパフォーマンスの改善を試す。",
-        "ゲームパッドの設定を確認し、最新のアップデートでのゲーム体験を向上させる。",
-        "Steamの設定からProtonを有効にし、利用可能なゲームのリストを確認する。"
-      ],
-      "tags": [
-        "インフラ"
-      ]
-    },
-    {
-      "url": "https://www.cnet.com/tech/services-and-software/why-use-proxy-server-benefits-drawbacks-common-use-cases/",
-      "source": "CNET",
-      "publishedAt": "2026-04-18T12:00:00Z",
-      "title": "Why Use a Proxy Server? Benefits, Drawbacks and Common Use Cases",
-      "title_ja": "プロキシサーバーを使用する理由: 利点、欠点、一般的な使用例",
-      "summary_ja": "プロキシサーバーは、ウェブスクレイピングやネットワークパフォーマンスの向上に優れています。しかし、使用にはリスクや制限が伴います。これらを理解することで、安全かつ効率的にプロキシを利用することができます。",
-      "key_points": [
-        "プロキシはウェブスクレイピングに適している。",
-        "ネットワークパフォーマンスを改善する役割も果たす。",
-        "使用にはリスクと制限が存在する。"
-      ],
-      "glossary": [
-        {
-          "term": "プロキシサーバー",
-          "explain_ja": "ネットワークを通じてデータを中継するサーバーであり、プライバシーの保護やアクセス制限の回避に使用される。"
-        },
-        {
-          "term": "ウェブスクレイピング",
-          "explain_ja": "自動化ツールを用いてウェブサイトの情報を収集する技術。"
-        }
-      ],
-      "personal_actions": [
-        "プロキシサーバーを利用する際のリスクを調査する。",
-        "必要に応じてプロキシサーバーの設定を確認する。"
+        "自社のネットワークインフラが5G対応であるか確認する。",
+        "最新の通信技術に関するセミナーを受講して情報を更新する。",
+        "競合の動向も含めて市場調査を実施する。"
       ],
       "tags": [
         "その他"
+      ]
+    },
+    {
+      "url": "https://www.heathereatsalmondbutter.com/vip-gambling-networks-delivering-exclusive-premium-rewards/",
+      "source": "Heathereatsalmondbutter.com",
+      "publishedAt": "2026-04-19T05:27:26Z",
+      "title": "VIP Gambling Networks Delivering Exclusive Premium Rewards – Healthy Eating, Recipes, and Lifestyle Blog",
+      "title_ja": "VIPギャンブルネットワークが提供する専用プレミアム報酬",
+      "summary_ja": "VIPギャンブルネットワークは、現代のオンラインゲームのエコシステムにおける重要な要素として、高価値プレイヤー向けに特化した体験を提供しています。これらのネットワークは、プレイヤーが求めるプレミアムな報酬とパーソナライズされたサービスを実現し、プレイの効率性とプライバシーを重視します。結果として、ユーザーは安全性が確保された環境で、長期的にエンゲージメントを高められ、満足度の高いゲーム体験を享受することができます。",
+      "key_points": [
+        "VIPネットワークは独自のプレミアム報酬を提供し、プレイヤーの参加を促します。",
+        "高度なインフラストラクチャーにより、高速でスムーズなゲーム体験を保証します。",
+        "マルチレイヤーの暗号化と安全な認証メカニズムにより、セキュリティとプライバシーが保護されています。",
+        "個別のアカウントマネージャーによるパーソナライズされたサポートが提供されます。",
+        "プレイヤー向けの特別なゲームやイベントが用意され、コミュニティでの地位が強化されます。"
+      ],
+      "glossary": [
+        {
+          "term": "VIPギャンブルネットワーク",
+          "explain_ja": "高価値プレイヤー向けに特化したオンラインギャンブルのプラットフォーム。"
+        },
+        {
+          "term": "マルチレイヤー暗号化",
+          "explain_ja": "データの安全性を確保するために複数の暗号化技術を使用する手法。"
+        },
+        {
+          "term": "アカウントマネージャー",
+          "explain_ja": "VIPプレイヤーに対して個別のサポートを提供する担当者。"
+        }
+      ],
+      "personal_actions": [
+        "VIPギャンブルネットワークの利用規約を確認し、報酬プログラムを理解する。",
+        "プライバシー設定を見直し、アカウントの安全性を高めるための対策を講じる。",
+        "高価値プレイヤー向けの特典やサービスを利用するために、定期的に最新情報をチェックする。"
+      ],
+      "tags": [
+        "インフラ"
       ]
     }
   ]
