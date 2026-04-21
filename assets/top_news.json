@@ -1,123 +1,109 @@
 {
-  "date": "2026-04-21",
-  "generatedAtJST": "2026-04-21T07:16:00.678+09:00",
+  "date": "2026-04-22",
+  "generatedAtJST": "2026-04-22T07:15:42.283+09:00",
   "items": [
     {
-      "url": "https://www.phoronix.com/news/AMD-Harvested-GPUs-Linux",
-      "source": "Phoronix",
-      "publishedAt": "2026-04-19T13:25:50Z",
-      "title": "Valve Developer Further Improves Old AMD GPUs: HD 7870 XT Finally Working On Linux",
-      "title_ja": "Valveの開発者が古いAMD GPUをさらに改善：HD 7870 XTがLinuxで動作",
-      "summary_ja": "ValveのLinuxグラフィックスドライバーチームのTimur Kristófが、古いAMD Radeon GCN 1.0/1.1グラフィックスカードのサポートを改善しました。これにより、AMD Radeon HD 7870 XTがLinuxで初めて正常に動作するようになりました。このアップデートは、14年越しの問題を解決し、より良いパフォーマンスとRADV Vulkanサポートを提供します。",
+      "url": "https://www.theregister.com/2026/04/20/chase_77m_tax_subsidy_datacenter_job/",
+      "source": "Theregister.com",
+      "publishedAt": "2026-04-20T21:25:11Z",
+      "title": "Chase got a spiff of $77 million to create one job with New York datacenter",
+      "title_ja": "チェースがニューヨークのデータセンターに77百万ドルの税優遇を受けて1つの雇用を創出",
+      "summary_ja": "ニューヨーク州ロックランド郡がJPMorgan Chaseのデータセンター拡張に対して7700万ドルの税控除を承認し、結果的に1つのフルタイム雇用のみを創出することが明らかになりました。非営利団体Reinvent Albanyは、この取引を「アメリカ歴史上最も高額な政府助成金」と位置づけており、地方税payerの負担に対する疑問を提起しています。このプロジェクトは2028年までに完了予定ですが、今後のデータセンターに対する公共の関心が変化する可能性があります。",
       "key_points": [
-        "ValveのTimur KristófがAMD GPUのサポートを改善",
-        "Radeon HD 7870 XTがLinuxで初めて正常に動作",
-        "AMDGPUドライバの改善によるパフォーマンス向上",
-        "2013年からのバグレポートがあった",
-        "「ハーベストされた」GPUの扱いに変更を加えた",
-        "14年ぶりにRadeon HD 7870 XTがサポートされる"
+        "ロックランド郡が7700万ドルの税ブレークを承認したのは、実質1つの雇用のため。",
+        "Reinvent Albanyはこの助成金を「アメリカで記録された最も高い政府助成金」と主張。",
+        "プロジェクトは2028年までに完了する予定で、今後のデータセンターには公共の反応が異なる可能性あり。",
+        "JPMorganは新しいデータセンターを建設しつつ年間約60万ドルの税金を支払う。",
+        "一時雇用は1450件が見込まれているが、公式の雇用数には計上されていない。"
       ],
       "glossary": [
         {
-          "term": "AMDGPU",
-          "explain_ja": "AMDのグラフィックスカード用Linuxドライバ。"
+          "term": "税控除",
+          "explain_ja": "特定の経済活動に対して税金を減少させる制度。"
         },
         {
-          "term": "RADV",
-          "explain_ja": "Vulkan APIのためのオープンソースのAMDグラフィックスドライバ。"
-        },
-        {
-          "term": "GCN",
-          "explain_ja": "Graphics Core Nextの略で、AMDのGPUアーキテクチャの名称。"
-        },
-        {
-          "term": "TCC",
-          "explain_ja": "Texture Cache Configurationの略で、GPUのキャッシュ設定を指す。"
+          "term": "データセンター",
+          "explain_ja": "データの保存、管理、配信を行うための施設。"
         }
       ],
       "personal_actions": [
-        "自分の使用しているGPUがAMDGPUドライバに最適化されているか確認する",
-        "最新のLinuxカーネルやドライバにアップデートする",
-        "古いグラフィックスカードのサポート状況を調べて、新しい情報に目を通す"
+        "地元のデータセンタープロジェクトに関する公聴会や議論をチェックする。",
+        "経済発展機関の活動をフォローし、透明性の高い公共の監視を求める。",
+        "助成金や税控除に関する地域の状況を正しく理解するために、データを分析する。"
       ],
       "tags": [
-        "インフラ",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://economictimes.indiatimes.com/industry/telecom/telecom-news/ericsson-india-revenue-grows-29-to-rs-4228-crore-in-march-quarter/articleshow/130370713.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-04-19T12:56:38Z",
-      "title": "Ericsson India revenue grows 29% to Rs 4,228 crore in March quarter",
-      "title_ja": "エリクソンインド、2026年3月四半期に29%の収益増加",
-      "summary_ja": "エリクソンインドは2026年3月四半期に29%の収益増加を記録し、4228クロールに達しました。この成長は、インド国内での5G展開とネットワークのアップグレードに支えられています。インドはエリクソンのグローバルな収益において重要な要素となっています。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=181813290",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-04-20T19:12:21Z",
+      "title": "New Jersey datacenter expansion got $77m in tax breaks to create exactly one permanent job — JPMorgan's site already scored $35m and currently employs ju - Slashdot",
+      "title_ja": "ニュージャージーのデータセンター拡張が7700万ドルの税優遇を受け、 permanent job はわずか1つ",
+      "summary_ja": "ニュージャージー州のデータセンター拡張が7700万ドルの税優遇を受けているが、実際には1つの永久的な職位しか創出されない見込みである。この事例は、膨大な税金が投入される一方で、雇用創出の効果が限られていることを示している。企業が税優遇を受ける際の透明性や効果に疑問が生じる可能性がある。",
       "key_points": [
-        "エリクソンインドの収益が4228クロールに達した。",
-        "2026年3月四半期で29%の収益増加を記録。",
-        "5G展開が成長の主要因となっている。",
-        "ネットワークのアップグレードも影響を与えている。",
-        "インド市場はエリクソンにとって重要な貢献先。",
-        "国際的な収益成長に寄与している。"
+        "ニュージャージー州のデータセンター拡張に7700万ドルの税優遇。",
+        "新たに創出される永久的な職位は1つのみ。",
+        "JPMorganのサイトはすでに3500万ドルの税優遇を取得。",
+        "税金の投入に対する雇用創出の効果が限定的。",
+        "企業の税優遇政策に対する透明性の疑問。",
+        "地域経済に与える影響の再考が必要。"
       ],
       "glossary": [
         {
-          "term": "5G",
-          "explain_ja": "第5世代移動通信システム。高速通信と低遅延を特徴とする。"
+          "term": "税優遇",
+          "explain_ja": "政府が特定の企業や産業に対して税金を軽減する措置。"
         },
         {
-          "term": "エリクソン",
-          "explain_ja": "スウェーデンの通信機器メーカー。世界的な通信網の構築に携わる。"
-        },
-        {
-          "term": "ネットワークアップグレード",
-          "explain_ja": "通信網の性能向上や新技術の導入を行うこと。"
+          "term": "データセンター",
+          "explain_ja": "データを保存・管理・配信するための施設。"
         }
       ],
       "personal_actions": [
-        "自社のネットワークインフラが5G対応であるか確認する。",
-        "最新の通信技術に関するセミナーを受講して情報を更新する。",
-        "競合の動向も含めて市場調査を実施する。"
+        "地域の税優遇についての情報を収集し、影響を確認する。",
+        "データセンターの雇用状況や地域経済への影響を定期的に調査する。",
+        "企業の税優遇を常に監視し、必要に応じて意見を表明する。"
       ],
       "tags": [
-        "その他"
+        "DC"
       ]
     },
     {
-      "url": "https://www.heathereatsalmondbutter.com/vip-gambling-networks-delivering-exclusive-premium-rewards/",
-      "source": "Heathereatsalmondbutter.com",
-      "publishedAt": "2026-04-19T05:27:26Z",
-      "title": "VIP Gambling Networks Delivering Exclusive Premium Rewards – Healthy Eating, Recipes, and Lifestyle Blog",
-      "title_ja": "VIPギャンブルネットワークが提供する専用プレミアム報酬",
-      "summary_ja": "VIPギャンブルネットワークは、現代のオンラインゲームのエコシステムにおける重要な要素として、高価値プレイヤー向けに特化した体験を提供しています。これらのネットワークは、プレイヤーが求めるプレミアムな報酬とパーソナライズされたサービスを実現し、プレイの効率性とプライバシーを重視します。結果として、ユーザーは安全性が確保された環境で、長期的にエンゲージメントを高められ、満足度の高いゲーム体験を享受することができます。",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/new-jersey-datacenter-expansion-got-usd77m-in-tax-breaks-to-create-exactly-one-permanent-job-jpmorgans-site-already-scored-usd35m-and-currently-employs-just-25-workers",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-04-20T18:53:47Z",
+      "title": "New Jersey datacenter expansion got $77m in tax breaks to create exactly one permanent job — JPMorgan's site already scored $35m and currently employs just 25 workers",
+      "title_ja": "ニュージャージーのデータセンター拡張が7700万ドルの税控除を受けるも、創出されるのは1つの常勤職のみ",
+      "summary_ja": "ニュージャージーのデータセンター拡張が7700万ドルの税控除を受けましたが、実際には1つの常勤職しか創出されません。背景には、大規模な誘致政策があるものの、効果が薄いことが挙げられます。この状況は、今後の地域雇用や州の税収に影響を及ぼす可能性があります。",
       "key_points": [
-        "VIPネットワークは独自のプレミアム報酬を提供し、プレイヤーの参加を促します。",
-        "高度なインフラストラクチャーにより、高速でスムーズなゲーム体験を保証します。",
-        "マルチレイヤーの暗号化と安全な認証メカニズムにより、セキュリティとプライバシーが保護されています。",
-        "個別のアカウントマネージャーによるパーソナライズされたサポートが提供されます。",
-        "プレイヤー向けの特別なゲームやイベントが用意され、コミュニティでの地位が強化されます。"
+        "ニュージャージーのデータセンター拡張に7700万ドルの税控除が適用された。",
+        "この拡張により新たに創出される常勤職は1つのみである。",
+        "JPMorganのサイトは過去に3500万ドルの税控除を受けた。",
+        "現在、JPMorganの施設はわずか25名の従業員を雇用している。",
+        "地元の税収や雇用状況への影響が懸念されている。"
       ],
       "glossary": [
         {
-          "term": "VIPギャンブルネットワーク",
-          "explain_ja": "高価値プレイヤー向けに特化したオンラインギャンブルのプラットフォーム。"
+          "term": "tax breaks",
+          "explain_ja": "税控除。特定の条件を満たす事業や個人に対して課税を軽減する政策。"
         },
         {
-          "term": "マルチレイヤー暗号化",
-          "explain_ja": "データの安全性を確保するために複数の暗号化技術を使用する手法。"
+          "term": "permanent job",
+          "explain_ja": "常勤職。雇用契約に基づき、長期間にわたって勤務する職。"
         },
         {
-          "term": "アカウントマネージャー",
-          "explain_ja": "VIPプレイヤーに対して個別のサポートを提供する担当者。"
+          "term": "data center",
+          "explain_ja": "データセンター。データを集約、管理、処理するための施設。"
         }
       ],
       "personal_actions": [
-        "VIPギャンブルネットワークの利用規約を確認し、報酬プログラムを理解する。",
-        "プライバシー設定を見直し、アカウントの安全性を高めるための対策を講じる。",
-        "高価値プレイヤー向けの特典やサービスを利用するために、定期的に最新情報をチェックする。"
+        "地域の雇用状況を調査し、今後の変化に備える。",
+        "税控除の適用基準や効果について文書や報告書を確認する。",
+        "自社が受けている税控除制度の効果を見直す。"
       ],
       "tags": [
-        "インフラ"
+        "DC"
       ]
     }
   ]
