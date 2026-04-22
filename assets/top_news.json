@@ -1,106 +1,100 @@
 {
-  "date": "2026-04-22",
-  "generatedAtJST": "2026-04-22T07:15:42.283+09:00",
+  "date": "2026-04-23",
+  "generatedAtJST": "2026-04-23T07:15:49.814+09:00",
   "items": [
     {
-      "url": "https://www.theregister.com/2026/04/20/chase_77m_tax_subsidy_datacenter_job/",
-      "source": "Theregister.com",
-      "publishedAt": "2026-04-20T21:25:11Z",
-      "title": "Chase got a spiff of $77 million to create one job with New York datacenter",
-      "title_ja": "チェースがニューヨークのデータセンターに77百万ドルの税優遇を受けて1つの雇用を創出",
-      "summary_ja": "ニューヨーク州ロックランド郡がJPMorgan Chaseのデータセンター拡張に対して7700万ドルの税控除を承認し、結果的に1つのフルタイム雇用のみを創出することが明らかになりました。非営利団体Reinvent Albanyは、この取引を「アメリカ歴史上最も高額な政府助成金」と位置づけており、地方税payerの負担に対する疑問を提起しています。このプロジェクトは2028年までに完了予定ですが、今後のデータセンターに対する公共の関心が変化する可能性があります。",
+      "url": "https://www.dezeen.com/2026/04/21/atkinsrealis-nvidia-nuclear-powered-data-centres/",
+      "source": "Dezeen",
+      "publishedAt": "2026-04-21T16:55:04Z",
+      "title": "AtkinsRéalis to partner with Nvidia on nuclear-powered data centre design",
+      "title_ja": "AtkinsRéalisがNvidiaと提携し原子力データセンター設計を進める",
+      "summary_ja": "カナダのエンジニアリング会社AtkinsRéalisは、テクノロジー企業Nvidiaとの提携を発表した。このコラボレーションにより、原子力を利用したデータセンターの設計が進められる。新たなエネルギー源の開発が期待されており、データセンターの持続可能な運営に寄与する可能性がある。",
       "key_points": [
-        "ロックランド郡が7700万ドルの税ブレークを承認したのは、実質1つの雇用のため。",
-        "Reinvent Albanyはこの助成金を「アメリカで記録された最も高い政府助成金」と主張。",
-        "プロジェクトは2028年までに完了する予定で、今後のデータセンターには公共の反応が異なる可能性あり。",
-        "JPMorganは新しいデータセンターを建設しつつ年間約60万ドルの税金を支払う。",
-        "一時雇用は1450件が見込まれているが、公式の雇用数には計上されていない。"
+        "AtkinsRéalisとNvidiaが提携",
+        "原子力を利用したデータセンター設計",
+        "持続可能なエネルギー源の開発を目指す",
+        "データセンターの効率性向上が期待される"
       ],
       "glossary": [
         {
-          "term": "税控除",
-          "explain_ja": "特定の経済活動に対して税金を減少させる制度。"
+          "term": "AtkinsRéalis",
+          "explain_ja": "カナダのエンジニアリング会社で、様々なプロジェクトを手掛けている。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、管理、配信を行うための施設。"
+          "term": "Nvidia",
+          "explain_ja": "主にGPUおよびAIプロセッサを開発するテクノロジー企業。"
+        },
+        {
+          "term": "原子力データセンター",
+          "explain_ja": "原子力エネルギーを利用して電力供給を行うデータセンター。"
         }
       ],
       "personal_actions": [
-        "地元のデータセンタープロジェクトに関する公聴会や議論をチェックする。",
-        "経済発展機関の活動をフォローし、透明性の高い公共の監視を求める。",
-        "助成金や税控除に関する地域の状況を正しく理解するために、データを分析する。"
+        "原子力エネルギーの利用に関する最新情報を把握する",
+        "データセンターの持続可能性に影響を与える新技術を検討する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=181813290",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-04-20T19:12:21Z",
-      "title": "New Jersey datacenter expansion got $77m in tax breaks to create exactly one permanent job — JPMorgan's site already scored $35m and currently employs ju - Slashdot",
-      "title_ja": "ニュージャージーのデータセンター拡張が7700万ドルの税優遇を受け、 permanent job はわずか1つ",
-      "summary_ja": "ニュージャージー州のデータセンター拡張が7700万ドルの税優遇を受けているが、実際には1つの永久的な職位しか創出されない見込みである。この事例は、膨大な税金が投入される一方で、雇用創出の効果が限られていることを示している。企業が税優遇を受ける際の透明性や効果に疑問が生じる可能性がある。",
+      "url": "https://financialpost.com/pmn/business-pmn/switch-lands-2-6-billion-of-bank-pledges-to-power-data-centers",
+      "source": "Financial Post",
+      "publishedAt": "2026-04-21T13:12:01Z",
+      "title": "Switch Lands $2.6 Billion of Bank Pledges to Power Data Centers",
+      "title_ja": "スイッチ、データセンター運営のために26億ドルの銀行の約束を獲得",
+      "summary_ja": "スイッチ社は、データセンター運営のために26億ドルの銀行からの約束を獲得しました。データセンター業界が急成長する中で、電力調達は大きな課題であり、コストの一因となっています。この資金は、同社が増加する電力需要に対応するための重要な資源となります。",
       "key_points": [
-        "ニュージャージー州のデータセンター拡張に7700万ドルの税優遇。",
-        "新たに創出される永久的な職位は1つのみ。",
-        "JPMorganのサイトはすでに3500万ドルの税優遇を取得。",
-        "税金の投入に対する雇用創出の効果が限定的。",
-        "企業の税優遇政策に対する透明性の疑問。",
-        "地域経済に与える影響の再考が必要。"
+        "スイッチ社は26億ドルの銀行の約束を獲得した。",
+        "電力調達はデータセンター業界の大きな課題である。",
+        "電力はデータセンターの運営コストの主要な要素である。"
       ],
       "glossary": [
         {
-          "term": "税優遇",
-          "explain_ja": "政府が特定の企業や産業に対して税金を軽減する措置。"
+          "term": "データセンター",
+          "explain_ja": "多数のコンピューターやサーバーを集めて情報処理やデータ保存を行う施設。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存・管理・配信するための施設。"
+          "term": "電力調達",
+          "explain_ja": "必要な電力を確保するためのプロセスや契約。"
         }
       ],
       "personal_actions": [
-        "地域の税優遇についての情報を収集し、影響を確認する。",
-        "データセンターの雇用状況や地域経済への影響を定期的に調査する。",
-        "企業の税優遇を常に監視し、必要に応じて意見を表明する。"
+        "データセンターにおける電力利用状況を見直す。",
+        "新しい電力調達先を検討するための情報を集める。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/new-jersey-datacenter-expansion-got-usd77m-in-tax-breaks-to-create-exactly-one-permanent-job-jpmorgans-site-already-scored-usd35m-and-currently-employs-just-25-workers",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-04-20T18:53:47Z",
-      "title": "New Jersey datacenter expansion got $77m in tax breaks to create exactly one permanent job — JPMorgan's site already scored $35m and currently employs just 25 workers",
-      "title_ja": "ニュージャージーのデータセンター拡張が7700万ドルの税控除を受けるも、創出されるのは1つの常勤職のみ",
-      "summary_ja": "ニュージャージーのデータセンター拡張が7700万ドルの税控除を受けましたが、実際には1つの常勤職しか創出されません。背景には、大規模な誘致政策があるものの、効果が薄いことが挙げられます。この状況は、今後の地域雇用や州の税収に影響を及ぼす可能性があります。",
+      "url": "https://theconversation.com/data-centers-dont-have-to-be-a-burden-on-local-communities-and-can-even-support-them-by-generating-power-and-repurposing-waste-heat-276729",
+      "source": "The Conversation Africa",
+      "publishedAt": "2026-04-21T12:18:38Z",
+      "title": "Data centers don’t have to be a burden on local communities – and can even support them by generating power and repurposing waste heat",
+      "title_ja": "データセンターは地域社会の負担にならず、発電や廃熱の再利用で支援できる",
+      "summary_ja": "データセンターは、正しく設計・運用されれば地域社会に貢献できるという研究結果が示されています。オンサイト電力生成やエネルギー貯蔵、廃熱の再利用が効果的です。これにより、地域に貢献するだけでなく、エネルギーの安定供給やコスト削減が期待できます。",
       "key_points": [
-        "ニュージャージーのデータセンター拡張に7700万ドルの税控除が適用された。",
-        "この拡張により新たに創出される常勤職は1つのみである。",
-        "JPMorganのサイトは過去に3500万ドルの税控除を受けた。",
-        "現在、JPMorganの施設はわずか25名の従業員を雇用している。",
-        "地元の税収や雇用状況への影響が懸念されている。"
+        "データセンターはオンサイト生成電力を利用して地域に電力供給が可能。",
+        "長時間動作するバッテリーシステムで、停電時やピーク時の電力供給を支援。",
+        "廃熱を利用した暖房システムが地域のエネルギー効率を向上させる。",
+        "新しい計算手法によってデータセンターのエネルギー効率が向上する可能性がある。",
+        "データセンターと地域の微小電力網を統合することで相互利益が得られる。"
       ],
       "glossary": [
         {
-          "term": "tax breaks",
-          "explain_ja": "税控除。特定の条件を満たす事業や個人に対して課税を軽減する政策。"
+          "term": "thermal microgrid",
+          "explain_ja": "廃熱を利用した温水輸送システムで、複数の建物を温めることができる。"
         },
         {
-          "term": "permanent job",
-          "explain_ja": "常勤職。雇用契約に基づき、長期間にわたって勤務する職。"
-        },
-        {
-          "term": "data center",
-          "explain_ja": "データセンター。データを集約、管理、処理するための施設。"
+          "term": "unconventional computing",
+          "explain_ja": "脳の構造にインスパイアされた計算手法など、新しいアプローチを用いる計算方法のこと。"
         }
       ],
       "personal_actions": [
-        "地域の雇用状況を調査し、今後の変化に備える。",
-        "税控除の適用基準や効果について文書や報告書を確認する。",
-        "自社が受けている税控除制度の効果を見直す。"
+        "データセンターの近くにあるエネルギー供給システムの効率を確認する。",
+        "地域の廃熱利用プロジェクトについて情報収集する。",
+        "持続可能なエネルギーの利用策を検討する。"
       ],
       "tags": [
         "DC"
