@@ -1,103 +1,116 @@
 {
-  "date": "2026-04-23",
-  "generatedAtJST": "2026-04-23T07:15:49.814+09:00",
+  "date": "2026-04-24",
+  "generatedAtJST": "2026-04-24T07:15:46.541+09:00",
   "items": [
     {
-      "url": "https://www.dezeen.com/2026/04/21/atkinsrealis-nvidia-nuclear-powered-data-centres/",
-      "source": "Dezeen",
-      "publishedAt": "2026-04-21T16:55:04Z",
-      "title": "AtkinsRéalis to partner with Nvidia on nuclear-powered data centre design",
-      "title_ja": "AtkinsRéalisがNvidiaと提携し原子力データセンター設計を進める",
-      "summary_ja": "カナダのエンジニアリング会社AtkinsRéalisは、テクノロジー企業Nvidiaとの提携を発表した。このコラボレーションにより、原子力を利用したデータセンターの設計が進められる。新たなエネルギー源の開発が期待されており、データセンターの持続可能な運営に寄与する可能性がある。",
+      "url": "https://wccftech.com/google-unveils-the-heart-of-agentic-ai-the-ai-hypercomputer-8th-gen-tpus-nvidia-rubin-axion-cpus/",
+      "source": "Wccftech",
+      "publishedAt": "2026-04-22T13:10:36Z",
+      "title": "Google Bets On The Agentic AI Era With Its AI Hypercomputer, Merges 8th-Gen TPUs, NVIDIA Rubin, & Axion CPUs Together",
+      "title_ja": "Google、エージェンティックAI時代に向けたAIハイパーコンピュータを発表 - 8世代TPU、NVIDIA Rubin、Axion CPUを統合",
+      "summary_ja": "Googleは、エージェンティックAI時代を支えるためのAIハイパーコンピュータを発表しました。この新しいデータセンターは、TPUv8シリーズ、Axion CPU、NVIDIA Rubin GPUを統合し、高性能なAIアーキテクチャを提供します。この革新により、数ヶ月かかっていたモデルの展開を数週間に短縮することが可能になります。",
       "key_points": [
-        "AtkinsRéalisとNvidiaが提携",
-        "原子力を利用したデータセンター設計",
-        "持続可能なエネルギー源の開発を目指す",
-        "データセンターの効率性向上が期待される"
+        "新しいAIハイパーコンピュータは、TPUv8シリーズ、Axion CPU、NVIDIA Rubin GPUを統合している。",
+        "TPU 8tはトレーニング向けに最適化され、121 ExaFlopsの計算能力を提供する。",
+        "TPU 8iは推論向けに設計され、331.8 ExaFlopsの計算能力を持ち、大規模なモデルを効率的に処理する。",
+        "両チップは、液体冷却技術をサポートしており、より高い計算密度を実現している。",
+        "GoogleのAIハイパーコンピュータは、US DOE、Boston Dynamicsなどの大企業に利用される予定である。"
       ],
       "glossary": [
         {
-          "term": "AtkinsRéalis",
-          "explain_ja": "カナダのエンジニアリング会社で、様々なプロジェクトを手掛けている。"
+          "term": "TPU",
+          "explain_ja": "Tensor Processing Unitの略で、特に機械学習向けに最適化されたプロセッサ。"
         },
         {
-          "term": "Nvidia",
-          "explain_ja": "主にGPUおよびAIプロセッサを開発するテクノロジー企業。"
+          "term": "AIハイパーコンピュータ",
+          "explain_ja": "AI処理を高速かつ効率的に行うために設計された高度なコンピュータシステム。"
         },
         {
-          "term": "原子力データセンター",
-          "explain_ja": "原子力エネルギーを利用して電力供給を行うデータセンター。"
+          "term": "FP4",
+          "explain_ja": "4ビット浮動小数点数のことで、メモリ帯域を抑えつつ精度を維持するために使用される。"
+        },
+        {
+          "term": "NVIDIA Rubin",
+          "explain_ja": "NVIDIAの新しいアーキテクチャで、高性能GPUを提供するシリーズ。"
         }
       ],
       "personal_actions": [
-        "原子力エネルギーの利用に関する最新情報を把握する",
-        "データセンターの持続可能性に影響を与える新技術を検討する"
+        "自社のAI処理インフラの最適化を検討する。",
+        "次世代TPUやAxion CPUについての情報を収集しておく。",
+        "最新の冷却技術に関する調査を行い、導入の可能性を探る。"
       ],
       "tags": [
-        "DC"
+        "AI"
       ]
     },
     {
-      "url": "https://financialpost.com/pmn/business-pmn/switch-lands-2-6-billion-of-bank-pledges-to-power-data-centers",
-      "source": "Financial Post",
-      "publishedAt": "2026-04-21T13:12:01Z",
-      "title": "Switch Lands $2.6 Billion of Bank Pledges to Power Data Centers",
-      "title_ja": "スイッチ、データセンター運営のために26億ドルの銀行の約束を獲得",
-      "summary_ja": "スイッチ社は、データセンター運営のために26億ドルの銀行からの約束を獲得しました。データセンター業界が急成長する中で、電力調達は大きな課題であり、コストの一因となっています。この資金は、同社が増加する電力需要に対応するための重要な資源となります。",
+      "url": "https://www.commondreams.org/newswire/data-center-growth-threatens-air-quality-and-progress-toward-cleaner-energy-grid",
+      "source": "Common Dreams",
+      "publishedAt": "2026-04-22T11:25:08Z",
+      "title": "Data center growth threatens air quality and progress toward cleaner energy grid",
+      "title_ja": "データセンターの成長が空気の質とクリーンエネルギーへの移行を脅かす",
+      "summary_ja": "データセンターの急成長が、クリーンエネルギー網への移行を遅らせ、空気の質に悪影響を及ぼす可能性があると新しい研究が指摘しています。再生可能エネルギーの使用は増加していますが、データセンターの成長がその進展を妨げているという見解です。この状況は私たちの健康にも影響を与える可能性があります。",
       "key_points": [
-        "スイッチ社は26億ドルの銀行の約束を獲得した。",
-        "電力調達はデータセンター業界の大きな課題である。",
-        "電力はデータセンターの運営コストの主要な要素である。"
+        "データセンターの成長が急速に進んでいる。",
+        "再生可能エネルギーの使用は増加しているが、データセンターがその成長を妨げている。",
+        "空気の質に悪影響を及ぼす可能性がある。",
+        "クリーンエネルギー網への移行が遅れる恐れがある。",
+        "研究は地球の日に発表された。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "多数のコンピューターやサーバーを集めて情報処理やデータ保存を行う施設。"
+          "explain_ja": "データの保存、処理、管理を行う施設。"
         },
         {
-          "term": "電力調達",
-          "explain_ja": "必要な電力を確保するためのプロセスや契約。"
+          "term": "再生可能エネルギー",
+          "explain_ja": "自然の資源から生成されるエネルギー。"
         }
       ],
       "personal_actions": [
-        "データセンターにおける電力利用状況を見直す。",
-        "新しい電力調達先を検討するための情報を集める。"
+        "データセンターのエネルギー消費についての情報を確認する。",
+        "地元の再生可能エネルギーの利用状況を調べる。",
+        "クリーンエネルギーを推進するための地域活動に参加する。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://theconversation.com/data-centers-dont-have-to-be-a-burden-on-local-communities-and-can-even-support-them-by-generating-power-and-repurposing-waste-heat-276729",
-      "source": "The Conversation Africa",
-      "publishedAt": "2026-04-21T12:18:38Z",
-      "title": "Data centers don’t have to be a burden on local communities – and can even support them by generating power and repurposing waste heat",
-      "title_ja": "データセンターは地域社会の負担にならず、発電や廃熱の再利用で支援できる",
-      "summary_ja": "データセンターは、正しく設計・運用されれば地域社会に貢献できるという研究結果が示されています。オンサイト電力生成やエネルギー貯蔵、廃熱の再利用が効果的です。これにより、地域に貢献するだけでなく、エネルギーの安定供給やコスト削減が期待できます。",
+      "url": "https://newrepublic.com/article/209356/transcript-leavitt-goes-full-cult-fox-war-leaks-humiliate-trump",
+      "source": "The New Republic",
+      "publishedAt": "2026-04-22T09:57:58Z",
+      "title": "Transcript: Leavitt Goes Full Cult on Fox as War Leaks Humiliate Trump",
+      "title_ja": "レヴィットがFOXでトランプを賛美する様子が明らかに",
+      "summary_ja": "トランプの戦争に対する対応が批判される中、ホワイトハウスの報道官カロライン・レヴィットがFOXニュースでトランプを擁護する発言を行った。彼女はメディアを攻撃し、トランプの栄光を称賛しようと試みたが、トランプの発言が交渉を困難にしているという内部リークが多発している。これにより、トランプの外交政策の失敗が露呈し、今後の交渉は極めて厳しい状況にあることが示唆されている。",
       "key_points": [
-        "データセンターはオンサイト生成電力を利用して地域に電力供給が可能。",
-        "長時間動作するバッテリーシステムで、停電時やピーク時の電力供給を支援。",
-        "廃熱を利用した暖房システムが地域のエネルギー効率を向上させる。",
-        "新しい計算手法によってデータセンターのエネルギー効率が向上する可能性がある。",
-        "データセンターと地域の微小電力網を統合することで相互利益が得られる。"
+        "トランプはイランとの合意に近づいていると主張するも、内情は混迷している。",
+        "ホワイトハウスの報道官はメディアへの攻撃を強め、トランプの能力を誇示しようとする。",
+        "内部からのリークによれば、トランプの発言が交渉に悪影響を及ぼしている。",
+        "イランの軍事的影響力は依然として強く、交渉の行方は不透明。",
+        "レヴィットのジョークはトランプの理解不足を浮き彫りにしている。"
       ],
       "glossary": [
         {
-          "term": "thermal microgrid",
-          "explain_ja": "廃熱を利用した温水輸送システムで、複数の建物を温めることができる。"
+          "term": "IRGC",
+          "explain_ja": "イスラム革命防衛隊（Islamic Revolutionary Guard Corps）は、イランの軍事組織で、国内外での影響力を持つ。"
         },
         {
-          "term": "unconventional computing",
-          "explain_ja": "脳の構造にインスパイアされた計算手法など、新しいアプローチを用いる計算方法のこと。"
+          "term": "セイスファイア",
+          "explain_ja": "一時的に戦闘を停止する合意を指す。"
+        },
+        {
+          "term": "Neocon",
+          "explain_ja": "新保守主義者。特に外交政策において攻撃的なアプローチを支持する政治思想。"
         }
       ],
       "personal_actions": [
-        "データセンターの近くにあるエネルギー供給システムの効率を確認する。",
-        "地域の廃熱利用プロジェクトについて情報収集する。",
-        "持続可能なエネルギーの利用策を検討する。"
+        "現在の国際情勢や交渉の進行状況を確認する。",
+        "トランプ政権の外交政策の影響を分析する情報源をフォローする。",
+        "報道官や政府関係者の発言を批判的に検証する。"
       ],
       "tags": [
-        "DC"
+        "その他"
       ]
     }
   ]
