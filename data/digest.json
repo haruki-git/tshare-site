@@ -1,116 +1,120 @@
 {
-  "date": "2026-04-24",
-  "generatedAtJST": "2026-04-24T07:15:46.541+09:00",
+  "date": "2026-04-25",
+  "generatedAtJST": "2026-04-25T07:15:41.292+09:00",
   "items": [
     {
-      "url": "https://wccftech.com/google-unveils-the-heart-of-agentic-ai-the-ai-hypercomputer-8th-gen-tpus-nvidia-rubin-axion-cpus/",
-      "source": "Wccftech",
-      "publishedAt": "2026-04-22T13:10:36Z",
-      "title": "Google Bets On The Agentic AI Era With Its AI Hypercomputer, Merges 8th-Gen TPUs, NVIDIA Rubin, & Axion CPUs Together",
-      "title_ja": "Google、エージェンティックAI時代に向けたAIハイパーコンピュータを発表 - 8世代TPU、NVIDIA Rubin、Axion CPUを統合",
-      "summary_ja": "Googleは、エージェンティックAI時代を支えるためのAIハイパーコンピュータを発表しました。この新しいデータセンターは、TPUv8シリーズ、Axion CPU、NVIDIA Rubin GPUを統合し、高性能なAIアーキテクチャを提供します。この革新により、数ヶ月かかっていたモデルの展開を数週間に短縮することが可能になります。",
+      "url": "https://slashdot.org/submission/17346690/new-gas-powered-data-centers-could-emit-more-greenhouse-gases-than-entire-nation",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-04-23T21:02:04Z",
+      "title": "New Gas-Powered Data Centers Could Emit More Greenhouse Gases Than Entire Nation - Slashdot",
+      "title_ja": "新しいガス発電データセンターはモロッコ全体の温室効果ガス排出量を超える可能性",
+      "summary_ja": "米国の11のデータセンターキャンパスに関連する新たなガスプロジェクトが、2024年にモロッコが排出する温室効果ガスを超える可能性を秘めています。これらのプロジェクトは、OpenAIやMeta、MicrosoftなどのAI企業に電力を供給する目的で建設されており、その排出量は年間1億2900万トンに達する可能性があります。この傾向は、データセンターの成長による気候変動のコストの一端を示しています。",
       "key_points": [
-        "新しいAIハイパーコンピュータは、TPUv8シリーズ、Axion CPU、NVIDIA Rubin GPUを統合している。",
-        "TPU 8tはトレーニング向けに最適化され、121 ExaFlopsの計算能力を提供する。",
-        "TPU 8iは推論向けに設計され、331.8 ExaFlopsの計算能力を持ち、大規模なモデルを効率的に処理する。",
-        "両チップは、液体冷却技術をサポートしており、より高い計算密度を実現している。",
-        "GoogleのAIハイパーコンピュータは、US DOE、Boston Dynamicsなどの大企業に利用される予定である。"
+        "11のデータセンターキャンパスに関連するガスプロジェクトが存在する",
+        "年間の排出量はモロッコの排出量を上回る可能性がある",
+        "データセンター専用に電力を供給する傾向が強まっている",
+        "実際の排出量は許可書記載の数値よりも減少する可能性があるが、依然として重大な影響が懸念される",
+        "効率の良いガスタービンの不足が、低効率のモデルを選択する要因となっている"
       ],
       "glossary": [
         {
-          "term": "TPU",
-          "explain_ja": "Tensor Processing Unitの略で、特に機械学習向けに最適化されたプロセッサ。"
+          "term": "ガス発電所",
+          "explain_ja": "天然ガスを燃料として電力を生成する施設。"
         },
         {
-          "term": "AIハイパーコンピュータ",
-          "explain_ja": "AI処理を高速かつ効率的に行うために設計された高度なコンピュータシステム。"
+          "term": "温室効果ガス",
+          "explain_ja": "地球の温暖化につながるガス、主に二酸化炭素やメタンなど。"
         },
         {
-          "term": "FP4",
-          "explain_ja": "4ビット浮動小数点数のことで、メモリ帯域を抑えつつ精度を維持するために使用される。"
+          "term": "データセンター",
+          "explain_ja": "データを収集、保存、管理する施設で、多くのコンピュータと関連機器を含む。"
         },
         {
-          "term": "NVIDIA Rubin",
-          "explain_ja": "NVIDIAの新しいアーキテクチャで、高性能GPUを提供するシリーズ。"
+          "term": "エネルギー効率",
+          "explain_ja": "エネルギーを利用する際の効率性を示す指標。"
         }
       ],
       "personal_actions": [
-        "自社のAI処理インフラの最適化を検討する。",
-        "次世代TPUやAxion CPUについての情報を収集しておく。",
-        "最新の冷却技術に関する調査を行い、導入の可能性を探る。"
+        "周囲のデータセンターの排出量についての情報を収集し、評価する",
+        "最新のエネルギー効率技術に基づくプロジェクトのガイドラインを確認する",
+        "排出量削減のために可能な対策や技術を社内で議論する"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://www.commondreams.org/newswire/data-center-growth-threatens-air-quality-and-progress-toward-cleaner-energy-grid",
-      "source": "Common Dreams",
-      "publishedAt": "2026-04-22T11:25:08Z",
-      "title": "Data center growth threatens air quality and progress toward cleaner energy grid",
-      "title_ja": "データセンターの成長が空気の質とクリーンエネルギーへの移行を脅かす",
-      "summary_ja": "データセンターの急成長が、クリーンエネルギー網への移行を遅らせ、空気の質に悪影響を及ぼす可能性があると新しい研究が指摘しています。再生可能エネルギーの使用は増加していますが、データセンターの成長がその進展を妨げているという見解です。この状況は私たちの健康にも影響を与える可能性があります。",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/04/second-generation-aws-outposts-racks-sydney-seoul-paris/",
+      "source": "Amazon.com",
+      "publishedAt": "2026-04-23T16:00:00Z",
+      "title": "Second-generation AWS Outposts racks now supported in the AWS Asia Pacific (Seoul, Sydney) and Europe (Paris) Regions",
+      "title_ja": "第二世代AWS OutpostsラックがAWSアジアパシフィック（ソウル、シドニー）およびヨーロッパ（パリ）リージョンでサポート開始",
+      "summary_ja": "第二世代AWS Outpostsラックが新たにアジアパシフィック地域（ソウル、シドニー）とヨーロッパ地域（パリ）でサポートされるようになりました。この拡張により、顧客は低遅延のアクセスを必要とするワークロードをローカルで実行し、データ居住要件を満たすためにオンプレミスでデータを処理することが可能になります。これにより、AWSインフラストラクチャを利用した一貫したハイブリッド環境が実現します。",
       "key_points": [
-        "データセンターの成長が急速に進んでいる。",
-        "再生可能エネルギーの使用は増加しているが、データセンターがその成長を妨げている。",
-        "空気の質に悪影響を及ぼす可能性がある。",
-        "クリーンエネルギー網への移行が遅れる恐れがある。",
-        "研究は地球の日に発表された。"
+        "第二世代AWS Outpostsラックがソウル、シドニー、パリに対応開始。",
+        "企業や公共部門は、これらの地域でラグの最適化が可能に。",
+        "ワークロードが低遅延でオンプレミスシステムにアクセスできるように。",
+        "データ居住要件を満たすために、データをオンプレミスで管理可能。",
+        "追加のフレキシビリティが提供されることで、顧客の選択肢が広がる。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、処理、管理を行う施設。"
+          "term": "AWS Outposts",
+          "explain_ja": "AWSのインフラストラクチャとサービスをオンプレミスに拡張するソリューション。"
         },
         {
-          "term": "再生可能エネルギー",
-          "explain_ja": "自然の資源から生成されるエネルギー。"
+          "term": "データ居住要件",
+          "explain_ja": "データが特定の地理的な場所に保持される必要がある法的または規制上の要件。"
+        },
+        {
+          "term": "低遅延アクセス",
+          "explain_ja": "システム間でデータが迅速にやり取りされることを指す。"
         }
       ],
       "personal_actions": [
-        "データセンターのエネルギー消費についての情報を確認する。",
-        "地元の再生可能エネルギーの利用状況を調べる。",
-        "クリーンエネルギーを推進するための地域活動に参加する。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://newrepublic.com/article/209356/transcript-leavitt-goes-full-cult-fox-war-leaks-humiliate-trump",
-      "source": "The New Republic",
-      "publishedAt": "2026-04-22T09:57:58Z",
-      "title": "Transcript: Leavitt Goes Full Cult on Fox as War Leaks Humiliate Trump",
-      "title_ja": "レヴィットがFOXでトランプを賛美する様子が明らかに",
-      "summary_ja": "トランプの戦争に対する対応が批判される中、ホワイトハウスの報道官カロライン・レヴィットがFOXニュースでトランプを擁護する発言を行った。彼女はメディアを攻撃し、トランプの栄光を称賛しようと試みたが、トランプの発言が交渉を困難にしているという内部リークが多発している。これにより、トランプの外交政策の失敗が露呈し、今後の交渉は極めて厳しい状況にあることが示唆されている。",
-      "key_points": [
-        "トランプはイランとの合意に近づいていると主張するも、内情は混迷している。",
-        "ホワイトハウスの報道官はメディアへの攻撃を強め、トランプの能力を誇示しようとする。",
-        "内部からのリークによれば、トランプの発言が交渉に悪影響を及ぼしている。",
-        "イランの軍事的影響力は依然として強く、交渉の行方は不透明。",
-        "レヴィットのジョークはトランプの理解不足を浮き彫りにしている。"
-      ],
-      "glossary": [
-        {
-          "term": "IRGC",
-          "explain_ja": "イスラム革命防衛隊（Islamic Revolutionary Guard Corps）は、イランの軍事組織で、国内外での影響力を持つ。"
-        },
-        {
-          "term": "セイスファイア",
-          "explain_ja": "一時的に戦闘を停止する合意を指す。"
-        },
-        {
-          "term": "Neocon",
-          "explain_ja": "新保守主義者。特に外交政策において攻撃的なアプローチを支持する政治思想。"
-        }
-      ],
-      "personal_actions": [
-        "現在の国際情勢や交渉の進行状況を確認する。",
-        "トランプ政権の外交政策の影響を分析する情報源をフォローする。",
-        "報道官や政府関係者の発言を批判的に検証する。"
+        "新しい地域でのOutpostsラックのサポートについて公式情報を確認する。",
+        "自社のデータ居住要件を見直し、必要に応じてOutpostsを導入する方針を検討する。",
+        "ハイブリッドクラウド環境の最適化に向けた計画を立てる。"
       ],
       "tags": [
         "その他"
+      ]
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/applied-digital-signs-7-5-billion-ai-data-centre-lease-with-us-hyperscaler/articleshow/130470424.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-04-23T13:40:40Z",
+      "title": "Applied Digital signs $7.5 billion AI data centre lease with US hyperscaler",
+      "title_ja": "Applied Digital、米ハイパースケーラーとの75億ドルのAIデータセンターリース契約を締結",
+      "summary_ja": "Applied Digitalが、米国のハイパースケーラーと75億ドルの長期リース契約を結びました。この契約はDelta Forge oneサイトにおける300メガワットの計算能力を対象としています。さらに、最大600メガワットの追加契約も期待しています。",
+      "key_points": [
+        "Applied Digitalが米ハイパースケーラーとの75億ドルのリース契約を締結",
+        "契約の対象はDelta Forge oneサイトでの300メガワット",
+        "最大600メガワットの追加契約を見込んでいる"
+      ],
+      "glossary": [
+        {
+          "term": "ハイパースケーラー",
+          "explain_ja": "大規模なデータセンターを運営し、クラウドサービスを提供する企業。"
+        },
+        {
+          "term": "メガワット（MW）",
+          "explain_ja": "電力の単位で、1メガワットは1000キロワットに相当する。"
+        },
+        {
+          "term": "AI（人工知能）",
+          "explain_ja": "データ分析や自動化を通じて、機械が人間のように知的な行動をする能力。"
+        }
+      ],
+      "personal_actions": [
+        "社内でのデータセンターの使用状況やニーズの再確認を行う",
+        "将来のリース契約やデータセンター計画についてチームと話し合う",
+        "新たな技術やサービスの導入を検討する"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
