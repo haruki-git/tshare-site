@@ -1,43 +1,39 @@
 {
-  "date": "2026-04-25",
-  "generatedAtJST": "2026-04-25T07:15:41.292+09:00",
+  "date": "2026-04-26",
+  "generatedAtJST": "2026-04-26T07:15:39.625+09:00",
   "items": [
     {
-      "url": "https://slashdot.org/submission/17346690/new-gas-powered-data-centers-could-emit-more-greenhouse-gases-than-entire-nation",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-04-23T21:02:04Z",
-      "title": "New Gas-Powered Data Centers Could Emit More Greenhouse Gases Than Entire Nation - Slashdot",
-      "title_ja": "新しいガス発電データセンターはモロッコ全体の温室効果ガス排出量を超える可能性",
-      "summary_ja": "米国の11のデータセンターキャンパスに関連する新たなガスプロジェクトが、2024年にモロッコが排出する温室効果ガスを超える可能性を秘めています。これらのプロジェクトは、OpenAIやMeta、MicrosoftなどのAI企業に電力を供給する目的で建設されており、その排出量は年間1億2900万トンに達する可能性があります。この傾向は、データセンターの成長による気候変動のコストの一端を示しています。",
+      "url": "https://www.digitaljournal.com/world/maine-governor-nixes-data-center-moratorium-in-state/article",
+      "source": "Digital Journal",
+      "publishedAt": "2026-04-24T21:37:49Z",
+      "title": "Maine governor nixes data center moratorium in state",
+      "title_ja": "メイン州知事、大型データセンター建設のモラトリアムを拒否",
+      "summary_ja": "メイン州の知事が、大型データセンターの建設を一時的に禁止する法案に対して拒否権を行使した。これはAIの進展による建設ラッシュの抑制を目的としていたが、地元の経済復興を図るプロジェクトへの例外が認められなかったことが理由である。変化する公共の意見と共に、データセンター建設の需要は増大しており、その影響が電気料金や土地利用に懸念を呼んでいる。",
       "key_points": [
-        "11のデータセンターキャンパスに関連するガスプロジェクトが存在する",
-        "年間の排出量はモロッコの排出量を上回る可能性がある",
-        "データセンター専用に電力を供給する傾向が強まっている",
-        "実際の排出量は許可書記載の数値よりも減少する可能性があるが、依然として重大な影響が懸念される",
-        "効率の良いガスタービンの不足が、低効率のモデルを選択する要因となっている"
+        "メイン州知事がデータセンター建設禁止法案に拒否権を発動。",
+        "この法案は、AI競争に伴う建設ラッシュを抑制する目的があった。",
+        "知事は経済的理由により特定プロジェクトの例外を求めた。",
+        "65%のアメリカ人が自身のコミュニティ内にデータセンターが建設されることに反対。",
+        "アメリカ全体でデータセンター建設の投資が急増している。"
       ],
       "glossary": [
         {
-          "term": "ガス発電所",
-          "explain_ja": "天然ガスを燃料として電力を生成する施設。"
-        },
-        {
-          "term": "温室効果ガス",
-          "explain_ja": "地球の温暖化につながるガス、主に二酸化炭素やメタンなど。"
+          "term": "モラトリアム",
+          "explain_ja": "特定の活動や行為を一時的に停止する措置。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データを収集、保存、管理する施設で、多くのコンピュータと関連機器を含む。"
+          "explain_ja": "データを保存・管理するための専門施設で、大量の電力と水を消費する。"
         },
         {
-          "term": "エネルギー効率",
-          "explain_ja": "エネルギーを利用する際の効率性を示す指標。"
+          "term": "AI",
+          "explain_ja": "人工知能の略。機械が人間の知能を模倣する技術。"
         }
       ],
       "personal_actions": [
-        "周囲のデータセンターの排出量についての情報を収集し、評価する",
-        "最新のエネルギー効率技術に基づくプロジェクトのガイドラインを確認する",
-        "排出量削減のために可能な対策や技術を社内で議論する"
+        "地域の電力消費状況を確認し、データセンターの影響を把握する。",
+        "地元の環境問題に関する意識を高める活動に参加する。",
+        "データセンターの必要性と地域経済への影響に関する情報を収集する。"
       ],
       "tags": [
         "DC",
@@ -45,75 +41,70 @@
       ]
     },
     {
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/04/second-generation-aws-outposts-racks-sydney-seoul-paris/",
-      "source": "Amazon.com",
-      "publishedAt": "2026-04-23T16:00:00Z",
-      "title": "Second-generation AWS Outposts racks now supported in the AWS Asia Pacific (Seoul, Sydney) and Europe (Paris) Regions",
-      "title_ja": "第二世代AWS OutpostsラックがAWSアジアパシフィック（ソウル、シドニー）およびヨーロッパ（パリ）リージョンでサポート開始",
-      "summary_ja": "第二世代AWS Outpostsラックが新たにアジアパシフィック地域（ソウル、シドニー）とヨーロッパ地域（パリ）でサポートされるようになりました。この拡張により、顧客は低遅延のアクセスを必要とするワークロードをローカルで実行し、データ居住要件を満たすためにオンプレミスでデータを処理することが可能になります。これにより、AWSインフラストラクチャを利用した一貫したハイブリッド環境が実現します。",
+      "url": "https://fortune.com/2026/04/24/data-centers-ai-batteries-natural-gas-power/",
+      "source": "Fortune",
+      "publishedAt": "2026-04-24T19:38:35Z",
+      "title": "Data centers are finding a surprising way to deploy batteries",
+      "title_ja": "データセンターが驚くべき方法でバッテリーを導入",
+      "summary_ja": "データセンターは、AIによる電力網への負担が増す中、バッテリーと天然ガス発電機を組み合わせて電力供給を維持しています。この取り組みにより、クリーンエネルギー技術が化石燃料のバックアップ手段として利用されることになっています。これにより、データセンターは持続可能性と信頼性の向上を図っています。",
       "key_points": [
-        "第二世代AWS Outpostsラックがソウル、シドニー、パリに対応開始。",
-        "企業や公共部門は、これらの地域でラグの最適化が可能に。",
-        "ワークロードが低遅延でオンプレミスシステムにアクセスできるように。",
-        "データ居住要件を満たすために、データをオンプレミスで管理可能。",
-        "追加のフレキシビリティが提供されることで、顧客の選択肢が広がる。"
+        "データセンターはバッテリーを天然ガス発電機と組み合わせている",
+        "AIの負担が電力網に影響を与えている",
+        "この手法はクリーンエネルギーを化石燃料のバックアップに変える",
+        "持続可能性と電力供給の安定性を向上させる"
       ],
       "glossary": [
         {
-          "term": "AWS Outposts",
-          "explain_ja": "AWSのインフラストラクチャとサービスをオンプレミスに拡張するソリューション。"
+          "term": "AI",
+          "explain_ja": "人工知能の略。データ分析や自動処理に使用される技術。"
         },
         {
-          "term": "データ居住要件",
-          "explain_ja": "データが特定の地理的な場所に保持される必要がある法的または規制上の要件。"
+          "term": "バッテリー",
+          "explain_ja": "電気エネルギーを蓄える装置で、需要に応じて電力を供給する。"
         },
         {
-          "term": "低遅延アクセス",
-          "explain_ja": "システム間でデータが迅速にやり取りされることを指す。"
+          "term": "天然ガス",
+          "explain_ja": "化石燃料の一種で、発電や暖房などに広く使用される。"
         }
       ],
       "personal_actions": [
-        "新しい地域でのOutpostsラックのサポートについて公式情報を確認する。",
-        "自社のデータ居住要件を見直し、必要に応じてOutpostsを導入する方針を検討する。",
-        "ハイブリッドクラウド環境の最適化に向けた計画を立てる。"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/applied-digital-signs-7-5-billion-ai-data-centre-lease-with-us-hyperscaler/articleshow/130470424.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-04-23T13:40:40Z",
-      "title": "Applied Digital signs $7.5 billion AI data centre lease with US hyperscaler",
-      "title_ja": "Applied Digital、米ハイパースケーラーとの75億ドルのAIデータセンターリース契約を締結",
-      "summary_ja": "Applied Digitalが、米国のハイパースケーラーと75億ドルの長期リース契約を結びました。この契約はDelta Forge oneサイトにおける300メガワットの計算能力を対象としています。さらに、最大600メガワットの追加契約も期待しています。",
-      "key_points": [
-        "Applied Digitalが米ハイパースケーラーとの75億ドルのリース契約を締結",
-        "契約の対象はDelta Forge oneサイトでの300メガワット",
-        "最大600メガワットの追加契約を見込んでいる"
-      ],
-      "glossary": [
-        {
-          "term": "ハイパースケーラー",
-          "explain_ja": "大規模なデータセンターを運営し、クラウドサービスを提供する企業。"
-        },
-        {
-          "term": "メガワット（MW）",
-          "explain_ja": "電力の単位で、1メガワットは1000キロワットに相当する。"
-        },
-        {
-          "term": "AI（人工知能）",
-          "explain_ja": "データ分析や自動化を通じて、機械が人間のように知的な行動をする能力。"
-        }
-      ],
-      "personal_actions": [
-        "社内でのデータセンターの使用状況やニーズの再確認を行う",
-        "将来のリース契約やデータセンター計画についてチームと話し合う",
-        "新たな技術やサービスの導入を検討する"
+        "データセンターの電力管理について最新の情報を確認する",
+        "バッテリーと発電機の組み合わせがどのように運用されているかを調査する"
       ],
       "tags": [
         "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.pcworld.com/article/3116546/investigation-ram-prices-are-falling-dont-fall-for-it.html",
+      "source": "PCWorld",
+      "publishedAt": "2026-04-24T19:33:04Z",
+      "title": "Investigation: RAM prices are falling. Don’t fall for it",
+      "title_ja": "調査：RAM価格が下落中。騙されないでください",
+      "summary_ja": "2026年、RAMの価格が下がっているという報道があるが、実はその背景にはAIデータセンターの需要増加がある。これにより、需要が高まり、価格が逆に上昇する可能性がある。消費者は表面的な情報に惑わされず、慎重な判断が求められる。",
+      "key_points": [
+        "2026年のテクノロジーの大きな話題はRAM価格の動向",
+        "AIデータセンターがメモリを大量に必要としている",
+        "価格が下がっているように見えても、実際は上昇する兆しがある",
+        "消費者は情報の真偽を見極める必要がある"
+      ],
+      "glossary": [
+        {
+          "term": "RAM",
+          "explain_ja": "コンピュータの作業用メモリで、一時的にデータを保存する役割がある。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能を指し、計算機が人間のように学習し、推論できる技術。"
+        }
+      ],
+      "personal_actions": [
+        "RAMの購入を検討する際は市場の動向をじっくり観察する",
+        "AI関連の開発動向をフォローする",
+        "信頼できる情報源からのデータを確認する"
+      ],
+      "tags": [
         "AI"
       ]
     }
