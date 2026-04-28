@@ -1,97 +1,110 @@
 {
-  "date": "2026-04-28",
-  "generatedAtJST": "2026-04-28T07:15:45.255+09:00",
+  "date": "2026-04-29",
+  "generatedAtJST": "2026-04-29T07:15:47.201+09:00",
   "items": [
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=182963844",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-04-26T21:52:46Z",
-      "title": "Data centers becoming ‘inescapable’ in Georgia's elections - Politico - Slashdot",
-      "title_ja": "ジョージア州の選挙におけるデータセンターの重要性",
-      "summary_ja": "ジョージア州の選挙において、データセンターが「避けられない存在」になっている。特にノースウェストジョージア州では、フロイド郡が重要な選択の岐路に立たされている。この動きは、地域の変化に対する世代の意見の分断を浮き彫りにしている。",
+      "url": "https://www.theregister.com/2026/04/27/core_scientific_ai/",
+      "source": "Theregister.com",
+      "publishedAt": "2026-04-27T18:58:06Z",
+      "title": "The crypto-to-AI bandwagon jumpers' club just landed another member: Core Scientific",
+      "title_ja": "コアサイエンティフィックがAIデータセンターへの移行を発表",
+      "summary_ja": "コアサイエンティフィックは、テキサス州ペコスにある300メガワットのビットコインマイニング施設を1.5ギガワットのAIデータセンターに転換する計画を明らかにしました。この移行は、同社が新たに発行する33億ドルのジャンクボンドで資金調達を行うことを含んでいます。完成後、施設は1ギガワットの賃貸可能な容量を提供し、エネルギーの確保が鍵となります。",
       "key_points": [
-        "ジョージア州の選挙におけるデータセンターの役割が増大している。",
-        "フロイド郡は、データセンターの設置に関する重要な決定を下す必要がある。",
-        "この問題は地域社会の意見を二分している。"
+        "コアサイエンティフィックはビットコインマイニングからAIデータセンターへの転換を計画。",
+        "テキサス州での新施設は2027年初頭に運用開始予定。",
+        "施設の電力供給には300メガワットの追加電力が確保済み。",
+        "その他の企業も非伝統的なエネルギー技術を採用している。",
+        "発電の経済性や実現可能性については不透明な部分がある。"
       ],
       "glossary": [
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能の処理や学習を行うためのデータセンター。"
+        },
+        {
+          "term": "ビットコインマイニング",
+          "explain_ja": "ビットコインの取引を承認するための計算処理を行うプロセス。"
+        },
+        {
+          "term": "ジャンクボンド",
+          "explain_ja": "信用リスクの高い企業が発行する高利回りの債券。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターでの電力供給計画についての最新情報を確認する。",
+        "非伝統的なエネルギー技術の導入状況を調査する。",
+        "施設の開設時期に備えて最新の技術トレンドを把握しておく。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-04-27T15:27:52Z",
+      "title": "Data center demand drives 66% surge in natural gas power plant costs | TechCrunch",
+      "title_ja": "データセンターの需要が天然ガス発電所コストを66%押し上げ",
+      "summary_ja": "データセンターの電力需要が急増する中、天然ガス発電所のコストが過去2年間でほぼ倍増し、建設にかかる時間も23%長くなっています。この状況は、全体のエネルギー供給チェーンに大きな影響を与えています。今後、発電所の建設はますます困難になる可能性があります。",
+      "key_points": [
+        "天然ガス発電所のコストが66%上昇した",
+        "発電所の建設時間が23%増加",
+        "データセンターからの電力需要が急増",
+        "コスト上昇はエネルギー供給全体に影響",
+        "将来的な発電所の建設が困難になる可能性"
+      ],
+      "glossary": [
+        {
+          "term": "天然ガス発電所",
+          "explain_ja": "天然ガスを燃料として電力を生成する施設。"
+        },
         {
           "term": "データセンター",
-          "explain_ja": "データの保管、管理、処理を行うための施設。"
-        },
-        {
-          "term": "選挙",
-          "explain_ja": "政治的な決定に関与するための投票行為。"
+          "explain_ja": "大量のデータ処理や保存を行うための施設。"
         }
       ],
       "personal_actions": [
-        "地元のデータセンターの設置計画についてのニュースを追う。",
-        "地域の選挙に関する意見を形成するためのディスカッションに参加する。"
+        "データセンターへの電力供給の影響を評価する。",
+        "コスト上昇に伴うエネルギー管理の見直しを行う。",
+        "将来的な電力需要の計画を立てる。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.sltrib.com/news/2026/04/25/hyperscale-data-center-may-be/",
-      "source": "Salt Lake Tribune",
-      "publishedAt": "2026-04-26T12:00:16Z",
-      "title": "'Hyperscale' data center in Utah expected to use more power than entire state...",
-      "title_ja": "ユタ州のハイパースケールデータセンター、州全体の電力を超える見込み",
-      "summary_ja": "ユタ州で、ケビン・オリアリーによる大規模データセンターのプロジェクトが最終承認に近づいており、Amazon、Microsoft、Googleなどのハイパースケーラーを誘致するための税制優遇が整えられています。このプロジェクトは、州の電力需要を大きく上回るものと予測されています。これにより、地域のインフラとエネルギー供給に大きな影響を及ぼす可能性があります。",
+      "url": "https://www.techpowerup.com/348557/supermicro-adds-largest-silicon-valley-campus-new-dcbbs-facility-to-advance-the-delivery-of-next-generation-ai-data-centers",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-04-27T15:13:30Z",
+      "title": "Supermicro Adds Largest Silicon Valley Campus - New DCBBS Facility to Advance the Delivery of Next-Generation AI Data Centers",
+      "title_ja": "スーパーマイクロ、シリコンバレーに最大のキャンパスを追加 - 次世代AIデータセンター向けDCBBS施設を開設",
+      "summary_ja": "スーパーマイクロがカリフォルニア州サンノゼに新しいDCBBSキャンパスを開設し、米国内での新たなイノベーションの推進を目指しています。この施設は約32.8エーカーの広さを持ち、714,000平方フィート以上の面積をカバーします。これにより、製造、テスト、サービスなどの能力が強化され、快適な雇用創出が期待されています。",
       "key_points": [
-        "ケビン・オリアリーが関与する大規模データセンターのプロジェクト。",
-        "このデータセンターはユタ州の全電力消費を超えるとされている。",
-        "Amazon、Microsoft、Googleなどの企業をターゲットにした税制優遇が含まれている。",
-        "最終承認に近づいている段階。",
-        "地域のインフラ、エネルギー供給に対する影響が懸念されている。"
+        "スーパーマイクロが米国で最大のDCBBSキャンパスを開設。",
+        "新施設は約32.8エーカー、714,000平方フィート以上の面積を持つ。",
+        "サンノゼでのオペレーションを強化し、高品質な雇用を新たに創出。",
+        "AIインフラストラクチャーの需要増加に対応するため、国内能力を拡大。",
+        "DCBBSはモジュラー型のAIインフラストラクチャーを提供。",
+        "エネルギー効率と迅速な展開を重視した設計。"
       ],
       "glossary": [
         {
-          "term": "ハイパースケールデータセンター",
-          "explain_ja": "大規模なデータセンターで、特に大容量のデータ処理やストレージを行うために設計されている。"
+          "term": "DCBBS",
+          "explain_ja": "データセンター構築ブロックソリューションの略で、AIインフラ向けのモジュラー構造を提供。"
         },
         {
-          "term": "税制優遇",
-          "explain_ja": "企業などに対して税金の軽減や免除を受けられる制度。"
+          "term": "AI",
+          "explain_ja": "人工知能の略で、機械が人間のように学習や推論を行う技術。"
+        },
+        {
+          "term": "エネルギー効率",
+          "explain_ja": "システムが使用するエネルギーの量に対する出力の効率を示す指標。"
         }
       ],
       "personal_actions": [
-        "データセンタープロジェクトの進捗を定期的に確認する。",
-        "地域のエネルギー供給状況についての情報を収集する。",
-        "関連するビジネスインフラへの影響を評価する。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.superpunch.net/2026/04/data-center-project-in-utah-expected-to.html",
-      "source": "Superpunch.net",
-      "publishedAt": "2026-04-26T05:53:00Z",
-      "title": "A \"data center project in Utah expected to generate and consume more power than entire state nears final approval\" (AI roundup)",
-      "title_ja": "ユタ州のデータセンター計画、州全体の電力を上回る消費が予想され最終承認に近づく",
-      "summary_ja": "ユタ州の新しいデータセンター計画が、全ての建設が完了すれば9GWの電力を消費すると報告されています。これは、現在のユタ州全体のエネルギー使用量の2倍に相当します。プロジェクトの支持者は、近隣のボックスエルダー郡が計画についての投票を行うことを待っている状況です。",
-      "key_points": [
-        "データセンターは9GWの電力を消費予定",
-        "消費電力は現行のユタ州の倍以上",
-        "現地で化石燃料を使用して電力を生成",
-        "ボックスエルダー郡が計画の承認を投票中"
-      ],
-      "glossary": [
-        {
-          "term": "GW",
-          "explain_ja": "ギガワットの略で、電力の単位。1GWは10億ワットに相当する。"
-        },
-        {
-          "term": "化石燃料",
-          "explain_ja": "石油、石炭、天然ガスなど、地中で形成された炭素ベースのエネルギー源。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの建設動向について定期的に情報を確認する",
-        "プロジェクトに対する地域の意見や影響を調査する",
-        "エネルギー消費に関する将来のトレンドを把握する"
+        "企業内でのDCBBS使用に関する最新の進捗を確認する。",
+        "新しい雇用機会について、エンジニアリングや製造部門に知らせる。",
+        "シリコンバレーの技術動向に注目し、関連するトレーニングを受ける。"
       ],
       "tags": [
         "DC",
