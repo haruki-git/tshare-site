@@ -1,114 +1,101 @@
 {
-  "date": "2026-04-29",
-  "generatedAtJST": "2026-04-29T07:15:47.201+09:00",
+  "date": "2026-04-30",
+  "generatedAtJST": "2026-04-30T07:15:42.159+09:00",
   "items": [
     {
-      "url": "https://www.theregister.com/2026/04/27/core_scientific_ai/",
+      "url": "https://www.theregister.com/2026/04/28/oracle_new_mexico_power_fuel_cell_farm/",
       "source": "Theregister.com",
-      "publishedAt": "2026-04-27T18:58:06Z",
-      "title": "The crypto-to-AI bandwagon jumpers' club just landed another member: Core Scientific",
-      "title_ja": "コアサイエンティフィックがAIデータセンターへの移行を発表",
-      "summary_ja": "コアサイエンティフィックは、テキサス州ペコスにある300メガワットのビットコインマイニング施設を1.5ギガワットのAIデータセンターに転換する計画を明らかにしました。この移行は、同社が新たに発行する33億ドルのジャンクボンドで資金調達を行うことを含んでいます。完成後、施設は1ギガワットの賃貸可能な容量を提供し、エネルギーの確保が鍵となります。",
+      "publishedAt": "2026-04-28T21:58:58Z",
+      "title": "Oracle plans to power its New Mexico mega datacenter with a 2.45GW fuel cell farm",
+      "title_ja": "Oracle、ニューメキシコのメガデータセンターを2.45GWの燃料電池農場で運営予定",
+      "summary_ja": "Oracleは、ニューメキシコの新しいデータセンター施設で2.45GWの燃料電池発電所を展開する計画を発表しました。この決定は、地元の電力供給が需要を満たせない地域での代替エネルギーの重要性を反映しています。燃料電池は、クリーンなエネルギー源として注目されており、従来の発電方法と比較しても多くの利点がありますが、依然として自然ガスに依存しています。",
       "key_points": [
-        "コアサイエンティフィックはビットコインマイニングからAIデータセンターへの転換を計画。",
-        "テキサス州での新施設は2027年初頭に運用開始予定。",
-        "施設の電力供給には300メガワットの追加電力が確保済み。",
-        "その他の企業も非伝統的なエネルギー技術を採用している。",
-        "発電の経済性や実現可能性については不透明な部分がある。"
+        "OracleはBloom Energyと提携し、2.45GWの燃料電池発電所を設置する。",
+        "この発電量は、2～3基の原子炉に相当する。",
+        "燃料電池は地元の電力供給が不足するところでの代替エネルギー源として利用されている。",
+        "自然エネルギーの使用としてはアピールされているが、実際には天然ガスに依存している。",
+        "データセンターは水の消費を抑える設計がなされている。",
+        "建設はすでに開始されているが、具体的な完成時期は未定。"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能の処理や学習を行うためのデータセンター。"
+          "term": "燃料電池",
+          "explain_ja": "化学反応を利用して電気を生成する装置で、主に水素や天然ガスを使用する。"
         },
         {
-          "term": "ビットコインマイニング",
-          "explain_ja": "ビットコインの取引を承認するための計算処理を行うプロセス。"
-        },
-        {
-          "term": "ジャンクボンド",
-          "explain_ja": "信用リスクの高い企業が発行する高利回りの債券。"
+          "term": "天然ガス",
+          "explain_ja": "主にメタンからなる化石燃料で、燃料電池などに広く使用される。"
         }
       ],
       "personal_actions": [
-        "データセンターでの電力供給計画についての最新情報を確認する。",
-        "非伝統的なエネルギー技術の導入状況を調査する。",
-        "施設の開設時期に備えて最新の技術トレンドを把握しておく。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-04-27T15:27:52Z",
-      "title": "Data center demand drives 66% surge in natural gas power plant costs | TechCrunch",
-      "title_ja": "データセンターの需要が天然ガス発電所コストを66%押し上げ",
-      "summary_ja": "データセンターの電力需要が急増する中、天然ガス発電所のコストが過去2年間でほぼ倍増し、建設にかかる時間も23%長くなっています。この状況は、全体のエネルギー供給チェーンに大きな影響を与えています。今後、発電所の建設はますます困難になる可能性があります。",
-      "key_points": [
-        "天然ガス発電所のコストが66%上昇した",
-        "発電所の建設時間が23%増加",
-        "データセンターからの電力需要が急増",
-        "コスト上昇はエネルギー供給全体に影響",
-        "将来的な発電所の建設が困難になる可能性"
-      ],
-      "glossary": [
-        {
-          "term": "天然ガス発電所",
-          "explain_ja": "天然ガスを燃料として電力を生成する施設。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "大量のデータ処理や保存を行うための施設。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターへの電力供給の影響を評価する。",
-        "コスト上昇に伴うエネルギー管理の見直しを行う。",
-        "将来的な電力需要の計画を立てる。"
+        "燃料電池技術の動向を定期的に確認する。",
+        "データセンターのエネルギー使用効率について情報を集める。",
+        "地域内の再生可能エネルギー源の投資機会を検討する。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.techpowerup.com/348557/supermicro-adds-largest-silicon-valley-campus-new-dcbbs-facility-to-advance-the-delivery-of-next-generation-ai-data-centers",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-04-27T15:13:30Z",
-      "title": "Supermicro Adds Largest Silicon Valley Campus - New DCBBS Facility to Advance the Delivery of Next-Generation AI Data Centers",
-      "title_ja": "スーパーマイクロ、シリコンバレーに最大のキャンパスを追加 - 次世代AIデータセンター向けDCBBS施設を開設",
-      "summary_ja": "スーパーマイクロがカリフォルニア州サンノゼに新しいDCBBSキャンパスを開設し、米国内での新たなイノベーションの推進を目指しています。この施設は約32.8エーカーの広さを持ち、714,000平方フィート以上の面積をカバーします。これにより、製造、テスト、サービスなどの能力が強化され、快適な雇用創出が期待されています。",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_d1acd0d0-c882-452b-a2ec-5c5004dc8b35",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-04-28T17:21:05Z",
+      "title": "Sustained Data Center Demand for Mass-Capacity Storage Drives BofA’s Bullishness Toward Seagate Technology (STX)",
+      "title_ja": "データセンター需要がSeagate Technologyに対するBofAの楽観を支える",
+      "summary_ja": "データセンターの大容量ストレージに対する需要が持続的であることが、BofAのSeagate Technology（STX）に対する楽観的見通しを支えています。この需要の続行は、ストレージ市場全体の成長を促進しており、企業の投資戦略にも影響を及ぼすと考えられています。結果として、Seagateの業績は今後の市場変動に対して堅実であると予測されています。",
       "key_points": [
-        "スーパーマイクロが米国で最大のDCBBSキャンパスを開設。",
-        "新施設は約32.8エーカー、714,000平方フィート以上の面積を持つ。",
-        "サンノゼでのオペレーションを強化し、高品質な雇用を新たに創出。",
-        "AIインフラストラクチャーの需要増加に対応するため、国内能力を拡大。",
-        "DCBBSはモジュラー型のAIインフラストラクチャーを提供。",
-        "エネルギー効率と迅速な展開を重視した設計。"
+        "データセンターによるストレージ需要の高まりが続いている",
+        "BofAがSeagate Technologyに対するポジティブな見通しを示している",
+        "大容量ストレージ市場の成長が企業投資に影響を与える可能性がある"
       ],
       "glossary": [
         {
-          "term": "DCBBS",
-          "explain_ja": "データセンター構築ブロックソリューションの略で、AIインフラ向けのモジュラー構造を提供。"
+          "term": "データセンター",
+          "explain_ja": "データを保存、管理、処理するための施設。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略で、機械が人間のように学習や推論を行う技術。"
-        },
-        {
-          "term": "エネルギー効率",
-          "explain_ja": "システムが使用するエネルギーの量に対する出力の効率を示す指標。"
+          "term": "ストレージ",
+          "explain_ja": "データを保存するための技術や装置。"
         }
       ],
       "personal_actions": [
-        "企業内でのDCBBS使用に関する最新の進捗を確認する。",
-        "新しい雇用機会について、エンジニアリングや製造部門に知らせる。",
-        "シリコンバレーの技術動向に注目し、関連するトレーニングを受ける。"
+        "データセンター向けのストレージ需要に関する最新の情報を確認する",
+        "Seagate Technologyの株価動向を観察する"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
+      ]
+    },
+    {
+      "url": "https://oilprice.com/Energy/Energy-General/Chinas-Data-Center-Boom-Could-Double-Power-Demand-by-2030.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-04-28T16:00:00Z",
+      "title": "China’s Data Center Boom Could Double Power Demand by 2030",
+      "title_ja": "中国のデータセンターの急増が2030年までに電力需要を倍増させる可能性",
+      "summary_ja": "中国は今後5年間でデータセンターの容量をほぼ倍増させる見込みであり、新たに28ギガワット（GW）のプロジェクトが2030年までに稼働予定です。これは、昨年末時点での32 GWの既存キャパシティに追加される形になります。この急増は、エネルギー需要の大幅な増加を引き起こし、電力供給システムに対する圧力を高める可能性があります。",
+      "key_points": [
+        "中国は2030年までにデータセンターの容量を倍増する計画がある。",
+        "新たに28GWのプロジェクトが2025年までに実現される見込み。",
+        "昨年末の時点で32GWのデータセンターが既に稼働している。",
+        "急増する電力需要はエネルギー供給システムに圧力を与える可能性が高い。",
+        "この動向は産業や環境政策にも影響を与えると思われる。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "情報やデータを管理・保管するための設備。"
+        },
+        {
+          "term": "ギガワット（GW）",
+          "explain_ja": "電力の単位で、10億ワットに相当する。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの近隣における静電気対策や冷却システムの確認を行う。",
+        "電力供給契約の見直しを検討し、将来の需要増に備える。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
