@@ -1,98 +1,101 @@
 {
-  "date": "2026-04-30",
-  "generatedAtJST": "2026-04-30T07:15:42.159+09:00",
+  "date": "2026-05-01",
+  "generatedAtJST": "2026-05-01T07:15:46.327+09:00",
   "items": [
     {
-      "url": "https://www.theregister.com/2026/04/28/oracle_new_mexico_power_fuel_cell_farm/",
-      "source": "Theregister.com",
-      "publishedAt": "2026-04-28T21:58:58Z",
-      "title": "Oracle plans to power its New Mexico mega datacenter with a 2.45GW fuel cell farm",
-      "title_ja": "Oracle、ニューメキシコのメガデータセンターを2.45GWの燃料電池農場で運営予定",
-      "summary_ja": "Oracleは、ニューメキシコの新しいデータセンター施設で2.45GWの燃料電池発電所を展開する計画を発表しました。この決定は、地元の電力供給が需要を満たせない地域での代替エネルギーの重要性を反映しています。燃料電池は、クリーンなエネルギー源として注目されており、従来の発電方法と比較しても多くの利点がありますが、依然として自然ガスに依存しています。",
+      "url": "https://www.commondreams.org/news/ai-data-center-letter",
+      "source": "Common Dreams",
+      "publishedAt": "2026-04-29T22:09:29Z",
+      "title": "Citing 'Irreversible Harm,' 100+ Groups Urge Congress to Reject Rushed Data Center Approvals",
+      "title_ja": "「取り返しのつかない害」を理由に100以上の団体が議会にデータセンターの迅速承認を拒否するよう要請",
+      "summary_ja": "約120の市民団体が水曜日に、人工知能や従来型データセンターの迅速な承認を求める共和党の試みに反対するよう米国の議員に呼びかけた。この動きは、許可改革法案にこれらの施設に関する条項を盛り込むことを含んでいる。環境や地域社会への影響を懸念する団体はこの承認が持つリスクを強調している。結果的に、立法が迅速に進めば取り返しのつかない害を引き起こしかねないとの警告が発せられた。",
       "key_points": [
-        "OracleはBloom Energyと提携し、2.45GWの燃料電池発電所を設置する。",
-        "この発電量は、2～3基の原子炉に相当する。",
-        "燃料電池は地元の電力供給が不足するところでの代替エネルギー源として利用されている。",
-        "自然エネルギーの使用としてはアピールされているが、実際には天然ガスに依存している。",
-        "データセンターは水の消費を抑える設計がなされている。",
-        "建設はすでに開始されているが、具体的な完成時期は未定。"
+        "約120の団体が合意している",
+        "人工知能とデータセンターの迅速承認に対する反対",
+        "政府の政策が地域社会に及ぼす影響への懸念",
+        "環境へのリスクが指摘されている",
+        "許可改革法案に条項が追加される可能性"
       ],
       "glossary": [
         {
-          "term": "燃料電池",
-          "explain_ja": "化学反応を利用して電気を生成する装置で、主に水素や天然ガスを使用する。"
+          "term": "データセンター",
+          "explain_ja": "データを保管、処理、配信するための施設。"
         },
         {
-          "term": "天然ガス",
-          "explain_ja": "主にメタンからなる化石燃料で、燃料電池などに広く使用される。"
+          "term": "AI",
+          "explain_ja": "人工知能。人間の知能を模倣するコンピュータプログラム。"
         }
       ],
       "personal_actions": [
-        "燃料電池技術の動向を定期的に確認する。",
-        "データセンターのエネルギー使用効率について情報を集める。",
-        "地域内の再生可能エネルギー源の投資機会を検討する。"
+        "自社のプロジェクトにおけるデータセンターの必要性を再評価する",
+        "地域社会への影響を考慮し、環境への配慮を強化する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_d1acd0d0-c882-452b-a2ec-5c5004dc8b35",
+      "url": "https://www.commondreams.org/news/data-centers-maine",
+      "source": "Common Dreams",
+      "publishedAt": "2026-04-29T19:35:23Z",
+      "title": "Maine Lawmakers Fail to Override Mills' Data Center Ban Veto That Won Applause From Trump-Aligned Group",
+      "title_ja": "メイン州、AIデータセンター拡張禁止の拒否権を覆せず",
+      "summary_ja": "メイン州の議会は、人工知能データセンターの拡張に18ヶ月のモラトリアムを設ける法案に対する民主党のジャネット・ミルズ知事の拒否権を覆すことができなかった。この拒否権にはトランプ支持者からの賛同が寄せられていた。結果として、この法案は成立せず、州内のデータセンターの拡張は禁止されたままとなっている。",
+      "key_points": [
+        "メイン州議会が知事の拒否権を覆すのに失敗した。",
+        "法案は人工知能データセンターの拡張に18ヶ月のモラトリアムを求めていた。",
+        "拒否権はトランプ支持者からの支持を受けていた。",
+        "州内のデータセンターの拡張は依然として禁止される。",
+        "法案の成立を望む声もあったが、議会の票が不足していた。"
+      ],
+      "glossary": [
+        {
+          "term": "モラトリアム",
+          "explain_ja": "一時的に法的な効力を停止することを指す。"
+        },
+        {
+          "term": "拒否権",
+          "explain_ja": "特定の法案に対して、権限を持つ者が承認を拒む権利を指す。"
+        }
+      ],
+      "personal_actions": [
+        "今後のデータセンター関連の法案について、州議会の動向を定期的に確認する。",
+        "地域のAIデータセンターの影響を評価し、必要に応じて意見を表明する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_8d1c8d59-baea-43fa-83df-6887b73e3215",
       "source": "Yahoo Entertainment",
-      "publishedAt": "2026-04-28T17:21:05Z",
-      "title": "Sustained Data Center Demand for Mass-Capacity Storage Drives BofA’s Bullishness Toward Seagate Technology (STX)",
-      "title_ja": "データセンター需要がSeagate Technologyに対するBofAの楽観を支える",
-      "summary_ja": "データセンターの大容量ストレージに対する需要が持続的であることが、BofAのSeagate Technology（STX）に対する楽観的見通しを支えています。この需要の続行は、ストレージ市場全体の成長を促進しており、企業の投資戦略にも影響を及ぼすと考えられています。結果として、Seagateの業績は今後の市場変動に対して堅実であると予測されています。",
+      "publishedAt": "2026-04-29T14:26:07Z",
+      "title": "JPMorgan and Susquehanna Both Boost Bloom Energy Price Targets: Is the Data Center Power Play Heating Up?",
+      "title_ja": "JPMorganとSusquehannaがBloom Energyの目標株価を引き上げ：データセンターの電力戦略は加熱しているのか？",
+      "summary_ja": "JPMorganとSusquehannaがBloom Energyの目標株価を引き上げ、データセンター向けの電力戦略が注目を集めている。これにより、Bloom Energyはデータセンター市場における重要な役割を果たす可能性がある。投資家はこの動きを受けて、同社の展望に期待を寄せている。",
       "key_points": [
-        "データセンターによるストレージ需要の高まりが続いている",
-        "BofAがSeagate Technologyに対するポジティブな見通しを示している",
-        "大容量ストレージ市場の成長が企業投資に影響を与える可能性がある"
+        "JPMorganとSusquehannaがBloom Energyの株価目標を引き上げた。",
+        "データセンター向けの電力供給戦略が注目されている。",
+        "Bloom Energyはデータセンター市場での競争力を強化している。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存、管理、処理するための施設。"
+          "term": "JPMorgan",
+          "explain_ja": "アメリカの大手金融機関。"
         },
         {
-          "term": "ストレージ",
-          "explain_ja": "データを保存するための技術や装置。"
+          "term": "Susquehanna",
+          "explain_ja": "アメリカの投資銀行。"
+        },
+        {
+          "term": "Bloom Energy",
+          "explain_ja": "クリーンエネルギー技術を提供する企業。"
         }
       ],
       "personal_actions": [
-        "データセンター向けのストレージ需要に関する最新の情報を確認する",
-        "Seagate Technologyの株価動向を観察する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://oilprice.com/Energy/Energy-General/Chinas-Data-Center-Boom-Could-Double-Power-Demand-by-2030.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-04-28T16:00:00Z",
-      "title": "China’s Data Center Boom Could Double Power Demand by 2030",
-      "title_ja": "中国のデータセンターの急増が2030年までに電力需要を倍増させる可能性",
-      "summary_ja": "中国は今後5年間でデータセンターの容量をほぼ倍増させる見込みであり、新たに28ギガワット（GW）のプロジェクトが2030年までに稼働予定です。これは、昨年末時点での32 GWの既存キャパシティに追加される形になります。この急増は、エネルギー需要の大幅な増加を引き起こし、電力供給システムに対する圧力を高める可能性があります。",
-      "key_points": [
-        "中国は2030年までにデータセンターの容量を倍増する計画がある。",
-        "新たに28GWのプロジェクトが2025年までに実現される見込み。",
-        "昨年末の時点で32GWのデータセンターが既に稼働している。",
-        "急増する電力需要はエネルギー供給システムに圧力を与える可能性が高い。",
-        "この動向は産業や環境政策にも影響を与えると思われる。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "情報やデータを管理・保管するための設備。"
-        },
-        {
-          "term": "ギガワット（GW）",
-          "explain_ja": "電力の単位で、10億ワットに相当する。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの近隣における静電気対策や冷却システムの確認を行う。",
-        "電力供給契約の見直しを検討し、将来の需要増に備える。"
+        "Bloom Energyの最新の株価動向をチェックする。",
+        "データセンターのエネルギー消費について調査を行う。"
       ],
       "tags": [
         "DC"
