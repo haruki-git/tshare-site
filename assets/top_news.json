@@ -1,66 +1,44 @@
 {
-  "date": "2026-05-01",
-  "generatedAtJST": "2026-05-01T07:15:46.327+09:00",
+  "date": "2026-05-02",
+  "generatedAtJST": "2026-05-02T07:15:41.648+09:00",
   "items": [
     {
-      "url": "https://www.commondreams.org/news/ai-data-center-letter",
-      "source": "Common Dreams",
-      "publishedAt": "2026-04-29T22:09:29Z",
-      "title": "Citing 'Irreversible Harm,' 100+ Groups Urge Congress to Reject Rushed Data Center Approvals",
-      "title_ja": "「取り返しのつかない害」を理由に100以上の団体が議会にデータセンターの迅速承認を拒否するよう要請",
-      "summary_ja": "約120の市民団体が水曜日に、人工知能や従来型データセンターの迅速な承認を求める共和党の試みに反対するよう米国の議員に呼びかけた。この動きは、許可改革法案にこれらの施設に関する条項を盛り込むことを含んでいる。環境や地域社会への影響を懸念する団体はこの承認が持つリスクを強調している。結果的に、立法が迅速に進めば取り返しのつかない害を引き起こしかねないとの警告が発せられた。",
+      "url": "https://blogs.cisco.com/?p=490303",
+      "source": "Cisco.com",
+      "publishedAt": "2026-04-30T15:00:38Z",
+      "title": "Built like a startup, scaled like Cisco: Transforming data center cooling for the AI era",
+      "title_ja": "スタートアップのように構築し、Ciscoのように拡張する：AI時代のデータセンター冷却の変革",
+      "summary_ja": "データセンターの冷却方法に革新が求められている中、Ciscoは新たに100%直接液体冷却型ネットワークスイッチの開発を進めている。この流れは、AIの急激な成長に伴う電力需要の増加に応じており、従来の空気冷却では非効率であることが指摘されている。Ciscoのエンジニアたちは、証拠をもとに迅速に商品化を決定し、次世代のシステムを発表することで業界に新たな基準を設けようとしている。",
       "key_points": [
-        "約120の団体が合意している",
-        "人工知能とデータセンターの迅速承認に対する反対",
-        "政府の政策が地域社会に及ぼす影響への懸念",
-        "環境へのリスクが指摘されている",
-        "許可改革法案に条項が追加される可能性"
+        "従来の空気冷却はAIラックには非効率的である。",
+        "データセンターの電力需要は2024年から2030年にかけて倍増すると予測されている。",
+        "液体冷却は高性能ネットワーキングデバイスには不可欠である。",
+        "Ciscoは直接液体冷却型スイッチのプロトタイプを開発した。",
+        "新しいCisco N9000およびCisco 8000システムはエネルギー効率を大幅に向上させる。",
+        "Ciscoはパートナーシップを通じてAIインフラの構築リスクを軽減している。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを保管、処理、配信するための施設。"
+          "term": "液体冷却",
+          "explain_ja": "高密度のコンポーネントから熱を効率よく取り除くための冷却方法。水とグリコールの混合物を用いる。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能。人間の知能を模倣するコンピュータプログラム。"
+          "term": "AI GPUラック",
+          "explain_ja": "AI処理のためのグラフィックプロセッシングユニット(GPU)が搭載されたラック。"
+        },
+        {
+          "term": "Cisco Silicon One",
+          "explain_ja": "Ciscoが開発した高性能な半導体チップ。"
+        },
+        {
+          "term": "Open Compute Project (OCP)",
+          "explain_ja": "オープンソースのデータセンター関連技術を推進する団体。"
         }
       ],
       "personal_actions": [
-        "自社のプロジェクトにおけるデータセンターの必要性を再評価する",
-        "地域社会への影響を考慮し、環境への配慮を強化する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.commondreams.org/news/data-centers-maine",
-      "source": "Common Dreams",
-      "publishedAt": "2026-04-29T19:35:23Z",
-      "title": "Maine Lawmakers Fail to Override Mills' Data Center Ban Veto That Won Applause From Trump-Aligned Group",
-      "title_ja": "メイン州、AIデータセンター拡張禁止の拒否権を覆せず",
-      "summary_ja": "メイン州の議会は、人工知能データセンターの拡張に18ヶ月のモラトリアムを設ける法案に対する民主党のジャネット・ミルズ知事の拒否権を覆すことができなかった。この拒否権にはトランプ支持者からの賛同が寄せられていた。結果として、この法案は成立せず、州内のデータセンターの拡張は禁止されたままとなっている。",
-      "key_points": [
-        "メイン州議会が知事の拒否権を覆すのに失敗した。",
-        "法案は人工知能データセンターの拡張に18ヶ月のモラトリアムを求めていた。",
-        "拒否権はトランプ支持者からの支持を受けていた。",
-        "州内のデータセンターの拡張は依然として禁止される。",
-        "法案の成立を望む声もあったが、議会の票が不足していた。"
-      ],
-      "glossary": [
-        {
-          "term": "モラトリアム",
-          "explain_ja": "一時的に法的な効力を停止することを指す。"
-        },
-        {
-          "term": "拒否権",
-          "explain_ja": "特定の法案に対して、権限を持つ者が承認を拒む権利を指す。"
-        }
-      ],
-      "personal_actions": [
-        "今後のデータセンター関連の法案について、州議会の動向を定期的に確認する。",
-        "地域のAIデータセンターの影響を評価し、必要に応じて意見を表明する。"
+        "冷却システムの導入についての最新情報を把握する。",
+        "次世代ネットワークスイッチの性能比較を行う。",
+        "液体冷却に関する業界の動向を追跡する。"
       ],
       "tags": [
         "DC",
@@ -68,37 +46,71 @@
       ]
     },
     {
-      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_8d1c8d59-baea-43fa-83df-6887b73e3215",
-      "source": "Yahoo Entertainment",
-      "publishedAt": "2026-04-29T14:26:07Z",
-      "title": "JPMorgan and Susquehanna Both Boost Bloom Energy Price Targets: Is the Data Center Power Play Heating Up?",
-      "title_ja": "JPMorganとSusquehannaがBloom Energyの目標株価を引き上げ：データセンターの電力戦略は加熱しているのか？",
-      "summary_ja": "JPMorganとSusquehannaがBloom Energyの目標株価を引き上げ、データセンター向けの電力戦略が注目を集めている。これにより、Bloom Energyはデータセンター市場における重要な役割を果たす可能性がある。投資家はこの動きを受けて、同社の展望に期待を寄せている。",
+      "url": "https://www.cmswire.com/digital-experience/ai-has-a-marketing-problem-nobody-wants-the-data-center-nearby/",
+      "source": "CMSWire",
+      "publishedAt": "2026-04-30T14:06:52Z",
+      "title": "AI Has a Marketing Problem: Nobody Wants the Data Center Nearby",
+      "title_ja": "AIのマーケティング問題：データセンターを近くに望まない人々",
+      "summary_ja": "最近、AIの拡大に対する公共の支持が弱まっており、特にデータセンターの設置に対する抵抗が高まっています。インディアナポリスでの立法者の自宅への銃撃事件が、この反発を強める要因となっています。この状況は、AIの発展にとって厳しい道のりを示唆しています。",
       "key_points": [
-        "JPMorganとSusquehannaがBloom Energyの株価目標を引き上げた。",
-        "データセンター向けの電力供給戦略が注目されている。",
-        "Bloom Energyはデータセンター市場での競争力を強化している。"
+        "AI拡大への公共支持が減少している。",
+        "データセンター設置に対する政治的抵抗が高まっている。",
+        "インディアナポリスでの銃撃事件が影響を及ぼしている。",
+        "AI政策の進展に厳しい影響を与える可能性がある。"
       ],
       "glossary": [
         {
-          "term": "JPMorgan",
-          "explain_ja": "アメリカの大手金融機関。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略で、人間の知能を模倣する技術。"
         },
         {
-          "term": "Susquehanna",
-          "explain_ja": "アメリカの投資銀行。"
+          "term": "データセンター",
+          "explain_ja": "データを保存、管理、処理するための集中型施設。"
         },
         {
-          "term": "Bloom Energy",
-          "explain_ja": "クリーンエネルギー技術を提供する企業。"
+          "term": "公共支持",
+          "explain_ja": "一般市民が特定の政策やプロジェクトを支持すること。"
         }
       ],
       "personal_actions": [
-        "Bloom Energyの最新の株価動向をチェックする。",
-        "データセンターのエネルギー消費について調査を行う。"
+        "現地でのデータセンター設置に関する地域住民の意見を確認する。",
+        "地域の政治に関する情報を収集し、影響を評価する。",
+        "AIに関する地域のイベントや討論会に参加する。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.barchart.com/story/news/1619169/amd-stock-just-got-a-new-street-high-price-target-should-you-buy-shares-here",
+      "source": "Barchart.com",
+      "publishedAt": "2026-04-30T13:00:02Z",
+      "title": "AMD Stock Just Got a New Street-High Price Target. Should You Buy Shares Here?",
+      "title_ja": "AMD株が新たなストリートハイの目標株価を獲得。今株を買うべきか？",
+      "summary_ja": "AMDの株は新たにストリートハイの株価目標を設定されました。昨年の記録的な収益と堅実な成長を背景に、AMDはデータセンター拡張の重要な役割を担う可能性があります。これにより、投資家の関心が高まっています。",
+      "key_points": [
+        "AMDは新たにストリートハイの株価目標を設定された。",
+        "昨年の記録的な収益が要因となっている。",
+        "データセンターの拡張において重要な役割を果たす可能性がある。"
+      ],
+      "glossary": [
+        {
+          "term": "AMD",
+          "explain_ja": "米国の半導体企業で、プロセッサやグラフィックカードを製造。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "コンピュータシステムや関連するコンポーネントを集約管理する施設。"
+        }
+      ],
+      "personal_actions": [
+        "AMDの最新の財務報告を確認する。",
+        "データセンター市場のトレンドをリサーチする。",
+        "株価の動向を監視する。"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
