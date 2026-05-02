@@ -1,116 +1,116 @@
 {
-  "date": "2026-05-02",
-  "generatedAtJST": "2026-05-02T07:15:41.648+09:00",
+  "date": "2026-05-03",
+  "generatedAtJST": "2026-05-03T07:15:39.441+09:00",
   "items": [
     {
-      "url": "https://blogs.cisco.com/?p=490303",
-      "source": "Cisco.com",
-      "publishedAt": "2026-04-30T15:00:38Z",
-      "title": "Built like a startup, scaled like Cisco: Transforming data center cooling for the AI era",
-      "title_ja": "スタートアップのように構築し、Ciscoのように拡張する：AI時代のデータセンター冷却の変革",
-      "summary_ja": "データセンターの冷却方法に革新が求められている中、Ciscoは新たに100%直接液体冷却型ネットワークスイッチの開発を進めている。この流れは、AIの急激な成長に伴う電力需要の増加に応じており、従来の空気冷却では非効率であることが指摘されている。Ciscoのエンジニアたちは、証拠をもとに迅速に商品化を決定し、次世代のシステムを発表することで業界に新たな基準を設けようとしている。",
+      "url": "https://www.coindesk.com/markets/2026/05/01/bitcoin-miner-riot-s-shares-jump-8-after-expanding-amd-data-center-deal-signaling-ai-pivot",
+      "source": "CoinDesk",
+      "publishedAt": "2026-05-01T20:59:09Z",
+      "title": "Bitcoin miner Riot's shares jump 8% after expanding AMD data center deal, signaling AI pivot",
+      "title_ja": "ビットコインマイナーRiot、AMDデータセンター契約拡大で株価8%上昇、AIへの移行を示唆",
+      "summary_ja": "Riotの株価が8%上昇したのは、AMDとのデータセンター契約を拡大したためです。この拡大は、Riotがビットコインマイニングから新たなビジネス分野にシフトしていることを示しています。特に、データセンター事業の成長に対する信頼を強化しています。",
       "key_points": [
-        "従来の空気冷却はAIラックには非効率的である。",
-        "データセンターの電力需要は2024年から2030年にかけて倍増すると予測されている。",
-        "液体冷却は高性能ネットワーキングデバイスには不可欠である。",
-        "Ciscoは直接液体冷却型スイッチのプロトタイプを開発した。",
-        "新しいCisco N9000およびCisco 8000システムはエネルギー効率を大幅に向上させる。",
-        "Ciscoはパートナーシップを通じてAIインフラの構築リスクを軽減している。"
+        "RiotがAMDとの契約を拡大",
+        "株価が8%上昇",
+        "ビットコインマイニングからのシフトを示唆",
+        "データセンター事業の成長が期待される"
       ],
       "glossary": [
-        {
-          "term": "液体冷却",
-          "explain_ja": "高密度のコンポーネントから熱を効率よく取り除くための冷却方法。水とグリコールの混合物を用いる。"
-        },
-        {
-          "term": "AI GPUラック",
-          "explain_ja": "AI処理のためのグラフィックプロセッシングユニット(GPU)が搭載されたラック。"
-        },
-        {
-          "term": "Cisco Silicon One",
-          "explain_ja": "Ciscoが開発した高性能な半導体チップ。"
-        },
-        {
-          "term": "Open Compute Project (OCP)",
-          "explain_ja": "オープンソースのデータセンター関連技術を推進する団体。"
-        }
-      ],
-      "personal_actions": [
-        "冷却システムの導入についての最新情報を把握する。",
-        "次世代ネットワークスイッチの性能比較を行う。",
-        "液体冷却に関する業界の動向を追跡する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.cmswire.com/digital-experience/ai-has-a-marketing-problem-nobody-wants-the-data-center-nearby/",
-      "source": "CMSWire",
-      "publishedAt": "2026-04-30T14:06:52Z",
-      "title": "AI Has a Marketing Problem: Nobody Wants the Data Center Nearby",
-      "title_ja": "AIのマーケティング問題：データセンターを近くに望まない人々",
-      "summary_ja": "最近、AIの拡大に対する公共の支持が弱まっており、特にデータセンターの設置に対する抵抗が高まっています。インディアナポリスでの立法者の自宅への銃撃事件が、この反発を強める要因となっています。この状況は、AIの発展にとって厳しい道のりを示唆しています。",
-      "key_points": [
-        "AI拡大への公共支持が減少している。",
-        "データセンター設置に対する政治的抵抗が高まっている。",
-        "インディアナポリスでの銃撃事件が影響を及ぼしている。",
-        "AI政策の進展に厳しい影響を与える可能性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略で、人間の知能を模倣する技術。"
-        },
         {
           "term": "データセンター",
-          "explain_ja": "データを保存、管理、処理するための集中型施設。"
+          "explain_ja": "データを集中管理・保管する施設で、コンピュータや通信機器が設置されている。"
         },
         {
-          "term": "公共支持",
-          "explain_ja": "一般市民が特定の政策やプロジェクトを支持すること。"
-        }
-      ],
-      "personal_actions": [
-        "現地でのデータセンター設置に関する地域住民の意見を確認する。",
-        "地域の政治に関する情報を収集し、影響を評価する。",
-        "AIに関する地域のイベントや討論会に参加する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.barchart.com/story/news/1619169/amd-stock-just-got-a-new-street-high-price-target-should-you-buy-shares-here",
-      "source": "Barchart.com",
-      "publishedAt": "2026-04-30T13:00:02Z",
-      "title": "AMD Stock Just Got a New Street-High Price Target. Should You Buy Shares Here?",
-      "title_ja": "AMD株が新たなストリートハイの目標株価を獲得。今株を買うべきか？",
-      "summary_ja": "AMDの株は新たにストリートハイの株価目標を設定されました。昨年の記録的な収益と堅実な成長を背景に、AMDはデータセンター拡張の重要な役割を担う可能性があります。これにより、投資家の関心が高まっています。",
-      "key_points": [
-        "AMDは新たにストリートハイの株価目標を設定された。",
-        "昨年の記録的な収益が要因となっている。",
-        "データセンターの拡張において重要な役割を果たす可能性がある。"
-      ],
-      "glossary": [
+          "term": "ビットコインマイニング",
+          "explain_ja": "ビットコインの取引を承認し、ブロックチェーンに追加するプロセス。"
+        },
         {
           "term": "AMD",
-          "explain_ja": "米国の半導体企業で、プロセッサやグラフィックカードを製造。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "コンピュータシステムや関連するコンポーネントを集約管理する施設。"
+          "explain_ja": "アメリカの半導体メーカーで、CPUやGPUなどを製造している。"
         }
       ],
       "personal_actions": [
-        "AMDの最新の財務報告を確認する。",
-        "データセンター市場のトレンドをリサーチする。",
-        "株価の動向を監視する。"
+        "自社のビジネスモデルがデータセンター事業にどう適応できるか検討する。",
+        "業界の動向を把握し、関連技術の理解を深める。",
+        "投資先の企業のビジネスモデルの変化を定期的に確認する。"
       ],
       "tags": [
-        "その他"
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://missoulian.com/news/local/government-politics/article_cd72d8c8-a7ce-4def-8913-b369cf9aa144.html",
+      "source": "The Missoulian",
+      "publishedAt": "2026-05-01T20:30:00Z",
+      "title": "Proposed Bonner data center company seeks 100 megawatt facility",
+      "title_ja": "ボンナーのデータセンター会社が100メガワット施設を計画",
+      "summary_ja": "ボンナーに提案されているデータセンターが100メガワットの施設を求めています。現在このサイトでは最大29メガワットを使用していますが、データセンターの代表者によると、完全に建設が完了した場合、最大100メガワットを使用できるとしています。この計画は地域への影響やエネルギーの需要に関する議論を呼ぶ可能性があります。",
+      "key_points": [
+        "ボンナーに100メガワットのデータセンター計画が提出された",
+        "現在は最大29メガワットを使用している",
+        "完全に稼働した場合、100メガワットの使用が見込まれる",
+        "地域のエネルギー需要に影響を与える可能性がある",
+        "データセンターの代表者が発言"
+      ],
+      "glossary": [
+        {
+          "term": "メガワット",
+          "explain_ja": "電力の単位で、1メガワットは1000キロワットに相当する。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保管・管理・処理を行う施設。"
+        }
+      ],
+      "personal_actions": [
+        "地域のエネルギー供給状況を確認する",
+        "データセンターの計画についての公聴会に参加する",
+        "地域住民との情報共有を行う"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://decrypt.co/366347/riot-stock-pops-bitcoin-miner-data-center-revenue-doubled-amd-deal",
+      "source": "Decrypt",
+      "publishedAt": "2026-05-01T16:10:35Z",
+      "title": "Riot Platforms Stock Pops as Bitcoin Miner Reports Data Center Revenue, Doubled AMD Deal",
+      "title_ja": "Riotプラットフォームの株価上昇、ビットコインマイナーがデータセンター収益とAMDとの取引倍増を報告",
+      "summary_ja": "Riot Platformsの株価が上昇した。ビットコインマイニング企業がAIインフラストラクチャのホスティングにシフトし、初めてのデータセンター収益を生み出した。また、AMDとの取引も倍増した。この動きは、企業の収益構造にポジティブな影響を与えると見られている。",
+      "key_points": [
+        "Riot Platformsの株価が上昇中",
+        "ビットコインマイナーがAIインフラのホスティングに転換",
+        "初のデータセンター収益を記録",
+        "AMDとの契約が倍増",
+        "収益構造に良い影響を与える可能性"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "コンピュータシステムや関連データを管理する施設。"
+        },
+        {
+          "term": "ビットコインマイニング",
+          "explain_ja": "ビットコインのトランザクションを処理し、新しいコインを生成するプロセス。"
+        },
+        {
+          "term": "AMD",
+          "explain_ja": "米国の半導体企業で、特にプロセッサやグラフィックカードで知られる。"
+        },
+        {
+          "term": "AIインフラストラクチャ",
+          "explain_ja": "人工知能が機能するためのハードウェアおよびソフトウェアの環境。"
+        }
+      ],
+      "personal_actions": [
+        "Riot Platformsの株価動向を確認する",
+        "データセンター運営の最新トレンドを調べる"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
