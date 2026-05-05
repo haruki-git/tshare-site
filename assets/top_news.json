@@ -1,60 +1,19 @@
 {
-  "date": "2026-05-05",
-  "generatedAtJST": "2026-05-05T07:16:02.283+09:00",
+  "date": "2026-05-06",
+  "generatedAtJST": "2026-05-06T07:15:45.392+09:00",
   "items": [
     {
-      "url": "https://www.digitimes.com/news/a20260430VL214/india-roundup-expansion-infrastructure-manufacturing-startup.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-05-03T22:13:18Z",
-      "title": "India roundup: India accelerates AI, semiconductor, and manufacturing push with major investments and startup bets",
-      "title_ja": "インドのテクノロジー拡大：AI、半導体、製造業への大規模投資とスタートアップの推進",
-      "summary_ja": "インドのテクノロジーエコシステムはAI基盤、半導体、電子製造の急速な拡大を見せている。スタートアップのAI推進と数十億ドル規模のデータセンター計画により、国内外のプレイヤーがコミットメントを深めている。この動きは、インドがサプライチェーンやコンピュート主導産業において重要な役割を果たすことを強調している。",
+      "url": "https://www.sfgate.com/renotahoe/article/tahoe-power-data-centers-22234748.php",
+      "source": "SFGate",
+      "publishedAt": "2026-05-04T11:07:27Z",
+      "title": "Tahoe is losing a major power source amid Google, Apple data center expansion",
+      "title_ja": "タホでデータセンター拡張に伴う重要な電力源の喪失",
+      "summary_ja": "タホ地域は、GoogleやAppleによるデータセンターの拡張に伴い、主要な電力源を失うことになります。この変化は多くのコミュニティにとって突然のことであり、電力供給の影響が懸念されています。地域の電力インフラへの影響が広がる可能性があります。",
       "key_points": [
-        "インドがAIと半導体製造において急成長中。",
-        "Turiyam.aiはAI推論事業でフルスタックコンピューティングプラットフォームを提供。",
-        "HCL-FoxconnのジョイントベンチャーがOSAT施設を建設予定。",
-        "Reliance IndustriesがVisakhapatnamに17億ドルのデータセンタークラスターを計画。",
-        "Nvidiaがバンガロールで760,000平方フィートのオフィス賃貸契約を締結。",
-        "LG Electronicsが家庭用電化製品の製造拡大を計画。"
-      ],
-      "glossary": [
-        {
-          "term": "AI推論",
-          "explain_ja": "AIによるデータ解析や判断を行う技術。"
-        },
-        {
-          "term": "OSAT",
-          "explain_ja": "外部半導体組立・テストの略で、半導体製造のプロセスの一部。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データを管理・保管するための施設。"
-        },
-        {
-          "term": "エクスポート",
-          "explain_ja": "国内で製造した製品を他国に販売すること。"
-        }
-      ],
-      "personal_actions": [
-        "AI推論技術に関する最新情報を確認する。",
-        "半導体関連の投資機会について調査する。",
-        "データセンターに関連するプロジェクトの進捗を追う。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.businessinsider.com/fought-data-center-development-local-government-power-2026-5",
-      "source": "Business Insider",
-      "publishedAt": "2026-05-03T09:58:01Z",
-      "title": "I helped block a data center in my town and learned how much power locals have",
-      "title_ja": "地域住民がデータセンター建設を阻止した事例",
-      "summary_ja": "地元住民がデータセンターの建設に反対し、プロジェクトに対する一時停止を勝ち取りました。ジェシー・ブルックスとその隣人たちは、新たなデータセンターの進出に気付き、強硬な対応をしました。この動きは、地域住民が持つ権力を示すものとなりました。",
-      "key_points": [
-        "地域住民がデータセンター建設に反対した事例",
-        "住民の活動により新規プロジェクトの一時停止を実現",
-        "住民の反対が持つ影響力を示す出来事"
+        "タホ地域でのGoogleとAppleのデータセンター拡張が進行中",
+        "主要な電力源が失われる事態が発生",
+        "地域コミュニティへの影響が懸念されている",
+        "影響の拡大に対する対策が必要とされる"
       ],
       "glossary": [
         {
@@ -62,53 +21,76 @@
           "explain_ja": "データの保存、管理、配信を行う施設。"
         },
         {
-          "term": "モラトリアム",
-          "explain_ja": "特定の行為やプロジェクトに対する一時的な停止措置。"
+          "term": "電力源",
+          "explain_ja": "電力を供給するための資源や設備。"
         }
       ],
       "personal_actions": [
-        "地域のプロジェクトに関心を持ち、意見を表明する",
-        "他の住民と情報を共有し、団結を図る"
+        "地域の電力供給の今後の計画について確認する",
+        "データセンターや電力インフラに対する地元の意見を収集する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://drivers.softpedia.com/get/MOTHERBOARD/GIGABYTE/Gigabyte-X870-AORUS-STEALTH-ICE-rev-1-0-AMD-APU-Driver-24-30-36-250225.shtml",
-      "source": "Softpedia.com",
-      "publishedAt": "2026-05-03T22:09:01Z",
-      "title": "Download Gigabyte X870 AORUS STEALTH ICE (rev. 1.0) AMD APU Driver 24.30.36.250225 for Windows 10 64 bit, Windows 11",
-      "title_ja": "Gigabyte X870 AORUS STEALTH ICE (rev. 1.0) AMD APUドライバー 24.30.36.250225 のダウンロード",
-      "summary_ja": "Gigabyteが提供するX870 AORUS STEALTH ICE用の新しいAPUドライバーがリリースされました。このドライバーはWindows 10（64bit）およびWindows 11に対応しています。アップデートにより性能向上や新機能の追加が期待できます。",
+      "url": "https://nextcity.org/urbanist-news/big-tech-needs-our-cities-cities-should-negotiate-like-it",
+      "source": "Nextcity.org",
+      "publishedAt": "2026-05-04T10:00:00Z",
+      "title": "Big Tech Needs Our Cities. Cities Should Negotiate Like It.",
+      "title_ja": "ビッグテックは私たちの都市を必要としている。都市もそれに見合った交渉をすべきだ。",
+      "summary_ja": "ビッグテック企業は、都市が持つインフラや市民の利便性に依存している。一方で、都市側も自身の利益を守るために、強い交渉力を持つべきである。このような相互依存関係を考慮し、都市は戦略的にビッグテックと接する必要がある。",
       "key_points": [
-        "X3D Turbo Modeで新時代のゲーム性能を発揮",
-        "DDR5 OC 最大8200MT/sに対応",
-        "AMD Socket AM5でRyzen 9000 / 8000 / 7000シリーズをサポート",
-        "5GbE LANとWi-Fi 7により高速ネットワークを実現",
-        "M.2スロットを4つ装備し、PCIe 5.0 x4に対応"
+        "ビッグテック企業は都市インフラに依存している。",
+        "都市はビッグテックとの交渉で力を強化するべき。",
+        "相互の利益を考えた新しい関係を築く必要がある。"
       ],
       "glossary": [
         {
-          "term": "APU",
-          "explain_ja": "Accelerated Processing Unitの略で、CPUとGPUの機能を統合したプロセッサです。"
+          "term": "ビッグテック",
+          "explain_ja": "大規模テクノロジー企業のこと。"
         },
         {
-          "term": "DDR5",
-          "explain_ja": "高速度メモリ規格の一つで、データ転送速度の向上が特徴です。"
-        },
-        {
-          "term": "PCIe",
-          "explain_ja": "Peripheral Component Interconnect Expressの略で、コンピュータ内部のデバイス接続のための規格です。"
+          "term": "インフラ",
+          "explain_ja": "公共のために整備された基本的な設備や制度。"
         }
       ],
       "personal_actions": [
-        "古いドライバーを使用している場合は、最新のドライバーにアップデートする。",
-        "インストール手順を確認し、必要な場合はシステムを再起動する。",
-        "デバイスマネージャーでドライバーが正しくインストールされていることを確認する。"
+        "自社のテクノロジーが地域のインフラにどう影響を与えているかを確認する。",
+        "地域の産業とビッグテック企業との関係を見直す。"
       ],
       "tags": [
         "その他"
+      ]
+    },
+    {
+      "url": "https://www.cnbc.com/2026/05/04/denmark-data-centers-moratorium-grid-pause-power-demand.html",
+      "source": "CNBC",
+      "publishedAt": "2026-05-04T05:00:01Z",
+      "title": "Denmark faces data center reckoning as power grid overwhelmed by surging demand",
+      "title_ja": "デンマーク、データセンター需要の急増で電力網が圧倒される",
+      "summary_ja": "デンマークはデータセンター業界が急成長する中で、電力網が圧倒される危機に直面しています。各国の政府は、エネルギー消費の激しいデータセンターの成長に制限を設けることを検討しています。この状況は、電力供給の安定性に影響を及ぼし、データセンターの運営に新たな課題をもたらしています。",
+      "key_points": [
+        "デンマークの電力網がデータセンターの需要増加により圧迫されている。",
+        "各国政府がエネルギー消費の多いデータセンターへの規制を検討中。",
+        "データセンターの急成長が電力供給の安定性に影響を与える恐れがある。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保存や処理を行う設備。電力消費が激しい。"
+        },
+        {
+          "term": "エネルギー消費",
+          "explain_ja": "消費されるエネルギーの量。データセンターは特に高い。"
+        }
+      ],
+      "personal_actions": [
+        "自施設のエネルギー消費の見直しを行う。",
+        "データセンターの運用に関する最新の規制や方針を確認する。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
