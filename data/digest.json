@@ -1,93 +1,117 @@
 {
-  "date": "2026-05-06",
-  "generatedAtJST": "2026-05-06T07:15:45.392+09:00",
+  "date": "2026-05-07",
+  "generatedAtJST": "2026-05-07T07:15:38.891+09:00",
   "items": [
     {
-      "url": "https://www.sfgate.com/renotahoe/article/tahoe-power-data-centers-22234748.php",
-      "source": "SFGate",
-      "publishedAt": "2026-05-04T11:07:27Z",
-      "title": "Tahoe is losing a major power source amid Google, Apple data center expansion",
-      "title_ja": "タホでデータセンター拡張に伴う重要な電力源の喪失",
-      "summary_ja": "タホ地域は、GoogleやAppleによるデータセンターの拡張に伴い、主要な電力源を失うことになります。この変化は多くのコミュニティにとって突然のことであり、電力供給の影響が懸念されています。地域の電力インフラへの影響が広がる可能性があります。",
+      "url": "https://www.channelnewsasia.com/business/flex-spin-ai-data-center-infrastructure-unit-listed-company-6102086",
+      "source": "CNA",
+      "publishedAt": "2026-05-05T20:07:44Z",
+      "title": "Flex to spin off AI data-center infrastructure unit into listed company",
+      "title_ja": "FlexがAIデータセンターインフラユニットを独立企業として分離",
+      "summary_ja": "Flexは、人工知能への曝露を収益化するため、クラウドおよび電力インフラビジネスを別の上場企業として分離する計画を発表しました。この戦略的な分離により、FlexはAI関連事業の成長を加速し、資本市場での評価を最大化することを目指しています。これにより、投資家は新たな成長機会を得ることが期待されています。",
       "key_points": [
-        "タホ地域でのGoogleとAppleのデータセンター拡張が進行中",
-        "主要な電力源が失われる事態が発生",
-        "地域コミュニティへの影響が懸念されている",
-        "影響の拡大に対する対策が必要とされる"
+        "FlexはAI関連事業を分社化する計画を発表した。",
+        "新しい企業は、クラウドおよび電力インフラに特化する。",
+        "この分離により、FlexはAIビジネスの成長を促進する意向。",
+        "上場企業としての位置付けにより、資本市場での評価が向上する可能性。",
+        "投資家に新たな成長機会を提供することを目指している。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、管理、配信を行う施設。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）は、機械が人間の知能を模倣する技術。"
         },
         {
-          "term": "電力源",
-          "explain_ja": "電力を供給するための資源や設備。"
+          "term": "Flex",
+          "explain_ja": "Flexは、契約製造業者であり、幅広い製品とサービスを提供している。"
+        },
+        {
+          "term": "クラウドインフラ",
+          "explain_ja": "クラウドインフラは、インターネットを介して提供されるコンピュータリソースのセット。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データセンターは、情報技術システムやデータを物理的に保存する施設。"
         }
       ],
       "personal_actions": [
-        "地域の電力供給の今後の計画について確認する",
-        "データセンターや電力インフラに対する地元の意見を収集する"
+        "AI関連の市場動向を注視する。",
+        "クラウドインフラ業界の最新情報を確認する。",
+        "新しい上場企業の発表に備え、投資評価を行う。"
       ],
       "tags": [
-        "DC"
+        "AI"
       ]
     },
     {
-      "url": "https://nextcity.org/urbanist-news/big-tech-needs-our-cities-cities-should-negotiate-like-it",
-      "source": "Nextcity.org",
-      "publishedAt": "2026-05-04T10:00:00Z",
-      "title": "Big Tech Needs Our Cities. Cities Should Negotiate Like It.",
-      "title_ja": "ビッグテックは私たちの都市を必要としている。都市もそれに見合った交渉をすべきだ。",
-      "summary_ja": "ビッグテック企業は、都市が持つインフラや市民の利便性に依存している。一方で、都市側も自身の利益を守るために、強い交渉力を持つべきである。このような相互依存関係を考慮し、都市は戦略的にビッグテックと接する必要がある。",
+      "url": "https://www.techradar.com/pro/samsung-showcases-massive-floating-data-center-ship-model-that-could-house-openais-future-chatgpt-as-its-dallas-based-partner-claims-speed-to-power-is-the-new-moat-and-promises-1-5-gw-of-capacity-within-36-months",
+      "source": "TechRadar",
+      "publishedAt": "2026-05-05T19:40:00Z",
+      "title": "Samsung showcases massive floating data center ship model that could house OpenAI's future ChatGPT as its Dallas-based partner claims 'speed to power is the new moat' and promises 1.5 GW of capacity within 36 months",
+      "title_ja": "サムスンが大型浮体式データセンターのモデルを発表、OpenAIの未来のChatGPTを収容できる可能性",
+      "summary_ja": "サムスンが大型浮体式データセンターのモデルを披露し、OpenAIの未来のChatGPTを収容できる可能性を示しています。ダラスに拠点を置くパートナーは、「電力供給のスピードが新たな競争優位」と述べ、36ヶ月以内に1.5GWの容量を提供すると約束しました。しかし、実行の課題やオフショアリスクは未解決のままです。",
       "key_points": [
-        "ビッグテック企業は都市インフラに依存している。",
-        "都市はビッグテックとの交渉で力を強化するべき。",
-        "相互の利益を考えた新しい関係を築く必要がある。"
+        "サムスンが浮体式データセンターのモデルを発表",
+        "OpenAIのChatGPTを収容する可能性がある",
+        "ダラスのパートナーが1.5GWの電力供給を約束",
+        "36ヶ月以内にAIインフラの展開を加速する提案",
+        "実行の課題やリスクは残っている"
       ],
       "glossary": [
         {
-          "term": "ビッグテック",
-          "explain_ja": "大規模テクノロジー企業のこと。"
+          "term": "浮体式データセンター",
+          "explain_ja": "海上に浮かぶ形で設置されるデータセンターの形式。"
         },
         {
-          "term": "インフラ",
-          "explain_ja": "公共のために整備された基本的な設備や制度。"
+          "term": "AIインフラ",
+          "explain_ja": "人工知能の運用に必要なハードウェアやソフトウェア基盤。"
+        },
+        {
+          "term": "GW",
+          "explain_ja": "ギガワットの略。エネルギーの出力を表す単位で、1GWは10億ワット。"
         }
       ],
       "personal_actions": [
-        "自社のテクノロジーが地域のインフラにどう影響を与えているかを確認する。",
-        "地域の産業とビッグテック企業との関係を見直す。"
+        "浮体式データセンターに関する最新の技術ニュースをチェックする",
+        "AIインフラのトレンドに注目し、自分の業務に活かすポイントを考える",
+        "潜在的なオフショアリスクについて社内で情報共有を行う"
       ],
       "tags": [
-        "その他"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.cnbc.com/2026/05/04/denmark-data-centers-moratorium-grid-pause-power-demand.html",
-      "source": "CNBC",
-      "publishedAt": "2026-05-04T05:00:01Z",
-      "title": "Denmark faces data center reckoning as power grid overwhelmed by surging demand",
-      "title_ja": "デンマーク、データセンター需要の急増で電力網が圧倒される",
-      "summary_ja": "デンマークはデータセンター業界が急成長する中で、電力網が圧倒される危機に直面しています。各国の政府は、エネルギー消費の激しいデータセンターの成長に制限を設けることを検討しています。この状況は、電力供給の安定性に影響を及ぼし、データセンターの運営に新たな課題をもたらしています。",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/why-southern-company-riding-data-173024228.html",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-05-05T17:30:24Z",
+      "title": "Why Southern Company (SO) Is Riding Data Center Power Demand",
+      "title_ja": "サザンカンパニー（SO）がデータセンターの電力需要を活かす理由",
+      "summary_ja": "サザンカンパニー（NYSE:SO）は、2026年の「信頼性ショック」と呼ばれる動きに乗っています。この動きにより、データセンターの電力需要が高まっており、同社はその恩恵を受けています。将来的には、持続可能なエネルギー供給やインフラの強化が求められる中、同社の成長が期待されています。",
       "key_points": [
-        "デンマークの電力網がデータセンターの需要増加により圧迫されている。",
-        "各国政府がエネルギー消費の多いデータセンターへの規制を検討中。",
-        "データセンターの急成長が電力供給の安定性に影響を与える恐れがある。"
+        "サザンカンパニーは2026年の「信頼性ショック」に参画している。",
+        "データセンターの電力需要が増加している。",
+        "サザンカンパニーの成長が期待されている。",
+        "持続可能なエネルギー供給が重要視されている。",
+        "インフラの強化が求められている。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存や処理を行う設備。電力消費が激しい。"
+          "term": "Reliability Shock",
+          "explain_ja": "電力供給の信頼性が急激に問われる状況。"
         },
         {
-          "term": "エネルギー消費",
-          "explain_ja": "消費されるエネルギーの量。データセンターは特に高い。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを保存・管理するための施設。"
+        },
+        {
+          "term": "サザンカンパニー",
+          "explain_ja": "アメリカの公益企業で、電力を供給している。"
         }
       ],
       "personal_actions": [
-        "自施設のエネルギー消費の見直しを行う。",
-        "データセンターの運用に関する最新の規制や方針を確認する。"
+        "データセンターに関与するプロジェクトの電力供給計画を確認する。",
+        "持続可能エネルギーの導入に向けた計画を検討する。"
       ],
       "tags": [
         "DC"
