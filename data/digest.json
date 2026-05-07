@@ -1,80 +1,67 @@
 {
-  "date": "2026-05-07",
-  "generatedAtJST": "2026-05-07T07:15:38.891+09:00",
+  "date": "2026-05-08",
+  "generatedAtJST": "2026-05-08T07:15:59.482+09:00",
   "items": [
     {
-      "url": "https://www.channelnewsasia.com/business/flex-spin-ai-data-center-infrastructure-unit-listed-company-6102086",
-      "source": "CNA",
-      "publishedAt": "2026-05-05T20:07:44Z",
-      "title": "Flex to spin off AI data-center infrastructure unit into listed company",
-      "title_ja": "FlexがAIデータセンターインフラユニットを独立企業として分離",
-      "summary_ja": "Flexは、人工知能への曝露を収益化するため、クラウドおよび電力インフラビジネスを別の上場企業として分離する計画を発表しました。この戦略的な分離により、FlexはAI関連事業の成長を加速し、資本市場での評価を最大化することを目指しています。これにより、投資家は新たな成長機会を得ることが期待されています。",
+      "url": "https://siliconangle.com/2026/05/06/nvidia-partners-corning-boost-supply-optical-network-components/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-05-06T20:49:57Z",
+      "title": "Nvidia partners with Corning to boost the supply of optical network components - SiliconANGLE",
+      "title_ja": "NvidiaとCorningが光ネットワークコンポーネントの供給を強化",
+      "summary_ja": "NvidiaはCorningとの提携を発表し、光データセンターネットワーク部品の生産力を向上させる。新たにノースカロライナ州とテキサス州に3つの工場を建設し、生産能力を10倍に引き上げる予定だ。この動きは、AIクラスター向けの光ファイバーケーブル需要の高まりに応えるものとなる。",
       "key_points": [
-        "FlexはAI関連事業を分社化する計画を発表した。",
-        "新しい企業は、クラウドおよび電力インフラに特化する。",
-        "この分離により、FlexはAIビジネスの成長を促進する意向。",
-        "上場企業としての位置付けにより、資本市場での評価が向上する可能性。",
-        "投資家に新たな成長機会を提供することを目指している。"
+        "NvidiaがCorningと提携し、光ネットワーク部品の生産を強化。",
+        "新工場はノースカロライナ州とテキサス州に設置され、生産能力を10倍に向上。",
+        "約3000の新たな雇用を創出する予定。",
+        "CorningはFlow Ribbon Technologyに基づくケーブルを提供し、インストールを迅速化。",
+        "Nvidiaは光コンポーネント供給の成長を目指して4億ドルを投資。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）は、機械が人間の知能を模倣する技術。"
+          "term": "Flow Ribbon Technology",
+          "explain_ja": "従来の光ファイバーケーブルの設置を迅速化するための設計技術。"
         },
         {
-          "term": "Flex",
-          "explain_ja": "Flexは、契約製造業者であり、幅広い製品とサービスを提供している。"
-        },
-        {
-          "term": "クラウドインフラ",
-          "explain_ja": "クラウドインフラは、インターネットを介して提供されるコンピュータリソースのセット。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データセンターは、情報技術システムやデータを物理的に保存する施設。"
+          "term": "CPO (Co-Packaged Optics)",
+          "explain_ja": "内蔵トランシーバを持つデータセンター用のスイッチ。"
         }
       ],
       "personal_actions": [
-        "AI関連の市場動向を注視する。",
-        "クラウドインフラ業界の最新情報を確認する。",
-        "新しい上場企業の発表に備え、投資評価を行う。"
+        "データセンターで使われるケーブル配置の最適化を検討しているか確認する。",
+        "新しい光ファイバー接続技術についての最新情報を把握しておく。",
+        "自社の光通信設備の更新計画を見直す。"
       ],
       "tags": [
+        "インフラ",
         "AI"
       ]
     },
     {
-      "url": "https://www.techradar.com/pro/samsung-showcases-massive-floating-data-center-ship-model-that-could-house-openais-future-chatgpt-as-its-dallas-based-partner-claims-speed-to-power-is-the-new-moat-and-promises-1-5-gw-of-capacity-within-36-months",
-      "source": "TechRadar",
-      "publishedAt": "2026-05-05T19:40:00Z",
-      "title": "Samsung showcases massive floating data center ship model that could house OpenAI's future ChatGPT as its Dallas-based partner claims 'speed to power is the new moat' and promises 1.5 GW of capacity within 36 months",
-      "title_ja": "サムスンが大型浮体式データセンターのモデルを発表、OpenAIの未来のChatGPTを収容できる可能性",
-      "summary_ja": "サムスンが大型浮体式データセンターのモデルを披露し、OpenAIの未来のChatGPTを収容できる可能性を示しています。ダラスに拠点を置くパートナーは、「電力供給のスピードが新たな競争優位」と述べ、36ヶ月以内に1.5GWの容量を提供すると約束しました。しかし、実行の課題やオフショアリスクは未解決のままです。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=183143440",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-05-06T20:32:05Z",
+      "title": "Claude hitches ride on SpaceX's datacenter capacity - Slashdot",
+      "title_ja": "ClaudeがSpaceXのデータセンター能力を活用",
+      "summary_ja": "ClaudeはSpaceXのデータセンターのキャパシティを利用することで、より柔軟な運用を実現しています。この提携により、デプロイの制限が緩和され、さらに多くのリソースを活用できるようになることが期待されています。これはAIの運用効率を向上させ、提供するサービスの質を高める可能性があります。",
       "key_points": [
-        "サムスンが浮体式データセンターのモデルを発表",
-        "OpenAIのChatGPTを収容する可能性がある",
-        "ダラスのパートナーが1.5GWの電力供給を約束",
-        "36ヶ月以内にAIインフラの展開を加速する提案",
-        "実行の課題やリスクは残っている"
+        "ClaudeがSpaceXのデータセンターにアクセス",
+        "デプロイ制限の緩和",
+        "AI運用の効率向上",
+        "サービスの質の向上が期待される"
       ],
       "glossary": [
         {
-          "term": "浮体式データセンター",
-          "explain_ja": "海上に浮かぶ形で設置されるデータセンターの形式。"
+          "term": "Claude",
+          "explain_ja": "AIシステムであり、データセンターリソースを活用することで運用を効率化する。"
         },
         {
-          "term": "AIインフラ",
-          "explain_ja": "人工知能の運用に必要なハードウェアやソフトウェア基盤。"
-        },
-        {
-          "term": "GW",
-          "explain_ja": "ギガワットの略。エネルギーの出力を表す単位で、1GWは10億ワット。"
+          "term": "SpaceX",
+          "explain_ja": "宇宙旅行やロケット開発を手がける企業で、データセンターの権利を持つ。"
         }
       ],
       "personal_actions": [
-        "浮体式データセンターに関する最新の技術ニュースをチェックする",
-        "AIインフラのトレンドに注目し、自分の業務に活かすポイントを考える",
-        "潜在的なオフショアリスクについて社内で情報共有を行う"
+        "自社のデータセンターリソースの見直しを行う",
+        "クラウドサービスプロバイダーの選定を再考する"
       ],
       "tags": [
         "DC",
@@ -82,39 +69,37 @@
       ]
     },
     {
-      "url": "https://finance.yahoo.com/markets/stocks/articles/why-southern-company-riding-data-173024228.html",
-      "source": "Yahoo Entertainment",
-      "publishedAt": "2026-05-05T17:30:24Z",
-      "title": "Why Southern Company (SO) Is Riding Data Center Power Demand",
-      "title_ja": "サザンカンパニー（SO）がデータセンターの電力需要を活かす理由",
-      "summary_ja": "サザンカンパニー（NYSE:SO）は、2026年の「信頼性ショック」と呼ばれる動きに乗っています。この動きにより、データセンターの電力需要が高まっており、同社はその恩恵を受けています。将来的には、持続可能なエネルギー供給やインフラの強化が求められる中、同社の成長が期待されています。",
+      "url": "https://techcrunch.com/2026/05/06/microsofts-ai-data-center-push-is-colliding-with-its-clean-power-goals/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-05-06T19:58:52Z",
+      "title": "Microsoft's AI data center push is colliding with its clean power goals | TechCrunch",
+      "title_ja": "マイクロソフトのAIデータセンター拡張がクリーンパワー目標と衝突",
+      "summary_ja": "マイクロソフトの新しいデータセンターの推進が、同社の重要なクリーンパワー目標を危険にさらしている。AI技術の需要増加に対応するためのデータセンター拡張が、環境への影響を懸念させている。多くの企業が持続可能性を重視する中、マイクロソフトはこの課題にどう対処するかが注目される。",
       "key_points": [
-        "サザンカンパニーは2026年の「信頼性ショック」に参画している。",
-        "データセンターの電力需要が増加している。",
-        "サザンカンパニーの成長が期待されている。",
-        "持続可能なエネルギー供給が重要視されている。",
-        "インフラの強化が求められている。"
+        "マイクロソフトのAIデータセンター拡張が進行中",
+        "クリーンパワー目標との衝突",
+        "環境への影響が懸念される",
+        "AI技術の需要がデータセンターを増加させている",
+        "持続可能性の重要性が高まっている"
       ],
       "glossary": [
         {
-          "term": "Reliability Shock",
-          "explain_ja": "電力供給の信頼性が急激に問われる状況。"
-        },
-        {
           "term": "データセンター",
-          "explain_ja": "大量のデータを保存・管理するための施設。"
+          "explain_ja": "データやアプリケーションを保管・管理するための施設。"
         },
         {
-          "term": "サザンカンパニー",
-          "explain_ja": "アメリカの公益企業で、電力を供給している。"
+          "term": "クリーンパワー",
+          "explain_ja": "再生可能エネルギーなど、環境に優しいエネルギー源。"
         }
       ],
       "personal_actions": [
-        "データセンターに関与するプロジェクトの電力供給計画を確認する。",
-        "持続可能エネルギーの導入に向けた計画を検討する。"
+        "自社のデータセンターのエネルギー効率を見直す",
+        "持続可能なエネルギーの利用状況をチェックする",
+        "新技術の導入を検討する"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
