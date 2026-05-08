@@ -1,104 +1,111 @@
 {
-  "date": "2026-05-08",
-  "generatedAtJST": "2026-05-08T07:15:59.482+09:00",
+  "date": "2026-05-09",
+  "generatedAtJST": "2026-05-09T07:15:43.645+09:00",
   "items": [
     {
-      "url": "https://siliconangle.com/2026/05/06/nvidia-partners-corning-boost-supply-optical-network-components/",
-      "source": "SiliconANGLE News",
-      "publishedAt": "2026-05-06T20:49:57Z",
-      "title": "Nvidia partners with Corning to boost the supply of optical network components - SiliconANGLE",
-      "title_ja": "NvidiaとCorningが光ネットワークコンポーネントの供給を強化",
-      "summary_ja": "NvidiaはCorningとの提携を発表し、光データセンターネットワーク部品の生産力を向上させる。新たにノースカロライナ州とテキサス州に3つの工場を建設し、生産能力を10倍に引き上げる予定だ。この動きは、AIクラスター向けの光ファイバーケーブル需要の高まりに応えるものとなる。",
+      "url": "https://www.channelnewsasia.com/business/nvidia-invest-up-21-billion-in-iren-part-ai-data-center-deal-6108311",
+      "source": "CNA",
+      "publishedAt": "2026-05-07T22:01:54Z",
+      "title": "Nvidia to invest up to $2.1 billion in IREN as part of AI data center deal",
+      "title_ja": "Nvidia、AIデータセンター契約の一環としてIRENに最大21億ドルを投資",
+      "summary_ja": "Nvidiaは、データセンター運営会社IRENに最大21億ドルを投資する計画を発表しました。この投資は、急増する人工知能需要に対応するため、最大5ギガワットのインフラを展開することを目的としています。この提携は、NvidiaのAI関連のビジネス戦略の重要な一部を示しています。",
       "key_points": [
-        "NvidiaがCorningと提携し、光ネットワーク部品の生産を強化。",
-        "新工場はノースカロライナ州とテキサス州に設置され、生産能力を10倍に向上。",
-        "約3000の新たな雇用を創出する予定。",
-        "CorningはFlow Ribbon Technologyに基づくケーブルを提供し、インストールを迅速化。",
-        "Nvidiaは光コンポーネント供給の成長を目指して4億ドルを投資。"
+        "NvidiaがIRENに最大21億ドルを投資する計画を発表",
+        "投資の目的は、人工知能需要に対応するためのインフラ拡大",
+        "提携により最大5ギガワットのインフラが展開される",
+        "この動きはNvidiaのAIビジネス戦略の強化を示している"
       ],
       "glossary": [
         {
-          "term": "Flow Ribbon Technology",
-          "explain_ja": "従来の光ファイバーケーブルの設置を迅速化するための設計技術。"
+          "term": "AI",
+          "explain_ja": "人工知能。コンピュータが人間のように学習、推論、判断を行う技術。"
         },
         {
-          "term": "CPO (Co-Packaged Optics)",
-          "explain_ja": "内蔵トランシーバを持つデータセンター用のスイッチ。"
+          "term": "データセンター",
+          "explain_ja": "データの保存、処理、配信を行うための施設。"
         }
       ],
       "personal_actions": [
-        "データセンターで使われるケーブル配置の最適化を検討しているか確認する。",
-        "新しい光ファイバー接続技術についての最新情報を把握しておく。",
-        "自社の光通信設備の更新計画を見直す。"
+        "AI関連のデータセンターの最新情報を確認する",
+        "IRENやNvidiaの最新の投資動向を追う",
+        "自社のインフラ拡充について検討する"
       ],
       "tags": [
-        "インフラ",
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=183143440",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-05-06T20:32:05Z",
-      "title": "Claude hitches ride on SpaceX's datacenter capacity - Slashdot",
-      "title_ja": "ClaudeがSpaceXのデータセンター能力を活用",
-      "summary_ja": "ClaudeはSpaceXのデータセンターのキャパシティを利用することで、より柔軟な運用を実現しています。この提携により、デプロイの制限が緩和され、さらに多くのリソースを活用できるようになることが期待されています。これはAIの運用効率を向上させ、提供するサービスの質を高める可能性があります。",
+      "url": "https://www.commondreams.org/news/senate-democrats-brendan-carr",
+      "source": "Common Dreams",
+      "publishedAt": "2026-05-07T19:51:33Z",
+      "title": "'Egregious Abuse of Power': Senate Democrats Demand Trump's FCC Chair End Attack on ABC News",
+      "title_ja": "「権力の悪用」と Senate 民主党がトランプFCC議長にABCニュースへの攻撃をやめるよう要求",
+      "summary_ja": "デモクラットの上院議員が、FCCのブレンダン・カー議長に対し、ディズニーが所有するABCの放送ライセンス剥奪の脅迫を中止するよう求めている。議員たちは、カー氏の命令を強く非難し、権力の乱用として批判している。この要求は、メディアの自由に対する懸念を表明するもので、今後のメディア環境に影響を与える可能性がある。",
       "key_points": [
-        "ClaudeがSpaceXのデータセンターにアクセス",
-        "デプロイ制限の緩和",
-        "AI運用の効率向上",
-        "サービスの質の向上が期待される"
+        "上院の民主党議員がFCC議長に抗議の手紙を提出。",
+        "ブレンダン・カーがディズニーのABCに対する放送ライセンス剥奪を脅迫。",
+        "議員たちはこの行為を権力の悪用と非難。",
+        "メディアの自由と報道の独立性への懸念が高まる。",
+        "政治的圧力がメディアに与える影響を警戒する声が続いている。"
+      ],
+      "glossary": [
+        {
+          "term": "FCC",
+          "explain_ja": "連邦通信委員会。アメリカの通信業界を規制する政府機関。"
+        },
+        {
+          "term": "放送ライセンス",
+          "explain_ja": "テレビやラジオの放送を行うために必要な許可証。"
+        }
+      ],
+      "personal_actions": [
+        "放送メディアの動向を注視し、権力の使い方について考える。",
+        "メディアリテラシーを高め、情報の信頼性を確認する。",
+        "自分自身の言論の自由について意識を持つ。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://alltoc.com/tech/what-is-anthropics-spacex-compute-deal",
+      "source": "Alltoc.com",
+      "publishedAt": "2026-05-07T18:03:13Z",
+      "title": "What is Anthropic’s SpaceX compute deal?",
+      "title_ja": "AnthropicとSpaceXのコンピュート契約とは？",
+      "summary_ja": "AnthropicはSpaceXとの契約により、大規模なコンピュート能力を得ることとなった。この契約は、SpaceXのデータセンターインフラに関連しており、AnthropicはClaudeの開発ツールの使用を支援するためにこの能力を活用する。これにより、開発者の利用が拡大し、AIシステムのパフォーマンス向上が期待されている。",
+      "key_points": [
+        "AnthropicはSpaceXのColossus 1データセンターからコンピュート能力を確保した。",
+        "SpaceXとの契約によりClaude Codeの使用制限が緩和された。",
+        "有料プランの一部でレート制限が撤廃され、時間帯による制限も軽減された。",
+        "コンピュート能力の拡充は開発者の利用を促進する手段とされている。",
+        "この契約は単なるホスティング契約ではなく、能力のパートナーシップと位置付けられている。"
       ],
       "glossary": [
         {
           "term": "Claude",
-          "explain_ja": "AIシステムであり、データセンターリソースを活用することで運用を効率化する。"
+          "explain_ja": "Anthropicが開発したAI言語モデルの名称。"
         },
         {
           "term": "SpaceX",
-          "explain_ja": "宇宙旅行やロケット開発を手がける企業で、データセンターの権利を持つ。"
-        }
-      ],
-      "personal_actions": [
-        "自社のデータセンターリソースの見直しを行う",
-        "クラウドサービスプロバイダーの選定を再考する"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://techcrunch.com/2026/05/06/microsofts-ai-data-center-push-is-colliding-with-its-clean-power-goals/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-05-06T19:58:52Z",
-      "title": "Microsoft's AI data center push is colliding with its clean power goals | TechCrunch",
-      "title_ja": "マイクロソフトのAIデータセンター拡張がクリーンパワー目標と衝突",
-      "summary_ja": "マイクロソフトの新しいデータセンターの推進が、同社の重要なクリーンパワー目標を危険にさらしている。AI技術の需要増加に対応するためのデータセンター拡張が、環境への影響を懸念させている。多くの企業が持続可能性を重視する中、マイクロソフトはこの課題にどう対処するかが注目される。",
-      "key_points": [
-        "マイクロソフトのAIデータセンター拡張が進行中",
-        "クリーンパワー目標との衝突",
-        "環境への影響が懸念される",
-        "AI技術の需要がデータセンターを増加させている",
-        "持続可能性の重要性が高まっている"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データやアプリケーションを保管・管理するための施設。"
+          "explain_ja": "宇宙産業に特化した企業であり、ロケット打ち上げなどを手掛けている。"
         },
         {
-          "term": "クリーンパワー",
-          "explain_ja": "再生可能エネルギーなど、環境に優しいエネルギー源。"
+          "term": "Colossus 1",
+          "explain_ja": "SpaceXが運営するデータセンタープラットフォーム。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "サーバーを集約して運用する施設で、データ処理や保管を行う。"
         }
       ],
       "personal_actions": [
-        "自社のデータセンターのエネルギー効率を見直す",
-        "持続可能なエネルギーの利用状況をチェックする",
-        "新技術の導入を検討する"
+        "最新のAI開発動向を把握するためにAnthropicやSpaceXの発表をチェックしておく。",
+        "自社のAIシステムのコンピュートリソースを見直し、拡張の必要性を検討する。",
+        "関連する業界標準や規制の動向に目を光らせる。"
       ],
       "tags": [
-        "DC",
         "AI"
       ]
     }
