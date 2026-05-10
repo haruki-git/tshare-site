@@ -1,72 +1,35 @@
 {
-  "date": "2026-05-10",
-  "generatedAtJST": "2026-05-10T07:15:55.261+09:00",
+  "date": "2026-05-11",
+  "generatedAtJST": "2026-05-11T07:15:37.513+09:00",
   "items": [
     {
-      "url": "https://www.techradar.com/pro/a-solution-to-our-data-center-woes-covering-californias-canals-with-solar-panels-could-generate-a-staggering-13gw-of-clean-energy-and-save-enough-water-for-two-million-people-so-why-the-opposition",
-      "source": "TechRadar",
-      "publishedAt": "2026-05-08T21:05:00Z",
-      "title": "A solution to our data center woes? Covering California’s canals with solar panels could generate a staggering 13GW of clean energy and save enough water for two million people — so why the opposition?",
-      "title_ja": "データセンターの問題解決策？カリフォルニアの運河を太陽光パネルで覆うことで、驚異の13GWのクリーンエネルギーを生み出し、200万人分の水を節約できるが、なぜ反対があるのか？",
-      "summary_ja": "カリフォルニアの運河を太陽光パネルで覆うことで、大規模なクリーンエネルギーの生成と水の節約が期待されている。しかし、プロジェクトの費用の高さや環境に関する不確定要素が、大規模展開の決定を難しくしている。これにより、クリーンエネルギーの普及が遅れる可能性がある。",
+      "url": "https://www.nextbigfuture.com/2026/05/spacexai-launches-hugely-profitable-new-ai-business.html",
+      "source": "Next Big Future",
+      "publishedAt": "2026-05-09T18:14:29Z",
+      "title": "SpaceXAI Launches HUGELY Profitable New AI Business | NextBigFuture.com",
+      "title_ja": "SpaceXAIが巨額の新しいAIビジネスを立ち上げ",
+      "summary_ja": "SpaceXAIは、2027年までに1000億ドル、2030年までに兆単位の利益を見込む多億ドル規模のビジネスを開始しました。この新ビジネスは、AmazonやCoreweaveの数倍にのぼる持続可能な利益を生むとされています。AIデータセンターのレンタルは、建設費の約2倍から2.4倍で行われ、年間80億から160億ドルの収益が期待されています。",
       "key_points": [
-        "カリフォルニアの運河に太陽光パネルを設置する計画がある。",
-        "このプロジェクトは13GWのクリーンエネルギーを生成できるとされている。",
-        "約200万人分の水を節約することが期待されている。",
-        "高コストがこのプロジェクトの課題となっている。",
-        "環境に関する不確定要素が大規模な実施を難しくしている。"
+        "SpaceXAIは2027年に1000億ドル、2030年には兆単位の利益を見込むビジネスを開始",
+        "AIデータセンターのレンタルは、建設費の2倍から2.4倍で、年間80億から160億ドルの売上が期待される",
+        "Brian Wangはテクノロジーの未来について影響力を持つ思想家であり、人気の科学ブロガーである",
+        "XAIは、300MWから445MWのコロッサス1データセンターをレンタルしている",
+        "このビジネスモデルは、AmazonやCoreweaveを超える利益が見込まれている"
       ],
       "glossary": [
         {
-          "term": "クリーンエネルギー",
-          "explain_ja": "環境に優しい、持続可能な方法で生成されるエネルギー。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能用に最適化されたデータセンターで、高度な計算能力を提供します。"
         },
         {
-          "term": "太陽光パネル",
-          "explain_ja": "太陽の光を電気に変えるための装置。"
+          "term": "兆単位の利益",
+          "explain_ja": "1000億ドルを超える利益状態を指します。"
         }
       ],
       "personal_actions": [
-        "カリフォルニアの運河プロジェクトに関する情報を把握する。",
-        "再生可能エネルギーの利用状況をチェックする。",
-        "地元の環境関連イベントに参加し、議論に向けた意識を高める。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "http://futurism.com/artificial-intelligence/amazon-data-center-temperatures",
-      "source": "Futurism",
-      "publishedAt": "2026-05-08T19:57:25Z",
-      "title": "In Irony-Soaked Incident, Amazon Data Center Shuts Down Due to High Temperatures",
-      "title_ja": "皮肉な事件：アマゾンデータセンター、高温によりシャットダウン",
-      "summary_ja": "アマゾンウェブサービスは、バージニア州の主要データセンターが過熱し、シャットダウンを余儀なくされたと発表しました。この影響で、暗号プラットフォームのコインベースなど、一部の顧客には重要なサービスの長時間の停止が発生しました。過熱の原因は冷却システムの問題にあり、データセンターの温暖化への寄与が改めて浮き彫りとなっています。",
-      "key_points": [
-        "アマゾンウェブサービスのデータセンターが過熱によりシャットダウン。",
-        "顧客のコインベースが主要な取引サービスの長時間停止を経験。",
-        "冷却システムの問題が根本原因であり、復旧作業が続いている。",
-        "データセンターは世界の炭素排出量の0.5%を占めている。",
-        "AIの成長に伴い、データセンターによる二酸化炭素排出量が急増する可能性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データの保存と管理を行う施設で、多くのコンピュータが集まっている。"
-        },
-        {
-          "term": "冷却システム",
-          "explain_ja": "データセンター内の機器を適切な温度に保つための装置。"
-        },
-        {
-          "term": "二酸化炭素排出量",
-          "explain_ja": "二酸化炭素が大気中に放出される量で、温暖化の要因となる。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの冷却管理について学び、自拠点の効率的な運用を検討する。",
-        "温暖化対策として、エネルギー使用の最適化を図る。",
-        "データセンターの運営に関するトレンドやリスクを定期的に確認する。"
+        "自社のAIインフラストラクチャのコスト構造を見直す",
+        "AIモデルをエッジコンピューティングに最適化する方法を検討する",
+        "新しいデータセンターのトレンドを追い、ビジネスに取り入れる可能性を評価する"
       ],
       "tags": [
         "DC",
@@ -74,39 +37,68 @@
       ]
     },
     {
-      "url": "https://hardware.slashdot.org/story/26/05/08/1619212/ai-hard-drive-shortage-makes-archiving-the-internet-harder",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-05-08T17:00:00Z",
-      "title": "AI Hard Drive Shortage Makes Archiving the Internet Harder",
-      "title_ja": "AIハードドライブの不足がインターネットアーカイブの困難を増加させる",
-      "summary_ja": "AIデータセンターの急増に伴い、ハードドライブやストレージコストが急騰しており、デジタルアーカイブ担当者や学者、Wikipedia、趣味でデータを保存する人々にとって、データの保存がより高く、より困難になっています。これにより、インターネットのデータを保存するためのコストと手間が増し、デジタル資産の維持が複雑化しています。特に、長期的なアーカイブ戦略に影響を及ぼす兆しが見られます。",
+      "url": "https://cryptobriefing.com/kazakhstan-data-center-power-shortages/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-05-09T17:07:41Z",
+      "title": "Kazakhstan plans $1.9B data center hub amid persistent power shortages",
+      "title_ja": "カザフスタン、持続的な電力不足の中で19億ドルのデータセンター拠点を計画",
+      "summary_ja": "カザフスタンは、持続的な電力不足の中で、19億ドルのデータセンター拠点の計画を進めています。この計画は、AIハブとしての野望に対応するためですが、十分な電力供給なしではこれらの目標が達成されないリスクがあります。競争が激化するグローバルなインフラの中で、カザフスタンのデータセンターの野望は危険にさらされています。",
       "key_points": [
-        "AIデータセンターの成長がハードドライブ価格を押し上げている。",
-        "デジタルアーカイブ担当者にとって経済的負担が増大している。",
-        "インターネットのデータ保存がより困難になりつつある。",
-        "長期的なアーカイブ戦略に悪影響を及ぼす可能性がある。"
+        "カザフスタンは19億ドルのデータセンター拠点を計画中",
+        "持続的な電力不足が問題となっている",
+        "AIハブの野望がリスクにさらされている",
+        "グローバルなインフラ競争が影響を与えている"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能の運用に特化したデータセンターのこと。"
+          "term": "データセンター",
+          "explain_ja": "データを収集、保存、管理、配信するための施設。"
         },
         {
-          "term": "アーカイブ",
-          "explain_ja": "デジタルデータを長期保存するプロセス。"
-        },
-        {
-          "term": "ストレージコスト",
-          "explain_ja": "データを保存するための記憶媒体の費用。"
+          "term": "AIハブ",
+          "explain_ja": "人工知能関連の企業や研究が集まる拠点。"
         }
       ],
       "personal_actions": [
-        "ハードドライブやストレージの価格動向を定期的に確認する。",
-        "アーカイブデータの保存戦略を見直し、コスト効率を考える。",
-        "冗長なデータ保存を検討し、必要なデータの選別を行う。"
+        "計画されているデータセンターの進捗状況を確認する",
+        "地域の電力供給状況について認識を深める"
       ],
       "tags": [
+        "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://oilprice.com/Energy/Energy-General/Power-Shortages-Threaten-Kazakhstans-19-Billion-Data-Center-Push.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-05-09T17:00:00Z",
+      "title": "Power Shortages Threaten Kazakhstan’s $1.9 Billion Data Center Push",
+      "title_ja": "カザフスタンの19億ドルデータセンター計画を脅かす電力不足",
+      "summary_ja": "カザフスタンの人工知能・デジタル開発省は、データセンター拠点を目指す政府の計画を進めるため、国際コンソーシアムと契約を締結した。しかし、電力不足がこのプロジェクトの進行に影響を及ぼす恐れがある。これにより、データセンターの建設と運用に関する問題が顕在化する可能性がある。",
+      "key_points": [
+        "カザフスタンがデータセンター拠点化を進めるための契約を締結。",
+        "プロジェクトは政府主導だが、電力不足が深刻な懸念材料。",
+        "電力供給の問題が、データセンターの建設と運用に直接的な影響を与える可能性がある。",
+        "国際コンソーシアムとの協力により、プロジェクトの成功を目指すが、課題は山積。",
+        "カザフスタンのデータセンター市場は18億ドル規模になる見込み。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保管・管理を行う施設。セキュリティや電力供給が重要な要素。"
+        },
+        {
+          "term": "電力不足",
+          "explain_ja": "必要な電力が供給されない状態。この問題はデータセンターの運営に影響を与える。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの運用に影響を与える電力供給状況を確認する。",
+        "新たなプロジェクトの動向を注視し、自社の戦略を見直す。",
+        "電力供給の効率化を図るための施策を検討する。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
