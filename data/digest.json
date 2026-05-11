@@ -1,35 +1,72 @@
 {
-  "date": "2026-05-11",
-  "generatedAtJST": "2026-05-11T07:15:37.513+09:00",
+  "date": "2026-05-12",
+  "generatedAtJST": "2026-05-12T07:16:04.043+09:00",
   "items": [
     {
-      "url": "https://www.nextbigfuture.com/2026/05/spacexai-launches-hugely-profitable-new-ai-business.html",
-      "source": "Next Big Future",
-      "publishedAt": "2026-05-09T18:14:29Z",
-      "title": "SpaceXAI Launches HUGELY Profitable New AI Business | NextBigFuture.com",
-      "title_ja": "SpaceXAIが巨額の新しいAIビジネスを立ち上げ",
-      "summary_ja": "SpaceXAIは、2027年までに1000億ドル、2030年までに兆単位の利益を見込む多億ドル規模のビジネスを開始しました。この新ビジネスは、AmazonやCoreweaveの数倍にのぼる持続可能な利益を生むとされています。AIデータセンターのレンタルは、建設費の約2倍から2.4倍で行われ、年間80億から160億ドルの収益が期待されています。",
+      "url": "https://economictimes.indiatimes.com/tech/technology/microsofts-african-data-center-falters-on-payment-demands-bloomberg-news-reports/articleshow/130994266.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-05-10T14:46:37Z",
+      "title": "Microsoft's African data center falters on payment demands, Bloomberg News reports",
+      "title_ja": "マイクロソフトのアフリカデータセンター、支払い要求で行き詰まり",
+      "summary_ja": "マイクロソフトのケニアにおけるデータセンター計画が遅延しています。これはケニア政府との保証された支払いに関する意見の対立が原因です。このプロジェクトはG42との共同で10億ドルの投資が予定されていますが、交渉は続いています。",
       "key_points": [
-        "SpaceXAIは2027年に1000億ドル、2030年には兆単位の利益を見込むビジネスを開始",
-        "AIデータセンターのレンタルは、建設費の2倍から2.4倍で、年間80億から160億ドルの売上が期待される",
-        "Brian Wangはテクノロジーの未来について影響力を持つ思想家であり、人気の科学ブロガーである",
-        "XAIは、300MWから445MWのコロッサス1データセンターをレンタルしている",
-        "このビジネスモデルは、AmazonやCoreweaveを超える利益が見込まれている"
+        "マイクロソフトのケニアデータセンター計画が遅延中。",
+        "ケニア政府との支払い保証に関する意見の対立が原因。",
+        "G42との共同投資で10億ドルが予定されている。",
+        "プロジェクトの規模と影響力は大きいが、交渉は継続中。"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能用に最適化されたデータセンターで、高度な計算能力を提供します。"
+          "term": "データセンター",
+          "explain_ja": "データを管理・保存・処理するための施設。"
         },
         {
-          "term": "兆単位の利益",
-          "explain_ja": "1000億ドルを超える利益状態を指します。"
+          "term": "投資",
+          "explain_ja": "資本を他に投じて利益を追求する行為。"
         }
       ],
       "personal_actions": [
-        "自社のAIインフラストラクチャのコスト構造を見直す",
-        "AIモデルをエッジコンピューティングに最適化する方法を検討する",
-        "新しいデータセンターのトレンドを追い、ビジネスに取り入れる可能性を評価する"
+        "最新のプロジェクト情報を確認する。",
+        "支払いに関する条件を見直す準備をする。",
+        "将来の契約に関するリスクを評価する。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "http://futurism.com/science-energy/oracle-data-center-gas",
+      "source": "Futurism",
+      "publishedAt": "2026-05-10T14:30:00Z",
+      "title": "Oracle Forced to Cancel Incredibly Polluting Natural Gas Plant to Power AI Data Center",
+      "title_ja": "オラクル、AIデータセンターの電力供給のための天然ガスプラントをキャンセル",
+      "summary_ja": "オラクルは、ニューメキシコ州の「プロジェクト・ジュピター」の電力供給を目的とした天然ガスプラントをキャンセルしました。この決定は、連邦エネルギー規制委員会とニューメキシコ州土地局からの許可が得られなかったためです。代わりにブロームエネルギーと提携し、燃焼なしで化学エネルギーを電気に変える固体酸化物燃料電池を使用することにしました。",
+      "key_points": [
+        "オラクルは天然ガスプラントのキャンセルを発表した。",
+        "連邦エネルギー規制委員会が新しい天然ガスパイプラインの建設を拒否したため。",
+        "代替として固体酸化物燃料電池を採用する計画。",
+        "プロジェクト・ジュピターの温室効果ガス排出量は年間1400万トン以上と予測されていた。",
+        "新たな計画でも汚染は年間1000万トンに減少する見込み。",
+        "データセンターによる環境への影響は依然として懸念されている。"
+      ],
+      "glossary": [
+        {
+          "term": "Project Jupiter",
+          "explain_ja": "オラクルのAIデータセンター計画。"
+        },
+        {
+          "term": "固体酸化物燃料電池",
+          "explain_ja": "燃焼なしで化学エネルギーを電気に変換する技術。"
+        },
+        {
+          "term": "温室効果ガス",
+          "explain_ja": "地球の温暖化の原因となるガス。"
+        }
+      ],
+      "personal_actions": [
+        "プロジェクトの進行に影響を与える規制や環境問題について情報収集を行う。",
+        "新エネルギー技術に関する最新情報を常に把握しておく。",
+        "データセンターの環境影響評価を定期的に確認する。"
       ],
       "tags": [
         "DC",
@@ -37,65 +74,33 @@
       ]
     },
     {
-      "url": "https://cryptobriefing.com/kazakhstan-data-center-power-shortages/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-05-09T17:07:41Z",
-      "title": "Kazakhstan plans $1.9B data center hub amid persistent power shortages",
-      "title_ja": "カザフスタン、持続的な電力不足の中で19億ドルのデータセンター拠点を計画",
-      "summary_ja": "カザフスタンは、持続的な電力不足の中で、19億ドルのデータセンター拠点の計画を進めています。この計画は、AIハブとしての野望に対応するためですが、十分な電力供給なしではこれらの目標が達成されないリスクがあります。競争が激化するグローバルなインフラの中で、カザフスタンのデータセンターの野望は危険にさらされています。",
+      "url": "https://economictimes.indiatimes.com/tech/technology/amazons-chile-data-center-moves-ahead-after-residents-lose-environmental-challenge/articleshow/130992094.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-05-10T12:06:43Z",
+      "title": "Amazon's Chile data center moves ahead after residents lose environmental challenge",
+      "title_ja": "アマゾンのチリデータセンター、住民の環境訴訟敗訴で前進決定",
+      "summary_ja": "チリ、サンティアゴ近郊の住民は新たなアマゾンデータセンターに懸念を示しているが、当局はその建設を許可した。住民は大切な地元の丘や電力線の建設に悪影響が出ることを心配している。にもかかわらず、アマゾンはプロジェクトを進める意向を述べている。",
       "key_points": [
-        "カザフスタンは19億ドルのデータセンター拠点を計画中",
-        "持続的な電力不足が問題となっている",
-        "AIハブの野望がリスクにさらされている",
-        "グローバルなインフラ競争が影響を与えている"
+        "住民は新しいデータセンターの影響を懸念している。",
+        "当局はデータセンターの建設を許可した。",
+        "住民は地元の丘の保護を求めている。",
+        "アマゾンはプロジェクトを継続する意向。",
+        "電力線の建設に対しても懸念がある。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを収集、保存、管理、配信するための施設。"
+          "explain_ja": "データの管理・保存・処理を行う施設。"
         },
         {
-          "term": "AIハブ",
-          "explain_ja": "人工知能関連の企業や研究が集まる拠点。"
+          "term": "環境訴訟",
+          "explain_ja": "環境の保護に関する法的な訴訟。"
         }
       ],
       "personal_actions": [
-        "計画されているデータセンターの進捗状況を確認する",
-        "地域の電力供給状況について認識を深める"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://oilprice.com/Energy/Energy-General/Power-Shortages-Threaten-Kazakhstans-19-Billion-Data-Center-Push.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-05-09T17:00:00Z",
-      "title": "Power Shortages Threaten Kazakhstan’s $1.9 Billion Data Center Push",
-      "title_ja": "カザフスタンの19億ドルデータセンター計画を脅かす電力不足",
-      "summary_ja": "カザフスタンの人工知能・デジタル開発省は、データセンター拠点を目指す政府の計画を進めるため、国際コンソーシアムと契約を締結した。しかし、電力不足がこのプロジェクトの進行に影響を及ぼす恐れがある。これにより、データセンターの建設と運用に関する問題が顕在化する可能性がある。",
-      "key_points": [
-        "カザフスタンがデータセンター拠点化を進めるための契約を締結。",
-        "プロジェクトは政府主導だが、電力不足が深刻な懸念材料。",
-        "電力供給の問題が、データセンターの建設と運用に直接的な影響を与える可能性がある。",
-        "国際コンソーシアムとの協力により、プロジェクトの成功を目指すが、課題は山積。",
-        "カザフスタンのデータセンター市場は18億ドル規模になる見込み。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データの保管・管理を行う施設。セキュリティや電力供給が重要な要素。"
-        },
-        {
-          "term": "電力不足",
-          "explain_ja": "必要な電力が供給されない状態。この問題はデータセンターの運営に影響を与える。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの運用に影響を与える電力供給状況を確認する。",
-        "新たなプロジェクトの動向を注視し、自社の戦略を見直す。",
-        "電力供給の効率化を図るための施策を検討する。"
+        "近隣の環境影響を確認し、関連情報を収集する。",
+        "地元コミュニティの意見を聞き、参加する。",
+        "データセンターに関する政府の議論や決定をフォローアップする。"
       ],
       "tags": [
         "DC"
