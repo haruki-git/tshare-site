@@ -1,72 +1,39 @@
 {
-  "date": "2026-05-12",
-  "generatedAtJST": "2026-05-12T07:16:04.043+09:00",
+  "date": "2026-05-13",
+  "generatedAtJST": "2026-05-13T07:15:48.782+09:00",
   "items": [
     {
-      "url": "https://economictimes.indiatimes.com/tech/technology/microsofts-african-data-center-falters-on-payment-demands-bloomberg-news-reports/articleshow/130994266.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-05-10T14:46:37Z",
-      "title": "Microsoft's African data center falters on payment demands, Bloomberg News reports",
-      "title_ja": "マイクロソフトのアフリカデータセンター、支払い要求で行き詰まり",
-      "summary_ja": "マイクロソフトのケニアにおけるデータセンター計画が遅延しています。これはケニア政府との保証された支払いに関する意見の対立が原因です。このプロジェクトはG42との共同で10億ドルの投資が予定されていますが、交渉は続いています。",
+      "url": "https://www.breitbart.com/politics/2026/05/11/exclusive-secretary-doug-burgum-foreign-source-dark-money-fueling-data-center-misinformation/",
+      "source": "Breitbart News",
+      "publishedAt": "2026-05-11T21:56:15Z",
+      "title": "Doug Burgum: Foreign 'Dark Money’ Fueling Data Center Misinformation",
+      "title_ja": "ダグ・バーガム：外国の「ダークマネー」がデータセンター誤情報を助長",
+      "summary_ja": "ダグ・バーガム内務長官は、AIデータセンターの建設に対する規制強化が外国からの資金による誤情報に起因していると警告しました。彼は、データセンターが地域経済に利益をもたらす具体例を挙げ、電気料金が下がることに言及しました。地方コミュニティとデータセンター構築者の協力が、電力コストの低下や住宅建設に繋がると強調しました。",
       "key_points": [
-        "マイクロソフトのケニアデータセンター計画が遅延中。",
-        "ケニア政府との支払い保証に関する意見の対立が原因。",
-        "G42との共同投資で10億ドルが予定されている。",
-        "プロジェクトの規模と影響力は大きいが、交渉は継続中。"
+        "ダグ・バーガムが外国の資金がデータセンター建設を妨害していると指摘した。",
+        "誤った情報が電気料金の上昇に利用されていることを批判。",
+        "ノースダコタ州のデータセンターが地域経済に与えたプラスの影響を紹介。",
+        "データセンター建設者は地域の住宅ニーズにも応じた。",
+        "電力コストを固定費として捉え、新しい顧客の導入が全体の料金を下げる仕組み。"
       ],
       "glossary": [
+        {
+          "term": "ダークマネー",
+          "explain_ja": "不明瞭な出所からの政治活動資金。"
+        },
         {
           "term": "データセンター",
-          "explain_ja": "データを管理・保存・処理するための施設。"
+          "explain_ja": "データの蓄積、処理、管理を行う施設。"
         },
         {
-          "term": "投資",
-          "explain_ja": "資本を他に投じて利益を追求する行為。"
+          "term": "AI",
+          "explain_ja": "人工知能の略。コンピュータが人間の知能を模倣する技術。"
         }
       ],
       "personal_actions": [
-        "最新のプロジェクト情報を確認する。",
-        "支払いに関する条件を見直す準備をする。",
-        "将来の契約に関するリスクを評価する。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "http://futurism.com/science-energy/oracle-data-center-gas",
-      "source": "Futurism",
-      "publishedAt": "2026-05-10T14:30:00Z",
-      "title": "Oracle Forced to Cancel Incredibly Polluting Natural Gas Plant to Power AI Data Center",
-      "title_ja": "オラクル、AIデータセンターの電力供給のための天然ガスプラントをキャンセル",
-      "summary_ja": "オラクルは、ニューメキシコ州の「プロジェクト・ジュピター」の電力供給を目的とした天然ガスプラントをキャンセルしました。この決定は、連邦エネルギー規制委員会とニューメキシコ州土地局からの許可が得られなかったためです。代わりにブロームエネルギーと提携し、燃焼なしで化学エネルギーを電気に変える固体酸化物燃料電池を使用することにしました。",
-      "key_points": [
-        "オラクルは天然ガスプラントのキャンセルを発表した。",
-        "連邦エネルギー規制委員会が新しい天然ガスパイプラインの建設を拒否したため。",
-        "代替として固体酸化物燃料電池を採用する計画。",
-        "プロジェクト・ジュピターの温室効果ガス排出量は年間1400万トン以上と予測されていた。",
-        "新たな計画でも汚染は年間1000万トンに減少する見込み。",
-        "データセンターによる環境への影響は依然として懸念されている。"
-      ],
-      "glossary": [
-        {
-          "term": "Project Jupiter",
-          "explain_ja": "オラクルのAIデータセンター計画。"
-        },
-        {
-          "term": "固体酸化物燃料電池",
-          "explain_ja": "燃焼なしで化学エネルギーを電気に変換する技術。"
-        },
-        {
-          "term": "温室効果ガス",
-          "explain_ja": "地球の温暖化の原因となるガス。"
-        }
-      ],
-      "personal_actions": [
-        "プロジェクトの進行に影響を与える規制や環境問題について情報収集を行う。",
-        "新エネルギー技術に関する最新情報を常に把握しておく。",
-        "データセンターの環境影響評価を定期的に確認する。"
+        "データセンターに関する地域の規制を確認する。",
+        "電力コストの影響を理解するために地元のデータセンター事例を調査する。",
+        "地域コミュニティと協力してデータセンターのメリットを広める。"
       ],
       "tags": [
         "DC",
@@ -74,36 +41,68 @@
       ]
     },
     {
-      "url": "https://economictimes.indiatimes.com/tech/technology/amazons-chile-data-center-moves-ahead-after-residents-lose-environmental-challenge/articleshow/130992094.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-05-10T12:06:43Z",
-      "title": "Amazon's Chile data center moves ahead after residents lose environmental challenge",
-      "title_ja": "アマゾンのチリデータセンター、住民の環境訴訟敗訴で前進決定",
-      "summary_ja": "チリ、サンティアゴ近郊の住民は新たなアマゾンデータセンターに懸念を示しているが、当局はその建設を許可した。住民は大切な地元の丘や電力線の建設に悪影響が出ることを心配している。にもかかわらず、アマゾンはプロジェクトを進める意向を述べている。",
+      "url": "https://financialpost.com/pmn/business-pmn/advent-backed-power-equipment-maker-innio-files-for-us-ipo",
+      "source": "Financial Post",
+      "publishedAt": "2026-05-11T20:14:42Z",
+      "title": "Advent-Backed Power Equipment Maker Innio Files for US IPO",
+      "title_ja": "Adventが支援する電力機器メーカーInnio、米国IPOに申請",
+      "summary_ja": "ガスエンジンメーカーのInnio Holding GmbHが米国での新規株式公開（IPO）を申請しました。これは、データセンター投資の急増を利用しようとする多くの産業企業の流れに加わるものです。この動きは、同社の成長戦略を強化し、資金調達を目指す重要なステップと見られています。",
       "key_points": [
-        "住民は新しいデータセンターの影響を懸念している。",
-        "当局はデータセンターの建設を許可した。",
-        "住民は地元の丘の保護を求めている。",
-        "アマゾンはプロジェクトを継続する意向。",
-        "電力線の建設に対しても懸念がある。"
+        "Innio Holding GmbHは、米国でIPOを申請した。",
+        "この動きは、データセンター支出の増加に乗じたもの。",
+        "Innioはガスエンジンを製造する企業である。",
+        "IPOを通じて資金調達を目指す。",
+        "産業企業の間でIPOが増加している。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの管理・保存・処理を行う施設。"
+          "term": "IPO",
+          "explain_ja": "新規株式公開のこと。企業が株式を市場に公開するプロセス。"
         },
         {
-          "term": "環境訴訟",
-          "explain_ja": "環境の保護に関する法的な訴訟。"
+          "term": "ガスエンジン",
+          "explain_ja": "ガスを燃料とするエンジン。一般に発電や産業用途に使われる。"
         }
       ],
       "personal_actions": [
-        "近隣の環境影響を確認し、関連情報を収集する。",
-        "地元コミュニティの意見を聞き、参加する。",
-        "データセンターに関する政府の議論や決定をフォローアップする。"
+        "最近のデータセンター投資の動向を確認する。",
+        "IPOに関連するニュースをフォローする。"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://www.storagereview.com/news/nvidia-and-iren-partner-to-accelerate-large-scale-ai-infrastructure-deployment",
+      "source": "Storagereview.com",
+      "publishedAt": "2026-05-11T16:33:46Z",
+      "title": "NVIDIA and IREN Partner to Accelerate Large-Scale AI Infrastructure Deployment",
+      "title_ja": "NVIDIAとIRENが大規模AIインフラ展開を加速するために提携",
+      "summary_ja": "NVIDIAとIREN Limitedは、次世代AIインフラの展開を加速するための戦略的提携を発表しました。このコラボレーションにより、IRENのグローバルデータセンターにおけるNVIDIA DSXに準拠したAIインフラが最大5ギガワットまで支援される予定です。両社はAIネイティブ企業やスタートアップへのアクセラレーテッドコンピューティングの提供を拡大することを目指しています。",
+      "key_points": [
+        "NVIDIAとIRENがAIインフラの展開加速のために提携を結成。",
+        "IRENのスウィートウォーターキャンパスがフラッグシップ展開として機能する。",
+        "NVIDIAはIRENの株式を5年間で最大30百万株取得する権利を付与される。",
+        "AIファクトリーのインフラは、グローバル経済にとって重要な役割を果たすと両社は考えている。",
+        "この提携により、AI計算能力へのアクセスを拡大することが目指されている。"
+      ],
+      "glossary": [
+        {
+          "term": "AIファクトリー",
+          "explain_ja": "AIモデルの訓練、展開、運用のための高度なシステムを集約したインフラ。"
+        },
+        {
+          "term": "DSXアーキテクチャ",
+          "explain_ja": "NVIDIAが提唱する次世代AIインフラのアーキテクチャ。"
+        }
+      ],
+      "personal_actions": [
+        "社内のAIインフラ計画を見直し、必要なリソースを確保する。",
+        "NVIDIAやIRENが発表する技術動向を注視し、最新情報をキャッチアップする。",
+        "AIファクトリーの導入可能性について関係者と議論を始める。"
+      ],
+      "tags": [
+        "AI"
       ]
     }
   ]
