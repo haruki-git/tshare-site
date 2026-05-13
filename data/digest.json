@@ -1,107 +1,105 @@
 {
-  "date": "2026-05-13",
-  "generatedAtJST": "2026-05-13T07:15:48.782+09:00",
+  "date": "2026-05-14",
+  "generatedAtJST": "2026-05-14T07:15:51.888+09:00",
   "items": [
     {
-      "url": "https://www.breitbart.com/politics/2026/05/11/exclusive-secretary-doug-burgum-foreign-source-dark-money-fueling-data-center-misinformation/",
-      "source": "Breitbart News",
-      "publishedAt": "2026-05-11T21:56:15Z",
-      "title": "Doug Burgum: Foreign 'Dark Money’ Fueling Data Center Misinformation",
-      "title_ja": "ダグ・バーガム：外国の「ダークマネー」がデータセンター誤情報を助長",
-      "summary_ja": "ダグ・バーガム内務長官は、AIデータセンターの建設に対する規制強化が外国からの資金による誤情報に起因していると警告しました。彼は、データセンターが地域経済に利益をもたらす具体例を挙げ、電気料金が下がることに言及しました。地方コミュニティとデータセンター構築者の協力が、電力コストの低下や住宅建設に繋がると強調しました。",
+      "url": "https://www.techradar.com/pro/western-digital-says-it-can-increase-your-hdd-capacity-and-cut-power-usage-thanks-to-a-clever-way-of-spinning-down-hard-drives-that-doesnt-impact-performance-too-much",
+      "source": "TechRadar",
+      "publishedAt": "2026-05-12T19:45:00Z",
+      "title": "Western Digital says it can increase your HDD capacity and cut power usage thanks to a 'clever way' of spinning down hard drives that doesn't impact performance too much",
+      "title_ja": "ウエスタンデジタル、HDDの容量増加と電力使用削減を実現する新技術を発表",
+      "summary_ja": "ウエスタンデジタルは、新たなハードドライブのスピンダウン技術によりHDDの容量を増やし、電力使用を削減できると発表しました。この技術は、ハイパースケール生産負荷においても性能に大きな影響を与えずに低電力消費を実現することが可能です。これにより、データセンターの効率が向上し、運用コストも削減される見込みです。",
       "key_points": [
-        "ダグ・バーガムが外国の資金がデータセンター建設を妨害していると指摘した。",
-        "誤った情報が電気料金の上昇に利用されていることを批判。",
-        "ノースダコタ州のデータセンターが地域経済に与えたプラスの影響を紹介。",
-        "データセンター建設者は地域の住宅ニーズにも応じた。",
-        "電力コストを固定費として捉え、新しい顧客の導入が全体の料金を下げる仕組み。"
+        "ウエスタンデジタルが新たなスピンダウン技術を開発",
+        "HDDの容量を増やしつつ電力使用を削減",
+        "性能に大きな影響を与えない",
+        "ハイパースケール環境での使用に特化"
       ],
       "glossary": [
         {
-          "term": "ダークマネー",
-          "explain_ja": "不明瞭な出所からの政治活動資金。"
+          "term": "HDD",
+          "explain_ja": "ハードディスクドライブの略で、データを磁気的に記録する記憶媒体。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの蓄積、処理、管理を行う施設。"
+          "term": "スピンダウン",
+          "explain_ja": "ハードドライブの動作を停止させて電力消費を抑えるプロセス。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略。コンピュータが人間の知能を模倣する技術。"
+          "term": "ハイパースケール",
+          "explain_ja": "大規模な運用環境を指し、特にデータセンターでの使用が多い。"
         }
       ],
       "personal_actions": [
-        "データセンターに関する地域の規制を確認する。",
-        "電力コストの影響を理解するために地元のデータセンター事例を調査する。",
-        "地域コミュニティと協力してデータセンターのメリットを広める。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://financialpost.com/pmn/business-pmn/advent-backed-power-equipment-maker-innio-files-for-us-ipo",
-      "source": "Financial Post",
-      "publishedAt": "2026-05-11T20:14:42Z",
-      "title": "Advent-Backed Power Equipment Maker Innio Files for US IPO",
-      "title_ja": "Adventが支援する電力機器メーカーInnio、米国IPOに申請",
-      "summary_ja": "ガスエンジンメーカーのInnio Holding GmbHが米国での新規株式公開（IPO）を申請しました。これは、データセンター投資の急増を利用しようとする多くの産業企業の流れに加わるものです。この動きは、同社の成長戦略を強化し、資金調達を目指す重要なステップと見られています。",
-      "key_points": [
-        "Innio Holding GmbHは、米国でIPOを申請した。",
-        "この動きは、データセンター支出の増加に乗じたもの。",
-        "Innioはガスエンジンを製造する企業である。",
-        "IPOを通じて資金調達を目指す。",
-        "産業企業の間でIPOが増加している。"
-      ],
-      "glossary": [
-        {
-          "term": "IPO",
-          "explain_ja": "新規株式公開のこと。企業が株式を市場に公開するプロセス。"
-        },
-        {
-          "term": "ガスエンジン",
-          "explain_ja": "ガスを燃料とするエンジン。一般に発電や産業用途に使われる。"
-        }
-      ],
-      "personal_actions": [
-        "最近のデータセンター投資の動向を確認する。",
-        "IPOに関連するニュースをフォローする。"
+        "データセンターの設備のエネルギー効率を再評価する",
+        "ウエスタンデジタル製品の最新情報をチェックする",
+        "新技術を導入したHDDのテストを検討する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.storagereview.com/news/nvidia-and-iren-partner-to-accelerate-large-scale-ai-infrastructure-deployment",
-      "source": "Storagereview.com",
-      "publishedAt": "2026-05-11T16:33:46Z",
-      "title": "NVIDIA and IREN Partner to Accelerate Large-Scale AI Infrastructure Deployment",
-      "title_ja": "NVIDIAとIRENが大規模AIインフラ展開を加速するために提携",
-      "summary_ja": "NVIDIAとIREN Limitedは、次世代AIインフラの展開を加速するための戦略的提携を発表しました。このコラボレーションにより、IRENのグローバルデータセンターにおけるNVIDIA DSXに準拠したAIインフラが最大5ギガワットまで支援される予定です。両社はAIネイティブ企業やスタートアップへのアクセラレーテッドコンピューティングの提供を拡大することを目指しています。",
+      "url": "https://www.computerweekly.com/news/366642726/IDCA-datacentres-report-Global-concentration-and-the-Goldilocks-zone",
+      "source": "ComputerWeekly.com",
+      "publishedAt": "2026-05-12T19:01:00Z",
+      "title": "IDCA datacentres report: Global concentration and the Goldilocks zone",
+      "title_ja": "IDCAデータセンター報告：グローバル集中とゴルディロックスゾーン",
+      "summary_ja": "IDCAのデータセンターに関する報告では、データセンターの容量が少数の先進国に集中していることが示されています。また、ゴルディロックス指数が、急速な発展が期待できる州を特定しています。この状況は、地域の経済発展や技術革新に影響を与える可能性があります。",
       "key_points": [
-        "NVIDIAとIRENがAIインフラの展開加速のために提携を結成。",
-        "IRENのスウィートウォーターキャンパスがフラッグシップ展開として機能する。",
-        "NVIDIAはIRENの株式を5年間で最大30百万株取得する権利を付与される。",
-        "AIファクトリーのインフラは、グローバル経済にとって重要な役割を果たすと両社は考えている。",
-        "この提携により、AI計算能力へのアクセスを拡大することが目指されている。"
+        "データセンターの容量が少数の先進国に集中している。",
+        "ゴルディロックス指数が急成長可能な州を示している。",
+        "地域ごとのデータセンターの発展に関する新たな見解を提供している。",
+        "この集中化が経済的および技術的な影響を及ぼす可能性がある。"
       ],
       "glossary": [
         {
-          "term": "AIファクトリー",
-          "explain_ja": "AIモデルの訓練、展開、運用のための高度なシステムを集約したインフラ。"
+          "term": "IDCA",
+          "explain_ja": "International Data Center Authorityの略称で、データセンターの標準化や指針を提供する組織。"
         },
         {
-          "term": "DSXアーキテクチャ",
-          "explain_ja": "NVIDIAが提唱する次世代AIインフラのアーキテクチャ。"
+          "term": "ゴルディロックス指数",
+          "explain_ja": "特定の条件が整った州や地域が、データセンターの発展に適していることを示す指標。"
         }
       ],
       "personal_actions": [
-        "社内のAIインフラ計画を見直し、必要なリソースを確保する。",
-        "NVIDIAやIRENが発表する技術動向を注視し、最新情報をキャッチアップする。",
-        "AIファクトリーの導入可能性について関係者と議論を始める。"
+        "データセンターの容量集中に関する最新情報を定期的に確認する。",
+        "ゴルディロックス指数に基づく市場の動向をウォッチする。",
+        "地域のデータセンター投資機会を調査し計画を立てる。"
       ],
       "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://hardware.slashdot.org/story/26/05/12/1717225/microsofts-1-billion-ai-data-center-will-switch-off-half-of-kenya",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-05-12T19:00:00Z",
+      "title": "Microsoft's $1 Billion AI Data Center Will 'Switch Off Half of Kenya'",
+      "title_ja": "マイクロソフトの10億ドルAIデータセンターがケニアの半分を停電に",
+      "summary_ja": "マイクロソフトとG42が共同で計画していたケニアの10億ドルAIデータセンターが、電力供給に関する意見の不一致から停滞しています。ルト大統領は、このプロジェクトをフルスケールで支えるには国の半分を停電させる必要があると述べています。この問題は、同国のインフラ整備やエネルギー資源の管理に重要な影響を与える可能性があります。",
+      "key_points": [
+        "マイクロソフトとG42がケニアに計画しているAIデータセンターは10億ドルの投資。",
+        "プロジェクトは電力供給に関する合意の不一致から停滞中。",
+        "ルト大統領は国の半分を停電させる必要があると語る。",
+        "この問題はケニアのインフラとエネルギー資源に重大な影響を及ぼす恐れがある。"
+      ],
+      "glossary": [
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能関連のデータ処理やストレージを行う施設。"
+        },
+        {
+          "term": "電力供給",
+          "explain_ja": "電力を生成し、供給すること。"
+        }
+      ],
+      "personal_actions": [
+        "現場の電力消費を見直し、最適化する。",
+        "データセンターのエネルギー効率改善についての研修を受ける。",
+        "電力供給のリスクを考慮し、バックアップ計画を立てる。"
+      ],
+      "tags": [
+        "DC",
         "AI"
       ]
     }
