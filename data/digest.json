@@ -1,108 +1,95 @@
 {
-  "date": "2026-05-15",
-  "generatedAtJST": "2026-05-15T07:15:44.491+09:00",
+  "date": "2026-05-16",
+  "generatedAtJST": "2026-05-16T07:15:51.469+09:00",
   "items": [
     {
-      "url": "https://financialpost.com/pmn/business-wire-news-releases-pmn/certarus-expands-into-utah-with-new-cng-supply-hub-secures-60-mw-data-center-award",
-      "source": "Financial Post",
-      "publishedAt": "2026-05-13T21:17:46Z",
-      "title": "Certarus Expands into Utah with New CNG Supply Hub, Secures 60 MW Data Center Award",
-      "title_ja": "Certarus、ユタ州に新しいCNG供給ハブを展開し、60MWのデータセンター契約を獲得",
-      "summary_ja": "Certarusがユタ州に新しい圧縮天然ガス(CNG)供給ハブを開設しました。このハブは産業およびハイパースケールデータセンターの顧客に対し、オンデマンドで天然ガスを供給します。これにより、同社のデータセンター向けサービスの拡大が期待されます。",
+      "url": "https://www.techradar.com/pro/not-in-my-backyard-new-gallup-data-shows-most-americans-would-rather-have-a-nuclear-power-plant-in-their-neighborhood-than-a-data-center",
+      "source": "TechRadar",
+      "publishedAt": "2026-05-14T22:05:00Z",
+      "title": "'Not in my backyard': New Gallup data shows most Americans would rather have a nuclear power plant in their neighborhood than a data center",
+      "title_ja": "「自分の裏庭にはいらない」：新たなGallupデータが示す、アメリカ人の過半数がデータセンターよりも原発を望む理由",
+      "summary_ja": "新たなGallupのデータによると、アメリカではデータセンターに対する反対が高まっており、ほとんどの人が新しい施設の設置に賛成していないことが明らかになった。特に、多くの人がデータセンターよりも原子力発電所を近所に望む意向を示している。この傾向は、公共の懸念とデータセンター建設への理解不足を反映している可能性がある。",
       "key_points": [
-        "Certarusは新たにユタ州にCNG供給ハブを設立",
-        "ハイパースケールデータセンター向けにオンデマンドの天然ガス供給",
-        "60MWのデータセンター契約を獲得",
-        "より効率的なエネルギー供給を目指す",
-        "産業顧客へのサービスを強化"
+        "Gallupのデータが示すアメリカにおけるデータセンターへの反対の高まり。",
+        "データセンターよりも原子力発電所を選ぶ人が過半数。",
+        "新しいデータセンター設置に賛成する人はほとんどいない。"
       ],
       "glossary": [
         {
-          "term": "CNG",
-          "explain_ja": "圧縮天然ガスの略で、天然ガスを冷却・圧縮したエネルギー源。"
+          "term": "Gallup",
+          "explain_ja": "アメリカの調査会社で、世論調査やデータ分析を行っている。"
         },
         {
-          "term": "ハイパースケールデータセンター",
-          "explain_ja": "大規模なコンピューティングリソースを提供するデータセンターのこと。"
+          "term": "データセンター",
+          "explain_ja": "データを保存、処理するための施設で、ITインフラの基盤となる。"
         }
       ],
       "personal_actions": [
-        "ユタ州周辺のCNG供給状況を確認する",
-        "新しい供給ハブの影響を業務において考慮する"
+        "地域のデータセンター建設計画について情報を収集する。",
+        "コミュニティの意見や懸念を聴取する機会を設ける。",
+        "データセンターの利点とデメリットについて学び、周知を図る。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://512pixels.net/2026/05/xai-unpermitted-turbines-north-ms/",
-      "source": "512pixels.net",
-      "publishedAt": "2026-05-13T20:20:53Z",
-      "title": "Surprise! xAI is Running a Bunch of Unpermitted Turbines in North Mississippi",
-      "title_ja": "xAIがミシシッピ州で無許可のタービンを運営中",
-      "summary_ja": "Elon MuskのxAIは、ミシシッピ州において約50基の天然ガスタービンを運営しており、州の規制を回避しています。これらのタービンはトレーラーに載せられているため、一年間の大気汚染規制から逃れることが可能です。NAACPは周辺住民のために訴訟を提起し、タービンからの排出が悪化する空気の質の改善を求めています。",
+      "url": "https://crooksandliars.com/2026/05/kevin-oleary-mocked-after-accusing",
+      "source": "Crooksandliars.com",
+      "publishedAt": "2026-05-14T21:55:46Z",
+      "title": "Kevin O'Leary Mocked After He Accuses Opponents Of Being Funded By China",
+      "title_ja": "ケビン・オ'リアリー、中国の資金提供を主張し非難される",
+      "summary_ja": "ケビン・オ'リアリー氏は、ユタ州のデータセンター計画に反対する団体が中国政府から資金提供を受けていると主張しました。この発言は、対象の団体から激しい反発を招き、否定の声が上がりました。反対派のメンバーは、彼の発言を皮肉り、自らが地域の支持者からの資金で運営されていることを説明しています。",
       "key_points": [
-        "xAIはミシシッピ州のデータセンターで46基の「一時移動型」タービンを運営中。",
-        "州の規制の抜け穴により、タービンは無許可で稼働している。",
-        "NAACPは住民のために訴訟を提起し、xAIに差止め命令を求めている。",
-        "タービンの排出が既に汚染されている地域の空気質を悪化させている。",
-        "xAIはこの施設で当初15基のタービンに対して許可を得ていたが、現在は増加している。"
+        "オ'リアリー氏がユタ州のデータセンター反対派を中国の資金で動く「エージェント」と批判。",
+        "反対団体のメンバーは、この主張を否定し、自らの資金源について説明。",
+        "オ'リアリー氏は、反対派の資金源を調査する意向を示したが、それはパフォーマンスに過ぎないという指摘も。"
       ],
       "glossary": [
         {
-          "term": "xAI",
-          "explain_ja": "Elon Muskが設立したAI企業。"
+          "term": "データセンター",
+          "explain_ja": "データ・ストレージと処理のための大規模な施設。"
         },
         {
-          "term": "タービン",
-          "explain_ja": "自然ガスを使って電力を生成する装置。"
-        },
-        {
-          "term": "NAACP",
-          "explain_ja": "アフリカ系アメリカ人の市民権を守るための組織。"
-        },
-        {
-          "term": "大気汚染規制",
-          "explain_ja": "大気汚染を防ぐための法律や規則。"
+          "term": "反対派",
+          "explain_ja": "提案されているプロジェクトや政策に反対するグループや個人。"
         }
       ],
       "personal_actions": [
-        "ミシシッピ州における州の環境規制について確認する。",
-        "地域住民の健康に対する影響を調査し、情報を共有する。",
-        "xAIや地域の企業の環境への取り組みを監視する。"
+        "地域のデータセンター計画についての意見を調査し、関心を示す。",
+        "関係者の声明や反対派の意見をフォローする。",
+        "新しい情報が得られた場合、それを周囲と共有する。"
       ],
       "tags": [
         "その他"
       ]
     },
     {
-      "url": "https://techcrunch.com/2026/05/13/musks-xai-is-running-nearly-50-gas-turbines-unchecked-at-its-mississippi-data-center/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-05-13T19:50:36Z",
-      "title": "Musk’s xAI is running nearly 50 gas turbines unchecked at its Mississippi data center | TechCrunch",
-      "title_ja": "マスクのxAI、ミシシッピのデータセンターで50基近くのガスタービンを無監視で運転中",
-      "summary_ja": "マスクのxAIがミシシッピのColossus 2データセンターで、50基近くのガスタービンを無監視で運転していることが報じられました。これに対し、同社の「モバイル」ガスタービンを発電所として使用することに対する訴訟が提起されています。この状況は、環境や安全への影響を懸念する声が高まる原因となっています。",
+      "url": "https://www.techradar.com/pro/utah-just-approved-a-data-center-twice-the-size-of-manhattan-that-will-consume-more-electricity-than-the-entire-state",
+      "source": "TechRadar",
+      "publishedAt": "2026-05-14T21:15:00Z",
+      "title": "Utah just approved a data center twice the size of Manhattan that will consume more electricity than the entire state",
+      "title_ja": "ユタ州がマンハッタンの2倍の大きさを持つデータセンターを承認",
+      "summary_ja": "ユタ州で、マンハッタンの2倍のサイズを持つデータセンターが承認されました。このデータセンターは、約9GWの電力を消費する見込みです。この電力消費は、州全体の電力使用量を上回ることになります。",
       "key_points": [
-        "xAIが運営するColossus 2データセンターでガスタービンを運転中。",
-        "運転中のガスタービンは約50基にのぼる。",
-        "訴訟が提起されている内容は「モバイル」ガスタービンの使用に関連。",
-        "環境や安全性に対する懸念が生じている。",
-        "訴訟が会社の運営に影響を与える可能性がある。"
+        "ユタ州でマンハッタンの2倍の大きさのデータセンターが承認された。",
+        "このデータセンターは約9GWの電力を消費する予定。",
+        "消費する電力はユタ州全体の電力使用量を超える。",
+        "大規模データセンターの電力消費が地域に与える影響が懸念されている。"
       ],
       "glossary": [
         {
-          "term": "ガスタービン",
-          "explain_ja": "ガスを燃焼させて発電するタービン。効率的なエネルギー生成が可能。"
+          "term": "データセンター",
+          "explain_ja": "データの格納、管理、配信を行う施設。"
         },
         {
-          "term": "モバイルガスタービン",
-          "explain_ja": "移動可能な形態で設計されたガスタービン。設置が柔軟なため迅速な電力供給が可能。"
+          "term": "GW",
+          "explain_ja": "ギガワット。電力の単位。1GWは10億ワット。"
         }
       ],
       "personal_actions": [
-        "データセンターのエネルギー管理についての社内ポリシーを確認する。",
-        "運転している設備が適切に監視されているか確認する。",
-        "法的リスクを考慮して、エネルギー源の選定を見直す。"
+        "新しいデータセンターの影響を考慮し、電力使用量の監視を強化する。",
+        "地域のエネルギー政策に関する最新情報を常にチェックする。"
       ],
       "tags": [
         "DC"
