@@ -1,98 +1,108 @@
 {
-  "date": "2026-05-16",
-  "generatedAtJST": "2026-05-16T07:15:51.469+09:00",
+  "date": "2026-05-17",
+  "generatedAtJST": "2026-05-17T07:15:44.171+09:00",
   "items": [
     {
-      "url": "https://www.techradar.com/pro/not-in-my-backyard-new-gallup-data-shows-most-americans-would-rather-have-a-nuclear-power-plant-in-their-neighborhood-than-a-data-center",
-      "source": "TechRadar",
-      "publishedAt": "2026-05-14T22:05:00Z",
-      "title": "'Not in my backyard': New Gallup data shows most Americans would rather have a nuclear power plant in their neighborhood than a data center",
-      "title_ja": "「自分の裏庭にはいらない」：新たなGallupデータが示す、アメリカ人の過半数がデータセンターよりも原発を望む理由",
-      "summary_ja": "新たなGallupのデータによると、アメリカではデータセンターに対する反対が高まっており、ほとんどの人が新しい施設の設置に賛成していないことが明らかになった。特に、多くの人がデータセンターよりも原子力発電所を近所に望む意向を示している。この傾向は、公共の懸念とデータセンター建設への理解不足を反映している可能性がある。",
+      "url": "https://siliconangle.com/2026/05/15/gridcare-raises-64m-speed-ai-data-center-projects/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-05-15T21:33:47Z",
+      "title": "GridCare raises $64M to speed up AI data center projects - SiliconANGLE",
+      "title_ja": "GridCare、AIデータセンタープロジェクトの加速のために6400万ドルを調達",
+      "summary_ja": "GridCare Inc.は、データセンター運営者が電力網に迅速に接続できるようにするために6400万ドルの資金を調達しました。この資金調達は、Nvidiaの支援によって実現され、スタンフォード大学や国営電力会社も参加しています。GridCareのプラットフォームは、AIを活用して未活用の電力インフラを見つけることで、データセンターの接続時間を大幅に短縮します。",
       "key_points": [
-        "Gallupのデータが示すアメリカにおけるデータセンターへの反対の高まり。",
-        "データセンターよりも原子力発電所を選ぶ人が過半数。",
-        "新しいデータセンター設置に賛成する人はほとんどいない。"
+        "GridCareは、データセンターと電力網の迅速な接続を可能にするソフトウェアプラットフォームを提供。",
+        "6400万ドルの資金調達には、Nvidia、国営電力会社、スタンフォード大学が参加。",
+        "AIモデルを使用して、未活用の電力インフラを特定する「GridCARE Energize」を運営。",
+        "このプラットフォームにより、データセンターの立ち上げまでの期間を数年短縮。",
+        "Portland General Electricとの提携により、5つのデータセンターの接続を支援。"
       ],
       "glossary": [
         {
-          "term": "Gallup",
-          "explain_ja": "アメリカの調査会社で、世論調査やデータ分析を行っている。"
+          "term": "AI",
+          "explain_ja": "人工知能のこと。コンピュータが人間のように学習し、判断を行う技術。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データを保存、処理するための施設で、ITインフラの基盤となる。"
+          "explain_ja": "データの集約・保存・管理を行う施設。"
+        },
+        {
+          "term": "GridCARE Energize",
+          "explain_ja": "GridCareのソフトウェアプラットフォームで、電力網への接続を加速する。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンター建設計画について情報を収集する。",
-        "コミュニティの意見や懸念を聴取する機会を設ける。",
-        "データセンターの利点とデメリットについて学び、周知を図る。"
+        "近くの電力インフラの活用状況を確認し、データセンターのニーズを考慮して最適な立地を評価する。",
+        "新たな電力供給計画やインフラ改善プロジェクトについて情報収集し、自社の戦略に活かす。",
+        "AIやデータセンター関連の最新技術情報を定期的にチェックし、業界の変化を把握する。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://crooksandliars.com/2026/05/kevin-oleary-mocked-after-accusing",
-      "source": "Crooksandliars.com",
-      "publishedAt": "2026-05-14T21:55:46Z",
-      "title": "Kevin O'Leary Mocked After He Accuses Opponents Of Being Funded By China",
-      "title_ja": "ケビン・オ'リアリー、中国の資金提供を主張し非難される",
-      "summary_ja": "ケビン・オ'リアリー氏は、ユタ州のデータセンター計画に反対する団体が中国政府から資金提供を受けていると主張しました。この発言は、対象の団体から激しい反発を招き、否定の声が上がりました。反対派のメンバーは、彼の発言を皮肉り、自らが地域の支持者からの資金で運営されていることを説明しています。",
+      "url": "https://himaginary.hatenablog.com/entry/20260515/Data_Centers_and_Local_Economies_in_the_Age_of_AI",
+      "source": "Hatenablog.com",
+      "publishedAt": "2026-05-15T14:47:51Z",
+      "title": "AI時代のデータセンターと地域経済：シフトシェア分析",
+      "title_ja": "AI時代のデータセンターと地域経済：シフトシェア分析による実証研究",
+      "summary_ja": "データセンターの拡張は地域経済にポジティブな影響を与えるが、電力価格や住宅価格の上昇を引き起こす可能性がある。この研究は、1995年以前のデジタルインフラや人的資本を元に、地域経済の雇用や所得に対する影響を分析した。データセンター計画を進める際は、これらのメリットとデメリットを考慮する必要がある。",
       "key_points": [
-        "オ'リアリー氏がユタ州のデータセンター反対派を中国の資金で動く「エージェント」と批判。",
-        "反対団体のメンバーは、この主張を否定し、自らの資金源について説明。",
-        "オ'リアリー氏は、反対派の資金源を調査する意向を示したが、それはパフォーマンスに過ぎないという指摘も。"
+        "データセンターの拡張は地域の総雇用や所得にプラスの影響を与える。",
+        "住宅価格や電力価格も上昇し、借り手や新規購入者にとっては経済的負担となる。",
+        "政策決定者はデータセンターのメリットと社会的コストを比較考量する必要がある。",
+        "本研究では、1995年以前のデジタルインフラとユーザーの地理を用いたシフトシェア分析が行われた。",
+        "アメリカ人の多くはAIデータセンターの建設に反対の意見を持っている。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データ・ストレージと処理のための大規模な施設。"
+          "term": "シフトシェア分析",
+          "explain_ja": "経済活動の変化要因を特定するための手法で、地域経済の成長に対する要因を分解する。"
         },
         {
-          "term": "反対派",
-          "explain_ja": "提案されているプロジェクトや政策に反対するグループや個人。"
+          "term": "データセンター",
+          "explain_ja": "データの処理・保存を行うための施設で、近年AIやビッグデータの影響で需要が高まっている。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンター計画についての意見を調査し、関心を示す。",
-        "関係者の声明や反対派の意見をフォローする。",
-        "新しい情報が得られた場合、それを周囲と共有する。"
+        "地域のデータセンター計画に関する最新情報を収集する。",
+        "電力コストや住宅市場の動向を把握し、影響を評価する。",
+        "地域住民の意見を積極的に聞く場を設ける。"
       ],
       "tags": [
-        "その他"
+        "AI"
       ]
     },
     {
-      "url": "https://www.techradar.com/pro/utah-just-approved-a-data-center-twice-the-size-of-manhattan-that-will-consume-more-electricity-than-the-entire-state",
-      "source": "TechRadar",
-      "publishedAt": "2026-05-14T21:15:00Z",
-      "title": "Utah just approved a data center twice the size of Manhattan that will consume more electricity than the entire state",
-      "title_ja": "ユタ州がマンハッタンの2倍の大きさを持つデータセンターを承認",
-      "summary_ja": "ユタ州で、マンハッタンの2倍のサイズを持つデータセンターが承認されました。このデータセンターは、約9GWの電力を消費する見込みです。この電力消費は、州全体の電力使用量を上回ることになります。",
+      "url": "https://fortune.com/2026/05/15/more-americans-nuclear-energy-data-center/",
+      "source": "Fortune",
+      "publishedAt": "2026-05-15T14:04:04Z",
+      "title": "Americans would rather live near a nuclear power plant than a data center—by a lot",
+      "title_ja": "アメリカ人はデータセンターよりも原子力発電所の近くに住むことを好む",
+      "summary_ja": "調査結果によると、アメリカ人はデータセンターよりも原子力発電所の近くに住むことを圧倒的に好む。これは、AIへの恐れや騒音、水質汚染に対する懸念が影響している。データセンターの増加がこの感情を助長している可能性がある。",
       "key_points": [
-        "ユタ州でマンハッタンの2倍の大きさのデータセンターが承認された。",
-        "このデータセンターは約9GWの電力を消費する予定。",
-        "消費する電力はユタ州全体の電力使用量を超える。",
-        "大規模データセンターの電力消費が地域に与える影響が懸念されている。"
+        "アメリカ人はデータセンターより原子力発電所近くの居住を好む。",
+        "AIへの恐れが調査回答者の懸念の一因。",
+        "騒音や水質汚染に関する懸念も影響を与えている。",
+        "データセンターの存在が地域に与える懸念が高まっている。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの格納、管理、配信を行う施設。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略。"
         },
         {
-          "term": "GW",
-          "explain_ja": "ギガワット。電力の単位。1GWは10億ワット。"
+          "term": "データセンター",
+          "explain_ja": "情報を保存・管理するための施設。"
         }
       ],
       "personal_actions": [
-        "新しいデータセンターの影響を考慮し、電力使用量の監視を強化する。",
-        "地域のエネルギー政策に関する最新情報を常にチェックする。"
+        "周囲のデータセンターや発電所に関する情報を確認する。",
+        "地域の環境影響についてのニュースを定期的にチェックする。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
