@@ -1,39 +1,39 @@
 {
-  "date": "2026-05-17",
-  "generatedAtJST": "2026-05-17T07:15:44.171+09:00",
+  "date": "2026-05-18",
+  "generatedAtJST": "2026-05-18T07:15:44.141+09:00",
   "items": [
     {
-      "url": "https://siliconangle.com/2026/05/15/gridcare-raises-64m-speed-ai-data-center-projects/",
-      "source": "SiliconANGLE News",
-      "publishedAt": "2026-05-15T21:33:47Z",
-      "title": "GridCare raises $64M to speed up AI data center projects - SiliconANGLE",
-      "title_ja": "GridCare、AIデータセンタープロジェクトの加速のために6400万ドルを調達",
-      "summary_ja": "GridCare Inc.は、データセンター運営者が電力網に迅速に接続できるようにするために6400万ドルの資金を調達しました。この資金調達は、Nvidiaの支援によって実現され、スタンフォード大学や国営電力会社も参加しています。GridCareのプラットフォームは、AIを活用して未活用の電力インフラを見つけることで、データセンターの接続時間を大幅に短縮します。",
+      "url": "https://www.ubergizmo.com/2026/05/microsofts-kenya-ai-data-center/",
+      "source": "Ubergizmo",
+      "publishedAt": "2026-05-16T13:27:17Z",
+      "title": "Microsoft’s Massive Kenya AI Data Center Blocked By ‘Half the Country’ Power Demand",
+      "title_ja": "マイクロソフトのケニアAIデータセンター、半分の国の電力需要で進捗停止",
+      "summary_ja": "マイクロソフトが主導するケニアのAIデータセンター計画が、エネルギー保証に関する対立により停止しています。ケニア政府が年間キャパシティの保証を拒否したため、プロジェクトは遅滞を余儀なくされています。このデータセンターは、フルスケールで稼働する場合、国の電力供給の半分を停止する必要があるとされています。",
       "key_points": [
-        "GridCareは、データセンターと電力網の迅速な接続を可能にするソフトウェアプラットフォームを提供。",
-        "6400万ドルの資金調達には、Nvidia、国営電力会社、スタンフォード大学が参加。",
-        "AIモデルを使用して、未活用の電力インフラを特定する「GridCARE Energize」を運営。",
-        "このプラットフォームにより、データセンターの立ち上げまでの期間を数年短縮。",
-        "Portland General Electricとの提携により、5つのデータセンターの接続を支援。"
+        "ケニアのリフトバレー地域に1億ドルのAIデータセンターを建設予定。",
+        "データセンターはマイクロソフトAzureサービスをホストすることを目指している。",
+        "プロジェクトには100MWの初期段階と1GWへの長期的な拡張計画がある。",
+        "ケニアの総電力供給は3000MWから3200MWであり、ピーク需要は2444MWに達する。",
+        "交渉は継続中であり、プロジェクトは撤回されていない。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能のこと。コンピュータが人間のように学習し、判断を行う技術。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能の処理を行うために特化されたデータセンター。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの集約・保存・管理を行う施設。"
+          "term": "MW",
+          "explain_ja": "メガワットの略で、電力の単位。"
         },
         {
-          "term": "GridCARE Energize",
-          "explain_ja": "GridCareのソフトウェアプラットフォームで、電力網への接続を加速する。"
+          "term": "GW",
+          "explain_ja": "ギガワットの略で、電力の単位。1000MWに相当する。"
         }
       ],
       "personal_actions": [
-        "近くの電力インフラの活用状況を確認し、データセンターのニーズを考慮して最適な立地を評価する。",
-        "新たな電力供給計画やインフラ改善プロジェクトについて情報収集し、自社の戦略に活かす。",
-        "AIやデータセンター関連の最新技術情報を定期的にチェックし、業界の変化を把握する。"
+        "自社のデータセンターのエネルギー供給計画を再評価する。",
+        "既存のインフラと新規プロジェクトのエネルギー効率について確認する。",
+        "グリーンエネルギーの利用を検討する。"
       ],
       "tags": [
         "DC",
@@ -41,68 +41,69 @@
       ]
     },
     {
-      "url": "https://himaginary.hatenablog.com/entry/20260515/Data_Centers_and_Local_Economies_in_the_Age_of_AI",
-      "source": "Hatenablog.com",
-      "publishedAt": "2026-05-15T14:47:51Z",
-      "title": "AI時代のデータセンターと地域経済：シフトシェア分析",
-      "title_ja": "AI時代のデータセンターと地域経済：シフトシェア分析による実証研究",
-      "summary_ja": "データセンターの拡張は地域経済にポジティブな影響を与えるが、電力価格や住宅価格の上昇を引き起こす可能性がある。この研究は、1995年以前のデジタルインフラや人的資本を元に、地域経済の雇用や所得に対する影響を分析した。データセンター計画を進める際は、これらのメリットとデメリットを考慮する必要がある。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=183238553",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-05-16T12:12:20Z",
+      "title": "AI data centers trigger massive 'irreversible' 76% electricity price spike in largest US region — federal watchdog demands tech giants pay for their own  - Slashdot",
+      "title_ja": "AIデータセンターが米最大地域で76%の電気料金高騰を引き起こす — 政府監視機関がテクノロジー企業に自己負担を求める",
+      "summary_ja": "AIデータセンターの需要により、PJMインターポネクション地域で76%の電気料金の高騰が発生している。この事態を受けて、業界監視機関のモニタリング・アナリティクスは、電力価格の急騰を防ぐための対策が不十分であると指摘している。テクノロジー企業に対し、自己負担するよう促す声も上がっている。",
       "key_points": [
-        "データセンターの拡張は地域の総雇用や所得にプラスの影響を与える。",
-        "住宅価格や電力価格も上昇し、借り手や新規購入者にとっては経済的負担となる。",
-        "政策決定者はデータセンターのメリットと社会的コストを比較考量する必要がある。",
-        "本研究では、1995年以前のデジタルインフラとユーザーの地理を用いたシフトシェア分析が行われた。",
-        "アメリカ人の多くはAIデータセンターの建設に反対の意見を持っている。"
+        "AIデータセンターが引き起こした76%の電気料金高騰",
+        "PJMインターポネクションが適切な対応をしていないとの指摘",
+        "業界監視機関がテクノロジー企業に負担を求める"
       ],
       "glossary": [
         {
-          "term": "シフトシェア分析",
-          "explain_ja": "経済活動の変化要因を特定するための手法で、地域経済の成長に対する要因を分解する。"
+          "term": "PJM Interconnection",
+          "explain_ja": "米国の電力市場で、広範な地域に電力を供給する組織。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの処理・保存を行うための施設で、近年AIやビッグデータの影響で需要が高まっている。"
+          "term": "Monitoring Analytics",
+          "explain_ja": "電力業界を監視・分析するための組織。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンター計画に関する最新情報を収集する。",
-        "電力コストや住宅市場の動向を把握し、影響を評価する。",
-        "地域住民の意見を積極的に聞く場を設ける。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://fortune.com/2026/05/15/more-americans-nuclear-energy-data-center/",
-      "source": "Fortune",
-      "publishedAt": "2026-05-15T14:04:04Z",
-      "title": "Americans would rather live near a nuclear power plant than a data center—by a lot",
-      "title_ja": "アメリカ人はデータセンターよりも原子力発電所の近くに住むことを好む",
-      "summary_ja": "調査結果によると、アメリカ人はデータセンターよりも原子力発電所の近くに住むことを圧倒的に好む。これは、AIへの恐れや騒音、水質汚染に対する懸念が影響している。データセンターの増加がこの感情を助長している可能性がある。",
-      "key_points": [
-        "アメリカ人はデータセンターより原子力発電所近くの居住を好む。",
-        "AIへの恐れが調査回答者の懸念の一因。",
-        "騒音や水質汚染に関する懸念も影響を与えている。",
-        "データセンターの存在が地域に与える懸念が高まっている。"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "情報を保存・管理するための施設。"
-        }
-      ],
-      "personal_actions": [
-        "周囲のデータセンターや発電所に関する情報を確認する。",
-        "地域の環境影響についてのニュースを定期的にチェックする。"
+        "自社の電力使用量をモニタリングし、効率化を検討する。",
+        "AIデータセンターの導入状況を確認し、影響を評価する。",
+        "電力会社の最新の料金プランを確認する。"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://www.tomshardware.com/tech-industry/ai-data-centers-trigger-massive-irreversible-76-percent-electricity-price-spike-in-largest-us-region-federal-watchdog-demands-tech-giants-pay-for-their-own-power-infrastructure",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-05-16T12:02:35Z",
+      "title": "AI data centers trigger massive 'irreversible' 76% electricity price spike in largest US region — federal watchdog demands tech giants pay for their own power infrastructure",
+      "title_ja": "AIデータセンターがアメリカ最大地域で電気料金を76%急騰させる—連邦監視機関がテクノロジー大手に自らの電力インフラ費用を負担するよう要求",
+      "summary_ja": "AIデータセンターの需要が急増し、PJM連携地域で電気料金が76%上昇することが報告されました。この急騰は業界監視機関Monitoring Analyticsによって指摘され、PJMインタコネクションが効果的な対策を講じていないことが問題視されています。連邦監視機関は、テクノロジー大手に対して自らの電力インフラの費用を負担するよう求めています。",
+      "key_points": [
+        "AIデータセンターの需要増加により電気料金が76%上昇。",
+        "PJM連携地域はアメリカ最大の電力市場。",
+        "Monitoring AnalyticsはPJMインタコネクションに対策の強化を要求。",
+        "連邦監視機関がテクノロジー企業にインフラ費用の負担を促す動き。",
+        "電力市場の安定性への影響が懸念されている。"
+      ],
+      "glossary": [
+        {
+          "term": "PJM Interconnection",
+          "explain_ja": "アメリカ東部の広域電力市場管理組織で、電力供給の安定性を維持する役割を担っている。"
+        },
+        {
+          "term": "Monitoring Analytics",
+          "explain_ja": "電力市場の監視・分析を行う独立した組織で、業界の健全性を保つために情報を提供している。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの電力使用状況を把握し、最適化を図る。",
+        "PJMインタコネクションの今後の発表や対策に注目する。",
+        "関連するテクノロジー大手の対応を確認し、影響を評価する。"
+      ],
+      "tags": [
+        "DC",
+        "インフラ"
       ]
     }
   ]
