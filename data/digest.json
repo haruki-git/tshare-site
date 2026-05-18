@@ -1,109 +1,113 @@
 {
-  "date": "2026-05-18",
-  "generatedAtJST": "2026-05-18T07:15:44.141+09:00",
+  "date": "2026-05-19",
+  "generatedAtJST": "2026-05-19T07:15:53.630+09:00",
   "items": [
     {
-      "url": "https://www.ubergizmo.com/2026/05/microsofts-kenya-ai-data-center/",
-      "source": "Ubergizmo",
-      "publishedAt": "2026-05-16T13:27:17Z",
-      "title": "Microsoft’s Massive Kenya AI Data Center Blocked By ‘Half the Country’ Power Demand",
-      "title_ja": "マイクロソフトのケニアAIデータセンター、半分の国の電力需要で進捗停止",
-      "summary_ja": "マイクロソフトが主導するケニアのAIデータセンター計画が、エネルギー保証に関する対立により停止しています。ケニア政府が年間キャパシティの保証を拒否したため、プロジェクトは遅滞を余儀なくされています。このデータセンターは、フルスケールで稼働する場合、国の電力供給の半分を停止する必要があるとされています。",
+      "url": "https://www.superpunch.net/2026/05/data-center-discovered-to-be-draining.html",
+      "source": "Superpunch.net",
+      "publishedAt": "2026-05-17T14:30:00Z",
+      "title": "Data center discovered to be draining city's water supply through unauthorized hookups (AI roundup)",
+      "title_ja": "データセンターが不正な接続で都市の水供給を消費していたことが発覚",
+      "summary_ja": "データセンターがアトランタ市の水供給を無断で消費していたことが明らかになった。二つの工業規模の水道接続が確認され、一つは許可なしに設置されたもので、もう一つは会社のアカウントにリンクされておらず請求されていなかった。この問題は水資源の管理やデータセンター運営の透明性に影響を及ぼす可能性がある。",
       "key_points": [
-        "ケニアのリフトバレー地域に1億ドルのAIデータセンターを建設予定。",
-        "データセンターはマイクロソフトAzureサービスをホストすることを目指している。",
-        "プロジェクトには100MWの初期段階と1GWへの長期的な拡張計画がある。",
-        "ケニアの総電力供給は3000MWから3200MWであり、ピーク需要は2444MWに達する。",
-        "交渉は継続中であり、プロジェクトは撤回されていない。"
+        "アトランタのデータセンターに無断の水道接続が確認された",
+        "一つの接続は許可なしに設置され、もう一つは請求されていなかった",
+        "水供給の不正使用が指摘され、運営の透明性が問われている",
+        "データセンターの利用は水資源に影響を与える可能性がある",
+        "今後の規制強化が予想される"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "コンピュータシステムや関連装置の集中管理場所。"
+        },
+        {
+          "term": "水道接続",
+          "explain_ja": "水供給システムに接続された配管のこと。"
+        },
+        {
+          "term": "無断接続",
+          "explain_ja": "事前の許可なく接続されていること。"
+        }
+      ],
+      "personal_actions": [
+        "近隣のインフラへの影響を確認する",
+        "データセンターの運営方針について情報を得る",
+        "水資源管理に関する地域のルールを確認する"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://grist.org/energy/chevron-wants-a-school-district-tax-break-for-a-data-center-power-plant/",
+      "source": "Grist",
+      "publishedAt": "2026-05-17T13:00:00Z",
+      "title": "Chevron wants a school district tax break for a data center power plant",
+      "title_ja": "シェブロン、データセンター発電所のために学区税の減免を要請",
+      "summary_ja": "シェブロンがテキサス州でデータセンター発電所に向けた学区税の減免を求めている。この動きは、同社に数億ドルの節約をもたらす可能性がある。しかし、州の立法者はデータセンターへのインセンティブを制限する方向で議論を進めている。事態の進展は、シェブロンの戦略に影響を与える可能性がある。",
+      "key_points": [
+        "シェブロンがデータセンター発電所のために税減免を申請",
+        "テキサス州での経済的利益が数億ドルに達する可能性",
+        "州立法者はデータセンターのインセンティブ制限を検討中",
+        "シェブロンの計画に影響を与える可能性がある",
+        "税減免要求への反響が今後の議論を呼ぶかもしれない"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データを集中的に管理・保管し、処理する施設。"
+        },
+        {
+          "term": "インセンティブ",
+          "explain_ja": "特定の行動を促すための動機付けや優遇措置。"
+        },
+        {
+          "term": "テキサス州",
+          "explain_ja": "アメリカ合衆国の南中部に位置する州。"
+        }
+      ],
+      "personal_actions": [
+        "地元の立法動向を確認する",
+        "企業の税減免に対する地域住民の意見を収集する",
+        "データセンター関連の計画に関する最新情報を把握する"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://alltoc.com/tech/why-is-microsofts-kenya-ai-data-center-stuck",
+      "source": "Alltoc.com",
+      "publishedAt": "2026-05-17T06:01:52Z",
+      "title": "Why is Microsoft’s Kenya AI data center stuck?",
+      "title_ja": "マイクロソフトのケニアAIデータセンターが直面する停滞の理由",
+      "summary_ja": "マイクロソフトのケニアにおけるAIデータセンター計画は、電力容量制約に直面しています。この1,000億ドルのプロジェクトは、国家の電力供給が大規模なAIワークロードを支えるには不十分であることを示しています。この問題は、AIインフラの計画において電力供給が重要な要素であることを浮き彫りにし、他のプロジェクトにも影響を与える可能性があります。",
+      "key_points": [
+        "マイクロソフトのケニアAIデータセンターが電力制約に直面している。",
+        "プロジェクトには国家の電力グリッドが対応できないという問題がある。",
+        "AIデータセンターは重い連続的な負荷を必要とし、地元の送電および発電に負担をかける。",
+        "電力計画がプロジェクトの実施における重要な要素となる可能性がある。",
+        "規制当局が需要による停電を懸念する場合、インフラが停滞することがある。"
       ],
       "glossary": [
         {
           "term": "AIデータセンター",
-          "explain_ja": "人工知能の処理を行うために特化されたデータセンター。"
+          "explain_ja": "人工知能（AI）関連の計算処理を行うための施設。"
         },
         {
-          "term": "MW",
-          "explain_ja": "メガワットの略で、電力の単位。"
-        },
-        {
-          "term": "GW",
-          "explain_ja": "ギガワットの略で、電力の単位。1000MWに相当する。"
+          "term": "電力容量制約",
+          "explain_ja": "提供可能な電力が需要に対して不足している状態。"
         }
       ],
       "personal_actions": [
-        "自社のデータセンターのエネルギー供給計画を再評価する。",
-        "既存のインフラと新規プロジェクトのエネルギー効率について確認する。",
-        "グリーンエネルギーの利用を検討する。"
+        "データセンターのプロジェクトに関連する電力供給状況を確認する。",
+        "AIインフラ投資における電力計画の重要性について理解を深める。"
       ],
       "tags": [
         "DC",
         "AI"
-      ]
-    },
-    {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=183238553",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-05-16T12:12:20Z",
-      "title": "AI data centers trigger massive 'irreversible' 76% electricity price spike in largest US region — federal watchdog demands tech giants pay for their own  - Slashdot",
-      "title_ja": "AIデータセンターが米最大地域で76%の電気料金高騰を引き起こす — 政府監視機関がテクノロジー企業に自己負担を求める",
-      "summary_ja": "AIデータセンターの需要により、PJMインターポネクション地域で76%の電気料金の高騰が発生している。この事態を受けて、業界監視機関のモニタリング・アナリティクスは、電力価格の急騰を防ぐための対策が不十分であると指摘している。テクノロジー企業に対し、自己負担するよう促す声も上がっている。",
-      "key_points": [
-        "AIデータセンターが引き起こした76%の電気料金高騰",
-        "PJMインターポネクションが適切な対応をしていないとの指摘",
-        "業界監視機関がテクノロジー企業に負担を求める"
-      ],
-      "glossary": [
-        {
-          "term": "PJM Interconnection",
-          "explain_ja": "米国の電力市場で、広範な地域に電力を供給する組織。"
-        },
-        {
-          "term": "Monitoring Analytics",
-          "explain_ja": "電力業界を監視・分析するための組織。"
-        }
-      ],
-      "personal_actions": [
-        "自社の電力使用量をモニタリングし、効率化を検討する。",
-        "AIデータセンターの導入状況を確認し、影響を評価する。",
-        "電力会社の最新の料金プランを確認する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.tomshardware.com/tech-industry/ai-data-centers-trigger-massive-irreversible-76-percent-electricity-price-spike-in-largest-us-region-federal-watchdog-demands-tech-giants-pay-for-their-own-power-infrastructure",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-05-16T12:02:35Z",
-      "title": "AI data centers trigger massive 'irreversible' 76% electricity price spike in largest US region — federal watchdog demands tech giants pay for their own power infrastructure",
-      "title_ja": "AIデータセンターがアメリカ最大地域で電気料金を76%急騰させる—連邦監視機関がテクノロジー大手に自らの電力インフラ費用を負担するよう要求",
-      "summary_ja": "AIデータセンターの需要が急増し、PJM連携地域で電気料金が76%上昇することが報告されました。この急騰は業界監視機関Monitoring Analyticsによって指摘され、PJMインタコネクションが効果的な対策を講じていないことが問題視されています。連邦監視機関は、テクノロジー大手に対して自らの電力インフラの費用を負担するよう求めています。",
-      "key_points": [
-        "AIデータセンターの需要増加により電気料金が76%上昇。",
-        "PJM連携地域はアメリカ最大の電力市場。",
-        "Monitoring AnalyticsはPJMインタコネクションに対策の強化を要求。",
-        "連邦監視機関がテクノロジー企業にインフラ費用の負担を促す動き。",
-        "電力市場の安定性への影響が懸念されている。"
-      ],
-      "glossary": [
-        {
-          "term": "PJM Interconnection",
-          "explain_ja": "アメリカ東部の広域電力市場管理組織で、電力供給の安定性を維持する役割を担っている。"
-        },
-        {
-          "term": "Monitoring Analytics",
-          "explain_ja": "電力市場の監視・分析を行う独立した組織で、業界の健全性を保つために情報を提供している。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの電力使用状況を把握し、最適化を図る。",
-        "PJMインタコネクションの今後の発表や対策に注目する。",
-        "関連するテクノロジー大手の対応を確認し、影響を評価する。"
-      ],
-      "tags": [
-        "DC",
-        "インフラ"
       ]
     }
   ]
