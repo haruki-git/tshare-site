@@ -1,114 +1,116 @@
 {
-  "date": "2026-05-20",
-  "generatedAtJST": "2026-05-20T07:15:40.952+09:00",
+  "date": "2026-05-21",
+  "generatedAtJST": "2026-05-21T07:15:53.707+09:00",
   "items": [
     {
-      "url": "https://www.theregister.com/on-prem/2026/05/18/nancy-mace-wants-to-make-power-bills-great-again-with-datacenter-moratorium/5242160",
-      "source": "Theregister.com",
-      "publishedAt": "2026-05-18T21:40:05Z",
-      "title": "Nancy Mace wants to make power bills great again with datacenter moratorium",
-      "title_ja": "ナンシー・メイス氏、データセンターの一時凍結で電力料金の改善を目指す",
-      "summary_ja": "ナンシー・メイス米国下院議員が南カロライナ州の新しいデータセンター計画に対し、1年間の凍結を求めている。彼女は、データセンターの増加が地域住民の電力料金を引き上げていると主張し、負担を軽減するための規則の導入を提案。アメリカ全体でデータセンター計画に対する反発が高まる中、彼女の発言は地方の意見にも影響を及ぼす可能性がある。",
+      "url": "https://oilprice.com/Alternative-Energy/Solar-Energy/Scientists-Unveil-DNA-Battery-That-Charges-Directly-From-The-Sun.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-05-19T22:00:00Z",
+      "title": "Scientists Unveil ‘DNA Battery’ That Charges Directly From The Sun",
+      "title_ja": "科学者たちが太陽光から直接充電できる‘DNA電池’を発表",
+      "summary_ja": "科学者たちは、太陽光から直接充電できる新しいタイプの電池である‘DNA電池’を発表しました。この技術は、AIサーバーやハイパースケールデータセンターの膨大なエネルギー需求に対応するためのエネルギー貯蔵の必要性から生まれました。将来的には、再生可能エネルギーの安定供給に寄与すると期待されます。",
       "key_points": [
-        "ナンシー・メイス氏が南カロライナ州でのデータセンター計画の一時凍結を提案。",
-        "データセンターの増加により電力需要が高まり、住民が負担を強いられているとの主張。",
-        "米国内の74%以上の人々がデータセンターの近隣設置に反対しているとの調査結果。",
-        "メイス氏は、今後のデータセンターには電力コストを自身で賄うことを求めている。",
-        "データセンターの開発に関する規制案にはダメ出しをし、企業への特権提供を批判。"
+        "DNA電池は太陽光から直接電力を生成する新技術。",
+        "AIサーバーやデータセンターのエネルギー需給を支えるために開発された。",
+        "再生可能エネルギーの貯蔵と安定化を促進する可能性。",
+        "独立したバッテリーシステムの急激な拡大が進行中。",
+        "グリッドストレージの需要が高まっている。"
       ],
       "glossary": [
         {
-          "term": "データセンター（datacenter）",
-          "explain_ja": "データの保存、管理、処理を行うための施設。"
+          "term": "DNA電池",
+          "explain_ja": "太陽光エネルギーを直接利用して充電できる新しいタイプの電池。"
         },
         {
-          "term": "モラトリアム（moratorium）",
-          "explain_ja": "特定の行為やプロジェクトの一時的な停止を指す。"
+          "term": "ハイパースケールデータセンター",
+          "explain_ja": "大量のデータ処理を行うために、大規模に設計されたデータセンター。"
         },
         {
-          "term": "電力需要（electricity demand）",
-          "explain_ja": "特定の地域や施設が必要とする電力の量。"
+          "term": "グリッドストレージ",
+          "explain_ja": "電力網において、電力を蓄えるための技術やシステム。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンター計画における進捗を確認し、影響を把握する。",
-        "電力使用量の削減策を検討し、無駄な消費を減らす。",
-        "公聴会や地域の意見交換会に参加して、意見を共有する。"
+        "再生可能エネルギーの導入について検討する。",
+        "エネルギー管理システムの更新を計画する。",
+        "データセンター内のエネルギー効率を再評価する。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://cointelegraph.com/news/bernstein-bitcoin-miners-gain-strategic-role-in-ai-infrastructure",
+      "source": "Cointelegraph",
+      "publishedAt": "2026-05-19T21:39:16Z",
+      "title": "Bernstein: Bitcoin Miners Gain Strategic Role in AI Infrastructure",
+      "title_ja": "バーンスタイン：ビットコインマイナーがAIインフラにおける戦略的役割を担う",
+      "summary_ja": "ビットコインマイナーがAIインフラ供給チェーンの重要な一部として浮上しています。彼らは大規模な電力供給能力とデータセンターの実物資産を管理しており、これらはますます確保が難しくなっています。米国では2030年までにおよそ82GWの新たな電力容量が追加される見込みで、ビットコインマイナーはこの環境で優位性を発揮しています。",
+      "key_points": [
+        "ビットコインマイナーは27GW以上の計画電力容量を管理している。",
+        "AI関連契約は90億ドル以上に達し、3.7GWをカバーしている。",
+        "電力供給がAIデータセンター拡張の主なボトルネックとなっている。",
+        "ビットコインマイナーはAIインフラに多様化を進めている。",
+        "エネルギー管理と高密度計算施設の運営経験が優位性を生む。"
+      ],
+      "glossary": [
+        {
+          "term": "AIインフラ",
+          "explain_ja": "人工知能（AI）関連のシステムやリソースを支えるインフラストラクチャー。"
+        },
+        {
+          "term": "ビットコインマイナー",
+          "explain_ja": "ビットコインの取引を検証し、新しいビットコインを生成するための計算を行う個人または組織。"
+        }
+      ],
+      "personal_actions": [
+        "地元の電力供給に関する規制や批准状況を確認する。",
+        "データセンター計画の進捗状況をレビューし、ビットコインマイナーへの影響を考慮する。",
+        "AI関連の動向やマーケット動向を追跡し、戦略を見直す。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://hardware.slashdot.org/story/26/05/19/1733219/nextera-and-dominions-67-billion-mega-merger-is-all-about-the-data-centers",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-05-19T21:00:00Z",
+      "title": "NextEra and Dominion's $67 Billion Mega-Merger Is All About the Data Centers - Slashdot",
+      "title_ja": "NextEraとDominionの670億ドルメガ合併はデータセンターがカギ",
+      "summary_ja": "NextEra EnergyとDominionの合併提案は、データセンターの需要増加に応じたものである。この670億ドルの取引が成立すると、米国の電力・公益事業で圧倒的な企業が誕生する。しかし、消費者や環境に悪影響を及ぼす可能性があるとの懸念が表明されている。この合併は、両企業の株主には利益をもたらすが、消費者には後回しにされる恐れがある。",
+      "key_points": [
+        "NextEraとDominionの合併で新たな大企業が誕生する。",
+        "合併は670億ドルの価値で、データセンター需要に影響を与える。",
+        "NextEraのCEOが合併後もCEOを続ける。",
+        "規模の拡大が資本や効率を向上させると主張。",
+        "合併による消費者への影響についての懸念が存在する。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "情報やデータを集中的に管理・保管する場所。電力消費が非常に高い。"
+        },
+        {
+          "term": "公益事業",
+          "explain_ja": "水道、電気、ガスなど、公共のインフラやサービスを供給する企業や業種。"
+        },
+        {
+          "term": "合併",
+          "explain_ja": "2つ以上の企業が統合され、1つの新しい企業になるプロセス。"
+        },
+        {
+          "term": "シナジー",
+          "explain_ja": "合併や協力によって生まれる相乗効果。"
+        }
+      ],
+      "personal_actions": [
+        "合併内容が自社の電力供給に与える影響を確認する。",
+        "地域の電力会社の状況を把握する。",
+        "データセンターの電力使用量増加の動向を注意深く観察する。"
       ],
       "tags": [
         "DC"
-      ]
-    },
-    {
-      "url": "https://cointelegraph.com/news/soluna-q1-revenue-rises-58-data-center-hosting-surpasses-crypto-mining",
-      "source": "Cointelegraph",
-      "publishedAt": "2026-05-18T21:28:02Z",
-      "title": "Soluna Q1 Revenue Rises 58% as Data Center Hosting Surpasses Crypto Mining",
-      "title_ja": "Soluna、Q1の収益が58%増加しデータセンターのホスティングが暗号マイニングを上回る",
-      "summary_ja": "Soluna Holdingsは、データセンターの拡大により第一四半期の収益が前年同期比で58%増加したと報告しています。収益は940万ドルに達し、前四半期からは2%の増加を記録しました。暗号マイニングからの収益は低下したものの、データセンターのホスティングが大きく貢献しました。",
-      "key_points": [
-        "SolunaのQ1収益は940万ドルで、前年同期比58%の増加。",
-        "データセンターのホスティングが670万ドルを生成し、暗号マイニングは220万ドルに減少。",
-        "純損失は1790万ドルに拡大、高株式報酬や利息費用が影響。",
-        "SolunaはAI及び高性能コンピューティング事業の拡大を計画中。",
-        "ビットコインマイニングの収益性が低下しているため、業界全体で収益源の多様化が進行中。"
-      ],
-      "glossary": [
-        {
-          "term": "EBITDA",
-          "explain_ja": "利息・税金・減価償却費及び償却費を差し引く前の利益指標。企業の収益性を測るための指標として使われる。"
-        },
-        {
-          "term": "マイニング",
-          "explain_ja": "暗号通貨を取引記録としてブロックチェーンに追加する過程。通常は高性能なコンピュータによって行われる。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターのホスティングサービスの市場動向を確認する。",
-        "マイニングの収益性に関する最新のレポートを読む。",
-        "AIおよび高性能コンピューティング事業の潜在的な機会を評価する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://fortune.com/2026/05/18/nextera-dominion-67-billion-acquisition-ai-data-centers-largest-utility/",
-      "source": "Fortune",
-      "publishedAt": "2026-05-18T20:29:11Z",
-      "title": "NextEra’s $67 billion Dominion takeover creates the world’s largest utility—just in time to win the AI data-center power surge",
-      "title_ja": "NextEra、670億ドルでドミニオンを買収し、世界最大の公益事業者に",
-      "summary_ja": "NextEraが670億ドルでドミニオンを買収したことで、世界最大の公益事業者が誕生しました。この買収は、AIデータセンターのパワーサージを見越した戦略的なものであり、スケールと価格競争力を重視しています。この動きは、AI開発者を引き付ける狙いがあります。",
-      "key_points": [
-        "NextEraが670億ドルでドミニオンを買収",
-        "これにより、世界最大の公益事業者が誕生",
-        "AIデータセンター市場の成長を見越した戦略",
-        "スケールと価格競争力の強化が目的",
-        "AI開発者をターゲットにした新たなビジネスチャンス"
-      ],
-      "glossary": [
-        {
-          "term": "NextEra",
-          "explain_ja": "アメリカのエネルギー企業で、再生可能エネルギーに特化している。"
-        },
-        {
-          "term": "Dominion",
-          "explain_ja": "アメリカの公益事業者で電力供給を行っている。"
-        },
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能の処理に特化した施設で、大量のデータを処理する。"
-        }
-      ],
-      "personal_actions": [
-        "最新のAIデータセンターの動向をチェックする",
-        "公益事業者の環境への取り組みを確認する",
-        "再生可能エネルギーの重要性について理解を深める"
-      ],
-      "tags": [
-        "DC",
-        "AI"
       ]
     }
   ]
