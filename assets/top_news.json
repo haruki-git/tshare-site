@@ -1,106 +1,113 @@
 {
-  "date": "2026-05-22",
-  "generatedAtJST": "2026-05-22T07:15:39.400+09:00",
+  "date": "2026-05-23",
+  "generatedAtJST": "2026-05-23T07:15:59.590+09:00",
   "items": [
     {
-      "url": "https://newatlas.com/energy/cooling-copper-plates-data-center-energy-use/",
-      "source": "New Atlas",
-      "publishedAt": "2026-05-20T18:05:12Z",
-      "title": "Cooling copper plates could slash data center energy use by 90%",
-      "title_ja": "銅プレートによる冷却技術がデータセンターのエネルギー消費を90%削減",
-      "summary_ja": "データセンターのエネルギー消費の30%は冷却に使用されており、その量はスウェーデン全体の年間電力消費量を超えています。科学者たちは、3Dプリントされた銅製冷却プレート技術を開発し、冷却にかかるエネルギーを90%以上削減できるとしています。この技術によって、環境への負荷を大幅に軽減する可能性があります。",
+      "url": "https://izismile.com/2026/05/22/facebooks_data_center_on_the_edge_of_the_27_pics.html",
+      "source": "Izismile.com",
+      "publishedAt": "2026-05-21T22:00:15Z",
+      "title": "Facebook’s Data Center on the Edge of the Arctic Circle  (27 pics)",
+      "title_ja": "北極圏の境界に位置するFacebookのデータセンター（27枚の画像）",
+      "summary_ja": "Facebookのデータセンターは北極圏に近い場所にあり、その特異な環境でさまざまな技術が活用されている。静かな場所での運用は、エネルギー効率を高めるメリットを持つ。写真を通じてその魅力的な内部や景観を体験できる。",
       "key_points": [
-        "2025年のデータセンターの電力消費は485 TWhに達する。",
-        "冷却に使用される電力の約30%は、スウェーデンの年間消費量を超える。",
-        "新しい3Dプリントされた銅プレート冷却技術が開発されている。",
-        "この技術により冷却エネルギーを90%以上削減できる可能性がある。",
-        "環境への影響を大きく減少させることが期待されている。"
+        "Facebookのデータセンターは北極圏近くに位置",
+        "運用のために安価な冷却が可能",
+        "エネルギー効率を重視した設計",
+        "デザインと技術の融合が見られる",
+        "地域社会との関係性も考慮されたプロジェクト"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データの保存・管理を行う施設で、大量のコンピュータやネットワーク機器を備えている。"
+          "explain_ja": "デジタルデータを保存・管理する施設。"
         },
         {
-          "term": "冷却",
-          "explain_ja": "機器を最適な温度に保つために行われるプロセスで、特にデータセンターでは重要である。"
-        },
-        {
-          "term": "3Dプリント",
-          "explain_ja": "デジタルデータから三次元物体を作成する技術。"
+          "term": "北極圏",
+          "explain_ja": "北極に近い地域で、特有の気候条件を持つ。"
         }
       ],
       "personal_actions": [
-        "データセンターの冷却方法に関する最新技術について調査する。",
-        "自社の冷却システムの効率を見直し、改善点を検討する。",
-        "新しい技術導入の可能性を社内で議論する。"
+        "データセンターの運用に必要なエネルギーの効率化について調査する",
+        "地域のデータセンターに対する影響を考える"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://financialpost.com/pmn/business-pmn/power-firms-jump-on-data-center-timeline-from-biggest-us-grid",
-      "source": "Financial Post",
-      "publishedAt": "2026-05-20T15:10:45Z",
-      "title": "Power Firms Jump on Data-Center Timeline From Biggest US Grid",
-      "title_ja": "データセンターと電力会社の連携が進む",
-      "summary_ja": "米国最大の電力グリッドがデータセンターとエネルギー生産者の連携を加速させたことで、電力会社の株価が上昇しました。この動きは、エネルギー供給の最適化や持続可能な技術の導入に向けたもので、データセンターの需要に対応するためのものです。今後の電力供給とデータセンターの相互作用が注目されます。",
+      "url": "https://cryptobriefing.com/georgia-power-eminent-domain-data-center-expansion/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-05-21T21:10:48Z",
+      "title": "Georgia Power seizes homes for $16B data center expansion, and residents are furious",
+      "title_ja": "ジョージアパワー、160億ドルのデータセンター拡張のために住宅を強制収用し、住民が激怒",
+      "summary_ja": "ジョージアパワーは、160億ドルのデータセンター拡張のために住宅を強制収用しました。この拡張は、公的な反発や規制上の障壁、そしてAI需要予測が外れた場合の料金支払者への経済的負担を引き起こすリスクがあります。住民の反発が強まる中、今後の影響が懸念されています。",
       "key_points": [
-        "米国最大の電力グリッドがデータセンターとの連携を加速",
-        "電力会社の株価が上昇",
-        "エネルギー供給の最適化と持続可能な技術の導入",
-        "データセンター需要の高まりに対応"
+        "ジョージアパワーがデータセンター拡張のために住宅を強制収用。",
+        "拡張計画は160億ドルの投資を必要とする。",
+        "AI需要の予測が外れた場合、料金支払者に経済的負担がかかる恐れ。",
+        "地域住民の強い反発が見られる。",
+        "規制上の障害や公的な反対が考えられる。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを保存、処理するための施設で、企業やサービスプロバイダーにとって重要なインフラです。"
+          "explain_ja": "データの蓄積、管理、処理を行う施設。"
         },
         {
-          "term": "電力グリッド",
-          "explain_ja": "電力の供給を管理するためのネットワークで、発電所から消費者へ電力を届ける役割を果たします。"
+          "term": "強制収用",
+          "explain_ja": "公共の利益のために、政府が私有地を取り上げること。"
+        },
+        {
+          "term": "AI需要",
+          "explain_ja": "人工知能（AI）に対する市場の需要。"
         }
       ],
       "personal_actions": [
-        "自社のエネルギー供給の最適化を検討する",
-        "データセンターのエネルギー管理方針を見直す",
-        "市場動向を確認し、投資判断に役立てる"
+        "拡張計画が及ぼす地域への影響を確認する。",
+        "住民の声を聴き、コミュニティに参加する。",
+        "データセンターや公共インフラに関連する規制の動向を追う。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=183297981",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-05-20T13:33:14Z",
-      "title": "Datacenter builds could be shielded from judicial review in UK planning reforms - Slashdot",
-      "title_ja": "英国の計画改革でデータセンター建設が司法レビューから保護される可能性",
-      "summary_ja": "英国政府は重要なエネルギーとインフラプロジェクトの遅延を防ぐため、データセンター建設が司法レビューから保護されることを検討している。この改革により、計画プロセスが迅速化される可能性がある。結果として、インフラ整備の効率が向上し、経済成長が促進されることが期待される。",
+      "url": "https://www.techradar.com/pro/china-unveils-worlds-first-underwater-data-center-2-000-server-facility-is-powered-by-offshore-wind-and-cooled-by-the-sea-making-it-one-of-the-most-efficient-around",
+      "source": "TechRadar",
+      "publishedAt": "2026-05-21T21:10:00Z",
+      "title": "China unveils 'world's first' underwater data center — 2,000 server facility is powered by offshore wind, and cooled by the sea, making it one of the most efficient around",
+      "title_ja": "中国、世界初の水中データセンターを発表 — 2,000サーバーの施設は海上風力で運営され、海水冷却で効率向上",
+      "summary_ja": "中国が世界初の水中AIデータセンターを立ち上げました。この施設は海水冷却と海上風力発電を利用し、インフラのエネルギー需要の増加に対応します。この取り組みにより、データセンターの効率が飛躍的に向上しています。",
       "key_points": [
-        "英国政府がデータセンター建設に関する計画を見直している",
-        "建設プロジェクトが司法レビューからの保護を受ける可能性がある",
-        "重要なエネルギーとインフラプロジェクトの進行をスムーズにする方針",
-        "計画プロセスの効率化が期待される",
-        "経済成長の促進が見込まれる"
+        "中国が水中でのAIデータセンターを開設した",
+        "施設は2,000台のサーバーを備えている",
+        "海水冷却と海上風力を使用している",
+        "インフラのエネルギー需要の削減を目指す",
+        "このセンターは効率的な運営が期待される"
       ],
       "glossary": [
         {
-          "term": "司法レビュー",
-          "explain_ja": "行政の決定が法的に正当かどうかを判断する裁判所の検討。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能関連の処理を行うデータセンターのこと。"
         },
         {
-          "term": "インフラ",
-          "explain_ja": "社会生活を支える基本的な設備や構造物。"
+          "term": "海水冷却",
+          "explain_ja": "海水を利用して冷却を行う技術。"
+        },
+        {
+          "term": "海上風力発電",
+          "explain_ja": "海上で風力を利用して発電を行う方法。"
         }
       ],
       "personal_actions": [
-        "新しい計画改革が自社のプロジェクトに与える影響を分析する",
-        "データセンターの需要に応じた戦略を見直す"
+        "エネルギー効率の良い冷却方法を検討する",
+        "風力発電の導入を評価する",
+        "データセンターのエネルギー管理を見直す"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
