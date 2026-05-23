@@ -1,109 +1,69 @@
 {
-  "date": "2026-05-23",
-  "generatedAtJST": "2026-05-23T07:15:59.590+09:00",
+  "date": "2026-05-24",
+  "generatedAtJST": "2026-05-24T07:15:51.272+09:00",
   "items": [
     {
-      "url": "https://izismile.com/2026/05/22/facebooks_data_center_on_the_edge_of_the_27_pics.html",
-      "source": "Izismile.com",
-      "publishedAt": "2026-05-21T22:00:15Z",
-      "title": "Facebook’s Data Center on the Edge of the Arctic Circle  (27 pics)",
-      "title_ja": "北極圏の境界に位置するFacebookのデータセンター（27枚の画像）",
-      "summary_ja": "Facebookのデータセンターは北極圏に近い場所にあり、その特異な環境でさまざまな技術が活用されている。静かな場所での運用は、エネルギー効率を高めるメリットを持つ。写真を通じてその魅力的な内部や景観を体験できる。",
+      "url": "https://billingsgazette.com/news/local/business/article_cd61e8ee-e356-4702-9a69-5eacf04d4660.html",
+      "source": "Billings Gazette",
+      "publishedAt": "2026-05-22T22:00:00Z",
+      "title": "Data center developer unveils huge power plans north of Billings",
+      "title_ja": "ビリングス北部でのデータセンター開発者の巨大電力計画",
+      "summary_ja": "データセンター開発者のQuanticaがビリングス北部での大規模な電力計画を発表しました。この計画は合計で8,435メガワットを見込んでおり、これはノースウエスタン・エナジーがモンタナで所有する発電量のおよそ5倍に相当します。このような大規模な電力供給計画は、地域のインフラやエネルギー需要に大きな影響を与えることが予想されます。",
       "key_points": [
-        "Facebookのデータセンターは北極圏近くに位置",
-        "運用のために安価な冷却が可能",
-        "エネルギー効率を重視した設計",
-        "デザインと技術の融合が見られる",
-        "地域社会との関係性も考慮されたプロジェクト"
+        "Quanticaがビリングス北部での電力計画を発表",
+        "計画総量は8,435メガワット",
+        "ノースウエスタン・エナジーの発電量の約5倍に相当",
+        "地域のインフラへの影響が懸念される",
+        "データセンター需要の増加が背景にある"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "デジタルデータを保存・管理する施設。"
+          "term": "メガワット",
+          "explain_ja": "電力の単位で、1メガワットは100万ワットに相当する。"
         },
         {
-          "term": "北極圏",
-          "explain_ja": "北極に近い地域で、特有の気候条件を持つ。"
+          "term": "ノースウエスタン・エナジー",
+          "explain_ja": "モンタナ州内で電力を供給しているエネルギー会社。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保管・管理を行うための専用施設。"
         }
       ],
       "personal_actions": [
-        "データセンターの運用に必要なエネルギーの効率化について調査する",
-        "地域のデータセンターに対する影響を考える"
+        "周囲の電力インフラの動向を監視する",
+        "地域の電力需要に応じた計画を立てる",
+        "電力供給の安定性を確認する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://cryptobriefing.com/georgia-power-eminent-domain-data-center-expansion/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-05-21T21:10:48Z",
-      "title": "Georgia Power seizes homes for $16B data center expansion, and residents are furious",
-      "title_ja": "ジョージアパワー、160億ドルのデータセンター拡張のために住宅を強制収用し、住民が激怒",
-      "summary_ja": "ジョージアパワーは、160億ドルのデータセンター拡張のために住宅を強制収用しました。この拡張は、公的な反発や規制上の障壁、そしてAI需要予測が外れた場合の料金支払者への経済的負担を引き起こすリスクがあります。住民の反発が強まる中、今後の影響が懸念されています。",
+      "url": "https://oilprice.com/Energy/Energy-General/3D-Printed-Copper-Plates-Could-Cut-Data-Center-Cooling-Energy-Use-by-97.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-05-22T20:00:00Z",
+      "title": "3D-Printed Copper Plates Could Cut Data Center Cooling Energy Use by 97%",
+      "title_ja": "3Dプリントされた銅板がデータセンターの冷却エネルギー使用量を97%削減する可能性",
+      "summary_ja": "3Dプリント技術を利用した銅板が、データセンターの冷却にかかるエネルギーを97%削減できる可能性がある。現在、AIの急成長に伴うエネルギー需要に対応するための新たな技術が求められている。これにより、環境への負担を軽減し、データセンターの運用効率を向上させる可能性がある。",
       "key_points": [
-        "ジョージアパワーがデータセンター拡張のために住宅を強制収用。",
-        "拡張計画は160億ドルの投資を必要とする。",
-        "AI需要の予測が外れた場合、料金支払者に経済的負担がかかる恐れ。",
-        "地域住民の強い反発が見られる。",
-        "規制上の障害や公的な反対が考えられる。"
+        "3Dプリントされた銅板は冷却効率を大幅に向上させる。",
+        "この技術はデータセンターのエネルギーコストを削減する可能性がある。",
+        "AIの発展によるエネルギー需要の増加に対応する必要がある。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの蓄積、管理、処理を行う施設。"
+          "term": "3Dプリント",
+          "explain_ja": "立体物を3次元的に造形する技術。"
         },
         {
-          "term": "強制収用",
-          "explain_ja": "公共の利益のために、政府が私有地を取り上げること。"
-        },
-        {
-          "term": "AI需要",
-          "explain_ja": "人工知能（AI）に対する市場の需要。"
+          "term": "冷却エネルギー",
+          "explain_ja": "データセンターの機器を冷却するために消費されるエネルギー。"
         }
       ],
       "personal_actions": [
-        "拡張計画が及ぼす地域への影響を確認する。",
-        "住民の声を聴き、コミュニティに参加する。",
-        "データセンターや公共インフラに関連する規制の動向を追う。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.techradar.com/pro/china-unveils-worlds-first-underwater-data-center-2-000-server-facility-is-powered-by-offshore-wind-and-cooled-by-the-sea-making-it-one-of-the-most-efficient-around",
-      "source": "TechRadar",
-      "publishedAt": "2026-05-21T21:10:00Z",
-      "title": "China unveils 'world's first' underwater data center — 2,000 server facility is powered by offshore wind, and cooled by the sea, making it one of the most efficient around",
-      "title_ja": "中国、世界初の水中データセンターを発表 — 2,000サーバーの施設は海上風力で運営され、海水冷却で効率向上",
-      "summary_ja": "中国が世界初の水中AIデータセンターを立ち上げました。この施設は海水冷却と海上風力発電を利用し、インフラのエネルギー需要の増加に対応します。この取り組みにより、データセンターの効率が飛躍的に向上しています。",
-      "key_points": [
-        "中国が水中でのAIデータセンターを開設した",
-        "施設は2,000台のサーバーを備えている",
-        "海水冷却と海上風力を使用している",
-        "インフラのエネルギー需要の削減を目指す",
-        "このセンターは効率的な運営が期待される"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能関連の処理を行うデータセンターのこと。"
-        },
-        {
-          "term": "海水冷却",
-          "explain_ja": "海水を利用して冷却を行う技術。"
-        },
-        {
-          "term": "海上風力発電",
-          "explain_ja": "海上で風力を利用して発電を行う方法。"
-        }
-      ],
-      "personal_actions": [
-        "エネルギー効率の良い冷却方法を検討する",
-        "風力発電の導入を評価する",
-        "データセンターのエネルギー管理を見直す"
+        "冷却システムの現状を確認し、省エネ対策を検討する。",
+        "3Dプリント技術に関する最新の研究や特許を調べる。"
       ],
       "tags": [
         "DC",
