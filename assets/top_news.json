@@ -1,73 +1,103 @@
 {
-  "date": "2026-05-24",
-  "generatedAtJST": "2026-05-24T07:15:51.272+09:00",
+  "date": "2026-05-25",
+  "generatedAtJST": "2026-05-25T07:15:32.255+09:00",
   "items": [
     {
-      "url": "https://billingsgazette.com/news/local/business/article_cd61e8ee-e356-4702-9a69-5eacf04d4660.html",
-      "source": "Billings Gazette",
-      "publishedAt": "2026-05-22T22:00:00Z",
-      "title": "Data center developer unveils huge power plans north of Billings",
-      "title_ja": "ビリングス北部でのデータセンター開発者の巨大電力計画",
-      "summary_ja": "データセンター開発者のQuanticaがビリングス北部での大規模な電力計画を発表しました。この計画は合計で8,435メガワットを見込んでおり、これはノースウエスタン・エナジーがモンタナで所有する発電量のおよそ5倍に相当します。このような大規模な電力供給計画は、地域のインフラやエネルギー需要に大きな影響を与えることが予想されます。",
+      "url": "https://slashdot.org/submission/17347502/elon-musk-just-spent-185-million-on-a-mysterious-ai-data-center-deal-in-memphis",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-05-23T20:10:18Z",
+      "title": "Elon Musk just spent $185 million on a mysterious AI data center deal in Memphis - Slashdot",
+      "title_ja": "イーロン・マスクがメンフィスのAIデータセンターに1億8500万ドルを投資",
+      "summary_ja": "イーロン・マスクがメンフィスにあるColossus I xAIデータセンターを1億8500万ドルで購入しました。この217エーカーの施設はxAIの活動に関連しており、AIの競争がソフトウェアモデルだけでなく、物理インフラに対する戦いへとシフトしていることを示しています。データセンターの所有権やインフラは、AIシステムのスケールアップに向けた戦略的な資産となりつつあります。",
       "key_points": [
-        "Quanticaがビリングス北部での電力計画を発表",
-        "計画総量は8,435メガワット",
-        "ノースウエスタン・エナジーの発電量の約5倍に相当",
-        "地域のインフラへの影響が懸念される",
-        "データセンター需要の増加が背景にある"
+        "イーロン・マスクのSpaceX関連企業がメンフィスにあるデータセンターを購入した。",
+        "購入金額は1億8500万ドル。",
+        "施設は217エーカーの広さで、xAIの運営に関連している。",
+        "AI競争がソフトウェアから物理インフラにシフトしていることを示唆。",
+        "GPU、電力供給、冷却、ネットワーキングが戦略的な資産となりつつある。",
+        "SpaceXの子会社の特定は不明で、PR上の表現が混乱を招いている。"
       ],
       "glossary": [
         {
-          "term": "メガワット",
-          "explain_ja": "電力の単位で、1メガワットは100万ワットに相当する。"
+          "term": "xAI",
+          "explain_ja": "イーロン・マスクが設立したAI関連企業で、さまざまなAI技術を開発している。"
         },
         {
-          "term": "ノースウエスタン・エナジー",
-          "explain_ja": "モンタナ州内で電力を供給しているエネルギー会社。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データの保管・管理を行うための専用施設。"
+          "term": "GPU",
+          "explain_ja": "グラフィックス処理装置で、AI計算の高速処理に重要な役割を果たす。"
         }
       ],
       "personal_actions": [
-        "周囲の電力インフラの動向を監視する",
-        "地域の電力需要に応じた計画を立てる",
-        "電力供給の安定性を確認する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://oilprice.com/Energy/Energy-General/3D-Printed-Copper-Plates-Could-Cut-Data-Center-Cooling-Energy-Use-by-97.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-05-22T20:00:00Z",
-      "title": "3D-Printed Copper Plates Could Cut Data Center Cooling Energy Use by 97%",
-      "title_ja": "3Dプリントされた銅板がデータセンターの冷却エネルギー使用量を97%削減する可能性",
-      "summary_ja": "3Dプリント技術を利用した銅板が、データセンターの冷却にかかるエネルギーを97%削減できる可能性がある。現在、AIの急成長に伴うエネルギー需要に対応するための新たな技術が求められている。これにより、環境への負担を軽減し、データセンターの運用効率を向上させる可能性がある。",
-      "key_points": [
-        "3Dプリントされた銅板は冷却効率を大幅に向上させる。",
-        "この技術はデータセンターのエネルギーコストを削減する可能性がある。",
-        "AIの発展によるエネルギー需要の増加に対応する必要がある。"
-      ],
-      "glossary": [
-        {
-          "term": "3Dプリント",
-          "explain_ja": "立体物を3次元的に造形する技術。"
-        },
-        {
-          "term": "冷却エネルギー",
-          "explain_ja": "データセンターの機器を冷却するために消費されるエネルギー。"
-        }
-      ],
-      "personal_actions": [
-        "冷却システムの現状を確認し、省エネ対策を検討する。",
-        "3Dプリント技術に関する最新の研究や特許を調べる。"
+        "自社のデータセンターやAI関連インフラの運用状況を見直す。",
+        "最新のAI技術トレンドを追跡し、自社の戦略に反映させる。",
+        "関連する業界ニュースや動向を定期的にチェックする。"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://www.marketbeat.com/instant-alerts/flex-pitches-ai-data-center-spin-off-as-power-and-cooling-growth-accelerates-2026-05-23/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+      "source": "MarketBeat",
+      "publishedAt": "2026-05-23T20:02:15Z",
+      "title": "Flex Pitches AI Data Center Spin-Off as Power and Cooling Growth Accelerates",
+      "title_ja": "FlexがAIデータセンターのスピンオフを提案、電力と冷却の成長加速",
+      "summary_ja": "Flexは最新のスピンオフ計画を発表し、AIデータセンター分野への注力を強調しました。急速に成長する電力と冷却の需要に対応するための戦略として位置付けられています。この方向性は、データセンター業界における競争力を高めることが期待されています。",
+      "key_points": [
+        "FlexがAIデータセンター関連のスピンオフを計画している。",
+        "電力と冷却の成長が背景にある。",
+        "J.P. Morganのイベントで戦略が説明された。",
+        "業界の競争力を向上させる狙いがある。"
+      ],
+      "glossary": [
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能（AI）を含むデータ処理のためのデータセンター。"
+        },
+        {
+          "term": "スピンオフ",
+          "explain_ja": "企業が一部の事業を独立した新しい会社として切り離すこと。"
+        }
+      ],
+      "personal_actions": [
+        "最新の業界動向を確認し、AIデータセンターの成長を監視する。",
+        "電力と冷却技術に関連するニーズを把握し、自社の戦略に反映させる。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.stopstratos.org",
+      "source": "Stopstratos.org",
+      "publishedAt": "2026-05-22T23:01:23Z",
+      "title": "Why We've Filed a Referendum",
+      "title_ja": "なぜ私たちは住民投票を提起したのか",
+      "summary_ja": "B.E.A.R.は、ボックスエルダーの住民によって組織された政治問題委員会で、ストラトスプロジェクトデータセンターを阻止するための活動を行っています。プロジェクトには、水、電力、コスト、透明性に関する多くの未解決の疑問が存在しています。この住民投票は、これらの課題に対して市民の意見を反映することを目的としています。",
+      "key_points": [
+        "B.E.A.R.はボックスエルダー住民によって設立された政治問題委員会",
+        "ストラトスプロジェクトには多くの疑問が残されている",
+        "住民投票を通じて市民の意見を問う試み】",
+        "プロジェクトのコストや透明性に関する問題が重要視されている"
+      ],
+      "glossary": [
+        {
+          "term": "B.E.A.R.",
+          "explain_ja": "ボックスエルダーの住民によって設立された政治問題委員会。"
+        },
+        {
+          "term": "住民投票",
+          "explain_ja": "市民が直接投票によって政策や法案の賛否を決定する手続き。"
+        }
+      ],
+      "personal_actions": [
+        "地域の住民としてプロジェクトに関する情報を集める",
+        "住民投票について周囲に説明し、意見を募る"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
