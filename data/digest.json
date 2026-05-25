@@ -1,36 +1,39 @@
 {
-  "date": "2026-05-25",
-  "generatedAtJST": "2026-05-25T07:15:32.255+09:00",
+  "date": "2026-05-26",
+  "generatedAtJST": "2026-05-26T07:16:14.881+09:00",
   "items": [
     {
-      "url": "https://slashdot.org/submission/17347502/elon-musk-just-spent-185-million-on-a-mysterious-ai-data-center-deal-in-memphis",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-05-23T20:10:18Z",
-      "title": "Elon Musk just spent $185 million on a mysterious AI data center deal in Memphis - Slashdot",
-      "title_ja": "イーロン・マスクがメンフィスのAIデータセンターに1億8500万ドルを投資",
-      "summary_ja": "イーロン・マスクがメンフィスにあるColossus I xAIデータセンターを1億8500万ドルで購入しました。この217エーカーの施設はxAIの活動に関連しており、AIの競争がソフトウェアモデルだけでなく、物理インフラに対する戦いへとシフトしていることを示しています。データセンターの所有権やインフラは、AIシステムのスケールアップに向けた戦略的な資産となりつつあります。",
+      "url": "https://www.macsparky.com/blog/2026/05/mac-power-users-850-overcast-transcripts-and-48-mac-minis-with-marco-arment/",
+      "source": "Macsparky.com",
+      "publishedAt": "2026-05-24T16:00:00Z",
+      "title": "Mac Power Users 850: Overcast Transcripts and 48 Mac minis with Marco Arment",
+      "title_ja": "Mac Power Users 850: Overcastのトランスクリプトと48台のMac miniが作るデータセンター",
+      "summary_ja": "Mac Power Usersのエピソード850では、Marco Armentと共にポッドキャストアプリの開発とデータセンターの構築について話しています。Overcastは新たにポッドキャストのトランスクリプト機能を提供し、その背後には48台のMac miniが稼働しています。このシステムの運用方法や、スタート時に彼が異なった選択をする可能性についても触れています。",
       "key_points": [
-        "イーロン・マスクのSpaceX関連企業がメンフィスにあるデータセンターを購入した。",
-        "購入金額は1億8500万ドル。",
-        "施設は217エーカーの広さで、xAIの運営に関連している。",
-        "AI競争がソフトウェアから物理インフラにシフトしていることを示唆。",
-        "GPU、電力供給、冷却、ネットワーキングが戦略的な資産となりつつある。",
-        "SpaceXの子会社の特定は不明で、PR上の表現が混乱を招いている。"
+        "Marco Armentが開発したPodcastsアプリOvercastが新機能を追加。",
+        "48台のMac miniがデータセンターとして活用されている。",
+        "リモートでシステムをどのように管理しているかを語る。",
+        "AIを開発ワークフローに取り入れる方法についての考察。",
+        "彼の個人的な生活や、3年間使用しているMacBook Proについても言及。"
       ],
       "glossary": [
         {
-          "term": "xAI",
-          "explain_ja": "イーロン・マスクが設立したAI関連企業で、さまざまなAI技術を開発している。"
+          "term": "Overcast",
+          "explain_ja": "Marco Armentが開発したポッドキャストアプリで、トランスクリプト機能を新たに追加した。"
         },
         {
-          "term": "GPU",
-          "explain_ja": "グラフィックス処理装置で、AI計算の高速処理に重要な役割を果たす。"
+          "term": "Mac mini",
+          "explain_ja": "Appleが製造する小型デスクトップパソコンで、48台がデータセンターとして使用されている。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能のことで、Marcoはアプリ開発における利用について話している。"
         }
       ],
       "personal_actions": [
-        "自社のデータセンターやAI関連インフラの運用状況を見直す。",
-        "最新のAI技術トレンドを追跡し、自社の戦略に反映させる。",
-        "関連する業界ニュースや動向を定期的にチェックする。"
+        "自身のポッドキャストアプリを見直し、機能を改善する方法を考える。",
+        "リモート管理ツールの使用を検討し、効率を向上させる。",
+        "AI技術を取り入れるためのリサーチを行う。"
       ],
       "tags": [
         "DC",
@@ -38,31 +41,37 @@
       ]
     },
     {
-      "url": "https://www.marketbeat.com/instant-alerts/flex-pitches-ai-data-center-spin-off-as-power-and-cooling-growth-accelerates-2026-05-23/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
-      "source": "MarketBeat",
-      "publishedAt": "2026-05-23T20:02:15Z",
-      "title": "Flex Pitches AI Data Center Spin-Off as Power and Cooling Growth Accelerates",
-      "title_ja": "FlexがAIデータセンターのスピンオフを提案、電力と冷却の成長加速",
-      "summary_ja": "Flexは最新のスピンオフ計画を発表し、AIデータセンター分野への注力を強調しました。急速に成長する電力と冷却の需要に対応するための戦略として位置付けられています。この方向性は、データセンター業界における競争力を高めることが期待されています。",
+      "url": "https://www.ibtimes.com.au/navitas-semiconductor-shares-surge-ai-demand-1869410",
+      "source": "Ibtimes.com.au",
+      "publishedAt": "2026-05-24T13:28:51Z",
+      "title": "Navitas Semiconductor NVTS Stock Surges 20% on AI Power Demand and Upgraded Outlook",
+      "title_ja": "ナビタスセミコンダクター株、AI需要で20%急上昇",
+      "summary_ja": "ナビタスセミコンダクターの株価がAIデータセンターソリューションへの投資家の関心から約20%上昇した。2026年第1四半期の収益は18%増加し、高出力市場への戦略的注力が強調された。この急上昇は、AI関連ビジネスの拡大が引き続き株価に好影響を与えることを示唆している。",
       "key_points": [
-        "FlexがAIデータセンター関連のスピンオフを計画している。",
-        "電力と冷却の成長が背景にある。",
-        "J.P. Morganのイベントで戦略が説明された。",
-        "業界の競争力を向上させる狙いがある。"
+        "ナビタスセミコンダクターの株価が約20%上昇した。",
+        "AIデータセンターソリューションに対する投資家の関心が背景。",
+        "2026年第1四半期の収益は前年同期比18%增长。",
+        "高出力市場への戦略的なフォーカスが強調された。",
+        "AI関連ビジネスの成長が今後も期待される。"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能（AI）を含むデータ処理のためのデータセンター。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略で、コンピュータが人間のように学習し判断する技術。"
         },
         {
-          "term": "スピンオフ",
-          "explain_ja": "企業が一部の事業を独立した新しい会社として切り離すこと。"
+          "term": "Q1 2026",
+          "explain_ja": "2026年の第1四半期、通常は1月から3月までの期間。"
+        },
+        {
+          "term": "株式",
+          "explain_ja": "企業が発行した所有権の一部を表す金融商品。"
         }
       ],
       "personal_actions": [
-        "最新の業界動向を確認し、AIデータセンターの成長を監視する。",
-        "電力と冷却技術に関連するニーズを把握し、自社の戦略に反映させる。"
+        "AIデータセンター関連企業の動向を注視する。",
+        "ナビタスセミコンダクターの製品ラインを確認し、性能を評価する。",
+        "高出力市場に関する業界ニュースを定期的にチェックする。"
       ],
       "tags": [
         "DC",
@@ -70,34 +79,35 @@
       ]
     },
     {
-      "url": "https://www.stopstratos.org",
-      "source": "Stopstratos.org",
-      "publishedAt": "2026-05-22T23:01:23Z",
-      "title": "Why We've Filed a Referendum",
-      "title_ja": "なぜ私たちは住民投票を提起したのか",
-      "summary_ja": "B.E.A.R.は、ボックスエルダーの住民によって組織された政治問題委員会で、ストラトスプロジェクトデータセンターを阻止するための活動を行っています。プロジェクトには、水、電力、コスト、透明性に関する多くの未解決の疑問が存在しています。この住民投票は、これらの課題に対して市民の意見を反映することを目的としています。",
+      "url": "https://www.digitimes.com/news/a20260521VL215/semco-component-ai-server-demand-data-center.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-05-24T00:56:45Z",
+      "title": "AI server boom squeezes Samsung Electro-Mechanics' component supply",
+      "title_ja": "AIサーバーブームがサムスン電子機械の部品供給を圧迫",
+      "summary_ja": "サムスン電子機械は、AIサーバーの需要の急増により、部品供給に課題を抱えています。この需要の高まりはデータセンター業界でのAI技術の進展によるもので、結果として供給チェーンに負担をかけています。この状況は、同社の生産能力や市場戦略にも影響を及ぼす可能性があります。",
       "key_points": [
-        "B.E.A.R.はボックスエルダー住民によって設立された政治問題委員会",
-        "ストラトスプロジェクトには多くの疑問が残されている",
-        "住民投票を通じて市民の意見を問う試み】",
-        "プロジェクトのコストや透明性に関する問題が重要視されている"
+        "AIサーバーの需要が急増している",
+        "サムスン電子機械が部品供給に課題を抱えている",
+        "データセンター業界のAI技術進展に起因",
+        "供給チェーンに負担がかかっている",
+        "生産能力や市場戦略への影響が懸念される"
       ],
       "glossary": [
         {
-          "term": "B.E.A.R.",
-          "explain_ja": "ボックスエルダーの住民によって設立された政治問題委員会。"
+          "term": "AIサーバー",
+          "explain_ja": "人工知能処理のために最適化されたサーバー。"
         },
         {
-          "term": "住民投票",
-          "explain_ja": "市民が直接投票によって政策や法案の賛否を決定する手続き。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを集約し、管理、処理するための施設。"
         }
       ],
       "personal_actions": [
-        "地域の住民としてプロジェクトに関する情報を集める",
-        "住民投票について周囲に説明し、意見を募る"
+        "最新のコンポーネント供給状況を確認する",
+        "市場の動向を注視し、需要変動に備える"
       ],
       "tags": [
-        "その他"
+        "AI"
       ]
     }
   ]
