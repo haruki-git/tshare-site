@@ -1,113 +1,116 @@
 {
-  "date": "2026-05-26",
-  "generatedAtJST": "2026-05-26T07:16:14.881+09:00",
+  "date": "2026-05-27",
+  "generatedAtJST": "2026-05-27T07:15:46.042+09:00",
   "items": [
     {
-      "url": "https://www.macsparky.com/blog/2026/05/mac-power-users-850-overcast-transcripts-and-48-mac-minis-with-marco-arment/",
-      "source": "Macsparky.com",
-      "publishedAt": "2026-05-24T16:00:00Z",
-      "title": "Mac Power Users 850: Overcast Transcripts and 48 Mac minis with Marco Arment",
-      "title_ja": "Mac Power Users 850: Overcastのトランスクリプトと48台のMac miniが作るデータセンター",
-      "summary_ja": "Mac Power Usersのエピソード850では、Marco Armentと共にポッドキャストアプリの開発とデータセンターの構築について話しています。Overcastは新たにポッドキャストのトランスクリプト機能を提供し、その背後には48台のMac miniが稼働しています。このシステムの運用方法や、スタート時に彼が異なった選択をする可能性についても触れています。",
+      "url": "https://oilprice.com/Energy/Energy-General/Data-Centers-Are-Outgrowing-Europes-Clean-Power-Deals.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-05-25T18:00:00Z",
+      "title": "Data Centers Are Outgrowing Europe’s Clean Power Deals",
+      "title_ja": "データセンターが欧州のクリーンエネルギー契約を上回る成長",
+      "summary_ja": "データセンターの電力購入契約（PPA）量が2024年の4.2 GWから2025年には2.6 GWに減少しました。これは、洋上風力の遅延やPPAの価格合意に関する課題が影響しています。データセンターのキャパシティの急速な拡大にもかかわらず、クリーンエネルギー契約の進展は遅れています。",
       "key_points": [
-        "Marco Armentが開発したPodcastsアプリOvercastが新機能を追加。",
-        "48台のMac miniがデータセンターとして活用されている。",
-        "リモートでシステムをどのように管理しているかを語る。",
-        "AIを開発ワークフローに取り入れる方法についての考察。",
-        "彼の個人的な生活や、3年間使用しているMacBook Proについても言及。"
+        "データセンターのPPA量が2024年から2025年にかけて大幅に減少した。",
+        "洋上風力の遅延が契約の進捗に影響している。",
+        "PPA価格合意の難しさが契約量の減少につながっている。",
+        "データセンターのキャパシティは急速に拡大している。",
+        "クリーンエネルギーの供給能力が需要に追いついていない。"
       ],
       "glossary": [
         {
-          "term": "Overcast",
-          "explain_ja": "Marco Armentが開発したポッドキャストアプリで、トランスクリプト機能を新たに追加した。"
+          "term": "PPA",
+          "explain_ja": "電力購入契約のことで、電力の購入条件を定める契約です。"
         },
         {
-          "term": "Mac mini",
-          "explain_ja": "Appleが製造する小型デスクトップパソコンで、48台がデータセンターとして使用されている。"
+          "term": "GW",
+          "explain_ja": "ギガワットの略で、電力を表す単位の一つです。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能のことで、Marcoはアプリ開発における利用について話している。"
+          "term": "洋上風力",
+          "explain_ja": "海上に設置される風力発電設備のことを指します。"
         }
       ],
       "personal_actions": [
-        "自身のポッドキャストアプリを見直し、機能を改善する方法を考える。",
-        "リモート管理ツールの使用を検討し、効率を向上させる。",
-        "AI技術を取り入れるためのリサーチを行う。"
+        "最新のPPAの動向を確認し、契約条件を見直す。",
+        "洋上風力プロジェクトの進捗状況をチェックする。",
+        "データセンターのエネルギー効率向上のための施策を検討する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://www.ibtimes.com.au/navitas-semiconductor-shares-surge-ai-demand-1869410",
-      "source": "Ibtimes.com.au",
-      "publishedAt": "2026-05-24T13:28:51Z",
-      "title": "Navitas Semiconductor NVTS Stock Surges 20% on AI Power Demand and Upgraded Outlook",
-      "title_ja": "ナビタスセミコンダクター株、AI需要で20%急上昇",
-      "summary_ja": "ナビタスセミコンダクターの株価がAIデータセンターソリューションへの投資家の関心から約20%上昇した。2026年第1四半期の収益は18%増加し、高出力市場への戦略的注力が強調された。この急上昇は、AI関連ビジネスの拡大が引き続き株価に好影響を与えることを示唆している。",
+      "url": "https://www.rawstory.com/yakama-protest-clean-energy-project-on-sacred-site-to-power-data-center/",
+      "source": "Raw Story",
+      "publishedAt": "2026-05-25T15:42:12Z",
+      "title": "Data center company secretly linked to energy project on sacred Native land",
+      "title_ja": "データセンター企業が神聖な先住民の土地でのエネルギープロジェクトに秘密裏に関与",
+      "summary_ja": "ワシントン州のコロンビア川近くで、ヤカマ族のメンバーが神聖な部族の土地で計画されているクリーンエネルギー貯蔵プロジェクトに抗議しました。このプロジェクトは、データセンターに電力を供給する目的で設計されています。地元の人々は、彼らの文化的および歴史的な遺産が危険にさらされていると訴えています。",
       "key_points": [
-        "ナビタスセミコンダクターの株価が約20%上昇した。",
-        "AIデータセンターソリューションに対する投資家の関心が背景。",
-        "2026年第1四半期の収益は前年同期比18%增长。",
-        "高出力市場への戦略的なフォーカスが強調された。",
-        "AI関連ビジネスの成長が今後も期待される。"
+        "ヤカマ族が神聖な土地でのクリーンエネルギー貯蔵プロジェクトに抗議。",
+        "プロジェクトはデータセンターに電力を供給する目的。",
+        "地域の文化的および歴史的な遺産への影響が懸念されている。",
+        "抗議者はプロジェクトの計画を「秘密裏」であると指摘。",
+        "地域住民の権利と先住民の土地利用についての議論が激化。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略で、コンピュータが人間のように学習し判断する技術。"
+          "term": "Yakama Nation",
+          "explain_ja": "アメリカ合衆国ワシントン州に位置する先住民族の部族。"
         },
         {
-          "term": "Q1 2026",
-          "explain_ja": "2026年の第1四半期、通常は1月から3月までの期間。"
+          "term": "clean energy project",
+          "explain_ja": "持続可能な方法でエネルギーを生成または貯蔵するプロジェクト。"
         },
         {
-          "term": "株式",
-          "explain_ja": "企業が発行した所有権の一部を表す金融商品。"
+          "term": "data center",
+          "explain_ja": "デジタル情報を保管・管理するための施設。"
         }
       ],
       "personal_actions": [
-        "AIデータセンター関連企業の動向を注視する。",
-        "ナビタスセミコンダクターの製品ラインを確認し、性能を評価する。",
-        "高出力市場に関する業界ニュースを定期的にチェックする。"
+        "地域の先住民の権利や文化について学ぶ。",
+        "エネルギー関連のプロジェクトが地域に与える影響を考慮する。",
+        "地元の環境問題について意見を持ち、声を上げる。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://www.digitimes.com/news/a20260521VL215/semco-component-ai-server-demand-data-center.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-05-24T00:56:45Z",
-      "title": "AI server boom squeezes Samsung Electro-Mechanics' component supply",
-      "title_ja": "AIサーバーブームがサムスン電子機械の部品供給を圧迫",
-      "summary_ja": "サムスン電子機械は、AIサーバーの需要の急増により、部品供給に課題を抱えています。この需要の高まりはデータセンター業界でのAI技術の進展によるもので、結果として供給チェーンに負担をかけています。この状況は、同社の生産能力や市場戦略にも影響を及ぼす可能性があります。",
+      "url": "https://post.rlsbb.to/vmware-fusion-pro-26h1/",
+      "source": "Rlsbb.to",
+      "publishedAt": "2026-05-25T15:37:52Z",
+      "title": "VMware Fusion Pro 26H1 – ReleaseBB",
+      "title_ja": "VMware Fusion Pro 26H1のリリース",
+      "summary_ja": "VMware Fusion Pro 26H1が登場し、MacユーザーはWindowsや多様なOSを同時に動作させることが可能です。このソフトウェアは、IT専門家や開発者にとって強力なツールであり、各種OSやアプリのテストも容易に行えます。また、RESTful APIが追加され、現代の開発ツールとの統合が促進されています。これにより、柔軟な開発環境が実現されます。",
       "key_points": [
-        "AIサーバーの需要が急増している",
-        "サムスン電子機械が部品供給に課題を抱えている",
-        "データセンター業界のAI技術進展に起因",
-        "供給チェーンに負担がかかっている",
-        "生産能力や市場戦略への影響が懸念される"
+        "Mac上で複数のオペレーティングシステムを同時に実行可能",
+        "VMware vSphereやESXiと安全に接続し、仮想マシンと物理ホストを管理",
+        "開発とテストのためのRESTful APIを新たに搭載",
+        "ソリューションアーキテクトが仮想クラウドスタックを単一のMac上でデモ可能",
+        "個人使用向けにVMware Fusionの無償提供"
       ],
       "glossary": [
         {
-          "term": "AIサーバー",
-          "explain_ja": "人工知能処理のために最適化されたサーバー。"
+          "term": "VMware Fusion",
+          "explain_ja": "Mac上でWindowsやその他のOSを動作させるための仮想化ソフトウェア。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを集約し、管理、処理するための施設。"
+          "term": "RESTful API",
+          "explain_ja": "Webサービスの設計スタイルで、機能をHTTPリクエストで提供する手法。"
+        },
+        {
+          "term": "Agile",
+          "explain_ja": "ソフトウェア開発の手法の一つで、反復的かつ段階的な開発を目指す。"
         }
       ],
       "personal_actions": [
-        "最新のコンポーネント供給状況を確認する",
-        "市場の動向を注視し、需要変動に備える"
+        "VMware Fusion Pro 26H1をダウンロードしてインストールする",
+        "新機能を使ってサンプルアプリのテストを行う",
+        "RESTful APIを利用して開発環境を構築する"
       ],
       "tags": [
-        "AI"
+        "DC"
       ]
     }
   ]
