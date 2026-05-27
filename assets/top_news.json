@@ -1,113 +1,122 @@
 {
-  "date": "2026-05-27",
-  "generatedAtJST": "2026-05-27T07:15:46.042+09:00",
+  "date": "2026-05-28",
+  "generatedAtJST": "2026-05-28T07:15:39.417+09:00",
   "items": [
     {
-      "url": "https://oilprice.com/Energy/Energy-General/Data-Centers-Are-Outgrowing-Europes-Clean-Power-Deals.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-05-25T18:00:00Z",
-      "title": "Data Centers Are Outgrowing Europe’s Clean Power Deals",
-      "title_ja": "データセンターが欧州のクリーンエネルギー契約を上回る成長",
-      "summary_ja": "データセンターの電力購入契約（PPA）量が2024年の4.2 GWから2025年には2.6 GWに減少しました。これは、洋上風力の遅延やPPAの価格合意に関する課題が影響しています。データセンターのキャパシティの急速な拡大にもかかわらず、クリーンエネルギー契約の進展は遅れています。",
+      "url": "https://cointelegraph.com/news/bitcoin-mining-stocks-jump-as-ai-infrastructure-boom-boosts-sector-outlook",
+      "source": "Cointelegraph",
+      "publishedAt": "2026-05-26T22:07:21Z",
+      "title": "Bitcoin Mining Stocks Rally as AI Infrastructure Boom Accelerates",
+      "title_ja": "ビットコインマイニング株がAIインフラブームで急騰",
+      "summary_ja": "ビットコインマイニング株が急騰し、これは人工知能の生産性向上に対する楽観的な見通しによるものです。特に、テラウルフ（WULF）がケンタッキーのデータセンター取得を受けて17%上昇しました。この動きは、マイナーがエネルギーインフラとデータセンターの能力をAIや高性能コンピューティングに再利用することで収益性が高まるとの期待によるものです。",
       "key_points": [
-        "データセンターのPPA量が2024年から2025年にかけて大幅に減少した。",
-        "洋上風力の遅延が契約の進捗に影響している。",
-        "PPA価格合意の難しさが契約量の減少につながっている。",
-        "データセンターのキャパシティは急速に拡大している。",
-        "クリーンエネルギーの供給能力が需要に追いついていない。"
+        "いくつかのビットコインマイニング株が急騰し、市場全体に好影響を及ぼした。",
+        "テラウルフ（WULF）はケンタッキーのデータセンター取得ニュースを受けて17%上昇。",
+        "AIと高性能コンピューティング業務へのシフトが進む中、ビットコインマイナーの魅力が増している。",
+        "ビットコインマイナーはAIデータセンターの拡張に必要な大規模な電力供給能力を持っている。",
+        "バーンスタインの調査によると、ビットコインマイナーは約27ギガワットの電力ポートフォリオを管理している。"
       ],
       "glossary": [
         {
-          "term": "PPA",
-          "explain_ja": "電力購入契約のことで、電力の購入条件を定める契約です。"
+          "term": "ビットコインマイニング",
+          "explain_ja": "ビットコインを生成するプロセスで、コンピュータの計算能力を使用してトランザクションを検証する。"
         },
         {
-          "term": "GW",
-          "explain_ja": "ギガワットの略で、電力を表す単位の一つです。"
+          "term": "AIインフラ",
+          "explain_ja": "人工知能のデータ処理や学習を支えるためのシステムや設備。"
         },
         {
-          "term": "洋上風力",
-          "explain_ja": "海上に設置される風力発電設備のことを指します。"
+          "term": "高性能コンピューティング",
+          "explain_ja": "スパコンやクラスタリング技術を用いて、大量のデータ処理を高速に行う技術。"
         }
       ],
       "personal_actions": [
-        "最新のPPAの動向を確認し、契約条件を見直す。",
-        "洋上風力プロジェクトの進捗状況をチェックする。",
-        "データセンターのエネルギー効率向上のための施策を検討する。"
+        "自社のデータセンターにおけるAI対応のインフラを評価する。",
+        "ビットコインマイナーとの提携を検討する際の電力供給能力を確認する。",
+        "新しい技術トレンドに対する投資戦略を見直す。"
       ],
       "tags": [
-        "DC"
+        "AI"
       ]
     },
     {
-      "url": "https://www.rawstory.com/yakama-protest-clean-energy-project-on-sacred-site-to-power-data-center/",
-      "source": "Raw Story",
-      "publishedAt": "2026-05-25T15:42:12Z",
-      "title": "Data center company secretly linked to energy project on sacred Native land",
-      "title_ja": "データセンター企業が神聖な先住民の土地でのエネルギープロジェクトに秘密裏に関与",
-      "summary_ja": "ワシントン州のコロンビア川近くで、ヤカマ族のメンバーが神聖な部族の土地で計画されているクリーンエネルギー貯蔵プロジェクトに抗議しました。このプロジェクトは、データセンターに電力を供給する目的で設計されています。地元の人々は、彼らの文化的および歴史的な遺産が危険にさらされていると訴えています。",
+      "url": "https://decrypt.co/369053/terawulf-bitcoin-miner-kentucky-site-ai-power-demands",
+      "source": "Decrypt",
+      "publishedAt": "2026-05-26T18:23:18Z",
+      "title": "TeraWulf Stock Pops as Bitcoin Miner Acquires Kentucky Site to Meet AI Power Demands",
+      "title_ja": "TeraWulfの株価が上昇、AIの電力需要に応えるためケンタッキーに拠点を取得",
+      "summary_ja": "TeraWulfがケンタッキーに新たな鉱山拠点を取得したことで、株価が上昇しています。この取引は、1ギガワット以上のデータセンター能力を追加し、地域経済への投資を歓迎するものとなっています。AIに対する電力需要の高まりにも対応する目的があります。",
       "key_points": [
-        "ヤカマ族が神聖な土地でのクリーンエネルギー貯蔵プロジェクトに抗議。",
-        "プロジェクトはデータセンターに電力を供給する目的。",
-        "地域の文化的および歴史的な遺産への影響が懸念されている。",
-        "抗議者はプロジェクトの計画を「秘密裏」であると指摘。",
-        "地域住民の権利と先住民の土地利用についての議論が激化。"
+        "TeraWulfがケンタッキーに拠点を取得",
+        "新しい拠点は1ギガワット以上の能力を持つ",
+        "地域は経済投資を歓迎している",
+        "AIの電力需要に対応する戦略",
+        "株価の上昇に繋がる動き"
       ],
       "glossary": [
         {
-          "term": "Yakama Nation",
-          "explain_ja": "アメリカ合衆国ワシントン州に位置する先住民族の部族。"
+          "term": "TeraWulf",
+          "explain_ja": "ビットコインの鉱採掘を行う企業"
         },
         {
-          "term": "clean energy project",
-          "explain_ja": "持続可能な方法でエネルギーを生成または貯蔵するプロジェクト。"
+          "term": "ギガワット",
+          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する"
         },
         {
-          "term": "data center",
-          "explain_ja": "デジタル情報を保管・管理するための施設。"
+          "term": "AI",
+          "explain_ja": "人工知能を指し、今後の技術発展において重要な役割を果たす"
         }
       ],
       "personal_actions": [
-        "地域の先住民の権利や文化について学ぶ。",
-        "エネルギー関連のプロジェクトが地域に与える影響を考慮する。",
-        "地元の環境問題について意見を持ち、声を上げる。"
+        "TeraWulfの株に関する最新情報を確認する",
+        "地域の経済動向を調査する",
+        "AI関連の電力需要に関する市場の動向を把握する"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://post.rlsbb.to/vmware-fusion-pro-26h1/",
-      "source": "Rlsbb.to",
-      "publishedAt": "2026-05-25T15:37:52Z",
-      "title": "VMware Fusion Pro 26H1 – ReleaseBB",
-      "title_ja": "VMware Fusion Pro 26H1のリリース",
-      "summary_ja": "VMware Fusion Pro 26H1が登場し、MacユーザーはWindowsや多様なOSを同時に動作させることが可能です。このソフトウェアは、IT専門家や開発者にとって強力なツールであり、各種OSやアプリのテストも容易に行えます。また、RESTful APIが追加され、現代の開発ツールとの統合が促進されています。これにより、柔軟な開発環境が実現されます。",
+      "url": "https://oregoncapitalchronicle.com/2026/05/25/going-green-now-for-who-yakama-protest-clean-energy-project-on-sacred-site-to-power-data-center/",
+      "source": "Oregoncapitalchronicle.com",
+      "publishedAt": "2026-05-26T18:22:37Z",
+      "title": "‘Going green now for who?’ Yakama protest clean energy project on sacred site to power data center",
+      "title_ja": "ヤカマ族、データセンター用のクリーンエネルギー計画に抗議",
+      "summary_ja": "ワシントン州コロンビア川沿いの聖なる場所に建設予定のクリーンエネルギー貯蔵プロジェクトに対して、ヤカマ族が抗議を行った。プロジェクトは地域のエネルギー需要に応えることを目的としているが、その電力がデータセンターに供給されることが明らかになっている。地域住民は、このプロジェクトが伝統文化と環境に与える影響に懸念を示している。",
       "key_points": [
-        "Mac上で複数のオペレーティングシステムを同時に実行可能",
-        "VMware vSphereやESXiと安全に接続し、仮想マシンと物理ホストを管理",
-        "開発とテストのためのRESTful APIを新たに搭載",
-        "ソリューションアーキテクトが仮想クラウドスタックを単一のMac上でデモ可能",
-        "個人使用向けにVMware Fusionの無償提供"
+        "ヤカマ族の聖地に建設予定のクリーンエネルギー貯蔵プロジェクトに抗議。",
+        "プロジェクトは500,000の住宅に電力を供給可能とされている。",
+        "データセンターが主要な電力購入者となる見込み。",
+        "地域のエネルギー需要はわずか3%の増加にとどまる予測。",
+        "プロジェクトの視点から見ると、環境と文化の損失が懸念されている。"
       ],
       "glossary": [
         {
-          "term": "VMware Fusion",
-          "explain_ja": "Mac上でWindowsやその他のOSを動作させるための仮想化ソフトウェア。"
+          "term": "不明",
+          "explain_ja": "不明"
         },
         {
-          "term": "RESTful API",
-          "explain_ja": "Webサービスの設計スタイルで、機能をHTTPリクエストで提供する手法。"
+          "term": "クリーンエネルギー",
+          "explain_ja": "再生可能エネルギー源から生成された電力。"
         },
         {
-          "term": "Agile",
-          "explain_ja": "ソフトウェア開発の手法の一つで、反復的かつ段階的な開発を目指す。"
+          "term": "ヤカマ族",
+          "explain_ja": "アメリカ先住民の一部で、主にワシントン州に居住する。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "大量のデータを管理・保存・処理するための施設。"
+        },
+        {
+          "term": "ハイドロエネルギー",
+          "explain_ja": "水の流れを利用して発電するエネルギー。"
         }
       ],
       "personal_actions": [
-        "VMware Fusion Pro 26H1をダウンロードしてインストールする",
-        "新機能を使ってサンプルアプリのテストを行う",
-        "RESTful APIを利用して開発環境を構築する"
+        "地域の環境問題についての情報収集を行う。",
+        "データセンターのエネルギー使用について調査する。",
+        "地域のエネルギー政策に関する意見を地方政府に提言する。"
       ],
       "tags": [
         "DC"
