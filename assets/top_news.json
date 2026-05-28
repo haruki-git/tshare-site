@@ -1,76 +1,39 @@
 {
-  "date": "2026-05-28",
-  "generatedAtJST": "2026-05-28T07:15:39.417+09:00",
+  "date": "2026-05-29",
+  "generatedAtJST": "2026-05-29T07:15:43.283+09:00",
   "items": [
     {
-      "url": "https://cointelegraph.com/news/bitcoin-mining-stocks-jump-as-ai-infrastructure-boom-boosts-sector-outlook",
-      "source": "Cointelegraph",
-      "publishedAt": "2026-05-26T22:07:21Z",
-      "title": "Bitcoin Mining Stocks Rally as AI Infrastructure Boom Accelerates",
-      "title_ja": "ビットコインマイニング株がAIインフラブームで急騰",
-      "summary_ja": "ビットコインマイニング株が急騰し、これは人工知能の生産性向上に対する楽観的な見通しによるものです。特に、テラウルフ（WULF）がケンタッキーのデータセンター取得を受けて17%上昇しました。この動きは、マイナーがエネルギーインフラとデータセンターの能力をAIや高性能コンピューティングに再利用することで収益性が高まるとの期待によるものです。",
+      "url": "https://cryptoslate.com/hut-8-ai-data-center-bitcoin-collateral/",
+      "source": "CryptoSlate",
+      "publishedAt": "2026-05-27T19:35:22Z",
+      "title": "Hut 8 AI landlord data center strategy turns Bitcoin collateral into bridge capital",
+      "title_ja": "Hut 8のAIデータセンター戦略がビットコイン担保をブリッジ資本に変換",
+      "summary_ja": "Hut 8は、ビットコインを担保として利用し、ブリッジ資本を得る新しい戦略を開始しました。これにより、16.8億ドルのリース基盤が形成され、マイニングの枠を超えた動きが加速しています。この戦略は、デジタル資産の新たな活用方法を示唆しており、業界に大きな影響を与える可能性があります。",
       "key_points": [
-        "いくつかのビットコインマイニング株が急騰し、市場全体に好影響を及ぼした。",
-        "テラウルフ（WULF）はケンタッキーのデータセンター取得ニュースを受けて17%上昇。",
-        "AIと高性能コンピューティング業務へのシフトが進む中、ビットコインマイナーの魅力が増している。",
-        "ビットコインマイナーはAIデータセンターの拡張に必要な大規模な電力供給能力を持っている。",
-        "バーンスタインの調査によると、ビットコインマイナーは約27ギガワットの電力ポートフォリオを管理している。"
+        "Hut 8はAIデータセンターの戦略を展開している。",
+        "$16.8 billionのリース基盤を利用している。",
+        "ビットコイン担保により新たな資金調達が可能に。",
+        "マイニング業務からの脱却を目指している。",
+        "デジタル資産活用の新しいモデルを提示している。"
       ],
       "glossary": [
         {
-          "term": "ビットコインマイニング",
-          "explain_ja": "ビットコインを生成するプロセスで、コンピュータの計算能力を使用してトランザクションを検証する。"
+          "term": "Bitcoin",
+          "explain_ja": "ビットコインは、最初の分散型デジタル通貨であり、ブロックチェーン技術を基にしています。"
         },
         {
-          "term": "AIインフラ",
-          "explain_ja": "人工知能のデータ処理や学習を支えるためのシステムや設備。"
+          "term": "collateral",
+          "explain_ja": "担保とは、貸付等に対するリスクを軽減するために提供される資産のことです。"
         },
         {
-          "term": "高性能コンピューティング",
-          "explain_ja": "スパコンやクラスタリング技術を用いて、大量のデータ処理を高速に行う技術。"
+          "term": "data center",
+          "explain_ja": "データセンターは、データ処理およびストレージを行うための設備で、多くのサーバーを収容します。"
         }
       ],
       "personal_actions": [
-        "自社のデータセンターにおけるAI対応のインフラを評価する。",
-        "ビットコインマイナーとの提携を検討する際の電力供給能力を確認する。",
-        "新しい技術トレンドに対する投資戦略を見直す。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://decrypt.co/369053/terawulf-bitcoin-miner-kentucky-site-ai-power-demands",
-      "source": "Decrypt",
-      "publishedAt": "2026-05-26T18:23:18Z",
-      "title": "TeraWulf Stock Pops as Bitcoin Miner Acquires Kentucky Site to Meet AI Power Demands",
-      "title_ja": "TeraWulfの株価が上昇、AIの電力需要に応えるためケンタッキーに拠点を取得",
-      "summary_ja": "TeraWulfがケンタッキーに新たな鉱山拠点を取得したことで、株価が上昇しています。この取引は、1ギガワット以上のデータセンター能力を追加し、地域経済への投資を歓迎するものとなっています。AIに対する電力需要の高まりにも対応する目的があります。",
-      "key_points": [
-        "TeraWulfがケンタッキーに拠点を取得",
-        "新しい拠点は1ギガワット以上の能力を持つ",
-        "地域は経済投資を歓迎している",
-        "AIの電力需要に対応する戦略",
-        "株価の上昇に繋がる動き"
-      ],
-      "glossary": [
-        {
-          "term": "TeraWulf",
-          "explain_ja": "ビットコインの鉱採掘を行う企業"
-        },
-        {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能を指し、今後の技術発展において重要な役割を果たす"
-        }
-      ],
-      "personal_actions": [
-        "TeraWulfの株に関する最新情報を確認する",
-        "地域の経済動向を調査する",
-        "AI関連の電力需要に関する市場の動向を把握する"
+        "ビットコイン担保を用いた資金調達の最新の動向を確認する。",
+        "データセンターの運用に関する技術と戦略を学ぶ。",
+        "関連する業界ニュースを定期的にチェックする。"
       ],
       "tags": [
         "DC",
@@ -78,48 +41,77 @@
       ]
     },
     {
-      "url": "https://oregoncapitalchronicle.com/2026/05/25/going-green-now-for-who-yakama-protest-clean-energy-project-on-sacred-site-to-power-data-center/",
-      "source": "Oregoncapitalchronicle.com",
-      "publishedAt": "2026-05-26T18:22:37Z",
-      "title": "‘Going green now for who?’ Yakama protest clean energy project on sacred site to power data center",
-      "title_ja": "ヤカマ族、データセンター用のクリーンエネルギー計画に抗議",
-      "summary_ja": "ワシントン州コロンビア川沿いの聖なる場所に建設予定のクリーンエネルギー貯蔵プロジェクトに対して、ヤカマ族が抗議を行った。プロジェクトは地域のエネルギー需要に応えることを目的としているが、その電力がデータセンターに供給されることが明らかになっている。地域住民は、このプロジェクトが伝統文化と環境に与える影響に懸念を示している。",
+      "url": "https://apnews.com/press-release/ein-presswire-newsmatics/alphahire-develops-workforce-intelligence-framework-for-u-s-data-center-construction-expansion-db81819db0a58bf430ed94e3fac5a19c",
+      "source": "Associated Press",
+      "publishedAt": "2026-05-27T16:01:10Z",
+      "title": "AlphaHire Develops Workforce Intelligence Framework for U.S. Data Center Construction Expansion",
+      "title_ja": "AlphaHire、米国データセンター建設拡大のための労働力インテリジェンスフレームワークを開発",
+      "summary_ja": "AlphaHireは、米国のデータセンターおよびインフラ建設に影響を与える労働条件に重点を置いた労働力インテリジェンス研究を拡大します。このフレームワークは、建設業界の労働力の最適化を進めることを目指しています。今後のデータセンターの拡大において、持続可能な労働環境の確保が期待されています。",
       "key_points": [
-        "ヤカマ族の聖地に建設予定のクリーンエネルギー貯蔵プロジェクトに抗議。",
-        "プロジェクトは500,000の住宅に電力を供給可能とされている。",
-        "データセンターが主要な電力購入者となる見込み。",
-        "地域のエネルギー需要はわずか3%の増加にとどまる予測。",
-        "プロジェクトの視点から見ると、環境と文化の損失が懸念されている。"
+        "AlphaHireが新しい労働力インテリジェンスフレームワークを開発",
+        "米国のデータセンター建設に焦点を当てた研究",
+        "労働条件に関する情報を収集・分析",
+        "建設業界の労働力最適化を目指す",
+        "持続可能な労働環境の確保が重要視されている"
       ],
       "glossary": [
         {
-          "term": "不明",
-          "explain_ja": "不明"
-        },
-        {
-          "term": "クリーンエネルギー",
-          "explain_ja": "再生可能エネルギー源から生成された電力。"
-        },
-        {
-          "term": "ヤカマ族",
-          "explain_ja": "アメリカ先住民の一部で、主にワシントン州に居住する。"
+          "term": "労働力インテリジェンス",
+          "explain_ja": "労働力に関するデータを収集・分析し、効率的な管理を図る手法。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "大量のデータを管理・保存・処理するための施設。"
+          "explain_ja": "情報を管理・保存・処理するための施設。"
         },
         {
-          "term": "ハイドロエネルギー",
-          "explain_ja": "水の流れを利用して発電するエネルギー。"
+          "term": "インフラ建設",
+          "explain_ja": "社会基盤を構築する作業で、道路や橋、データセンターなどを含む。"
         }
       ],
       "personal_actions": [
-        "地域の環境問題についての情報収集を行う。",
-        "データセンターのエネルギー使用について調査する。",
-        "地域のエネルギー政策に関する意見を地方政府に提言する。"
+        "最新の労働条件についての情報を収集する",
+        "業界内でのワークフォースインテリジェンスの活用を検討する",
+        "労働環境を向上させるための施策を検討する"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://www.thehindubusinessline.com/info-tech/india-better-positioned-in-south-east-asia-to-offer-re-for-data-centres-moodys-ratings/article71028380.ece",
+      "source": "BusinessLine",
+      "publishedAt": "2026-05-27T09:12:32Z",
+      "title": "India better positioned in South-East Asia to offer RE for data centres: Moody’s Ratings",
+      "title_ja": "インド、データセンター向け再生可能エネルギー提供で東南アジアで優位な立場に：ムーディーズレーティング",
+      "summary_ja": "ムーディーズによると、インドは再生可能エネルギーの最大の導入容量を持ち、データセンターの運営に適した電力供給が可能な国とされています。東南アジア市場は急成長しており、2030年までに容量が倍増すると予測されています。インドは南アジアで90%以上の市場シェアを誇り、多くのグローバル企業の関心を集めています。",
+      "key_points": [
+        "インドは世界で3番目に大きい再生可能エネルギー容量を保有している。",
+        "東南アジア市場は2030年までにデータセンター容量が2倍になる見込み。",
+        "インドは南アジアで90%以上のデータセンター容量を占めている。",
+        "インドのデータセンター市場は成長し続けており、主に再生可能エネルギーの利用で強化されている。",
+        "データセンターはインフラとして分類され、長期的な低コストの資金調達が可能。"
+      ],
+      "glossary": [
+        {
+          "term": "再生可能エネルギー (RE)",
+          "explain_ja": "自然の力を利用して生成されるエネルギーで、持続可能な電力源。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "大量のデータを収集・保存・処理するための専用施設。"
+        },
+        {
+          "term": "ムーディーズレーティング",
+          "explain_ja": "信用格付けを行う国際的な企業で、経済や金融の分析を提供。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの再生可能エネルギー使用の現状を確認する。",
+        "最新のエネルギー市場動向を把握する。",
+        "インフラへの投資機会を調査し、長期的な計画を立てる。"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
