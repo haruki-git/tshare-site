@@ -1,107 +1,115 @@
 {
-  "date": "2026-05-31",
-  "generatedAtJST": "2026-05-31T07:15:38.195+09:00",
+  "date": "2026-06-01",
+  "generatedAtJST": "2026-06-01T07:15:52.940+09:00",
   "items": [
     {
-      "url": "http://thelensnola.org/2026/05/21/sen-jay-morris-mixed-metas-data-center-deal-with-his-own-real-estate-business/",
-      "source": "Thelensnola.org",
-      "publishedAt": "2026-05-29T15:40:09Z",
-      "title": "Sen. Jay Morris mixed Meta’s data-center deal with his own real estate business",
-      "title_ja": "ジェイ・モリス上院議員、Metaのデータセンター契約を自身の不動産ビジネスと関連付ける",
-      "summary_ja": "ルイジアナ州のジェイ・モリス上院議員が、Meta社のデータセンター建設を推進する過程で自身の不動産取引を行っていたことが明らかになりました。彼は州の許可を得るためのロビー活動を行い、関連する法案に賛成票を投じた一方、同時期に周辺土地の売買も行っていました。この行動は州の倫理法に違反する可能性があると専門家は指摘しています。",
+      "url": "https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-05-30T21:45:00Z",
+      "title": "SoftBank says it will invest up to €75 billion to build French data centers | TechCrunch",
+      "title_ja": "ソフトバンク、フランスのデータセンターに最大750億ユーロを投資",
+      "summary_ja": "ソフトバンクはフランスのデータセンターに最大750億ユーロを投資すると発表しました。この投資により、最大5ギガワットのデータセンター容量の追加開発と運営を目指しています。このプロジェクトは、データセンターの需要増加に対応するものです。",
       "key_points": [
-        "モリス議員はMetaのデータセンター『Hyperion』の建設を推進する法案に賛成票を投じた。",
-        "モリスは自身のビジネスパートナーと共に、建設地周辺の土地を売買していた。",
-        "この行動は州の倫理法に違反する可能性があると警告されている。",
-        "モリスは自身の行動に問題はないと主張しているが、専門家は懸念を示している。",
-        "データセンターは建設完了後、大規模な電力供給が必要とされる予定。"
-      ],
-      "glossary": [
-        {
-          "term": "Hyperion",
-          "explain_ja": "Meta社がルイジアナ州に建設中のデータセンターで、世界最大級の規模を持つ。"
-        },
-        {
-          "term": "倫理法",
-          "explain_ja": "ルイジアナ州の公務員が遵守すべき倫理基準を定めた法律。"
-        }
-      ],
-      "personal_actions": [
-        "地元の土地開発や政策変更についての情報を定期的に確認する。",
-        "関連する法案の進展を追跡し、透明性を求める声を発信する。",
-        "州や地方の倫理基準について学び、公務員の行動を監視する。"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=183446748",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-05-29T15:33:13Z",
-      "title": "AI and data sovereignty in Postgres: An answer to the datacenter energy crisis - Slashdot",
-      "title_ja": "PostgresにおけるAIとデータ主権：データセンターのエネルギー危機への回答",
-      "summary_ja": "AIとデータ主権は、データセンターのエネルギー消費という課題に対して解決策を提供する可能性がある。特にPostgresの利用が注目されており、エネルギー効率の向上が期待されている。このアプローチにより、AIの運用とデータの管理がより持続可能な形で実現できると考えられている。",
-      "key_points": [
-        "AIとデータ主権の関連性が高まっている",
-        "Postgresがデータセンターのエネルギー効率改善に寄与する可能性",
-        "持続可能なAI運用の道筋が示唆されている"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能の略称。人間の知的活動を模倣する技術。"
-        },
-        {
-          "term": "Postgres",
-          "explain_ja": "PostgreSQLの略で、オープンソースのリレーショナルデータベース管理システム。"
-        }
-      ],
-      "personal_actions": [
-        "Postgresを利用したデータ管理の効率化を検討する",
-        "データセンターのエネルギー消費の現状を確認する"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/ohio-suspends-data-center-tax-break/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-05-29T15:09:19Z",
-      "title": "Ohio suspends data center tax break amid AI power cost debate",
-      "title_ja": "オハイオ州、AIコスト問題の中でデータセンターの税控除を一時停止",
-      "summary_ja": "オハイオ州は、AI関連の電力コストに関する議論の中でデータセンターへの税控除を一時停止しました。この決定は、技術投資の促進と持続可能な財政およびエネルギー政策のバランスを取る必要性を浮き彫りにしています。州の政策は、今後の技術発展にどのように寄与するかが注目されています。",
-      "key_points": [
-        "オハイオ州がデータセンターへの税控除を一時停止。",
-        "AI関連の電力コストが議論の中心となっている。",
-        "州の財政およびエネルギー政策のバランスの重要性が強調されている。",
-        "技術投資の促進が求められる一方で、持続可能性への配慮が必要。",
-        "この決定は、今後の州政策に影響を与える可能性がある。"
+        "ソフトバンクが750億ユーロをフランスのデータセンターに投資",
+        "最大5ギガワットのデータセンター容量を目指す",
+        "データセンターの需要増加に対応するためのプロジェクト"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを保存、管理、処理するための施設。"
+          "explain_ja": "データを集中管理・保管する施設で、サーバーやストレージを配置している。"
         },
         {
-          "term": "税控除",
-          "explain_ja": "税金の計算対象となる課税所得を減少させること。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能の略。機械が知的なプロセスを模倣する技術。"
+          "term": "ギガワット",
+          "explain_ja": "電力の単位で、1ギガワットは1,000メガワットに相当する。"
         }
       ],
       "personal_actions": [
-        "地元のデータセンター税政策の変更について情報を集める。",
-        "持続可能なエネルギー使用に関する社内ポリシーを見直す。",
-        "新技術投資の活用方法を検討する。"
+        "既存のデータセンターの容量や性能を確認する",
+        "データセンターの運用体制を見直す",
+        "将来のデータセンター投資計画を検討する"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.techradar.com/pro/the-very-rapid-development-of-ai-ml-will-also-have-a-profound-impact-on-the-6g-design-ai-will-be-responsible-for-both-creating-more-network-traffic-and-strengthening-network-performance",
+      "source": "TechRadar",
+      "publishedAt": "2026-05-30T12:05:00Z",
+      "title": "‘The very rapid development of AI/ML will also have a profound impact on the 6G design’: AI will be responsible for both creating more network traffic and strengthening network performance",
+      "title_ja": "AI/MLの急速な進展が6G設計に与える深い影響",
+      "summary_ja": "AI/MLの急速な発展が6Gネットワークに大きな影響を与えることが報告されています。エリクソンの技術者によると、AIはネットワークトラフィックを増加させる一方で、ネットワークの性能を強化する役割も果たすとされています。この二重の影響は、グローバルな協力の重要性を強調しています。",
+      "key_points": [
+        "AI/MLの発展が6Gネットワーク設計に影響を与える",
+        "AIはネットワークトラフィックを増加させる要因となる",
+        "同時にAIはネットワークの性能向上にも寄与する",
+        "グローバルな協力が求められることが強調されている"
+      ],
+      "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能のことで、機械が人間の知能を模倣する技術を指す。"
+        },
+        {
+          "term": "ML",
+          "explain_ja": "機械学習の略で、データから学習し、自ら改善するアルゴリズムを指す。"
+        },
+        {
+          "term": "6G",
+          "explain_ja": "第6世代移動通信システムのことで、次世代の通信技術を表す。"
+        }
+      ],
+      "personal_actions": [
+        "AI/ML技術の進展についての研修やセミナーを受ける",
+        "6G関連の研究やプロジェクトに積極的に参加する",
+        "ネットワーク性能の向上に寄与する実践的な技術を学ぶ"
+      ],
+      "tags": [
+        "インフラ",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://thechronicle.com.gh/ecg-to-complete-major-power-network-upgrade-in-greater-kumasi-by-june-5/",
+      "source": "Thechronicle.com.gh",
+      "publishedAt": "2026-05-30T10:48:22Z",
+      "title": "ECG to Complete Major Power Network Upgrade in Greater Kumasi by June 5 - The Ghanaian Chronicle",
+      "title_ja": "ECGがグレーター・クマシでの主要電力ネットワークのアップグレードを6月5日までに完了予定",
+      "summary_ja": "ECGは、グレーター・クマシ地域の主要なサブ送電ラインの大規模なアップグレードを2026年6月5日までに完了する見込みです。このプロジェクトは、電力供給の信頼性を向上させ、地域の電力ネットワークを強化することを目的としています。アップグレード完了後、カース、クンテンセ、セウワ、ベックワイなどのコミュニティが恩恵を受ける見込みです。",
+      "key_points": [
+        "ECGがグレーター・クマシの電力ネットワークを改良中",
+        "265平方ミリメートルの導体を400平方ミリメートルのより大きな導体に交換",
+        "電力供給の信頼性と安定性向上が期待される",
+        "カース、クンテンセ、セウワ、ベックワイが恩恵を受ける",
+        "プロジェクトには一時的な disruption が伴う可能性あり"
+      ],
+      "glossary": [
+        {
+          "term": "ECG",
+          "explain_ja": "ガーナ電力公社（Electricity Company of Ghana）の略称。"
+        },
+        {
+          "term": "サブ送電ライン",
+          "explain_ja": "電力を配電するための中間的な電線部分。"
+        },
+        {
+          "term": "導体",
+          "explain_ja": "電気を通すための素材でできた線。"
+        },
+        {
+          "term": "アップグレード",
+          "explain_ja": "既存のシステムや機器を新しいものに改良すること。"
+        }
+      ],
+      "personal_actions": [
+        "作業中の一時的な電力停止について情報を得るため、地域の告知を確認する",
+        "必要に応じて電力使用を調整する準備をする",
+        "新しい電力供給の安定性向上に適応した機器の確認を行う"
       ],
       "tags": [
         "DC",
-        "AI"
+        "インフラ"
       ]
     }
   ]
