@@ -1,115 +1,112 @@
 {
-  "date": "2026-06-01",
-  "generatedAtJST": "2026-06-01T07:15:52.940+09:00",
+  "date": "2026-06-02",
+  "generatedAtJST": "2026-06-02T07:15:43.827+09:00",
   "items": [
     {
-      "url": "https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-05-30T21:45:00Z",
-      "title": "SoftBank says it will invest up to €75 billion to build French data centers | TechCrunch",
-      "title_ja": "ソフトバンク、フランスのデータセンターに最大750億ユーロを投資",
-      "summary_ja": "ソフトバンクはフランスのデータセンターに最大750億ユーロを投資すると発表しました。この投資により、最大5ギガワットのデータセンター容量の追加開発と運営を目指しています。このプロジェクトは、データセンターの需要増加に対応するものです。",
+      "url": "https://yro.slashdot.org/story/26/05/31/0514258/ohio-suspends-data-center-tax-break-as-opposition-grows",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-05-31T14:34:00Z",
+      "title": "Ohio Suspends Data Center Tax Break as Opposition Grows - Slashdot",
+      "title_ja": "オハイオ州、データセンターの税控除を一時停止 Oppositionが高まる中",
+      "summary_ja": "オハイオ州は、データセンター建設の重要な税控除を一時停止することを決定しました。この決定は、エネルギーを大量に消費するAIデータセンターへの税控除が州の予算に影響を及ぼしているためです。住民は、ハイパースケールデータセンターを恒久的に禁止するための国民投票を求めており、これはアメリカで最も厳しい州単位の禁止案となる可能性があります。",
       "key_points": [
-        "ソフトバンクが750億ユーロをフランスのデータセンターに投資",
-        "最大5ギガワットのデータセンター容量を目指す",
-        "データセンターの需要増加に対応するためのプロジェクト"
+        "オハイオ州はデータセンターの税控除を一時的に停止した。",
+        "この措置は地方の反発を受けてのものである。",
+        "住民は国民投票を通じてデータセンターを禁止する動きが進行中。",
+        "2024年の税控除予測は554百万ドルから1.6十億ドルに膨れ上がっている。",
+        "オハイオ州の税控除は、建設材料だけでなく、サーバーラックや冷却システムなどの高価な設備にも適用される。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを集中管理・保管する施設で、サーバーやストレージを配置している。"
+          "explain_ja": "情報を保存、処理、管理するための施設。"
         },
         {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位で、1ギガワットは1,000メガワットに相当する。"
+          "term": "税控除",
+          "explain_ja": "税金を軽減するための特典や免除。"
+        },
+        {
+          "term": "ハイパースケールデータセンター",
+          "explain_ja": "非常に大規模で、膨大なデータを処理するためのデータセンター。"
+        },
+        {
+          "term": "国民投票",
+          "explain_ja": "市民が投票によって政策や法律を決定する手続き。"
         }
       ],
       "personal_actions": [
-        "既存のデータセンターの容量や性能を確認する",
-        "データセンターの運用体制を見直す",
-        "将来のデータセンター投資計画を検討する"
+        "地域のデータセンターに関する情報を確認する。",
+        "税控除の影響について自分の意見を市の議員に伝える。",
+        "国民投票に関する最新情報を追い、投票権を行使する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_619bd729-5d54-49e4-9f3f-6a3f313d52d1",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-05-31T13:53:13Z",
+      "title": "Truist Says Data Center Expansion Could Drive Further Upside for American Electric Power (AEP)",
+      "title_ja": "Truistがデータセンターの拡張がアメリカン・エレクトリック・パワー（AEP）にさらなる成長をもたらす可能性を示唆",
+      "summary_ja": "Truistは、データセンターの拡張がアメリカン・エレクトリック・パワー（AEP）の成長を促進する可能性があると指摘しました。これにより、AEPは需要の増加に応じた新たなビジネス機会を得ると予測されています。データセンターの利用が進む中、エネルギー供給の重要性が高まっています。",
+      "key_points": [
+        "Truistはデータセンターの拡張を評価している。",
+        "AEPのさらなる成長が期待されている。",
+        "データセンターの需要がエネルギー供給に影響を与えている。"
+      ],
+      "glossary": [
+        {
+          "term": "AEP",
+          "explain_ja": "アメリカン・エレクトリック・パワーは、米国の電力会社。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保存と処理を行うための設備。"
+        },
+        {
+          "term": "Truist",
+          "explain_ja": "米国の金融サービス会社で、投資や金融アドバイスを提供。"
+        }
+      ],
+      "personal_actions": [
+        "AEPが提供する最新のサービス情報を確認する。",
+        "データセンターの拡張に関連する地域のエネルギー需要を把握する。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.techradar.com/pro/the-very-rapid-development-of-ai-ml-will-also-have-a-profound-impact-on-the-6g-design-ai-will-be-responsible-for-both-creating-more-network-traffic-and-strengthening-network-performance",
-      "source": "TechRadar",
-      "publishedAt": "2026-05-30T12:05:00Z",
-      "title": "‘The very rapid development of AI/ML will also have a profound impact on the 6G design’: AI will be responsible for both creating more network traffic and strengthening network performance",
-      "title_ja": "AI/MLの急速な進展が6G設計に与える深い影響",
-      "summary_ja": "AI/MLの急速な発展が6Gネットワークに大きな影響を与えることが報告されています。エリクソンの技術者によると、AIはネットワークトラフィックを増加させる一方で、ネットワークの性能を強化する役割も果たすとされています。この二重の影響は、グローバルな協力の重要性を強調しています。",
+      "url": "https://beincrypto.com/softbank-75-billion-ai-data-centers-france/",
+      "source": "BeInCrypto",
+      "publishedAt": "2026-05-31T12:34:19Z",
+      "title": "SoftBank Bets Big on AI: €75 Billion to Build Massive French Data Hub",
+      "title_ja": "ソフトバンクがAIに75億ユーロを投資：フランスに大規模なデータ拠点を構築へ",
+      "summary_ja": "ソフトバンクがフランスで5GWのAIデータセンター容量に対して最大75億ユーロの投資を行うことを発表しました。このプロジェクトは、同社にとってヨーロッパ最大のAIインフラへの投資となります。データセンターの拡充によって、AI技術の発展を加速させる狙いがあります。",
       "key_points": [
-        "AI/MLの発展が6Gネットワーク設計に影響を与える",
-        "AIはネットワークトラフィックを増加させる要因となる",
-        "同時にAIはネットワークの性能向上にも寄与する",
-        "グローバルな協力が求められることが強調されている"
+        "ソフトバンクがフランスに75億ユーロを投資する計画を発表。",
+        "5GWのAIデータセンター容量を持つ大規模施設を建設予定。",
+        "これはソフトバンクのヨーロッパにおける最大のAIインフラ投資。",
+        "データセンターの拡充によりAI技術のさらなる発展が期待される。"
       ],
       "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能のことで、機械が人間の知能を模倣する技術を指す。"
+          "explain_ja": "人工知能のことで、機械が人の知能を模倣する技術。"
         },
         {
-          "term": "ML",
-          "explain_ja": "機械学習の略で、データから学習し、自ら改善するアルゴリズムを指す。"
-        },
-        {
-          "term": "6G",
-          "explain_ja": "第6世代移動通信システムのことで、次世代の通信技術を表す。"
+          "term": "データセンター",
+          "explain_ja": "データの保存、処理、管理を行う設備および施設。"
         }
       ],
       "personal_actions": [
-        "AI/ML技術の進展についての研修やセミナーを受ける",
-        "6G関連の研究やプロジェクトに積極的に参加する",
-        "ネットワーク性能の向上に寄与する実践的な技術を学ぶ"
+        "最新のAI技術に関する情報を収集する。",
+        "データセンターのインフラに関する研修やセミナーに参加する。"
       ],
       "tags": [
-        "インフラ",
         "AI"
-      ]
-    },
-    {
-      "url": "https://thechronicle.com.gh/ecg-to-complete-major-power-network-upgrade-in-greater-kumasi-by-june-5/",
-      "source": "Thechronicle.com.gh",
-      "publishedAt": "2026-05-30T10:48:22Z",
-      "title": "ECG to Complete Major Power Network Upgrade in Greater Kumasi by June 5 - The Ghanaian Chronicle",
-      "title_ja": "ECGがグレーター・クマシでの主要電力ネットワークのアップグレードを6月5日までに完了予定",
-      "summary_ja": "ECGは、グレーター・クマシ地域の主要なサブ送電ラインの大規模なアップグレードを2026年6月5日までに完了する見込みです。このプロジェクトは、電力供給の信頼性を向上させ、地域の電力ネットワークを強化することを目的としています。アップグレード完了後、カース、クンテンセ、セウワ、ベックワイなどのコミュニティが恩恵を受ける見込みです。",
-      "key_points": [
-        "ECGがグレーター・クマシの電力ネットワークを改良中",
-        "265平方ミリメートルの導体を400平方ミリメートルのより大きな導体に交換",
-        "電力供給の信頼性と安定性向上が期待される",
-        "カース、クンテンセ、セウワ、ベックワイが恩恵を受ける",
-        "プロジェクトには一時的な disruption が伴う可能性あり"
-      ],
-      "glossary": [
-        {
-          "term": "ECG",
-          "explain_ja": "ガーナ電力公社（Electricity Company of Ghana）の略称。"
-        },
-        {
-          "term": "サブ送電ライン",
-          "explain_ja": "電力を配電するための中間的な電線部分。"
-        },
-        {
-          "term": "導体",
-          "explain_ja": "電気を通すための素材でできた線。"
-        },
-        {
-          "term": "アップグレード",
-          "explain_ja": "既存のシステムや機器を新しいものに改良すること。"
-        }
-      ],
-      "personal_actions": [
-        "作業中の一時的な電力停止について情報を得るため、地域の告知を確認する",
-        "必要に応じて電力使用を調整する準備をする",
-        "新しい電力供給の安定性向上に適応した機器の確認を行う"
-      ],
-      "tags": [
-        "DC",
-        "インフラ"
       ]
     }
   ]
