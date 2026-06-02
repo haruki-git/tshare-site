@@ -1,109 +1,122 @@
 {
-  "date": "2026-06-02",
-  "generatedAtJST": "2026-06-02T07:15:43.827+09:00",
+  "date": "2026-06-03",
+  "generatedAtJST": "2026-06-03T07:15:46.025+09:00",
   "items": [
     {
-      "url": "https://yro.slashdot.org/story/26/05/31/0514258/ohio-suspends-data-center-tax-break-as-opposition-grows",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-05-31T14:34:00Z",
-      "title": "Ohio Suspends Data Center Tax Break as Opposition Grows - Slashdot",
-      "title_ja": "オハイオ州、データセンターの税控除を一時停止 Oppositionが高まる中",
-      "summary_ja": "オハイオ州は、データセンター建設の重要な税控除を一時停止することを決定しました。この決定は、エネルギーを大量に消費するAIデータセンターへの税控除が州の予算に影響を及ぼしているためです。住民は、ハイパースケールデータセンターを恒久的に禁止するための国民投票を求めており、これはアメリカで最も厳しい州単位の禁止案となる可能性があります。",
+      "url": "https://assetstore.unity.com/packages/3d/environments/server-room-302206",
+      "source": "Unity.com",
+      "publishedAt": "2026-06-01T18:35:09Z",
+      "title": "Server Room by Bright Vision Game",
+      "title_ja": "Bright Vision Gameのサーバールーム",
+      "summary_ja": "Bright Vision Gameが提供するサーバールームパッケージは、Unityの最新バージョンに対応しています。多様なレンダーパイプライン（Built-in、URP、HDRP）に適合し、高品質なテクスチャと低～中ポリゴンのモデルが特徴です。このパッケージはゲーム開発者にとって、リアルな環境を構築するための有用なリソースとなります。",
       "key_points": [
-        "オハイオ州はデータセンターの税控除を一時的に停止した。",
-        "この措置は地方の反発を受けてのものである。",
-        "住民は国民投票を通じてデータセンターを禁止する動きが進行中。",
-        "2024年の税控除予測は554百万ドルから1.6十億ドルに膨れ上がっている。",
-        "オハイオ州の税控除は、建設材料だけでなく、サーバーラックや冷却システムなどの高価な設備にも適用される。"
+        "Unity Version: 2022.3.62f3に対応",
+        "レンダーパイプライン: Built-in / URP / HDRP",
+        "テクスチャ: 2K (2048x2048)のPBRマップ",
+        "ポリゴン数: 低～中ポリゴン",
+        "マテリアル: 21種類",
+        "プレハブが含まれている"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "情報を保存、処理、管理するための施設。"
+          "term": "PBR",
+          "explain_ja": "物理ベースのレンダリング。リアルな素材の表現を可能にする技術。"
         },
         {
-          "term": "税控除",
-          "explain_ja": "税金を軽減するための特典や免除。"
+          "term": "URP",
+          "explain_ja": "Universal Render Pipeline。Unityの軽量なレンダリングシステム。"
         },
         {
-          "term": "ハイパースケールデータセンター",
-          "explain_ja": "非常に大規模で、膨大なデータを処理するためのデータセンター。"
-        },
-        {
-          "term": "国民投票",
-          "explain_ja": "市民が投票によって政策や法律を決定する手続き。"
+          "term": "HDRP",
+          "explain_ja": "High Definition Render Pipeline。高品質なグラフィックスを提供するUnityのレンダリングシステム。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンターに関する情報を確認する。",
-        "税控除の影響について自分の意見を市の議員に伝える。",
-        "国民投票に関する最新情報を追い、投票権を行使する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_619bd729-5d54-49e4-9f3f-6a3f313d52d1",
-      "source": "Yahoo Entertainment",
-      "publishedAt": "2026-05-31T13:53:13Z",
-      "title": "Truist Says Data Center Expansion Could Drive Further Upside for American Electric Power (AEP)",
-      "title_ja": "Truistがデータセンターの拡張がアメリカン・エレクトリック・パワー（AEP）にさらなる成長をもたらす可能性を示唆",
-      "summary_ja": "Truistは、データセンターの拡張がアメリカン・エレクトリック・パワー（AEP）の成長を促進する可能性があると指摘しました。これにより、AEPは需要の増加に応じた新たなビジネス機会を得ると予測されています。データセンターの利用が進む中、エネルギー供給の重要性が高まっています。",
-      "key_points": [
-        "Truistはデータセンターの拡張を評価している。",
-        "AEPのさらなる成長が期待されている。",
-        "データセンターの需要がエネルギー供給に影響を与えている。"
-      ],
-      "glossary": [
-        {
-          "term": "AEP",
-          "explain_ja": "アメリカン・エレクトリック・パワーは、米国の電力会社。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データの保存と処理を行うための設備。"
-        },
-        {
-          "term": "Truist",
-          "explain_ja": "米国の金融サービス会社で、投資や金融アドバイスを提供。"
-        }
-      ],
-      "personal_actions": [
-        "AEPが提供する最新のサービス情報を確認する。",
-        "データセンターの拡張に関連する地域のエネルギー需要を把握する。"
+        "Unityの最新バージョンにアップデートする",
+        "PBRマテリアルの設定を確認する",
+        "プロジェクトに必要なプレハブを整理する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://beincrypto.com/softbank-75-billion-ai-data-centers-france/",
-      "source": "BeInCrypto",
-      "publishedAt": "2026-05-31T12:34:19Z",
-      "title": "SoftBank Bets Big on AI: €75 Billion to Build Massive French Data Hub",
-      "title_ja": "ソフトバンクがAIに75億ユーロを投資：フランスに大規模なデータ拠点を構築へ",
-      "summary_ja": "ソフトバンクがフランスで5GWのAIデータセンター容量に対して最大75億ユーロの投資を行うことを発表しました。このプロジェクトは、同社にとってヨーロッパ最大のAIインフラへの投資となります。データセンターの拡充によって、AI技術の発展を加速させる狙いがあります。",
+      "url": "https://slashdot.org/submission/17347758/nvidia-rtx-spark-comes-to-windows-pcs-with-arm-cpu-rtx-gpu-and-unified-memory",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-06-01T18:30:37Z",
+      "title": "Nvidia RTX Spark Comes to Windows PCs With Arm CPU, RTX GPU, and Unified Memory - Slashdot",
+      "title_ja": "Nvidia RTX Spark、Arm CPUとRTX GPUでWindows PCに登場",
+      "summary_ja": "Nvidiaは新たにArmベースのRTX Sparkチップを発表しました。これは、AIデータセンター向け製品からの移行を示唆するもので、20コアのNvidia Grace CPUと最大6,144のGPUコアを統合しています。スリムなWindowsラップトップやコンパクトなデスクトップPCが今秋に発売予定です。",
       "key_points": [
-        "ソフトバンクがフランスに75億ユーロを投資する計画を発表。",
-        "5GWのAIデータセンター容量を持つ大規模施設を建設予定。",
-        "これはソフトバンクのヨーロッパにおける最大のAIインフラ投資。",
-        "データセンターの拡充によりAI技術のさらなる発展が期待される。"
+        "Nvidiaの新しいArmベースのチップ、RTX Sparkが発表された",
+        "最大6,144のBlackwellベースのGPUコアを搭載",
+        "最大128GBの統合LPDDR5xメモリをサポート",
+        "発売予定は秋で、主要パートナーから販売される",
+        "DGX Sparkからのコンシューマー向けリブランドと考えられている"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能のことで、機械が人の知能を模倣する技術。"
+          "term": "RTX Spark",
+          "explain_ja": "Nvidiaが開発したArmベースのチップで、Windows PC向けに設計されている。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、処理、管理を行う設備および施設。"
+          "term": "Grace CPU",
+          "explain_ja": "Nvidiaが開発したArmアーキテクチャに基づくCPUで、高性能コアと中性能コアを融合している。"
+        },
+        {
+          "term": "Blackwell GPU",
+          "explain_ja": "Nvidiaの新しいGPUアーキテクチャで、RTX 50シリーズに用いられている。"
         }
       ],
       "personal_actions": [
-        "最新のAI技術に関する情報を収集する。",
-        "データセンターのインフラに関する研修やセミナーに参加する。"
+        "新しいNvidia製品の情報を定期的にチェックする",
+        "RTX Spark搭載のPCの仕様を確認し、ニーズに合うか評価する",
+        "秋の発売予定に備えて、予算と必要な機能を検討する"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://4sysops.com/archives/intel-unveils-crescent-island-ai-gpu-with-480gb-vram-and-clearwater-forest-cpus/",
+      "source": "4sysops.com",
+      "publishedAt": "2026-06-01T16:14:06Z",
+      "title": "Intel unveils Crescent Island AI GPU with 480GB VRAM and Clearwater Forest CPUs",
+      "title_ja": "インテル、480GB VRAMを搭載したCrescent Island AI GPUとClearwater Forest CPUを発表",
+      "summary_ja": "インテルは新しいCrescent Island AI GPUを発表し、480GBのVRAMを搭載しています。このハードウェアは、伝統的なワークロードとAIワークロードのバランスを取るために設計され、多様なデータ形式をサポートしています。新たなClearwater Forestプロセッサファミリーも同時に発表され、高効率なスループットを実現します。",
+      "key_points": [
+        "Crescent Island AI GPUは480GBのVRAMを搭載",
+        "多様なデータ形式をサポートし、高精度から効率的なマイクロスケーリング形式まで対応",
+        "Clearwater Forest CPUは最大288のEコアを持ち、高密度なソリューションを提供",
+        "AIと従来のワークロードの比率が50%に達する見込み",
+        "このリリースは、伝統的なx86処理とAI加速を両立させる専用シリコンへの移行を示す"
+      ],
+      "glossary": [
+        {
+          "term": "AI GPU",
+          "explain_ja": "人工知能（AI）用に最適化されたグラフィックス処理ユニット。"
+        },
+        {
+          "term": "VRAM",
+          "explain_ja": "ビデオRAMは、画像データを保存するために使用されるメモリの一種。"
+        },
+        {
+          "term": "E-core",
+          "explain_ja": "エフィシェンシーコアは、効率的な処理を行うために設計されたコア。"
+        },
+        {
+          "term": "FP64",
+          "explain_ja": "倍精度浮動小数点数フォーマットの一種。"
+        },
+        {
+          "term": "FP4",
+          "explain_ja": "低精度の浮動小数点数フォーマット。"
+        }
+      ],
+      "personal_actions": [
+        "新しいハードウェアの導入についてチーム内で情報を共有する",
+        "AIと伝統的なワークロードのバランスを考慮したアーキテクチャの検討を行う",
+        "性能と効率を最大化するための戦略を見直す"
       ],
       "tags": [
         "AI"
