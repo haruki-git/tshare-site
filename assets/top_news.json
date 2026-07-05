@@ -1,105 +1,103 @@
 {
-  "date": "2026-07-05",
-  "generatedAtJST": "2026-07-05T11:19:41.200+09:00",
+  "date": "2026-07-06",
+  "generatedAtJST": "2026-07-06T07:15:26.611+09:00",
   "items": [
     {
-      "url": "https://financialpost.com/pmn/business-pmn/largest-us-grid-saw-demand-hit-record-high-thursday-on-heat",
-      "source": "Financial Post",
-      "publishedAt": "2026-07-03T21:02:41Z",
-      "title": "Largest US Grid Saw Demand Hit Record High Thursday on Heat",
-      "title_ja": "米国最大の電力網、木曜日に熱波で需要が記録的高水準に達する",
-      "summary_ja": "米国最大の電力網における電力需要が、熱波の影響で記録的な高水準に達しました。特に中大西洋地域では、気温が摂氏38度を超えたことが背景にあります。データセンターの急増があった中で、電気供給システムはすでに厳しい状況に直面しています。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184306774",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-07-04T14:12:19Z",
+      "title": "Meta data center water discharges suspended after contaminating the city's water supply with bacterium — closed-loop cooling system purge spread rare met - Slashdot",
+      "title_ja": "Metaのデータセンター、水源汚染に伴い排水を一時停止",
+      "summary_ja": "Metaは、データセンターの閉鎖型冷却システムの浄化プロセスが原因で、バクテリアによって市の水供給が汚染されたとして、排水を一時停止しました。この事象は市の水質に影響を及ぼし、関係機関が対応に追われています。この問題は、データセンターにおける水資源管理の重要性を再認識させるものとなっています。",
       "key_points": [
-        "米国最大の電力網で記録的な電力需要。",
-        "中大西洋地域は気温が100°Fを超えた。",
-        "データセンターの急増が電力供給に影響を与えている。"
+        "Metaのデータセンターが水源汚染を引き起こした",
+        "閉鎖型冷却システムの浄化プロセスが原因",
+        "市の水供給がバクテリアで汚染された",
+        "排水を一時停止し、影響の調査中",
+        "データセンターの水資源管理の重要性の再確認"
       ],
       "glossary": [
         {
-          "term": "電力網",
-          "explain_ja": "電力を供給するためのインフラ体系。"
+          "term": "閉鎖型冷却システム",
+          "explain_ja": "液体を閉じ込めたシステムで、外部に水を供給せず循環する方式の冷却システム。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存と管理を行う施設。"
+          "term": "バクテリア",
+          "explain_ja": "微生物の一種で、環境に広く分布し、一部は病原性を持つ。"
         }
       ],
       "personal_actions": [
-        "データセンターの運用状況を確認する。",
-        "電力使用量を最適化する方法を検討する。"
+        "データセンターや工場の近隣に住んでいる場合は、水質の監視を行う",
+        "浄水器や水質テストキットで家庭の水を確認する"
       ],
       "tags": [
-        "その他"
+        "DC"
       ]
     },
     {
-      "url": "https://apnews.com/press-release/business-wire/press-release-8b422357668c4c7fbd834223f6308757",
-      "source": "Associated Press",
-      "publishedAt": "2026-07-03T20:11:37Z",
-      "title": "Metropolitan Stock Exchange of India (MSE) Selects NTT DATA’s Mumbai Data Center to Power Next-Generation Trading Infrastructure",
-      "title_ja": "インドメトロポリタン取引所、NTT DATAのムンバイデータセンターを次世代取引インフラに選定",
-      "summary_ja": "インドメトロポリタン取引所（MSE）は、NTT DATAのムンバイデータセンターを次世代取引インフラに採用することを発表。これは、取引の効率化と迅速なサービス提供を目指すものである。MSEは、SEBI（インド証券取引委員会）によって認可された国立取引所である。",
+      "url": "https://www.tomshardware.com/tech-industry/data-centers/cheyenne-suspends-data-center-fill-and-flush-and-closed-loop-discharges-after-meta-contractor-contaminated-its-reuse-water-system",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-07-04T14:02:22Z",
+      "title": "Meta data center water discharges suspended after contaminating the city's water supply with bacterium — closed-loop cooling system purge spread rare metal-resistant bacterium in Cheyenne’s water system",
+      "title_ja": "Metaのデータセンター、バクテリアによる市水供給汚染で水排出を一時停止",
+      "summary_ja": "Metaのデータセンターは、冷却システムのパージが珍しい金属耐性バクテリアをシェイアンの水道システムに広めたため、水の排出を一時停止しました。この冷却ループの充填・排水は、システムの運転前にパイプ内の異物を除去するための初期作業です。この汚染により、市の水供給に影響が出る可能性があります。",
       "key_points": [
-        "MSEはNTT DATAのムンバイデータセンターを選定した。",
-        "この選定により次世代取引インフラを構築する。",
-        "NTT DATAはAIとデジタルビジネスサービスのリーダーである。"
+        "Metaのデータセンターがバクテリアで市の水供給を汚染",
+        "冷却システムの充填・排水プロセスが問題を引き起こした",
+        "珍しい金属耐性バクテリアが広がった",
+        "水の排出は一時停止されている"
       ],
       "glossary": [
         {
-          "term": "MSE",
-          "explain_ja": "インドにおける国立取引所で、SEBIによって認可されている。"
+          "term": "冷却ループ",
+          "explain_ja": "データセンターなどで機器の冷却を行う循環水システムのこと。"
         },
         {
-          "term": "NTT DATA",
-          "explain_ja": "グローバルなAIとデジタルビジネスサービスのリーダー。"
+          "term": "充填・排水",
+          "explain_ja": "冷却システムの初期作業で、水を循環させて異物を除去する工程。"
+        },
+        {
+          "term": "バクテリア",
+          "explain_ja": "微生物の一種で、特定条件下で繁殖し水質汚染の原因となることがある。"
         }
       ],
       "personal_actions": [
-        "現在の取引インフラの状況を確認する。",
-        "新しい技術導入の影響を評価する。"
+        "データセンターの冷却システムの管理手順を確認する",
+        "バクテリア検出に関する安全対策を見直す",
+        "市の水質検査結果について最新情報を追跡する"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://www.digitaljournal.com/article/how-aravoltas-virtual-plc-helps-brownfield-data-centers-unlock-ai-capacity-faster/",
-      "source": "Digital Journal",
-      "publishedAt": "2026-07-03T15:21:57Z",
-      "title": "How Aravolta’s virtual PLC helps Brownfield data centers unlock AI capacity faster",
-      "title_ja": "AravoltaのバーチャルPLCがブラウンフィールドデータセンターのAI能力を迅速に解放",
-      "summary_ja": "新しいデータセンターの建設が遅延やコミュニティの反発に直面する中、ブラウンフィールド施設がAIキャパシティを迅速に展開する実用的な手段として注目されています。AravoltaのバーチャルPLCは、複数のプラットフォームを統合し、既存設備の効率的な管理を実現します。この技術はデータセンターの運用効率を向上させ、急成長する需要に応じて既存インフラを迅速に最適化できる競争上の利点を提供します。",
+      "url": "https://247wallst.com/investing/2026/07/04/3-ai-data-center-power-stocks-to-buy-in-july/",
+      "source": "24/7 Wall St.",
+      "publishedAt": "2026-07-04T12:30:57Z",
+      "title": "3 AI Data Center Power Stocks to Buy in July",
+      "title_ja": "7月に購入すべきAIデータセンター関連株3選",
+      "summary_ja": "2026年のハイパースケーラーAIの資本支出が6700億ドルから7500億ドルに引き上げられ、2027年には1兆ドルを超える見込みです。この資金はデータセンターの拡張やAI技術の進化に大きく寄与するでしょう。投資家は今後の成長が期待される企業に注目しています。",
       "key_points": [
-        "ブラウンフィールド施設の利用が進む背景には、新たなデータセンター建設の遅延がある。",
-        "AravoltaのバーチャルPLCは、BMS、EPMS、SCADA、NOC、DCIM機能を統合したシステムを提供。",
-        "このプラットフォームは自動発見機能を用いて、多様な機器を迅速に統合する。",
-        "デプロイメントには通常数日しかかからず、スケーラビリティに優れた設計。",
-        "ブラウンフィールドやモジュラーサイトでの最近の導入実績が効果を証明。",
-        "データセンター業界は、急成長する需要を満たすためにプラグアンドプレイの現実的アプローチにシフトしている。"
+        "2026年のハイパースケーラーAIの資本支出が7500億ドルに上昇",
+        "2027年には資本支出が1兆ドルを超える予測",
+        "データセンターの拡張が必要とされている",
+        "AI技術の進化に資金が投入される",
+        "投資家が成長企業に注目"
       ],
       "glossary": [
         {
-          "term": "BMS",
-          "explain_ja": "ビル管理システム（BMS）は、建物の設備を監視・制御するシステム。"
+          "term": "ハイパースケーラー",
+          "explain_ja": "膨大なデータ量を扱うための大規模なデータセンターを運営する企業。"
         },
         {
-          "term": "SCADA",
-          "explain_ja": "監視制御データ取得（SCADA）システムは、遠隔地の設備の監視と制御を行うための技術。"
-        },
-        {
-          "term": "DCIM",
-          "explain_ja": "データセンターインフラ管理（DCIM）は、データセンターのインフラを管理するための技術。"
-        },
-        {
-          "term": "Modbus",
-          "explain_ja": "Modbusは、産業用機器が通信するための通信プロトコルの一種。"
+          "term": "AI",
+          "explain_ja": "人工知能の略称で、機械が人間の知能を模倣する技術。"
         }
       ],
       "personal_actions": [
-        "現在のシステムと接続可能な機器の互換性を確認する。",
-        "新たな技術導入のためのトレーニングを受けることを検討する。",
-        "データセンターの運用効率向上のために、内部プロセスを見直す。"
+        "データセンター関連企業の長期的な成長戦略を確認する",
+        "AI技術に関する最新トレンドを把握する",
+        "資本支出に関する業界レポートを検討する"
       ],
       "tags": [
         "DC",
