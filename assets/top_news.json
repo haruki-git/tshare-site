@@ -1,124 +1,108 @@
 {
-  "date": "2026-06-03",
-  "generatedAtJST": "2026-06-03T07:15:46.025+09:00",
+  "date": "2026-07-05",
+  "generatedAtJST": "2026-07-05T11:19:41.200+09:00",
   "items": [
     {
-      "url": "https://assetstore.unity.com/packages/3d/environments/server-room-302206",
-      "source": "Unity.com",
-      "publishedAt": "2026-06-01T18:35:09Z",
-      "title": "Server Room by Bright Vision Game",
-      "title_ja": "Bright Vision Gameのサーバールーム",
-      "summary_ja": "Bright Vision Gameが提供するサーバールームパッケージは、Unityの最新バージョンに対応しています。多様なレンダーパイプライン（Built-in、URP、HDRP）に適合し、高品質なテクスチャと低～中ポリゴンのモデルが特徴です。このパッケージはゲーム開発者にとって、リアルな環境を構築するための有用なリソースとなります。",
+      "url": "https://financialpost.com/pmn/business-pmn/largest-us-grid-saw-demand-hit-record-high-thursday-on-heat",
+      "source": "Financial Post",
+      "publishedAt": "2026-07-03T21:02:41Z",
+      "title": "Largest US Grid Saw Demand Hit Record High Thursday on Heat",
+      "title_ja": "米国最大の電力網、木曜日に熱波で需要が記録的高水準に達する",
+      "summary_ja": "米国最大の電力網における電力需要が、熱波の影響で記録的な高水準に達しました。特に中大西洋地域では、気温が摂氏38度を超えたことが背景にあります。データセンターの急増があった中で、電気供給システムはすでに厳しい状況に直面しています。",
       "key_points": [
-        "Unity Version: 2022.3.62f3に対応",
-        "レンダーパイプライン: Built-in / URP / HDRP",
-        "テクスチャ: 2K (2048x2048)のPBRマップ",
-        "ポリゴン数: 低～中ポリゴン",
-        "マテリアル: 21種類",
-        "プレハブが含まれている"
+        "米国最大の電力網で記録的な電力需要。",
+        "中大西洋地域は気温が100°Fを超えた。",
+        "データセンターの急増が電力供給に影響を与えている。"
       ],
       "glossary": [
         {
-          "term": "PBR",
-          "explain_ja": "物理ベースのレンダリング。リアルな素材の表現を可能にする技術。"
+          "term": "電力網",
+          "explain_ja": "電力を供給するためのインフラ体系。"
         },
         {
-          "term": "URP",
-          "explain_ja": "Universal Render Pipeline。Unityの軽量なレンダリングシステム。"
-        },
-        {
-          "term": "HDRP",
-          "explain_ja": "High Definition Render Pipeline。高品質なグラフィックスを提供するUnityのレンダリングシステム。"
+          "term": "データセンター",
+          "explain_ja": "データの保存と管理を行う施設。"
         }
       ],
       "personal_actions": [
-        "Unityの最新バージョンにアップデートする",
-        "PBRマテリアルの設定を確認する",
-        "プロジェクトに必要なプレハブを整理する"
+        "データセンターの運用状況を確認する。",
+        "電力使用量を最適化する方法を検討する。"
       ],
       "tags": [
-        "DC"
+        "その他"
       ]
     },
     {
-      "url": "https://slashdot.org/submission/17347758/nvidia-rtx-spark-comes-to-windows-pcs-with-arm-cpu-rtx-gpu-and-unified-memory",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-06-01T18:30:37Z",
-      "title": "Nvidia RTX Spark Comes to Windows PCs With Arm CPU, RTX GPU, and Unified Memory - Slashdot",
-      "title_ja": "Nvidia RTX Spark、Arm CPUとRTX GPUでWindows PCに登場",
-      "summary_ja": "Nvidiaは新たにArmベースのRTX Sparkチップを発表しました。これは、AIデータセンター向け製品からの移行を示唆するもので、20コアのNvidia Grace CPUと最大6,144のGPUコアを統合しています。スリムなWindowsラップトップやコンパクトなデスクトップPCが今秋に発売予定です。",
+      "url": "https://apnews.com/press-release/business-wire/press-release-8b422357668c4c7fbd834223f6308757",
+      "source": "Associated Press",
+      "publishedAt": "2026-07-03T20:11:37Z",
+      "title": "Metropolitan Stock Exchange of India (MSE) Selects NTT DATA’s Mumbai Data Center to Power Next-Generation Trading Infrastructure",
+      "title_ja": "インドメトロポリタン取引所、NTT DATAのムンバイデータセンターを次世代取引インフラに選定",
+      "summary_ja": "インドメトロポリタン取引所（MSE）は、NTT DATAのムンバイデータセンターを次世代取引インフラに採用することを発表。これは、取引の効率化と迅速なサービス提供を目指すものである。MSEは、SEBI（インド証券取引委員会）によって認可された国立取引所である。",
       "key_points": [
-        "Nvidiaの新しいArmベースのチップ、RTX Sparkが発表された",
-        "最大6,144のBlackwellベースのGPUコアを搭載",
-        "最大128GBの統合LPDDR5xメモリをサポート",
-        "発売予定は秋で、主要パートナーから販売される",
-        "DGX Sparkからのコンシューマー向けリブランドと考えられている"
+        "MSEはNTT DATAのムンバイデータセンターを選定した。",
+        "この選定により次世代取引インフラを構築する。",
+        "NTT DATAはAIとデジタルビジネスサービスのリーダーである。"
       ],
       "glossary": [
         {
-          "term": "RTX Spark",
-          "explain_ja": "Nvidiaが開発したArmベースのチップで、Windows PC向けに設計されている。"
+          "term": "MSE",
+          "explain_ja": "インドにおける国立取引所で、SEBIによって認可されている。"
         },
         {
-          "term": "Grace CPU",
-          "explain_ja": "Nvidiaが開発したArmアーキテクチャに基づくCPUで、高性能コアと中性能コアを融合している。"
-        },
-        {
-          "term": "Blackwell GPU",
-          "explain_ja": "Nvidiaの新しいGPUアーキテクチャで、RTX 50シリーズに用いられている。"
+          "term": "NTT DATA",
+          "explain_ja": "グローバルなAIとデジタルビジネスサービスのリーダー。"
         }
       ],
       "personal_actions": [
-        "新しいNvidia製品の情報を定期的にチェックする",
-        "RTX Spark搭載のPCの仕様を確認し、ニーズに合うか評価する",
-        "秋の発売予定に備えて、予算と必要な機能を検討する"
+        "現在の取引インフラの状況を確認する。",
+        "新しい技術導入の影響を評価する。"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://4sysops.com/archives/intel-unveils-crescent-island-ai-gpu-with-480gb-vram-and-clearwater-forest-cpus/",
-      "source": "4sysops.com",
-      "publishedAt": "2026-06-01T16:14:06Z",
-      "title": "Intel unveils Crescent Island AI GPU with 480GB VRAM and Clearwater Forest CPUs",
-      "title_ja": "インテル、480GB VRAMを搭載したCrescent Island AI GPUとClearwater Forest CPUを発表",
-      "summary_ja": "インテルは新しいCrescent Island AI GPUを発表し、480GBのVRAMを搭載しています。このハードウェアは、伝統的なワークロードとAIワークロードのバランスを取るために設計され、多様なデータ形式をサポートしています。新たなClearwater Forestプロセッサファミリーも同時に発表され、高効率なスループットを実現します。",
+      "url": "https://www.digitaljournal.com/article/how-aravoltas-virtual-plc-helps-brownfield-data-centers-unlock-ai-capacity-faster/",
+      "source": "Digital Journal",
+      "publishedAt": "2026-07-03T15:21:57Z",
+      "title": "How Aravolta’s virtual PLC helps Brownfield data centers unlock AI capacity faster",
+      "title_ja": "AravoltaのバーチャルPLCがブラウンフィールドデータセンターのAI能力を迅速に解放",
+      "summary_ja": "新しいデータセンターの建設が遅延やコミュニティの反発に直面する中、ブラウンフィールド施設がAIキャパシティを迅速に展開する実用的な手段として注目されています。AravoltaのバーチャルPLCは、複数のプラットフォームを統合し、既存設備の効率的な管理を実現します。この技術はデータセンターの運用効率を向上させ、急成長する需要に応じて既存インフラを迅速に最適化できる競争上の利点を提供します。",
       "key_points": [
-        "Crescent Island AI GPUは480GBのVRAMを搭載",
-        "多様なデータ形式をサポートし、高精度から効率的なマイクロスケーリング形式まで対応",
-        "Clearwater Forest CPUは最大288のEコアを持ち、高密度なソリューションを提供",
-        "AIと従来のワークロードの比率が50%に達する見込み",
-        "このリリースは、伝統的なx86処理とAI加速を両立させる専用シリコンへの移行を示す"
+        "ブラウンフィールド施設の利用が進む背景には、新たなデータセンター建設の遅延がある。",
+        "AravoltaのバーチャルPLCは、BMS、EPMS、SCADA、NOC、DCIM機能を統合したシステムを提供。",
+        "このプラットフォームは自動発見機能を用いて、多様な機器を迅速に統合する。",
+        "デプロイメントには通常数日しかかからず、スケーラビリティに優れた設計。",
+        "ブラウンフィールドやモジュラーサイトでの最近の導入実績が効果を証明。",
+        "データセンター業界は、急成長する需要を満たすためにプラグアンドプレイの現実的アプローチにシフトしている。"
       ],
       "glossary": [
         {
-          "term": "AI GPU",
-          "explain_ja": "人工知能（AI）用に最適化されたグラフィックス処理ユニット。"
+          "term": "BMS",
+          "explain_ja": "ビル管理システム（BMS）は、建物の設備を監視・制御するシステム。"
         },
         {
-          "term": "VRAM",
-          "explain_ja": "ビデオRAMは、画像データを保存するために使用されるメモリの一種。"
+          "term": "SCADA",
+          "explain_ja": "監視制御データ取得（SCADA）システムは、遠隔地の設備の監視と制御を行うための技術。"
         },
         {
-          "term": "E-core",
-          "explain_ja": "エフィシェンシーコアは、効率的な処理を行うために設計されたコア。"
+          "term": "DCIM",
+          "explain_ja": "データセンターインフラ管理（DCIM）は、データセンターのインフラを管理するための技術。"
         },
         {
-          "term": "FP64",
-          "explain_ja": "倍精度浮動小数点数フォーマットの一種。"
-        },
-        {
-          "term": "FP4",
-          "explain_ja": "低精度の浮動小数点数フォーマット。"
+          "term": "Modbus",
+          "explain_ja": "Modbusは、産業用機器が通信するための通信プロトコルの一種。"
         }
       ],
       "personal_actions": [
-        "新しいハードウェアの導入についてチーム内で情報を共有する",
-        "AIと伝統的なワークロードのバランスを考慮したアーキテクチャの検討を行う",
-        "性能と効率を最大化するための戦略を見直す"
+        "現在のシステムと接続可能な機器の互換性を確認する。",
+        "新たな技術導入のためのトレーニングを受けることを検討する。",
+        "データセンターの運用効率向上のために、内部プロセスを見直す。"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     }
