@@ -1,106 +1,74 @@
 {
-  "date": "2026-07-06",
-  "generatedAtJST": "2026-07-06T07:15:26.611+09:00",
+  "date": "2026-07-07",
+  "generatedAtJST": "2026-07-07T07:15:25.063+09:00",
   "items": [
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184306774",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-07-04T14:12:19Z",
-      "title": "Meta data center water discharges suspended after contaminating the city's water supply with bacterium — closed-loop cooling system purge spread rare met - Slashdot",
-      "title_ja": "Metaのデータセンター、水源汚染に伴い排水を一時停止",
-      "summary_ja": "Metaは、データセンターの閉鎖型冷却システムの浄化プロセスが原因で、バクテリアによって市の水供給が汚染されたとして、排水を一時停止しました。この事象は市の水質に影響を及ぼし、関係機関が対応に追われています。この問題は、データセンターにおける水資源管理の重要性を再認識させるものとなっています。",
+      "url": "https://www.nextbigfuture.com/2026/07/tesla-will-make-more-from-ai-than-robotaxi.html",
+      "source": "Next Big Future",
+      "publishedAt": "2026-07-05T19:12:52Z",
+      "title": "Tesla Will Make More from AI Than Robotaxi | NextBigFuture.com",
+      "title_ja": "テスラはロボタクシー以上にAIからの収益が期待できる",
+      "summary_ja": "テスラがAIデータセンターと計算能力から得られる収益は、ロボタクシーを上回る可能性がある。AIは、1ギガワットあたり年間500億〜1000億ドルの収益を生成できることが示されており、これはロボタクシーの収益モデルよりも優れたものだ。アメリカの電力網は新たに数十から約100GWのAIデータセンターの負荷を受け入れる余地があり、テスラはその独自の強みを活かしてこれを迅速に展開できる。これにより、テスラのエネルギー事業がさらなる成長を遂げる可能性がある。",
       "key_points": [
-        "Metaのデータセンターが水源汚染を引き起こした",
-        "閉鎖型冷却システムの浄化プロセスが原因",
-        "市の水供給がバクテリアで汚染された",
-        "排水を一時停止し、影響の調査中",
-        "データセンターの水資源管理の重要性の再確認"
+        "AIデータセンターの収益機会はロボタクシーを大きく上回る。",
+        "AIは1ギガワットあたり年間500億〜1000億ドルの収益を生むと言われている。",
+        "アメリカの電力網は新しいAIデータセンターの負荷を受け入れる余地がある。",
+        "テスラはメガポッドやメガブロックを利用して迅速な展開を可能にする。",
+        "テスラのエネルギー事業はAIハードウェアやソフトウェアとの統合が進むことで成長が期待される。"
       ],
       "glossary": [
-        {
-          "term": "閉鎖型冷却システム",
-          "explain_ja": "液体を閉じ込めたシステムで、外部に水を供給せず循環する方式の冷却システム。"
-        },
-        {
-          "term": "バクテリア",
-          "explain_ja": "微生物の一種で、環境に広く分布し、一部は病原性を持つ。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターや工場の近隣に住んでいる場合は、水質の監視を行う",
-        "浄水器や水質テストキットで家庭の水を確認する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.tomshardware.com/tech-industry/data-centers/cheyenne-suspends-data-center-fill-and-flush-and-closed-loop-discharges-after-meta-contractor-contaminated-its-reuse-water-system",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-07-04T14:02:22Z",
-      "title": "Meta data center water discharges suspended after contaminating the city's water supply with bacterium — closed-loop cooling system purge spread rare metal-resistant bacterium in Cheyenne’s water system",
-      "title_ja": "Metaのデータセンター、バクテリアによる市水供給汚染で水排出を一時停止",
-      "summary_ja": "Metaのデータセンターは、冷却システムのパージが珍しい金属耐性バクテリアをシェイアンの水道システムに広めたため、水の排出を一時停止しました。この冷却ループの充填・排水は、システムの運転前にパイプ内の異物を除去するための初期作業です。この汚染により、市の水供給に影響が出る可能性があります。",
-      "key_points": [
-        "Metaのデータセンターがバクテリアで市の水供給を汚染",
-        "冷却システムの充填・排水プロセスが問題を引き起こした",
-        "珍しい金属耐性バクテリアが広がった",
-        "水の排出は一時停止されている"
-      ],
-      "glossary": [
-        {
-          "term": "冷却ループ",
-          "explain_ja": "データセンターなどで機器の冷却を行う循環水システムのこと。"
-        },
-        {
-          "term": "充填・排水",
-          "explain_ja": "冷却システムの初期作業で、水を循環させて異物を除去する工程。"
-        },
-        {
-          "term": "バクテリア",
-          "explain_ja": "微生物の一種で、特定条件下で繁殖し水質汚染の原因となることがある。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの冷却システムの管理手順を確認する",
-        "バクテリア検出に関する安全対策を見直す",
-        "市の水質検査結果について最新情報を追跡する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://247wallst.com/investing/2026/07/04/3-ai-data-center-power-stocks-to-buy-in-july/",
-      "source": "24/7 Wall St.",
-      "publishedAt": "2026-07-04T12:30:57Z",
-      "title": "3 AI Data Center Power Stocks to Buy in July",
-      "title_ja": "7月に購入すべきAIデータセンター関連株3選",
-      "summary_ja": "2026年のハイパースケーラーAIの資本支出が6700億ドルから7500億ドルに引き上げられ、2027年には1兆ドルを超える見込みです。この資金はデータセンターの拡張やAI技術の進化に大きく寄与するでしょう。投資家は今後の成長が期待される企業に注目しています。",
-      "key_points": [
-        "2026年のハイパースケーラーAIの資本支出が7500億ドルに上昇",
-        "2027年には資本支出が1兆ドルを超える予測",
-        "データセンターの拡張が必要とされている",
-        "AI技術の進化に資金が投入される",
-        "投資家が成長企業に注目"
-      ],
-      "glossary": [
-        {
-          "term": "ハイパースケーラー",
-          "explain_ja": "膨大なデータ量を扱うための大規模なデータセンターを運営する企業。"
-        },
         {
           "term": "AI",
-          "explain_ja": "人工知能の略称で、機械が人間の知能を模倣する技術。"
+          "explain_ja": "人工知能（Artificial Intelligence）の略で、人間の知的作業を模倣する技術を指す。"
+        },
+        {
+          "term": "VPP",
+          "explain_ja": "バーチャルパワープラント（Virtual Power Plant）の略で、分散された発電設備を統制して電力供給を最適化するシステム。"
+        },
+        {
+          "term": "Megapods / Megablocks",
+          "explain_ja": "急速展開可能なモジュール式のユニットで、大規模なデータセンターや電力インフラを構築するために使用される。"
         }
       ],
       "personal_actions": [
-        "データセンター関連企業の長期的な成長戦略を確認する",
-        "AI技術に関する最新トレンドを把握する",
-        "資本支出に関する業界レポートを検討する"
+        "自社のデータセンターのAI活用の可能性を評価する。",
+        "エネルギー管理システムの向上方法を検討する。",
+        "新しい技術動向に関する研修を企画する。"
       ],
       "tags": [
-        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://oilprice.com/Energy/Natural-Gas/The-Era-of-Cheap-US-Natural-Gas-May-Be-Coming-to-an-End.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-07-05T19:00:00Z",
+      "title": "The Era of Cheap U.S. Natural Gas May Be Coming to an End",
+      "title_ja": "米国の安価な天然ガス時代が終わる可能性",
+      "summary_ja": "米国の天然ガス価格は2035年まで上昇する見込みである。これは、低価格のヘンリー・ハブ価格が続いた10年間に続くもので、AIデータセンターの急増と米国のLNG輸出インフラの拡大が需要を支えるからだ。これにより、エネルギー市場全体に大きな影響を与えることが予想される。",
+      "key_points": [
+        "米国の天然ガス価格が2035年まで上昇する見込み",
+        "過去10年間の低価格からの転換",
+        "AIデータセンターのブームが強い需要を生む",
+        "米国のLNG輸出インフラが拡大している",
+        "エネルギー市場への影響が懸念される"
+      ],
+      "glossary": [
+        {
+          "term": "LNG",
+          "explain_ja": "液化天然ガス（Liquid Natural Gas）の略で、冷却して液体化した天然ガス。"
+        },
+        {
+          "term": "Henry Hub",
+          "explain_ja": "米国の天然ガス市場における代表的な価格指標で、ルイジアナ州の取引所の名称。"
+        }
+      ],
+      "personal_actions": [
+        "自社のエネルギーコストを見直す",
+        "長期的な資源供給計画を検討する",
+        "AI関連プロジェクトのエネルギー消費を評価する"
+      ],
+      "tags": [
         "AI"
       ]
     }
