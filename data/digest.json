@@ -1,72 +1,98 @@
 {
-  "date": "2026-07-08",
-  "generatedAtJST": "2026-07-08T07:15:27.843+09:00",
+  "date": "2026-07-09",
+  "generatedAtJST": "2026-07-09T07:15:22.206+09:00",
   "items": [
     {
-      "url": "https://uk.pcmag.com/ai/166033/wisconsin-residents-sue-microsoft-over-noisy-nightmare-data-center",
-      "source": "PCMag.com",
-      "publishedAt": "2026-07-06T18:41:44Z",
-      "title": "Wisconsin Residents Sue Microsoft Over Noisy, 'Nightmare' Data Center",
-      "title_ja": "ウィスコンシン州住民、マイクロソフトを相手に「騒音の悪夢」データセンターで訴訟",
-      "summary_ja": "ウィスコンシン州の住民がマイクロソフトに対し、近隣のデータセンターからの「過剰な騒音」が原因で集団訴訟を提起した。このデータセンターは先月完成し、同社はこれを「現代の驚異」としているが、住民らはディーゼル発電機や冷却システムから発生する騒音が日常的な問題となっていると主張している。この訴訟は、全国で増加するデータセンターに関する騒音問題や環境訴訟の一部である。",
+      "url": "https://4sysops.com/archives/nvidia-kyber-ai-server-rack-delayed-to-2028-due-to-manufacturing-hurdles/",
+      "source": "4sysops.com",
+      "publishedAt": "2026-07-07T18:48:13Z",
+      "title": "Nvidia Kyber AI server rack delayed to 2028 due to manufacturing hurdles",
+      "title_ja": "NvidiaのKyber AIサーバーラックは製造の課題により2028年に遅延",
+      "summary_ja": "Nvidiaは次世代のKyber NVL144 AIサーバーラックの発売を2028年まで遅らせると報じられています。この遅延は、当初の2026年または2027年の発売予定からの重大な推延です。製造における複雑なプリント基板（PCB）の技術的な課題が原因とされています。",
       "key_points": [
-        "ウィスコンシン州の住民がマイクロソフトを相手に集団訴訟を提起。",
-        "データセンターからの騒音が「常に存在し、広がっている」との主張。",
-        "訴訟は高度な「低周波音」に関する問題を提起している。",
-        "住民は騒音のために生活の質が低下したと訴えている。",
-        "マイクロソフトは地域との良好な関係を大切にしていると述べている。"
+        "NvidiaはKyber NVL144 AIサーバーラックの発売を2028年に延期。",
+        "元々の発売予定は2026年または2027年だった。",
+        "製造上の技術的な困難が主な要因。"
       ],
       "glossary": [
         {
-          "term": "クラスアクション訴訟",
-          "explain_ja": "多数の原告が共同で訴訟を提起する法的手続き。"
+          "term": "PC",
+          "explain_ja": "プリント基板（PCB）は電子機器の基盤であり、チップやコンポーネントが実装される。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの処理と保管のための設備。通常、大規模なサーバーを含む。"
-        },
-        {
-          "term": "低周波音",
-          "explain_ja": "20Hz未満の低い周波数の音で、通常の騒音測定では測定されにくい。"
+          "term": "AIサーバー",
+          "explain_ja": "AIタスク専用に設計されたサーバーで、高度な演算能力を備えている。"
         }
       ],
       "personal_actions": [
-        "近隣のデータセンターに関する騒音や影響を調査する。",
-        "騒音問題について、地元のコミュニティと意見交換を行う。",
-        "データセンターの運営者と直接対話する機会を設ける。"
+        "最新のNvidia製品の計画に関する情報を定期的に確認する。",
+        "製造及び技術的な課題についてのニュースを追いかける。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://cryptobriefing.com/new-jersey-data-center-tariff-bill/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-07-06T16:30:42Z",
-      "title": "New Jersey passes bill forcing large data centers to pay their own way on the power grid",
-      "title_ja": "ニュージャージー州、大規模データセンターに電力網のコスト負担を義務付ける法案を可決",
-      "summary_ja": "ニュージャージー州が、大規模データセンターに対して自身の電力網コストを負担させる法案を成立させました。この法案は、持続可能なエネルギー使用と財政的説明責任を強調し、AIおよび暗号通貨セクターに影響を及ぼす可能性があります。これにより、データセンターへの投資が再構築されることが予想されます。",
+      "url": "https://4sysops.com/archives/ibm-expands-mainframe-portfolio-with-rack-mounted-z17-and-linuxone-5-models/",
+      "source": "4sysops.com",
+      "publishedAt": "2026-07-07T17:45:36Z",
+      "title": "IBM expands mainframe portfolio with rack-mounted z17 and LinuxONE 5 models",
+      "title_ja": "IBM、ラックマウント型のz17およびLinuxONE 5モデルを発表",
+      "summary_ja": "IBMは、z17およびLinuxONE Rockhopper 5を含むメインフレームラインの拡充を発表した。新しいシングルフレームおよびラックマウント型の構成が特徴で、業界標準のラックに適合するよう設計されている。これにより、組織はメインフレームを同じ施設内に配置することが可能になる。",
       "key_points": [
-        "ニュージャージー州が大規模データセンターに電力コスト負担を義務化。",
-        "法案は持続可能なエネルギー使用を促進。",
-        "財政的説明責任の強化が求められる。",
-        "AIおよび暗号通貨セクターに影響を与える可能性。",
-        "データセンター投資の動向を変える可能性がある。"
+        "IBMがz17とLinuxONE Rockhopper 5モデルを発表",
+        "新しいラックマウント型の構成が追加",
+        "業界標準のラックに適合する設計",
+        "メインフレームの配置が容易に",
+        "品質とエネルギー効率が向上"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存・管理・配信するための施設。"
+          "term": "z17",
+          "explain_ja": "IBMの最新のメインフレームモデルで、高性能とセキュリティを提供する。"
         },
         {
-          "term": "持続可能なエネルギー",
-          "explain_ja": "環境に優しく、長期的に利用可能なエネルギー源。"
+          "term": "LinuxONE",
+          "explain_ja": "IBMのLinuxオペレーティングシステムを搭載したメインフレーム。"
         }
       ],
       "personal_actions": [
-        "新法案の影響を受けるデータセンターの状況を確認する。",
-        "持続可能なエネルギーの利用状況をチェックする。",
-        "財務管理の方針を見直す。"
+        "新しいメインフレームモデルについての情報を社内で共有する",
+        "自社のインフラにおけるラックマウントのニーズを再評価する",
+        "IBMの新モデルに関する技術セミナーを検討する"
+      ],
+      "tags": [
+        "インフラ"
+      ]
+    },
+    {
+      "url": "https://www.tomshardware.com/tech-industry/power-and-water-lag-the-fabs-in-south-koreas-880-billion-chip-and-ai-plan",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-07-07T17:27:41Z",
+      "title": "South Korea's $880 billion chip and AI plan faces big power and water challenges — a single megacluster requires a quarter of Seoul's total power demand",
+      "title_ja": "韓国の8800億ドルの半導体とAI計画、電力と水資源の課題に直面",
+      "summary_ja": "韓国の8800億ドルの半導体およびAI計画が大規模な電力と水の課題に直面しています。特に、1つのメガクラスターはソウル全体の電力需要の25%を必要とするという問題があります。この計画は、企業の設備投資を主な資金源としており、半導体プログラムとAIデータセンターおよびロボティクスへの投資が含まれています。",
+      "key_points": [
+        "韓国の総計画は₩1,350兆（8800億ドル）と推定される。",
+        "半導体プログラムには5200億ドルが含まれる。",
+        "1つのメガクラスターはソウル全体の電力の25%を消費する。",
+        "計画は企業の設備投資によって支えられている。",
+        "水資源の確保も大きな課題となっている。"
+      ],
+      "glossary": [
+        {
+          "term": "半導体",
+          "explain_ja": "電気信号を制御するための材料で、電子機器の動作に不可欠。"
+        },
+        {
+          "term": "メガクラスター",
+          "explain_ja": "大規模なデータセンターや製造施設の集まりで、集中した資源とインフラを持つ。"
+        }
+      ],
+      "personal_actions": [
+        "電力消費の最適化を検討する。",
+        "データセンターのエネルギー効率向上について学ぶ。"
       ],
       "tags": [
         "DC",
