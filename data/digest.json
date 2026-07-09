@@ -1,32 +1,39 @@
 {
-  "date": "2026-07-09",
-  "generatedAtJST": "2026-07-09T07:15:22.206+09:00",
+  "date": "2026-07-10",
+  "generatedAtJST": "2026-07-10T07:15:27.756+09:00",
   "items": [
     {
-      "url": "https://4sysops.com/archives/nvidia-kyber-ai-server-rack-delayed-to-2028-due-to-manufacturing-hurdles/",
-      "source": "4sysops.com",
-      "publishedAt": "2026-07-07T18:48:13Z",
-      "title": "Nvidia Kyber AI server rack delayed to 2028 due to manufacturing hurdles",
-      "title_ja": "NvidiaのKyber AIサーバーラックは製造の課題により2028年に遅延",
-      "summary_ja": "Nvidiaは次世代のKyber NVL144 AIサーバーラックの発売を2028年まで遅らせると報じられています。この遅延は、当初の2026年または2027年の発売予定からの重大な推延です。製造における複雑なプリント基板（PCB）の技術的な課題が原因とされています。",
+      "url": "https://cryptobriefing.com/meta-alberta-data-center-ai-crypto-impact/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-07-08T20:38:07Z",
+      "title": "Meta’s C$13B Alberta data center signals the AI infrastructure arms race crypto miners should watch",
+      "title_ja": "メタの130億カナダドルのアルバータデータセンターがもたらすAIインフラ競争の影響",
+      "summary_ja": "メタによるアルバータ州のデータセンターへの130億カナダドルの投資は、エネルギー市場を再構築し、暗号マイナーに影響を与える可能性がある。これにより、電力の供給と価格のダイナミクスが変化することが予測される。この動きは、AIインフラの競争が激化していることを示しており、暗号業界はこれに注意を払うべきである。",
       "key_points": [
-        "NvidiaはKyber NVL144 AIサーバーラックの発売を2028年に延期。",
-        "元々の発売予定は2026年または2027年だった。",
-        "製造上の技術的な困難が主な要因。"
+        "メタがアルバータ州に130億カナダドルを投資。",
+        "このデータセンターはAIインフラの競争を引き起こす。",
+        "エネルギー市場への影響が予想され、電力供給と価格が変化する。",
+        "暗号マイナーはこの変化に注目する必要がある。",
+        "競争の激化が業界全体に影響を及ぼす可能性あり。"
       ],
       "glossary": [
         {
-          "term": "PC",
-          "explain_ja": "プリント基板（PCB）は電子機器の基盤であり、チップやコンポーネントが実装される。"
+          "term": "データセンター",
+          "explain_ja": "データやアプリケーションを集中的に保管・管理する施設。"
         },
         {
-          "term": "AIサーバー",
-          "explain_ja": "AIタスク専用に設計されたサーバーで、高度な演算能力を備えている。"
+          "term": "AIインフラ",
+          "explain_ja": "人工知能を支えるための基盤技術や環境。"
+        },
+        {
+          "term": "暗号マイナー",
+          "explain_ja": "暗号通貨の取引を検証・記録するためにコンピュータリソースを使用する個人または企業。"
         }
       ],
       "personal_actions": [
-        "最新のNvidia製品の計画に関する情報を定期的に確認する。",
-        "製造及び技術的な課題についてのニュースを追いかける。"
+        "エネルギー供給の状況を定期的に確認する。",
+        "電力の価格動向を追跡し、戦略的な計画を立てる。",
+        "業界の最新情報をチェックし、変化に対応できるよう備える。"
       ],
       "tags": [
         "DC",
@@ -34,65 +41,71 @@
       ]
     },
     {
-      "url": "https://4sysops.com/archives/ibm-expands-mainframe-portfolio-with-rack-mounted-z17-and-linuxone-5-models/",
-      "source": "4sysops.com",
-      "publishedAt": "2026-07-07T17:45:36Z",
-      "title": "IBM expands mainframe portfolio with rack-mounted z17 and LinuxONE 5 models",
-      "title_ja": "IBM、ラックマウント型のz17およびLinuxONE 5モデルを発表",
-      "summary_ja": "IBMは、z17およびLinuxONE Rockhopper 5を含むメインフレームラインの拡充を発表した。新しいシングルフレームおよびラックマウント型の構成が特徴で、業界標準のラックに適合するよう設計されている。これにより、組織はメインフレームを同じ施設内に配置することが可能になる。",
+      "url": "https://financialpost.com/globe-newswire/capital-power-enters-long-term-energy-supply-agreement-with-meta-in-alberta",
+      "source": "Financial Post",
+      "publishedAt": "2026-07-08T19:57:31Z",
+      "title": "Capital Power Enters Long-term Energy Supply Agreement with Meta in Alberta",
+      "title_ja": "キャピタルパワー、アルバータ州のメタとの長期エネルギー供給契約を締結",
+      "summary_ja": "キャピタルパワーは、アルバータ州のデータセンター向けにメタとの250 MWの長期エネルギー供給契約を締結しました。これにより、キャピタルパワーは北米のAI経済の成長を支える重要なエネルギーパートナーとしての地位を確立しました。契約は、持続可能なエネルギー供給を促進し、地域経済にもプラスの影響を与えると期待されています。",
       "key_points": [
-        "IBMがz17とLinuxONE Rockhopper 5モデルを発表",
-        "新しいラックマウント型の構成が追加",
-        "業界標準のラックに適合する設計",
-        "メインフレームの配置が容易に",
-        "品質とエネルギー効率が向上"
+        "キャピタルパワーがメタとの250 MWのエネルギー契約を締結",
+        "契約によりAIデータセンターの需要に応える",
+        "持続可能なエネルギー供給を強化する狙い",
+        "地域経済への貢献が期待される",
+        "キャピタルパワーはハイパースケールパートナーとして位置づけられる"
       ],
       "glossary": [
         {
-          "term": "z17",
-          "explain_ja": "IBMの最新のメインフレームモデルで、高性能とセキュリティを提供する。"
+          "term": "キャピタルパワー",
+          "explain_ja": "カナダのエネルギー会社で、発電、エネルギー供給を行う。"
         },
         {
-          "term": "LinuxONE",
-          "explain_ja": "IBMのLinuxオペレーティングシステムを搭載したメインフレーム。"
+          "term": "メタ",
+          "explain_ja": "Facebookの親会社で、さまざまなデジタルサービスやプラットフォームを提供している。"
+        },
+        {
+          "term": "エネルギー供給契約",
+          "explain_ja": "特定の量のエネルギーを供給する契約。"
         }
       ],
       "personal_actions": [
-        "新しいメインフレームモデルについての情報を社内で共有する",
-        "自社のインフラにおけるラックマウントのニーズを再評価する",
-        "IBMの新モデルに関する技術セミナーを検討する"
+        "自社のエネルギー供給契約の見直しを行う",
+        "持続可能なエネルギーの導入を検討する",
+        "AI関連プロジェクトのエネルギー消費を評価する"
       ],
       "tags": [
-        "インフラ"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.tomshardware.com/tech-industry/power-and-water-lag-the-fabs-in-south-koreas-880-billion-chip-and-ai-plan",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-07-07T17:27:41Z",
-      "title": "South Korea's $880 billion chip and AI plan faces big power and water challenges — a single megacluster requires a quarter of Seoul's total power demand",
-      "title_ja": "韓国の8800億ドルの半導体とAI計画、電力と水資源の課題に直面",
-      "summary_ja": "韓国の8800億ドルの半導体およびAI計画が大規模な電力と水の課題に直面しています。特に、1つのメガクラスターはソウル全体の電力需要の25%を必要とするという問題があります。この計画は、企業の設備投資を主な資金源としており、半導体プログラムとAIデータセンターおよびロボティクスへの投資が含まれています。",
+      "url": "https://www.channelnewsasia.com/business/meta-build-c13-billion-alberta-data-center-its-first-in-canada-6242116",
+      "source": "CNA",
+      "publishedAt": "2026-07-08T19:32:22Z",
+      "title": "Meta to build C$13 billion Alberta data center, its first in Canada",
+      "title_ja": "メタ、カナダ初の130億カナダドルのデータセンターをアルバータに建設",
+      "summary_ja": "メタは、アルバータに130億カナダドルのデータセンターを建設することを発表しました。これは同社にとってカナダ初のデータセンターであり、急速に拡大するAI市場への対応を目的としています。この1ギガワットのデータセンターは、同社のコンピューティング能力の向上に寄与する予定です。",
       "key_points": [
-        "韓国の総計画は₩1,350兆（8800億ドル）と推定される。",
-        "半導体プログラムには5200億ドルが含まれる。",
-        "1つのメガクラスターはソウル全体の電力の25%を消費する。",
-        "計画は企業の設備投資によって支えられている。",
-        "水資源の確保も大きな課題となっている。"
+        "メタがカナダに初のデータセンターを建設する",
+        "投資額は130億カナダドル",
+        "データセンターは1ギガワットの容量を持つ",
+        "急成長するAI市場への対応が目的",
+        "建設地はアルバータ州中央部"
       ],
       "glossary": [
         {
-          "term": "半導体",
-          "explain_ja": "電気信号を制御するための材料で、電子機器の動作に不可欠。"
+          "term": "データセンター",
+          "explain_ja": "データ処理・保存のための施設。企業やサービスプロバイダーが情報を管理する。"
         },
         {
-          "term": "メガクラスター",
-          "explain_ja": "大規模なデータセンターや製造施設の集まりで、集中した資源とインフラを持つ。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）、機械が人間の知的活動を模倣する技術。"
         }
       ],
       "personal_actions": [
-        "電力消費の最適化を検討する。",
-        "データセンターのエネルギー効率向上について学ぶ。"
+        "地域におけるデータセンター建設の影響を確認する",
+        "AI技術の導入を検討する",
+        "メタの発表に関する公式情報をフォローする"
       ],
       "tags": [
         "DC",
