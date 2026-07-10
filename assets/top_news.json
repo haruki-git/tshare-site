@@ -1,115 +1,104 @@
 {
-  "date": "2026-07-10",
-  "generatedAtJST": "2026-07-10T07:15:27.756+09:00",
+  "date": "2026-07-11",
+  "generatedAtJST": "2026-07-11T07:15:24.027+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/meta-alberta-data-center-ai-crypto-impact/",
+      "url": "https://cryptobriefing.com/carlyle-sells-data-center-power-eqt/",
       "source": "Crypto Briefing",
-      "publishedAt": "2026-07-08T20:38:07Z",
-      "title": "Meta’s C$13B Alberta data center signals the AI infrastructure arms race crypto miners should watch",
-      "title_ja": "メタの130億カナダドルのアルバータデータセンターがもたらすAIインフラ競争の影響",
-      "summary_ja": "メタによるアルバータ州のデータセンターへの130億カナダドルの投資は、エネルギー市場を再構築し、暗号マイナーに影響を与える可能性がある。これにより、電力の供給と価格のダイナミクスが変化することが予測される。この動きは、AIインフラの競争が激化していることを示しており、暗号業界はこれに注意を払うべきである。",
+      "publishedAt": "2026-07-09T20:10:22Z",
+      "title": "Carlyle sells $2.6B data center power unit to EQT for fivefold return",
+      "title_ja": "カーライル、260億ドルのデータセンター電力ユニットをEQTに売却、5倍のリターンを実現",
+      "summary_ja": "カーライルがEQTにデータセンターの電力ユニットを260億ドルで売却しました。これにより、持続可能なエネルギーに対する需要が高まっていることが示されていますが、過剰建設のリスクが今後のリターンに影響を及ぼす可能性があります。特にデータセンター業界は、エネルギー効率の向上が求められています。",
       "key_points": [
-        "メタがアルバータ州に130億カナダドルを投資。",
-        "このデータセンターはAIインフラの競争を引き起こす。",
-        "エネルギー市場への影響が予想され、電力供給と価格が変化する。",
-        "暗号マイナーはこの変化に注目する必要がある。",
-        "競争の激化が業界全体に影響を及ぼす可能性あり。"
+        "カーライルはEQTに260億ドルで電力ユニットを売却。",
+        "この取引は、5倍のリターンを実現。",
+        "データセンター業界では持続可能なエネルギーの需要が増加中。",
+        "過剰建設のリスクが今後のリターンに影響を与える可能性。",
+        "エネルギー効率の向上がデータセンターにとって重要な課題。"
       ],
       "glossary": [
         {
+          "term": "EQT",
+          "explain_ja": "EQTは米国のエネルギー投資会社であり、様々なエネルギー関連資産を扱っている。"
+        },
+        {
           "term": "データセンター",
-          "explain_ja": "データやアプリケーションを集中的に保管・管理する施設。"
+          "explain_ja": "データセンターは、サーバーやストレージシステムを集中管理する施設であり、クラウドサービスに利用される。"
         },
         {
-          "term": "AIインフラ",
-          "explain_ja": "人工知能を支えるための基盤技術や環境。"
-        },
-        {
-          "term": "暗号マイナー",
-          "explain_ja": "暗号通貨の取引を検証・記録するためにコンピュータリソースを使用する個人または企業。"
+          "term": "持続可能なエネルギー",
+          "explain_ja": "持続可能なエネルギーは、再生可能な資源に基づいたエネルギーであり、環境への影響が少ない。"
         }
       ],
       "personal_actions": [
-        "エネルギー供給の状況を定期的に確認する。",
-        "電力の価格動向を追跡し、戦略的な計画を立てる。",
-        "業界の最新情報をチェックし、変化に対応できるよう備える。"
+        "データセンターのエネルギー効率向上について社内での取り組みを確認する。",
+        "持続可能なエネルギーの使用状況を見直し、改善できる点を特定する。",
+        "過剰建設のリスクを考慮し、プロジェクトのスケジュールを再評価する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://financialpost.com/globe-newswire/capital-power-enters-long-term-energy-supply-agreement-with-meta-in-alberta",
-      "source": "Financial Post",
-      "publishedAt": "2026-07-08T19:57:31Z",
-      "title": "Capital Power Enters Long-term Energy Supply Agreement with Meta in Alberta",
-      "title_ja": "キャピタルパワー、アルバータ州のメタとの長期エネルギー供給契約を締結",
-      "summary_ja": "キャピタルパワーは、アルバータ州のデータセンター向けにメタとの250 MWの長期エネルギー供給契約を締結しました。これにより、キャピタルパワーは北米のAI経済の成長を支える重要なエネルギーパートナーとしての地位を確立しました。契約は、持続可能なエネルギー供給を促進し、地域経済にもプラスの影響を与えると期待されています。",
+      "url": "https://timesofindia.indiatimes.com/city/ahmedabad/dholera-set-to-be-worlds-largest-data-centre-city-gujarat-dycm-harsh-sanghavi/articleshow/132297094.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-07-09T19:00:11Z",
+      "title": "Dholera set to be world’s largest data centre city: Gujarat DyCM Harsh Sanghavi",
+      "title_ja": "ダホラが世界最大のデータセンター都市に：グジャラート副首相ハルシュ・サンガビ",
+      "summary_ja": "グジャラート州はダホラを世界最大のデータセンター都市として発展させる計画を立てています。このプロジェクトは、ハイパースケールの能力をターゲットにしており、近く空港と鉄道が開設されることが支えとなります。この取り組みにより、インフラ整備が進むことで地域の経済に大きな影響を与えると期待されています。",
       "key_points": [
-        "キャピタルパワーがメタとの250 MWのエネルギー契約を締結",
-        "契約によりAIデータセンターの需要に応える",
-        "持続可能なエネルギー供給を強化する狙い",
-        "地域経済への貢献が期待される",
-        "キャピタルパワーはハイパースケールパートナーとして位置づけられる"
+        "グジャラート州がダホラをデータセンター都市として開発",
+        "ターゲットはハイパースケール能力とGCCs",
+        "空港と鉄道の新設が計画されている"
       ],
       "glossary": [
         {
-          "term": "キャピタルパワー",
-          "explain_ja": "カナダのエネルギー会社で、発電、エネルギー供給を行う。"
+          "term": "GCCs",
+          "explain_ja": "ガバメント・クラウド・センターの略で、政府が管理するデータセンターを指す。"
         },
         {
-          "term": "メタ",
-          "explain_ja": "Facebookの親会社で、さまざまなデジタルサービスやプラットフォームを提供している。"
-        },
-        {
-          "term": "エネルギー供給契約",
-          "explain_ja": "特定の量のエネルギーを供給する契約。"
+          "term": "ハイパースケール",
+          "explain_ja": "大規模なデータ処理能力を持つコンピュータシステムや設備を指す。"
         }
       ],
       "personal_actions": [
-        "自社のエネルギー供給契約の見直しを行う",
-        "持続可能なエネルギーの導入を検討する",
-        "AI関連プロジェクトのエネルギー消費を評価する"
+        "データセンターの新設計画に関連する地域のニュースをフォローする",
+        "新しいインフラに関する情報を収集し、ビジネスチャンスを検討する"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "その他"
       ]
     },
     {
-      "url": "https://www.channelnewsasia.com/business/meta-build-c13-billion-alberta-data-center-its-first-in-canada-6242116",
-      "source": "CNA",
-      "publishedAt": "2026-07-08T19:32:22Z",
-      "title": "Meta to build C$13 billion Alberta data center, its first in Canada",
-      "title_ja": "メタ、カナダ初の130億カナダドルのデータセンターをアルバータに建設",
-      "summary_ja": "メタは、アルバータに130億カナダドルのデータセンターを建設することを発表しました。これは同社にとってカナダ初のデータセンターであり、急速に拡大するAI市場への対応を目的としています。この1ギガワットのデータセンターは、同社のコンピューティング能力の向上に寄与する予定です。",
+      "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarats-data-centre-policy-woos-hyperscalers-targets-7-5gw-capacity/articleshow/132297084.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-07-09T18:59:50Z",
+      "title": "Gujarat’s data centre policy woos hyperscalers, targets 7.5GW capacity",
+      "title_ja": "グジャラート州のデータセンター政策がハイパースケーラーを誘致、7.5GWの容量を目指す",
+      "summary_ja": "グジャラート州は、データセンターの新政策を発表し、7.5GWの容量を目標に掲げています。この政策は、20年間の電力およびSGSTのインセンティブを提供し、Dholera地域には2.5%の資本補助金が設定されています。これにより、州は投資を促進し、地域経済の活性化を図る狙いがあります。",
       "key_points": [
-        "メタがカナダに初のデータセンターを建設する",
-        "投資額は130億カナダドル",
-        "データセンターは1ギガワットの容量を持つ",
-        "急成長するAI市場への対応が目的",
-        "建設地はアルバータ州中央部"
+        "グジャラート州のデータセンター政策2026-29は7.5GWの容量を目指している。",
+        "政策には6兆ルピーの投資目標が設定されている。",
+        "20年間の電力とSGSTのインセンティブを提供する。",
+        "Dholera地域への2.5%の資本補助金が含まれている。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データ処理・保存のための施設。企業やサービスプロバイダーが情報を管理する。"
+          "term": "SGST",
+          "explain_ja": "州ごとに課税される消費税の一種で、スムーズな流通を促進するために導入されている。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）、機械が人間の知的活動を模倣する技術。"
+          "term": "ハイパースケーラー",
+          "explain_ja": "データセンターを運営し、大規模なクラウドサービスを提供する企業を指す。"
         }
       ],
       "personal_actions": [
-        "地域におけるデータセンター建設の影響を確認する",
-        "AI技術の導入を検討する",
-        "メタの発表に関する公式情報をフォローする"
+        "現在のデータセンターのリソース状況を把握し、必要な設備投資を検討する。",
+        "電力及び税インセンティブの詳細を確認し、メリットを活用するための戦略を立てる。",
+        "新政策に基づく投資機会を調査し、地域内の競争力を高めるための準備をする。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     }
   ]
