@@ -1,104 +1,124 @@
 {
-  "date": "2026-07-11",
-  "generatedAtJST": "2026-07-11T07:15:24.027+09:00",
+  "date": "2026-07-12",
+  "generatedAtJST": "2026-07-12T07:15:37.757+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/carlyle-sells-data-center-power-eqt/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-07-09T20:10:22Z",
-      "title": "Carlyle sells $2.6B data center power unit to EQT for fivefold return",
-      "title_ja": "カーライル、260億ドルのデータセンター電力ユニットをEQTに売却、5倍のリターンを実現",
-      "summary_ja": "カーライルがEQTにデータセンターの電力ユニットを260億ドルで売却しました。これにより、持続可能なエネルギーに対する需要が高まっていることが示されていますが、過剰建設のリスクが今後のリターンに影響を及ぼす可能性があります。特にデータセンター業界は、エネルギー効率の向上が求められています。",
+      "url": "https://en.antaranews.com/news/422217/investors-eye-13-gw-data-center-expansion-in-indonesia",
+      "source": "Antaranews.com",
+      "publishedAt": "2026-07-10T19:43:42Z",
+      "title": "Investors eye 1.3 GW data center expansion in Indonesia",
+      "title_ja": "投資家がインドネシアにおける1.3 GWのデータセンター拡張に注目",
+      "summary_ja": "インドネシアの経済調整大臣エアランガ・ハルタルトが、グローバル投資家が合計1.3 GWのデータセンター建設に強い関心を示していることを発表しました。現在、同国のデータセンターの運用能力は約580 MWであり、拡張プロジェクトへの投資は150億〜200億ドルと見込まれています。Nvidiaがオーストラリアのパートナーと共に市場に参入する意向を持ち、デジタルインフラの成長を支援するための人材育成が進められています。",
       "key_points": [
-        "カーライルはEQTに260億ドルで電力ユニットを売却。",
-        "この取引は、5倍のリターンを実現。",
-        "データセンター業界では持続可能なエネルギーの需要が増加中。",
-        "過剰建設のリスクが今後のリターンに影響を与える可能性。",
-        "エネルギー効率の向上がデータセンターにとって重要な課題。"
+        "インドネシア政府はデータセンターの運用能力を580 MWから1.3 GWに拡張予定。",
+        "約150億〜200億ドルの追加投資管が見込まれている。",
+        "Nvidiaがオーストラリアのパートナーと共同で市場参入を計画。",
+        "ほとんどのビッグテック企業がカラワンでデータセンターを開発・拡張する予定。",
+        "政府は人材育成策を進めており、1万5000人のエンジニアをArmのエコシステムに統合する計画がある。"
       ],
       "glossary": [
-        {
-          "term": "EQT",
-          "explain_ja": "EQTは米国のエネルギー投資会社であり、様々なエネルギー関連資産を扱っている。"
-        },
         {
           "term": "データセンター",
-          "explain_ja": "データセンターは、サーバーやストレージシステムを集中管理する施設であり、クラウドサービスに利用される。"
+          "explain_ja": "データを集約、管理、保存するための施設。"
         },
         {
-          "term": "持続可能なエネルギー",
-          "explain_ja": "持続可能なエネルギーは、再生可能な資源に基づいたエネルギーであり、環境への影響が少ない。"
+          "term": "AI（人工知能）",
+          "explain_ja": "コンピュータが人間の知能を模倣する技術。"
+        },
+        {
+          "term": "Nvidia",
+          "explain_ja": "米国のテクノロジー企業で、主にGPUを製造している。"
+        },
+        {
+          "term": "Arm Ltd.",
+          "explain_ja": "イギリスの半導体企業で、プロセッサーの設計を行っている。"
         }
       ],
       "personal_actions": [
-        "データセンターのエネルギー効率向上について社内での取り組みを確認する。",
-        "持続可能なエネルギーの使用状況を見直し、改善できる点を特定する。",
-        "過剰建設のリスクを考慮し、プロジェクトのスケジュールを再評価する。"
+        "現場のデータセンターの性能と運用状況を確認する。",
+        "拡張に伴う新しい技術や研修プログラムの情報を収集する。",
+        "人材育成に関する社内の方針を見直す。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://timesofindia.indiatimes.com/city/ahmedabad/dholera-set-to-be-worlds-largest-data-centre-city-gujarat-dycm-harsh-sanghavi/articleshow/132297094.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-07-09T19:00:11Z",
-      "title": "Dholera set to be world’s largest data centre city: Gujarat DyCM Harsh Sanghavi",
-      "title_ja": "ダホラが世界最大のデータセンター都市に：グジャラート副首相ハルシュ・サンガビ",
-      "summary_ja": "グジャラート州はダホラを世界最大のデータセンター都市として発展させる計画を立てています。このプロジェクトは、ハイパースケールの能力をターゲットにしており、近く空港と鉄道が開設されることが支えとなります。この取り組みにより、インフラ整備が進むことで地域の経済に大きな影響を与えると期待されています。",
+      "url": "https://en.antaranews.com/news/422181/trane-launches-hswe-magnetic-bearing-chiller-to-advance-data-center-cooling-across-asia-pacific",
+      "source": "Antaranews.com",
+      "publishedAt": "2026-07-10T16:07:41Z",
+      "title": "Trane Launches HSWE Magnetic Bearing Chiller to Advance Data Center Cooling Across Asia Pacific",
+      "title_ja": "トレイン、アジア太平洋地域のデータセンター冷却を進化させるHSWE磁気軸受チラーを発表",
+      "summary_ja": "トレイン・テクノロジーズは、アジア太平洋市場向けにHSWE磁気軸受遠心チラーを発表しました。この新製品は、データセンターの高い冷却要件に対応し、高効率で信頼性の高い性能を提供します。HSWEは、エネルギーコスト削減や持続可能性の基準を満たすための技術革新を強化し、冷却業界に大きな影響を与えることが期待されています。",
       "key_points": [
-        "グジャラート州がダホラをデータセンター都市として開発",
-        "ターゲットはハイパースケール能力とGCCs",
-        "空港と鉄道の新設が計画されている"
+        "HSWEはアジア太平洋市場専用に設計された磁気軸受技術を採用。",
+        "フルロードCOPは7.3、AHRI IPLVは最大12.3を達成。",
+        "冷却容量は500 - 1,250 RT、データセンター向けには600 - 1,500 RTを提供。",
+        "復旧後25秒で再起動可能、2分でフルロード到達。",
+        "超静音設計、騒音レベルは最大73 dB(A)。"
       ],
       "glossary": [
         {
-          "term": "GCCs",
-          "explain_ja": "ガバメント・クラウド・センターの略で、政府が管理するデータセンターを指す。"
+          "term": "HSWE",
+          "explain_ja": "トレインの最新の磁気軸受遠心チラーで、データセンター向けに特化されている。"
         },
         {
-          "term": "ハイパースケール",
-          "explain_ja": "大規模なデータ処理能力を持つコンピュータシステムや設備を指す。"
+          "term": "COP",
+          "explain_ja": "冷凍機の性能を示す指標で、高い値ほど効率が良い。"
+        },
+        {
+          "term": "AHRI",
+          "explain_ja": "暖房、冷却、空気調和の産業標準を策定する協会。"
+        },
+        {
+          "term": "HFO refrigerants",
+          "explain_ja": "次世代の環境に優しい冷媒として期待される化合物。"
         }
       ],
       "personal_actions": [
-        "データセンターの新設計画に関連する地域のニュースをフォローする",
-        "新しいインフラに関する情報を収集し、ビジネスチャンスを検討する"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://timesofindia.indiatimes.com/city/ahmedabad/gujarats-data-centre-policy-woos-hyperscalers-targets-7-5gw-capacity/articleshow/132297084.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-07-09T18:59:50Z",
-      "title": "Gujarat’s data centre policy woos hyperscalers, targets 7.5GW capacity",
-      "title_ja": "グジャラート州のデータセンター政策がハイパースケーラーを誘致、7.5GWの容量を目指す",
-      "summary_ja": "グジャラート州は、データセンターの新政策を発表し、7.5GWの容量を目標に掲げています。この政策は、20年間の電力およびSGSTのインセンティブを提供し、Dholera地域には2.5%の資本補助金が設定されています。これにより、州は投資を促進し、地域経済の活性化を図る狙いがあります。",
-      "key_points": [
-        "グジャラート州のデータセンター政策2026-29は7.5GWの容量を目指している。",
-        "政策には6兆ルピーの投資目標が設定されている。",
-        "20年間の電力とSGSTのインセンティブを提供する。",
-        "Dholera地域への2.5%の資本補助金が含まれている。"
-      ],
-      "glossary": [
-        {
-          "term": "SGST",
-          "explain_ja": "州ごとに課税される消費税の一種で、スムーズな流通を促進するために導入されている。"
-        },
-        {
-          "term": "ハイパースケーラー",
-          "explain_ja": "データセンターを運営し、大規模なクラウドサービスを提供する企業を指す。"
-        }
-      ],
-      "personal_actions": [
-        "現在のデータセンターのリソース状況を把握し、必要な設備投資を検討する。",
-        "電力及び税インセンティブの詳細を確認し、メリットを活用するための戦略を立てる。",
-        "新政策に基づく投資機会を調査し、地域内の競争力を高めるための準備をする。"
+        "新しい冷却技術の情報を把握し、最適な設備更新を検討する。",
+        "データセンターの冷却ニーズを再評価し、効率向上策を検討する。",
+        "トレインのHSWE使用による利点を現場で評価する。"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://www.telecompetitor.com/virginia-fiber-express-clears-state-licensing-hurdle-for-first-phase-of-six-phase-network/",
+      "source": "Telecompetitor",
+      "publishedAt": "2026-07-10T15:30:00Z",
+      "title": "Virginia Fiber Express clears state licensing hurdle for first phase of six-phase network",
+      "title_ja": "バージニアファイバーエクスプレス、州ライセンスの障害をクリアし、6フェーズネットワークの第一フェーズへ",
+      "summary_ja": "バージニアファイバーエクスプレスネットワークが、6フェーズのファイバーネットワークの第一フェーズに向けて州のライセンスを取得しました。この新しいネットワークは、データセンターキャンパスの南進に伴い、混雑したI-95回廊を避けるために設計されています。第一フェーズでは、北バージニアからリッチモンドのサンドストンまでの126マイルの異なるファイバー経路が構築される予定です。",
+      "key_points": [
+        "バージニアファイバーエクスプレスが州の CLEC と IXC ライセンスを取得。",
+        "第一フェーズは126マイルの経路で、I-95回廊を避ける設計。",
+        "データセンターの拡大に伴い、フェーズ1は2027年のサービス開始を目指す。",
+        "既存のファイバーネットワークと冗長性のある接続を提供する。",
+        "Express Technologies と S&N Infrastructure が建設パートナーとして参加。"
+      ],
+      "glossary": [
+        {
+          "term": "CLEC",
+          "explain_ja": "Competitive Local Exchange Carrier の略。競争的な地域交換事業者を指す。"
+        },
+        {
+          "term": "IXC",
+          "explain_ja": "Interexchange Carrier の略。長距離通信を行う事業者を指す。"
+        },
+        {
+          "term": "ファイバーブロードバンド",
+          "explain_ja": "光ファイバーを用いた高速インターネット接続を示す。"
+        }
+      ],
+      "personal_actions": [
+        "新しいファイバーネットワークの影響を調査し、データセンター業務における接続性ニーズを再評価する。",
+        "地域の通信インフラの進展に注目し、将来の投資機会を見極める。",
+        "新しいパートナーシップや提携機会を探索し、プロジェクトに関与する可能性を考慮する。"
+      ],
+      "tags": [
+        "インフラ"
       ]
     }
   ]
