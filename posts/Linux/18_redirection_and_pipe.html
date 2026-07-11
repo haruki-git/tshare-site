@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 18：リダイレクトとパイプ</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 18：リダイレクトとパイプ</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/18_redirection_and_pipe_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">標準入力・標準出力・標準エラー</a></li>
+          <li><a href="#sec-2"><code>&gt;</code>による上書き出力</a></li>
+          <li><a href="#sec-3"><code>&gt;&gt;</code>による追記出力</a></li>
+          <li><a href="#sec-4"><code>&lt;</code>による入力</a></li>
+          <li><a href="#sec-5"><code>2&gt;</code>によるエラー出力</a></li>
+          <li><a href="#sec-6">標準出力と標準エラーをまとめる</a></li>
+          <li><a href="#sec-7">パイプ</a></li>
+          <li><a href="#sec-8"><code>tee</code></a></li>
+          <li><a href="#sec-9">実践的な組み合わせ</a></li>
+          <li><a href="#sec-10">よくある間違いと確認方法</a></li>
+          <li><a href="#sec-11">30秒チェック</a></li>
+          <li><a href="#sec-12">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>標準入力・標準出力・標準エラー</h2>
+        <p>Linuxのコマンドは、通常、入力を受け取り、処理結果を出力します。この入出力には、標準入力、標準出力、標準エラーという三つの標準ストリームがあります。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ストリーム</th>
+              <th>ファイルディスクリプタ</th>
+              <th>通常の接続先</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>標準入力</td>
+              <td><code>0</code></td>
+              <td>キーボードなどの入力</td>
+            </tr>
+            <tr>
+              <td>標準出力</td>
+              <td><code>1</code></td>
+              <td>端末画面への通常の処理結果</td>
+            </tr>
+            <tr>
+              <td>標準エラー</td>
+              <td><code>2</code></td>
+              <td>端末画面へのエラーメッセージ</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>ファイルディスクリプタは、プロセスが開いているファイルや入出力先を識別するための番号です。標準入力は0、標準出力は1、標準エラーは2として扱われます。</p>
+
+        <pre><code>コマンド
+  ├─ 標準入力  0
+  ├─ 標準出力  1
+  └─ 標準エラー 2</code></pre>
+
+        <p>標準出力と標準エラーは、どちらも通常は端末へ表示されるため、見た目だけでは区別しにくいことがあります。しかし、内部では別の流れです。</p>
+
+        <pre><code>ls /etc
+ls /存在しない場所</code></pre>
+
+        <p>最初の結果は主に標準出力、二つ目のエラーメッセージは標準エラーへ送られます。</p>
+
+        <p>リダイレクトは、この標準ストリームの接続先を変更するシェルの機能です。パイプは、あるコマンドの標準出力を、次のコマンドの標準入力へ接続します。</p>
+      </section>
+
+      <section id="sec-2">
+        <h2><code>&gt;</code>による上書き出力</h2>
+        <p><code>&gt;</code>は、コマンドの標準出力をファイルへリダイレクトします。通常、対象ファイルが存在しなければ作成し、存在する場合は内容を空にしてから書き込みます。</p>
+
+        <pre><code>date &gt; date.txt
+ls -l &gt; files.txt
+printf '%s\n' "hello" &gt; message.txt</code></pre>
+
+        <p>画面へ表示されるはずだった標準出力が、指定したファイルへ書き込まれます。</p>
+
+        <h3>標準出力の番号を明示する</h3>
+        <pre><code>date 1&gt; date.txt</code></pre>
+
+        <p><code>&gt;</code>は、ファイルディスクリプタを省略すると標準出力、つまり1を対象にします。そのため、<code>&gt;</code>と<code>1&gt;</code>は同じ意味です。</p>
+
+        <h3>空のファイルを作る</h3>
+        <pre><code>&gt; empty.txt</code></pre>
+
+        <p>コマンドを書かずにリダイレクトだけを行うと、ファイルを作成したり、既存ファイルの内容を空にしたりできます。</p>
+
+        <h3>上書き防止</h3>
+        <p>bashでは、<code>noclobber</code>を有効にすると、通常の<code>&gt;</code>で既存の通常ファイルを上書きしにくくできます。</p>
+
+        <pre><code>set -o noclobber
+echo test &gt; existing.txt</code></pre>
+
+        <p>この状態で強制的に上書きする場合は、bashで<code>&gt;|</code>を使います。</p>
+
+        <pre><code>echo test &gt;| existing.txt
+set +o noclobber</code></pre>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>注意：</strong><code>&gt;</code>はコマンドの実行前にファイルを開き、既存内容を切り詰めます。重要なファイル名を指定していないか、実行前に確認します。</p>
+        </aside>
+      </section>
+
+      <section id="sec-3">
+        <h2><code>&gt;&gt;</code>による追記出力</h2>
+        <p><code>&gt;&gt;</code>は、標準出力をファイルの末尾へ追加します。ファイルが存在しない場合は、新しく作成します。</p>
+
+        <pre><code>date &gt;&gt; history.log
+echo "start" &gt;&gt; app.log
+df -h &gt;&gt; disk.log</code></pre>
+
+        <p><code>&gt;</code>は上書き、<code>&gt;&gt;</code>は追記です。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>記号</th>
+              <th>既存ファイルがある場合</th>
+              <th>ファイルがない場合</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&gt;</code></td>
+              <td>内容を空にして上書き</td>
+              <td>新規作成</td>
+            </tr>
+            <tr>
+              <td><code>&gt;&gt;</code></td>
+              <td>末尾へ追記</td>
+              <td>新規作成</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>複数行を追記する</h3>
+        <pre><code>printf '%s\n' \
+  "server=web01" \
+  "status=ok" &gt;&gt; result.log</code></pre>
+
+        <p>ログや履歴を残す処理では追記が便利ですが、同じ処理を何度も実行すると同じ行が増えることがあります。設定ファイルの更新では、単純な追記だけでよいかを確認します。</p>
+
+        <h3>標準エラーを追記する</h3>
+        <pre><code>command 2&gt;&gt; error.log</code></pre>
+
+        <p><code>2&gt;&gt;</code>は、標準エラーをファイルの末尾へ追記します。</p>
+      </section>
+
+      <section id="sec-4">
+        <h2><code>&lt;</code>による入力</h2>
+        <p><code>&lt;</code>は、コマンドの標準入力をファイルから受け取るように変更します。</p>
+
+        <pre><code>wc -l &lt; users.txt
+sort &lt; names.txt
+tr 'a-z' 'A-Z' &lt; message.txt</code></pre>
+
+        <p>例えば、<code>wc -l &lt; users.txt</code>では、<code>users.txt</code>の内容が<code>wc</code>の標準入力へ渡されます。</p>
+
+        <h3>ファイルを引数にする場合との違い</h3>
+        <pre><code>wc -l users.txt
+wc -l &lt; users.txt</code></pre>
+
+        <p>どちらも行数を数えますが、出力が異なる場合があります。</p>
+
+        <pre><code>$ wc -l users.txt
+12 users.txt
+
+$ wc -l &lt; users.txt
+12</code></pre>
+
+        <p>一つ目は、<code>users.txt</code>をコマンドの引数として渡しています。二つ目は、シェルがファイルを開き、内容を標準入力として渡しています。そのため、<code>wc</code>は入力元のファイル名を引数として受け取りません。</p>
+
+        <h3>標準入力の番号を明示する</h3>
+        <pre><code>sort 0&lt; names.txt</code></pre>
+
+        <p><code>&lt;</code>は、ファイルディスクリプタを省略すると標準入力、つまり0を対象にします。通常は0を省略します。</p>
+
+        <p>コマンドによっては、ファイル名を引数にできず、標準入力だけを受け取るものがあります。その場合、<code>&lt;</code>やパイプを使います。</p>
+      </section>
+
+      <section id="sec-5">
+        <h2><code>2&gt;</code>によるエラー出力</h2>
+        <p><code>2&gt;</code>は、標準エラーをファイルへリダイレクトします。先頭の2は標準エラーのファイルディスクリプタです。</p>
+
+        <pre><code>ls /etc /存在しない場所 2&gt; error.txt</code></pre>
+
+        <p>この例では、<code>/etc</code>の一覧は標準出力として画面へ表示され、存在しない場所に対するエラーだけが<code>error.txt</code>へ書き込まれます。</p>
+
+        <h3>標準出力と標準エラーを別々に保存する</h3>
+        <pre><code>ls /etc /存在しない場所 \
+  &gt; output.txt \
+  2&gt; error.txt</code></pre>
+
+        <p>通常の結果は<code>output.txt</code>、エラーメッセージは<code>error.txt</code>へ保存されます。</p>
+
+        <h3>エラーを表示しない</h3>
+        <pre><code>find / -name '*.conf' 2&gt; /dev/null</code></pre>
+
+        <p><code>/dev/null</code>は、書き込まれたデータを破棄する特殊なデバイスです。不要なエラー表示を捨てる場合に使われます。</p>
+
+        <p>ただし、エラーをすべて捨てると、権限不足やファイルシステムの問題など、重要な情報も見えなくなります。調査中は、エラーをファイルへ保存して確認する方が安全です。</p>
+
+        <h3>標準エラーを追記する</h3>
+        <pre><code>find /tmp -type f 2&gt;&gt; find-error.log</code></pre>
+
+        <p><code>2&gt;</code>は上書き、<code>2&gt;&gt;</code>は追記です。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>標準出力と標準エラーをまとめる</h2>
+        <p>標準出力と標準エラーを同じファイルへ保存する場合は、ファイルディスクリプタの複製を使います。</p>
+
+        <pre><code>command &gt; all.log 2&gt;&amp;1</code></pre>
+
+        <p>処理の流れは次のとおりです。</p>
+
+        <ol>
+          <li><code>&gt; all.log</code>で、標準出力1を<code>all.log</code>へ向ける</li>
+          <li><code>2&gt;&amp;1</code>で、標準エラー2を、現在の標準出力1と同じ接続先へ向ける</li>
+        </ol>
+
+        <p><code>&amp;1</code>は、名前が1のファイルへ書くという意味ではなく、ファイルディスクリプタ1を複製するという意味です。</p>
+
+        <h3>順番が重要</h3>
+        <pre><code>command &gt; all.log 2&gt;&amp;1
+command 2&gt;&amp;1 &gt; all.log</code></pre>
+
+        <p>この二つは同じではありません。リダイレクトは左から順に処理されます。</p>
+
+        <h4><code>command &gt; all.log 2&gt;&amp;1</code></h4>
+        <ul>
+          <li>最初に標準出力を<code>all.log</code>へ向ける</li>
+          <li>次に標準エラーを、その時点の標準出力と同じ場所へ向ける</li>
+          <li>標準出力と標準エラーの両方が<code>all.log</code>へ入る</li>
+        </ul>
+
+        <h4><code>command 2&gt;&amp;1 &gt; all.log</code></h4>
+        <ul>
+          <li>最初に標準エラーを、その時点の標準出力、通常は端末と同じ場所へ向ける</li>
+          <li>次に標準出力だけを<code>all.log</code>へ向ける</li>
+          <li>標準出力はファイル、標準エラーは端末に残る</li>
+        </ul>
+
+        <h3>bashの短縮形式</h3>
+        <pre><code>command &amp;&gt; all.log
+command &amp;&gt;&gt; all.log</code></pre>
+
+        <p><code>&amp;&gt;</code>は標準出力と標準エラーをまとめて上書きし、<code>&amp;&gt;&gt;</code>はまとめて追記します。これらはbashの構文です。移植性を重視するシェルスクリプトでは、<code>&gt; file 2&gt;&amp;1</code>を使うことがあります。</p>
+
+        <h3>両方を破棄する</h3>
+        <pre><code>command &gt; /dev/null 2&gt;&amp;1</code></pre>
+
+        <p>通常の結果とエラーの両方を破棄します。必要な診断情報まで消えるため、用途を限定します。</p>
+      </section>
+
+      <section id="sec-7">
+        <h2>パイプ</h2>
+        <p>パイプ記号<code>|</code>は、左側のコマンドの標準出力を、右側のコマンドの標準入力へ接続します。</p>
+
+        <pre><code>左のコマンド | 右のコマンド</code></pre>
+
+        <pre><code>ps aux | grep ssh
+cat access.log | grep '404'
+sort names.txt | uniq
+du -h /var/* 2&gt;/dev/null | sort -h</code></pre>
+
+        <p>パイプを使うと、一つの大きなコマンドですべてを処理するのではなく、小さなコマンドを組み合わせられます。</p>
+
+        <pre><code>入力
+  ↓
+コマンド1
+  ↓ 標準出力
+パイプ
+  ↓ 標準入力
+コマンド2
+  ↓ 標準出力
+画面または次のパイプ</code></pre>
+
+        <h3>標準エラーは通常パイプへ流れない</h3>
+        <pre><code>find / -name '*.log' | grep nginx</code></pre>
+
+        <p>通常の<code>|</code>が接続するのは、左側の標準出力だけです。左側の標準エラーは、通常はそのまま端末へ表示されます。</p>
+
+        <p>標準エラーもパイプへ流す場合は、次のようにします。</p>
+
+        <pre><code>command 2&gt;&amp;1 | grep pattern</code></pre>
+
+        <p>bashでは、次の短縮形式も利用できます。</p>
+
+        <pre><code>command |&amp; grep pattern</code></pre>
+
+        <p><code>|&amp;</code>は、bashでは概ね<code>2&gt;&amp;1 |</code>の短縮です。</p>
+
+        <h3>不要な<code>cat</code></h3>
+        <pre><code>cat access.log | grep '404'
+grep '404' access.log</code></pre>
+
+        <p>どちらも動作しますが、<code>grep</code>がファイルを直接読める場合は、二つ目の方が単純です。ただし、パイプの仕組みを学ぶ例として<code>cat</code>を使うことはあります。</p>
+
+        <h3>パイプラインの終了ステータス</h3>
+        <p>bashでは、通常、パイプライン全体の終了ステータスは最後のコマンドの終了ステータスです。</p>
+
+        <pre><code>false | true
+echo "$?"</code></pre>
+
+        <p>左側の<code>false</code>が失敗しても、最後の<code>true</code>が成功するため、通常は0になります。</p>
+
+        <p>途中の失敗も検出したい場合は、bashで<code>pipefail</code>を有効にします。</p>
+
+        <pre><code>set -o pipefail
+false | true
+echo "$?"
+set +o pipefail</code></pre>
+
+        <p><code>pipefail</code>が有効な場合、パイプ内のコマンドが失敗すると、パイプライン全体も失敗として扱いやすくなります。</p>
+      </section>
+
+      <section id="sec-8">
+        <h2><code>tee</code></h2>
+        <p><code>tee</code>は、標準入力を標準出力へ流しながら、一つ以上のファイルにもコピーします。画面で確認しながらファイルへ保存したい場合に使います。</p>
+
+        <pre><code>command | tee result.txt</code></pre>
+
+        <p>通常の<code>&gt;</code>では、出力をファイルへ向けると画面には表示されません。<code>tee</code>では、出力を画面へ流しながらファイルにも保存できます。</p>
+
+        <h3>基本例</h3>
+        <pre><code>df -h | tee disk.txt
+ip address | tee network.txt
+grep 'ERROR' app.log | tee errors.txt</code></pre>
+
+        <h3>追記する</h3>
+        <pre><code>date | tee -a operation.log</code></pre>
+
+        <p><code>tee</code>は標準では出力ファイルを上書きします。<code>-a</code>を付けると末尾へ追記します。</p>
+
+        <h3>複数ファイルへ保存する</h3>
+        <pre><code>command | tee file1.txt file2.txt</code></pre>
+
+        <p>同じ標準入力を、標準出力と複数のファイルへコピーできます。</p>
+
+        <h3>標準エラーも保存する</h3>
+        <pre><code>command 2&gt;&amp;1 | tee all.log</code></pre>
+
+        <p>標準出力と標準エラーをまとめてパイプへ送り、<code>tee</code>で画面とファイルへ出力します。</p>
+
+        <h3><code>sudo</code>とリダイレクト</h3>
+        <pre><code>sudo echo "setting" &gt; /root/example.conf</code></pre>
+
+        <p>この書き方では、<code>echo</code>だけが<code>sudo</code>の対象です。<code>&gt;</code>によるファイルのオープンは現在のシェルが行うため、一般利用者の権限では書き込めないことがあります。</p>
+
+        <p>標準入力から一行を書き込む例は次のとおりです。</p>
+
+        <pre><code>printf '%s\n' "setting" | sudo tee /root/example.conf &gt; /dev/null</code></pre>
+
+        <p><code>tee</code>自体を<code>sudo</code>で実行するため、管理者権限でファイルを開きます。画面への重複表示が不要な場合は、<code>tee</code>の標準出力を<code>/dev/null</code>へ向けます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>注意：</strong>システム設定ファイルを<code>tee</code>で上書きすると、元の内容が失われます。追記が必要なら<code>tee -a</code>、編集が必要なら適切なエディタを使います。</p>
+        </aside>
+      </section>
+
+      <section id="sec-9">
+        <h2>実践的な組み合わせ</h2>
+
+        <h3>検索結果を保存する</h3>
+        <pre><code>grep -Rni 'error' /var/log \
+  &gt; matches.txt \
+  2&gt; search-errors.txt</code></pre>
+
+        <p>検索結果と、権限不足などのエラーを別々に保存します。</p>
+
+        <h3>画面で確認しながら保存する</h3>
+        <pre><code>journalctl -u ssh 2&gt;&amp;1 | tee ssh-check.log</code></pre>
+
+        <p>標準出力と標準エラーをまとめて、画面とファイルへ流します。</p>
+
+        <h3>行数を数える</h3>
+        <pre><code>grep -v '^#' /etc/ssh/sshd_config | wc -l</code></pre>
+
+        <p>コメント行以外を抽出し、その出力を<code>wc -l</code>へ渡します。</p>
+
+        <h3>重複を数える</h3>
+        <pre><code>cut -d' ' -f1 access.log \
+  | sort \
+  | uniq -c \
+  | sort -nr \
+  | head</code></pre>
+
+        <p>左から順に、列の抽出、並べ替え、重複数の集計、件数の降順並べ替え、上位の表示を行います。</p>
+
+        <h3>一時結果も残す</h3>
+        <pre><code>sort names.txt \
+  | tee sorted-names.txt \
+  | uniq \
+  &gt; unique-names.txt</code></pre>
+
+        <p><code>tee</code>で並べ替え直後の内容を保存しながら、後続の<code>uniq</code>へも渡します。</p>
+
+        <h3>成功時だけ次へ進める</h3>
+        <pre><code>set -o pipefail
+generate_data | process_data | tee result.log
+status=$?
+set +o pipefail
+
+if [ "$status" -eq 0 ]; then
+    echo "pipeline success"
+fi</code></pre>
+
+        <p>パイプライン途中の失敗も確認したい場合は、<code>pipefail</code>を使います。シェルスクリプトでは、各コマンドの失敗をどのように扱うかを明確にします。</p>
+      </section>
+
+      <section id="sec-10">
+        <h2>よくある間違いと確認方法</h2>
+
+        <h3>1. <code>&gt;</code>と<code>&gt;&gt;</code>を取り違える</h3>
+        <pre><code>echo "new line" &gt; important.log</code></pre>
+
+        <p>追記するつもりで<code>&gt;</code>を使うと、元の内容が失われます。実行前に、上書きか追記かを確認します。</p>
+
+        <h3>2. エラーがファイルへ入らない</h3>
+        <pre><code>command &gt; output.log</code></pre>
+
+        <p><code>&gt;</code>が対象にするのは標準出力だけです。標準エラーも保存する場合は、<code>2&gt;</code>または<code>2&gt;&amp;1</code>を使います。</p>
+
+        <h3>3. パイプへエラーが流れない</h3>
+        <pre><code>command | grep error</code></pre>
+
+        <p>通常のパイプが受け取るのは標準出力です。標準エラーも対象にする場合は、<code>command 2&gt;&amp;1 | grep error</code>などとします。</p>
+
+        <h3>4. リダイレクトの順番を間違える</h3>
+        <pre><code>command 2&gt;&amp;1 &gt; all.log</code></pre>
+
+        <p>両方をファイルへ入れたい場合、この順番では標準エラーが端末へ残ることがあります。左から処理されることを意識します。</p>
+
+        <h3>5. <code>sudo</code>を付けたのに書き込めない</h3>
+        <pre><code>sudo echo value &gt; /protected/file</code></pre>
+
+        <p>リダイレクトは<code>sudo</code>ではなく、現在のシェルが処理します。必要に応じて<code>sudo tee</code>や、管理者権限で起動したエディタを使います。</p>
+
+        <h3>6. パイプ途中の失敗を見落とす</h3>
+        <pre><code>failed_command | successful_command
+echo "$?"</code></pre>
+
+        <p>通常は最後のコマンドの終了ステータスが返ります。途中の失敗を検出したい場合は、bashの<code>pipefail</code>を検討します。</p>
+
+        <h3>7. ファイルディスクリプタを確認する</h3>
+        <pre><code>ls -l /proc/$$/fd</code></pre>
+
+        <p>Linuxでは、現在のシェルが開いているファイルディスクリプタを<code>/proc/プロセスID/fd</code>で確認できます。0、1、2がどこへ接続されているかを調べる手掛かりになります。</p>
+
+        <h3>症状別の確認</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>症状</th>
+              <th>主な確認点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ファイルが空になった</td>
+              <td><code>&gt;</code>で既存内容を上書きしていないか</td>
+            </tr>
+            <tr>
+              <td>エラーだけ画面に残る</td>
+              <td><code>2&gt;</code>または<code>2&gt;&amp;1</code>の有無</td>
+            </tr>
+            <tr>
+              <td><code>grep</code>がエラー文を拾わない</td>
+              <td>標準エラーをパイプへ流しているか</td>
+            </tr>
+            <tr>
+              <td>両方を保存したつもりなのに片方だけ</td>
+              <td>リダイレクトの記述順</td>
+            </tr>
+            <tr>
+              <td><code>sudo</code>でもPermission denied</td>
+              <td>ファイルを開くリダイレクト側の権限</td>
+            </tr>
+            <tr>
+              <td>パイプ途中の失敗に気付かない</td>
+              <td>終了ステータスと<code>pipefail</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="sec-11">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>標準入力、標準出力、標準エラーのファイルディスクリプタ番号は、それぞれ何番でしょうか。</li>
+          <li><code>&gt;</code>と<code>&gt;&gt;</code>は、既存ファイルに対してどのように動作が違うでしょうか。</li>
+          <li><code>wc -l file.txt</code>と<code>wc -l &lt; file.txt</code>では、ファイルはそれぞれどのように渡されるでしょうか。</li>
+          <li>標準エラーだけを<code>error.log</code>へ上書き保存する書き方は何でしょうか。</li>
+          <li>標準出力と標準エラーの両方を<code>all.log</code>へ保存する書き方は何でしょうか。</li>
+          <li>通常のパイプ<code>|</code>は、左側のどのストリームを右側へ渡すでしょうか。</li>
+          <li>画面へ表示しながら<code>result.txt</code>にも保存するコマンドは何でしょうか。</li>
+          <li>パイプ途中の失敗も終了ステータスへ反映しやすくするbashの設定は何でしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li>標準入力は0、標準出力は1、標準エラーは2</li>
+            <li><code>&gt;</code>は上書き、<code>&gt;&gt;</code>は末尾へ追記</li>
+            <li>前者はファイル名を引数として渡し、後者はファイル内容を標準入力として渡す</li>
+            <li><code>command 2&gt; error.log</code></li>
+            <li><code>command &gt; all.log 2&gt;&amp;1</code>。bashでは<code>command &amp;&gt; all.log</code>も利用できる</li>
+            <li>標準出力</li>
+            <li><code>command | tee result.txt</code></li>
+            <li><code>set -o pipefail</code></li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-12">
+        <h2>要約</h2>
+        <ul>
+          <li>標準入力は0、標準出力は1、標準エラーは2のファイルディスクリプタで扱われます。</li>
+          <li>リダイレクトは、コマンドの標準ストリームの接続先を変更するシェルの機能です。</li>
+          <li><code>&gt;</code>は標準出力をファイルへ上書きし、<code>&gt;&gt;</code>は末尾へ追記します。</li>
+          <li><code>&lt;</code>は、ファイルの内容をコマンドの標準入力へ渡します。</li>
+          <li><code>2&gt;</code>は標準エラーを上書きし、<code>2&gt;&gt;</code>は標準エラーを追記します。</li>
+          <li><code>/dev/null</code>へ出力するとデータを破棄できますが、重要なエラーまで隠さないよう注意します。</li>
+          <li><code>command &gt; file 2&gt;&amp;1</code>は、標準出力と標準エラーを同じファイルへ送ります。</li>
+          <li>リダイレクトは左から順に処理されるため、<code>&gt; file 2&gt;&amp;1</code>と<code>2&gt;&amp;1 &gt; file</code>は同じではありません。</li>
+          <li>パイプ<code>|</code>は、左側の標準出力を右側の標準入力へ接続します。</li>
+          <li>標準エラーもパイプへ渡す場合は、<code>2&gt;&amp;1 |</code>またはbashの<code>|&amp;</code>を使います。</li>
+          <li><code>tee</code>は標準入力を標準出力へ流しながら、ファイルにもコピーします。</li>
+          <li><code>tee -a</code>は、ファイルを上書きせず末尾へ追記します。</li>
+          <li><code>sudo echo ... &gt; file</code>では、リダイレクト自体は現在のシェルが行います。必要に応じて<code>sudo tee</code>を使います。</li>
+          <li>bashの通常設定では、パイプラインの終了ステータスは最後のコマンドのものです。</li>
+          <li><code>set -o pipefail</code>を使うと、パイプ途中の失敗を検出しやすくなります。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://www.gnu.org/software/bash/manual/bash.html" target="_blank" rel="noopener noreferrer">GNU Bash Reference Manual</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Redirections.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Redirections</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Redirecting-Input.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Redirecting Input</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Redirecting-Output.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Redirecting Output</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Appending-Redirected-Output.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Appending Redirected Output</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Redirecting-Standard-Output-and-Standard-Error.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Redirecting Standard Output and Standard Error</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Duplicating-File-Descriptors.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Duplicating File Descriptors</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Pipelines.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Pipelines</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：The Set Builtin</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/tee-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils Manual：tee invocation</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/bash.1.html" target="_blank" rel="noopener noreferrer">bash(1) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/tee.1.html" target="_blank" rel="noopener noreferrer">tee(1) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man7/pipe.7.html" target="_blank" rel="noopener noreferrer">pipe(7) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man4/null.4.html" target="_blank" rel="noopener noreferrer">null(4) — Linux manual page</a></li>
+          <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html" target="_blank" rel="noopener noreferrer">POSIX.1-2024：Shell Command Language</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

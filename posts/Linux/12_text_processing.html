@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 12：テキスト処理コマンド</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 12：テキスト処理コマンド</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/12_text_processing_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">テキスト処理コマンドの使い分け</a></li>
+          <li><a href="#sec-2">標準入力・標準出力とパイプ</a></li>
+          <li><a href="#sec-3">cut</a></li>
+          <li><a href="#sec-4">sortの基本</a></li>
+          <li><a href="#sec-5">sortのキー・区切り文字・ロケール</a></li>
+          <li><a href="#sec-6">uniq</a></li>
+          <li><a href="#sec-7">tr</a></li>
+          <li><a href="#sec-8">trの文字クラスと注意点</a></li>
+          <li><a href="#sec-9">コマンドを組み合わせる</a></li>
+          <li><a href="#sec-10">よくある間違いと確認手順</a></li>
+          <li><a href="#sec-11">30秒チェック</a></li>
+          <li><a href="#sec-12">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>テキスト処理コマンドの使い分け</h2>
+        <p>Linuxでは、小さなコマンドをパイプで組み合わせ、必要な列を取り出し、並べ替え、重複を整理し、文字を変換できます。</p>
+        <p>今回は、<code>cut</code>、<code>sort</code>、<code>uniq</code>、<code>tr</code>の四つを扱います。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>コマンド</th>
+              <th>主な用途</th>
+              <th>処理の単位</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>cut</code></td>
+              <td>行から必要なフィールド、文字位置、バイト位置を取り出す</td>
+              <td>各行</td>
+            </tr>
+            <tr>
+              <td><code>sort</code></td>
+              <td>行を並べ替える、並び順を確認する、重複をまとめる</td>
+              <td>行</td>
+            </tr>
+            <tr>
+              <td><code>uniq</code></td>
+              <td>隣り合う同一行をまとめる、重複行や一意行を抽出する</td>
+              <td>隣接する行</td>
+            </tr>
+            <tr>
+              <td><code>tr</code></td>
+              <td>文字を置換する、削除する、連続する文字を圧縮する</td>
+              <td>文字</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>今回の目標：</strong>列の抽出は<code>cut</code>、並べ替えは<code>sort</code>、隣接重複の整理は<code>uniq</code>、文字単位の変換は<code>tr</code>と判断できるようにします。</p>
+        </aside>
+      </section>
+
+      <section id="sec-2">
+        <h2>標準入力・標準出力とパイプ</h2>
+        <p>四つのコマンドは、ファイルや標準入力からデータを受け取り、処理結果を標準出力へ書き出すフィルターとして利用できます。</p>
+
+        <pre><code>command1 | command2 | command3</code></pre>
+
+        <p>パイプ<code>|</code>は、左側の標準出力を右側の標準入力へ渡します。</p>
+
+        <pre><code>cut -d: -f7 /etc/passwd | sort | uniq -c</code></pre>
+
+        <p>この例では、<code>/etc/passwd</code>からログインシェルのフィールドを取り出し、同じ値を隣接させ、使用数を数えます。</p>
+
+        <h3>練習用データを作る</h3>
+        <pre><code>printf '%s\n' orange apple banana apple orange &gt; fruits.txt</code></pre>
+
+        <p><code>printf</code>を使うと、短い練習データを安全に作れます。</p>
+
+        <pre><code>cat fruits.txt
+sort fruits.txt
+sort fruits.txt | uniq -c</code></pre>
+
+        <p>元ファイルを変更せず、処理結果だけが標準出力へ表示されることを確認します。</p>
+      </section>
+
+      <section id="sec-3">
+        <h2>cut</h2>
+        <p><code>cut</code>は、各入力行から指定した部分を選び、標準出力へ表示するコマンドです。</p>
+
+        <pre><code>cut [オプション] [ファイル...]</code></pre>
+
+        <p>位置やフィールドの番号は、1から数えます。</p>
+
+        <h3>区切り文字とフィールドを指定する</h3>
+        <pre><code>cut -d: -f1 /etc/passwd
+cut -d: -f1,3,7 /etc/passwd
+cut -d: -f3- /etc/passwd</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-d 文字</code></td><td>フィールドの区切り文字を指定する。標準はタブ</td></tr>
+            <tr><td><code>-f リスト</code></td><td>表示するフィールドを指定する</td></tr>
+            <tr><td><code>-s</code></td><td>区切り文字を含まない行を表示しない</td></tr>
+            <tr><td><code>--complement</code></td><td>指定したフィールドや位置以外を表示する</td></tr>
+          </tbody>
+        </table>
+
+        <p><code>-f1,3,7</code>は第1、第3、第7フィールド、<code>-f3-</code>は第3フィールドから行末までを表します。</p>
+
+        <pre><code>cut -d: -f1,7 /etc/passwd
+cut -d: -f1 --complement /etc/passwd
+cut -d: -f2 -s data.txt</code></pre>
+
+        <h3>文字位置やバイト位置を指定する</h3>
+        <pre><code>cut -c1-5 file.txt
+cut -c1,3,5 file.txt
+cut -b1-8 file.txt</code></pre>
+
+        <ul>
+          <li><code>-c</code>：文字位置を指定する</li>
+          <li><code>-b</code>：バイト位置を指定する</li>
+        </ul>
+
+        <p>ASCII文字では一文字と一バイトが一致することが多い一方、日本語などのマルチバイト文字では一致しません。文字として切り出したいのか、バイトとして切り出したいのかを区別します。</p>
+
+        <h3>cutが向いているデータ</h3>
+        <p><code>/etc/passwd</code>のように、各行の区切り文字が明確で、単純な形式のデータに向きます。</p>
+        <p>引用符で囲まれたカンマや、フィールド内の改行を含む本格的なCSVは、単純な<code>cut -d,</code>では正しく扱えない場合があります。その場合はCSV対応ツールやプログラムを使用します。</p>
+      </section>
+
+      <section id="sec-4">
+        <h2>sortの基本</h2>
+        <p><code>sort</code>は、入力行を比較して並べ替え、標準出力へ表示します。ファイルを指定しない場合は標準入力を読み取ります。</p>
+
+        <pre><code>sort [オプション] [ファイル...]</code></pre>
+
+        <h3>文字列として並べ替える</h3>
+        <pre><code>sort fruits.txt
+sort -r fruits.txt
+sort -f names.txt</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-r</code></td><td>逆順に並べる</td></tr>
+            <tr><td><code>-f</code></td><td>大文字と小文字の違いを無視して比較する</td></tr>
+            <tr><td><code>-b</code></td><td>比較キー先頭の空白を無視する</td></tr>
+            <tr><td><code>-u</code></td><td>比較結果が等しい行を一つだけ出力する</td></tr>
+          </tbody>
+        </table>
+
+        <h3>数値として並べ替える</h3>
+        <pre><code>sort numbers.txt
+sort -n numbers.txt
+sort -nr numbers.txt</code></pre>
+
+        <p>標準の<code>sort</code>は文字列として比較します。そのため、<code>10</code>が<code>2</code>より前に並ぶ場合があります。数値として比較する場合は<code>-n</code>を使います。</p>
+
+        <pre><code>printf '%s\n' 2 10 3 | sort
+printf '%s\n' 2 10 3 | sort -n</code></pre>
+
+        <h3>人が読みやすいサイズや版番号を並べる</h3>
+        <pre><code>sort -h sizes.txt
+sort -V versions.txt</code></pre>
+
+        <ul>
+          <li><code>-h</code>：<code>2K</code>、<code>10M</code>、<code>1G</code>などを人間向け数値として比較する</li>
+          <li><code>-V</code>：<code>file2</code>、<code>file10</code>や版番号に近い形で比較する</li>
+        </ul>
+
+        <h3>並び順を確認する</h3>
+        <pre><code>sort -c names.txt
+sort -C names.txt</code></pre>
+
+        <p><code>-c</code>は並びが崩れている最初の位置を診断し、<code>-C</code>はメッセージを出さず終了ステータスで確認します。</p>
+      </section>
+
+      <section id="sec-5">
+        <h2>sortのキー・区切り文字・ロケール</h2>
+
+        <h3>特定フィールドをキーにする</h3>
+        <pre><code>sort -t: -k3,3n /etc/passwd
+sort -t, -k2,2 sales.csv
+sort -t, -k2,2nr sales.csv</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>指定</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-t 文字</code></td><td>フィールド区切り文字を指定する</td></tr>
+            <tr><td><code>-k 開始,終了</code></td><td>比較に使うキーの範囲を指定する</td></tr>
+            <tr><td><code>n</code></td><td>そのキーを数値として比較する</td></tr>
+            <tr><td><code>r</code></td><td>そのキーを逆順にする</td></tr>
+          </tbody>
+        </table>
+
+        <p><code>-k2,2</code>は第2フィールドだけをキーにします。<code>-k2</code>とすると、第2フィールドの先頭から行末までがキーになります。この違いは試験でも実務でも重要です。</p>
+
+        <h3>複数キーを指定する</h3>
+        <pre><code>sort -t: -k4,4 -k3,3n /etc/passwd</code></pre>
+
+        <p>最初に第4フィールドで比較し、同じ場合は第3フィールドを数値として比較します。</p>
+
+        <h3>ロケールによる違い</h3>
+        <p><code>sort</code>の文字列比較は、通常<code>LC_COLLATE</code>などのロケール設定の影響を受けます。同じスクリプトで一定の並び順が必要な場合は、<code>LC_ALL=C</code>を付けてバイト値に基づく順序へ固定する方法があります。</p>
+
+        <pre><code>LC_ALL=C sort names.txt</code></pre>
+
+        <h3>結果をファイルへ保存する</h3>
+        <pre><code>sort names.txt &gt; sorted_names.txt
+sort -o names.txt names.txt</code></pre>
+
+        <p>同じファイルへ保存する場合、<code>sort names.txt &gt; names.txt</code>とはしません。シェルが先に出力先を空にするためです。GNU <code>sort</code>では、<code>-o</code>を使って出力先を指定できます。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>uniq</h2>
+        <p><code>uniq</code>は、隣り合う同一行を一つにまとめるコマンドです。</p>
+
+        <pre><code>uniq [オプション] [入力ファイル [出力ファイル]]</code></pre>
+
+        <h3>隣接している行だけを比較する</h3>
+        <pre><code>printf '%s\n' apple banana apple | uniq
+printf '%s\n' apple banana apple | sort | uniq</code></pre>
+
+        <p>一つ目の例では、同じ<code>apple</code>が離れているため削除されません。全体の重複をまとめたい場合は、通常は先に<code>sort</code>して同じ行を隣接させます。</p>
+
+        <h3>主なオプション</h3>
+        <pre><code>sort fruits.txt | uniq
+sort fruits.txt | uniq -c
+sort fruits.txt | uniq -d
+sort fruits.txt | uniq -u
+sort -f names.txt | uniq -i</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-c</code></td><td>各行の出現回数を行頭に付ける</td></tr>
+            <tr><td><code>-d</code></td><td>複数回現れた行だけを一グループにつき一行表示する</td></tr>
+            <tr><td><code>-u</code></td><td>一度だけ現れた行だけを表示する</td></tr>
+            <tr><td><code>-i</code></td><td>大文字と小文字の違いを無視して比較する</td></tr>
+            <tr><td><code>-f 数値</code></td><td>先頭から指定数のフィールドを比較対象外にする</td></tr>
+            <tr><td><code>-s 数値</code></td><td>先頭から指定数の文字を比較対象外にする</td></tr>
+          </tbody>
+        </table>
+
+        <h3>出現回数の多い順に並べる</h3>
+        <pre><code>sort fruits.txt | uniq -c | sort -nr</code></pre>
+
+        <p><code>uniq -c</code>で件数を付け、最後の<code>sort -nr</code>で件数を数値の降順に並べます。</p>
+
+        <h3>sort -uとの関係</h3>
+        <pre><code>sort -u fruits.txt
+sort fruits.txt | uniq</code></pre>
+
+        <p>単純な重複行の削除では似た結果になります。ただし、比較オプションやキーを組み合わせると判定基準が異なる場合があります。基本学習では、並べ替えながら一意化するなら<code>sort -u</code>、隣接行の重複状態を調べるなら<code>uniq</code>と整理します。</p>
+      </section>
+
+      <section id="sec-7">
+        <h2>tr</h2>
+        <p><code>tr</code>は、標準入力から読み取った文字を変換、削除、圧縮し、標準出力へ書き出します。</p>
+
+        <pre><code>tr [オプション] 文字集合1 [文字集合2]</code></pre>
+
+        <p><code>tr</code>は通常、処理対象のファイル名を引数として受け取りません。リダイレクトやパイプで標準入力へ渡します。</p>
+
+        <pre><code>tr 'a-z' 'A-Z' &lt; file.txt
+cat file.txt | tr 'a-z' 'A-Z'</code></pre>
+
+        <h3>文字を変換する</h3>
+        <pre><code>printf '%s\n' hello | tr 'a-z' 'A-Z'
+printf '%s\n' 123-456-789 | tr '-' ':'</code></pre>
+
+        <p>第1の文字集合に含まれる文字を、対応する第2の文字集合の文字へ置き換えます。</p>
+
+        <h3>文字を削除する</h3>
+        <pre><code>tr -d '0-9' &lt; file.txt
+tr -d '\r' &lt; windows.txt &gt; unix.txt</code></pre>
+
+        <p><code>-d</code>は、第1の文字集合に含まれる文字を削除します。<code>\r</code>を削除する例は、CRLF形式のテキストから復帰文字を取り除く用途で使われます。</p>
+
+        <h3>連続する文字を一つにまとめる</h3>
+        <pre><code>tr -s ' ' &lt; file.txt
+tr -s '\n' &lt; file.txt</code></pre>
+
+        <p><code>-s</code>は、指定した文字が連続している部分を一文字に圧縮します。複数の連続空白や空行をまとめる場合に使えます。</p>
+
+        <h3>改行と空白を変換する</h3>
+        <pre><code>tr '\n' ' ' &lt; lines.txt
+tr ' ' '\n' &lt; words.txt</code></pre>
+
+        <p><code>tr</code>は文字単位で動作するため、改行を空白へ、空白を改行へと変換できます。</p>
+      </section>
+
+      <section id="sec-8">
+        <h2>trの文字クラスと注意点</h2>
+
+        <h3>文字クラスを使う</h3>
+        <pre><code>tr '[:lower:]' '[:upper:]' &lt; file.txt
+tr -d '[:digit:]' &lt; file.txt
+tr -s '[:space:]' ' ' &lt; file.txt</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>文字クラス</th>
+              <th>主な対象</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>[:lower:]</code></td><td>小文字</td></tr>
+            <tr><td><code>[:upper:]</code></td><td>大文字</td></tr>
+            <tr><td><code>[:digit:]</code></td><td>数字</td></tr>
+            <tr><td><code>[:alpha:]</code></td><td>英字などのアルファベット文字</td></tr>
+            <tr><td><code>[:alnum:]</code></td><td>英字と数字</td></tr>
+            <tr><td><code>[:space:]</code></td><td>空白、タブ、改行などの空白文字</td></tr>
+            <tr><td><code>[:print:]</code></td><td>表示可能な文字</td></tr>
+          </tbody>
+        </table>
+
+        <p>範囲指定の<code>a-z</code>より、文字クラスの方が意図を明確にできる場合があります。動作はロケールの影響を受けることがあるため、スクリプトで厳密な結果が必要な場合は実行環境でも確認します。</p>
+
+        <h3>文字列置換ではない</h3>
+        <pre><code>printf '%s\n' cat | tr 'cat' 'dog'</code></pre>
+
+        <p><code>tr</code>は「catという単語をdogへ置換する」コマンドではありません。<code>c</code>を<code>d</code>へ、<code>a</code>を<code>o</code>へ、<code>t</code>を<code>g</code>へ対応させる文字単位の変換です。単語やパターン単位の置換には、後の学習で扱う<code>sed</code>などを使います。</p>
+
+        <h3>補集合を使う</h3>
+        <pre><code>tr -cd '[:digit:]\n' &lt; file.txt</code></pre>
+
+        <p><code>-c</code>は指定集合の補集合を対象にし、<code>-d</code>と組み合わせると、指定した文字以外を削除できます。この例では数字と改行以外を削除します。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>重要：</strong><code>tr</code>は標準入力を処理する文字変換コマンドです。ファイル名を直接渡すコマンド、単語を検索置換するコマンドとは考えません。</p>
+        </aside>
+      </section>
+
+      <section id="sec-9">
+        <h2>コマンドを組み合わせる</h2>
+
+        <h3>ログインシェルの利用数を集計する</h3>
+        <pre><code>cut -d: -f7 /etc/passwd | sort | uniq -c | sort -nr</code></pre>
+
+        <ol>
+          <li><code>cut</code>で第7フィールドを取り出す</li>
+          <li><code>sort</code>で同じシェルを隣接させる</li>
+          <li><code>uniq -c</code>で件数を数える</li>
+          <li><code>sort -nr</code>で件数の多い順に並べる</li>
+        </ol>
+
+        <h3>大文字と小文字を統一して単語数を数える</h3>
+        <pre><code>tr '[:upper:]' '[:lower:]' &lt; words.txt |
+tr -s '[:space:]' '\n' |
+sort |
+uniq -c |
+sort -nr</code></pre>
+
+        <p>大文字を小文字へ変換し、空白文字を改行へ変換して一行一語に近い形へ整え、同じ語を集計します。句読点などを厳密に扱うには、追加の処理が必要です。</p>
+
+        <h3>UIDを数値順に確認する</h3>
+        <pre><code>cut -d: -f1,3 /etc/passwd | sort -t: -k2,2n</code></pre>
+
+        <p>利用者名とUIDを取り出し、コロン区切りの第2フィールドを数値として並べます。</p>
+
+        <h3>結果を保存しながら確認する</h3>
+        <pre><code>cut -d: -f7 /etc/passwd |
+sort |
+uniq -c |
+sort -nr |
+tee shell_counts.txt</code></pre>
+
+        <p><code>tee</code>を使うと、画面へ表示しながらファイルにも保存できます。リダイレクトとパイプの詳しい整理は第18回で扱います。</p>
+      </section>
+
+      <section id="sec-10">
+        <h2>よくある間違いと確認手順</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>間違いやすい点</th>
+              <th>確認すること</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>cut -f</code>でコロン区切りを処理できない</td>
+              <td>標準の区切りはタブ。<code>-d:</code>を指定する</td>
+            </tr>
+            <tr>
+              <td><code>sort</code>で10が2より前に並ぶ</td>
+              <td>文字列比較になっていないか。数値なら<code>-n</code>を使う</td>
+            </tr>
+            <tr>
+              <td><code>sort -k2</code>の範囲が想定より広い</td>
+              <td>第2フィールドだけなら<code>-k2,2</code>と指定する</td>
+            </tr>
+            <tr>
+              <td><code>uniq</code>で離れた重複行が消えない</td>
+              <td><code>uniq</code>は隣接行だけを比較する。必要なら先に<code>sort</code>する</td>
+            </tr>
+            <tr>
+              <td><code>tr file.txt ...</code>のように使ってしまう</td>
+              <td><code>tr</code>は標準入力を読む。<code>&lt; file.txt</code>やパイプを使う</td>
+            </tr>
+            <tr>
+              <td><code>tr</code>で単語を置換しようとする</td>
+              <td><code>tr</code>は文字単位。文字列置換には別のコマンドを使う</td>
+            </tr>
+            <tr>
+              <td>並び順が別環境で変わる</td>
+              <td>ロケールを確認し、必要なら<code>LC_ALL=C</code>を指定する</td>
+            </tr>
+            <tr>
+              <td>入力ファイルへ直接リダイレクトして内容が消える</td>
+              <td>別ファイルへ出力するか、<code>sort -o</code>などを使う</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>小さなデータで段階的に確認する</h3>
+        <pre><code>cut -d: -f7 /etc/passwd
+cut -d: -f7 /etc/passwd | sort
+cut -d: -f7 /etc/passwd | sort | uniq -c
+cut -d: -f7 /etc/passwd | sort | uniq -c | sort -nr</code></pre>
+
+        <p>長いパイプラインで結果がおかしい場合は、左側から一段ずつ実行し、どの処理から想定と違ったかを確認します。</p>
+
+        <h3>manページを確認する</h3>
+        <pre><code>man cut
+man sort
+man uniq
+man tr
+
+info coreutils 'cut invocation'
+info coreutils 'sort invocation'
+info coreutils 'uniq invocation'
+info coreutils 'tr invocation'</code></pre>
+      </section>
+
+      <section id="sec-11">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>コロン区切りの第1フィールドを取り出す<code>cut</code>の指定は何でしょうか。</li>
+          <li>数値を昇順に並べる<code>sort</code>のオプションは何でしょうか。</li>
+          <li><code>sort -k2</code>と<code>sort -k2,2</code>は、キーの範囲がどう違うでしょうか。</li>
+          <li><code>uniq</code>が重複として検出できるのは、どのような行でしょうか。</li>
+          <li><code>uniq -c</code>、<code>-d</code>、<code>-u</code>は、それぞれ何を表示するでしょうか。</li>
+          <li><code>tr</code>へファイル内容を渡す方法を一つ答えてください。</li>
+          <li><code>tr -d</code>と<code>tr -s</code>の違いは何でしょうか。</li>
+          <li>並び順をロケールに左右されにくい形へ固定する代表的な指定は何でしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li><code>cut -d: -f1 ファイル</code></li>
+            <li><code>-n</code></li>
+            <li><code>-k2</code>は第2フィールドの先頭から行末まで、<code>-k2,2</code>は第2フィールドだけ</li>
+            <li>隣り合っている同一行</li>
+            <li><code>-c</code>は出現回数付き、<code>-d</code>は重複した行、<code>-u</code>は一度だけ現れた行</li>
+            <li><code>tr ... &lt; ファイル</code>、または<code>cat ファイル | tr ...</code>など</li>
+            <li><code>-d</code>は文字を削除し、<code>-s</code>は連続する同じ文字を一つにまとめる</li>
+            <li><code>LC_ALL=C sort ...</code></li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-12">
+        <h2>要約</h2>
+        <ul>
+          <li><code>cut</code>は、各行から指定したフィールド、文字位置、バイト位置を取り出します。</li>
+          <li><code>cut -d: -f1</code>はコロン区切りの第1フィールドを表示し、フィールド番号は1から始まります。</li>
+          <li><code>sort</code>は行を並べ替え、<code>-n</code>は数値順、<code>-r</code>は逆順、<code>-u</code>は一意化です。</li>
+          <li><code>sort -t: -k3,3n</code>のように、区切り文字、キー範囲、比較方法を指定できます。</li>
+          <li><code>-k2</code>は第2フィールドから行末まで、<code>-k2,2</code>は第2フィールドだけをキーにします。</li>
+          <li><code>sort</code>の文字列比較はロケールの影響を受け、必要に応じて<code>LC_ALL=C</code>で固定します。</li>
+          <li><code>uniq</code>は隣接する同一行を比較するため、全体の重複整理では通常先に<code>sort</code>します。</li>
+          <li><code>uniq -c</code>は件数、<code>-d</code>は重複行、<code>-u</code>は一度だけ現れた行を表示します。</li>
+          <li><code>tr</code>は標準入力を文字単位で変換し、<code>-d</code>は削除、<code>-s</code>は連続文字の圧縮です。</li>
+          <li>長いパイプラインは、左側から一段ずつ実行して結果を確認します。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/coreutils.html" target="_blank" rel="noopener noreferrer">GNU Coreutils Manual</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/cut-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：cut invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/sort-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：sort invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/uniq-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：uniq invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/tr-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：tr invocation</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/cut.1.html" target="_blank" rel="noopener noreferrer">cut(1) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/sort.1.html" target="_blank" rel="noopener noreferrer">sort(1) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/uniq.1.html" target="_blank" rel="noopener noreferrer">uniq(1) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/tr.1.html" target="_blank" rel="noopener noreferrer">tr(1) manual page</a></li>
+          <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/cut.html" target="_blank" rel="noopener noreferrer">POSIX：cut</a></li>
+          <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/sort.html" target="_blank" rel="noopener noreferrer">POSIX：sort</a></li>
+          <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/uniq.html" target="_blank" rel="noopener noreferrer">POSIX：uniq</a></li>
+          <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/tr.html" target="_blank" rel="noopener noreferrer">POSIX：tr</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

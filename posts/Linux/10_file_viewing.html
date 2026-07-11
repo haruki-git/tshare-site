@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 10：ファイル閲覧コマンド</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 10：ファイル閲覧コマンド</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/10_file_viewing_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">閲覧コマンドの使い分け</a></li>
+          <li><a href="#sec-2">標準入力と標準出力</a></li>
+          <li><a href="#sec-3">cat</a></li>
+          <li><a href="#sec-4">less</a></li>
+          <li><a href="#sec-5">head</a></li>
+          <li><a href="#sec-6">tail</a></li>
+          <li><a href="#sec-7">wc</a></li>
+          <li><a href="#sec-8">パイプとの組み合わせ</a></li>
+          <li><a href="#sec-9">ログ確認での使い分け</a></li>
+          <li><a href="#sec-10">よくある間違いと確認手順</a></li>
+          <li><a href="#sec-11">30秒チェック</a></li>
+          <li><a href="#sec-12">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>閲覧コマンドの使い分け</h2>
+        <p>ファイルの内容を確認するコマンドは、確認したい範囲やファイルの大きさによって使い分けます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>コマンド</th>
+              <th>主な用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>cat</code></td>
+              <td>短いファイルを一度に表示する、複数ファイルを連結する</td>
+            </tr>
+            <tr>
+              <td><code>less</code></td>
+              <td>長いファイルをページ単位で移動・検索しながら読む</td>
+            </tr>
+            <tr>
+              <td><code>head</code></td>
+              <td>ファイルの先頭部分を表示する</td>
+            </tr>
+            <tr>
+              <td><code>tail</code></td>
+              <td>ファイルの末尾部分を表示し、追記を継続監視する</td>
+            </tr>
+            <tr>
+              <td><code>wc</code></td>
+              <td>行数、単語数、バイト数、文字数などを数える</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>短い設定ファイルなら<code>cat</code>、長いログなら<code>less</code>、冒頭だけなら<code>head</code>、最新部分なら<code>tail</code>、件数だけなら<code>wc</code>という整理が基本です。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>今回の目標：</strong>ファイル全体を無条件に表示するのではなく、必要な範囲だけを読み、検索や件数確認を組み合わせられるようにします。</p>
+        </aside>
+      </section>
+
+      <section id="sec-2">
+        <h2>標準入力と標準出力</h2>
+        <p>今回のコマンドは、ファイル名を指定した場合はそのファイルを読み、ファイル名を指定しない場合は標準入力を読むものが中心です。</p>
+
+        <pre><code>cat file.txt
+cat
+printf '%s\n' alpha beta | head -n 1
+grep ERROR app.log | wc -l</code></pre>
+
+        <p><code>cat</code>だけを実行すると、キーボードからの入力を標準入力として読み、そのまま標準出力へ表示します。入力を終えるには、一般的な端末では行頭で<kbd>Ctrl</kbd>+<kbd>D</kbd>を押してEOFを送ります。</p>
+
+        <p>パイプ<code>|</code>は、左側コマンドの標準出力を、右側コマンドの標準入力へ渡します。</p>
+
+        <pre><code>command1 | command2</code></pre>
+
+        <p>この仕組みにより、「抽出してから数える」「末尾だけをページャーで読む」といった組み合わせができます。</p>
+
+        <h3>ファイル名としてのハイフン</h3>
+        <p>GNU Coreutilsの多くのコマンドでは、ファイル名の位置へ<code>-</code>を指定すると標準入力を表します。</p>
+
+        <pre><code>printf '%s\n' one two | cat -
+head -n 5 -
+tail -n 5 -</code></pre>
+
+        <p>ただし、コマンドやオプションによって扱いが異なるため、実際のmanページも確認します。</p>
+      </section>
+
+      <section id="sec-3">
+        <h2>cat</h2>
+        <p><code>cat</code>は、指定したファイルを順番に読み、その内容を標準出力へ連結して書き出します。名前はconcatenate、連結に由来します。</p>
+
+        <h3>内容を表示する</h3>
+        <pre><code>cat memo.txt
+cat file1.txt file2.txt</code></pre>
+
+        <p>複数のファイルを指定すると、指定した順番で連続して表示します。短いファイルの確認に向いています。</p>
+
+        <h3>複数ファイルを連結して保存する</h3>
+        <pre><code>cat part1.txt part2.txt > combined.txt
+cat new_part.txt >> combined.txt</code></pre>
+
+        <ul>
+          <li><code>&gt;</code>：出力先を新しく作成するか、既存内容を切り詰めて上書きする</li>
+          <li><code>&gt;&gt;</code>：既存内容の末尾へ追記する</li>
+        </ul>
+
+        <p>出力先に既存ファイルを指定すると、<code>&gt;</code>では元の内容が失われます。連結元と出力先を同じファイルにしないよう注意します。</p>
+
+        <pre><code># 危険な例。シェルが先に file1.txt を空にする
+cat file1.txt file2.txt > file1.txt</code></pre>
+
+        <h3>行番号や制御文字を確認する</h3>
+        <pre><code>cat -n file.txt
+cat -b file.txt
+cat -s file.txt
+cat -A file.txt
+cat -E file.txt
+cat -T file.txt</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>-n</code></td>
+              <td>すべての出力行へ行番号を付ける</td>
+            </tr>
+            <tr>
+              <td><code>-b</code></td>
+              <td>空行を除く行へ行番号を付ける。<code>-n</code>より優先される</td>
+            </tr>
+            <tr>
+              <td><code>-s</code></td>
+              <td>連続する複数の空行を一つへまとめる</td>
+            </tr>
+            <tr>
+              <td><code>-E</code></td>
+              <td>各行末へ<code>$</code>を表示する</td>
+            </tr>
+            <tr>
+              <td><code>-T</code></td>
+              <td>タブを<code>^I</code>として表示する</td>
+            </tr>
+            <tr>
+              <td><code>-A</code></td>
+              <td>タブ、行末、印字できない文字などを見える形で表示する</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>設定ファイルの末尾に余計な空白やタブがあるか、改行コードの見え方がおかしくないかを調べるときは、<code>cat -A</code>が役立つ場合があります。</p>
+
+        <h3>大きなファイルには向かない場合がある</h3>
+        <p><code>cat</code>は出力を止めずに端末へ流すため、長いファイルでは必要な場所が一気に画面外へ流れます。その場合は<code>less</code>を使います。</p>
+      </section>
+
+      <section id="sec-4">
+        <h2>less</h2>
+        <p><code>less</code>は、長いテキストを一画面ずつ移動しながら閲覧するページャーです。ファイル全体を最初に読み込まなくても表示を始められるため、大きなファイルの閲覧にも向いています。</p>
+
+        <pre><code>less /var/log/syslog
+command | less</code></pre>
+
+        <h3>基本操作</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>キー</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><kbd>Space</kbd>、<kbd>f</kbd></td><td>一画面先へ進む</td></tr>
+            <tr><td><kbd>b</kbd></td><td>一画面前へ戻る</td></tr>
+            <tr><td><kbd>Enter</kbd>、<kbd>j</kbd></td><td>一行進む</td></tr>
+            <tr><td><kbd>k</kbd></td><td>一行戻る</td></tr>
+            <tr><td><kbd>g</kbd></td><td>先頭へ移動する</td></tr>
+            <tr><td><kbd>G</kbd></td><td>末尾へ移動する</td></tr>
+            <tr><td><code>/文字列</code></td><td>前方へ検索する</td></tr>
+            <tr><td><code>?文字列</code></td><td>後方へ検索する</td></tr>
+            <tr><td><kbd>n</kbd></td><td>同じ方向の次の一致へ移動する</td></tr>
+            <tr><td><kbd>N</kbd></td><td>逆方向の次の一致へ移動する</td></tr>
+            <tr><td><kbd>q</kbd></td><td>終了する</td></tr>
+            <tr><td><kbd>h</kbd></td><td>less内のヘルプを表示する</td></tr>
+          </tbody>
+        </table>
+
+        <h3>よく使うオプション</h3>
+        <pre><code>less -N file.txt
+less -S file.txt
+less -i file.txt
+less +G file.txt
+less +F app.log</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>指定</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-N</code></td><td>各行の先頭へ行番号を表示する</td></tr>
+            <tr><td><code>-S</code></td><td>長い行を折り返さず、画面幅を超えた部分を切って表示する</td></tr>
+            <tr><td><code>-i</code></td><td>検索文字列に大文字が含まれない場合、大文字と小文字を区別せず検索する</td></tr>
+            <tr><td><code>+G</code></td><td>ファイルの末尾から表示を始める</td></tr>
+            <tr><td><code>+F</code></td><td>末尾へ移動し、追記を待ちながら表示する</td></tr>
+          </tbody>
+        </table>
+
+        <p><code>less +F</code>の追跡モードから通常の閲覧へ戻るには、一般に<kbd>Ctrl</kbd>+<kbd>C</kbd>を押します。その後、検索や上下移動を行い、<kbd>q</kbd>で終了できます。</p>
+
+        <h3>折り返さず横を見る</h3>
+        <p>ログやCSVなど一行が長いファイルでは、<code>less -S</code>を使うと自動折り返しを止められます。左右の矢印キーなどで横方向へ移動できます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>使い分け：</strong>ファイルを編集せず、検索しながら読むだけなら<code>less</code>が安全です。閲覧を終了してもファイル内容は変更されません。</p>
+        </aside>
+      </section>
+
+      <section id="sec-5">
+        <h2>head</h2>
+        <p><code>head</code>は、ファイルの先頭部分を表示します。行数を指定しない場合、標準では先頭10行を表示します。</p>
+
+        <pre><code>head file.txt
+head file1.txt file2.txt</code></pre>
+
+        <p>複数ファイルを指定すると、通常はファイル名の見出しを付けて、それぞれの先頭を表示します。</p>
+
+        <h3>行数を指定する</h3>
+        <pre><code>head -n 5 file.txt
+head -5 file.txt
+head -n 20 /etc/passwd</code></pre>
+
+        <p><code>-n 数値</code>で、表示する行数を指定します。GNU環境では<code>head -5</code>のような短い形式も使えますが、意味が明確な<code>-n 5</code>を覚えておくと整理しやすくなります。</p>
+
+        <h3>バイト数を指定する</h3>
+        <pre><code>head -c 100 file.bin
+head -c 1K file.bin</code></pre>
+
+        <p><code>-c</code>は、先頭から指定したバイト数を表示します。テキストを文字単位で切る機能ではないため、マルチバイト文字の途中で切れることがあります。</p>
+
+        <h3>末尾の一定行を除く</h3>
+        <pre><code>head -n -5 file.txt</code></pre>
+
+        <p>GNU <code>head</code>では、行数へ負の値を指定すると、末尾の指定行数を除いた部分を表示します。この例は、最後の5行を除いて表示します。</p>
+
+        <h3>見出しの制御</h3>
+        <pre><code>head -q file1 file2
+head -v file.txt</code></pre>
+
+        <ul>
+          <li><code>-q</code>：複数ファイルでもファイル名の見出しを表示しない</li>
+          <li><code>-v</code>：一つのファイルでもファイル名の見出しを表示する</li>
+        </ul>
+      </section>
+
+      <section id="sec-6">
+        <h2>tail</h2>
+        <p><code>tail</code>は、ファイルの末尾部分を表示します。行数を指定しない場合、標準では末尾10行を表示します。</p>
+
+        <pre><code>tail file.txt
+tail -n 20 app.log
+tail -c 100 file.bin</code></pre>
+
+        <h3>指定行から末尾まで表示する</h3>
+        <pre><code>tail -n +5 file.txt</code></pre>
+
+        <p><code>-n +5</code>は、先頭から数えて5行目以降を表示します。単に末尾5行を表示する<code>tail -n 5</code>とは意味が異なります。</p>
+
+        <h3>追記を監視する</h3>
+        <pre><code>tail -f app.log
+tail -n 50 -f app.log</code></pre>
+
+        <p><code>-f</code>は、ファイルの末尾を表示した後、ファイルへ追記された内容を継続して表示します。ログをリアルタイムに確認するときに使います。停止するには通常<kbd>Ctrl</kbd>+<kbd>C</kbd>を押します。</p>
+
+        <h3><code>-f</code>と<code>-F</code></h3>
+        <pre><code>tail -F app.log</code></pre>
+
+        <p>GNU <code>tail</code>の<code>-F</code>は、概ね<code>--follow=name --retry</code>に相当します。ファイル名を追跡し、ログローテーションなどでファイルが置き換わった場合にも、同じ名前の新しいファイルを開き直そうとします。</p>
+        <p>一方、標準の<code>tail -f</code>は通常ファイル記述子を追跡するため、ファイル名が新しいファイルへ置き換わっても、古いファイルを追い続ける場合があります。</p>
+
+        <h3>プロセス終了時に追跡を終える</h3>
+        <pre><code>tail --pid=1234 -f app.log</code></pre>
+
+        <p><code>--pid</code>を<code>-f</code>と組み合わせると、指定したプロセスが終了した後にtailも終了します。GNU固有の機能です。</p>
+
+        <h3>複数ファイル</h3>
+        <pre><code>tail -f app.log error.log</code></pre>
+
+        <p>複数のログを指定すると、どのファイルからの出力かを示す見出しを切り替えながら表示します。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>覚え方：</strong><code>tail -f</code>は追記を見る、<code>tail -F</code>はログファイル名を追いかけ直す、と整理します。</p>
+        </aside>
+      </section>
+
+      <section id="sec-7">
+        <h2>wc</h2>
+        <p><code>wc</code>は、入力の行数、単語数、バイト数などを数えるコマンドです。名前はword countに由来します。</p>
+
+        <pre><code>wc file.txt</code></pre>
+
+        <p>オプションを指定しない場合、通常は行数、単語数、バイト数、ファイル名の順に表示します。</p>
+
+        <h3>よく使うオプション</h3>
+        <pre><code>wc -l file.txt
+wc -w file.txt
+wc -c file.txt
+wc -m file.txt
+wc -L file.txt</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>数えるもの</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-l</code></td><td>改行文字の数。一般に行数確認として使う</td></tr>
+            <tr><td><code>-w</code></td><td>空白類で区切られた単語数</td></tr>
+            <tr><td><code>-c</code></td><td>バイト数</td></tr>
+            <tr><td><code>-m</code></td><td>文字数。現在のロケールの文字として数える</td></tr>
+            <tr><td><code>-L</code></td><td>最も長い行の表示幅</td></tr>
+          </tbody>
+        </table>
+
+        <h3><code>-c</code>と<code>-m</code>の違い</h3>
+        <p>ASCII文字だけなら同じ値になることが多いですが、UTF-8の日本語などでは、一文字が複数バイトになるため値が異なる場合があります。</p>
+
+        <pre><code>printf 'あ\n' | wc -c
+printf 'あ\n' | wc -m</code></pre>
+
+        <p>改行文字も入力に含まれるため、この例では「見えている一文字」だけを数えるわけではありません。</p>
+
+        <h3>複数ファイル</h3>
+        <pre><code>wc -l file1.txt file2.txt</code></pre>
+
+        <p>複数ファイルを指定すると、それぞれの値に加え、通常は最後に合計の<code>total</code>行を表示します。</p>
+
+        <h3>パイプから数える</h3>
+        <pre><code>grep ERROR app.log | wc -l
+find . -type f -print | wc -l</code></pre>
+
+        <p><code>wc -l</code>は「入力に含まれる改行文字」を数えます。最後の行に改行がないファイルでは、人が見た行数と一つずれることがあります。</p>
+      </section>
+
+      <section id="sec-8">
+        <h2>パイプとの組み合わせ</h2>
+        <p>閲覧コマンドは、単独よりもパイプと組み合わせることで、必要な情報だけを効率よく確認できます。</p>
+
+        <h3>コマンド出力をlessで読む</h3>
+        <pre><code>ps aux | less
+systemctl status sshd --no-pager
+journalctl | less</code></pre>
+
+        <p>大量のコマンド出力は<code>less</code>へ渡すと、検索しながら閲覧できます。コマンド自身がページャーを使う場合もあります。</p>
+
+        <h3>検索結果の件数を数える</h3>
+        <pre><code>grep -i error app.log | wc -l</code></pre>
+
+        <p>この例は、<code>error</code>に一致した出力行数を数えます。ただし、一行に複数回一致しても、行としては一つです。</p>
+
+        <h3>先頭・末尾を段階的に切り出す</h3>
+        <pre><code>head -n 100 app.log | tail -n 20</code></pre>
+
+        <p>この例は、先頭100行のうち、最後の20行、つまり元ファイルの81行目から100行目を表示します。</p>
+
+        <h3>最新部分をlessで検索する</h3>
+        <pre><code>tail -n 1000 app.log | less</code></pre>
+
+        <p>巨大なログ全体ではなく、末尾1000行だけを<code>less</code>で検索できます。</p>
+
+        <h3>複数ファイルを一つの入力として扱う</h3>
+        <pre><code>cat access.log.2 access.log.1 access.log | less
+cat part*.txt | wc -l</code></pre>
+
+        <p>シェルのワイルドカード展開順が意図した順番か、<code>printf '%s\n' part*.txt</code>などで確認してから連結します。</p>
+      </section>
+
+      <section id="sec-9">
+        <h2>ログ確認での使い分け</h2>
+        <p>ログファイルでは、目的に応じて「全体を検索する」「直近を見る」「追記を監視する」を分けます。</p>
+
+        <h3>直近50行を見る</h3>
+        <pre><code>tail -n 50 /var/log/app.log</code></pre>
+
+        <h3>直近を見ながら追記を監視する</h3>
+        <pre><code>tail -n 50 -F /var/log/app.log</code></pre>
+
+        <h3>全体を検索しながら読む</h3>
+        <pre><code>less -N /var/log/app.log</code></pre>
+
+        <p><code>less</code>を開いた後に、<code>/ERROR</code>で前方検索し、<kbd>n</kbd>で次の一致へ移動します。</p>
+
+        <h3>発生件数を数える</h3>
+        <pre><code>grep 'ERROR' /var/log/app.log | wc -l</code></pre>
+
+        <h3>ログが大きすぎる場合</h3>
+        <pre><code>tail -n 5000 /var/log/app.log | less -S</code></pre>
+
+        <p>必要な時間帯が末尾付近にあるなら、対象範囲を先に<code>tail</code>で絞ると閲覧しやすくなります。</p>
+
+        <h3>権限エラー</h3>
+        <pre><code>ls -l /var/log/app.log
+id
+sudo less /var/log/app.log</code></pre>
+
+        <p>読めない場合は、ファイルの所有者・グループ・パーミッションと、自分の所属グループを確認します。権限が必要なログだけ、許可された範囲で<code>sudo</code>を使います。</p>
+      </section>
+
+      <section id="sec-10">
+        <h2>よくある間違いと確認手順</h2>
+
+        <h3>巨大ファイルをcatで一気に流す</h3>
+        <p>端末が壊れるわけではありませんが、必要な部分が流れ、制御文字を含むファイルでは表示が乱れることもあります。まずサイズと種類を確認します。</p>
+
+        <pre><code>ls -lh file
+file file
+less file</code></pre>
+
+        <h3>バイナリファイルを端末へ表示する</h3>
+        <p><code>cat</code>や<code>less</code>でバイナリデータを直接表示すると、読めない文字列や端末制御文字が出ることがあります。内容の種類は<code>file</code>で確認します。</p>
+
+        <h3><code>cat file &gt; file</code>で内容を失う</h3>
+        <p>リダイレクトは、コマンド実行より先にシェルが準備します。出力先を元ファイルと同じにすると、<code>cat</code>が読む前にファイルが空になることがあります。</p>
+
+        <h3><code>wc -l</code>を必ず論理的な行数だと思う</h3>
+        <p><code>wc -l</code>が数えるのは改行文字です。末尾に改行がないファイルでは、表示上の最終行を数えない場合があります。</p>
+
+        <h3><code>tail -f</code>でローテーション後の新規ログを見逃す</h3>
+        <p>ファイル名が置き換えられる運用では、GNU環境なら<code>tail -F</code>を検討します。</p>
+
+        <h3>確認の流れ</h3>
+        <pre><code>ls -lh -- file
+file -- file
+wc -l -- file
+head -n 5 -- file
+tail -n 20 -- file
+less -N -- file</code></pre>
+
+        <ol>
+          <li>ファイルサイズを確認する</li>
+          <li>テキストかバイナリかを確認する</li>
+          <li>行数を確認する</li>
+          <li>先頭と末尾を少量だけ見る</li>
+          <li>必要なら<code>less</code>で検索しながら読む</li>
+        </ol>
+
+        <p>詳しい使い方は、次のマニュアルでも確認できます。</p>
+
+        <pre><code>man cat
+man less
+man head
+man tail
+man wc</code></pre>
+      </section>
+
+      <section id="sec-11">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>長いファイルを検索しながらページ単位で読むコマンドは何でしょうか。</li>
+          <li><code>head</code>と<code>tail</code>は、行数を指定しない場合、標準で何行表示するでしょうか。</li>
+          <li><code>tail -n +5 file</code>は、どの範囲を表示するでしょうか。</li>
+          <li>GNU環境で、ログローテーション後も同じファイル名を追いかけ直す用途に向く指定は何でしょうか。</li>
+          <li><code>wc -c</code>と<code>wc -m</code>は、何を数えるでしょうか。</li>
+          <li><code>cat file1 file2 &gt; file1</code>が危険なのはなぜでしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li><code>less</code></li>
+            <li>それぞれ10行</li>
+            <li>先頭から数えて5行目以降を末尾まで表示する</li>
+            <li><code>tail -F ファイル</code></li>
+            <li><code>-c</code>はバイト数、<code>-m</code>は文字数</li>
+            <li>シェルが先に出力先の<code>file1</code>を切り詰めるため、catが読む前に元の内容が失われる可能性があるから</li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-12">
+        <h2>要約</h2>
+        <ul>
+          <li><code>cat</code>は短いファイルの表示と、複数ファイルの連結に向きます。</li>
+          <li><code>cat -n</code>は全行、<code>cat -b</code>は空行以外へ行番号を付けます。</li>
+          <li><code>less</code>は長いファイルを移動・検索しながら読むページャーです。</li>
+          <li><code>head</code>は先頭、<code>tail</code>は末尾を、標準ではそれぞれ10行表示します。</li>
+          <li><code>tail -f</code>は追記を監視し、GNUの<code>tail -F</code>は同じファイル名を開き直しながら追跡します。</li>
+          <li><code>wc -l</code>は改行数、<code>-w</code>は単語数、<code>-c</code>はバイト数、<code>-m</code>は文字数を数えます。</li>
+          <li>パイプを使うと、抽出、範囲指定、閲覧、件数確認を組み合わせられます。</li>
+          <li>巨大なファイルは、まず<code>ls -lh</code>、<code>file</code>、<code>head</code>、<code>tail</code>で概要を確認します。</li>
+          <li><code>&gt;</code>は出力先を切り詰めるため、連結元と出力先を同じファイルにしません。</li>
+          <li>ログ確認では、直近表示、継続監視、全体検索、件数集計を目的別に使い分けます。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/cat-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：cat invocation</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/less.1.html" target="_blank" rel="noopener noreferrer">less(1) manual page</a></li>
+          <li><a href="https://www.greenwoodsoftware.com/less/" target="_blank" rel="noopener noreferrer">Less 公式サイト</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/head-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：head invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/tail-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：tail invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/wc-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：wc invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/Common-options.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：Common options</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Pipelines.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Pipelines</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Redirections.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Redirections</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

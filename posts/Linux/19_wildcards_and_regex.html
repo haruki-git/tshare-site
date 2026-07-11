@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 19：ワイルドカードと正規表現</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 19：ワイルドカードと正規表現</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/19_wildcards_and_regex_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">ワイルドカードと正規表現の違い</a></li>
+          <li><a href="#sec-2"><code>*</code>によるファイル名展開</a></li>
+          <li><a href="#sec-3"><code>?</code>による1文字の指定</a></li>
+          <li><a href="#sec-4"><code>[]</code>による文字の候補</a></li>
+          <li><a href="#sec-5">クォートとエスケープ</a></li>
+          <li><a href="#sec-6">ワイルドカード利用時の注意</a></li>
+          <li><a href="#sec-7"><code>grep</code>と基本正規表現</a></li>
+          <li><a href="#sec-8">位置を表す<code>^</code>と<code>$</code></a></li>
+          <li><a href="#sec-9">正規表現の<code>.</code>・<code>[]</code>・<code>*</code></a></li>
+          <li><a href="#sec-10">実践的な検索と確認方法</a></li>
+          <li><a href="#sec-11">30秒チェック</a></li>
+          <li><a href="#sec-12">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>ワイルドカードと正規表現の違い</h2>
+        <p>ワイルドカードと正規表現は、どちらもパターンを使います。しかし、誰がパターンを解釈するのか、記号が何を意味するのかが異なります。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>種類</th>
+              <th>主に解釈するもの</th>
+              <th>主な対象</th>
+              <th>例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>シェルのワイルドカード</td>
+              <td>bashなどのシェル</td>
+              <td>ファイル名やパス名</td>
+              <td><code>ls *.txt</code></td>
+            </tr>
+            <tr>
+              <td>正規表現</td>
+              <td><code>grep</code>、<code>sed</code>、<code>awk</code>など</td>
+              <td>ファイル内部の文字列</td>
+              <td><code>grep '^root:' /etc/passwd</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>シェルのワイルドカードは、グロブやパス名展開とも呼ばれます。シェルがパターンに一致するファイル名を探し、コマンドを実行する前に、そのパターンを実際のファイル名へ置き換えます。</p>
+
+        <pre><code>printf '%s\n' *.txt</code></pre>
+
+        <p>カレントディレクトリに<code>a.txt</code>と<code>b.txt</code>がある場合、シェルは概ね次のような引数へ展開してから<code>printf</code>を実行します。</p>
+
+        <pre><code>printf '%s\n' a.txt b.txt</code></pre>
+
+        <p>一方、次の<code>'^root:'</code>は<code>grep</code>が解釈する正規表現です。</p>
+
+        <pre><code>grep '^root:' /etc/passwd</code></pre>
+
+        <p>シェルには正規表現を文字列のまま渡し、<code>grep</code>が各行の内容と照合します。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>最重要：</strong>ワイルドカードの<code>*</code>は「任意の文字列」ですが、基本正規表現の<code>*</code>は「直前の要素を0回以上繰り返す」です。同じ記号でも意味が異なります。</p>
+        </aside>
+      </section>
+
+      <section id="sec-2">
+        <h2><code>*</code>によるファイル名展開</h2>
+        <p>シェルのワイルドカード<code>*</code>は、0文字以上の任意の文字列に一致します。</p>
+
+        <pre><code>ls *.txt
+cp report* backup/
+rm -- *.tmp</code></pre>
+
+        <p><code>*.txt</code>は、名前が<code>.txt</code>で終わるファイルに一致します。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>パターン</th>
+              <th>一致する例</th>
+              <th>一致しない例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>*.txt</code></td>
+              <td><code>a.txt</code>、<code>report.txt</code></td>
+              <td><code>report.csv</code></td>
+            </tr>
+            <tr>
+              <td><code>log*</code></td>
+              <td><code>log</code>、<code>log1</code>、<code>logs</code></td>
+              <td><code>app.log</code></td>
+            </tr>
+            <tr>
+              <td><code>*backup*</code></td>
+              <td><code>backup</code>、<code>old-backup.tar</code></td>
+              <td><code>archive.tar</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><code>*</code>は0文字にも一致するため、<code>log*</code>は<code>log</code>そのものにも一致します。</p>
+
+        <h3>ディレクトリを含むパターン</h3>
+        <pre><code>ls /var/log/*.log
+cp images/*.png backup/
+ls project/*/README</code></pre>
+
+        <p>通常のパス名展開では、<code>*</code>はスラッシュを越えて複数階層へ進みません。<code>project/*/README</code>では、<code>project</code>の直下にある一階層分のディレクトリ名へ一致します。</p>
+
+        <h3>隠しファイル</h3>
+        <p>bashの通常設定では、パターンの先頭にある<code>*</code>は、名前がドットで始まるファイルへ一致しません。</p>
+
+        <pre><code>printf '%s\n' *
+printf '%s\n' .*</code></pre>
+
+        <p>隠しファイルを対象にする場合は、先頭のドットをパターンへ明示します。bashでは<code>dotglob</code>を有効にし、通常のパターンへ隠しファイルを含める方法もあります。</p>
+
+        <pre><code>shopt -s dotglob
+printf '%s\n' *
+shopt -u dotglob</code></pre>
+
+        <p><code>dotglob</code>はbash固有のシェルオプションです。スクリプトで変更する場合は、後続処理への影響も考えます。</p>
+      </section>
+
+      <section id="sec-3">
+        <h2><code>?</code>による1文字の指定</h2>
+        <p>シェルのワイルドカード<code>?</code>は、任意の1文字に一致します。0文字や2文字には一致しません。</p>
+
+        <pre><code>ls file?.txt
+ls image-??.png
+cp report-202?.pdf archive/</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>パターン</th>
+              <th>一致</th>
+              <th>不一致</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>file?.txt</code></td>
+              <td><code>file1.txt</code>、<code>fileA.txt</code></td>
+              <td><code>file.txt</code>、<code>file10.txt</code></td>
+            </tr>
+            <tr>
+              <td><code>??.log</code></td>
+              <td><code>01.log</code>、<code>ab.log</code></td>
+              <td><code>1.log</code>、<code>001.log</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>例えば、<code>file?.txt</code>は、<code>file</code>と<code>.txt</code>の間に、ちょうど1文字がある名前へ一致します。</p>
+
+        <h3><code>*</code>との違い</h3>
+        <pre><code>file*.txt
+file?.txt</code></pre>
+
+        <ul>
+          <li><code>file*.txt</code>：間に0文字以上</li>
+          <li><code>file?.txt</code>：間に必ず1文字</li>
+        </ul>
+
+        <p>ファイル名の桁数が決まっている場合や、連番ファイルを絞り込む場合に便利です。</p>
+      </section>
+
+      <section id="sec-4">
+        <h2><code>[]</code>による文字の候補</h2>
+        <p>角括弧<code>[]</code>は、括弧内に書いた候補のうち、いずれか1文字に一致します。</p>
+
+        <pre><code>ls file[123].txt
+ls image[ab].png
+ls log[0-9].txt</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>パターン</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>[abc]</code></td>
+              <td><code>a</code>、<code>b</code>、<code>c</code>のいずれか1文字</td>
+            </tr>
+            <tr>
+              <td><code>[0-9]</code></td>
+              <td>範囲として扱われる1文字</td>
+            </tr>
+            <tr>
+              <td><code>[!abc]</code></td>
+              <td><code>a</code>、<code>b</code>、<code>c</code>以外の1文字</td>
+            </tr>
+            <tr>
+              <td><code>[^abc]</code></td>
+              <td>bashのパターンでは、<code>abc</code>以外の1文字として利用できる</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><code>file[123].txt</code>は、<code>file1.txt</code>、<code>file2.txt</code>、<code>file3.txt</code>へ一致します。<code>file12.txt</code>には一致しません。</p>
+
+        <h3>文字クラス</h3>
+        <pre><code>ls file[[:digit:]].txt
+ls [[:upper:]]*.txt
+ls *[[:space:]]*</code></pre>
+
+        <p>角括弧の中では、POSIX文字クラスを利用できます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>文字クラス</th>
+              <th>主な意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>[[:digit:]]</code></td>
+              <td>数字</td>
+            </tr>
+            <tr>
+              <td><code>[[:alpha:]]</code></td>
+              <td>英字などの文字</td>
+            </tr>
+            <tr>
+              <td><code>[[:alnum:]]</code></td>
+              <td>英数字など</td>
+            </tr>
+            <tr>
+              <td><code>[[:lower:]]</code></td>
+              <td>小文字</td>
+            </tr>
+            <tr>
+              <td><code>[[:upper:]]</code></td>
+              <td>大文字</td>
+            </tr>
+            <tr>
+              <td><code>[[:space:]]</code></td>
+              <td>空白文字</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>範囲や文字クラスの一致結果はロケールの影響を受ける場合があります。正確なバイト順やASCII相当の動作を求める調査では、<code>LC_ALL=C</code>を一時指定することがあります。</p>
+
+        <pre><code>LC_ALL=C printf '%s\n' [A-Z]*</code></pre>
+      </section>
+
+      <section id="sec-5">
+        <h2>クォートとエスケープ</h2>
+        <p>ワイルドカードをシェルに展開させず、記号そのものとしてコマンドへ渡したい場合は、クォートまたはバックスラッシュを使います。</p>
+
+        <pre><code>printf '%s\n' "*.txt"
+printf '%s\n' '*.txt'
+printf '%s\n' \*.txt</code></pre>
+
+        <p>これらは、<code>*.txt</code>という文字列をそのまま表示します。</p>
+
+        <h3>クォートしない場合</h3>
+        <pre><code>printf '&lt;%s&gt;\n' *.txt</code></pre>
+
+        <p>シェルが<code>*.txt</code>を一致するファイル名へ展開し、それぞれを<code>printf</code>の引数として渡します。</p>
+
+        <h3>正規表現をクォートする理由</h3>
+        <pre><code>grep '^root:' /etc/passwd
+grep '[0-9]' data.txt
+grep '.*\.log$' list.txt</code></pre>
+
+        <p><code>grep</code>へ渡す正規表現は、シングルクォートで囲むことが一般的です。シェルによるワイルドカード展開、変数展開、バックスラッシュの解釈などを防ぎ、パターンをそのまま<code>grep</code>へ渡せます。</p>
+
+        <h3>ダブルクォートとの違い</h3>
+        <pre><code>pattern='^error'
+grep "$pattern" app.log</code></pre>
+
+        <p>ダブルクォート内では変数展開が行われます。変数へ保存した正規表現を渡す場合は、<code>"$pattern"</code>のようにダブルクォートで囲みます。</p>
+
+        <p>変数展開が不要な固定パターンでは、シングルクォートが分かりやすくなります。</p>
+
+        <h3>文字どおりの検索</h3>
+        <pre><code>grep -F 'a.b*c[1]' file.txt</code></pre>
+
+        <p><code>grep -F</code>は、パターンを正規表現ではなく固定文字列として扱います。正規表現の記号を多数含む文字列を、そのまま探したい場合に便利です。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>ワイルドカード利用時の注意</h2>
+
+        <h3>展開結果を先に確認する</h3>
+        <pre><code>printf '%s\n' *.tmp
+rm -- *.tmp</code></pre>
+
+        <p>削除や移動の前に、<code>printf</code>などで一致するファイル名を確認すると安全です。</p>
+
+        <h3>オプションと誤解されるファイル名</h3>
+        <p>展開されたファイル名がハイフンで始まると、コマンドのオプションとして解釈される場合があります。</p>
+
+        <pre><code>rm -- *.tmp
+cp -- *.txt backup/</code></pre>
+
+        <p><code>--</code>は、多くのコマンドでオプションの終わりを示します。以降の値をファイル名として扱わせます。</p>
+
+        <h3>一致するファイルがない場合</h3>
+        <p>bashの通常設定では、ワイルドカードに一致するファイルがない場合、パターン文字列が展開されずに残ります。</p>
+
+        <pre><code>printf '&lt;%s&gt;\n' no-match-*.txt</code></pre>
+
+        <p>一致がなければ、<code>no-match-*.txt</code>という文字列がそのまま渡されるのが標準的なbashの動作です。</p>
+
+        <p>bashでは、<code>nullglob</code>を有効にすると一致しないパターンを削除し、<code>failglob</code>を有効にするとエラーにできます。</p>
+
+        <pre><code>shopt -s nullglob
+files=(*.txt)
+shopt -u nullglob
+
+shopt -s failglob
+printf '%s\n' no-match-*.txt
+shopt -u failglob</code></pre>
+
+        <p>これらはbash固有の設定であり、スクリプト全体へ影響します。必要な範囲を意識して使います。</p>
+
+        <h3>隠しファイルと一括操作</h3>
+        <p><code>*</code>は通常、ドットで始まる名前へ一致しません。そのため、ディレクトリ内のすべてをコピーしたつもりでも、隠しファイルが含まれていない場合があります。</p>
+
+        <pre><code>cp -a source/. destination/</code></pre>
+
+        <p>ディレクトリの内容を隠しファイルも含めて複製する目的では、単純に<code>source/*</code>とするより、コマンドの仕様に合う方法を使います。</p>
+
+        <h3>パターンと実在ファイルを区別する</h3>
+        <pre><code>touch 'literal*.txt'
+ls -l 'literal*.txt'</code></pre>
+
+        <p>ファイル名自体に<code>*</code>などが含まれる場合は、クォートまたはエスケープして扱います。</p>
+      </section>
+
+      <section id="sec-7">
+        <h2><code>grep</code>と基本正規表現</h2>
+        <p><code>grep</code>は、入力からパターンに一致する行を検索します。オプションを付けない通常の<code>grep</code>は、基本正規表現、BREを使います。</p>
+
+        <pre><code>grep 'pattern' file.txt
+grep -G 'pattern' file.txt</code></pre>
+
+        <p><code>-G</code>は基本正規表現を明示します。通常は省略できます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>記号</th>
+              <th>基本正規表現での主な意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.</code></td>
+              <td>任意の1文字</td>
+            </tr>
+            <tr>
+              <td><code>^</code></td>
+              <td>行頭</td>
+            </tr>
+            <tr>
+              <td><code>$</code></td>
+              <td>行末</td>
+            </tr>
+            <tr>
+              <td><code>[abc]</code></td>
+              <td><code>a</code>、<code>b</code>、<code>c</code>のいずれか1文字</td>
+            </tr>
+            <tr>
+              <td><code>[^abc]</code></td>
+              <td><code>a</code>、<code>b</code>、<code>c</code>以外の1文字</td>
+            </tr>
+            <tr>
+              <td><code>*</code></td>
+              <td>直前の要素を0回以上繰り返す</td>
+            </tr>
+            <tr>
+              <td><code>\{m,n\}</code></td>
+              <td>直前の要素を指定回数繰り返す</td>
+            </tr>
+            <tr>
+              <td><code>\(...\)</code></td>
+              <td>基本正規表現でのグループ化</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>拡張正規表現との違い</h3>
+        <pre><code>grep -E 'error|warning' app.log
+grep -E 'colou?r' words.txt</code></pre>
+
+        <p><code>grep -E</code>は拡張正規表現、EREを使います。拡張正規表現では、<code>?</code>、<code>+</code>、<code>|</code>、<code>()</code>などをバックスラッシュなしで使います。</p>
+
+        <p>基本正規表現では、GNU grepで同様の機能を使う場合、<code>\?</code>、<code>\+</code>、<code>\|</code>、<code>\(...\)</code>のように記述します。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>重要：</strong>通常の<code>grep</code>は基本正規表現、<code>grep -E</code>は拡張正規表現、<code>grep -F</code>は正規表現ではない固定文字列検索です。</p>
+        </aside>
+      </section>
+
+      <section id="sec-8">
+        <h2>位置を表す<code>^</code>と<code>$</code></h2>
+        <p><code>^</code>は行頭、<code>$</code>は行末を表すアンカーです。文字そのものではなく、行の位置に一致します。</p>
+
+        <h3>行頭</h3>
+        <pre><code>grep '^root:' /etc/passwd
+grep '^ERROR' app.log</code></pre>
+
+        <p><code>^root:</code>は、行の先頭が<code>root:</code>で始まる行へ一致します。</p>
+
+        <h3>行末</h3>
+        <pre><code>grep '/bin/bash$' /etc/passwd
+grep '\.conf$' file-list.txt</code></pre>
+
+        <p><code>/bin/bash$</code>は、行末が<code>/bin/bash</code>で終わる行へ一致します。</p>
+
+        <h3>行全体</h3>
+        <pre><code>grep '^yes$' answers.txt
+grep '^127\.0\.0\.1$' addresses.txt</code></pre>
+
+        <p><code>^yes$</code>は、行全体がちょうど<code>yes</code>である行だけに一致します。</p>
+
+        <h3>空行</h3>
+        <pre><code>grep '^$' file.txt
+grep -n '^$' file.txt</code></pre>
+
+        <p><code>^$</code>は、行頭の直後に行末があるため、空行へ一致します。</p>
+
+        <h3>空白だけの行</h3>
+        <pre><code>grep '^[[:space:]]*$' file.txt</code></pre>
+
+        <p><code>[[:space:]]*</code>は空白文字が0回以上続くことを表します。空行と、空白だけの行の両方に一致します。</p>
+
+        <h3>コメント行</h3>
+        <pre><code>grep '^[[:space:]]*#' config.conf</code></pre>
+
+        <p>行頭から空白が0文字以上続き、その後に<code>#</code>がある行を検索します。先頭に空白があるコメント行も対象になります。</p>
+      </section>
+
+      <section id="sec-9">
+        <h2>正規表現の<code>.</code>・<code>[]</code>・<code>*</code></h2>
+
+        <h3><code>.</code>は任意の1文字</h3>
+        <pre><code>grep 'c.t' words.txt</code></pre>
+
+        <p><code>c.t</code>は、<code>c</code>と<code>t</code>の間に任意の1文字がある部分へ一致します。例えば、<code>cat</code>、<code>cot</code>、<code>cut</code>などです。</p>
+
+        <p>ドットそのものを検索する場合は、バックスラッシュで特殊な意味を打ち消します。</p>
+
+        <pre><code>grep '\.txt$' file-list.txt
+grep '192\.168\.' addresses.txt</code></pre>
+
+        <h3><code>[]</code>は候補のうち1文字</h3>
+        <pre><code>grep 'gr[ae]y' words.txt
+grep '[0-9]' data.txt
+grep '[^0-9]' data.txt</code></pre>
+
+        <ul>
+          <li><code>gr[ae]y</code>：<code>gray</code>または<code>grey</code>を含む文字列</li>
+          <li><code>[0-9]</code>：範囲に含まれる1文字</li>
+          <li><code>[^0-9]</code>：数字以外の1文字</li>
+        </ul>
+
+        <p>正規表現の否定は、角括弧の直後に<code>^</code>を書きます。シェルのワイルドカードでは<code>[!0-9]</code>がよく使われるため、混同しないようにします。</p>
+
+        <h3>文字クラス</h3>
+        <pre><code>grep '[[:digit:]]' data.txt
+grep '^[[:alpha:]][[:alnum:]_]*$' names.txt
+grep '[[:space:]]' file.txt</code></pre>
+
+        <p>文字クラスは、ロケールに応じた文字の分類を表します。単純な英数字だけでなく、実行環境の文字集合を意識した検索に利用できます。</p>
+
+        <h3><code>*</code>は直前の要素を0回以上</h3>
+        <pre><code>grep 'ab*c' words.txt</code></pre>
+
+        <p><code>ab*c</code>では、<code>b</code>が0回以上続きます。そのため、<code>ac</code>、<code>abc</code>、<code>abbc</code>などに一致します。</p>
+
+        <p>正規表現の<code>*</code>は、それ単独で任意の文字列を表すわけではありません。任意の文字列を表す組み合わせとしては、<code>.*</code>がよく使われます。</p>
+
+        <pre><code>grep '^ERROR.*failed$' app.log</code></pre>
+
+        <p><code>.</code>が任意の1文字、<code>*</code>が直前のドットを0回以上繰り返すため、合わせて任意の文字列を表します。</p>
+
+        <h3>繰り返し回数</h3>
+        <pre><code>grep '^[0-9]\{4\}$' years.txt
+grep 'a\{2,4\}' words.txt</code></pre>
+
+        <p>基本正規表現では、回数指定の波括弧をバックスラッシュでエスケープします。</p>
+
+        <ul>
+          <li><code>\{4\}</code>：ちょうど4回</li>
+          <li><code>\{2,4\}</code>：2回以上4回以下</li>
+          <li><code>\{2,\}</code>：2回以上</li>
+        </ul>
+
+        <h3>グループ化と後方参照</h3>
+        <pre><code>grep '^\(ab\)*$' words.txt
+grep '^\([[:alpha:]]\+\) \1$' names.txt</code></pre>
+
+        <p>基本正規表現では、<code>\(...\)</code>でグループ化します。<code>\1</code>は最初のグループと同じ文字列へ一致する後方参照です。GNU grepでは利用できますが、複雑な表現は読み間違いや処理負荷にも注意します。</p>
+      </section>
+
+      <section id="sec-10">
+        <h2>実践的な検索と確認方法</h2>
+
+        <h3>1. ファイル名の展開結果を確認する</h3>
+        <pre><code>printf '&lt;%s&gt;\n' *.log
+compgen -G '*.log'</code></pre>
+
+        <p>削除や移動を行う前に、どのファイル名へ展開されるかを確認します。<code>compgen -G</code>はbashでパターンに一致する名前を確認する方法の一つです。</p>
+
+        <h3>2. ファイル内部の行頭を検索する</h3>
+        <pre><code>grep -n '^PermitRootLogin' /etc/ssh/sshd_config</code></pre>
+
+        <p><code>-n</code>を付けると行番号も表示されます。</p>
+
+        <h3>3. コメントと空行を除く</h3>
+        <pre><code>grep -Ev '^[[:space:]]*(#|$)' config.conf</code></pre>
+
+        <p>この例は拡張正規表現を使います。行頭から空白が続き、コメント記号または行末が続く行を除外します。</p>
+
+        <p>基本正規表現だけで段階的に処理する場合は、次のように分けられます。</p>
+
+        <pre><code>grep -v '^[[:space:]]*#' config.conf \
+  | grep -v '^[[:space:]]*$'</code></pre>
+
+        <h3>4. 完全一致を確認する</h3>
+        <pre><code>grep -x 'enabled' settings.txt
+grep '^enabled$' settings.txt</code></pre>
+
+        <p><code>grep -x</code>は行全体がパターンへ一致する行を選びます。単純な固定文字列なら、<code>grep -Fx 'enabled'</code>とすると正規表現の解釈を避けられます。</p>
+
+        <h3>5. パターンがハイフンで始まる場合</h3>
+        <pre><code>grep -- '-error' app.log
+grep -e '-error' app.log</code></pre>
+
+        <p><code>-error</code>をそのまま書くと、オプションと解釈される可能性があります。<code>--</code>でオプションを終了するか、<code>-e</code>でパターンを指定します。</p>
+
+        <h3>6. 正規表現の記号を文字どおり探す</h3>
+        <pre><code>grep -F 'a.b*c[1]' file.txt
+grep 'a\.b\*c\[1\]' file.txt</code></pre>
+
+        <p>固定文字列として探せる場合は、<code>grep -F</code>の方が意図を表しやすくなります。</p>
+
+        <h3>7. ロケールを固定して確認する</h3>
+        <pre><code>LC_ALL=C grep '^[A-Z]' file.txt
+LC_ALL=C sort file.txt</code></pre>
+
+        <p>範囲表現や文字の分類、並べ替え結果が環境によって異なる場合は、一時的に<code>LC_ALL=C</code>を指定して比較します。</p>
+
+        <h3>ワイルドカードと正規表現の比較</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>目的</th>
+              <th>ワイルドカード</th>
+              <th>基本正規表現</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>任意の文字列</td>
+              <td><code>*</code></td>
+              <td><code>.*</code></td>
+            </tr>
+            <tr>
+              <td>任意の1文字</td>
+              <td><code>?</code></td>
+              <td><code>.</code></td>
+            </tr>
+            <tr>
+              <td>候補の1文字</td>
+              <td><code>[abc]</code></td>
+              <td><code>[abc]</code></td>
+            </tr>
+            <tr>
+              <td>候補以外の1文字</td>
+              <td><code>[!abc]</code></td>
+              <td><code>[^abc]</code></td>
+            </tr>
+            <tr>
+              <td>行頭・行末</td>
+              <td>通常は扱わない</td>
+              <td><code>^</code>・<code>$</code></td>
+            </tr>
+            <tr>
+              <td>主な利用対象</td>
+              <td>ファイル名</td>
+              <td>行内の文字列</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>症状別の確認</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>症状</th>
+              <th>主な確認点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>*.txt</code>がそのまま表示される</td>
+              <td>一致するファイルがあるか、クォートしていないか</td>
+            </tr>
+            <tr>
+              <td>隠しファイルが対象にならない</td>
+              <td>先頭ドットの明示、<code>dotglob</code>、コマンドのコピー方法</td>
+            </tr>
+            <tr>
+              <td><code>grep</code>へ複数ファイル名が渡る</td>
+              <td>正規表現をクォートせず、シェルが展開していないか</td>
+            </tr>
+            <tr>
+              <td>ドットが任意の文字へ一致する</td>
+              <td>文字どおりのドットなら<code>\.</code>または<code>grep -F</code></td>
+            </tr>
+            <tr>
+              <td><code>*</code>の検索結果が想定と違う</td>
+              <td>ワイルドカードか正規表現か、直前の要素は何か</td>
+            </tr>
+            <tr>
+              <td>範囲の一致が環境で変わる</td>
+              <td>ロケール、文字クラス、<code>LC_ALL=C</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="sec-11">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>シェルのワイルドカードは、コマンドの実行前に誰が展開するでしょうか。</li>
+          <li>ワイルドカードの<code>*</code>と<code>?</code>は、それぞれ何文字に一致するでしょうか。</li>
+          <li><code>file[123].txt</code>は、どのようなファイル名に一致するでしょうか。</li>
+          <li>ワイルドカードを展開させず、<code>*.txt</code>という文字列のまま渡すにはどうするでしょうか。</li>
+          <li>通常の<code>grep</code>が使う正規表現は、基本正規表現と拡張正規表現のどちらでしょうか。</li>
+          <li>基本正規表現の<code>.</code>と<code>*</code>は、それぞれ何を表すでしょうか。</li>
+          <li>空行へ一致する正規表現は何でしょうか。</li>
+          <li>正規表現の記号を解釈せず、固定文字列として検索する<code>grep</code>のオプションは何でしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li>bashなどのシェル</li>
+            <li><code>*</code>は0文字以上、<code>?</code>はちょうど1文字</li>
+            <li><code>file1.txt</code>、<code>file2.txt</code>、<code>file3.txt</code></li>
+            <li>シングルクォート、ダブルクォート、またはバックスラッシュで保護する</li>
+            <li>基本正規表現</li>
+            <li><code>.</code>は任意の1文字、<code>*</code>は直前の要素を0回以上繰り返す</li>
+            <li><code>^$</code></li>
+            <li><code>-F</code></li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-12">
+        <h2>要約</h2>
+        <ul>
+          <li>ワイルドカードは主にシェルがファイル名へ展開し、正規表現は<code>grep</code>などが文字列の照合に使います。</li>
+          <li>シェルはコマンド実行前にワイルドカードを実在するファイル名へ置き換えます。</li>
+          <li>ワイルドカードの<code>*</code>は0文字以上、<code>?</code>は任意の1文字に一致します。</li>
+          <li><code>[abc]</code>は候補のいずれか1文字、<code>[!abc]</code>は候補以外の1文字へ一致します。</li>
+          <li><code>*</code>は通常スラッシュを越えず、先頭がドットの隠しファイルにも一致しません。</li>
+          <li>ワイルドカードを文字どおり渡す場合は、クォートまたはバックスラッシュで保護します。</li>
+          <li>削除や移動の前には、<code>printf</code>などで展開結果を確認すると安全です。</li>
+          <li>bashの通常設定では、一致しないワイルドカードは展開されず、そのまま残ります。</li>
+          <li>通常の<code>grep</code>は基本正規表現、<code>grep -E</code>は拡張正規表現、<code>grep -F</code>は固定文字列検索です。</li>
+          <li>正規表現の<code>^</code>は行頭、<code>$</code>は行末、<code>.</code>は任意の1文字を表します。</li>
+          <li>正規表現の<code>*</code>は、直前の要素を0回以上繰り返します。</li>
+          <li>正規表現で任意の文字列を表す代表的な組み合わせは<code>.*</code>です。</li>
+          <li>文字どおりのドットを検索する場合は<code>\.</code>、固定文字列全体なら<code>grep -F</code>を使えます。</li>
+          <li>空行は<code>^$</code>、空白だけの行も含める場合は<code>^[[:space:]]*$</code>で検索できます。</li>
+          <li>範囲や文字クラスの結果はロケールの影響を受ける場合があり、確認時に<code>LC_ALL=C</code>を使うことがあります。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://www.gnu.org/software/bash/manual/bash.html" target="_blank" rel="noopener noreferrer">GNU Bash Reference Manual</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Operation.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Shell Operation</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Filename-Expansion.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Filename Expansion</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Pattern Matching</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Quoting.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Quoting</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：The Shopt Builtin</a></li>
+          <li><a href="https://www.gnu.org/software/grep/manual/grep.html" target="_blank" rel="noopener noreferrer">GNU Grep Manual</a></li>
+          <li><a href="https://www.gnu.org/software/grep/manual/html_node/Regular-Expressions.html" target="_blank" rel="noopener noreferrer">GNU Grep Manual：Regular Expressions</a></li>
+          <li><a href="https://www.gnu.org/software/grep/manual/html_node/Character-Classes-and-Bracket-Expressions.html" target="_blank" rel="noopener noreferrer">GNU Grep Manual：Character Classes and Bracket Expressions</a></li>
+          <li><a href="https://www.gnu.org/software/grep/manual/html_node/Anchoring.html" target="_blank" rel="noopener noreferrer">GNU Grep Manual：Anchoring</a></li>
+          <li><a href="https://www.gnu.org/software/grep/manual/html_node/Fundamental-Structure.html" target="_blank" rel="noopener noreferrer">GNU Grep Manual：Fundamental Structure</a></li>
+          <li><a href="https://www.gnu.org/software/grep/manual/html_node/Basic-vs-Extended.html" target="_blank" rel="noopener noreferrer">GNU Grep Manual：Basic vs Extended Regular Expressions</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/bash.1.html" target="_blank" rel="noopener noreferrer">bash(1) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/grep.1.html" target="_blank" rel="noopener noreferrer">grep(1) — Linux manual page</a></li>
+          <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html" target="_blank" rel="noopener noreferrer">POSIX.1-2024：Shell Command Language</a></li>
+          <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html" target="_blank" rel="noopener noreferrer">POSIX.1-2024：Regular Expressions</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

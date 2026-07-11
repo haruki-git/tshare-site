@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ一覧</title>
+  <style>
+:root {
+  --bg: #0b0f14;
+  --card: #121924;
+  --text: #e8eef6;
+  --muted: #9fb0c3;
+  --line: #233042;
+  --accent: #66b3ff;
+  --radius: 16px;
+  --tap: 44px;
+}
+
+@supports (color: oklch(60% 0.1 240)) {
+  :root {
+    --bg: oklch(18% 0.02 240);
+  }
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  max-width: 980px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover { color: var(--accent); }
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(11, 15, 20, 0.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.toprow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 1.2rem;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  min-height: var(--tap);
+  transition: all 0.2s ease;
+}
+
+.pill:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  background: rgba(102, 179, 255, 0.05);
+}
+
+.pill.active {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.menuBtn {
+  display: none;
+  border: 1px solid var(--line);
+  background: #0f1520;
+  color: var(--text);
+  border-radius: 12px;
+  cursor: pointer;
+  min-height: var(--tap);
+  min-width: var(--tap);
+  padding: 0 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  display: block;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
+.burger::before { top: -6px; }
+.burger::after  { top: 6px; }
+
+main { padding: 18px 0 28px; }
+
+.section { margin-top: 24px; }
+
+.section h1 {
+  margin: 0 0 6px;
+  font-size: clamp(1.45rem, 4vw, 2rem);
+}
+
+.lead {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.card {
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li + li { margin-top: 12px; }
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.2s;
+}
+
+.item:hover { border-color: var(--accent); }
+
+.article-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  min-width: 0;
+}
+
+.title {
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.badge.chapter {
+  background: rgba(102, 179, 255, 0.06);
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #0f1520;
+  color: var(--text);
+  outline: none;
+  min-height: var(--tap);
+}
+
+.input:focus { border-color: var(--accent); }
+
+.btn {
+  border: 1px solid var(--line);
+  background: #0f1520;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  min-height: var(--tap);
+}
+
+.btn:hover { border-color: var(--accent); }
+
+.no-results {
+  display: none;
+  padding: 18px;
+  color: var(--muted);
+  text-align: center;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  padding: 40px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 780px) {
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .meta { white-space: normal; }
+}
+
+@media (max-width: 640px) {
+  .menuBtn { display: inline-flex; }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .nav.open { display: flex; }
+
+  .pill {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="toprow">
+        <div class="brand">IT基礎ポータル</div>
+
+        <button class="menuBtn"
+                id="menuBtn"
+                type="button"
+                aria-controls="siteNav"
+                aria-expanded="false"
+                aria-label="メニューを開く">
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" id="siteNav">
+          <a class="pill" href="/index.html">ITニュース</a>
+          <a class="pill" href="/posts/genba/">解説記事</a>
+          <a class="pill" href="/posts/python/">Python</a>
+          <a class="pill" href="/posts/VBA/">VBA</a>
+          <a class="pill" href="/posts/JavaScript/">JS</a>
+          <a class="pill active" href="/posts/Linux/linux_index.html">Linux</a>
+          <a class="pill" href="/posts/raspi-introduction.html">はじめに</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" id="articles">
+      <h1>LPIC Level1 復習ラジオ</h1>
+      <p class="lead">
+        普段の学習で疲れたときに、重要用語とコマンドを軽く思い出すための復習用記事です。
+      </p>
+
+      <div class="card">
+        <div class="row" style="margin-bottom:10px;">
+          <span class="badge">検索</span>
+
+          <input id="searchArticles"
+                 class="input"
+                 type="search"
+                 style="min-width:220px; flex:1;"
+                 placeholder="タイトル検索（例：systemd、ネットワーク、grep）"
+                 autocomplete="off" />
+
+          <button class="btn" id="clearSearch" type="button">クリア</button>
+          <span class="meta" id="searchMeta" aria-live="polite"></span>
+        </div>
+
+        <ul id="articleList">
+      <li class="item"
+          data-number="01"
+          data-chapter="第1章 Linuxの基礎"
+          data-title="LPIC Level1 復習ラジオ 01：Linuxとは">
+        <div class="article-main">
+          <span class="badge chapter">第1章 Linuxの基礎</span>
+          <a class="title" href="01_linux_to_os_no_kihon.html">01．Linuxとは</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="02"
+          data-chapter="第1章 Linuxの基礎"
+          data-title="LPIC Level1 復習ラジオ 02：ハードウェアと起動">
+        <div class="article-main">
+          <span class="badge chapter">第1章 Linuxの基礎</span>
+          <a class="title" href="02_hardware_to_boot.html">02．ハードウェアと起動</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="03"
+          data-chapter="第1章 Linuxの基礎"
+          data-title="LPIC Level1 復習ラジオ 03：Linuxの起動とsystemd">
+        <div class="article-main">
+          <span class="badge chapter">第1章 Linuxの基礎</span>
+          <a class="title" href="03_linux_boot_and_systemd.html">03．Linuxの起動とsystemd</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="04"
+          data-chapter="第1章 Linuxの基礎"
+          data-title="LPIC Level1 復習ラジオ 04：ファイルシステム">
+        <div class="article-main">
+          <span class="badge chapter">第1章 Linuxの基礎</span>
+          <a class="title" href="04_filesystem.html">04．ファイルシステム</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="05"
+          data-chapter="第1章 Linuxの基礎"
+          data-title="LPIC Level1 復習ラジオ 05：ディレクトリ構成（FHS）">
+        <div class="article-main">
+          <span class="badge chapter">第1章 Linuxの基礎</span>
+          <a class="title" href="05_directory_structure_fhs.html">05．ディレクトリ構成（FHS）</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="06"
+          data-chapter="第1章 Linuxの基礎"
+          data-title="LPIC Level1 復習ラジオ 06：ユーザーと権限">
+        <div class="article-main">
+          <span class="badge chapter">第1章 Linuxの基礎</span>
+          <a class="title" href="06_users_and_permissions.html">06．ユーザーと権限</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="07"
+          data-chapter="第1章 Linuxの基礎"
+          data-title="LPIC Level1 復習ラジオ 07：ネットワーク基礎">
+        <div class="article-main">
+          <span class="badge chapter">第1章 Linuxの基礎</span>
+          <a class="title" href="07_network_basics.html">07．ネットワーク基礎</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="08"
+          data-chapter="第1章 Linuxの基礎"
+          data-title="LPIC Level1 復習ラジオ 08：パッケージ管理">
+        <div class="article-main">
+          <span class="badge chapter">第1章 Linuxの基礎</span>
+          <a class="title" href="08_package_management.html">08．パッケージ管理</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="09"
+          data-chapter="第2章 Linuxコマンド"
+          data-title="LPIC Level1 復習ラジオ 09：ファイル操作コマンド">
+        <div class="article-main">
+          <span class="badge chapter">第2章 Linuxコマンド</span>
+          <a class="title" href="09_file_operations.html">09．ファイル操作コマンド</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="10"
+          data-chapter="第2章 Linuxコマンド"
+          data-title="LPIC Level1 復習ラジオ 10：ファイル閲覧コマンド">
+        <div class="article-main">
+          <span class="badge chapter">第2章 Linuxコマンド</span>
+          <a class="title" href="10_file_viewing.html">10．ファイル閲覧コマンド</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="11"
+          data-chapter="第2章 Linuxコマンド"
+          data-title="LPIC Level1 復習ラジオ 11：検索コマンド">
+        <div class="article-main">
+          <span class="badge chapter">第2章 Linuxコマンド</span>
+          <a class="title" href="11_search_commands.html">11．検索コマンド</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="12"
+          data-chapter="第2章 Linuxコマンド"
+          data-title="LPIC Level1 復習ラジオ 12：テキスト処理コマンド">
+        <div class="article-main">
+          <span class="badge chapter">第2章 Linuxコマンド</span>
+          <a class="title" href="12_text_processing.html">12．テキスト処理コマンド</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="13"
+          data-chapter="第2章 Linuxコマンド"
+          data-title="LPIC Level1 復習ラジオ 13：圧縮・アーカイブ">
+        <div class="article-main">
+          <span class="badge chapter">第2章 Linuxコマンド</span>
+          <a class="title" href="13_archive_compression.html">13．圧縮・アーカイブ</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="14"
+          data-chapter="第2章 Linuxコマンド"
+          data-title="LPIC Level1 復習ラジオ 14：プロセス管理">
+        <div class="article-main">
+          <span class="badge chapter">第2章 Linuxコマンド</span>
+          <a class="title" href="14_process_management.html">14．プロセス管理</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="15"
+          data-chapter="第2章 Linuxコマンド"
+          data-title="LPIC Level1 復習ラジオ 15：ディスク管理">
+        <div class="article-main">
+          <span class="badge chapter">第2章 Linuxコマンド</span>
+          <a class="title" href="15_disk_management.html">15．ディスク管理</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="16"
+          data-chapter="第2章 Linuxコマンド"
+          data-title="LPIC Level1 復習ラジオ 16：ネットワークコマンド">
+        <div class="article-main">
+          <span class="badge chapter">第2章 Linuxコマンド</span>
+          <a class="title" href="16_network_commands.html">16．ネットワークコマンド</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="17"
+          data-chapter="第3章 シェル"
+          data-title="LPIC Level1 復習ラジオ 17：bashの基本">
+        <div class="article-main">
+          <span class="badge chapter">第3章 シェル</span>
+          <a class="title" href="17_bash_basics.html">17．bashの基本</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="18"
+          data-chapter="第3章 シェル"
+          data-title="LPIC Level1 復習ラジオ 18：リダイレクトとパイプ">
+        <div class="article-main">
+          <span class="badge chapter">第3章 シェル</span>
+          <a class="title" href="18_redirection_and_pipe.html">18．リダイレクトとパイプ</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="19"
+          data-chapter="第3章 シェル"
+          data-title="LPIC Level1 復習ラジオ 19：ワイルドカードと正規表現">
+        <div class="article-main">
+          <span class="badge chapter">第3章 シェル</span>
+          <a class="title" href="19_wildcards_and_regex.html">19．ワイルドカードと正規表現</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="20"
+          data-chapter="第4章 LPIC頻出知識"
+          data-title="LPIC Level1 復習ラジオ 20：パーミッション総復習">
+        <div class="article-main">
+          <span class="badge chapter">第4章 LPIC頻出知識</span>
+          <a class="title" href="20_permissions_review.html">20．パーミッション総復習</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="21"
+          data-chapter="第4章 LPIC頻出知識"
+          data-title="LPIC Level1 復習ラジオ 21：systemd総復習">
+        <div class="article-main">
+          <span class="badge chapter">第4章 LPIC頻出知識</span>
+          <a class="title" href="21_systemd_review.html">21．systemd総復習</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="22"
+          data-chapter="第4章 LPIC頻出知識"
+          data-title="LPIC Level1 復習ラジオ 22：ネットワーク総復習">
+        <div class="article-main">
+          <span class="badge chapter">第4章 LPIC頻出知識</span>
+          <a class="title" href="22_network_review.html">22．ネットワーク総復習</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="23"
+          data-chapter="第4章 LPIC頻出知識"
+          data-title="LPIC Level1 復習ラジオ 23：ファイルシステム総復習">
+        <div class="article-main">
+          <span class="badge chapter">第4章 LPIC頻出知識</span>
+          <a class="title" href="23_filesystem_review.html">23．ファイルシステム総復習</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+      <li class="item"
+          data-number="24"
+          data-chapter="第4章 LPIC頻出知識"
+          data-title="LPIC Level1 復習ラジオ 24：LPIC Level1総まとめ">
+        <div class="article-main">
+          <span class="badge chapter">第4章 LPIC頻出知識</span>
+          <a class="title" href="24_lpic_level1_summary.html">24．LPIC Level1総まとめ</a>
+        </div>
+        <span class="meta">2026-07-11</span>
+      </li>
+        </ul>
+
+        <p class="no-results" id="noResults">一致する記事がありません。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 hi</footer>
+
+  <script>
+    (() => {
+      const search = document.getElementById("searchArticles");
+      const clear = document.getElementById("clearSearch");
+      const meta = document.getElementById("searchMeta");
+      const list = document.getElementById("articleList");
+      const noResults = document.getElementById("noResults");
+      const items = Array.from(list.querySelectorAll("li.item"));
+
+      const normalize = (value) =>
+        String(value || "")
+          .normalize("NFKC")
+          .toLocaleLowerCase("ja");
+
+      function applyFilter() {
+        const term = normalize(search.value.trim());
+        let shown = 0;
+
+        for (const item of items) {
+          const haystack = normalize([
+            item.dataset.number,
+            item.dataset.chapter,
+            item.dataset.title,
+            item.textContent
+          ].join(" "));
+
+          const visible = !term || haystack.includes(term);
+          item.hidden = !visible;
+
+          if (visible) shown += 1;
+        }
+
+        meta.textContent = `${shown}/${items.length}`;
+        noResults.style.display = shown === 0 ? "block" : "none";
+      }
+
+      search.addEventListener("input", applyFilter);
+      search.addEventListener("search", applyFilter);
+
+      clear.addEventListener("click", () => {
+        search.value = "";
+        applyFilter();
+        search.focus();
+      });
+
+      applyFilter();
+    })();
+
+    (() => {
+      const menuBtn = document.getElementById("menuBtn");
+      const siteNav = document.getElementById("siteNav");
+
+      menuBtn?.addEventListener("click", () => {
+        const open = siteNav.classList.toggle("open");
+        menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        menuBtn.setAttribute("aria-label", open ? "メニューを閉じる" : "メニューを開く");
+      });
+
+      siteNav?.addEventListener("click", (event) => {
+        const link = event.target.closest("a");
+        if (!link || !siteNav.classList.contains("open")) return;
+
+        siteNav.classList.remove("open");
+        menuBtn?.setAttribute("aria-expanded", "false");
+        menuBtn?.setAttribute("aria-label", "メニューを開く");
+      });
+    })();
+  </script>
+</body>
+</html>

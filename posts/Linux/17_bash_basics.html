@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 17：bashの基本</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 17：bashの基本</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/17_bash_basics_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">bashとシェル</a></li>
+          <li><a href="#sec-2">bashの起動と確認</a></li>
+          <li><a href="#sec-3">ログインシェルと起動ファイル</a></li>
+          <li><a href="#sec-4">PATH</a></li>
+          <li><a href="#sec-5">シェル変数と環境変数</a></li>
+          <li><a href="#sec-6">export</a></li>
+          <li><a href="#sec-7">主な変数</a></li>
+          <li><a href="#sec-8">alias</a></li>
+          <li><a href="#sec-9">history</a></li>
+          <li><a href="#sec-10">実践的な確認手順</a></li>
+          <li><a href="#sec-11">30秒チェック</a></li>
+          <li><a href="#sec-12">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>bashとシェル</h2>
+        <p>シェルは、利用者が入力したコマンドを解釈し、コマンドの実行、変数展開、リダイレクト、パイプ、ジョブ制御などを行うプログラムです。</p>
+        <p><code>bash</code>は、GNU Bourne-Again SHellの略で、Linuxで広く使われるシェルの一つです。Bourne Shellの機能を引き継ぎながら、履歴、コマンドライン編集、配列などの機能を備えています。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>用語</th>
+              <th>役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ターミナル</td>
+              <td>文字を入力し、結果を表示するための画面や端末</td>
+            </tr>
+            <tr>
+              <td>シェル</td>
+              <td>入力された文字列をコマンドとして解釈するプログラム</td>
+            </tr>
+            <tr>
+              <td>bash</td>
+              <td>シェルの実装の一つ</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>ターミナルを開いたとき、画面そのものがbashなのではありません。ターミナルの中でbashなどのシェルが動作し、入力を受け取ります。</p>
+
+        <pre><code>利用者
+  ↓
+ターミナル
+  ↓
+bash
+  ↓
+組み込みコマンド・外部コマンド
+  ↓
+カーネル</code></pre>
+
+        <p>Linuxでは、bash以外にも<code>sh</code>、<code>dash</code>、<code>zsh</code>などが利用されます。シェルによって利用できる構文や起動ファイルが異なるため、現在どのシェルを使っているかを確認することが重要です。</p>
+      </section>
+
+      <section id="sec-2">
+        <h2>bashの起動と確認</h2>
+        <p><code>bash</code>を引数なしで実行すると、現在のシェルの中から新しいbashを起動できます。</p>
+
+        <pre><code>bash
+exit</code></pre>
+
+        <p><code>exit</code>を実行すると、そのbashを終了し、一つ前のシェルへ戻ります。シェルを何重にも起動すると、どの階層にいるか分かりにくくなるため注意します。</p>
+
+        <h3>バージョンと場所</h3>
+        <pre><code>bash --version
+command -v bash
+type -a bash</code></pre>
+
+        <ul>
+          <li><code>bash --version</code>：bashのバージョンを表示する</li>
+          <li><code>command -v bash</code>：現在の実行環境でbashがどのように見つかるかを表示する</li>
+          <li><code>type -a bash</code>：同名の候補を含めて表示する</li>
+        </ul>
+
+        <h3>現在動いているシェル</h3>
+        <pre><code>echo "$SHELL"
+echo "$0"
+ps -p $$ -o pid=,ppid=,comm=,args=</code></pre>
+
+        <p><code>$SHELL</code>は、通常は利用者のログインシェルのパスを表します。今この瞬間に動いているシェルと必ず一致するとは限りません。</p>
+        <p><code>$$</code>は現在のシェルのPIDです。現在動いているプロセスを確かめる場合は、<code>ps -p $$</code>が役立ちます。</p>
+
+        <h3>コマンド文字列とスクリプト</h3>
+        <pre><code>bash -c 'echo "$HOME"'
+bash script.sh
+bash -n script.sh</code></pre>
+
+        <ul>
+          <li><code>-c</code>：続く文字列をコマンドとして実行する</li>
+          <li><code>bash ファイル</code>：ファイルをbashで読み込んで実行する</li>
+          <li><code>-n</code>：コマンドを実行せず、構文を確認する</li>
+        </ul>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>注意：</strong><code>bash script.sh</code>は、ファイルに実行権限がなくてもbashが読み取れれば実行できます。一方、<code>./script.sh</code>には通常、実行権限と適切なシバンが必要です。</p>
+        </aside>
+      </section>
+
+      <section id="sec-3">
+        <h2>ログインシェルと起動ファイル</h2>
+        <p>bashは、ログインシェルかどうか、対話的に使われているかどうかで、読み込む起動ファイルが変わります。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>種類</th>
+              <th>代表例</th>
+              <th>主に読むファイル</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>対話的なログインシェル</td>
+              <td>コンソールログイン、<code>bash --login</code></td>
+              <td><code>/etc/profile</code>の後、<code>~/.bash_profile</code>、<code>~/.bash_login</code>、<code>~/.profile</code>の最初に見つかった一つ</td>
+            </tr>
+            <tr>
+              <td>対話的な非ログインシェル</td>
+              <td>端末アプリ内で起動するbash</td>
+              <td><code>~/.bashrc</code></td>
+            </tr>
+            <tr>
+              <td>非対話シェル</td>
+              <td>シェルスクリプト</td>
+              <td>通常は対話用の<code>~/.bashrc</code>を自動では読まない</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>ログインシェルでは、次の順に確認されます。</p>
+
+        <pre><code>/etc/profile
+~/.bash_profile
+~/.bash_login
+~/.profile</code></pre>
+
+        <p>利用者側の三つは全部読むのではなく、最初に見つかった読み取り可能な一つだけを読みます。</p>
+
+        <p>対話的な非ログインシェルでは、通常<code>~/.bashrc</code>を読みます。そのため、エイリアスや対話操作向けの設定は<code>~/.bashrc</code>へ書くことが一般的です。</p>
+
+        <pre><code>if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi</code></pre>
+
+        <p>ログイン時にも<code>~/.bashrc</code>の設定を使うため、<code>~/.bash_profile</code>などから上のように読み込む構成がよく使われます。</p>
+
+        <h3>変更を現在のシェルへ反映する</h3>
+        <pre><code>source ~/.bashrc
+. ~/.bashrc</code></pre>
+
+        <p><code>source</code>とドットコマンドは、指定したファイルを現在のシェルで読み込みます。別プロセスで実行するのではないため、変数やエイリアスの変更が現在のシェルへ反映されます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>重要：</strong>起動ファイルはディストリビューションやログイン方法でも構成が変わります。設定が反映されないときは、「どの種類のbashか」「どのファイルが読み込まれたか」を確認します。</p>
+        </aside>
+      </section>
+
+      <section id="sec-4">
+        <h2>PATH</h2>
+        <p><code>PATH</code>は、コマンド名だけが入力されたときに、実行ファイルを検索するディレクトリの一覧です。各ディレクトリはコロンで区切られ、左から順に検索されます。</p>
+
+        <pre><code>echo "$PATH"
+printf '%s\n' "$PATH" | tr ':' '\n'</code></pre>
+
+        <p>例えば、次のPATHでは、<code>/usr/local/bin</code>、<code>/usr/bin</code>、<code>/bin</code>の順に探します。</p>
+
+        <pre><code>/usr/local/bin:/usr/bin:/bin</code></pre>
+
+        <h3>PATHを使う場合と使わない場合</h3>
+        <pre><code>ls
+/usr/bin/ls
+./myscript</code></pre>
+
+        <ul>
+          <li><code>ls</code>：コマンド名にスラッシュがないため、シェルの組み込みなどを確認した後、必要に応じてPATHを検索する</li>
+          <li><code>/usr/bin/ls</code>：スラッシュを含むため、指定されたパスを実行する</li>
+          <li><code>./myscript</code>：現在のディレクトリにある<code>myscript</code>を明示して実行する</li>
+        </ul>
+
+        <p>通常、現在のディレクトリはPATHへ含まれていません。そのため、カレントディレクトリの実行ファイルは<code>./</code>を付けて指定します。</p>
+
+        <h3>PATHへディレクトリを追加する</h3>
+        <pre><code>export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:/opt/example/bin"</code></pre>
+
+        <p>先頭へ追加すると、そのディレクトリが既存のPATHより先に検索されます。末尾へ追加すると、既存のコマンドが優先されます。</p>
+
+        <p>PATHへ信頼できないディレクトリやカレントディレクトリを安易に先頭追加すると、同名の不正なコマンドを実行する危険があります。</p>
+
+        <h3>どのコマンドが実行されるか確認する</h3>
+        <pre><code>command -v python3
+type python3
+type -a python3</code></pre>
+
+        <p><code>type</code>は、名前がエイリアス、関数、組み込みコマンド、外部コマンドのどれとして解釈されるかを確認できます。</p>
+
+        <p>bashは、見つけた外部コマンドのパスを内部のハッシュ表へ記憶します。コマンドを移動した直後などに古い場所が使われる場合は、次で記憶を消去できます。</p>
+
+        <pre><code>hash
+hash -r</code></pre>
+      </section>
+
+      <section id="sec-5">
+        <h2>シェル変数と環境変数</h2>
+        <p>変数は、名前と値の組み合わせです。bashでは、次の形式でシェル変数を作成します。</p>
+
+        <pre><code>name=Haruki
+message="hello world"
+
+echo "$name"
+echo "${message}"</code></pre>
+
+        <p>代入の<code>=</code>の前後には空白を入れません。空白を含む値は引用符で囲みます。</p>
+
+        <pre><code>name = Haruki</code></pre>
+
+        <p>この書き方では、<code>name</code>というコマンドを実行しようとしてエラーになります。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>種類</th>
+              <th>主な範囲</th>
+              <th>確認例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>シェル変数</td>
+              <td>現在のシェル内部</td>
+              <td><code>set</code>、<code>declare -p</code></td>
+            </tr>
+            <tr>
+              <td>環境変数</td>
+              <td>現在のプロセスから起動される子プロセスへ渡される</td>
+              <td><code>env</code>、<code>printenv</code>、<code>export -p</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>値の参照</h3>
+        <pre><code>file="report"
+echo "$file.txt"
+echo "${file}.txt"</code></pre>
+
+        <p><code>$file.txt</code>では、変数名は<code>file</code>までと解釈されます。ただし、変数名と後続文字の境界が分かりにくい場合は、<code>${file}</code>のように波括弧を使います。</p>
+
+        <h3>未設定と空文字</h3>
+        <pre><code>empty=""
+unset missing
+
+printf '&lt;%s&gt;\n' "$empty"
+printf '&lt;%s&gt;\n' "$missing"</code></pre>
+
+        <p>空文字を代入した変数と、未設定の変数は同じではありません。設定を削除する場合は<code>unset</code>を使います。</p>
+
+        <h3>親と子の関係</h3>
+        <p>子プロセスは、親プロセスの環境変数のコピーを受け取ります。子プロセス側で値を変更しても、通常は親シェルへ逆向きに反映されません。</p>
+
+        <pre><code>export COLOR=blue
+bash -c 'echo "$COLOR"; COLOR=red'
+echo "$COLOR"</code></pre>
+
+        <p>最後の表示は、親シェル側の<code>blue</code>のままです。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>export</h2>
+        <p><code>export</code>は、シェル変数にexport属性を付け、後から起動するコマンドの環境へ渡せるようにするbashの組み込みコマンドです。</p>
+
+        <pre><code>COLOR=blue
+export COLOR</code></pre>
+
+        <p>代入とexportを一行で行うこともできます。</p>
+
+        <pre><code>export COLOR=blue</code></pre>
+
+        <h3>子プロセスで確認する</h3>
+        <pre><code>local_only=one
+export shared=two
+
+bash -c 'echo "local_only=$local_only"; echo "shared=$shared"'</code></pre>
+
+        <p><code>local_only</code>は現在のシェルだけの変数なので、子のbashには通常渡りません。<code>shared</code>はexportされているため渡ります。</p>
+
+        <h3>export済み変数を確認する</h3>
+        <pre><code>export -p
+env
+printenv
+printenv PATH</code></pre>
+
+        <ul>
+          <li><code>export -p</code>：export属性が付いた変数を、再利用できる形式で表示する</li>
+          <li><code>env</code>：環境を表示するほか、環境を変更してコマンドを実行できる</li>
+          <li><code>printenv</code>：環境変数を表示する</li>
+        </ul>
+
+        <h3>一つのコマンドだけに変数を渡す</h3>
+        <pre><code>LANG=C date
+MODE=test ./run.sh</code></pre>
+
+        <p><code>名前=値 コマンド</code>の形式では、そのコマンドの実行環境だけに一時的な値を渡せます。現在のシェルの値を恒久的に変更するわけではありません。</p>
+
+        <h3>export属性の解除と変数の削除</h3>
+        <pre><code>export -n COLOR
+unset COLOR</code></pre>
+
+        <p><code>export -n</code>はexport属性を外しますが、シェル変数自体は残ります。<code>unset</code>は変数を削除します。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>覚え方：</strong>代入は現在のシェルに値を置く操作、<code>export</code>はその値を子プロセスへ渡す印を付ける操作です。</p>
+        </aside>
+      </section>
+
+      <section id="sec-7">
+        <h2>主な変数</h2>
+        <p>シェルや多くのコマンドは、変数の値を参照して動作を変えます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>変数</th>
+              <th>主な意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>HOME</code></td>
+              <td>利用者のホームディレクトリ</td>
+            </tr>
+            <tr>
+              <td><code>USER</code>・<code>LOGNAME</code></td>
+              <td>ログイン利用者名</td>
+            </tr>
+            <tr>
+              <td><code>SHELL</code></td>
+              <td>通常はログインシェルのパス</td>
+            </tr>
+            <tr>
+              <td><code>PATH</code></td>
+              <td>実行ファイルを検索するディレクトリ一覧</td>
+            </tr>
+            <tr>
+              <td><code>PWD</code></td>
+              <td>現在の作業ディレクトリ</td>
+            </tr>
+            <tr>
+              <td><code>OLDPWD</code></td>
+              <td>直前の作業ディレクトリ</td>
+            </tr>
+            <tr>
+              <td><code>LANG</code></td>
+              <td>標準のロケール</td>
+            </tr>
+            <tr>
+              <td><code>LC_ALL</code></td>
+              <td>個別のロケール設定より優先される全体指定</td>
+            </tr>
+            <tr>
+              <td><code>PS1</code></td>
+              <td>対話シェルの主プロンプト</td>
+            </tr>
+            <tr>
+              <td><code>HISTFILE</code></td>
+              <td>履歴を保存するファイル</td>
+            </tr>
+            <tr>
+              <td><code>HISTSIZE</code></td>
+              <td>メモリ上の履歴リストに保持する件数</td>
+            </tr>
+            <tr>
+              <td><code>HISTFILESIZE</code></td>
+              <td>履歴ファイルに保持する最大行数</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <pre><code>echo "$HOME"
+echo "$PWD"
+cd /tmp
+echo "$OLDPWD"
+cd -
+locale
+printf '%s\n' "$PS1"</code></pre>
+
+        <p><code>cd -</code>は、通常<code>OLDPWD</code>へ移動します。</p>
+
+        <h3>変数を安全に表示する</h3>
+        <pre><code>printf '%s\n' "$PATH"
+declare -p HOME PATH SHELL</code></pre>
+
+        <p>単純な確認では<code>echo</code>も使えますが、書式を明示したい場合は<code>printf</code>が便利です。変数展開は、意図しない単語分割やファイル名展開を避けるため、基本的に二重引用符で囲みます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>注意：</strong><code>LC_ALL</code>は各カテゴリのロケール設定より強く優先されます。調査用に一時指定する場合は便利ですが、常時設定すると個別設定が効かなくなります。</p>
+        </aside>
+      </section>
+
+      <section id="sec-8">
+        <h2>alias</h2>
+        <p><code>alias</code>は、コマンド行の先頭にある単語を、別の文字列へ置き換えるbashの組み込み機能です。長いオプションの省略や、安全確認用のオプション追加などに使われます。</p>
+
+        <h3>一覧と作成</h3>
+        <pre><code>alias
+alias ll='ls -alF'
+alias grep='grep --color=auto'</code></pre>
+
+        <p>エイリアス名と置換文字列の間には<code>=</code>を使い、置換文字列は引用符で囲みます。</p>
+
+        <pre><code>ll /etc</code></pre>
+
+        <p>この例では、bashが<code>ll</code>を<code>ls -alF</code>へ置き換え、後ろの<code>/etc</code>を引数として続けます。</p>
+
+        <h3>確認と削除</h3>
+        <pre><code>alias ll
+type ll
+unalias ll
+unalias -a</code></pre>
+
+        <ul>
+          <li><code>alias 名前</code>：指定したエイリアスを表示する</li>
+          <li><code>type 名前</code>：名前がエイリアスとして解釈されるか確認する</li>
+          <li><code>unalias 名前</code>：指定したエイリアスを削除する</li>
+          <li><code>unalias -a</code>：すべてのエイリアスを削除する</li>
+        </ul>
+
+        <h3>一時設定と永続設定</h3>
+        <p>コマンドラインで作ったエイリアスは、通常そのシェルを終了すると消えます。継続して使う場合は、<code>~/.bashrc</code>などへ記述します。</p>
+
+        <pre><code>alias ll='ls -alF'
+alias ..='cd ..'</code></pre>
+
+        <p>編集後は、新しいシェルを開くか、次で再読み込みします。</p>
+
+        <pre><code>source ~/.bashrc</code></pre>
+
+        <h3>エイリアスより関数が向く場合</h3>
+        <p>エイリアスは単純な文字列置換です。引数を途中へ入れたい場合や、複数処理をまとめたい場合は、シェル関数が向きます。</p>
+
+        <pre><code>mkcd() {
+    mkdir -p -- "$1" &amp;&amp; cd -- "$1"
+}</code></pre>
+
+        <p>非対話シェルでは、標準設定のままではエイリアスが展開されません。スクリプトの処理をエイリアスへ依存させず、関数や通常のコマンドを使う方が分かりやすくなります。</p>
+      </section>
+
+      <section id="sec-9">
+        <h2>history</h2>
+        <p><code>history</code>は、対話的なbashで入力したコマンド履歴を表示・操作する組み込みコマンドです。</p>
+
+        <h3>表示</h3>
+        <pre><code>history
+history 20
+history | tail
+history | grep ssh</code></pre>
+
+        <p>引数に数値を指定すると、末尾から指定件数を表示します。</p>
+
+        <h3>履歴から再実行する</h3>
+        <pre><code>!!
+!42
+!ssh</code></pre>
+
+        <ul>
+          <li><code>!!</code>：直前のコマンド</li>
+          <li><code>!42</code>：履歴番号42のコマンド</li>
+          <li><code>!ssh</code>：<code>ssh</code>で始まる直近のコマンド</li>
+        </ul>
+
+        <p>履歴展開は、実行前に内容を十分確認できない場合があります。削除や上書きを含むコマンドでは、矢印キーや<code>Ctrl+R</code>で呼び出して編集してから実行する方が安全です。</p>
+
+        <h3>逆方向検索</h3>
+        <pre><code>Ctrl+R</code></pre>
+
+        <p><code>Ctrl+R</code>を押して文字を入力すると、過去の履歴を後方検索できます。候補を表示した状態で左右キーなどを使うと、実行前に編集できます。</p>
+
+        <h3>履歴ファイルと件数</h3>
+        <pre><code>echo "$HISTFILE"
+echo "$HISTSIZE"
+echo "$HISTFILESIZE"
+shopt histappend</code></pre>
+
+        <ul>
+          <li><code>HISTFILE</code>：履歴ファイル。標準では通常<code>~/.bash_history</code></li>
+          <li><code>HISTSIZE</code>：現在の履歴リストに保持する件数</li>
+          <li><code>HISTFILESIZE</code>：履歴ファイルに保持する最大行数</li>
+          <li><code>histappend</code>：終了時に履歴ファイルへ追記するかどうか</li>
+        </ul>
+
+        <h3>履歴ファイルとの読み書き</h3>
+        <pre><code>history -a
+history -n
+history -w</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>-a</code></td>
+              <td>現在のセッションで新たに入力した履歴を履歴ファイルへ追記する</td>
+            </tr>
+            <tr>
+              <td><code>-n</code></td>
+              <td>履歴ファイルへ追加された未読の行を現在の履歴へ読み込む</td>
+            </tr>
+            <tr>
+              <td><code>-w</code></td>
+              <td>現在の履歴リストで履歴ファイルを上書きする</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>削除</h3>
+        <pre><code>history -d 42
+history -c</code></pre>
+
+        <p><code>history -d</code>は指定項目を削除し、<code>history -c</code>は現在の履歴リストを消去します。履歴リストと履歴ファイルは別に扱われるため、削除したつもりでもファイル側に残っている場合があります。</p>
+
+        <h3>保存対象の調整</h3>
+        <pre><code>HISTCONTROL=ignoredups:ignorespace
+HISTIGNORE='ls:pwd:history*'</code></pre>
+
+        <p><code>HISTCONTROL</code>や<code>HISTIGNORE</code>で保存対象を調整できます。ただし、履歴へ残さない設定は秘密情報を守る完全な仕組みではありません。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>重要：</strong>パスワード、APIキー、トークンなどの秘密情報をコマンド行へ直接書かないことが基本です。履歴設定だけに頼らず、専用の入力方法や権限を制限した設定ファイルを使います。</p>
+        </aside>
+      </section>
+
+      <section id="sec-10">
+        <h2>実践的な確認手順</h2>
+        <p>bashの設定やコマンド検索で問題が起きた場合は、次の順で確認すると整理しやすくなります。</p>
+
+        <h3>1. 現在のシェルを確認する</h3>
+        <pre><code>echo "$SHELL"
+ps -p $$ -o pid=,ppid=,comm=,args=
+bash --version</code></pre>
+
+        <p><code>$SHELL</code>だけで現在のプロセスを断定せず、<code>ps</code>も確認します。</p>
+
+        <h3>2. コマンドの解釈を確認する</h3>
+        <pre><code>type -a コマンド名
+command -v コマンド名
+alias コマンド名</code></pre>
+
+        <p>同じ名前のエイリアス、関数、組み込みコマンド、外部コマンドがないか確認します。</p>
+
+        <h3>3. PATHを一行ずつ確認する</h3>
+        <pre><code>printf '%s\n' "$PATH" | tr ':' '\n'</code></pre>
+
+        <p>必要なディレクトリが含まれているか、順序が正しいか、空の要素や不審なディレクトリがないか確認します。</p>
+
+        <h3>4. 変数がexportされているか確認する</h3>
+        <pre><code>declare -p 変数名
+export -p | grep '変数名'
+printenv 変数名</code></pre>
+
+        <p>現在のシェルでは見えるのに、起動したプログラムから見えない場合は、exportされていない可能性があります。</p>
+
+        <h3>5. 起動ファイルを確認する</h3>
+        <pre><code>ls -la ~/.bashrc ~/.bash_profile ~/.bash_login ~/.profile
+grep -n 'PATH\|alias\|export' ~/.bashrc ~/.bash_profile ~/.profile 2&gt;/dev/null</code></pre>
+
+        <p>同じ変数を複数ファイルで上書きしていないか、構文エラーがないかを確認します。</p>
+
+        <h3>6. 再読み込み後に確認する</h3>
+        <pre><code>source ~/.bashrc
+type -a コマンド名
+printenv 変数名</code></pre>
+
+        <p>起動ファイルに問題がある場合、現在のシェルへ読み込むと設定が途中まで適用されることがあります。重要な作業中は別のターミナルを残し、新しいターミナルで確認すると安全です。</p>
+
+        <h3>よくある症状</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>症状</th>
+              <th>主な確認点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>command not found</td>
+              <td>コマンド名、実行権限、PATH、インストール先</td>
+            </tr>
+            <tr>
+              <td>想定と違うコマンドが動く</td>
+              <td><code>type -a</code>、エイリアス、関数、PATHの順序、ハッシュ</td>
+            </tr>
+            <tr>
+              <td>設定が新しい端末だけに反映される</td>
+              <td>起動ファイルと<code>source</code>の実行</td>
+            </tr>
+            <tr>
+              <td>子コマンドから変数が見えない</td>
+              <td><code>export</code>の有無</td>
+            </tr>
+            <tr>
+              <td>エイリアスがスクリプトで動かない</td>
+              <td>非対話シェルでは標準で展開されないこと</td>
+            </tr>
+            <tr>
+              <td>履歴が別端末と一致しない</td>
+              <td><code>histappend</code>、<code>history -a</code>、<code>history -n</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="sec-11">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>ターミナルとシェルは、どのような役割の違いがあるでしょうか。</li>
+          <li><code>$SHELL</code>は、必ず現在動作中のシェルを表すでしょうか。</li>
+          <li>対話的な非ログインbashが通常読み込む利用者用ファイルは何でしょうか。</li>
+          <li>PATHに複数のディレクトリがある場合、どの順番で検索されるでしょうか。</li>
+          <li>シェル変数を子プロセスへ渡すには、どの組み込みコマンドを使うでしょうか。</li>
+          <li>エイリアスを削除するコマンドは何でしょうか。</li>
+          <li>直前のコマンドを履歴展開で再実行する表記は何でしょうか。</li>
+          <li><code>HISTSIZE</code>と<code>HISTFILESIZE</code>は、それぞれ何を制御するでしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li>ターミナルは入出力の画面や端末、シェルはコマンドを解釈するプログラム</li>
+            <li>必ずではない。通常はログインシェルを表す</li>
+            <li><code>~/.bashrc</code></li>
+            <li>コロンで区切られたディレクトリを左から順に検索する</li>
+            <li><code>export</code></li>
+            <li><code>unalias</code></li>
+            <li><code>!!</code></li>
+            <li><code>HISTSIZE</code>はメモリ上の履歴件数、<code>HISTFILESIZE</code>は履歴ファイルの最大行数</li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-12">
+        <h2>要約</h2>
+        <ul>
+          <li>シェルはコマンドを解釈するプログラムで、bashは代表的なシェルの一つです。</li>
+          <li>ターミナルは入出力の場所であり、ターミナルそのものとbashは別のものです。</li>
+          <li><code>$SHELL</code>は通常ログインシェルを表し、現在のプロセス確認には<code>ps -p $$</code>が役立ちます。</li>
+          <li>対話的なログインbashは<code>/etc/profile</code>などを読み、対話的な非ログインbashは通常<code>~/.bashrc</code>を読みます。</li>
+          <li><code>source</code>またはドットコマンドは、設定ファイルを現在のシェルで読み込みます。</li>
+          <li><code>PATH</code>はコロン区切りで、左側のディレクトリから順に検索されます。</li>
+          <li><code>type -a</code>は、エイリアス、関数、組み込み、外部コマンドなど、名前の解釈を調べるのに役立ちます。</li>
+          <li>シェル変数の代入では<code>=</code>の前後へ空白を入れません。</li>
+          <li><code>export</code>した変数は、後から起動する子プロセスの環境へ渡されます。</li>
+          <li><code>名前=値 コマンド</code>は、そのコマンドだけへ一時的な環境を渡します。</li>
+          <li><code>alias</code>は単純な文字列置換で、複雑な処理や引数操作には関数が向きます。</li>
+          <li><code>history</code>は履歴を表示・操作し、<code>Ctrl+R</code>で検索できます。</li>
+          <li><code>HISTSIZE</code>は履歴リスト、<code>HISTFILESIZE</code>は履歴ファイルの大きさを制御します。</li>
+          <li>秘密情報をコマンド行へ直接書かず、履歴へ残さない設定だけに頼らないことが重要です。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://www.gnu.org/software/bash/manual/bash.html" target="_blank" rel="noopener noreferrer">GNU Bash Reference Manual</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/What-is-Bash_003f.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：What is Bash?</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Bash Startup Files</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Command-Search-and-Execution.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Command Search and Execution</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Shell Parameters</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Environment.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Environment</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Bourne Shell Builtins</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Bash Builtins</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Aliases.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Aliases</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Bash-History-Facilities.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Bash History Facilities</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Bash-History-Builtins.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Bash History Builtins</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/bash.1.html" target="_blank" rel="noopener noreferrer">bash(1) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man7/environ.7.html" target="_blank" rel="noopener noreferrer">environ(7) — Linux manual page</a></li>
+          <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html" target="_blank" rel="noopener noreferrer">POSIX.1-2024：Shell Command Language</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

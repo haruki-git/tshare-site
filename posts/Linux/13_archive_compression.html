@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 13：圧縮・アーカイブ</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 13：圧縮・アーカイブ</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/13_archive_compression_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">アーカイブと圧縮の違い</a></li>
+          <li><a href="#sec-2">拡張子とコマンドの対応</a></li>
+          <li><a href="#sec-3">tarの基本</a></li>
+          <li><a href="#sec-4">tarで圧縮形式を扱う</a></li>
+          <li><a href="#sec-5">gzip</a></li>
+          <li><a href="#sec-6">bzip2</a></li>
+          <li><a href="#sec-7">xz</a></li>
+          <li><a href="#sec-8">zipとunzip</a></li>
+          <li><a href="#sec-9">一覧表示・検査・標準出力</a></li>
+          <li><a href="#sec-10">安全な展開とよくある間違い</a></li>
+          <li><a href="#sec-11">30秒チェック</a></li>
+          <li><a href="#sec-12">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>アーカイブと圧縮の違い</h2>
+        <p>アーカイブと圧縮は、似ていますが目的が異なります。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>処理</th>
+              <th>目的</th>
+              <th>代表的なコマンド</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>アーカイブ</td>
+              <td>複数のファイルやディレクトリを一つにまとめる</td>
+              <td><code>tar</code></td>
+            </tr>
+            <tr>
+              <td>圧縮</td>
+              <td>データの表現を変えて容量を小さくする</td>
+              <td><code>gzip</code>、<code>bzip2</code>、<code>xz</code></td>
+            </tr>
+            <tr>
+              <td>格納と圧縮</td>
+              <td>複数ファイルを一つの形式へ格納しながら圧縮する</td>
+              <td><code>zip</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><code>tar</code>は、本来は複数のファイルを一つのアーカイブへまとめるコマンドです。<code>tar</code>単体で作成した<code>.tar</code>ファイルは、通常は圧縮されていません。</p>
+
+        <pre><code>tar -cf backup.tar documents/</code></pre>
+
+        <p>この例は、<code>documents</code>ディレクトリを<code>backup.tar</code>へまとめています。</p>
+
+        <p><code>gzip</code>、<code>bzip2</code>、<code>xz</code>は、基本的には一つのデータストリームを圧縮します。複数ファイルをまとめて圧縮するときは、先に<code>tar</code>で一つにまとめます。</p>
+
+        <pre><code>tar -cf backup.tar documents/
+gzip backup.tar</code></pre>
+
+        <p>結果は、<code>backup.tar.gz</code>です。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>重要：</strong><code>tar</code>はまとめる処理、<code>gzip</code>・<code>bzip2</code>・<code>xz</code>は圧縮する処理です。<code>tar</code>は圧縮プログラムと連携して、まとめる処理と圧縮を一度に実行できます。</p>
+        </aside>
+      </section>
+
+      <section id="sec-2">
+        <h2>拡張子とコマンドの対応</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>代表的な拡張子</th>
+              <th>内容</th>
+              <th>主なコマンド</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.tar</code></td>
+              <td>tarアーカイブ。通常は未圧縮</td>
+              <td><code>tar</code></td>
+            </tr>
+            <tr>
+              <td><code>.gz</code></td>
+              <td>gzipで圧縮されたデータ</td>
+              <td><code>gzip</code>、<code>gunzip</code>、<code>zcat</code></td>
+            </tr>
+            <tr>
+              <td><code>.tar.gz</code>、<code>.tgz</code></td>
+              <td>gzip圧縮されたtarアーカイブ</td>
+              <td><code>tar -z</code></td>
+            </tr>
+            <tr>
+              <td><code>.bz2</code></td>
+              <td>bzip2で圧縮されたデータ</td>
+              <td><code>bzip2</code>、<code>bunzip2</code>、<code>bzcat</code></td>
+            </tr>
+            <tr>
+              <td><code>.tar.bz2</code>、<code>.tbz2</code></td>
+              <td>bzip2圧縮されたtarアーカイブ</td>
+              <td><code>tar -j</code></td>
+            </tr>
+            <tr>
+              <td><code>.xz</code></td>
+              <td>xzで圧縮されたデータ</td>
+              <td><code>xz</code>、<code>unxz</code>、<code>xzcat</code></td>
+            </tr>
+            <tr>
+              <td><code>.tar.xz</code>、<code>.txz</code></td>
+              <td>xz圧縮されたtarアーカイブ</td>
+              <td><code>tar -J</code></td>
+            </tr>
+            <tr>
+              <td><code>.zip</code></td>
+              <td>複数ファイルを格納できるZIPアーカイブ</td>
+              <td><code>zip</code>、<code>unzip</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>拡張子は内容を推測する手掛かりですが、名前だけで形式が保証されるわけではありません。形式を確認する場合は<code>file</code>コマンドも利用します。</p>
+
+        <pre><code>file backup.tar.gz
+file archive.zip</code></pre>
+      </section>
+
+      <section id="sec-3">
+        <h2>tarの基本</h2>
+        <p><code>tar</code>は、ファイルやディレクトリを一つのアーカイブへまとめたり、アーカイブから取り出したりするコマンドです。</p>
+
+        <pre><code>tar [オプション] [アーカイブ名] [対象...]</code></pre>
+
+        <h3>基本操作</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>長い形式</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-c</code></td><td><code>--create</code></td><td>新しいアーカイブを作成する</td></tr>
+            <tr><td><code>-x</code></td><td><code>--extract</code></td><td>アーカイブからファイルを展開する</td></tr>
+            <tr><td><code>-t</code></td><td><code>--list</code></td><td>アーカイブの内容を一覧表示する</td></tr>
+            <tr><td><code>-f</code></td><td><code>--file</code></td><td>使用するアーカイブファイル名を指定する</td></tr>
+            <tr><td><code>-v</code></td><td><code>--verbose</code></td><td>処理するファイル名を詳しく表示する</td></tr>
+          </tbody>
+        </table>
+
+        <h3>アーカイブを作成する</h3>
+        <pre><code>tar -cf backup.tar documents/
+tar -cvf backup.tar documents/</code></pre>
+
+        <p><code>-c</code>は作成、<code>-f</code>はアーカイブ名の指定です。<code>-v</code>を加えると、処理中のファイル名が表示されます。</p>
+
+        <h3>内容を一覧表示する</h3>
+        <pre><code>tar -tf backup.tar
+tar -tvf backup.tar</code></pre>
+
+        <p><code>-t</code>は、展開せずにアーカイブ内のファイル名を確認します。</p>
+
+        <h3>展開する</h3>
+        <pre><code>tar -xf backup.tar
+tar -xvf backup.tar</code></pre>
+
+        <p>標準では、現在のディレクトリを基準として展開します。</p>
+
+        <h3>指定したディレクトリへ展開する</h3>
+        <pre><code>mkdir restore
+tar -xf backup.tar -C restore/</code></pre>
+
+        <p><code>-C</code>は、処理を行うディレクトリを変更します。展開先のディレクトリは、事前に作成しておきます。</p>
+
+        <h3>特定のファイルだけを展開する</h3>
+        <pre><code>tar -xf backup.tar documents/report.txt</code></pre>
+
+        <p>アーカイブ内のパスを指定すると、必要な項目だけを取り出せます。先に<code>tar -tf</code>で正確な名前を確認します。</p>
+
+        <h3>-fの直後に注意する</h3>
+        <pre><code>tar -cvf backup.tar documents/</code></pre>
+
+        <p><code>-f</code>は、次の引数をアーカイブ名として受け取ります。そのため、古い形式のようにオプションをまとめて書く場合、通常は<code>f</code>を最後に置き、その直後へアーカイブ名を書きます。</p>
+      </section>
+
+      <section id="sec-4">
+        <h2>tarで圧縮形式を扱う</h2>
+        <p>GNU <code>tar</code>は、圧縮プログラムと連携して、アーカイブの作成と圧縮、展開と伸長を一度に実行できます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>圧縮形式</th>
+              <th>代表的な拡張子</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-z</code></td><td>gzip</td><td><code>.tar.gz</code>、<code>.tgz</code></td></tr>
+            <tr><td><code>-j</code></td><td>bzip2</td><td><code>.tar.bz2</code>、<code>.tbz2</code></td></tr>
+            <tr><td><code>-J</code></td><td>xz</td><td><code>.tar.xz</code>、<code>.txz</code></td></tr>
+          </tbody>
+        </table>
+
+        <h3>gzip形式</h3>
+        <pre><code>tar -czf backup.tar.gz documents/
+tar -tzf backup.tar.gz
+tar -xzf backup.tar.gz</code></pre>
+
+        <h3>bzip2形式</h3>
+        <pre><code>tar -cjf backup.tar.bz2 documents/
+tar -tjf backup.tar.bz2
+tar -xjf backup.tar.bz2</code></pre>
+
+        <h3>xz形式</h3>
+        <pre><code>tar -cJf backup.tar.xz documents/
+tar -tJf backup.tar.xz
+tar -xJf backup.tar.xz</code></pre>
+
+        <p>大文字の<code>-J</code>がxzです。小文字の<code>-j</code>はbzip2なので、大小を区別します。</p>
+
+        <h3>拡張子から形式を推測させる</h3>
+        <pre><code>tar -caf backup.tar.gz documents/
+tar -xaf backup.tar.gz</code></pre>
+
+        <p>GNU <code>tar</code>の<code>-a</code>、<code>--auto-compress</code>は、作成時にアーカイブ名の拡張子から圧縮形式を選びます。展開時には、GNU <code>tar</code>が形式を自動判定できる場合もありますが、LPICの基本では<code>-z</code>、<code>-j</code>、<code>-J</code>の対応を覚えます。</p>
+
+        <h3>除外するファイルを指定する</h3>
+        <pre><code>tar -czf backup.tar.gz documents/ --exclude='*.log'
+tar -czf backup.tar.gz documents/ --exclude='documents/cache'</code></pre>
+
+        <p><code>--exclude</code>は、指定した名前やパターンに一致する項目をアーカイブから除外します。シェルによる展開を避けるため、パターンは引用符で囲むのが基本です。</p>
+      </section>
+
+      <section id="sec-5">
+        <h2>gzip</h2>
+        <p><code>gzip</code>は、ファイルをgzip形式で圧縮します。標準の動作では、元のファイルを圧縮済みファイルへ置き換えます。</p>
+
+        <pre><code>gzip file.txt</code></pre>
+
+        <p>実行後は、通常<code>file.txt</code>がなくなり、<code>file.txt.gz</code>が作成されます。</p>
+
+        <h3>展開する</h3>
+        <pre><code>gzip -d file.txt.gz
+gunzip file.txt.gz</code></pre>
+
+        <p><code>gunzip</code>は、<code>gzip -d</code>と同じ目的で使えます。</p>
+
+        <h3>元ファイルを残す</h3>
+        <pre><code>gzip -k file.txt
+gzip --keep file.txt</code></pre>
+
+        <p><code>-k</code>は、圧縮や展開を行った後も入力ファイルを残します。</p>
+
+        <h3>標準出力へ書き出す</h3>
+        <pre><code>gzip -c file.txt &gt; file.txt.gz
+gzip -dc file.txt.gz &gt; restored.txt
+zcat file.txt.gz</code></pre>
+
+        <p><code>-c</code>は標準出力へ書き出すため、元ファイルを変更せずにリダイレクトやパイプへ渡せます。<code>zcat</code>は、gzip圧縮された内容を展開して標準出力へ表示します。</p>
+
+        <h3>圧縮レベル</h3>
+        <pre><code>gzip -1 file.txt
+gzip -9 file.txt</code></pre>
+
+        <ul>
+          <li><code>-1</code>：速度を優先する</li>
+          <li><code>-9</code>：圧縮率を優先する</li>
+          <li><code>-6</code>：一般的な標準レベル</li>
+        </ul>
+
+        <p>高い圧縮レベルほど必ず実用上最適とは限りません。処理時間と圧縮後の容量のバランスで選びます。</p>
+
+        <h3>情報表示と検査</h3>
+        <pre><code>gzip -l file.txt.gz
+gzip -t file.txt.gz</code></pre>
+
+        <p><code>-l</code>は圧縮ファイルの情報を表示し、<code>-t</code>は圧縮データの整合性を検査します。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>bzip2</h2>
+        <p><code>bzip2</code>は、ファイルをbzip2形式で圧縮します。基本的な操作体系は<code>gzip</code>に似ています。</p>
+
+        <pre><code>bzip2 file.txt</code></pre>
+
+        <p>標準の動作では、<code>file.txt</code>を<code>file.txt.bz2</code>へ置き換えます。</p>
+
+        <h3>展開する</h3>
+        <pre><code>bzip2 -d file.txt.bz2
+bunzip2 file.txt.bz2</code></pre>
+
+        <p><code>bunzip2</code>は、bzip2形式の展開に使用します。</p>
+
+        <h3>元ファイルを残す</h3>
+        <pre><code>bzip2 -k file.txt
+bzip2 -dk file.txt.bz2</code></pre>
+
+        <p><code>-k</code>は、入力ファイルを残します。</p>
+
+        <h3>標準出力へ表示する</h3>
+        <pre><code>bzip2 -c file.txt &gt; file.txt.bz2
+bzip2 -dc file.txt.bz2 &gt; restored.txt
+bzcat file.txt.bz2</code></pre>
+
+        <p><code>bzcat</code>は、bzip2圧縮された内容を展開して標準出力へ表示します。</p>
+
+        <h3>圧縮レベルと検査</h3>
+        <pre><code>bzip2 -1 file.txt
+bzip2 -9 file.txt
+bzip2 -t file.txt.bz2</code></pre>
+
+        <p><code>-1</code>から<code>-9</code>はブロックサイズを指定し、一般に大きい値ほど多くのメモリを使用します。<code>-t</code>は、展開結果を書き出さずに圧縮ファイルの整合性を確認します。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>覚え方：</strong>gzipには<code>gunzip</code>と<code>zcat</code>、bzip2には<code>bunzip2</code>と<code>bzcat</code>があります。</p>
+        </aside>
+      </section>
+
+      <section id="sec-7">
+        <h2>xz</h2>
+        <p><code>xz</code>は、ファイルをxz形式で圧縮します。コマンド体系は<code>gzip</code>や<code>bzip2</code>に似ています。</p>
+
+        <pre><code>xz file.txt</code></pre>
+
+        <p>標準の動作では、<code>file.txt</code>を<code>file.txt.xz</code>へ置き換えます。</p>
+
+        <h3>展開する</h3>
+        <pre><code>xz -d file.txt.xz
+unxz file.txt.xz</code></pre>
+
+        <p><code>unxz</code>は、<code>xz -d</code>として動作します。</p>
+
+        <h3>元ファイルを残す</h3>
+        <pre><code>xz -k file.txt
+xz -dk file.txt.xz</code></pre>
+
+        <h3>標準出力へ表示する</h3>
+        <pre><code>xz -c file.txt &gt; file.txt.xz
+xz -dc file.txt.xz &gt; restored.txt
+xzcat file.txt.xz</code></pre>
+
+        <p><code>xzcat</code>は、xz圧縮された内容を展開して標準出力へ表示します。</p>
+
+        <h3>圧縮レベルとスレッド</h3>
+        <pre><code>xz -0 file.txt
+xz -9 file.txt
+xz -T0 largefile</code></pre>
+
+        <ul>
+          <li><code>-0</code>：高速でメモリ使用量が少ない設定</li>
+          <li><code>-9</code>：圧縮率を重視する設定</li>
+          <li><code>-T0</code>：利用可能なプロセッサースレッド数を自動的に選ぶ</li>
+        </ul>
+
+        <p>高い設定では、圧縮時だけでなく展開時にも多くのメモリを必要とする場合があります。</p>
+
+        <h3>情報表示と検査</h3>
+        <pre><code>xz -l file.txt.xz
+xz -t file.txt.xz</code></pre>
+
+        <p><code>-l</code>は圧縮ファイルの情報を表示し、<code>-t</code>は整合性を検査します。</p>
+      </section>
+
+      <section id="sec-8">
+        <h2>zipとunzip</h2>
+        <p><code>zip</code>は、一つまたは複数のファイルをZIPアーカイブへ格納し、通常は圧縮します。<code>tar</code>と単一ファイル圧縮コマンドを組み合わせたような役割を一つの形式で持ちます。</p>
+
+        <h3>ZIPファイルを作成する</h3>
+        <pre><code>zip archive.zip file1.txt file2.txt</code></pre>
+
+        <h3>ディレクトリを再帰的に格納する</h3>
+        <pre><code>zip -r archive.zip documents/</code></pre>
+
+        <p><code>-r</code>は、ディレクトリの内部を再帰的に処理します。ディレクトリをZIPへ格納するときの基本オプションです。</p>
+
+        <h3>内容を一覧表示する</h3>
+        <pre><code>unzip -l archive.zip
+zipinfo archive.zip</code></pre>
+
+        <p><code>unzip -l</code>は、展開せずにZIP内のファイルを一覧表示します。</p>
+
+        <h3>展開する</h3>
+        <pre><code>unzip archive.zip
+unzip archive.zip -d restore/</code></pre>
+
+        <p><code>-d</code>は展開先ディレクトリを指定します。</p>
+
+        <h3>既存ファイルの扱い</h3>
+        <pre><code>unzip -n archive.zip
+unzip -o archive.zip</code></pre>
+
+        <ul>
+          <li><code>-n</code>：既存ファイルを上書きしない</li>
+          <li><code>-o</code>：確認せず既存ファイルを上書きする</li>
+        </ul>
+
+        <p><code>-o</code>は便利ですが、誤って必要なファイルを上書きしないように注意します。</p>
+
+        <h3>ZIPファイルを検査する</h3>
+        <pre><code>unzip -t archive.zip</code></pre>
+
+        <p><code>-t</code>は、ファイルを通常の場所へ展開せず、ZIPアーカイブの内容を検査します。</p>
+
+        <h3>除外パターンを指定する</h3>
+        <pre><code>zip -r archive.zip documents/ -x '*.log'</code></pre>
+
+        <p><code>-x</code>は、指定パターンに一致する項目を除外します。シェルに先に展開されないよう、パターンを引用符で囲みます。</p>
+      </section>
+
+      <section id="sec-9">
+        <h2>一覧表示・検査・標準出力</h2>
+        <p>圧縮ファイルを扱うときは、いきなり展開するだけでなく、内容の確認、整合性の検査、標準出力への展開を使い分けます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>形式</th>
+              <th>一覧・情報</th>
+              <th>整合性検査</th>
+              <th>展開して標準出力</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>tar</td>
+              <td><code>tar -tf archive.tar</code></td>
+              <td>形式に応じた圧縮コマンドや展開テスト</td>
+              <td><code>tar -xOf archive.tar path</code></td>
+            </tr>
+            <tr>
+              <td>gzip</td>
+              <td><code>gzip -l file.gz</code></td>
+              <td><code>gzip -t file.gz</code></td>
+              <td><code>zcat file.gz</code></td>
+            </tr>
+            <tr>
+              <td>bzip2</td>
+              <td>専用の簡易一覧機能は限定的</td>
+              <td><code>bzip2 -t file.bz2</code></td>
+              <td><code>bzcat file.bz2</code></td>
+            </tr>
+            <tr>
+              <td>xz</td>
+              <td><code>xz -l file.xz</code></td>
+              <td><code>xz -t file.xz</code></td>
+              <td><code>xzcat file.xz</code></td>
+            </tr>
+            <tr>
+              <td>ZIP</td>
+              <td><code>unzip -l archive.zip</code></td>
+              <td><code>unzip -t archive.zip</code></td>
+              <td><code>unzip -p archive.zip path</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>圧縮されたテキストを検索する</h3>
+        <pre><code>zcat access.log.gz | grep 'ERROR'
+bzcat access.log.bz2 | grep 'ERROR'
+xzcat access.log.xz | grep 'ERROR'</code></pre>
+
+        <p>展開結果を標準出力へ流せば、一時ファイルを作らずに<code>grep</code>などへ渡せます。</p>
+
+        <h3>tar内の一ファイルを標準出力へ取り出す</h3>
+        <pre><code>tar -xOf backup.tar documents/report.txt
+tar -xzOf backup.tar.gz documents/report.txt</code></pre>
+
+        <p><code>-O</code>は、取り出したファイルを通常のファイルとして書き出さず、標準出力へ送ります。大文字のオーです。</p>
+
+        <h3>パイプでtarアーカイブを圧縮する</h3>
+        <pre><code>tar -cf - documents/ | gzip &gt; backup.tar.gz
+gzip -dc backup.tar.gz | tar -xf -</code></pre>
+
+        <p><code>-f -</code>のハイフンは、アーカイブを標準入力または標準出力で扱う指定です。通常は<code>tar -czf</code>や<code>tar -xzf</code>の方が簡潔ですが、パイプの理解に役立ちます。</p>
+      </section>
+
+      <section id="sec-10">
+        <h2>安全な展開とよくある間違い</h2>
+
+        <h3>展開前に内容を確認する</h3>
+        <pre><code>tar -tf downloaded.tar.gz
+unzip -l downloaded.zip</code></pre>
+
+        <p>入手元を信頼できないアーカイブは、最初に内容を一覧表示し、想定外の絶対パスや親ディレクトリを示すパス、既存ファイルと衝突する名前がないかを確認します。</p>
+
+        <h3>空の作業用ディレクトリへ展開する</h3>
+        <pre><code>mkdir extracted
+tar -xf downloaded.tar -C extracted/
+unzip downloaded.zip -d extracted/</code></pre>
+
+        <p>現在の作業ディレクトリへ直接展開すると、多数のファイルが散らばったり、同名ファイルと衝突したりする場合があります。専用ディレクトリへ展開すると確認しやすくなります。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>間違いやすい点</th>
+              <th>確認すること</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>tar</code>自体が必ず圧縮すると考える</td>
+              <td><code>.tar</code>は通常未圧縮。圧縮形式には<code>-z</code>、<code>-j</code>、<code>-J</code>を使う</td>
+            </tr>
+            <tr>
+              <td><code>-j</code>と<code>-J</code>を混同する</td>
+              <td>小文字の<code>-j</code>はbzip2、大文字の<code>-J</code>はxz</td>
+            </tr>
+            <tr>
+              <td><code>tar -cvf directory backup.tar</code>と書く</td>
+              <td><code>-f</code>の直後はアーカイブ名。<code>tar -cvf backup.tar directory</code></td>
+            </tr>
+            <tr>
+              <td>圧縮後も元ファイルが残ると思う</td>
+              <td><code>gzip</code>、<code>bzip2</code>、<code>xz</code>は標準で入力ファイルを置換する。残すなら<code>-k</code>や<code>-c</code></td>
+            </tr>
+            <tr>
+              <td>ディレクトリを<code>zip</code>へ入れられない</td>
+              <td><code>zip -r</code>で再帰的に処理する</td>
+            </tr>
+            <tr>
+              <td>内容を確認せず現在のディレクトリへ展開する</td>
+              <td>先に一覧表示し、空の専用ディレクトリへ展開する</td>
+            </tr>
+            <tr>
+              <td>拡張子だけで形式を断定する</td>
+              <td><code>file</code>コマンドや一覧表示、検査機能でも確認する</td>
+            </tr>
+            <tr>
+              <td><code>-x</code>の意味を全コマンドで同じと考える</td>
+              <td><code>tar -x</code>は展開、<code>zip -x</code>は除外。コマンドごとに意味を確認する</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>manページとinfoを確認する</h3>
+        <pre><code>man tar
+man gzip
+man bzip2
+man xz
+man zip
+man unzip
+
+info tar
+info gzip</code></pre>
+      </section>
+
+      <section id="sec-11">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>アーカイブと圧縮は、目的がどのように違うでしょうか。</li>
+          <li>tarアーカイブの作成、一覧表示、展開に使う基本オプションは何でしょうか。</li>
+          <li><code>tar</code>の<code>-f</code>は何を指定するオプションでしょうか。</li>
+          <li>gzip、bzip2、xzを<code>tar</code>で扱うオプションは、それぞれ何でしょうか。</li>
+          <li><code>gzip</code>、<code>bzip2</code>、<code>xz</code>で元ファイルを残す代表的なオプションは何でしょうか。</li>
+          <li>gzip、bzip2、xzの内容を展開して標準出力へ表示するコマンドは何でしょうか。</li>
+          <li>ディレクトリをZIPへ格納するときに使うオプションは何でしょうか。</li>
+          <li>tarアーカイブとZIPアーカイブを展開前に一覧表示するコマンドを答えてください。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li>アーカイブは複数ファイルを一つにまとめ、圧縮はデータ容量を小さくする処理</li>
+            <li>作成は<code>-c</code>、一覧表示は<code>-t</code>、展開は<code>-x</code></li>
+            <li>使用するアーカイブファイル名を指定する</li>
+            <li>gzipは<code>-z</code>、bzip2は<code>-j</code>、xzは<code>-J</code></li>
+            <li><code>-k</code></li>
+            <li><code>zcat</code>、<code>bzcat</code>、<code>xzcat</code></li>
+            <li><code>-r</code></li>
+            <li><code>tar -tf アーカイブ名</code>、<code>unzip -l ZIP名</code></li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-12">
+        <h2>要約</h2>
+        <ul>
+          <li>アーカイブは複数のファイルを一つにまとめる処理、圧縮はデータ容量を小さくする処理です。</li>
+          <li><code>tar</code>は本来アーカイブコマンドであり、未圧縮の<code>.tar</code>も作成できます。</li>
+          <li><code>tar -c</code>は作成、<code>-t</code>は一覧表示、<code>-x</code>は展開、<code>-f</code>はアーカイブ名の指定です。</li>
+          <li><code>tar -z</code>はgzip、<code>-j</code>はbzip2、<code>-J</code>はxzと連携します。</li>
+          <li><code>gzip</code>、<code>bzip2</code>、<code>xz</code>は、標準では入力ファイルを圧縮済みファイルへ置き換えます。</li>
+          <li>元ファイルを残すには<code>-k</code>、標準出力へ書き出すには<code>-c</code>を使います。</li>
+          <li><code>gunzip</code>、<code>bunzip2</code>、<code>unxz</code>は、それぞれの形式を展開します。</li>
+          <li><code>zcat</code>、<code>bzcat</code>、<code>xzcat</code>は、展開した内容を標準出力へ送ります。</li>
+          <li><code>zip -r</code>はディレクトリを再帰的にZIPへ格納し、<code>unzip</code>で展開します。</li>
+          <li>入手元を信頼できないアーカイブは、先に内容を一覧表示し、空の専用ディレクトリへ展開します。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://www.gnu.org/software/tar/manual/tar.html" target="_blank" rel="noopener noreferrer">GNU tar Manual</a></li>
+          <li><a href="https://www.gnu.org/software/tar/manual/html_section/Basic-tar.html" target="_blank" rel="noopener noreferrer">GNU tar：Basic GNU tar Operations</a></li>
+          <li><a href="https://www.gnu.org/software/tar/manual/html_node/create.html" target="_blank" rel="noopener noreferrer">GNU tar：How to Create Archives</a></li>
+          <li><a href="https://www.gnu.org/software/tar/manual/html_node/extract.html" target="_blank" rel="noopener noreferrer">GNU tar：How to Extract Members from an Archive</a></li>
+          <li><a href="https://www.gnu.org/software/gzip/manual/gzip.html" target="_blank" rel="noopener noreferrer">GNU Gzip Manual</a></li>
+          <li><a href="https://sourceware.org/bzip2/manual/manual.html" target="_blank" rel="noopener noreferrer">bzip2 and libbzip2 Manual</a></li>
+          <li><a href="https://tukaani.org/xz/man/xz.1.html" target="_blank" rel="noopener noreferrer">XZ Utils：xz(1)</a></li>
+          <li><a href="https://infozip.sourceforge.net/Zip.html" target="_blank" rel="noopener noreferrer">Info-ZIP：Zip 3.0</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/tar.1.html" target="_blank" rel="noopener noreferrer">tar(1) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/gzip.1.html" target="_blank" rel="noopener noreferrer">gzip(1) manual page</a></li>
+          <li><a href="https://manpages.debian.org/testing/bzip2/bzip2.1.en.html" target="_blank" rel="noopener noreferrer">bzip2(1) manual page</a></li>
+          <li><a href="https://manpages.debian.org/testing/xz-utils/xz.1.en.html" target="_blank" rel="noopener noreferrer">xz(1) manual page</a></li>
+          <li><a href="https://manpages.debian.org/testing/zip/zip.1.en.html" target="_blank" rel="noopener noreferrer">zip(1) manual page</a></li>
+          <li><a href="https://manpages.debian.org/testing/unzip/unzip.1.en.html" target="_blank" rel="noopener noreferrer">unzip(1) manual page</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

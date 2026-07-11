@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 08：パッケージ管理</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 08：パッケージ管理</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/08_package_management_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">パッケージ管理とは</a></li>
+          <li><a href="#sec-2">パッケージ・依存関係・リポジトリ</a></li>
+          <li><a href="#sec-3">RPM系とDebian系</a></li>
+          <li><a href="#sec-4">rpm</a></li>
+          <li><a href="#sec-5">yum</a></li>
+          <li><a href="#sec-6">dnf</a></li>
+          <li><a href="#sec-7">dpkg</a></li>
+          <li><a href="#sec-8">apt</a></li>
+          <li><a href="#sec-9">リポジトリの設定</a></li>
+          <li><a href="#sec-10">署名・キャッシュ・トラブル対応</a></li>
+          <li><a href="#sec-11">30秒チェック</a></li>
+          <li><a href="#sec-12">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>パッケージ管理とは</h2>
+        <p>Linuxでは、アプリケーションやライブラリをパッケージという単位で管理します。</p>
+        <p>パッケージには、実行ファイルや設定ファイルだけでなく、名前、バージョン、対応するCPUアーキテクチャ、必要な別パッケージ、インストール時に実行するスクリプトなどのメタデータも含まれます。</p>
+        <p>パッケージ管理システムを使うと、ソフトウェアのインストール、更新、削除、検索、整合性確認を一定の方法で行えます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>今回の目標：</strong><code>rpm</code>と<code>dpkg</code>はパッケージを直接扱う基本ツール、<code>apt</code>・<code>yum</code>・<code>dnf</code>はリポジトリや依存関係まで扱う上位ツールとして整理します。</p>
+        </aside>
+      </section>
+
+      <section id="sec-2">
+        <h2>パッケージ・依存関係・リポジトリ</h2>
+
+        <h3>依存関係</h3>
+        <p>あるパッケージが動作するために、別のライブラリやパッケージを必要とする関係を依存関係と呼びます。</p>
+        <p>例えば、アプリケーションAがライブラリBを必要とする場合、Aだけをインストールしても正常に動作しません。<code>apt</code>、<code>yum</code>、<code>dnf</code>は、設定されたリポジトリの情報を使って必要な依存パッケージを探し、まとめて処理します。</p>
+
+        <h3>競合</h3>
+        <p>同時にインストールできないパッケージや、同じ機能・ファイルを競合する形で提供するパッケージがある場合、パッケージ管理ツールは処理を拒否したり、入れ替えを提案したりします。</p>
+
+        <h3>リポジトリ</h3>
+        <p>リポジトリは、パッケージ本体と、パッケージ名、バージョン、依存関係などのメタデータを公開する保管場所です。</p>
+        <p>パッケージ管理ツールは、リポジトリのメタデータを取得して、検索や依存関係の解決を行います。</p>
+
+        <h3>パッケージファイルとパッケージ名</h3>
+        <p>ローカルにあるパッケージファイルを指定する場合と、リポジトリ上のパッケージ名を指定する場合は区別します。</p>
+
+        <pre><code># ローカルのDebianパッケージファイル
+sudo dpkg -i ./example_1.0_amd64.deb
+
+# リポジトリ上のパッケージ名
+sudo apt install example</code></pre>
+
+        <p>ローカルファイルを直接扱う基本ツールは、依存関係を自動取得しないことがあります。一方、上位ツールはリポジトリを参照して依存関係を解決します。</p>
+      </section>
+
+      <section id="sec-3">
+        <h2>RPM系とDebian系</h2>
+        <p>LPIC Level1では、RPM系とDebian系の両方を整理します。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>分類</th>
+              <th>RPM系</th>
+              <th>Debian系</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>代表的なディストリビューション</td>
+              <td>Red Hat Enterprise Linux、Fedora、Rocky Linuxなど</td>
+              <td>Debian、Ubuntuなど</td>
+            </tr>
+            <tr>
+              <td>パッケージ形式</td>
+              <td><code>.rpm</code></td>
+              <td><code>.deb</code></td>
+            </tr>
+            <tr>
+              <td>基本ツール</td>
+              <td><code>rpm</code></td>
+              <td><code>dpkg</code></td>
+            </tr>
+            <tr>
+              <td>上位ツール</td>
+              <td><code>yum</code>、<code>dnf</code></td>
+              <td><code>apt</code>、<code>apt-get</code>、<code>apt-cache</code></td>
+            </tr>
+            <tr>
+              <td>主なリポジトリ設定</td>
+              <td><code>/etc/yum.repos.d/*.repo</code></td>
+              <td><code>/etc/apt/sources.list</code>、<code>/etc/apt/sources.list.d/</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><code>rpm</code>や<code>dpkg</code>は、インストール済みデータベースへの問い合わせや、手元のパッケージファイルの操作に使われます。</p>
+        <p><code>apt</code>、<code>yum</code>、<code>dnf</code>は、リポジトリからパッケージ情報を取得し、依存関係を解決しながら複数のパッケージを一つの処理単位として扱います。</p>
+      </section>
+
+      <section id="sec-4">
+        <h2>rpm</h2>
+        <p><code>rpm</code>は、RPMパッケージのインストール、更新、削除、問い合わせ、検証などを行うコマンドです。</p>
+
+        <h3>インストール・更新・削除</h3>
+        <pre><code>sudo rpm -ivh package.rpm
+sudo rpm -Uvh package.rpm
+sudo rpm -Fvh package.rpm
+sudo rpm -e package_name</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>-i</code></td>
+              <td>パッケージを新規インストールする</td>
+            </tr>
+            <tr>
+              <td><code>-U</code></td>
+              <td>アップグレードする。未導入なら新規インストールする</td>
+            </tr>
+            <tr>
+              <td><code>-F</code></td>
+              <td>すでに導入済みのパッケージだけを更新する</td>
+            </tr>
+            <tr>
+              <td><code>-e</code></td>
+              <td>パッケージを削除する</td>
+            </tr>
+            <tr>
+              <td><code>-v</code></td>
+              <td>詳細を表示する</td>
+            </tr>
+            <tr>
+              <td><code>-h</code></td>
+              <td>進行状況をハッシュ記号で表示する</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><code>rpm -e</code>では、通常、パッケージファイル名ではなくインストール済みのパッケージ名を指定します。</p>
+        <p><code>rpm</code>は必要な依存関係を確認しますが、通常は不足するパッケージをリポジトリから自動取得しません。日常的なインストールでは、<code>dnf</code>や<code>yum</code>を使う方が安全です。</p>
+
+        <h3>問い合わせ</h3>
+        <pre><code>rpm -q bash
+rpm -qa
+rpm -qi bash
+rpm -ql bash
+rpm -qf /bin/bash
+rpm -qp package.rpm
+rpm -qpl package.rpm</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>コマンド</th>
+              <th>確認内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>rpm -q パッケージ名</code></td>
+              <td>指定したパッケージが導入済みか確認する</td>
+            </tr>
+            <tr>
+              <td><code>rpm -qa</code></td>
+              <td>導入済みの全パッケージを表示する</td>
+            </tr>
+            <tr>
+              <td><code>rpm -qi</code></td>
+              <td>パッケージの詳細情報を表示する</td>
+            </tr>
+            <tr>
+              <td><code>rpm -ql</code></td>
+              <td>パッケージから導入されたファイルを表示する</td>
+            </tr>
+            <tr>
+              <td><code>rpm -qf ファイル</code></td>
+              <td>そのファイルを所有するパッケージを調べる</td>
+            </tr>
+            <tr>
+              <td><code>-p</code></td>
+              <td>インストール済みではなく、パッケージファイルを問い合わせ対象にする</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>検証</h3>
+        <pre><code>rpm -V bash
+rpm -Va
+rpm -K package.rpm</code></pre>
+
+        <p><code>rpm -V</code>は、インストール時に記録された情報と現在のファイル属性を比較します。何も表示されなければ、検査対象に差異が見つからなかったことを表します。</p>
+        <p><code>rpm -K</code>は、パッケージファイルの署名やダイジェストを確認します。</p>
+
+        <p>RPMデータベースの場所は、ディストリビューションやRPMのバージョンにより異なることがあります。実際の設定値は次のように確認できます。</p>
+        <pre><code>rpm --eval '%{_dbpath}'</code></pre>
+      </section>
+
+      <section id="sec-5">
+        <h2>yum</h2>
+        <p><code>yum</code>は、RPMリポジトリを利用して、依存関係を解決しながらパッケージを管理する上位ツールです。</p>
+        <p>古いRHEL系環境では従来のYUMが使われてきました。RHEL 8以降では、<code>yum</code>コマンドがDNF技術を基盤とするYUM v4として提供され、互換性のため<code>dnf</code>とほぼ同様に利用できる環境があります。</p>
+
+        <pre><code>sudo yum install package_name
+sudo yum remove package_name
+sudo yum update
+yum search keyword
+yum info package_name
+yum list installed
+yum provides '/usr/bin/example'
+yum repolist
+sudo yum clean all</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>サブコマンド</th>
+              <th>主な用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>install</code></td>
+              <td>パッケージと必要な依存関係を導入する</td>
+            </tr>
+            <tr>
+              <td><code>remove</code></td>
+              <td>パッケージを削除する</td>
+            </tr>
+            <tr>
+              <td><code>update</code></td>
+              <td>更新可能なパッケージを更新する</td>
+            </tr>
+            <tr>
+              <td><code>search</code></td>
+              <td>名前や説明からパッケージを検索する</td>
+            </tr>
+            <tr>
+              <td><code>provides</code></td>
+              <td>指定したファイルや機能を提供するパッケージを探す</td>
+            </tr>
+            <tr>
+              <td><code>repolist</code></td>
+              <td>利用可能なリポジトリを表示する</td>
+            </tr>
+            <tr>
+              <td><code>clean all</code></td>
+              <td>取得済みのメタデータやキャッシュを削除する</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><code>-y</code>を付けると確認に自動でyesと答えます。ただし、削除や大量更新では処理内容を確認できなくなるため、目的が明確な場合に使います。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>dnf</h2>
+        <p><code>dnf</code>は、Fedoraや新しいRHEL系ディストリビューションで使われるRPM系のパッケージ管理ツールです。</p>
+        <p>パッケージの検索、依存関係の解決、インストール、更新、削除、リポジトリ管理、処理履歴の確認などを行えます。</p>
+
+        <pre><code>sudo dnf install package_name
+sudo dnf upgrade
+sudo dnf remove package_name
+sudo dnf autoremove
+dnf search keyword
+dnf info package_name
+dnf list installed
+dnf provides '/usr/bin/example'
+dnf repolist
+dnf history
+sudo dnf makecache
+sudo dnf clean all</code></pre>
+
+        <h3>yumとdnfの対応</h3>
+        <p>基本的な操作では、<code>yum install</code>と<code>dnf install</code>、<code>yum remove</code>と<code>dnf remove</code>のように、似たサブコマンドを利用できます。</p>
+        <p>ただし、古いYUMとDNFでは細かな挙動やオプションに差があります。対象システムのバージョンとmanページを確認します。</p>
+
+        <h3>履歴</h3>
+        <pre><code>dnf history
+dnf history info transaction_id</code></pre>
+
+        <p><code>dnf history</code>では、過去のインストール、更新、削除などのトランザクションを確認できます。</p>
+
+        <h3>不要な依存パッケージ</h3>
+        <p><code>dnf autoremove</code>は、依存関係として自動導入された後、どのユーザー導入パッケージからも必要とされなくなったパッケージを削除対象にします。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>注意：</strong><code>autoremove</code>やシステム全体の更新では、実際に削除・変更されるパッケージ一覧を確認してから実行します。</p>
+        </aside>
+      </section>
+
+      <section id="sec-7">
+        <h2>dpkg</h2>
+        <p><code>dpkg</code>は、Debianパッケージをインストール、削除、問い合わせ、設定する基本ツールです。</p>
+        <p>公式manページでは、Debianパッケージを扱う中間レベルのツールと説明され、一般利用者向けの上位インターフェースとして<code>apt</code>が案内されています。</p>
+
+        <h3>インストール・削除・設定</h3>
+        <pre><code>sudo dpkg -i package.deb
+sudo dpkg -r package_name
+sudo dpkg -P package_name
+sudo dpkg --configure -a</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>操作</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>-i</code></td>
+              <td>ローカルのDebianパッケージファイルをインストールする</td>
+            </tr>
+            <tr>
+              <td><code>-r</code></td>
+              <td>設定ファイルを残してパッケージを削除する</td>
+            </tr>
+            <tr>
+              <td><code>-P</code></td>
+              <td>設定ファイルも含めてパッケージを完全削除する</td>
+            </tr>
+            <tr>
+              <td><code>--configure -a</code></td>
+              <td>展開済みだが未設定のパッケージをまとめて設定する</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><code>dpkg -i</code>はローカルファイルを展開・導入しますが、不足する依存パッケージをリポジトリから自動取得しません。ローカルの<code>.deb</code>を依存関係込みで導入したい場合は、次のように<code>apt</code>へファイルパスを渡せます。</p>
+
+        <pre><code>sudo apt install ./package.deb</code></pre>
+
+        <h3>問い合わせ</h3>
+        <pre><code>dpkg -l
+dpkg -s bash
+dpkg -L bash
+dpkg -S /bin/bash
+dpkg-deb -I package.deb
+dpkg-deb -c package.deb</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>コマンド</th>
+              <th>確認内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>dpkg -l</code></td>
+              <td>パッケージ一覧と状態を表示する</td>
+            </tr>
+            <tr>
+              <td><code>dpkg -s</code></td>
+              <td>インストール済みパッケージの状態や詳細を表示する</td>
+            </tr>
+            <tr>
+              <td><code>dpkg -L</code></td>
+              <td>パッケージから導入されたファイルを表示する</td>
+            </tr>
+            <tr>
+              <td><code>dpkg -S ファイル</code></td>
+              <td>そのファイルを所有するパッケージを調べる</td>
+            </tr>
+            <tr>
+              <td><code>dpkg-deb -I</code></td>
+              <td><code>.deb</code>ファイルのパッケージ情報を表示する</td>
+            </tr>
+            <tr>
+              <td><code>dpkg-deb -c</code></td>
+              <td><code>.deb</code>ファイルの内容一覧を表示する</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>dpkgの管理情報は、主に<code>/var/lib/dpkg/</code>以下に保存されます。<code>/var/lib/dpkg/status</code>には、パッケージの状態情報が記録されます。</p>
+      </section>
+
+      <section id="sec-8">
+        <h2>apt</h2>
+        <p><code>apt</code>は、Debian系のパッケージ管理システムに対する高レベルのコマンドラインインターフェースです。</p>
+        <p>リポジトリからパッケージ情報を取得し、依存関係を解決しながらインストール、更新、削除、検索などを行います。</p>
+
+        <h3>更新情報とパッケージの更新</h3>
+        <pre><code>sudo apt update
+apt list --upgradable
+sudo apt upgrade
+sudo apt full-upgrade</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>コマンド</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>apt update</code></td>
+              <td>リポジトリから最新のパッケージ一覧を取得する</td>
+            </tr>
+            <tr>
+              <td><code>apt list --upgradable</code></td>
+              <td>更新可能なパッケージを表示する</td>
+            </tr>
+            <tr>
+              <td><code>apt upgrade</code></td>
+              <td>必要なら新規依存パッケージを追加するが、既存パッケージを削除せずに更新する</td>
+            </tr>
+            <tr>
+              <td><code>apt full-upgrade</code></td>
+              <td>システム全体の更新に必要な場合、既存パッケージの削除も含めて処理する</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><code>apt update</code>だけでは、通常、インストール済みパッケージ本体は更新されません。更新候補を判断するためのパッケージ一覧を新しくします。</p>
+
+        <h3>インストール・削除</h3>
+        <pre><code>sudo apt install package_name
+sudo apt reinstall package_name
+sudo apt remove package_name
+sudo apt purge package_name
+sudo apt autoremove</code></pre>
+
+        <ul>
+          <li><code>remove</code>：パッケージを削除するが、パッケージ管理対象の設定ファイルを一部残す</li>
+          <li><code>purge</code>：パッケージ管理対象の設定ファイルも含めて削除する</li>
+          <li><code>autoremove</code>：依存関係として導入された後、不要になったパッケージを削除する</li>
+        </ul>
+
+        <p><code>purge</code>を実行しても、通常、利用者のホームディレクトリに作られた個人データや個人設定まで自動削除するわけではありません。</p>
+
+        <h3>検索・確認</h3>
+        <pre><code>apt search keyword
+apt show package_name
+apt list --installed
+apt-cache policy package_name
+apt-cache depends package_name
+apt-cache rdepends package_name</code></pre>
+
+        <p><code>apt-cache policy</code>では、インストール済みの版、候補となる版、どのリポジトリから取得されるかなどを確認できます。</p>
+
+        <h3>aptとapt-get</h3>
+        <p><code>apt</code>は、人が対話的に利用しやすい表示や既定値を持つコマンドです。スクリプトでは、動作の互換性を重視して<code>apt-get</code>や<code>apt-cache</code>などの専用コマンドが使われることがあります。</p>
+      </section>
+
+      <section id="sec-9">
+        <h2>リポジトリの設定</h2>
+
+        <h3>Debian系</h3>
+        <p>APTの主な取得元は、次のファイルで設定されます。</p>
+
+        <pre><code>/etc/apt/sources.list
+/etc/apt/sources.list.d/*.list
+/etc/apt/sources.list.d/*.sources</code></pre>
+
+        <p><code>.list</code>は一行形式、<code>.sources</code>はdeb822形式の設定に使われます。近年のDebian系環境では、<code>.sources</code>形式を利用する構成も増えています。</p>
+
+        <pre><code>apt policy
+apt-cache policy</code></pre>
+
+        <p>リポジトリ設定を変更した後は、通常、<code>apt update</code>でパッケージ一覧を取得し直します。</p>
+
+        <h3>RPM系</h3>
+        <p>DNFやYUMのリポジトリは、主に次の場所で設定されます。</p>
+
+        <pre><code>/etc/dnf/dnf.conf
+/etc/yum.conf
+/etc/yum.repos.d/*.repo</code></pre>
+
+        <p><code>.repo</code>ファイルには、リポジトリID、表示名、取得元、使用可否、GPG署名確認の設定などを記述します。</p>
+
+        <pre><code>dnf repolist
+dnf repolist --all
+dnf repoinfo</code></pre>
+
+        <p>一時的に特定のリポジトリだけを有効・無効にするオプションもあります。</p>
+
+        <pre><code>dnf --enablerepo=repo_id install package_name
+dnf --disablerepo=repo_id upgrade</code></pre>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>ポイント：</strong>パッケージが見つからないときは、名前の誤りだけでなく、対象リポジトリが設定・有効化され、メタデータが更新されているかを確認します。</p>
+        </aside>
+      </section>
+
+      <section id="sec-10">
+        <h2>署名・キャッシュ・トラブル対応</h2>
+
+        <h3>署名と信頼</h3>
+        <p>パッケージ管理システムは、パッケージやリポジトリメタデータの署名を確認し、信頼された鍵で作成されたものか、途中で改変されていないかを検証します。</p>
+        <p>署名確認を無効化するオプションは存在しますが、安全性を下げるため、原因を理解せず常用しません。鍵やリポジトリ設定の問題を確認します。</p>
+
+        <h3>キャッシュとメタデータ</h3>
+        <pre><code># Debian系
+sudo apt update
+sudo apt clean
+sudo apt autoclean
+
+# RPM系
+sudo dnf makecache
+sudo dnf clean all</code></pre>
+
+        <p><code>apt clean</code>は取得済みのパッケージファイルを削除します。<code>apt autoclean</code>は、現在取得できなくなった古いパッケージファイルなどを削除します。</p>
+        <p><code>dnf makecache</code>は、リポジトリのメタデータキャッシュを作成します。<code>dnf clean all</code>は、保存されたメタデータやパッケージキャッシュなどを削除します。</p>
+
+        <h3>よくある切り分け</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>症状</th>
+              <th>主な確認内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>パッケージが見つからない</td>
+              <td>パッケージ名、リポジトリ設定、有効状態、メタデータ更新</td>
+            </tr>
+            <tr>
+              <td>名前解決や接続で失敗する</td>
+              <td>DNS、プロキシ、時刻、証明書、リポジトリURL、ネットワーク疎通</td>
+            </tr>
+            <tr>
+              <td>依存関係エラー</td>
+              <td>混在したリポジトリ、保留パッケージ、途中で止まった処理、競合</td>
+            </tr>
+            <tr>
+              <td>dpkg処理が中断されている</td>
+              <td><code>sudo dpkg --configure -a</code>、その後のAPT修復処理</td>
+            </tr>
+            <tr>
+              <td>どのパッケージのファイルか知りたい</td>
+              <td><code>rpm -qf ファイル</code>、<code>dpkg -S ファイル</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>基本の確認コマンド</h3>
+        <pre><code># RPM系
+rpm -q package_name
+rpm -qa
+dnf repolist
+dnf info package_name
+dnf history
+
+# Debian系
+dpkg -s package_name
+dpkg -l
+apt-cache policy package_name
+apt list --upgradable</code></pre>
+
+        <p>詳しい使い方は、次のマニュアルでも確認できます。</p>
+        <pre><code>man rpm
+man dnf
+man yum
+man dpkg
+man dpkg-query
+man apt
+man apt-get
+man apt-cache
+man sources.list</code></pre>
+      </section>
+
+      <section id="sec-11">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>RPM系で、ローカルのRPMパッケージを直接扱う基本コマンドは何でしょうか。</li>
+          <li>Debian系で、ローカルのDebianパッケージを直接扱う基本コマンドは何でしょうか。</li>
+          <li><code>apt update</code>は、主に何を更新するコマンドでしょうか。</li>
+          <li><code>apt remove</code>と<code>apt purge</code>の主な違いは何でしょうか。</li>
+          <li>指定したファイルを所有するインストール済みパッケージを調べる、RPM系とDebian系のコマンドは何でしょうか。</li>
+          <li><code>rpm -U</code>と<code>rpm -F</code>の違いは何でしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li><code>rpm</code></li>
+            <li><code>dpkg</code></li>
+            <li>設定されたリポジトリから取得するパッケージ一覧・メタデータ</li>
+            <li><code>remove</code>は設定ファイルを一部残し、<code>purge</code>はパッケージ管理対象の設定ファイルも削除する</li>
+            <li>RPM系は<code>rpm -qf ファイル</code>、Debian系は<code>dpkg -S ファイル</code></li>
+            <li><code>-U</code>は未導入なら新規インストールも行い、<code>-F</code>は導入済みのパッケージだけを更新する</li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-12">
+        <h2>要約</h2>
+        <ul>
+          <li>パッケージには、ソフトウェア本体と名前、バージョン、依存関係などのメタデータが含まれます。</li>
+          <li>リポジトリは、パッケージ本体とパッケージ情報を配布する保管場所です。</li>
+          <li>RPM系の基本ツールは<code>rpm</code>、上位ツールは<code>yum</code>や<code>dnf</code>です。</li>
+          <li>Debian系の基本ツールは<code>dpkg</code>、上位ツールは<code>apt</code>です。</li>
+          <li><code>rpm</code>と<code>dpkg</code>は、ローカルパッケージやインストール済みデータベースを直接扱います。</li>
+          <li><code>apt</code>、<code>yum</code>、<code>dnf</code>は、リポジトリを使って依存関係を解決します。</li>
+          <li><code>apt update</code>はパッケージ一覧を更新し、<code>apt upgrade</code>はインストール済みパッケージを更新します。</li>
+          <li><code>remove</code>と<code>purge</code>、<code>rpm -U</code>と<code>rpm -F</code>の違いを区別します。</li>
+          <li>ファイルの所有パッケージは、RPM系では<code>rpm -qf</code>、Debian系では<code>dpkg -S</code>で確認できます。</li>
+          <li>トラブル時は、リポジトリ設定、メタデータ、依存関係、署名、ネットワークを順番に確認します。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://rpm.org/docs/6.0.x/man/rpm.8" target="_blank" rel="noopener noreferrer">RPM Project：rpm(8)</a></li>
+          <li><a href="https://rpm.org/" target="_blank" rel="noopener noreferrer">RPM Package Manager 公式サイト</a></li>
+          <li><a href="https://dnf.readthedocs.io/en/latest/command_ref.html" target="_blank" rel="noopener noreferrer">DNF Documentation：Command Reference</a></li>
+          <li><a href="https://dnf.readthedocs.io/en/latest/conf_ref.html" target="_blank" rel="noopener noreferrer">DNF Documentation：Configuration Reference</a></li>
+          <li><a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/managing_software_with_the_dnf_tool/assembly_yum-commands-list_managing-software-with-the-dnf-tool" target="_blank" rel="noopener noreferrer">Red Hat Enterprise Linux 9：DNF commands list</a></li>
+          <li><a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/considerations_in_adopting_rhel_8/software-management_considerations-in-adopting-rhel-8" target="_blank" rel="noopener noreferrer">Red Hat Enterprise Linux 8：Package management with YUM/DNF</a></li>
+          <li><a href="https://manpages.debian.org/trixie/dpkg/dpkg.1.en.html" target="_blank" rel="noopener noreferrer">Debian Manpages：dpkg(1)</a></li>
+          <li><a href="https://manpages.debian.org/trixie/apt/apt.8.en.html" target="_blank" rel="noopener noreferrer">Debian Manpages：apt(8)</a></li>
+          <li><a href="https://manpages.debian.org/trixie/apt/apt-get.8.en.html" target="_blank" rel="noopener noreferrer">Debian Manpages：apt-get(8)</a></li>
+          <li><a href="https://manpages.debian.org/trixie/apt/apt-cache.8.en.html" target="_blank" rel="noopener noreferrer">Debian Manpages：apt-cache(8)</a></li>
+          <li><a href="https://manpages.debian.org/trixie/apt/sources.list.5.en.html" target="_blank" rel="noopener noreferrer">Debian Manpages：sources.list(5)</a></li>
+          <li><a href="https://www.debian.org/doc/manuals/debian-reference/ch02.en.html" target="_blank" rel="noopener noreferrer">Debian Reference：Debian package management</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

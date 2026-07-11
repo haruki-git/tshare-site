@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LPIC Level1 復習ラジオ 15：ディスク管理</title>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<main class="container">
+<article class="card">
+<header>
+<h1>LPIC Level1 復習ラジオ 15：ディスク管理</h1>
+<nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+<p class="meta">投稿日：2026-07-11</p>
+</header>
+<section class="card" style="margin-top:12px;">
+<h2 style="margin:0 0 8px 0;">音声</h2>
+<audio controls preload="none" src="/posts/Linux/audio/15_disk_management_tts.mp3"></audio>
+<p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+</section>
+<section id="sec-toc">
+<h2>目次</h2>
+<ol><li><a href="#sec-1">ディスク管理コマンドの使い分け</a></li>
+<li><a href="#sec-2">df</a></li>
+<li><a href="#sec-3">du</a></li>
+<li><a href="#sec-4">dfとduの結果が違う理由</a></li>
+<li><a href="#sec-5">lsblk</a></li>
+<li><a href="#sec-6">blkid</a></li>
+<li><a href="#sec-7">mountの基本</a></li>
+<li><a href="#sec-8">マウントオプションとfstab</a></li>
+<li><a href="#sec-9">umount</a></li>
+<li><a href="#sec-10">確認からマウント解除までの実践手順</a></li>
+<li><a href="#sec-11">30秒チェック</a></li>
+<li><a href="#sec-12">要約</a></li></ol>
+</section>
+<section id="sec-1"><h2>ディスク管理コマンドの使い分け</h2>
+<p>ディスク容量、ファイルサイズ、デバイス構成、マウント状態は、似ているようで確認対象が異なります。</p>
+<table>
+<thead><tr><th>コマンド</th><th>主な確認対象</th><th>代表的な用途</th></tr></thead>
+<tbody>
+<tr><td><code>df</code></td><td>マウント済みファイルシステム</td><td>使用量、空き容量、使用率、inode使用状況</td></tr>
+<tr><td><code>du</code></td><td>ファイルやディレクトリ</td><td>どの場所が容量を使っているか調べる</td></tr>
+<tr><td><code>lsblk</code></td><td>ブロックデバイス</td><td>ディスク、パーティション、LVM、マウント先の構成</td></tr>
+<tr><td><code>blkid</code></td><td>デバイス上の識別情報</td><td>UUID、LABEL、ファイルシステムタイプ</td></tr>
+<tr><td><code>mount</code></td><td>ファイルシステムとディレクトリの接続</td><td>ファイルシステムをディレクトリツリーへ組み込む</td></tr>
+<tr><td><code>umount</code></td><td>マウント済みファイルシステム</td><td>ディレクトリツリーから安全に切り離す</td></tr>
+</tbody>
+</table>
+<p>特に混同しやすいのは、<code>df</code>、<code>du</code>、<code>lsblk</code>です。</p>
+<ul>
+<li><code>df</code>：ファイルシステム全体の使用状況</li>
+<li><code>du</code>：指定したファイルやディレクトリの使用量</li>
+<li><code>lsblk</code>：未マウント領域も含むブロックデバイス構成</li>
+</ul>
+<pre><code>df -h
+du -sh /var/log
+lsblk -f</code></pre>
+<aside class="card" style="margin-top:12px;"><p style="margin:0;"><strong>今回の目標：</strong>容量不足では<code>df</code>から<code>du</code>へ、デバイス確認では<code>lsblk</code>から<code>blkid</code>へ進み、対象を確認してから<code>mount</code>・<code>umount</code>を実行できるようにします。</p></aside>
+</section>
+<section id="sec-2"><h2>df</h2>
+<p><code>df</code>は、マウント済みファイルシステムについて、使用済み容量と利用可能容量を表示します。</p>
+<pre><code>df [オプション] [ファイル...]</code></pre>
+<p>引数を指定しない場合はファイルシステムを一覧表示します。ファイルやディレクトリを指定した場合は、そのパスが属するファイルシステムを表示します。</p>
+<h3>基本表示</h3>
+<pre><code>df
+df /var/log
+df /home</code></pre>
+<p><code>df /var/log</code>は、ログディレクトリ自体の容量ではなく、そのディレクトリを収容するファイルシステム全体の容量を表示します。</p>
+<h3>読みやすい単位とタイプ</h3>
+<pre><code>df -h
+df -H
+df -hT</code></pre>
+<table>
+<thead><tr><th>オプション</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td><code>-h</code></td><td>1024の累乗を基準にK、M、Gなどで表示する</td></tr>
+<tr><td><code>-H</code></td><td>1000の累乗を基準にk、M、Gなどで表示する</td></tr>
+<tr><td><code>-T</code></td><td>ext4、XFS、tmpfsなどのファイルシステムタイプを表示する</td></tr>
+</tbody>
+</table>
+<h3>inode使用状況</h3>
+<pre><code>df -i
+df -ih</code></pre>
+<p><code>-i</code>は、ブロック容量ではなくinodeの総数、使用数、空き数、使用率を表示します。小さなファイルが大量に作成されると、容量が残っていてもinodeを使い切り、新しいファイルを作れない場合があります。</p>
+<h3>タイプの絞り込みと合計</h3>
+<pre><code>df -t ext4
+df -x tmpfs -x devtmpfs
+df -h --total</code></pre>
+<ul>
+<li><code>-t タイプ</code>：指定タイプだけを表示する</li>
+<li><code>-x タイプ</code>：指定タイプを除外する</li>
+<li><code>--total</code>：表示対象の合計行を追加する</li>
+</ul>
+<h3>必要な列を指定する</h3>
+<pre><code>df -h --output=source,fstype,size,used,avail,pcent,target</code></pre>
+<p>GNU <code>df</code>の<code>--output</code>では、必要な列を明示できます。代表的な列は、ソース、全体容量、使用済み容量、利用可能容量、使用率、マウントポイントです。</p>
+<p><code>Size</code>から<code>Used</code>を引いた値と<code>Avail</code>が一致しない場合があります。ファイルシステムの予約領域や管理用領域などが関係します。</p>
+</section>
+<section id="sec-3"><h2>du</h2>
+<p><code>du</code>は、指定したファイルやディレクトリが使用しているディスク領域を見積もります。</p>
+<pre><code>du [オプション] [ファイル...]</code></pre>
+<p>引数を省略すると、現在のディレクトリを対象にします。</p>
+<h3>合計を表示する</h3>
+<pre><code>du -s /var/log
+du -sh /var/log</code></pre>
+<ul>
+<li><code>-s</code>：指定した対象ごとの合計だけを表示する</li>
+<li><code>-h</code>：人が読みやすい単位で表示する</li>
+</ul>
+<p><code>du -sh</code>は、ディレクトリ容量を簡潔に確認する代表的な組み合わせです。</p>
+<h3>段階的に絞り込む</h3>
+<pre><code>du -h --max-depth=1 /var
+du -h -d 1 /var
+du -h -d 1 /var | sort -h</code></pre>
+<p><code>--max-depth=1</code>またはGNU版の<code>-d 1</code>は、指定した深さまで表示します。大きなディレクトリを見つけたら、その中を同じ方法で調べます。</p>
+<h3>ファイルや総合計も表示する</h3>
+<pre><code>du -ah /var/log
+du -ah /var/log | sort -h | tail
+du -ch file1 file2 directory/</code></pre>
+<ul>
+<li><code>-a</code>：ディレクトリだけでなくファイルも表示する</li>
+<li><code>-c</code>：各対象に加えて総合計を表示する</li>
+</ul>
+<h3>同じファイルシステム内だけを調べる</h3>
+<pre><code>sudo du -x -h -d 1 /</code></pre>
+<p><code>-x</code>、<code>--one-file-system</code>は、別のファイルシステムへ移動しません。ルート以下を調べるときに、別マウントの<code>/proc</code>、<code>/sys</code>、外付けディスクなどへまたがるのを避けられます。</p>
+<h3>実使用量と見かけのサイズ</h3>
+<pre><code>du -h file.img
+du -h --apparent-size file.img
+ls -lh file.img</code></pre>
+<p>通常の<code>du</code>は、ファイルが実際に使用するディスクブロックを基準にします。<code>--apparent-size</code>は、ファイル内容として見える論理的なサイズを表示します。スパースファイルなどでは、両者が大きく異なる場合があります。</p>
+<h3>シンボリックリンクと権限</h3>
+<pre><code>du -h link
+du -h -L link
+sudo du -x -h -d 1 /</code></pre>
+<p>標準ではシンボリックリンクのリンク先をたどりません。<code>-L</code>を付けるとたどりますが、意図しない大規模な探索や循環に注意します。読み取り権限がない場所では正確な合計を得られない場合があります。</p>
+</section>
+<section id="sec-4"><h2>dfとduの結果が違う理由</h2>
+<p><code>df</code>と<code>du</code>は、容量を別の方法で調べるため、値が一致しないことがあります。</p>
+<table>
+<thead><tr><th>コマンド</th><th>確認方法</th></tr></thead>
+<tbody>
+<tr><td><code>df</code></td><td>ファイルシステムが管理する使用済みブロックと空きブロックを確認する</td></tr>
+<tr><td><code>du</code></td><td>ディレクトリツリーをたどり、見つかったファイルの使用量を合計する</td></tr>
+</tbody>
+</table>
+<h3>削除済みだが開かれているファイル</h3>
+<p>プロセスがファイルを開いたままファイル名だけが削除された場合、<code>du</code>では見つけられません。しかし、プロセスが閉じるまでブロックは解放されないため、<code>df</code>では使用済みのままです。</p>
+<pre><code>sudo lsof +L1</code></pre>
+<p>対象プロセスを確認し、サービスの再起動や適切なログ再オープンなどを検討します。</p>
+<h3>そのほかの原因</h3>
+<ul>
+<li>管理者用の予約ブロック、ジャーナル、メタデータ</li>
+<li>論理サイズと実使用量が異なるスパースファイル</li>
+<li>圧縮や重複排除を行うファイルシステム</li>
+<li>マウントポイントの下に隠れた元のファイル</li>
+</ul>
+<pre><code>ls -lh sparse.img
+du -h sparse.img
+du -h --apparent-size sparse.img</code></pre>
+<h3>容量不足の基本順序</h3>
+<pre><code>df -hT
+df -ih
+sudo du -x -h -d 1 / | sort -h
+sudo lsof +L1</code></pre>
+<ol>
+<li><code>df -hT</code>で不足しているファイルシステムを特定する</li>
+<li><code>df -i</code>でinode不足も確認する</li>
+<li><code>du -x</code>で同じファイルシステム内を段階的に絞り込む</li>
+<li>差が大きい場合は削除済みの開いたファイルなどを調べる</li>
+</ol>
+</section>
+<section id="sec-5"><h2>lsblk</h2>
+<p><code>lsblk</code>は、利用可能なブロックデバイスの情報を表示します。標準では、ディスクとパーティションなどの関係をツリー形式で表示します。</p>
+<pre><code>lsblk [オプション] [デバイス...]</code></pre>
+<h3>基本表示と主な列</h3>
+<pre><code>lsblk</code></pre>
+<table>
+<thead><tr><th>列</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td><code>NAME</code></td><td>デバイス名</td></tr>
+<tr><td><code>SIZE</code></td><td>デバイス容量</td></tr>
+<tr><td><code>RM</code></td><td>リムーバブルデバイスか</td></tr>
+<tr><td><code>RO</code></td><td>読み取り専用か</td></tr>
+<tr><td><code>TYPE</code></td><td>disk、part、lvm、romなどの種類</td></tr>
+<tr><td><code>MOUNTPOINTS</code></td><td>関連付けられたマウントポイント</td></tr>
+</tbody>
+</table>
+<h3>ファイルシステム情報</h3>
+<pre><code>lsblk -f</code></pre>
+<p><code>-f</code>は、ファイルシステムタイプ、LABEL、UUID、空き容量、使用率、マウントポイントなどを表示します。</p>
+<h3>必要な列とフルパス</h3>
+<pre><code>lsblk -o NAME,PATH,SIZE,TYPE,FSTYPE,LABEL,UUID,MOUNTPOINTS
+lsblk -p</code></pre>
+<p><code>-o</code>は表示列を明示し、<code>-p</code>は<code>/dev/sdb1</code>のような完全なデバイスパスを表示します。既定出力はバージョンによって変わる可能性があるため、スクリプトでは列を指定します。</p>
+<h3>ディスク本体、バイト、JSON</h3>
+<pre><code>lsblk -d -o NAME,MODEL,SERIAL,SIZE,ROTA,TRAN
+lsblk -b -o NAME,SIZE
+lsblk -J -o NAME,TYPE,SIZE,FSTYPE,UUID,MOUNTPOINTS</code></pre>
+<ul>
+<li><code>-d</code>：パーティションなどの子デバイスを表示しない</li>
+<li><code>-b</code>：サイズをバイト単位で表示する</li>
+<li><code>-J</code>：JSON形式で表示する</li>
+</ul>
+<h3>dfとの違い</h3>
+<p><code>df</code>は主にマウント済みファイルシステムを表示します。<code>lsblk</code>は、未マウントのパーティションやディスク本体も表示できます。</p>
+</section>
+<section id="sec-6"><h2>blkid</h2>
+<p><code>blkid</code>は、ブロックデバイスの内容を調べ、ファイルシステムタイプ、UUID、LABELなどの属性を表示します。</p>
+<pre><code>blkid [オプション] [デバイス...]</code></pre>
+<h3>一覧と指定デバイス</h3>
+<pre><code>sudo blkid
+sudo blkid /dev/sdb1</code></pre>
+<p>環境や権限によっては、一般利用者ではキャッシュにある情報だけが表示され、すべてのデバイスを直接調査できない場合があります。</p>
+<h3>項目や値だけを表示する</h3>
+<pre><code>sudo blkid -s UUID /dev/sdb1
+sudo blkid -s TYPE /dev/sdb1
+sudo blkid -s UUID -o value /dev/sdb1</code></pre>
+<p><code>-s</code>は表示するタグを指定し、<code>-o value</code>は値だけを表示します。</p>
+<h3>LABELやUUIDから探す</h3>
+<pre><code>blkid -L DATA
+blkid -U 12345678-1234-1234-1234-123456789abc</code></pre>
+<ul>
+<li><code>-L ラベル</code>：LABELに対応するデバイス名を表示する</li>
+<li><code>-U UUID</code>：UUIDに対応するデバイス名を表示する</li>
+</ul>
+<h3>低レベルの調査</h3>
+<pre><code>sudo blkid -p /dev/sdb1</code></pre>
+<p><code>-p</code>は、指定デバイスを低レベルのプローブモードで調べます。通常の一覧確認では<code>lsblk -f</code>、指定デバイスの詳細確認では<code>blkid</code>という流れが分かりやすいです。</p>
+<h3>UUIDを使う理由</h3>
+<p><code>/dev/sdb1</code>などのデバイス名は、接続順序や構成変更により変化する可能性があります。そのため、<code>/etc/fstab</code>ではUUIDやLABELを使う方法が一般的です。</p>
+<pre><code>UUID=12345678-1234-1234-1234-123456789abc /data ext4 defaults 0 2</code></pre>
+<p>ディスク複製などでUUIDが重複する場合もあるため、システム内の識別子を確認します。</p>
+</section>
+<section id="sec-7"><h2>mountの基本</h2>
+<p><code>mount</code>は、デバイスなどにあるファイルシステムを、指定したディレクトリへ接続します。この接続先をマウントポイントと呼びます。</p>
+<pre><code>mount [オプション] ソース マウントポイント</code></pre>
+<h3>基本操作</h3>
+<pre><code>sudo mkdir -p /mnt/data
+sudo mount /dev/sdb1 /mnt/data
+sudo mount -t ext4 /dev/sdb1 /mnt/data</code></pre>
+<p><code>-t</code>はファイルシステムタイプを指定します。多くの場合は自動判定されます。標準では管理者権限が必要です。</p>
+<h3>UUIDやLABELで指定する</h3>
+<pre><code>sudo mount UUID=12345678-1234-1234-1234-123456789abc /mnt/data
+sudo mount LABEL=DATA /mnt/data</code></pre>
+<h3>状態を確認する</h3>
+<pre><code>findmnt /mnt/data
+findmnt -S /dev/sdb1
+df -hT /mnt/data
+lsblk -f</code></pre>
+<p>引数なしの<code>mount</code>でも一覧表示できますが、柔軟で機械処理しやすい確認には<code>findmnt</code>が適しています。</p>
+<h3>マウントポイントに元からある内容</h3>
+<p>マウントポイントに元からファイルがある場合、マウント中は通常のパスから見えなくなり、代わりにマウントしたファイルシステムの内容が見えます。元のファイルが削除されたわけではなく、アンマウントすると再び見えます。</p>
+<h3>ループマウントとbindマウント</h3>
+<pre><code>sudo mkdir -p /mnt/iso
+sudo mount -o loop,ro image.iso /mnt/iso
+
+sudo mkdir -p /mnt/shared
+sudo mount --bind /srv/data /mnt/shared</code></pre>
+<p><code>loop</code>は通常ファイルをブロックデバイスのように扱います。bindマウントは既存のディレクトリツリーを別のパスからも見えるようにする処理で、データをコピーするものではありません。</p>
+</section>
+<section id="sec-8"><h2>マウントオプションとfstab</h2>
+<h3>主なマウントオプション</h3>
+<table>
+<thead><tr><th>オプション</th><th>主な意味</th></tr></thead>
+<tbody>
+<tr><td><code>ro</code></td><td>読み取り専用でマウントする</td></tr>
+<tr><td><code>rw</code></td><td>読み書き可能でマウントする</td></tr>
+<tr><td><code>remount</code></td><td>マウント済みファイルシステムのオプションを変更する</td></tr>
+<tr><td><code>noexec</code></td><td>そのマウント上のバイナリを直接実行しないようにする</td></tr>
+<tr><td><code>nosuid</code></td><td>SUID・SGIDビットの効果を無効にする</td></tr>
+<tr><td><code>nodev</code></td><td>デバイスファイルをデバイスとして解釈しない</td></tr>
+<tr><td><code>noatime</code></td><td>ファイルアクセス時刻を更新しない</td></tr>
+<tr><td><code>defaults</code></td><td>一般的な既定オプション群を指定する</td></tr>
+</tbody>
+</table>
+<pre><code>sudo mount -o ro /dev/sdb1 /mnt/data
+sudo mount -o rw,nodev,nosuid /dev/sdb1 /mnt/data
+sudo mount -o remount,ro /mnt/data</code></pre>
+<p><code>-o</code>の後ろへ、カンマ区切りで複数のオプションを指定します。利用可能なオプションはファイルシステムによっても異なります。</p>
+<h3>/etc/fstab</h3>
+<p><code>/etc/fstab</code>は、通常マウントするファイルシステムのソース、マウントポイント、タイプ、オプションなどを記述するファイルです。</p>
+<pre><code>UUID=12345678-1234-1234-1234-123456789abc /data ext4 defaults 0 2</code></pre>
+<table>
+<thead><tr><th>フィールド</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>デバイス、UUID、LABELなどのソース</td></tr>
+<tr><td>2</td><td>マウントポイント</td></tr>
+<tr><td>3</td><td>ファイルシステムタイプ</td></tr>
+<tr><td>4</td><td>マウントオプション</td></tr>
+<tr><td>5</td><td><code>dump</code>で使用する値</td></tr>
+<tr><td>6</td><td>起動時のファイルシステム検査順序</td></tr>
+</tbody>
+</table>
+<h3>fstabを使ったマウント</h3>
+<pre><code>sudo mount /data
+sudo mount -a
+findmnt --verify</code></pre>
+<p>ソースまたはマウントポイントだけを指定すると、<code>mount</code>はfstabから対応設定を探せます。<code>mount -a</code>は通常、<code>noauto</code>がない対象をまとめてマウントします。</p>
+<p>fstab編集後は、再起動前に構文と実際のマウントを確認します。systemd環境では必要に応じて次も実行します。</p>
+<pre><code>sudo systemctl daemon-reload</code></pre>
+</section>
+<section id="sec-9"><h2>umount</h2>
+<p><code>umount</code>は、マウントされたファイルシステムをディレクトリツリーから切り離します。コマンド名は<code>unmount</code>ではなく<code>umount</code>です。</p>
+<pre><code>umount [オプション] 対象</code></pre>
+<h3>基本操作</h3>
+<pre><code>sudo umount /mnt/data
+sudo umount /dev/sdb1</code></pre>
+<p>同じファイルシステムが複数箇所へマウントされている可能性もあるため、<code>findmnt</code>などで対応関係を確認します。</p>
+<h3>複数対象と再帰解除</h3>
+<pre><code>sudo umount -a -t nfs,nfs4
+sudo umount -R /mnt/tree</code></pre>
+<p><code>-a</code>は複数の対象をまとめて解除し、<code>-t</code>はタイプを絞ります。<code>-R</code>は指定マウントの下にある入れ子のマウントも再帰的に解除します。</p>
+<h3>target is busy</h3>
+<p>対象が使用中の場合、通常はアンマウントできません。</p>
+<pre><code>umount: /mnt/data: target is busy.</code></pre>
+<p>主な原因は、シェルのカレントディレクトリが対象内にある、プロセスがファイルを開いている、対象以下に別のファイルシステムがある、サービスが利用していることです。</p>
+<pre><code>cd /
+findmnt -R /mnt/data
+sudo lsof +f -- /mnt/data
+sudo fuser -vm /mnt/data</code></pre>
+<p>利用中のプロセスを確認し、正常な方法で停止してから再実行します。</p>
+<h3>遅延解除と強制解除</h3>
+<pre><code>sudo umount -l /mnt/data
+sudo umount -f /mnt/nfs</code></pre>
+<p><code>-l</code>は遅延アンマウントです。<code>-f</code>は主に到達不能なNFSなどで使う強制アンマウントで、データ損失や不整合の危険があります。通常の解除ができない原因を調べずに多用しません。</p>
+<h3>取り外し前の確認</h3>
+<pre><code>sudo umount /mnt/data
+findmnt /mnt/data
+lsblk -f</code></pre>
+<p>USBメモリなどを物理的に取り外す前に、アンマウントが完了したことを確認します。</p>
+</section>
+<section id="sec-10"><h2>確認からマウント解除までの実践手順</h2>
+<h3>1. デバイス構成を確認する</h3>
+<pre><code>lsblk -o NAME,PATH,SIZE,TYPE,FSTYPE,LABEL,UUID,MOUNTPOINTS</code></pre>
+<p>デバイス名だけでなく、サイズ、タイプ、LABEL、UUID、現在のマウント先を照合します。</p>
+<h3>2. 識別情報を確認する</h3>
+<pre><code>sudo blkid /dev/sdb1</code></pre>
+<h3>3. マウントポイントを準備する</h3>
+<pre><code>sudo mkdir -p /mnt/data
+ls -la /mnt/data</code></pre>
+<p>中身のあるディレクトリへマウントすると、元の内容が一時的に見えなくなるため、事前に確認します。</p>
+<h3>4. 読み取り専用で確認する</h3>
+<pre><code>sudo mount -o ro /dev/sdb1 /mnt/data
+findmnt /mnt/data
+ls -la /mnt/data</code></pre>
+<p>内容が不明な外部メディアは、最初に読み取り専用で確認すると誤書き込みの危険を減らせます。</p>
+<h3>5. 容量を確認する</h3>
+<pre><code>df -hT /mnt/data
+df -i /mnt/data
+du -sh /mnt/data</code></pre>
+<h3>6. 利用を終了して解除する</h3>
+<pre><code>cd /
+sudo lsof +f -- /mnt/data
+sudo umount /mnt/data
+findmnt /mnt/data
+lsblk -f</code></pre>
+<h3>容量不足の切り分け例</h3>
+<pre><code>df -hT
+df -ih
+sudo du -x -h -d 1 /var | sort -h
+sudo du -x -h -d 1 /var/log | sort -h
+sudo lsof +L1</code></pre>
+<h3>よくある間違い</h3>
+<table>
+<thead><tr><th>間違いやすい点</th><th>確認すること</th></tr></thead>
+<tbody>
+<tr><td><code>df /var/log</code>をログディレクトリのサイズだと思う</td><td><code>df</code>は所属するファイルシステム全体を表示する</td></tr>
+<tr><td><code>du</code>で空き容量を確認する</td><td>空き容量は<code>df</code>、ファイル使用量は<code>du</code></td></tr>
+<tr><td>容量が残っていればファイルを作れると思う</td><td><code>df -i</code>でinode不足も確認する</td></tr>
+<tr><td><code>lsblk</code>と<code>df</code>の表示差を異常と考える</td><td><code>lsblk</code>は未マウント領域も表示する</td></tr>
+<tr><td><code>/dev/sdb1</code>が常に同じだと思う</td><td>永続設定ではUUIDやLABELを検討する</td></tr>
+<tr><td>中身のあるディレクトリへマウントする</td><td>元の内容がマウント中は見えなくなる</td></tr>
+<tr><td><code>umount</code>を<code>unmount</code>と入力する</td><td>コマンド名は<code>umount</code></td></tr>
+<tr><td><code>target is busy</code>で直ちに<code>-f</code>を使う</td><td>カレントディレクトリ、開いたファイル、入れ子のマウントを調べる</td></tr>
+<tr><td>fstab編集後にすぐ再起動する</td><td><code>mount -a</code>や<code>findmnt --verify</code>で事前確認する</td></tr>
+<tr><td>USBメモリを解除せず取り外す</td><td><code>umount</code>後に解除状態を確認する</td></tr>
+</tbody>
+</table>
+<h3>manページとinfo</h3>
+<pre><code>man df
+man du
+man lsblk
+man blkid
+man mount
+man umount
+man fstab
+
+info coreutils 'df invocation'
+info coreutils 'du invocation'</code></pre>
+</section>
+<section id="sec-11"><h2>30秒チェック</h2>
+<ol>
+<li><code>df</code>、<code>du</code>、<code>lsblk</code>は、それぞれ何を確認するコマンドでしょうか。</li>
+<li><code>df -h</code>と<code>df -i</code>は、何を表示するでしょうか。</li>
+<li><code>du -sh /var/log</code>の<code>-s</code>と<code>-h</code>は何を意味するでしょうか。</li>
+<li><code>du -x</code>は、探索範囲をどのように制限するでしょうか。</li>
+<li><code>lsblk -f</code>では、どのような情報を確認できるでしょうか。</li>
+<li><code>blkid -s UUID -o value /dev/sdb1</code>は何を表示するでしょうか。</li>
+<li><code>mount</code>で接続先となるディレクトリを何と呼ぶでしょうか。</li>
+<li><code>mount -o ro</code>と<code>mount -o remount,ro</code>の用途は何でしょうか。</li>
+<li><code>umount</code>で<code>target is busy</code>となる原因を一つ答えてください。</li>
+<li>永続設定でデバイス名よりUUIDがよく使われる理由は何でしょうか。</li>
+</ol>
+<details>
+<summary>答えを表示</summary>
+<ol>
+<li><code>df</code>はファイルシステム容量、<code>du</code>はファイルやディレクトリの使用量、<code>lsblk</code>はブロックデバイス構成</li>
+<li><code>-h</code>は読みやすい容量、<code>-i</code>はinode使用状況</li>
+<li><code>-s</code>は合計のみ、<code>-h</code>は読みやすい単位</li>
+<li>別のファイルシステムへ移動せず、同じファイルシステム内だけを調べる</li>
+<li>ファイルシステムタイプ、LABEL、UUID、空き容量、使用率、マウントポイントなど</li>
+<li><code>/dev/sdb1</code>のUUIDの値だけ</li>
+<li>マウントポイント</li>
+<li><code>ro</code>は読み取り専用でマウントし、<code>remount,ro</code>はマウント済み対象を読み取り専用へ再マウントする</li>
+<li>カレントディレクトリが対象内、ファイルが開かれている、下位に別マウントがあるなど</li>
+<li><code>/dev/sdb1</code>などの名前は接続順や構成変更で変わる可能性があるため</li>
+</ol>
+</details>
+</section>
+<section id="sec-12"><h2>要約</h2>
+<ul>
+<li><code>df</code>はマウント済みファイルシステムの使用量と空き容量を表示します。</li>
+<li><code>df -h</code>は読みやすい容量、<code>df -T</code>はタイプ、<code>df -i</code>はinode使用状況です。</li>
+<li><code>du</code>はファイルやディレクトリが使用するディスク領域を調べます。</li>
+<li><code>du -sh</code>は合計を簡潔に表示し、<code>du -x</code>は同じファイルシステム内だけを探索します。</li>
+<li><code>df</code>と<code>du</code>の差には、削除済みだが開かれたファイル、予約領域、スパースファイルなどが関係します。</li>
+<li><code>lsblk</code>は、未マウント領域を含むブロックデバイス構成を表示します。</li>
+<li><code>lsblk -f</code>は、タイプ、LABEL、UUID、マウントポイントなどを表示します。</li>
+<li><code>blkid</code>は、指定デバイスのUUID、LABEL、ファイルシステムタイプなどを調べます。</li>
+<li><code>mount</code>はファイルシステムをマウントポイントへ接続し、<code>umount</code>は切り離します。</li>
+<li>マウントポイントに元からある内容は、マウント中は通常のパスから見えなくなります。</li>
+<li><code>/etc/fstab</code>では、変化しやすいデバイス名よりUUIDやLABELがよく使われます。</li>
+<li><code>target is busy</code>では、強制解除の前に、カレントディレクトリ、開いたファイル、入れ子のマウントを確認します。</li>
+</ul>
+</section>
+
+<section id="sec-sources">
+<h2>参考資料</h2>
+<ul>
+<li><a href="https://www.gnu.org/software/coreutils/manual/html_node/df-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：df invocation</a></li>
+<li><a href="https://www.gnu.org/software/coreutils/manual/html_node/du-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：du invocation</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/df.1.html" target="_blank" rel="noopener noreferrer">df(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/du.1.html" target="_blank" rel="noopener noreferrer">du(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/lsblk.8.html" target="_blank" rel="noopener noreferrer">lsblk(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/blkid.8.html" target="_blank" rel="noopener noreferrer">blkid(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/mount.8.html" target="_blank" rel="noopener noreferrer">mount(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/umount.8.html" target="_blank" rel="noopener noreferrer">umount(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man5/fstab.5.html" target="_blank" rel="noopener noreferrer">fstab(5) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/findmnt.8.html" target="_blank" rel="noopener noreferrer">findmnt(8) — Linux manual page</a></li>
+<li><a href="https://www.kernel.org/pub/linux/utils/util-linux/" target="_blank" rel="noopener noreferrer">util-linux Project Archive</a></li>
+</ul>
+</section>
+
+</article>
+</main>
+</body>
+</html>

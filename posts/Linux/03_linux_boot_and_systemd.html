@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 03：Linuxの起動とsystemd</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 03：Linuxの起動とsystemd</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/03_linux_boot_and_systemd_audio.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">カーネルの次に起動するもの</a></li>
+          <li><a href="#sec-2">initとsystemd</a></li>
+          <li><a href="#sec-3">unitとは</a></li>
+          <li><a href="#sec-4">targetとは</a></li>
+          <li><a href="#sec-5">systemctlによるサービス管理</a></li>
+          <li><a href="#sec-6">startとenableの違い</a></li>
+          <li><a href="#sec-7">journalとjournalctl</a></li>
+          <li><a href="#sec-8">起動状態を確認する流れ</a></li>
+          <li><a href="#sec-9">30秒チェック</a></li>
+          <li><a href="#sec-10">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>カーネルの次に起動するもの</h2>
+        <p>ブートローダーによってLinuxカーネルが読み込まれると、カーネルはCPU、メモリ、デバイスなどを初期化します。</p>
+        <p>その後、カーネルはユーザー空間で最初に動くプロセスを起動します。この最初のプロセスには、通常<strong>PID 1</strong>が割り当てられます。</p>
+        <p>PIDは、Process IDの略です。Linuxが各プロセスを識別するために使用する番号です。</p>
+        <p>現在の多くのLinuxディストリビューションでは、PID 1として<code>systemd</code>が起動します。</p>
+
+        <div class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>ブートローダー → Linuxカーネル → PID 1のプロセス → 各種サービス</strong></p>
+        </div>
+      </section>
+
+      <section id="sec-2">
+        <h2>initとsystemd</h2>
+
+        <h3>initとは</h3>
+        <p>initは、initializationに由来する名前です。LinuxやUnix系OSで、システムの初期化を担当する仕組みや、最初に起動するプロセスを指す言葉として使われます。</p>
+        <p>従来はSysVinitなどが広く利用され、起動時にシェルスクリプトを一定の順序で実行してサービスを開始していました。</p>
+
+        <h3>systemdとは</h3>
+        <p>systemdは、Linux向けのシステムおよびサービスマネージャーです。</p>
+        <p>PID 1として動作する場合はinitシステムとして働き、ユーザー空間のサービスを起動し、その状態を管理します。</p>
+        <p>systemdは、サービスだけでなく、ソケット、マウント、タイマー、デバイス、起動目標などを<strong>unit</strong>という共通の単位で管理します。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>覚え方：</strong>initはシステム初期化の役割を表す言葉、systemdは現在広く使われる具体的な実装です。</p>
+        </aside>
+      </section>
+
+      <section id="sec-3">
+        <h2>unitとは</h2>
+        <p>systemdが管理する対象をunitと呼びます。</p>
+        <p>unitの設定ファイルには、対象の種類に応じた拡張子が付きます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>unitの種類</th>
+              <th>主な役割</th>
+              <th>例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.service</code></td>
+              <td>サービスやデーモンを管理する</td>
+              <td><code>sshd.service</code></td>
+            </tr>
+            <tr>
+              <td><code>.target</code></td>
+              <td>複数のunitをまとめ、起動目標を表す</td>
+              <td><code>multi-user.target</code></td>
+            </tr>
+            <tr>
+              <td><code>.socket</code></td>
+              <td>通信ソケットを管理する</td>
+              <td><code>cups.socket</code></td>
+            </tr>
+            <tr>
+              <td><code>.mount</code></td>
+              <td>ファイルシステムのマウントを管理する</td>
+              <td><code>home.mount</code></td>
+            </tr>
+            <tr>
+              <td><code>.timer</code></td>
+              <td>決められた時刻や間隔で処理を起動する</td>
+              <td><code>example.timer</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>サービスはsystemdが管理する対象の一つであり、すべてのunitがサービスというわけではありません。</p>
+      </section>
+
+      <section id="sec-4">
+        <h2>targetとは</h2>
+        <p>targetは、複数のunitをひとまとめにし、システムの起動状態や到達目標を表すunitです。</p>
+        <p>従来のSysVinitで使用されていたランレベルに近い役割を持ちますが、完全に同じ仕組みではありません。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>target</th>
+              <th>概要</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>rescue.target</code></td>
+              <td>保守作業向けの限定的な状態</td>
+            </tr>
+            <tr>
+              <td><code>multi-user.target</code></td>
+              <td>複数ユーザーが利用できる、主に文字ベースの状態</td>
+            </tr>
+            <tr>
+              <td><code>graphical.target</code></td>
+              <td>GUIを含む通常の利用状態</td>
+            </tr>
+            <tr>
+              <td><code>reboot.target</code></td>
+              <td>再起動を行うための目標</td>
+            </tr>
+            <tr>
+              <td><code>poweroff.target</code></td>
+              <td>電源停止を行うための目標</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>既定のtargetを確認する</h3>
+        <pre><code>systemctl get-default</code></pre>
+
+        <h3>既定のtargetを変更する</h3>
+        <pre><code>sudo systemctl set-default multi-user.target</code></pre>
+
+        <p><code>get-default</code>は既定の起動targetを表示し、<code>set-default</code>は次回以降の起動で使用する既定targetを設定します。</p>
+      </section>
+
+      <section id="sec-5">
+        <h2>systemctlによるサービス管理</h2>
+        <p><code>systemctl</code>は、systemdの状態を確認し、systemdが管理するunitを操作するコマンドです。</p>
+        <p>基本構文は次のとおりです。</p>
+
+        <pre><code>systemctl コマンド unit名</code></pre>
+
+        <p>例として、SSHサーバーのunit名を<code>sshd.service</code>とします。ディストリビューションによっては<code>ssh.service</code>など、名前が異なる場合があります。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>操作</th>
+              <th>コマンド例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>状態を確認する</td>
+              <td><code>systemctl status sshd.service</code></td>
+            </tr>
+            <tr>
+              <td>起動する</td>
+              <td><code>sudo systemctl start sshd.service</code></td>
+            </tr>
+            <tr>
+              <td>停止する</td>
+              <td><code>sudo systemctl stop sshd.service</code></td>
+            </tr>
+            <tr>
+              <td>再起動する</td>
+              <td><code>sudo systemctl restart sshd.service</code></td>
+            </tr>
+            <tr>
+              <td>設定を再読み込みさせる</td>
+              <td><code>sudo systemctl reload sshd.service</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><code>reload</code>に対応していないサービスもあります。その場合は、設定反映に<code>restart</code>が必要になることがあります。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>startとenableの違い</h2>
+        <p><code>start</code>と<code>enable</code>は意味が異なります。</p>
+
+        <h3>start</h3>
+        <pre><code>sudo systemctl start sshd.service</code></pre>
+        <p>現在の起動中システムで、そのサービスを開始します。これだけでは、次回のOS起動時に自動起動するとは限りません。</p>
+
+        <h3>enable</h3>
+        <pre><code>sudo systemctl enable sshd.service</code></pre>
+        <p>次回以降、必要なtargetなどに合わせて自動起動できるように設定します。これだけでは、現在停止中のサービスが直ちに起動するとは限りません。</p>
+
+        <h3>自動起動を設定し、同時に今すぐ起動する</h3>
+        <pre><code>sudo systemctl enable --now sshd.service</code></pre>
+
+        <h3>自動起動を解除する</h3>
+        <pre><code>sudo systemctl disable sshd.service</code></pre>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>重要：</strong><code>start</code>は「今動かす」、<code>enable</code>は「起動時に動くよう設定する」です。</p>
+        </aside>
+      </section>
+
+      <section id="sec-7">
+        <h2>journalとjournalctl</h2>
+        <p><code>systemd-journald</code>は、カーネルや各種サービスなどからログを収集し、journalとして保存するサービスです。</p>
+        <p><code>journalctl</code>は、journalに保存されたログを表示・検索するコマンドです。</p>
+
+        <h3>ログを表示する</h3>
+        <pre><code>journalctl</code></pre>
+        <p>引数を付けずに実行すると、閲覧権限のあるjournalの内容を古いものから表示します。</p>
+
+        <h3>特定のunitのログを表示する</h3>
+        <pre><code>journalctl -u sshd.service</code></pre>
+        <p><code>-u</code>は、指定したunitに関係するログへ絞り込むために使います。</p>
+
+        <h3>今回の起動以降のログを表示する</h3>
+        <pre><code>journalctl -b</code></pre>
+
+        <h3>新しいログを継続して表示する</h3>
+        <pre><code>journalctl -f</code></pre>
+        <p><code>-f</code>は、新しく追加されるログを追跡して表示します。</p>
+
+        <h3>末尾付近を表示する</h3>
+        <pre><code>journalctl -e</code></pre>
+
+        <p>サービスが起動しない場合は、<code>systemctl status</code>で状態を確認し、<code>journalctl -u</code>で詳しいログを見る、という流れが基本です。</p>
+      </section>
+
+      <section id="sec-8">
+        <h2>起動状態を確認する流れ</h2>
+        <p>例えばSSHサービスが動作しているかを確認する場合、次の順番で整理できます。</p>
+
+        <ol>
+          <li>
+            <p>unitの状態を確認する</p>
+            <pre><code>systemctl status sshd.service</code></pre>
+          </li>
+          <li>
+            <p>現在動作中かだけを確認する</p>
+            <pre><code>systemctl is-active sshd.service</code></pre>
+          </li>
+          <li>
+            <p>自動起動が設定されているか確認する</p>
+            <pre><code>systemctl is-enabled sshd.service</code></pre>
+          </li>
+          <li>
+            <p>unitに関するログを確認する</p>
+            <pre><code>journalctl -u sshd.service</code></pre>
+          </li>
+        </ol>
+
+        <p><code>active</code>と<code>enabled</code>は別の状態です。現在動いていても自動起動が無効な場合や、逆に自動起動が有効でも現在は停止している場合があります。</p>
+      </section>
+
+      <section id="sec-9">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>Linuxカーネルの後に起動する最初のユーザー空間プロセスには、通常何番のPIDが割り当てられるでしょうか。</li>
+          <li>systemdが管理する対象をまとめて何と呼ぶでしょうか。</li>
+          <li><code>systemctl start</code>と<code>systemctl enable</code>の違いは何でしょうか。</li>
+          <li>特定のunitのjournalを表示するには、どのコマンドを使うでしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li>PID 1</li>
+            <li>unit</li>
+            <li>startは現在のシステムで起動し、enableは起動時に自動起動する設定を行う</li>
+            <li><code>journalctl -u unit名</code></li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-10">
+        <h2>要約</h2>
+        <ul>
+          <li>カーネルは、通常PID 1のプロセスを最初のユーザー空間プロセスとして起動します。</li>
+          <li>現在の多くのLinuxでは、systemdがinitシステムとして動作します。</li>
+          <li>systemdは、サービスやtargetなどをunitとして管理します。</li>
+          <li>targetは、複数のunitをまとめた起動目標です。</li>
+          <li><code>systemctl</code>はsystemdとunitの状態確認・操作に使います。</li>
+          <li><code>start</code>は現在の起動、<code>enable</code>は自動起動の設定です。</li>
+          <li><code>journalctl</code>はjournalに保存されたログの表示・検索に使います。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://www.freedesktop.org/software/systemd/man/latest/systemd.html" target="_blank" rel="noopener noreferrer">systemd — System and service manager</a></li>
+          <li><a href="https://www.freedesktop.org/software/systemd/man/latest/systemd.unit.html" target="_blank" rel="noopener noreferrer">systemd.unit — Unit configuration</a></li>
+          <li><a href="https://www.freedesktop.org/software/systemd/man/latest/systemd.target.html" target="_blank" rel="noopener noreferrer">systemd.target — Target unit configuration</a></li>
+          <li><a href="https://www.freedesktop.org/software/systemd/man/latest/systemctl.html" target="_blank" rel="noopener noreferrer">systemctl — Control the systemd system and service manager</a></li>
+          <li><a href="https://www.freedesktop.org/software/systemd/man/latest/systemd-journald.service.html" target="_blank" rel="noopener noreferrer">systemd-journald.service</a></li>
+          <li><a href="https://www.freedesktop.org/software/systemd/man/latest/journalctl.html" target="_blank" rel="noopener noreferrer">journalctl — Query the systemd journal</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/systemctl.1.html" target="_blank" rel="noopener noreferrer">systemctl(1) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/journalctl.1.html" target="_blank" rel="noopener noreferrer">journalctl(1) manual page</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

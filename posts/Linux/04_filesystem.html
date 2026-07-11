@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 04：ファイルシステム</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 04：ファイルシステム</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/04_filesystem_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">ファイルシステムとは</a></li>
+          <li><a href="#sec-2">ストレージを利用するまでの流れ</a></li>
+          <li><a href="#sec-3">ext4</a></li>
+          <li><a href="#sec-4">XFS</a></li>
+          <li><a href="#sec-5">inode</a></li>
+          <li><a href="#sec-6">UUID</a></li>
+          <li><a href="#sec-7">マウントとアンマウント</a></li>
+          <li><a href="#sec-8">/etc/fstab</a></li>
+          <li><a href="#sec-9">確認コマンド</a></li>
+          <li><a href="#sec-10">30秒チェック</a></li>
+          <li><a href="#sec-11">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>ファイルシステムとは</h2>
+        <p>ファイルシステムは、ストレージ上のデータを、ファイルやディレクトリとして保存・管理するための仕組みです。</p>
+        <p>ファイルの中身だけでなく、所有者、グループ、パーミッション、ファイルサイズ、更新日時、データの保存場所なども管理します。</p>
+        <p>同じSSDやHDDでも、どのファイルシステムを作成するかによって、データの管理方法や利用できる機能が異なります。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>要素</th>
+              <th>役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ストレージ</td>
+              <td>SSDやHDDなど、データを保存する装置</td>
+            </tr>
+            <tr>
+              <td>パーティション</td>
+              <td>ストレージを論理的に分割した領域</td>
+            </tr>
+            <tr>
+              <td>ファイルシステム</td>
+              <td>ファイルやディレクトリを管理する仕組み</td>
+            </tr>
+            <tr>
+              <td>マウントポイント</td>
+              <td>ファイルシステムを接続するディレクトリ</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>今回の目標：</strong>ext4とXFSの特徴を大まかに区別し、inode、UUID、mount、fstabの役割を説明できるようにします。</p>
+        </aside>
+      </section>
+
+      <section id="sec-2">
+        <h2>ストレージを利用するまでの流れ</h2>
+        <p>新しいストレージをLinuxで利用するときは、一般に次のような流れで準備します。</p>
+
+        <ol>
+          <li>Linuxがストレージをブロックデバイスとして認識する</li>
+          <li>必要に応じてパーティションを作成する</li>
+          <li>パーティションなどにファイルシステムを作成する</li>
+          <li>ファイルシステムをディレクトリへマウントする</li>
+          <li>そのディレクトリを通してファイルを読み書きする</li>
+        </ol>
+
+        <pre><code>ストレージ
+  ↓
+パーティション
+  ↓
+ファイルシステム
+  ↓
+マウントポイント
+  ↓
+ファイルの読み書き</code></pre>
+
+        <p>例えば、<code>/dev/sdb1</code>にext4を作成し、<code>/data</code>へマウントすると、利用者は<code>/data</code>を通してそのファイルシステムを利用します。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>区別：</strong>パーティションは領域の分割、ファイルシステムはファイルを管理する仕組み、マウントはその仕組みをLinuxのディレクトリツリーへ接続する操作です。</p>
+        </aside>
+      </section>
+
+      <section id="sec-3">
+        <h2>ext4</h2>
+        <p>ext4は、Linuxで広く利用されているジャーナリングファイルシステムです。ext3を発展させ、より大きなファイルシステムへの対応や信頼性、性能に関する改善が加えられています。</p>
+        <p>多くのLinux環境で利用されており、汎用的なファイルシステムとして覚えておくとよいでしょう。</p>
+
+        <h3>ジャーナリング</h3>
+        <p>ジャーナリングは、主にファイルシステムの更新に関係する情報をログへ記録し、障害後の整合性回復を助ける仕組みです。</p>
+        <p>突然の電源断が起きても、すべての問題を必ず防げるわけではありませんが、ファイルシステムの復旧に必要な処理を減らすことができます。</p>
+
+        <h3>作成コマンドの例</h3>
+        <pre><code>sudo mkfs.ext4 /dev/sdb1</code></pre>
+
+        <p><code>mkfs.ext4</code>は、指定したデバイスへext4ファイルシステムを作成します。既存データがあるデバイスへ実行すると失われる可能性があるため、対象の確認が必要です。</p>
+      </section>
+
+      <section id="sec-4">
+        <h2>XFS</h2>
+        <p>XFSは、高性能なジャーナリングファイルシステムです。大きなファイルや大規模なファイルシステムを扱えるよう設計され、並列的な処理や拡張性を重視しています。</p>
+        <p>Red Hat系のLinux環境などで標準的に採用されることがあり、サーバー用途でもよく見かけます。</p>
+
+        <h3>ext4との大まかな整理</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>ファイルシステム</th>
+              <th>大まかな特徴</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ext4</td>
+              <td>幅広いLinux環境で使われる汎用的なファイルシステム</td>
+            </tr>
+            <tr>
+              <td>XFS</td>
+              <td>大規模なデータや高い並列性を意識したファイルシステム</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>作成コマンドの例</h3>
+        <pre><code>sudo mkfs.xfs /dev/sdb1</code></pre>
+
+        <p>LPIC Level1の復習では、どちらも代表的なLinux向けジャーナリングファイルシステムであることと、環境によって標準採用が異なることを押さえます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>注意：</strong>「ext4は小規模専用」「XFSなら常に高速」のように単純化はできません。用途、カーネル、ストレージ、設定、ワークロードによって適性は変わります。</p>
+        </aside>
+      </section>
+
+      <section id="sec-5">
+        <h2>inode</h2>
+        <p>inodeは、ファイルやディレクトリを管理するための情報です。ファイルシステム内では、それぞれのinodeがinode番号によって識別されます。</p>
+
+        <h3>inodeが管理する主な情報</h3>
+        <ul>
+          <li>ファイルの種類</li>
+          <li>所有者のUIDとグループのGID</li>
+          <li>パーミッション</li>
+          <li>ファイルサイズ</li>
+          <li>アクセス時刻や更新時刻など</li>
+          <li>ハードリンク数</li>
+          <li>データの保存場所を参照するための情報</li>
+        </ul>
+
+        <h3>inodeに通常含まれないもの</h3>
+        <p>ファイル名は、inodeそのものではなく、ディレクトリ側でinode番号と対応付けて管理されます。</p>
+
+        <pre><code>ファイル名
+  ↓
+ディレクトリエントリ
+  ↓
+inode番号
+  ↓
+inode
+  ↓
+データ本体</code></pre>
+
+        <h3>確認コマンド</h3>
+        <pre><code>ls -li report.txt
+stat report.txt
+df -i</code></pre>
+
+        <ul>
+          <li><code>ls -i</code>：inode番号を表示する</li>
+          <li><code>stat</code>：inode番号、サイズ、権限、時刻などを詳しく表示する</li>
+          <li><code>df -i</code>：ファイルシステム全体のinode使用状況を表示する</li>
+        </ul>
+
+        <p>空き容量が残っていても、利用可能なinodeがなくなると新しいファイルを作成できないことがあります。小さなファイルが大量に作成された環境では、容量だけでなくinode使用率も確認します。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>UUID</h2>
+        <p>UUIDは、Universally Unique Identifierの略です。ファイルシステムなどを識別するために使われる識別子です。</p>
+        <p><code>/dev/sdb1</code>のようなデバイス名は、機器の追加や認識順序によって変わる可能性があります。そのため、<code>/etc/fstab</code>などではUUIDを使って対象を指定することがあります。</p>
+
+        <pre><code>UUID=8c12a0d5-0000-0000-0000-000000000000</code></pre>
+
+        <h3>UUIDの確認</h3>
+        <pre><code>lsblk -f
+sudo blkid</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>指定方法</th>
+              <th>例</th>
+              <th>特徴</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>デバイス名</td>
+              <td><code>/dev/sdb1</code></td>
+              <td>分かりやすいが、認識順序で変わる可能性がある</td>
+            </tr>
+            <tr>
+              <td>UUID</td>
+              <td><code>UUID=...</code></td>
+              <td>特定のファイルシステムを安定して指定しやすい</td>
+            </tr>
+            <tr>
+              <td>LABEL</td>
+              <td><code>LABEL=DATA</code></td>
+              <td>人が意味を理解しやすい名前を付けられる</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>試験ポイント：</strong>UUIDは「接続順序に左右されにくい識別方法」として、自動マウント設定でよく利用されます。</p>
+        </aside>
+      </section>
+
+      <section id="sec-7">
+        <h2>マウントとアンマウント</h2>
+        <p>マウントは、ファイルシステムをLinuxのディレクトリツリーへ接続する操作です。接続先となるディレクトリをマウントポイントと呼びます。</p>
+
+        <h3>マウントの例</h3>
+        <pre><code>sudo mkdir -p /data
+sudo mount /dev/sdb1 /data</code></pre>
+
+        <p>この例では、<code>/dev/sdb1</code>上のファイルシステムを<code>/data</code>へ接続します。</p>
+
+        <h3>アンマウントの例</h3>
+        <pre><code>sudo umount /data</code></pre>
+
+        <p>マウントを解除するコマンドは<code>unmount</code>ではなく、<code>umount</code>です。</p>
+
+        <h3>アンマウントできない場合</h3>
+        <p>マウントポイントをプロセスが使用している場合は、<code>target is busy</code>などと表示され、アンマウントできないことがあります。</p>
+
+        <pre><code>findmnt /data
+lsof +D /data
+fuser -vm /data</code></pre>
+
+        <p>自分のシェルのカレントディレクトリが<code>/data</code>内にある場合も使用中になります。まず別のディレクトリへ移動し、どのプロセスが使用しているかを確認します。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>注意：</strong>マウントポイントにもともとファイルがある場合、マウント中は通常のパスから見えなくなります。削除されたわけではなく、アンマウントすると再び見えるようになります。</p>
+        </aside>
+      </section>
+
+      <section id="sec-8">
+        <h2>/etc/fstab</h2>
+        <p><code>/etc/fstab</code>は、ファイルシステムをどこへ、どの種類とオプションでマウントするかを記述する設定ファイルです。</p>
+        <p>起動時の自動マウントや、<code>mount</code>コマンドで省略指定を行うために利用されます。</p>
+
+        <h3>基本形式</h3>
+        <pre><code>UUID=8c12a0d5-0000-0000-0000-000000000000 /data ext4 defaults 0 2</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>フィールド</th>
+              <th>例</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><code>UUID=...</code></td>
+              <td>マウントするデバイスやファイルシステム</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><code>/data</code></td>
+              <td>マウントポイント</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><code>ext4</code></td>
+              <td>ファイルシステムの種類</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><code>defaults</code></td>
+              <td>マウントオプション</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><code>0</code></td>
+              <td>dumpによるバックアップ対象の指定</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><code>2</code></td>
+              <td>起動時のファイルシステムチェック順序</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>設定の確認</h3>
+        <pre><code>findmnt --verify
+sudo mount -a</code></pre>
+
+        <p><code>findmnt --verify</code>は、<code>/etc/fstab</code>の内容を検査するときに利用できます。<code>mount -a</code>は、通常<code>/etc/fstab</code>に記述された対象を実際にまとめてマウントするため、実行前に対象と影響を確認します。</p>
+        <p>マウントポイントの不存在、UUIDの入力間違い、ファイルシステム種別の間違いなどがあると、マウントに失敗する可能性があります。</p>
+      </section>
+
+      <section id="sec-9">
+        <h2>確認コマンド</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>コマンド</th>
+              <th>主な確認内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>lsblk</code></td>
+              <td>ディスク、パーティション、LVMなどのブロックデバイス構成</td>
+            </tr>
+            <tr>
+              <td><code>lsblk -f</code></td>
+              <td>ファイルシステム種別、UUID、LABEL、マウント先</td>
+            </tr>
+            <tr>
+              <td><code>blkid</code></td>
+              <td>デバイスのUUID、LABEL、ファイルシステム種別</td>
+            </tr>
+            <tr>
+              <td><code>findmnt</code></td>
+              <td>現在のマウント関係や指定パスの所属先</td>
+            </tr>
+            <tr>
+              <td><code>df -h</code></td>
+              <td>マウント済みファイルシステムの容量使用状況</td>
+            </tr>
+            <tr>
+              <td><code>df -i</code></td>
+              <td>inodeの使用状況</td>
+            </tr>
+            <tr>
+              <td><code>stat</code></td>
+              <td>ファイルのinode番号、権限、所有者、時刻など</td>
+            </tr>
+            <tr>
+              <td><code>mount</code></td>
+              <td>ファイルシステムをマウントする</td>
+            </tr>
+            <tr>
+              <td><code>umount</code></td>
+              <td>マウントを解除する</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>確認の流れ</h3>
+        <pre><code>lsblk -f
+findmnt
+df -h
+df -i</code></pre>
+
+        <ol>
+          <li><code>lsblk -f</code>で、デバイスとファイルシステムの全体像を見る</li>
+          <li><code>findmnt</code>で、どこへマウントされているかを見る</li>
+          <li><code>df -h</code>で、容量の使用状況を見る</li>
+          <li>必要に応じて<code>df -i</code>で、inodeの使用状況を見る</li>
+        </ol>
+
+        <p>コマンドの詳細は、<code>man mount</code>、<code>man fstab</code>、<code>man lsblk</code>、<code>man blkid</code>、<code>man findmnt</code>などで確認できます。</p>
+      </section>
+
+      <section id="sec-10">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>ファイルシステムは、何を管理する仕組みでしょうか。</li>
+          <li>ext4とXFSに共通する大きな特徴は何でしょうか。</li>
+          <li>ファイル名は、通常inodeの中に保存されるでしょうか。</li>
+          <li>inode使用量を確認するコマンドは何でしょうか。</li>
+          <li>UUIDを利用する主な理由は何でしょうか。</li>
+          <li>ファイルシステムをディレクトリへ接続する操作を何と呼ぶでしょうか。</li>
+          <li>マウント解除に使うコマンドは何でしょうか。</li>
+          <li>自動マウント設定を記述する代表的なファイルは何でしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答え</summary>
+          <ol>
+            <li>ストレージ上のデータを、ファイルやディレクトリとして保存・管理する仕組みです。</li>
+            <li>どちらも代表的なジャーナリングファイルシステムです。</li>
+            <li>通常は保存されません。ディレクトリがファイル名とinode番号を対応付けます。</li>
+            <li><code>df -i</code>です。</li>
+            <li>デバイス名の認識順序が変わっても、対象を安定して識別しやすいためです。</li>
+            <li>マウントです。</li>
+            <li><code>umount</code>です。</li>
+            <li><code>/etc/fstab</code>です。</li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-11">
+        <h2>要約</h2>
+        <ul>
+          <li>ファイルシステムは、ファイル、ディレクトリ、所有者、権限、時刻、データ配置などを管理します。</li>
+          <li>ext4は幅広く使われる汎用的なジャーナリングファイルシステムです。</li>
+          <li>XFSは、大規模なデータや高い並列性を意識したジャーナリングファイルシステムです。</li>
+          <li>inodeはファイルのメタデータを管理しますが、ファイル名は通常ディレクトリ側で管理されます。</li>
+          <li><code>df -h</code>は容量、<code>df -i</code>はinode使用状況を確認します。</li>
+          <li>UUIDは、ファイルシステムを安定して識別するために利用されます。</li>
+          <li>mountで接続し、umountで切り離します。</li>
+          <li><code>/etc/fstab</code>には、マウント対象、マウントポイント、種類、オプションなどを記述します。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://docs.kernel.org/filesystems/index.html" target="_blank" rel="noopener noreferrer">Linux Kernel Documentation：Filesystems in the Linux kernel</a></li>
+          <li><a href="https://docs.kernel.org/admin-guide/ext4.html" target="_blank" rel="noopener noreferrer">Linux Kernel Documentation：ext4 General Information</a></li>
+          <li><a href="https://docs.kernel.org/filesystems/ext4/" target="_blank" rel="noopener noreferrer">Linux Kernel Documentation：ext4 Data Structures and Algorithms</a></li>
+          <li><a href="https://docs.kernel.org/filesystems/ext4/inodes.html" target="_blank" rel="noopener noreferrer">Linux Kernel Documentation：ext4 Index Nodes</a></li>
+          <li><a href="https://docs.kernel.org/filesystems/ext4/directory.html" target="_blank" rel="noopener noreferrer">Linux Kernel Documentation：ext4 Directory Entries</a></li>
+          <li><a href="https://docs.kernel.org/filesystems/xfs/index.html" target="_blank" rel="noopener noreferrer">Linux Kernel Documentation：XFS Filesystem Documentation</a></li>
+          <li><a href="https://docs.kernel.org/admin-guide/xfs.html" target="_blank" rel="noopener noreferrer">Linux Kernel Documentation：The SGI XFS Filesystem</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man5/fstab.5.html" target="_blank" rel="noopener noreferrer">fstab(5) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man8/mount.8.html" target="_blank" rel="noopener noreferrer">mount(8) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man8/umount.8.html" target="_blank" rel="noopener noreferrer">umount(8) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man8/lsblk.8.html" target="_blank" rel="noopener noreferrer">lsblk(8) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man8/blkid.8.html" target="_blank" rel="noopener noreferrer">blkid(8) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man8/findmnt.8.html" target="_blank" rel="noopener noreferrer">findmnt(8) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/df.1.html" target="_blank" rel="noopener noreferrer">df(1) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/stat.1.html" target="_blank" rel="noopener noreferrer">stat(1) — Linux manual page</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

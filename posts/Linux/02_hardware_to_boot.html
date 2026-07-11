@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 02：ハードウェアと起動</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 02：ハードウェアと起動</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/02_hardware_to_boot_audio.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">コンピューターを構成する主な部品</a></li>
+          <li><a href="#sec-2">CPU</a></li>
+          <li><a href="#sec-3">メモリ（RAM・ROM）</a></li>
+          <li><a href="#sec-4">SSDとHDD</a></li>
+          <li><a href="#sec-5">BIOSとUEFI</a></li>
+          <li><a href="#sec-6">MBRとGPT</a></li>
+          <li><a href="#sec-7">Linuxが起動するまで</a></li>
+          <li><a href="#sec-8">Linuxで確認するコマンド</a></li>
+          <li><a href="#sec-9">30秒チェック</a></li>
+          <li><a href="#sec-10">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>コンピューターを構成する主な部品</h2>
+        <p>Linuxは、CPU、メモリ、ストレージなどのハードウェアをカーネルが管理することで動作します。</p>
+        <p>まずは、各部品を次のように整理します。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>部品</th>
+              <th>主な役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CPU</td>
+              <td>命令を実行し、計算や処理を行う</td>
+            </tr>
+            <tr>
+              <td>RAM</td>
+              <td>実行中のプログラムやデータを一時的に置く</td>
+            </tr>
+            <tr>
+              <td>ROM・フラッシュメモリ</td>
+              <td>電源を切っても保持する必要があるファームウェアなどを保存する</td>
+            </tr>
+            <tr>
+              <td>SSD・HDD</td>
+              <td>OS、アプリケーション、利用者のファイルを長期保存する</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="sec-2">
+        <h2>CPU</h2>
+        <p>CPUは、Central Processing Unitの略です。日本語では中央処理装置と呼ばれます。</p>
+        <p>プログラムに書かれた命令を読み取り、計算、比較、データ転送などを実行します。よく「コンピューターの頭脳」と表現されます。</p>
+
+        <h3>コアとスレッド</h3>
+        <p>CPUには複数のコアを持つ製品があります。コアは、命令を実行する処理単位です。</p>
+        <p>また、1つの物理コアをOSから複数の論理CPUとして見せる仕組みもあります。このため、物理CPUの個数、コア数、OSから見えるCPU数が同じとは限りません。</p>
+
+        <h3>アーキテクチャ</h3>
+        <p>CPUには、x86、x86_64、ARMなどのアーキテクチャがあります。CPUが理解できる命令体系が異なるため、OSやプログラムも対応した形式が必要です。</p>
+        <p>64ビット環境では、x86_64、AMD64、Intel 64などの表記を目にします。名称は文脈によって異なりますが、一般的な64ビットPC向けアーキテクチャを示す表現として使われます。</p>
+      </section>
+
+      <section id="sec-3">
+        <h2>メモリ（RAM・ROM）</h2>
+
+        <h3>RAM</h3>
+        <p>RAMは、Random Access Memoryの略です。</p>
+        <p>実行中のプログラムや、そのプログラムが処理しているデータを一時的に保持します。一般的なRAMは揮発性であり、電源を切ると内容が失われます。</p>
+        <p>RAMが不足すると、Linuxはストレージ上のスワップ領域を補助的に使用できます。ただし、SSDやHDDはRAMより低速なため、スワップの利用が増えると処理が遅くなることがあります。</p>
+
+        <h3>ROM</h3>
+        <p>ROMは、Read Only Memoryの略です。</p>
+        <p>本来は読み出し専用メモリを意味しますが、現在のPCでは、BIOSやUEFIなどのファームウェアを保存する書き換え可能なフラッシュメモリも、広い意味でROMと呼ばれることがあります。</p>
+        <p>LPICの復習では、RAMは作業中の一時記憶、ROMやフラッシュメモリは電源を切っても内容を保持する記憶、と整理すると分かりやすいです。</p>
+      </section>
+
+      <section id="sec-4">
+        <h2>SSDとHDD</h2>
+        <p>SSDとHDDは、OSやファイルを長期的に保存するストレージです。どちらも電源を切ってもデータが残ります。</p>
+
+        <h3>HDD</h3>
+        <p>HDDは、Hard Disk Driveの略です。磁気ディスクを回転させ、磁気ヘッドでデータを読み書きします。</p>
+        <p>大容量を比較的安価に用意しやすい一方で、機械的に動く部品があるため、振動や衝撃の影響を受けやすく、ランダムアクセスはSSDより遅い傾向があります。</p>
+
+        <h3>SSD</h3>
+        <p>SSDは、Solid State Driveの略です。主にフラッシュメモリを使ってデータを保存します。</p>
+        <p>機械的に回転する部品がなく、一般にHDDより高速で、動作音も小さくなります。</p>
+
+        <p>Linuxでは、SSDやHDDなどを<strong>ブロックデバイス</strong>として扱います。ブロックデバイスは、一定の大きさのデータ単位で読み書きする装置です。</p>
+      </section>
+
+      <section id="sec-5">
+        <h2>BIOSとUEFI</h2>
+        <p>PCの電源を入れた直後は、まだLinuxカーネルは動作していません。最初に動き、ハードウェアの初期化や起動装置の選択を行うのがファームウェアです。</p>
+
+        <h3>BIOS</h3>
+        <p>BIOSは、Basic Input/Output Systemの略です。</p>
+        <p>従来のPCで広く使われてきたファームウェアで、接続された機器を初期化し、起動可能なディスクを探してブートローダーへ処理を渡します。</p>
+
+        <h3>UEFI</h3>
+        <p>UEFIは、Unified Extensible Firmware Interfaceの略です。</p>
+        <p>OSとプラットフォームファームウェアの間のインターフェースを定めた仕様です。UEFIにはブートマネージャーがあり、設定された起動項目からOSローダーなどを読み込めます。</p>
+        <p>UEFI環境では、一般にEFIシステムパーティション、略してESPに置かれた起動用プログラムを読み込みます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>ポイント：</strong>BIOSとUEFIは、OSが起動する前に動くファームウェアに関する用語です。</p>
+        </aside>
+      </section>
+
+      <section id="sec-6">
+        <h2>MBRとGPT</h2>
+        <p>MBRとGPTは、ディスク上のパーティション情報を管理する方式です。BIOSやUEFIとは別の分類です。</p>
+
+        <h3>MBR</h3>
+        <p>MBRは、Master Boot Recordの略です。</p>
+        <p>ディスクの先頭部分に、起動用コードやパーティション情報を保持する従来の方式です。</p>
+        <p>一般的なMBR形式では、基本パーティションは最大4個です。4個を超えて分割する場合は、拡張パーティションと論理パーティションを利用します。</p>
+        <p>また、一般的な512バイトセクターを前提としたMBRでは、扱えるディスク容量におおむね2TiBの制限があります。</p>
+
+        <h3>GPT</h3>
+        <p>GPTは、GUID Partition Tableの略です。</p>
+        <p>MBRより新しいパーティション方式で、大容量ディスクや多数のパーティションを扱いやすくなっています。</p>
+        <p>GPTでは、パーティション情報の冗長な保存や、情報を検査する仕組みも用意されています。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>混同注意：</strong>「BIOSなら必ずMBR」「UEFIなら必ずGPT」と機械的に覚えないでください。よく使われる組み合わせではありますが、ファームウェア方式とパーティション方式は別の概念です。</p>
+        </aside>
+      </section>
+
+      <section id="sec-7">
+        <h2>Linuxが起動するまで</h2>
+        <p>一般的なLinux PCの起動は、次の流れで整理できます。</p>
+
+        <ol>
+          <li><strong>電源投入</strong><br>CPUがファームウェアの処理を開始します。</li>
+          <li><strong>BIOSまたはUEFI</strong><br>ハードウェアを初期化し、起動する装置や起動項目を選びます。</li>
+          <li><strong>ブートローダー</strong><br>GRUBなどがLinuxカーネルと初期RAMファイルシステムをメモリへ読み込みます。</li>
+          <li><strong>Linuxカーネル</strong><br>CPU、メモリ、デバイスなどを初期化し、ルートファイルシステムを利用できる状態にします。</li>
+          <li><strong>initまたはsystemd</strong><br>カーネルが最初のユーザー空間プロセスを起動し、必要なサービスを開始します。</li>
+          <li><strong>ログイン可能な状態</strong><br>文字画面やGUIから利用者がログインできるようになります。</li>
+        </ol>
+
+        <div class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>電源投入 → BIOS・UEFI → ブートローダー → Linuxカーネル → systemdなど → ログイン</strong></p>
+        </div>
+
+        <p>GRUBは、GRand Unified Bootloaderの略です。複数のOSや複数のカーネルから、起動対象を選択できる代表的なブートローダーです。</p>
+        <p>systemdやサービス開始の詳しい仕組みは、03ページの「Linuxの起動」で扱います。</p>
+      </section>
+
+      <section id="sec-8">
+        <h2>Linuxで確認するコマンド</h2>
+
+        <h3>CPU情報</h3>
+        <pre><code>lscpu</code></pre>
+        <p><code>lscpu</code>は、CPUアーキテクチャ、CPU数、コア数、スレッド数などの情報を表示します。</p>
+
+        <h3>メモリ使用量</h3>
+        <pre><code>free -h</code></pre>
+        <p><code>free</code>は、物理メモリとスワップの使用状況を表示します。<code>-h</code>は、人が読みやすい単位で表示するオプションです。</p>
+
+        <h3>ブロックデバイス</h3>
+        <pre><code>lsblk</code></pre>
+        <p><code>lsblk</code>は、SSD、HDD、パーティションなどのブロックデバイスをツリー状に表示します。</p>
+
+        <p>詳しい使い方は、次のマニュアルで確認できます。</p>
+        <pre><code>man lscpu
+man free
+man lsblk</code></pre>
+      </section>
+
+      <section id="sec-9">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>実行中のプログラムやデータを一時的に保持する装置は何でしょうか。</li>
+          <li>PCの電源投入後、OSより先に動くものは何でしょうか。</li>
+          <li>BIOS・UEFIと、MBR・GPTは、それぞれ何に関する用語でしょうか。</li>
+          <li>ファームウェアから処理を受け取り、Linuxカーネルを読み込む代表的なプログラムは何でしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li>RAM</li>
+            <li>BIOSやUEFIなどのファームウェア</li>
+            <li>BIOS・UEFIはファームウェア、MBR・GPTはパーティション方式</li>
+            <li>GRUBなどのブートローダー</li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-10">
+        <h2>要約</h2>
+        <ul>
+          <li>CPUは命令を実行し、RAMは実行中のデータを一時的に保持します。</li>
+          <li>SSDとHDDは、電源を切ってもデータを保持するストレージです。</li>
+          <li>BIOSとUEFIは、OSより先に動くファームウェアに関する用語です。</li>
+          <li>MBRとGPTは、ディスクのパーティション情報を管理する方式です。</li>
+          <li>一般的な起動順序は、ファームウェア、ブートローダー、カーネル、systemdなどです。</li>
+          <li><code>lscpu</code>、<code>free -h</code>、<code>lsblk</code>で基本的なハードウェア情報を確認できます。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://uefi.org/specs/UEFI/2.10/01_Introduction.html" target="_blank" rel="noopener noreferrer">UEFI Specification 2.10 - Introduction</a></li>
+          <li><a href="https://uefi.org/specs/UEFI/2.10/03_Boot_Manager.html" target="_blank" rel="noopener noreferrer">UEFI Specification 2.10 - Boot Manager</a></li>
+          <li><a href="https://docs.kernel.org/arch/x86/boot.html" target="_blank" rel="noopener noreferrer">The Linux/x86 Boot Protocol</a></li>
+          <li><a href="https://docs.kernel.org/arch/x86/x86_64/uefi.html" target="_blank" rel="noopener noreferrer">Linux kernel documentation - UEFI x86_64 support</a></li>
+          <li><a href="https://www.gnu.org/software/grub/manual/grub/grub.html" target="_blank" rel="noopener noreferrer">GNU GRUB Manual</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/lscpu.1.html" target="_blank" rel="noopener noreferrer">lscpu(1) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/free.1.html" target="_blank" rel="noopener noreferrer">free(1) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man8/lsblk.8.html" target="_blank" rel="noopener noreferrer">lsblk(8) manual page</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

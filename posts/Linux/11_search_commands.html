@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 11：検索コマンド</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 11：検索コマンド</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/11_search_commands_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">検索コマンドの使い分け</a></li>
+          <li><a href="#sec-2">grepの基本</a></li>
+          <li><a href="#sec-3">grepの主なオプション</a></li>
+          <li><a href="#sec-4">grepと正規表現</a></li>
+          <li><a href="#sec-5">findの基本</a></li>
+          <li><a href="#sec-6">findの検索条件</a></li>
+          <li><a href="#sec-7">findで見つけた項目を処理する</a></li>
+          <li><a href="#sec-8">locateとupdatedb</a></li>
+          <li><a href="#sec-9">which</a></li>
+          <li><a href="#sec-10">whereisと実践的な確認手順</a></li>
+          <li><a href="#sec-11">30秒チェック</a></li>
+          <li><a href="#sec-12">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>検索コマンドの使い分け</h2>
+        <p>Linuxの検索は、「ファイルの中身を探す」「ファイル名や属性から探す」「コマンドの場所を探す」に分けると整理しやすくなります。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>コマンド</th>
+              <th>主な検索対象</th>
+              <th>特徴</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>grep</code></td>
+              <td>ファイル内容やコマンド出力</td>
+              <td>指定したパターンに一致する行を抽出する</td>
+            </tr>
+            <tr>
+              <td><code>find</code></td>
+              <td>実際のディレクトリツリー</td>
+              <td>名前、種類、サイズ、時刻、所有者、権限などをその場で調べる</td>
+            </tr>
+            <tr>
+              <td><code>locate</code></td>
+              <td>ファイル名データベース</td>
+              <td>高速だが、データベース更新後の状態を基に検索する</td>
+            </tr>
+            <tr>
+              <td><code>which</code></td>
+              <td><code>PATH</code>から実行される外部コマンド</td>
+              <td>コマンド名に対応する実行ファイルのパスを調べる</td>
+            </tr>
+            <tr>
+              <td><code>whereis</code></td>
+              <td>実行ファイル、ソース、manページ</td>
+              <td>標準的な配置場所などから、コマンドに関係するファイルを探す</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>今回の目標：</strong>検索対象が「内容」「実ファイル」「データベース」「PATH」「標準配置」のどれなのかを先に判断し、適切なコマンドを選びます。</p>
+        </aside>
+      </section>
+
+      <section id="sec-2">
+        <h2>grepの基本</h2>
+        <p><code>grep</code>は、入力から指定したパターンに一致する行を探し、標準では一致した行を表示します。</p>
+
+        <pre><code>grep 'error' app.log
+grep 'root' /etc/passwd
+command | grep 'pattern'</code></pre>
+
+        <p>基本形は、次のとおりです。</p>
+
+        <pre><code>grep [オプション] パターン [ファイル...]</code></pre>
+
+        <p>パターンにシェルで特別な意味を持つ文字や空白が含まれる場合に備え、通常は引用符で囲みます。</p>
+
+        <h3>複数ファイルから検索する</h3>
+        <pre><code>grep 'ERROR' app.log system.log
+grep 'nameserver' /etc/*.conf</code></pre>
+
+        <p>複数ファイルを検索した場合、通常は一致行の前にファイル名が表示されます。</p>
+
+        <h3>標準入力から検索する</h3>
+        <pre><code>ps aux | grep 'sshd'
+journalctl | grep 'failed'</code></pre>
+
+        <p>ファイル名を指定しなければ、<code>grep</code>は標準入力を検索します。パイプを使うと、別コマンドの出力から必要な行だけを抽出できます。</p>
+
+        <h3>固定文字列として検索する</h3>
+        <pre><code>grep -F '192.168.1.10' access.log
+grep -F '[ERROR]' app.log</code></pre>
+
+        <p><code>-F</code>は、パターンを正規表現ではなく固定文字列として扱います。ドット、角括弧、アスタリスクなどを、その文字自体として探したい場合に便利です。</p>
+
+        <h3>終了ステータス</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>終了ステータス</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>0</code></td><td>一つ以上の一致が見つかった</td></tr>
+            <tr><td><code>1</code></td><td>一致が見つからなかった</td></tr>
+            <tr><td><code>2</code></td><td>ファイルを読めないなどのエラーが発生した</td></tr>
+          </tbody>
+        </table>
+
+        <pre><code>grep -q 'sshd' /etc/services
+echo $?</code></pre>
+
+        <p><code>-q</code>は検索結果を表示せず、終了ステータスだけを利用したい場合に使います。シェルスクリプトの条件判定でよく利用されます。</p>
+      </section>
+
+      <section id="sec-3">
+        <h2>grepの主なオプション</h2>
+
+        <h3>一致方法を変える</h3>
+        <pre><code>grep -i 'error' app.log
+grep -v '^#' config.conf
+grep -w 'root' /etc/passwd
+grep -x 'enabled' status.txt</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-i</code></td><td>大文字と小文字を区別しない</td></tr>
+            <tr><td><code>-v</code></td><td>パターンに一致しない行を表示する</td></tr>
+            <tr><td><code>-w</code></td><td>単語全体が一致する行だけを対象にする</td></tr>
+            <tr><td><code>-x</code></td><td>行全体がパターンに一致する行だけを対象にする</td></tr>
+            <tr><td><code>-F</code></td><td>パターンを固定文字列として扱う</td></tr>
+            <tr><td><code>-E</code></td><td>拡張正規表現として扱う</td></tr>
+          </tbody>
+        </table>
+
+        <h3>表示内容を変える</h3>
+        <pre><code>grep -n 'ERROR' app.log
+grep -H 'root' /etc/passwd
+grep -h 'root' file1 file2
+grep -o 'error' app.log
+grep --color=auto 'error' app.log</code></pre>
+
+        <ul>
+          <li><code>-n</code>：行番号を表示する</li>
+          <li><code>-H</code>：ファイル名を必ず表示する</li>
+          <li><code>-h</code>：複数ファイルでもファイル名を表示しない</li>
+          <li><code>-o</code>：一致した部分だけを一行ずつ表示する</li>
+          <li><code>--color=auto</code>：端末への出力時に一致部分を色付けする</li>
+        </ul>
+
+        <h3>件数やファイル名だけを表示する</h3>
+        <pre><code>grep -c 'ERROR' app.log
+grep -l 'ERROR' *.log
+grep -L 'ERROR' *.log</code></pre>
+
+        <ul>
+          <li><code>-c</code>：一致した行数をファイルごとに表示する</li>
+          <li><code>-l</code>：一致を含むファイル名だけを表示する</li>
+          <li><code>-L</code>：一致を含まないファイル名だけを表示する</li>
+        </ul>
+
+        <p><code>grep -c</code>が数えるのは、一致回数ではなく一致した行数です。一行に同じ単語が複数回あっても、その行は一行として数えられます。</p>
+
+        <h3>前後の行も表示する</h3>
+        <pre><code>grep -A 3 'ERROR' app.log
+grep -B 2 'ERROR' app.log
+grep -C 2 'ERROR' app.log</code></pre>
+
+        <ul>
+          <li><code>-A 数値</code>：一致行の後を指定行数表示する</li>
+          <li><code>-B 数値</code>：一致行の前を指定行数表示する</li>
+          <li><code>-C 数値</code>：一致行の前後を指定行数表示する</li>
+        </ul>
+
+        <h3>ディレクトリを再帰検索する</h3>
+        <pre><code>grep -r 'PermitRootLogin' /etc/ssh
+grep -R 'server_name' /etc/nginx</code></pre>
+
+        <p><code>-r</code>はディレクトリ以下を再帰検索します。GNU grepでは、<code>-R</code>はコマンドライン上や検索途中で見つけたシンボリックリンクもたどる動作になります。意図しない範囲へ広がらないよう、検索起点を具体的にします。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>実務的な形：</strong><code>grep -Rni --include='*.conf' '文字列' /etc/対象</code>のように、検索起点と対象拡張子を絞ると結果を読みやすくできます。</p>
+        </aside>
+      </section>
+
+      <section id="sec-4">
+        <h2>grepと正規表現</h2>
+        <p><code>grep</code>のパターンには正規表現を使えます。ここでは検索に必要な基本だけを確認します。正規表現の詳しい整理は、第19回で扱います。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>記号</th>
+              <th>基本的な意味</th>
+              <th>例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>^</code></td><td>行の先頭</td><td><code>grep '^root:' /etc/passwd</code></td></tr>
+            <tr><td><code>$</code></td><td>行の末尾</td><td><code>grep '/bin/bash$' /etc/passwd</code></td></tr>
+            <tr><td><code>.</code></td><td>任意の一文字</td><td><code>grep 'h.st' file</code></td></tr>
+            <tr><td><code>*</code></td><td>直前の要素の0回以上の繰り返し</td><td><code>grep 'ab*c' file</code></td></tr>
+            <tr><td><code>[abc]</code></td><td>角括弧内のいずれか一文字</td><td><code>grep '[Ee]rror' file</code></td></tr>
+            <tr><td><code>[^abc]</code></td><td>角括弧内以外の一文字</td><td><code>grep '[^0-9]' file</code></td></tr>
+          </tbody>
+        </table>
+
+        <h3>基本正規表現と拡張正規表現</h3>
+        <pre><code>grep 'error\|warning' app.log
+grep -E 'error|warning' app.log
+grep -E '^(error|warning):' app.log</code></pre>
+
+        <p>標準の<code>grep</code>は基本正規表現を使います。<code>-E</code>では拡張正規表現となり、<code>|</code>や<code>()</code>などをバックスラッシュなしで扱えます。</p>
+
+        <h3>シェルのワイルドカードとの違い</h3>
+        <p>シェルの<code>*.log</code>はファイル名を展開するワイルドカードです。正規表現の<code>.*</code>は、任意の文字が0回以上続く部分を表します。</p>
+
+        <pre><code># シェルが *.log をファイル名へ展開する
+grep 'ERROR' *.log
+
+# grepが正規表現として ERROR.*failed を解釈する
+grep 'ERROR.*failed' app.log</code></pre>
+
+        <p>この二つを混同しないことが重要です。</p>
+      </section>
+
+      <section id="sec-5">
+        <h2>findの基本</h2>
+        <p><code>find</code>は、指定した検索起点から実際のディレクトリツリーをたどり、各項目に対して条件を評価します。</p>
+
+        <pre><code>find 検索起点 条件 処理</code></pre>
+
+        <p>例えば、現在のディレクトリ以下から<code>.log</code>で終わる通常ファイルを探す場合は、次のように指定します。</p>
+
+        <pre><code>find . -type f -name '*.log'</code></pre>
+
+        <ul>
+          <li><code>.</code>：検索を始める場所</li>
+          <li><code>-type f</code>：通常ファイルだけを対象にする条件</li>
+          <li><code>-name '*.log'</code>：ファイル名の条件</li>
+          <li>処理を省略した場合：標準では<code>-print</code>でパスを表示する</li>
+        </ul>
+
+        <h3>パターンは引用符で囲む</h3>
+        <pre><code>find . -name '*.log'</code></pre>
+
+        <p><code>*.log</code>を引用符で囲まないと、<code>find</code>が受け取る前にシェルが現在のディレクトリのファイル名へ展開する可能性があります。<code>find</code>へパターンをそのまま渡すため、引用符で囲みます。</p>
+
+        <h3>検索する深さを制限する</h3>
+        <pre><code>find . -maxdepth 1 -type f
+find . -mindepth 2 -maxdepth 3 -type d</code></pre>
+
+        <ul>
+          <li><code>-maxdepth 数値</code>：検索起点から指定した深さまで調べる</li>
+          <li><code>-mindepth 数値</code>：指定した深さより浅い項目には条件や処理を適用しない</li>
+        </ul>
+
+        <p><code>-maxdepth 1</code>では、検索起点自身と、その直下までを対象にします。</p>
+
+        <h3>複数の検索起点</h3>
+        <pre><code>find /etc /usr/local/etc -name '*.conf'</code></pre>
+
+        <p><code>find</code>では、複数の検索起点を指定できます。権限のない場所へ入ると、Permission deniedなどが標準エラー出力へ表示される場合があります。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>findの検索条件</h2>
+
+        <h3>名前で探す</h3>
+        <pre><code>find . -name '*.txt'
+find . -iname '*.jpg'
+find . -path '*/cache/*'
+</code></pre>
+
+        <ul>
+          <li><code>-name</code>：パスの最後の名前、ベースネームを大文字小文字を区別して照合する</li>
+          <li><code>-iname</code>：大文字小文字を区別せず名前を照合する</li>
+          <li><code>-path</code>：検索起点からのパス全体をパターンと照合する</li>
+        </ul>
+
+        <h3>種類で探す</h3>
+        <pre><code>find . -type f
+find . -type d
+find . -type l</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>指定</th>
+              <th>対象</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-type f</code></td><td>通常ファイル</td></tr>
+            <tr><td><code>-type d</code></td><td>ディレクトリ</td></tr>
+            <tr><td><code>-type l</code></td><td>シンボリックリンク</td></tr>
+            <tr><td><code>-type b</code></td><td>ブロックデバイス</td></tr>
+            <tr><td><code>-type c</code></td><td>キャラクターデバイス</td></tr>
+            <tr><td><code>-type p</code></td><td>名前付きパイプ</td></tr>
+            <tr><td><code>-type s</code></td><td>ソケット</td></tr>
+          </tbody>
+        </table>
+
+        <h3>サイズで探す</h3>
+        <pre><code>find . -type f -size +100M
+find . -type f -size -10k
+find . -type f -empty</code></pre>
+
+        <ul>
+          <li><code>+数値</code>：指定値より大きい</li>
+          <li><code>-数値</code>：指定値より小さい</li>
+          <li><code>c</code>：バイト</li>
+          <li><code>k</code>：1024バイト単位</li>
+          <li><code>M</code>：メビバイト単位</li>
+          <li><code>G</code>：ギビバイト単位</li>
+          <li><code>-empty</code>：空の通常ファイル、または項目のないディレクトリ</li>
+        </ul>
+
+        <h3>時刻で探す</h3>
+        <pre><code>find . -type f -mtime -1
+find . -type f -mtime +30
+find . -type f -mmin -60
+find . -type f -newer reference.txt</code></pre>
+
+        <ul>
+          <li><code>-mtime</code>：内容の更新時刻を24時間単位で調べる</li>
+          <li><code>-mmin</code>：内容の更新時刻を分単位で調べる</li>
+          <li><code>-newer ファイル</code>：指定した参照ファイルより新しく更新された項目を探す</li>
+        </ul>
+
+        <p><code>-mtime -1</code>は、24時間単位で見て1未満、つまり概ね過去24時間以内に更新された項目を探します。<code>-mtime +30</code>は、丸30日を超えて古い項目が対象になります。</p>
+
+        <h3>所有者や権限で探す</h3>
+        <pre><code>find /home -user alice
+find /srv -group developers
+find . -type f -perm 0644
+find . -type f -perm -002
+find . -type f -perm /111</code></pre>
+
+        <ul>
+          <li><code>-user</code>：所有ユーザー</li>
+          <li><code>-group</code>：所有グループ</li>
+          <li><code>-perm 0644</code>：モードが完全に一致する</li>
+          <li><code>-perm -002</code>：指定したビットがすべて設定されている</li>
+          <li><code>-perm /111</code>：指定した実行ビットのどれか一つ以上が設定されている</li>
+        </ul>
+
+        <h3>条件を組み合わせる</h3>
+        <pre><code>find . -type f -name '*.log' -size +10M
+find . \( -name '*.jpg' -o -name '*.png' \) -type f
+find . -type f ! -name '*.bak'</code></pre>
+
+        <ul>
+          <li>条件を並べる：論理AND。両方を満たす</li>
+          <li><code>-o</code>：論理OR。どちらかを満たす</li>
+          <li><code>!</code>または<code>-not</code>：条件を反転する</li>
+          <li><code>\(</code>と<code>\)</code>：条件をグループ化する</li>
+        </ul>
+
+        <p>丸括弧はシェルでも特別な意味を持つため、バックスラッシュでエスケープするか引用符を使います。</p>
+      </section>
+
+      <section id="sec-7">
+        <h2>findで見つけた項目を処理する</h2>
+
+        <h3>詳しい情報を表示する</h3>
+        <pre><code>find . -type f -name '*.log' -print
+find . -type f -name '*.log' -ls</code></pre>
+
+        <p><code>-print</code>はパスを表示します。<code>-ls</code>は、inode番号、ブロック数、権限、所有者、サイズ、時刻、パスなどを表示します。</p>
+
+        <h3><code>-exec</code>でコマンドを実行する</h3>
+        <pre><code>find . -type f -name '*.log' -exec grep -H 'ERROR' {} \;
+find . -type f -name '*.log' -exec grep -H 'ERROR' {} +</code></pre>
+
+        <ul>
+          <li><code>{}</code>：見つかったパスへ置き換えられる</li>
+          <li><code>\;</code>：一項目ごとにコマンドを実行する</li>
+          <li><code>+</code>：複数のパスをまとめて、一回以上のコマンド呼び出しに渡す</li>
+        </ul>
+
+        <p>多数のファイルを処理する場合は、可能なら<code>{} +</code>の方が、項目ごとにプロセスを起動する<code>{} \;</code>より効率的です。</p>
+
+        <h3>ファイル名を安全に受け渡す</h3>
+        <pre><code>find . -type f -name '*.log' -print0 | xargs -0 grep -H 'ERROR'</code></pre>
+
+        <p>ファイル名には空白、改行、引用符なども使用できます。<code>-print0</code>はNUL文字で区切って出力し、<code>xargs -0</code>はNUL区切りで受け取ります。</p>
+        <p>ただし、単純な処理なら<code>find -exec ... {} +</code>を使う方が、空白を含む名前も安全に扱いやすく、コマンドも読みやすい場合があります。</p>
+
+        <h3>削除する</h3>
+        <pre><code>find ./cache -type f -name '*.tmp' -print
+find ./cache -type f -name '*.tmp' -delete</code></pre>
+
+        <p><code>-delete</code>は、見つかった項目を実際に削除します。まず同じ条件で<code>-print</code>し、対象が正しいことを確認してから実行します。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>重要：</strong><code>find</code>の条件は、表示だけでなく削除や権限変更にも直結します。破壊的な処理では、最初に<code>-print</code>や<code>-ls</code>で対象を確認します。</p>
+        </aside>
+      </section>
+
+      <section id="sec-8">
+        <h2>locateとupdatedb</h2>
+        <p><code>locate</code>は、あらかじめ作成されたファイル名データベースを検索します。実際のディレクトリを毎回たどる<code>find</code>より高速に結果を返せます。</p>
+
+        <pre><code>locate sshd_config
+locate '*.service'
+locate -i readme
+locate -c '.conf'</code></pre>
+
+        <ul>
+          <li><code>-i</code>：大文字と小文字を区別しない</li>
+          <li><code>-c</code>：パスを表示せず一致数だけを表示する</li>
+          <li><code>-b</code>：フルパスではなく、最後のファイル名部分だけを照合する</li>
+          <li><code>-e</code>：現在も存在する項目だけを表示する</li>
+          <li><code>-r</code>：パターンを正規表現として扱う</li>
+        </ul>
+
+        <h3>データベース検索であることに注意する</h3>
+        <p><code>locate</code>のデータベースには、最後に更新された時点で存在したファイル名が記録されています。</p>
+
+        <ul>
+          <li>作成したばかりのファイルが見つからない場合がある</li>
+          <li>削除済みのファイルが結果へ残っている場合がある</li>
+          <li>除外設定されたディレクトリやファイルシステムは登録されない場合がある</li>
+        </ul>
+
+        <h3>updatedb</h3>
+        <pre><code>sudo updatedb</code></pre>
+
+        <p><code>updatedb</code>は、<code>locate</code>が使用するファイル名データベースを更新します。通常は定期処理で実行されますが、環境によって更新頻度や対象範囲が異なります。</p>
+
+        <p>ディストリビューションによってはGNU locateではなく、<code>plocate</code>や<code>mlocate</code>系の実装が使われます。また、最小構成では<code>locate</code>自体が未導入の場合があります。</p>
+
+        <pre><code>locate --version
+man locate
+man updatedb</code></pre>
+
+        <p>利用できるオプションやデータベースの場所は実装によって異なるため、対象環境のバージョンとmanページを確認します。</p>
+
+        <h3>findとの使い分け</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>find</th>
+              <th>locate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>検索対象</td><td>現在の実ディレクトリツリー</td><td>更新済みデータベース</td></tr>
+            <tr><td>速度</td><td>範囲が広いと時間がかかる</td><td>一般に高速</td></tr>
+            <tr><td>検索条件</td><td>名前、種類、サイズ、時刻、権限など</td><td>主にパス名</td></tr>
+            <tr><td>最新性</td><td>実行時点の状態</td><td>データベース更新時点の状態</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="sec-9">
+        <h2>which</h2>
+        <p><code>which</code>は、シェルが外部コマンドを探すときに使う<code>PATH</code>を基に、コマンド名に対応する実行ファイルのパスを表示します。</p>
+
+        <pre><code>which ls
+which python3
+which -a python3</code></pre>
+
+        <p><code>-a</code>を利用できる実装では、<code>PATH</code>上で見つかる候補をすべて表示します。</p>
+
+        <h3>PATH</h3>
+        <pre><code>echo "$PATH"</code></pre>
+
+        <p><code>PATH</code>には、コマンドを探すディレクトリがコロン区切りで登録されています。シェルは通常、左から順に検索し、最初に見つかった実行可能なコマンドを使用します。</p>
+
+        <h3>whichだけでは分からない場合</h3>
+        <p>コマンド名は、外部実行ファイルだけでなく、シェルの組み込みコマンド、関数、エイリアスの場合があります。<code>which</code>の実装によっては、これらを正確に反映しません。</p>
+
+        <pre><code>type ls
+type -a ls
+command -v ls
+alias ls</code></pre>
+
+        <ul>
+          <li><code>type</code>：コマンド名がエイリアス、関数、組み込み、外部ファイルのどれとして解釈されるか確認する</li>
+          <li><code>type -a</code>：同じ名前で利用可能な候補をすべて表示する</li>
+          <li><code>command -v</code>：シェルがコマンド名をどのように解決するかを表示する</li>
+        </ul>
+
+        <p>「実際にこのシェルで何が実行されるか」を確認したい場合は、<code>which</code>だけでなく<code>type</code>や<code>command -v</code>も使います。</p>
+
+        <h3>ハッシュされたコマンド</h3>
+        <p>Bashは一度見つけた外部コマンドのパスを記憶することがあります。PATHや実行ファイルを変更した後に結果が不自然な場合は、次のように確認・消去できます。</p>
+
+        <pre><code>hash
+hash -r</code></pre>
+      </section>
+
+      <section id="sec-10">
+        <h2>whereisと実践的な確認手順</h2>
+
+        <h3>whereis</h3>
+        <p><code>whereis</code>は、指定したコマンド名について、実行ファイル、ソースファイル、manページを標準的なLinuxの配置場所や設定された検索パスから探します。</p>
+
+        <pre><code>whereis ls
+whereis ssh
+whereis -b bash
+whereis -m bash
+whereis -s bash
+whereis -l</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>検索対象</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-b</code></td><td>実行ファイル</td></tr>
+            <tr><td><code>-m</code></td><td>manページやドキュメント</td></tr>
+            <tr><td><code>-s</code></td><td>ソースファイル</td></tr>
+            <tr><td><code>-l</code></td><td>whereisが使用する検索パスを表示する</td></tr>
+          </tbody>
+        </table>
+
+        <p><code>whereis</code>は、ファイルシステム全体を任意の名前で検索するコマンドではありません。コマンドに関係するファイルを、既知の配置場所から探す用途です。</p>
+
+        <h3>whichとの違い</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>which</th>
+              <th>whereis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>主な目的</td><td>PATH上の実行ファイルを確認する</td><td>実行ファイル、manページ、ソースを探す</td></tr>
+            <tr><td>検索範囲</td><td>主にPATH</td><td>標準配置、PATH、MANPATHなど</td></tr>
+            <tr><td>エイリアス・関数</td><td>実装により正確に扱えない</td><td>対象外</td></tr>
+            <tr><td>manページ</td><td>探さない</td><td>探せる</td></tr>
+          </tbody>
+        </table>
+
+        <h3>目的別の確認例</h3>
+        <pre><code># 設定ファイル内の文字列を探す
+grep -Rni 'PermitRootLogin' /etc/ssh
+
+# 実際に存在する設定ファイルを名前から探す
+find /etc -type f -name '*ssh*'
+
+# システム全体のファイル名を高速に探す
+locate sshd_config
+
+# PATH上のpython3を確認する
+which python3
+
+# シェルで実際に解決されるpython3を確認する
+type -a python3
+command -v python3
+
+# bashの実行ファイルとmanページを探す
+whereis bash</code></pre>
+
+        <h3>Permission deniedを整理する</h3>
+        <pre><code>find / -name 'target' 2>/tmp/find-errors.log
+grep 'Permission denied' /tmp/find-errors.log</code></pre>
+
+        <p>検索結果でなく、アクセスできないディレクトリのエラーが大量に出る場合があります。標準エラー出力を別ファイルへ分けると、結果とエラーを区別できます。</p>
+
+        <p><code>2&gt;/dev/null</code>でエラーを捨てる方法もありますが、重要な入出力エラーまで見えなくなります。原因調査では、まず別ファイルへ保存して確認する方が安全です。</p>
+
+        <h3>基本の選び方</h3>
+        <ol>
+          <li>ファイル内容を検索するなら<code>grep</code></li>
+          <li>現在の実ファイルを属性付きで探すなら<code>find</code></li>
+          <li>名前だけを高速に探すなら<code>locate</code></li>
+          <li>PATH上の外部コマンドなら<code>which</code></li>
+          <li>シェルで実際に解決されるものなら<code>type</code>または<code>command -v</code></li>
+          <li>実行ファイルとmanページなどをまとめて探すなら<code>whereis</code></li>
+        </ol>
+
+        <p>詳しい使い方は、次のマニュアルでも確認できます。</p>
+
+        <pre><code>man grep
+man find
+man locate
+man updatedb
+man which
+man whereis
+help type
+help command</code></pre>
+      </section>
+
+      <section id="sec-11">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>ファイル内容からパターンに一致する行を抽出するコマンドは何でしょうか。</li>
+          <li><code>grep -c</code>は、一致した文字列の回数と一致した行数のどちらを表示するでしょうか。</li>
+          <li><code>find . -name '*.log'</code>で、パターンを引用符で囲む理由は何でしょうか。</li>
+          <li><code>find</code>の<code>-exec ... {} \;</code>と<code>-exec ... {} +</code>の主な違いは何でしょうか。</li>
+          <li><code>locate</code>で作成直後のファイルが見つからないことがあるのはなぜでしょうか。</li>
+          <li><code>which</code>と<code>whereis</code>の主な違いは何でしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li><code>grep</code></li>
+            <li>一致した行数</li>
+            <li>シェルによるワイルドカード展開を防ぎ、パターンをそのままfindへ渡すため</li>
+            <li><code>\;</code>は項目ごとに実行し、<code>+</code>は複数項目をまとめて実行する</li>
+            <li>実際のファイルシステムではなく、最後に更新されたファイル名データベースを検索するため</li>
+            <li><code>which</code>は主にPATH上の実行ファイルを探し、<code>whereis</code>は実行ファイル、manページ、ソースなどを標準配置から探す</li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-12">
+        <h2>要約</h2>
+        <ul>
+          <li><code>grep</code>は、入力からパターンに一致する行を検索します。</li>
+          <li><code>grep -i</code>は大文字小文字を無視し、<code>-v</code>は不一致行、<code>-n</code>は行番号を表示します。</li>
+          <li><code>grep -c</code>は一致行数、<code>-l</code>は一致を含むファイル名を表示します。</li>
+          <li><code>find</code>は、検索起点から実際のディレクトリツリーをたどり、名前、種類、サイズ、時刻、権限などを調べます。</li>
+          <li><code>find</code>の名前パターンは、シェル展開を防ぐため引用符で囲みます。</li>
+          <li><code>-exec ... {} +</code>は、見つかった複数のパスをまとめてコマンドへ渡します。</li>
+          <li><code>locate</code>は高速ですが、最後に更新されたファイル名データベースを検索します。</li>
+          <li><code>updatedb</code>は、locate用のデータベースを更新します。</li>
+          <li><code>which</code>は主にPATH上の外部コマンドを調べ、実際のシェル解決は<code>type</code>や<code>command -v</code>でも確認します。</li>
+          <li><code>whereis</code>は、コマンドの実行ファイル、manページ、ソースなどを標準的な場所から探します。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://www.gnu.org/software/grep/manual/grep.html" target="_blank" rel="noopener noreferrer">GNU Grep Manual</a></li>
+          <li><a href="https://www.gnu.org/software/grep/manual/html_node/Invoking.html" target="_blank" rel="noopener noreferrer">GNU Grep：Invoking grep</a></li>
+          <li><a href="https://www.gnu.org/software/grep/manual/html_node/Regular-Expressions.html" target="_blank" rel="noopener noreferrer">GNU Grep：Regular Expressions</a></li>
+          <li><a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html" target="_blank" rel="noopener noreferrer">GNU Findutils Manual</a></li>
+          <li><a href="https://www.gnu.org/software/findutils/manual/html_node/find_html/Invoking-find.html" target="_blank" rel="noopener noreferrer">GNU Findutils：Invoking find</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/find.1.html" target="_blank" rel="noopener noreferrer">find(1) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/locate.1.html" target="_blank" rel="noopener noreferrer">locate(1) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/updatedb.1.html" target="_blank" rel="noopener noreferrer">updatedb(1) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/whereis.1.html" target="_blank" rel="noopener noreferrer">whereis(1) manual page</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Bourne Shell Builtins</a></li>
+          <li><a href="https://manpages.debian.org/which.1" target="_blank" rel="noopener noreferrer">Debian Manpages：which(1)</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man7/glob.7.html" target="_blank" rel="noopener noreferrer">glob(7) manual page</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

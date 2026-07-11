@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 07：ネットワーク基礎</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 07：ネットワーク基礎</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/07_network_basics_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">ネットワーク通信の全体像</a></li>
+          <li><a href="#sec-2">OSI参照モデル</a></li>
+          <li><a href="#sec-3">TCP/IPモデル</a></li>
+          <li><a href="#sec-4">IPアドレス</a></li>
+          <li><a href="#sec-5">MACアドレス</a></li>
+          <li><a href="#sec-6">ARP</a></li>
+          <li><a href="#sec-7">DNS</a></li>
+          <li><a href="#sec-8">DHCP</a></li>
+          <li><a href="#sec-9">ルーティング</a></li>
+          <li><a href="#sec-10">通信の流れと確認コマンド</a></li>
+          <li><a href="#sec-11">30秒チェック</a></li>
+          <li><a href="#sec-12">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>ネットワーク通信の全体像</h2>
+        <p>ネットワーク通信では、複数の仕組みが役割を分担しています。</p>
+        <p>DNSは名前からIPアドレスを調べます。IPアドレスは通信相手やネットワークを識別します。MACアドレスは同じリンク上でフレームを届けるために使われます。ARPはIPv4アドレスに対応するMACアドレスを調べます。ルーティングは、宛先へ向かう経路を選びます。</p>
+        <p>DHCPを利用すると、端末はIPアドレス、サブネットマスクやプレフィックス、デフォルトゲートウェイ、DNSサーバーなどの設定を自動的に受け取れます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>今回の目標：</strong>用語を個別に暗記するだけでなく、「名前解決、経路選択、次の相手のMACアドレス確認、データ送信」という一連の流れをつなげて理解します。</p>
+        </aside>
+      </section>
+
+      <section id="sec-2">
+        <h2>OSI参照モデル</h2>
+        <p>OSI参照モデルは、ネットワーク通信の機能を七つの階層に分けて整理する考え方です。</p>
+        <p>各層の役割を分けることで、通信のどこで問題が起きているかを整理しやすくなります。ただし、実際のプロトコルが常に一つの層へ完全に収まるとは限りません。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>層</th>
+              <th>名称</th>
+              <th>主な役割</th>
+              <th>関連する例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>第7層</td>
+              <td>アプリケーション層</td>
+              <td>利用者やアプリケーションへ通信機能を提供する</td>
+              <td>HTTP、DNS、SSH、SMTP</td>
+            </tr>
+            <tr>
+              <td>第6層</td>
+              <td>プレゼンテーション層</td>
+              <td>文字コード、データ形式、暗号化、圧縮などを扱う</td>
+              <td>データ表現、暗号化処理</td>
+            </tr>
+            <tr>
+              <td>第5層</td>
+              <td>セッション層</td>
+              <td>通信の開始、維持、終了などを管理する</td>
+              <td>セッション管理</td>
+            </tr>
+            <tr>
+              <td>第4層</td>
+              <td>トランスポート層</td>
+              <td>アプリケーション間の通信、信頼性、ポート番号を扱う</td>
+              <td>TCP、UDP</td>
+            </tr>
+            <tr>
+              <td>第3層</td>
+              <td>ネットワーク層</td>
+              <td>異なるネットワーク間の転送や経路選択を行う</td>
+              <td>IP、ICMP、ルーティング</td>
+            </tr>
+            <tr>
+              <td>第2層</td>
+              <td>データリンク層</td>
+              <td>同じリンク上でフレームを転送する</td>
+              <td>Ethernet、MACアドレス</td>
+            </tr>
+            <tr>
+              <td>第1層</td>
+              <td>物理層</td>
+              <td>電気信号、光、電波などでビットを伝える</td>
+              <td>ケーブル、コネクタ、無線信号</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>例えば、ケーブルが抜けていれば第1層、MACアドレスやスイッチングの問題は第2層、IPアドレスや経路の問題は第3層、TCPポートや接続の問題は第4層として整理できます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>覚え方：</strong>下の層ほど実際にデータを運ぶ仕組みに近く、上の層ほどアプリケーションの処理に近くなります。</p>
+        </aside>
+      </section>
+
+      <section id="sec-3">
+        <h2>TCP/IPモデル</h2>
+        <p>インターネットで実際に広く使われているプロトコル群は、TCP/IPとして整理されます。</p>
+        <p>TCP/IPモデルは、一般にアプリケーション層、トランスポート層、インターネット層、リンク層の四層で説明されます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>TCP/IPモデル</th>
+              <th>主な役割</th>
+              <th>主なプロトコル</th>
+              <th>対応するOSI層の目安</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>アプリケーション層</td>
+              <td>アプリケーション向けの通信機能</td>
+              <td>HTTP、DNS、SSH、DHCP</td>
+              <td>第5層から第7層</td>
+            </tr>
+            <tr>
+              <td>トランスポート層</td>
+              <td>アプリケーション間のデータ転送</td>
+              <td>TCP、UDP</td>
+              <td>第4層</td>
+            </tr>
+            <tr>
+              <td>インターネット層</td>
+              <td>IPアドレスによる転送と経路選択</td>
+              <td>IPv4、IPv6、ICMP</td>
+              <td>第3層</td>
+            </tr>
+            <tr>
+              <td>リンク層</td>
+              <td>直接接続されたネットワーク上での転送</td>
+              <td>Ethernet、無線LAN、ARP</td>
+              <td>第1層と第2層</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>TCPとUDP</h3>
+        <p>TCPは、接続を確立し、順序制御、再送、フロー制御などを行う信頼性重視の通信です。</p>
+        <p>UDPは、接続確立や再送をプロトコル自身では行わない、比較的単純なデータグラム通信です。</p>
+        <p>どちらもポート番号を使い、同じ端末上のどのアプリケーションへデータを渡すかを識別します。</p>
+
+        <p>IPは宛先まで運ぶための仕組みですが、IPv4のIP自体は、必ず届くことや順番どおりに届くことを保証しません。必要な信頼性はTCPなど上位の仕組みが補います。</p>
+      </section>
+
+      <section id="sec-4">
+        <h2>IPアドレス</h2>
+        <p>IPアドレスは、IPネットワーク上のインターフェースを識別するためのアドレスです。</p>
+
+        <h3>IPv4</h3>
+        <p>IPv4アドレスは32ビットで、通常は<code>192.168.1.10</code>のように、8ビットずつ十進数で表します。</p>
+        <p><code>192.168.1.10/24</code>の<code>/24</code>はプレフィックス長です。先頭24ビットがネットワーク部分であることを表します。</p>
+
+        <pre><code>192.168.1.10/24
+ネットワークアドレス: 192.168.1.0
+利用するネットワーク範囲の目安: 192.168.1.0/24</code></pre>
+
+        <p>同じネットワークに属するかどうかは、IPアドレスだけでなく、サブネットマスクまたはプレフィックス長と組み合わせて判断します。</p>
+
+        <h3>プライベートIPv4アドレス</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>範囲</th>
+              <th>プレフィックス</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>10.0.0.0 ～ 10.255.255.255</code></td>
+              <td><code>10.0.0.0/8</code></td>
+            </tr>
+            <tr>
+              <td><code>172.16.0.0 ～ 172.31.255.255</code></td>
+              <td><code>172.16.0.0/12</code></td>
+            </tr>
+            <tr>
+              <td><code>192.168.0.0 ～ 192.168.255.255</code></td>
+              <td><code>192.168.0.0/16</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>プライベートアドレスは、組織内や家庭内などの私設ネットワークで利用されます。通常、そのままではグローバルインターネット上の経路として扱われません。</p>
+
+        <h3>特別なアドレス</h3>
+        <ul>
+          <li><code>127.0.0.1</code>：自分自身を表す代表的なループバックアドレス</li>
+          <li><code>169.254.0.0/16</code>：IPv4リンクローカルアドレスの範囲</li>
+          <li><code>0.0.0.0/0</code>：すべてのIPv4宛先に一致するデフォルトルート</li>
+        </ul>
+
+        <h3>IPv6</h3>
+        <p>IPv6アドレスは128ビットで、16進数とコロンを使って表します。連続するゼロは<code>::</code>で一度だけ省略できます。</p>
+
+        <pre><code>2001:db8:1::10/64
+::1</code></pre>
+
+        <p><code>::1</code>はIPv6のループバックアドレスです。IPv6ではARPを使わず、Neighbor Discoveryの仕組みを利用します。</p>
+      </section>
+
+      <section id="sec-5">
+        <h2>MACアドレス</h2>
+        <p>MACアドレスは、Ethernetなどのリンク層でネットワークインターフェースを識別するために使われます。</p>
+        <p>一般的なEthernetのMACアドレスは48ビットで、<code>00:11:22:33:44:55</code>のような16進数で表します。</p>
+
+        <pre><code>ip link show
+ip -br link</code></pre>
+
+        <p>IPアドレスがネットワークを越えて宛先を識別するために使われるのに対し、MACアドレスは基本的に同じリンク上の次の相手へフレームを届けるために使われます。</p>
+        <p>ルーターを一つ越えるたびに、リンク層のフレームは作り直されます。そのため、送信元MACアドレスと宛先MACアドレスは区間ごとに変わります。</p>
+        <p>一方、IPパケットの送信元IPアドレスと宛先IPアドレスは、通常は最終的な送信元と宛先を表したまま転送されます。ただし、NATなどでIPアドレスが変換される場合は例外です。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>整理：</strong>IPアドレスは「最終的にどこへ届けるか」、MACアドレスは「このリンク上で次に誰へ渡すか」を考えると区別しやすくなります。</p>
+        </aside>
+      </section>
+
+      <section id="sec-6">
+        <h2>ARP</h2>
+        <p>ARPは、Address Resolution Protocolの略です。IPv4アドレスに対応するリンク層アドレス、通常はMACアドレスを調べるために使われます。</p>
+
+        <h3>同じネットワーク上の相手へ送る場合</h3>
+        <ol>
+          <li>送信元は、宛先IPv4アドレスが自分と同じネットワークにあると判断します。</li>
+          <li>ARP要求をブロードキャストし、「このIPv4アドレスを持つ相手は誰か」と問い合わせます。</li>
+          <li>該当する端末が、自分のMACアドレスをARP応答で返します。</li>
+          <li>送信元は、そのMACアドレスを宛先としてEthernetフレームを送ります。</li>
+        </ol>
+
+        <h3>別のネットワーク上の相手へ送る場合</h3>
+        <p>送信先が別ネットワークにある場合、端末は最終宛先のMACアドレスを直接調べません。代わりに、次の転送先であるデフォルトゲートウェイなどのMACアドレスをARPで調べます。</p>
+        <p>このとき、Ethernetフレームの宛先MACアドレスはゲートウェイですが、IPパケットの宛先IPアドレスは最終的な通信相手です。</p>
+
+        <pre><code>ip neigh show
+ip neigh show dev eth0</code></pre>
+
+        <p>Linuxでは、ARPで得た対応関係を近隣テーブルで確認できます。IPv4の近隣テーブルはARPテーブルとも呼ばれます。</p>
+        <p>表示される状態には、<code>REACHABLE</code>、<code>STALE</code>、<code>FAILED</code>などがあります。</p>
+      </section>
+
+      <section id="sec-7">
+        <h2>DNS</h2>
+        <p>DNSは、Domain Name Systemの略です。<code>example.com</code>のような名前と、IPアドレスなどの情報を対応付ける、階層型で分散された仕組みです。</p>
+
+        <h3>名前解決の流れ</h3>
+        <ol>
+          <li>アプリケーションが、ホスト名に対応するIPアドレスを必要とします。</li>
+          <li>端末上のリゾルバが、設定されたDNSリゾルバへ問い合わせます。</li>
+          <li>必要に応じて、ルート、トップレベルドメイン、権威DNSサーバーなどが参照されます。</li>
+          <li>得られた結果が端末へ返され、一定時間キャッシュされます。</li>
+        </ol>
+
+        <h3>主なDNSレコード</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>種類</th>
+              <th>主な役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>A</code></td>
+              <td>名前に対応するIPv4アドレス</td>
+            </tr>
+            <tr>
+              <td><code>AAAA</code></td>
+              <td>名前に対応するIPv6アドレス</td>
+            </tr>
+            <tr>
+              <td><code>CNAME</code></td>
+              <td>別名から正式名への対応</td>
+            </tr>
+            <tr>
+              <td><code>MX</code></td>
+              <td>メール配送先</td>
+            </tr>
+            <tr>
+              <td><code>NS</code></td>
+              <td>ゾーンを担当するDNSサーバー</td>
+            </tr>
+            <tr>
+              <td><code>PTR</code></td>
+              <td>IPアドレス側から名前を調べる逆引き</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Linuxで関係するファイル</h3>
+        <ul>
+          <li><code>/etc/hosts</code>：ローカルで静的に名前とアドレスを対応付ける</li>
+          <li><code>/etc/resolv.conf</code>：参照するDNSサーバーや検索ドメインなどの情報</li>
+          <li><code>/etc/nsswitch.conf</code>：名前解決で参照する情報源の順序などを設定する</li>
+        </ul>
+
+        <pre><code>getent hosts example.com
+dig example.com
+host example.com</code></pre>
+
+        <p><code>getent hosts</code>は、システムに設定された名前サービスの順序を通して確認するときに便利です。<code>dig</code>や<code>host</code>は、DNSへ直接問い合わせて応答を詳しく確認するために使います。</p>
+      </section>
+
+      <section id="sec-8">
+        <h2>DHCP</h2>
+        <p>DHCPは、Dynamic Host Configuration Protocolの略です。端末へネットワーク設定を自動的に配布するための仕組みです。</p>
+
+        <p>DHCPから配布される代表的な情報には、次のものがあります。</p>
+        <ul>
+          <li>IPv4アドレス</li>
+          <li>サブネットマスク</li>
+          <li>デフォルトゲートウェイ</li>
+          <li>DNSサーバー</li>
+          <li>アドレスを利用できる期間であるリース時間</li>
+        </ul>
+
+        <h3>DORA</h3>
+        <p>DHCPv4でアドレスを取得する基本的な流れは、DORAという順番で覚えられます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>段階</th>
+              <th>名称</th>
+              <th>内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>D</td>
+              <td>Discover</td>
+              <td>クライアントが利用可能なDHCPサーバーを探す</td>
+            </tr>
+            <tr>
+              <td>O</td>
+              <td>Offer</td>
+              <td>サーバーが利用可能なアドレスなどを提案する</td>
+            </tr>
+            <tr>
+              <td>R</td>
+              <td>Request</td>
+              <td>クライアントが利用したい提案を要求する</td>
+            </tr>
+            <tr>
+              <td>A</td>
+              <td>Acknowledge</td>
+              <td>サーバーが割り当てを確認する</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>DHCPv4では、通常、サーバー側がUDPの67番ポート、クライアント側がUDPの68番ポートを使います。</p>
+        <p>端末は割り当てられたアドレスを永久に所有するのではなく、リース期間の途中で更新を試みます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>切り分け：</strong>IPアドレスだけでなく、プレフィックス、デフォルトゲートウェイ、DNSサーバーまで正しく受け取れているかを確認します。</p>
+        </aside>
+      </section>
+
+      <section id="sec-9">
+        <h2>ルーティング</h2>
+        <p>ルーティングは、IPパケットを宛先ネットワークへ送るために、次の転送先や出力インターフェースを選ぶ処理です。</p>
+
+        <pre><code>ip route show</code></pre>
+
+        <p>ルーティングテーブルには、宛先プレフィックス、ゲートウェイ、出力インターフェース、メトリックなどの情報が登録されます。</p>
+
+        <pre><code>default via 192.168.1.1 dev eth0
+192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.10</code></pre>
+
+        <ul>
+          <li><code>192.168.1.0/24</code>：直接接続されたネットワークへの経路</li>
+          <li><code>default</code>：より具体的な経路がない場合に利用するデフォルトルート</li>
+          <li><code>via 192.168.1.1</code>：次の転送先となるゲートウェイ</li>
+          <li><code>dev eth0</code>：パケットを出すインターフェース</li>
+        </ul>
+
+        <h3>最長一致</h3>
+        <p>複数の経路が宛先に一致する場合、一般にプレフィックス長が最も長い、つまり最も具体的な経路が優先されます。これを最長一致、Longest Prefix Matchと呼びます。</p>
+
+        <pre><code>ip route get 8.8.8.8</code></pre>
+
+        <p><code>ip route get</code>を使うと、指定した宛先へ送る際に、どの経路、ゲートウェイ、送信元アドレス、インターフェースが選ばれるかを確認できます。</p>
+
+        <p>デフォルトゲートウェイが設定されていない場合、同じネットワーク内とは通信できても、別ネットワークへ到達できないことがあります。</p>
+      </section>
+
+      <section id="sec-10">
+        <h2>通信の流れと確認コマンド</h2>
+        <p>ブラウザやコマンドから、別ネットワーク上のサーバー名へ接続するときの流れをまとめます。</p>
+
+        <ol>
+          <li>DNSなどを使い、サーバー名から宛先IPアドレスを調べます。</li>
+          <li>自分のIPアドレスとプレフィックスから、宛先が同じネットワークか別ネットワークかを判断します。</li>
+          <li>ルーティングテーブルから、出力インターフェースと次の転送先を選びます。</li>
+          <li>IPv4ではARPを使い、同じリンク上の次の転送先のMACアドレスを調べます。</li>
+          <li>IPパケットをEthernetフレームへ入れて送信します。</li>
+          <li>必要に応じてルーターが次のネットワークへ転送し、最終的な宛先へ到達します。</li>
+          <li>TCPやUDPのポート番号を使い、宛先端末上のアプリケーションへデータが渡されます。</li>
+        </ol>
+
+        <h3>基本の確認順序</h3>
+        <pre><code>ip link show
+ip addr show
+ip route show
+ip neigh show
+ping -c 4 192.168.1.1
+getent hosts example.com
+dig example.com
+ip route get 8.8.8.8</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>確認内容</th>
+              <th>代表的な確認方法</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>インターフェースが有効か</td>
+              <td><code>ip link show</code></td>
+            </tr>
+            <tr>
+              <td>IPアドレスとプレフィックス</td>
+              <td><code>ip addr show</code></td>
+            </tr>
+            <tr>
+              <td>デフォルトゲートウェイと経路</td>
+              <td><code>ip route show</code></td>
+            </tr>
+            <tr>
+              <td>ARP・近隣情報</td>
+              <td><code>ip neigh show</code></td>
+            </tr>
+            <tr>
+              <td>IPレベルの疎通</td>
+              <td><code>ping</code></td>
+            </tr>
+            <tr>
+              <td>システム全体の名前解決</td>
+              <td><code>getent hosts</code></td>
+            </tr>
+            <tr>
+              <td>DNS応答の詳細</td>
+              <td><code>dig</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>症状から考える</h3>
+        <ul>
+          <li>IPアドレスへのpingは成功するが、名前では失敗する：DNSや<code>/etc/hosts</code>、名前解決設定を確認する</li>
+          <li>同じネットワークの相手へ届かない：リンク状態、IPアドレス、プレフィックス、ARPを確認する</li>
+          <li>同じネットワークへは届くが外部へ届かない：デフォルトルートやゲートウェイを確認する</li>
+          <li>pingは成功するがSSHへ接続できない：TCPポート、sshd、ファイアウォールなど上位の確認へ進む</li>
+        </ul>
+
+        <p>詳しい使い方は、次のマニュアルでも確認できます。</p>
+        <pre><code>man 8 ip
+man 8 ip-address
+man 8 ip-link
+man 8 ip-neighbour
+man 8 ip-route
+man 7 ip
+man 5 resolv.conf
+man 5 nsswitch.conf</code></pre>
+      </section>
+
+      <section id="sec-11">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>OSI参照モデルで、IPとルーティングは主に第何層でしょうか。</li>
+          <li>TCP/IPモデルの四つの層を、上から順に答えてください。</li>
+          <li>IPv4アドレスに対応するMACアドレスを調べるプロトコルは何でしょうか。</li>
+          <li>別ネットワーク上の相手へ送るとき、端末がARPで調べるのは通常誰のMACアドレスでしょうか。</li>
+          <li>DHCPv4の基本的な四段階を表すDORAは、何の略でしょうか。</li>
+          <li>複数の経路が一致した場合、一般にどの経路が優先されるでしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li>第3層、ネットワーク層</li>
+            <li>アプリケーション層、トランスポート層、インターネット層、リンク層</li>
+            <li>ARP</li>
+            <li>デフォルトゲートウェイなど、同じリンク上の次の転送先</li>
+            <li>Discover、Offer、Request、Acknowledge</li>
+            <li>プレフィックス長が最も長い、最も具体的な経路</li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-12">
+        <h2>要約</h2>
+        <ul>
+          <li>OSI参照モデルは、通信機能を七つの層に分けて整理します。</li>
+          <li>TCP/IPモデルは、一般にアプリケーション、トランスポート、インターネット、リンクの四層で説明されます。</li>
+          <li>IPアドレスはIPネットワーク上の宛先を識別し、プレフィックスはネットワーク範囲の判断に使われます。</li>
+          <li>MACアドレスは、同じリンク上の次の相手へフレームを届けるために使われます。</li>
+          <li>ARPは、IPv4アドレスに対応するMACアドレスを調べます。</li>
+          <li>DNSは、名前とIPアドレスなどの情報を対応付けます。</li>
+          <li>DHCPは、IPアドレス、プレフィックス、ゲートウェイ、DNSなどを自動設定するために使われます。</li>
+          <li>ルーティングは、宛先プレフィックスに基づいて次の転送先とインターフェースを選びます。</li>
+          <li>別ネットワーク宛てでは、最終宛先のIPアドレスを保ちながら、同じリンク上のゲートウェイのMACアドレスへフレームを送ります。</li>
+          <li>切り分けでは、リンク、IPアドレス、経路、ARP、名前解決、ポートの順に確認すると整理しやすくなります。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://www.iso.org/standard/20269.html" target="_blank" rel="noopener noreferrer">ISO/IEC 7498-1:1994：OSI Basic Reference Model</a></li>
+          <li><a href="https://www.rfc-editor.org/info/rfc1122/" target="_blank" rel="noopener noreferrer">RFC 1122：Requirements for Internet Hosts - Communication Layers</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man7/ip.7.html" target="_blank" rel="noopener noreferrer">ip(7) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man8/ip.8.html" target="_blank" rel="noopener noreferrer">ip(8) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man8/ip-address.8.html" target="_blank" rel="noopener noreferrer">ip-address(8) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man8/ip-link.8.html" target="_blank" rel="noopener noreferrer">ip-link(8) manual page</a></li>
+          <li><a href="https://www.rfc-editor.org/info/rfc1918/" target="_blank" rel="noopener noreferrer">RFC 1918：Address Allocation for Private Internets</a></li>
+          <li><a href="https://www.rfc-editor.org/info/rfc8200/" target="_blank" rel="noopener noreferrer">RFC 8200：Internet Protocol, Version 6 Specification</a></li>
+          <li><a href="https://www.rfc-editor.org/info/rfc826/" target="_blank" rel="noopener noreferrer">RFC 826：Address Resolution Protocol</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man8/ip-neighbour.8.html" target="_blank" rel="noopener noreferrer">ip-neighbour(8) manual page</a></li>
+          <li><a href="https://www.rfc-editor.org/info/rfc1034/" target="_blank" rel="noopener noreferrer">RFC 1034：Domain Names - Concepts and Facilities</a></li>
+          <li><a href="https://www.rfc-editor.org/info/rfc1035/" target="_blank" rel="noopener noreferrer">RFC 1035：Domain Names - Implementation and Specification</a></li>
+          <li><a href="https://www.rfc-editor.org/info/rfc2131/" target="_blank" rel="noopener noreferrer">RFC 2131：Dynamic Host Configuration Protocol</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man8/ip-route.8.html" target="_blank" rel="noopener noreferrer">ip-route(8) manual page</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

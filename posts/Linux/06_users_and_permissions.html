@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 06：ユーザーと権限</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 06：ユーザーと権限</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/06_users_and_permissions_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">Linuxのユーザーとグループ</a></li>
+          <li><a href="#sec-2">UIDとGID</a></li>
+          <li><a href="#sec-3">rootとsudo</a></li>
+          <li><a href="#sec-4">パーミッションの見方</a></li>
+          <li><a href="#sec-5">rwxの意味</a></li>
+          <li><a href="#sec-6">chmod</a></li>
+          <li><a href="#sec-7">chown</a></li>
+          <li><a href="#sec-8">umask</a></li>
+          <li><a href="#sec-9">SUID・SGID・Sticky Bit</a></li>
+          <li><a href="#sec-10">確認コマンド</a></li>
+          <li><a href="#sec-11">30秒チェック</a></li>
+          <li><a href="#sec-12">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>Linuxのユーザーとグループ</h2>
+        <p>Linuxは、複数の利用者が同じシステムを利用できるマルチユーザーOSです。</p>
+        <p>利用者ごとにユーザーアカウントを分け、ファイルの所有者や実行中のプロセスを区別します。これにより、ある利用者のファイルを別の利用者が勝手に変更することを防ぎやすくなります。</p>
+        <p>グループは、複数のユーザーをまとめて権限を与えるための仕組みです。例えば、同じ部署や同じ作業チームの利用者に、共通ディレクトリへのアクセス権を設定できます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>今回の目標：</strong>「誰が」「どのファイルに」「何をできるか」を、ユーザー、グループ、パーミッションの三つに分けて整理します。</p>
+        </aside>
+      </section>
+
+      <section id="sec-2">
+        <h2>UIDとGID</h2>
+
+        <h3>UID</h3>
+        <p>UIDは、User IDの略です。Linuxがユーザーを識別するための数値です。</p>
+        <p>画面上ではユーザー名を使いますが、カーネルやファイルシステムでは、基本的にUIDによって所有者を管理します。</p>
+
+        <h3>GID</h3>
+        <p>GIDは、Group IDの略です。Linuxがグループを識別するための数値です。</p>
+        <p>ユーザーには通常、主となるプライマリグループが一つあり、さらに複数の補助グループへ所属できます。</p>
+
+        <h3>ユーザー情報を保存する主なファイル</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>ファイル</th>
+              <th>主な内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>/etc/passwd</code></td>
+              <td>ユーザー名、UID、GID、ホームディレクトリ、ログインシェルなど</td>
+            </tr>
+            <tr>
+              <td><code>/etc/shadow</code></td>
+              <td>パスワードハッシュやパスワード有効期限に関する情報</td>
+            </tr>
+            <tr>
+              <td><code>/etc/group</code></td>
+              <td>グループ名、GID、所属ユーザーなど</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><code>/etc/passwd</code>のパスワード欄に<code>x</code>が入っている場合、実際のパスワード情報は通常<code>/etc/shadow</code>側で管理されます。</p>
+
+        <pre><code>id
+id alice
+getent passwd alice
+getent group developers</code></pre>
+
+        <p><code>id</code>は、UID、プライマリGID、補助グループを確認するコマンドです。</p>
+        <p><code>getent</code>は、ローカルファイルだけでなく、システムに設定された名前サービスを通してユーザーやグループ情報を取得できます。</p>
+      </section>
+
+      <section id="sec-3">
+        <h2>rootとsudo</h2>
+
+        <h3>root</h3>
+        <p>rootは、Linuxの管理者ユーザーです。通常、UIDは<code>0</code>です。</p>
+        <p>一般ユーザーでは実行できないシステム設定の変更、パッケージの導入、サービスの操作などを行えます。</p>
+        <p>強い権限を持つため、普段の作業を常にrootで行うと、入力ミスによる影響も大きくなります。</p>
+
+        <h3>sudo</h3>
+        <p><code>sudo</code>は、設定されたポリシーに従って、別のユーザーとしてコマンドを実行するための仕組みです。対象を指定しなければ、通常はrootとして実行します。</p>
+
+        <pre><code>sudo systemctl restart sshd
+sudo -u alice id
+sudo -l</code></pre>
+
+        <ul>
+          <li><code>sudo コマンド</code>：通常はroot権限で、そのコマンドだけを実行する</li>
+          <li><code>sudo -u ユーザー名 コマンド</code>：指定したユーザーとして実行する</li>
+          <li><code>sudo -l</code>：現在のユーザーに許可されたsudo操作を確認する</li>
+        </ul>
+
+        <p>sudoの設定は、主に<code>/etc/sudoers</code>や<code>/etc/sudoers.d/</code>で管理されます。編集するときは、構文確認を行う<code>visudo</code>を利用します。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>覚え方：</strong>rootは管理者ユーザーそのもの、sudoは許可された管理操作を一時的に実行するための仕組みです。</p>
+        </aside>
+      </section>
+
+      <section id="sec-4">
+        <h2>パーミッションの見方</h2>
+        <p>ファイルやディレクトリには、所有者、所有グループ、その他のユーザーに対する権限が設定されています。</p>
+
+        <pre><code>ls -l report.txt
+-rw-r----- 1 alice developers 1200 Jul 11 10:00 report.txt</code></pre>
+
+        <p>先頭の<code>-rw-r-----</code>を分解します。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>位置</th>
+              <th>意味</th>
+              <th>例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1文字目</td>
+              <td>ファイルの種類</td>
+              <td><code>-</code>は通常ファイル、<code>d</code>はディレクトリ</td>
+            </tr>
+            <tr>
+              <td>2～4文字目</td>
+              <td>所有者の権限</td>
+              <td><code>rw-</code></td>
+            </tr>
+            <tr>
+              <td>5～7文字目</td>
+              <td>所有グループの権限</td>
+              <td><code>r--</code></td>
+            </tr>
+            <tr>
+              <td>8～10文字目</td>
+              <td>その他のユーザーの権限</td>
+              <td><code>---</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>この例では、所有者aliceは読み書きでき、developersグループは読み取りだけでき、その他のユーザーはアクセスできません。</p>
+        <p>権限判定では、まず所有者に一致するか、次に対象グループに該当するか、それ以外かが確認されます。三つの権限を足し合わせて使うわけではありません。</p>
+      </section>
+
+      <section id="sec-5">
+        <h2>rwxの意味</h2>
+        <p><code>r</code>、<code>w</code>、<code>x</code>は、ファイルとディレクトリで意味が少し異なります。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>権限</th>
+              <th>通常ファイル</th>
+              <th>ディレクトリ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>r</code></td>
+              <td>内容を読み取る</td>
+              <td>ディレクトリ内の名前一覧を読む</td>
+            </tr>
+            <tr>
+              <td><code>w</code></td>
+              <td>内容を書き換える</td>
+              <td>ファイル名などの項目を作成・削除する</td>
+            </tr>
+            <tr>
+              <td><code>x</code></td>
+              <td>プログラムとして実行する</td>
+              <td>中へ移動し、配下の項目へアクセスする</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>ディレクトリの<code>x</code>は、通過や検索の権限と考えると分かりやすくなります。ファイル名が分かっていても、親ディレクトリに<code>x</code>がなければ、そのファイルへ到達できません。</p>
+        <p>また、ファイルを削除できるかどうかは、ファイル自身の<code>w</code>だけではなく、主に親ディレクトリの<code>w</code>と<code>x</code>によって決まります。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>chmod</h2>
+        <p><code>chmod</code>は、ファイルやディレクトリのモード、つまりパーミッションを変更するコマンドです。</p>
+
+        <h3>記号で指定する</h3>
+        <pre><code>chmod u+x script.sh
+chmod g-w report.txt
+chmod o=r public.txt</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>記号</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>u</code></td>
+              <td>所有者</td>
+            </tr>
+            <tr>
+              <td><code>g</code></td>
+              <td>所有グループ</td>
+            </tr>
+            <tr>
+              <td><code>o</code></td>
+              <td>その他のユーザー</td>
+            </tr>
+            <tr>
+              <td><code>a</code></td>
+              <td>すべて</td>
+            </tr>
+            <tr>
+              <td><code>+</code></td>
+              <td>権限を追加する</td>
+            </tr>
+            <tr>
+              <td><code>-</code></td>
+              <td>権限を外す</td>
+            </tr>
+            <tr>
+              <td><code>=</code></td>
+              <td>指定した権限にそろえる</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>数値で指定する</h3>
+        <p>数値表記では、<code>r=4</code>、<code>w=2</code>、<code>x=1</code>として足し合わせます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>数値</th>
+              <th>権限</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>0</code></td><td><code>---</code></td></tr>
+            <tr><td><code>1</code></td><td><code>--x</code></td></tr>
+            <tr><td><code>2</code></td><td><code>-w-</code></td></tr>
+            <tr><td><code>3</code></td><td><code>-wx</code></td></tr>
+            <tr><td><code>4</code></td><td><code>r--</code></td></tr>
+            <tr><td><code>5</code></td><td><code>r-x</code></td></tr>
+            <tr><td><code>6</code></td><td><code>rw-</code></td></tr>
+            <tr><td><code>7</code></td><td><code>rwx</code></td></tr>
+          </tbody>
+        </table>
+
+        <pre><code>chmod 640 report.txt
+chmod 755 script.sh</code></pre>
+
+        <p><code>640</code>は、所有者が読み書き、グループが読み取り、その他は権限なしです。</p>
+        <p><code>755</code>は、所有者が読み書き実行、グループとその他が読み取り実行です。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>注意：</strong><code>chmod -R</code>は配下へ再帰的に適用します。ファイルとディレクトリでは<code>x</code>の意味が異なるため、まとめて同じ数値へ変更する前に対象を確認します。</p>
+        </aside>
+      </section>
+
+      <section id="sec-7">
+        <h2>chown</h2>
+        <p><code>chown</code>は、ファイルやディレクトリの所有者や所有グループを変更するコマンドです。</p>
+
+        <pre><code>sudo chown alice report.txt
+sudo chown alice:developers report.txt
+sudo chown :developers report.txt</code></pre>
+
+        <ul>
+          <li><code>alice</code>：所有者だけをaliceへ変更する</li>
+          <li><code>alice:developers</code>：所有者をalice、所有グループをdevelopersへ変更する</li>
+          <li><code>:developers</code>：所有グループだけをdevelopersへ変更する</li>
+        </ul>
+
+        <p>所有グループだけを変更する場合は、<code>chgrp</code>も利用できます。</p>
+
+        <pre><code>chgrp developers report.txt</code></pre>
+
+        <p>一般ユーザーが自由に所有者を変更できると、ディスク使用量やアクセス制御を回避できる可能性があります。このため、所有者の変更には通常、管理者権限が必要です。</p>
+      </section>
+
+      <section id="sec-8">
+        <h2>umask</h2>
+        <p><code>umask</code>は、新しく作るファイルやディレクトリから、どの権限を外すかを指定するマスクです。</p>
+
+        <pre><code>umask
+umask -S</code></pre>
+
+        <p>一般的な作成時の基準は、通常ファイルが<code>666</code>、ディレクトリが<code>777</code>です。通常ファイルには、最初から実行権限を付けないのが基本です。</p>
+
+        <p>umaskが<code>022</code>の場合、グループとその他の書き込み権限を外します。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>対象</th>
+              <th>基準</th>
+              <th>umask</th>
+              <th>結果</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>通常ファイル</td>
+              <td><code>666</code></td>
+              <td><code>022</code></td>
+              <td><code>644</code></td>
+            </tr>
+            <tr>
+              <td>ディレクトリ</td>
+              <td><code>777</code></td>
+              <td><code>022</code></td>
+              <td><code>755</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>学習上は引き算のように見える例が多いですが、正確には、umaskで立っているビットを作成時のモードから消します。</p>
+        <p>umaskは新規作成時に影響するもので、既存ファイルの権限を変更するものではありません。既存の権限は<code>chmod</code>で変更します。</p>
+      </section>
+
+      <section id="sec-9">
+        <h2>SUID・SGID・Sticky Bit</h2>
+        <p>通常の<code>rwx</code>に加えて、特殊なモードビットがあります。</p>
+
+        <h3>SUID</h3>
+        <p>SUIDは、Set User IDの略です。実行ファイルに設定すると、そのファイルを実行したプロセスが、ファイル所有者の実効UIDを使って動作します。</p>
+
+        <pre><code>chmod u+s program
+chmod 4755 program</code></pre>
+
+        <p><code>ls -l</code>では、所有者の実行位置に<code>s</code>が表示されます。</p>
+
+        <h3>SGID</h3>
+        <p>SGIDは、Set Group IDの略です。実行ファイルに設定すると、実行時にファイル所有グループの実効GIDを使います。</p>
+        <p>ディレクトリに設定した場合、その中で新しく作成したファイルやディレクトリが、親ディレクトリのグループを引き継ぎやすくなります。共同作業用ディレクトリで利用されます。</p>
+
+        <pre><code>chmod g+s shared
+chmod 2775 shared</code></pre>
+
+        <h3>Sticky Bit</h3>
+        <p>Sticky Bitをディレクトリに設定すると、書き込み可能な共有ディレクトリでも、原則として自分が所有するファイル以外を削除・名前変更できないようにします。</p>
+
+        <pre><code>chmod +t shared
+chmod 1777 shared
+ls -ld /tmp</code></pre>
+
+        <p><code>/tmp</code>は、複数ユーザーが書き込める一方で他人のファイルを勝手に削除しにくくするため、通常Sticky Bitが設定されています。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>特殊ビット</th>
+              <th>数値</th>
+              <th>主な表示位置</th>
+              <th>主な用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SUID</td>
+              <td><code>4</code></td>
+              <td>所有者の<code>x</code>位置に<code>s</code></td>
+              <td>所有者の実効UIDで実行</td>
+            </tr>
+            <tr>
+              <td>SGID</td>
+              <td><code>2</code></td>
+              <td>グループの<code>x</code>位置に<code>s</code></td>
+              <td>所有グループの実効GIDで実行、またはグループ継承</td>
+            </tr>
+            <tr>
+              <td>Sticky Bit</td>
+              <td><code>1</code></td>
+              <td>その他の<code>x</code>位置に<code>t</code></td>
+              <td>共有ディレクトリで他人の項目を削除しにくくする</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>実行権限が付いていない位置に特殊ビットだけが設定されている場合、<code>S</code>や<code>T</code>の大文字で表示されます。</p>
+      </section>
+
+      <section id="sec-10">
+        <h2>確認コマンド</h2>
+        <p>ユーザーや権限を調べるときは、次の順番で確認すると整理しやすくなります。</p>
+
+        <pre><code>whoami
+id
+groups
+ls -l 対象
+ls -ld ディレクトリ
+stat 対象
+namei -l /path/to/file</code></pre>
+
+        <ul>
+          <li><code>whoami</code>：現在の実効ユーザー名を表示する</li>
+          <li><code>id</code>：UID、GID、所属グループを表示する</li>
+          <li><code>groups</code>：所属グループを表示する</li>
+          <li><code>ls -l</code>：所有者、所有グループ、パーミッションを確認する</li>
+          <li><code>ls -ld</code>：ディレクトリ自身の情報を確認する</li>
+          <li><code>stat</code>：数値表記を含む詳しい属性を確認する</li>
+          <li><code>namei -l</code>：パスの途中にある各ディレクトリの権限を確認する</li>
+        </ul>
+
+        <p>「Permission denied」が出たときは、対象ファイルだけでなく、親ディレクトリの<code>x</code>、現在のUIDとGID、所有者と所有グループを順番に確認します。</p>
+
+        <p>詳しい使い方は、次のマニュアルでも確認できます。</p>
+        <pre><code>man 5 passwd
+man 5 group
+man 8 sudo
+man chmod
+man chown
+man 2 umask
+man 7 inode</code></pre>
+      </section>
+
+      <section id="sec-11">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>Linuxがユーザーとグループを識別する数値を、それぞれ何と呼ぶでしょうか。</li>
+          <li>rootユーザーのUIDは通常いくつでしょうか。</li>
+          <li><code>chmod 640 file</code>では、所有者、グループ、その他にどの権限が設定されるでしょうか。</li>
+          <li>ディレクトリの<code>x</code>は、主に何を許可する権限でしょうか。</li>
+          <li>umaskが<code>022</code>の場合、通常ファイルとディレクトリは一般に何の権限で作られるでしょうか。</li>
+          <li>共有ディレクトリで、他人のファイルを削除しにくくする特殊ビットは何でしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li>UIDとGID</li>
+            <li><code>0</code></li>
+            <li>所有者は読み書き、グループは読み取り、その他は権限なし</li>
+            <li>ディレクトリを通過し、配下の項目へアクセスする権限</li>
+            <li>通常ファイルは<code>644</code>、ディレクトリは<code>755</code></li>
+            <li>Sticky Bit</li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-12">
+        <h2>要約</h2>
+        <ul>
+          <li>LinuxはUIDとGIDを使ってユーザーとグループを識別します。</li>
+          <li>ユーザー情報は主に<code>/etc/passwd</code>、パスワード情報は<code>/etc/shadow</code>、グループ情報は<code>/etc/group</code>で管理されます。</li>
+          <li>rootは通常UID 0の管理者ユーザーで、sudoは許可された操作を別ユーザーとして実行する仕組みです。</li>
+          <li>パーミッションは、所有者、所有グループ、その他の三つに分かれます。</li>
+          <li><code>r</code>、<code>w</code>、<code>x</code>は、通常ファイルとディレクトリで意味が異なります。</li>
+          <li><code>chmod</code>は権限、<code>chown</code>は所有者や所有グループを変更します。</li>
+          <li>umaskは、新規作成時に外す権限を指定します。</li>
+          <li>SUID、SGID、Sticky Bitは、通常のrwxに追加される特殊なモードビットです。</li>
+          <li>権限エラーでは、現在のUID・GID、対象の所有者、パーミッション、親ディレクトリのxを順番に確認します。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://man7.org/linux/man-pages/man5/passwd.5.html" target="_blank" rel="noopener noreferrer">passwd(5) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man5/shadow.5.html" target="_blank" rel="noopener noreferrer">shadow(5) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man5/group.5.html" target="_blank" rel="noopener noreferrer">group(5) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man8/sudo.8.html" target="_blank" rel="noopener noreferrer">sudo(8) manual page</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/chmod-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：chmod invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/chown-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：chown invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/Directory-Setuid-and-Setgid.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：Directory Setuid and Setgid</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man2/umask.2.html" target="_blank" rel="noopener noreferrer">umask(2) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man7/inode.7.html" target="_blank" rel="noopener noreferrer">inode(7) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man2/chmod.2.html" target="_blank" rel="noopener noreferrer">chmod(2) manual page</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

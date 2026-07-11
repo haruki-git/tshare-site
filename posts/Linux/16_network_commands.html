@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LPIC Level1 復習ラジオ 16：ネットワークコマンド</title>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<main class="container">
+<article class="card">
+<header>
+<h1>LPIC Level1 復習ラジオ 16：ネットワークコマンド</h1>
+<nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+<p class="meta">投稿日：2026-07-11</p>
+</header>
+<section class="card" style="margin-top:12px;">
+<h2 style="margin:0 0 8px 0;">音声</h2>
+<audio controls preload="none" src="/posts/Linux/audio/16_network_commands_tts.mp3"></audio>
+<p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+</section>
+<section id="sec-toc">
+<h2>目次</h2>
+<ol><li><a href="#sec-1">ネットワーク確認の基本順序</a></li>
+<li><a href="#sec-2">ip</a></li>
+<li><a href="#sec-3">ping</a></li>
+<li><a href="#sec-4">ss</a></li>
+<li><a href="#sec-5">traceroute</a></li>
+<li><a href="#sec-6">dig</a></li>
+<li><a href="#sec-7">host</a></li>
+<li><a href="#sec-8">curl</a></li>
+<li><a href="#sec-9">wget</a></li>
+<li><a href="#sec-10">実践的な切り分け手順</a></li>
+<li><a href="#sec-11">30秒チェック</a></li>
+<li><a href="#sec-12">要約</a></li></ol>
+</section>
+<section id="sec-1"><h2>ネットワーク確認の基本順序</h2>
+<p>ネットワーク障害では、手元から外側へ順番に確認すると原因を絞り込みやすくなります。</p>
+<ol>
+<li>インターフェースが存在し、有効か</li>
+<li>IPアドレスとプレフィックスが正しいか</li>
+<li>ルーティング、特にデフォルトルートがあるか</li>
+<li>同一ネットワークやゲートウェイへ到達できるか</li>
+<li>目的のサービスが待ち受けているか</li>
+<li>途中経路のどこまで到達しているか</li>
+<li>DNSで名前解決できるか</li>
+<li>HTTPなど目的のアプリケーション通信が成功するか</li>
+</ol>
+<pre><code>ip link
+ip addr
+ip route
+ping -c 4 192.0.2.1
+ss -lnt
+traceroute 198.51.100.10
+dig example.com
+curl -I https://example.com/</code></pre>
+<table>
+<thead><tr><th>コマンド</th><th>主な確認対象</th></tr></thead>
+<tbody>
+<tr><td><code>ip</code></td><td>インターフェース、IPアドレス、ルート、近隣キャッシュ</td></tr>
+<tr><td><code>ping</code></td><td>ICMP Echoによる到達性と応答時間</td></tr>
+<tr><td><code>ss</code></td><td>待受ソケット、通信中の接続、TCP状態</td></tr>
+<tr><td><code>traceroute</code></td><td>宛先までの経路上のホップ</td></tr>
+<tr><td><code>dig</code>・<code>host</code></td><td>DNS問い合わせ</td></tr>
+<tr><td><code>curl</code>・<code>wget</code></td><td>HTTP・HTTPSなどを使ったデータ転送</td></tr>
+</tbody>
+</table>
+<aside class="card" style="margin-top:12px;"><p style="margin:0;"><strong>重要：</strong>IPアドレスでは成功し、名前では失敗するならDNSを確認します。pingは通るのにSSHやWebへ接続できないなら、待受ポート、ファイアウォール、サービス、アプリケーション側を確認します。</p></aside>
+</section>
+<section id="sec-2"><h2>ip</h2>
+<p><code>ip</code>は、ネットワークデバイス、IPアドレス、ルーティング、近隣情報などを表示・設定するiproute2の中心的なコマンドです。</p>
+<pre><code>ip [オプション] オブジェクト コマンド</code></pre>
+<table>
+<thead><tr><th>オブジェクト</th><th>省略形</th><th>対象</th></tr></thead>
+<tbody>
+<tr><td><code>link</code></td><td><code>l</code></td><td>ネットワークインターフェース</td></tr>
+<tr><td><code>address</code></td><td><code>addr</code>、<code>a</code></td><td>IPv4・IPv6アドレス</td></tr>
+<tr><td><code>route</code></td><td><code>r</code></td><td>ルーティングテーブル</td></tr>
+<tr><td><code>neighbour</code></td><td><code>neigh</code>、<code>n</code></td><td>ARP・IPv6近隣キャッシュ</td></tr>
+</tbody>
+</table>
+<h3>インターフェース</h3>
+<pre><code>ip link show
+ip -br link
+ip link show dev enp0s3
+
+sudo ip link set dev enp0s3 up
+sudo ip link set dev enp0s3 down</code></pre>
+<p><code>-br</code>は簡潔な一行表示です。リモート接続中のインターフェースをdownにすると接続が切れるため注意します。</p>
+<h3>IPアドレス</h3>
+<pre><code>ip address show
+ip -br address
+ip -4 addr show
+ip -6 addr show
+ip addr show dev enp0s3</code></pre>
+<p><code>192.0.2.10/24</code>の<code>/24</code>はプレフィックス長です。</p>
+<pre><code>sudo ip addr add 192.0.2.10/24 dev enp0s3
+sudo ip addr del 192.0.2.10/24 dev enp0s3</code></pre>
+<p><code>ip</code>で直接行った設定は通常、再起動後に残りません。永続設定はNetworkManager、systemd-networkd、Netplanなど環境に合った方法で行います。</p>
+<h3>ルーティング</h3>
+<pre><code>ip route show
+ip -4 route
+ip -6 route
+ip route get 203.0.113.10</code></pre>
+<pre><code>default via 192.0.2.1 dev enp0s3
+192.0.2.0/24 dev enp0s3 proto kernel scope link src 192.0.2.10</code></pre>
+<ul>
+<li><code>default</code>：より具体的な経路がない宛先に使う</li>
+<li><code>via</code>：次に渡すゲートウェイ</li>
+<li><code>dev</code>：送信インターフェース</li>
+<li><code>src</code>：選択される送信元アドレス</li>
+</ul>
+<p><code>ip route get</code>は、特定宛先へ実際に選ばれる経路、ゲートウェイ、送信元アドレスを確認します。</p>
+<pre><code>sudo ip route add default via 192.0.2.1 dev enp0s3
+sudo ip route del default via 192.0.2.1 dev enp0s3
+sudo ip route add 198.51.100.0/24 via 192.0.2.254</code></pre>
+<h3>近隣キャッシュ</h3>
+<pre><code>ip neighbour show
+ip neigh show dev enp0s3
+ip neigh show 192.0.2.1</code></pre>
+<table>
+<thead><tr><th>状態</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td><code>REACHABLE</code></td><td>最近到達できることを確認した</td></tr>
+<tr><td><code>STALE</code></td><td>情報はあるが最近の到達確認はない</td></tr>
+<tr><td><code>PROBE</code></td><td>到達確認を試行している</td></tr>
+<tr><td><code>FAILED</code></td><td>近隣解決に失敗した</td></tr>
+<tr><td><code>INCOMPLETE</code></td><td>リンク層アドレスが未確定</td></tr>
+</tbody>
+</table>
+<pre><code>ip monitor
+ip monitor link address route</code></pre>
+<p><code>ip monitor</code>は、リンク、アドレス、ルートなどの変化を継続表示します。</p>
+</section>
+<section id="sec-3"><h2>ping</h2>
+<p><code>ping</code>は、ICMP Echo Requestを送り、Echo Replyを受け取ることで、宛先への到達性や往復時間を確認します。</p>
+<pre><code>ping [オプション] 宛先</code></pre>
+<h3>基本操作</h3>
+<pre><code>ping -c 4 192.0.2.1
+ping -4 -c 4 example.com
+ping -6 -c 4 example.com
+ping -n -c 4 192.0.2.1</code></pre>
+<ul>
+<li><code>-c 回数</code>：指定回数で終了する</li>
+<li><code>-4</code>・<code>-6</code>：IPv4・IPv6を指定する</li>
+<li><code>-n</code>：表示時の名前解決を行わない</li>
+</ul>
+<h3>送信元、間隔、待ち時間</h3>
+<pre><code>ping -I enp0s3 -c 4 192.0.2.1
+ping -I 192.0.2.10 -c 4 198.51.100.10
+ping -i 2 -c 4 192.0.2.1
+ping -W 2 -c 4 192.0.2.1
+ping -w 10 192.0.2.1</code></pre>
+<table>
+<thead><tr><th>オプション</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td><code>-I</code></td><td>送信インターフェースまたは送信元アドレス</td></tr>
+<tr><td><code>-i 秒</code></td><td>送信間隔</td></tr>
+<tr><td><code>-W 秒</code></td><td>各応答を待つ時間</td></tr>
+<tr><td><code>-w 秒</code></td><td>コマンド全体の締め切り時間</td></tr>
+</tbody>
+</table>
+<h3>パケットサイズ</h3>
+<pre><code>ping -s 1400 -c 4 192.0.2.1
+ping -M do -s 1472 -c 4 192.0.2.1</code></pre>
+<p><code>-s</code>はICMPデータ部分のサイズです。IPv4でMTUが1500の場合、IPヘッダー20バイトとICMPヘッダー8バイトを引いた1472バイトが一つの目安ですが、トンネルなどで条件は変わります。</p>
+<h3>結果と注意点</h3>
+<pre><code>4 packets transmitted, 4 received, 0% packet loss
+rtt min/avg/max/mdev = 1.100/1.250/1.400/0.120 ms</code></pre>
+<p>packet lossと、最小・平均・最大の往復時間を確認します。</p>
+<p>pingが失敗しても、ホストやファイアウォールがICMP Echoへ応答しないだけの場合があります。反対にpingが成功しても、目的のTCP・UDPポートが利用できるとは限りません。</p>
+</section>
+<section id="sec-4"><h2>ss</h2>
+<p><code>ss</code>は、ソケット統計を表示し、待受ポート、通信中の接続、TCP状態、関連プロセスなどを確認します。</p>
+<pre><code>ss [オプション] [フィルター]</code></pre>
+<table>
+<thead><tr><th>オプション</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td><code>-t</code></td><td>TCP</td></tr>
+<tr><td><code>-u</code></td><td>UDP</td></tr>
+<tr><td><code>-l</code></td><td>待受ソケット</td></tr>
+<tr><td><code>-a</code></td><td>待受と非待受を含むすべて</td></tr>
+<tr><td><code>-n</code></td><td>アドレスやポートを名前へ変換しない</td></tr>
+<tr><td><code>-p</code></td><td>関連プロセスを表示する</td></tr>
+<tr><td><code>-4</code>・<code>-6</code></td><td>IPv4・IPv6に限定する</td></tr>
+<tr><td><code>-s</code></td><td>ソケット使用状況の概要</td></tr>
+</tbody>
+</table>
+<h3>代表的な確認</h3>
+<pre><code>ss -lnt
+sudo ss -lntp
+sudo ss -tulnp
+ss -ant
+ss -s</code></pre>
+<h3>TCP状態で絞り込む</h3>
+<pre><code>ss -tn state established
+ss -tn state time-wait</code></pre>
+<table>
+<thead><tr><th>状態</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td><code>LISTEN</code></td><td>接続要求を待っている</td></tr>
+<tr><td><code>ESTABLISHED</code></td><td>接続が確立している</td></tr>
+<tr><td><code>SYN-SENT</code></td><td>接続要求を送り、応答待ち</td></tr>
+<tr><td><code>SYN-RECV</code></td><td>接続要求を受け、確立処理中</td></tr>
+<tr><td><code>TIME-WAIT</code></td><td>終了後、遅延パケットの影響を避けるため待っている</td></tr>
+<tr><td><code>CLOSE-WAIT</code></td><td>相手の終了後、ローカルアプリケーションのclose待ち</td></tr>
+</tbody>
+</table>
+<h3>フィルター</h3>
+<pre><code>ss -lnt 'sport = :22'
+ss -lnt 'sport = :80 or sport = :443'
+ss -tn 'dport = :443'
+ss -tn 'src 192.0.2.10'</code></pre>
+<p><code>sport</code>は送信元ポート、<code>dport</code>は宛先ポートです。</p>
+<h3>待受アドレス</h3>
+<pre><code>127.0.0.1:8080
+0.0.0.0:22
+[::]:22</code></pre>
+<ul>
+<li><code>127.0.0.1:8080</code>：通常はローカルホストだけ</li>
+<li><code>0.0.0.0:22</code>：IPv4の全ローカルアドレス</li>
+<li><code>[::]:22</code>：IPv6の未指定アドレス</li>
+</ul>
+<p>IPv6ソケットがIPv4も受け付けるかは、アプリケーションとシステム設定により異なります。</p>
+</section>
+<section id="sec-5"><h2>traceroute</h2>
+<p><code>traceroute</code>は、パケットのTTLを段階的に増やし、宛先までの経路上にあるルーターからの応答を表示します。</p>
+<pre><code>traceroute [オプション] 宛先</code></pre>
+<h3>基本操作</h3>
+<pre><code>traceroute example.com
+traceroute -n 198.51.100.10
+traceroute -4 example.com
+traceroute -6 example.com</code></pre>
+<p><code>-n</code>は各ホップを名前へ変換せず、IPアドレスで表示します。</p>
+<h3>プローブ方式</h3>
+<pre><code>sudo traceroute -I example.com
+sudo traceroute -T -p 443 example.com
+sudo traceroute -T -p 22 198.51.100.10</code></pre>
+<ul>
+<li><code>-I</code>：ICMP Echoプローブ</li>
+<li><code>-T</code>：TCP SYNプローブ</li>
+<li><code>-p</code>：宛先ポート</li>
+</ul>
+<p>標準方式が遮断される環境でも、目的サービスに近い条件で確認できる場合があります。</p>
+<h3>最大ホップ数と待ち時間</h3>
+<pre><code>traceroute -m 15 -w 2 example.com
+traceroute -i enp0s3 example.com</code></pre>
+<ul>
+<li><code>-m</code>：最大ホップ数</li>
+<li><code>-w</code>：応答待ち時間</li>
+<li><code>-i</code>：送信インターフェース</li>
+</ul>
+<h3>アスタリスク</h3>
+<pre><code> 5  * * *
+ 6  203.0.113.1  20.1 ms  19.8 ms  20.0 ms</code></pre>
+<p><code>*</code>は、そのプローブへの応答を待ち時間内に受け取れなかったことを表します。ルーターが応答しない、ICMPを制限しているなどの可能性があります。</p>
+<p>その後のホップや最終宛先へ到達しているなら、アスタリスクの位置で通信が必ず途絶えたとは断定できません。また、往路と復路が異なる場合もあります。</p>
+</section>
+<section id="sec-6"><h2>dig</h2>
+<p><code>dig</code>は、DNSサーバーへ問い合わせを送り、返されたDNS応答を詳しく表示します。</p>
+<pre><code>dig [@DNSサーバー] 名前 [タイプ] [オプション]</code></pre>
+<h3>基本とレコードタイプ</h3>
+<pre><code>dig example.com
+dig example.com A
+dig example.com AAAA
+dig example.com MX
+dig example.com NS
+dig example.com TXT
+dig example.com SOA</code></pre>
+<table>
+<thead><tr><th>タイプ</th><th>用途</th></tr></thead>
+<tbody>
+<tr><td><code>A</code></td><td>IPv4アドレス</td></tr>
+<tr><td><code>AAAA</code></td><td>IPv6アドレス</td></tr>
+<tr><td><code>MX</code></td><td>メール配送先</td></tr>
+<tr><td><code>NS</code></td><td>権威DNSサーバー</td></tr>
+<tr><td><code>CNAME</code></td><td>別名</td></tr>
+<tr><td><code>TXT</code></td><td>文字列情報</td></tr>
+<tr><td><code>SOA</code></td><td>ゾーン管理情報</td></tr>
+<tr><td><code>PTR</code></td><td>逆引き</td></tr>
+</tbody>
+</table>
+<h3>問い合わせ先を指定する</h3>
+<pre><code>dig @192.0.2.53 example.com A
+dig @1.1.1.1 example.com A</code></pre>
+<p><code>@サーバー</code>を省略すると、通常はシステムのリゾルバー設定に基づくDNSサーバーへ問い合わせます。</p>
+<h3>出力を絞る</h3>
+<pre><code>dig +short example.com A
+dig +noall +answer example.com A
+dig -x 192.0.2.10</code></pre>
+<ul>
+<li><code>+short</code>：簡潔な結果</li>
+<li><code>+noall +answer</code>：ANSWERセクションだけ</li>
+<li><code>-x</code>：PTRレコードによる逆引き</li>
+</ul>
+<h3>TCPと委任経路</h3>
+<pre><code>dig +tcp example.com A
+dig +trace example.com</code></pre>
+<p>DNSは通常UDPを使いますが、応答が切り詰められた場合などはTCPが使われます。<code>+trace</code>はルートDNSから委任をたどります。</p>
+<h3>主要な出力</h3>
+<table>
+<thead><tr><th>項目</th><th>確認内容</th></tr></thead>
+<tbody>
+<tr><td><code>status</code></td><td>NOERROR、NXDOMAIN、SERVFAIL、REFUSEDなど</td></tr>
+<tr><td><code>QUESTION SECTION</code></td><td>問い合わせた名前とタイプ</td></tr>
+<tr><td><code>ANSWER SECTION</code></td><td>回答</td></tr>
+<tr><td><code>AUTHORITY SECTION</code></td><td>権威情報</td></tr>
+<tr><td><code>SERVER</code></td><td>応答したDNSサーバー</td></tr>
+<tr><td><code>Query time</code></td><td>問い合わせ時間</td></tr>
+</tbody>
+</table>
+<p><code>NOERROR</code>でも、指定タイプの回答が空の場合があります。statusだけでなくANSWERも確認します。</p>
+</section>
+<section id="sec-7"><h2>host</h2>
+<p><code>host</code>は、DNS問い合わせを簡潔に実行するコマンドです。短い確認には<code>host</code>、詳細な調査には<code>dig</code>が向いています。</p>
+<pre><code>host [オプション] 名前 [DNSサーバー]</code></pre>
+<h3>基本操作</h3>
+<pre><code>host example.com
+host -t A example.com
+host -t AAAA example.com
+host -t MX example.com
+host -t NS example.com
+host 192.0.2.10</code></pre>
+<p><code>-t</code>はレコードタイプを指定します。IPアドレスを指定すると通常は逆引きを行います。</p>
+<h3>DNSサーバーを指定する</h3>
+<pre><code>host example.com 192.0.2.53
+host -t MX example.com 192.0.2.53
+host -v example.com</code></pre>
+<p><code>host</code>では問い合わせ先を末尾へ指定します。<code>dig @サーバー 名前</code>とは書き方が異なります。</p>
+<table>
+<thead><tr><th>コマンド</th><th>向いている用途</th></tr></thead>
+<tbody>
+<tr><td><code>host</code></td><td>名前やIPアドレスを短く確認する</td></tr>
+<tr><td><code>dig</code></td><td>問い合わせ先、応答セクション、ステータスを詳しく確認する</td></tr>
+</tbody>
+</table>
+</section>
+<section id="sec-8"><h2>curl</h2>
+<p><code>curl</code>は、URLで指定したサーバーとの間でデータを転送します。HTTP・HTTPSの動作確認、API、ファイル取得などに使われます。</p>
+<pre><code>curl [オプション] URL</code></pre>
+<h3>本文、ヘッダー、詳細</h3>
+<pre><code>curl https://example.com/
+curl -I https://example.com/
+curl -v https://example.com/
+curl -L http://example.com/</code></pre>
+<ul>
+<li><code>-I</code>：HTTPでHEADリクエストを行いヘッダーを取得する</li>
+<li><code>-v</code>：名前解決、接続、TLS、HTTPヘッダーなどを詳しく表示する</li>
+<li><code>-L</code>：3xxリダイレクトをたどる</li>
+</ul>
+<p><code>-v</code>の出力には認証情報やCookieが含まれる場合があるため、ログ共有時に注意します。</p>
+<h3>保存</h3>
+<pre><code>curl -o page.html https://example.com/
+curl -O https://example.com/files/archive.tar.gz
+curl -sS https://example.com/ -o page.html</code></pre>
+<ul>
+<li><code>-o 名前</code>：指定名で保存する</li>
+<li><code>-O</code>：URL末尾の名前で保存する</li>
+<li><code>-sS</code>：進捗を抑え、失敗時のエラーは表示する</li>
+</ul>
+<h3>時間制限とIPバージョン</h3>
+<pre><code>curl --connect-timeout 5 --max-time 15 https://example.com/
+curl -4 https://example.com/
+curl -6 https://example.com/</code></pre>
+<h3>ステータスとヘッダー</h3>
+<pre><code>curl -sS -o /dev/null   -w 'code=%{http_code} connect=%{time_connect} total=%{time_total}
+'   https://example.com/
+
+curl -H 'Accept: application/json' https://api.example.com/data</code></pre>
+<p><code>-w</code>は転送後にHTTPステータスや時間を表示し、<code>-H</code>は送信ヘッダーを追加します。認証情報を履歴やログへ残さないよう注意します。</p>
+<h3>データ送信</h3>
+<pre><code>curl -d 'name=alice&amp;role=user' https://example.com/form
+curl -H 'Content-Type: application/json'   -d '{"name":"alice"}'   https://api.example.com/users</code></pre>
+<p><code>-d</code>を指定すると通常POSTになるため、単純なPOSTでは<code>-X POST</code>は必須ではありません。</p>
+<h3>証明書検証</h3>
+<pre><code>curl -k https://example.com/</code></pre>
+<p><code>-k</code>はTLS証明書の検証を無効にします。通常運用では使用せず、CA証明書、ホスト名、システム時刻、証明書チェーンを修正します。</p>
+</section>
+<section id="sec-9"><h2>wget</h2>
+<p><code>wget</code>は、Webからファイルを非対話的に取得します。単一ファイル、再開、再帰取得、ミラーリングなどに向いています。</p>
+<pre><code>wget [オプション] URL...</code></pre>
+<h3>取得、保存名、再開</h3>
+<pre><code>wget https://example.com/files/archive.tar.gz
+wget -O archive.tar.gz 'https://example.com/download?id=123'
+wget -c https://example.com/files/large.iso</code></pre>
+<ul>
+<li><code>-O 名前</code>：指定ファイルへ書き出す</li>
+<li><code>-c</code>：既存の部分ファイルから再開を試みる</li>
+</ul>
+<p><code>-O</code>へ複数URLを指定すると一つの出力へ連結されるため注意します。</p>
+<h3>表示と存在確認</h3>
+<pre><code>wget -q https://example.com/file.txt
+wget -nv https://example.com/file.txt
+wget -S https://example.com/file.txt
+wget --spider https://example.com/file.txt
+wget -N https://example.com/file.txt</code></pre>
+<ul>
+<li><code>-q</code>：出力を抑える</li>
+<li><code>-nv</code>：必要最低限の情報を表示する</li>
+<li><code>-S</code>：サーバー応答を表示する</li>
+<li><code>--spider</code>：保存せず存在を確認する</li>
+<li><code>-N</code>：タイムスタンプを基に更新取得する</li>
+</ul>
+<h3>再帰取得</h3>
+<pre><code>wget -r https://example.com/docs/
+wget -r -np https://example.com/docs/
+wget --mirror --convert-links --page-requisites   --no-parent https://example.com/docs/</code></pre>
+<p><code>-r</code>は再帰取得、<code>-np</code>は上位ディレクトリへ移動しない指定です。多数のリクエストと容量を発生させる可能性があるため、範囲、負荷、利用規約、著作権を確認します。</p>
+<h3>IPバージョンと標準出力</h3>
+<pre><code>wget -4 https://example.com/file.txt
+wget -6 https://example.com/file.txt
+wget -qO- https://example.com/data.txt | grep 'ERROR'</code></pre>
+<p><code>-O -</code>は標準出力へ送ります。</p>
+<h3>証明書検証</h3>
+<pre><code>wget --no-check-certificate https://example.com/file.txt</code></pre>
+<p>証明書検証の無効化を恒久対応にせず、CA証明書、ホスト名、時刻、サーバー設定を修正します。</p>
+<table>
+<thead><tr><th>コマンド</th><th>向いている用途</th></tr></thead>
+<tbody>
+<tr><td><code>curl</code></td><td>HTTPヘッダー、API、詳細な通信確認、標準出力への転送</td></tr>
+<tr><td><code>wget</code></td><td>ファイル保存、再開、再帰取得、非対話的なダウンロード</td></tr>
+</tbody>
+</table>
+</section>
+<section id="sec-10"><h2>実践的な切り分け手順</h2>
+<h3>接続できない</h3>
+<pre><code>ip -br link
+ip -br addr
+ip route
+ip route get 198.51.100.10
+ping -c 4 127.0.0.1
+ping -c 4 192.0.2.10
+ping -c 4 192.0.2.1
+ping -c 4 198.51.100.10
+ip neigh show</code></pre>
+<p>ループバック、自分のIP、ゲートウェイ、外部IPの順に確認します。ゲートウェイだけ失敗する場合は、リンク、VLAN、プレフィックス、ARPなどを確認します。</p>
+<h3>IPでは成功するが名前では失敗する</h3>
+<pre><code>ping -c 4 198.51.100.10
+ping -c 4 example.com
+dig example.com
+dig @192.0.2.53 example.com A
+host example.com
+cat /etc/resolv.conf</code></pre>
+<p>DNSサーバー設定、DNSサーバーへの到達性、回答、検索ドメインなどを確認します。</p>
+<h3>pingは通るがSSHへ接続できない</h3>
+<pre><code>sudo ss -lntp 'sport = :22'
+systemctl status ssh
+systemctl status sshd
+ip route get 198.51.100.10
+sudo traceroute -T -p 22 -n 198.51.100.10
+ssh -vvv user@198.51.100.10</code></pre>
+<p>待受、サービス、ファイアウォール、アクセス制御、経路、NAT、SSH設定を確認します。</p>
+<h3>Webへ接続できない</h3>
+<pre><code>dig example.com A
+dig example.com AAAA
+curl -4 -v --connect-timeout 5 https://example.com/
+curl -6 -v --connect-timeout 5 https://example.com/
+curl -I -L https://example.com/</code></pre>
+<p><code>curl -v</code>で、名前解決、TCP接続、TLS、HTTPのどの段階で失敗するかを確認します。</p>
+<h3>途中経路が怪しい</h3>
+<pre><code>traceroute -n 198.51.100.10
+sudo traceroute -I -n 198.51.100.10
+sudo traceroute -T -p 443 -n 198.51.100.10</code></pre>
+<p>複数方式を比較し、途中のアスタリスクだけで障害箇所を断定しません。</p>
+<h3>よくある間違い</h3>
+<table>
+<thead><tr><th>間違いやすい点</th><th>確認すること</th></tr></thead>
+<tbody>
+<tr><td>ping失敗だけで相手停止と断定する</td><td>ICMP遮断の場合がある。目的のTCP・UDPも確認する</td></tr>
+<tr><td>ping成功だけでサービス正常と判断する</td><td><code>ss</code>や<code>curl</code>でポートとアプリケーションを確認する</td></tr>
+<tr><td>IPだけ見てプレフィックスを確認しない</td><td><code>ip addr</code>で<code>/24</code>なども確認する</td></tr>
+<tr><td>デフォルトルートの有無だけを見る</td><td><code>ip route get 宛先</code>で実際の経路を確認する</td></tr>
+<tr><td>待受があれば外部接続できると思う</td><td>待受アドレス、ファイアウォール、経路も確認する</td></tr>
+<tr><td>tracerouteの<code>*</code>を障害箇所と断定する</td><td>その後のホップと最終到達性も確認する</td></tr>
+<tr><td><code>dig +short</code>だけで調査する</td><td>通常出力でstatus、SERVER、ANSWERも確認する</td></tr>
+<tr><td>hostとdigのサーバー指定を混同する</td><td><code>dig @サーバー 名前</code>、<code>host 名前 サーバー</code></td></tr>
+<tr><td>証明書検証無効化を恒久対応にする</td><td>証明書、CA、ホスト名、時刻を修正する</td></tr>
+<tr><td><code>wget -r</code>を無制限に実行する</td><td>範囲、負荷、容量、利用規約を確認する</td></tr>
+</tbody>
+</table>
+<h3>manページ</h3>
+<pre><code>man ip
+man ip-address
+man ip-link
+man ip-route
+man ip-neighbour
+man ping
+man ss
+man traceroute
+man dig
+man host
+man curl
+man wget</code></pre>
+</section>
+<section id="sec-11"><h2>30秒チェック</h2>
+<ol>
+<li><code>ip</code>でインターフェース、アドレス、ルート、近隣情報を表示するオブジェクトは何でしょうか。</li>
+<li>特定宛先へ使われる経路を確認するコマンドは何でしょうか。</li>
+<li><code>ping -c 4</code>、<code>-W 2</code>、<code>-w 10</code>は何を指定するでしょうか。</li>
+<li>ping失敗だけで相手ホストの停止と断定できない理由は何でしょうか。</li>
+<li>TCPとUDPの待受ポートとプロセスを数値表示する代表的な<code>ss</code>コマンドは何でしょうか。</li>
+<li><code>127.0.0.1:8080</code>で待ち受けるサービスへ、別PCから通常接続できるでしょうか。</li>
+<li><code>traceroute</code>の<code>*</code>は、必ずそこで通信が切れたことを意味するでしょうか。</li>
+<li><code>dig</code>でDNSサーバーを指定する書き方は何でしょうか。</li>
+<li><code>dig -x</code>は何を問い合わせるでしょうか。</li>
+<li><code>curl -I</code>、<code>-L</code>、<code>-o</code>、<code>-O</code>の用途は何でしょうか。</li>
+<li><code>wget -c</code>、<code>--spider</code>、<code>-r</code>の用途は何でしょうか。</li>
+<li>IPでは通信でき、名前では失敗するときに疑う機能は何でしょうか。</li>
+</ol>
+<details><summary>答えを表示</summary>
+<ol>
+<li><code>link</code>、<code>address</code>、<code>route</code>、<code>neighbour</code></li>
+<li><code>ip route get 宛先</code></li>
+<li><code>-c</code>は回数、<code>-W</code>は各応答の待ち時間、<code>-w</code>は全体の締め切り</li>
+<li>ICMP Echoがファイアウォールなどで遮断される場合があるため</li>
+<li><code>sudo ss -tulnp</code></li>
+<li>通常できない。ループバックアドレスだけで待ち受けているため</li>
+<li>意味しない。応答制限でも<code>*</code>になる</li>
+<li><code>dig @DNSサーバー 名前 タイプ</code></li>
+<li>PTRレコードによる逆引き</li>
+<li><code>-I</code>はヘッダー、<code>-L</code>はリダイレクト、<code>-o</code>は指定名保存、<code>-O</code>はURL側の名前で保存</li>
+<li><code>-c</code>は再開、<code>--spider</code>は存在確認、<code>-r</code>は再帰取得</li>
+<li>DNSによる名前解決</li>
+</ol></details>
+</section>
+<section id="sec-12"><h2>要約</h2>
+<ul>
+<li><code>ip link</code>はインターフェース、<code>ip addr</code>はIPアドレス、<code>ip route</code>はルート、<code>ip neigh</code>は近隣キャッシュを表示します。</li>
+<li><code>ip route get 宛先</code>は、実際に選ばれる経路と送信元アドレスを確認します。</li>
+<li><code>ping</code>はICMP Echoによる到達性と往復時間を確認し、<code>-c</code>で回数を指定します。</li>
+<li>ping失敗はICMP遮断でも起こり、ping成功でも目的サービスの利用可否は分かりません。</li>
+<li><code>ss -lntp</code>はTCPの待受、<code>ss -tulnp</code>はTCP・UDPの待受を確認する代表例です。</li>
+<li><code>127.0.0.1</code>での待受は通常ローカルだけ、<code>0.0.0.0</code>はIPv4の全ローカルアドレスです。</li>
+<li><code>traceroute</code>はTTLを利用して経路上のホップを調べ、<code>-n</code>で数値表示します。</li>
+<li>途中の<code>*</code>は応答がなかったことを示しますが、必ずそこで通信が途絶えたとは限りません。</li>
+<li><code>dig</code>はDNS応答を詳しく表示し、<code>@サーバー</code>、<code>+short</code>、<code>-x</code>などを使えます。</li>
+<li><code>host</code>は簡潔なDNS確認に向き、問い合わせ先サーバーは末尾へ指定します。</li>
+<li><code>curl</code>はHTTPヘッダー、API、詳細な通信確認に向き、<code>wget</code>は保存、再開、再帰取得に向きます。</li>
+<li>TLS証明書検証の無効化を恒久対応にせず、証明書やCA設定を修正します。</li>
+</ul>
+</section>
+
+<section id="sec-sources">
+<h2>参考資料</h2>
+<ul>
+<li><a href="https://man7.org/linux/man-pages/man8/ip.8.html" target="_blank" rel="noopener noreferrer">ip(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/ip-address.8.html" target="_blank" rel="noopener noreferrer">ip-address(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/ip-link.8.html" target="_blank" rel="noopener noreferrer">ip-link(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/ip-route.8.html" target="_blank" rel="noopener noreferrer">ip-route(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/ip-neighbour.8.html" target="_blank" rel="noopener noreferrer">ip-neighbour(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/ping.8.html" target="_blank" rel="noopener noreferrer">ping(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/ss.8.html" target="_blank" rel="noopener noreferrer">ss(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/traceroute.8.html" target="_blank" rel="noopener noreferrer">traceroute(8) — Linux manual page</a></li>
+<li><a href="https://bind9.readthedocs.io/en/stable/manpages.html" target="_blank" rel="noopener noreferrer">BIND 9 Manual Pages：dig・host</a></li>
+<li><a href="https://curl.se/docs/manpage.html" target="_blank" rel="noopener noreferrer">curl man page</a></li>
+<li><a href="https://www.gnu.org/software/wget/manual/wget.html" target="_blank" rel="noopener noreferrer">GNU Wget Manual</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/curl.1.html" target="_blank" rel="noopener noreferrer">curl(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/wget.1.html" target="_blank" rel="noopener noreferrer">wget(1) — Linux manual page</a></li>
+</ul>
+</section>
+
+</article>
+</main>
+</body>
+</html>

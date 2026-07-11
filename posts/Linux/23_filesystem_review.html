@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LPIC Level1 復習ラジオ 23：ファイルシステム総復習</title>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<main class="container">
+<article class="card">
+<header>
+<h1>LPIC Level1 復習ラジオ 23：ファイルシステム総復習</h1>
+<nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+<p class="meta">投稿日：2026-07-11</p>
+</header>
+
+<section class="card" style="margin-top:12px;">
+<h2 style="margin:0 0 8px 0;">音声</h2>
+<audio controls preload="none" src="/posts/Linux/audio/23_filesystem_review_tts.mp3"></audio>
+<p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+</section>
+
+<section id="sec-toc">
+<h2>目次</h2>
+<ol>
+<li><a href="#sec-1">ファイルシステムの全体像</a></li>
+<li><a href="#sec-2">inode</a></li>
+<li><a href="#sec-3">ファイル名とディレクトリエントリ</a></li>
+<li><a href="#sec-4">inodeの確認と枯渇</a></li>
+<li><a href="#sec-5">UUID・LABEL・PARTUUID</a></li>
+<li><a href="#sec-6">ブロックデバイスと識別情報の確認</a></li>
+<li><a href="#sec-7">/etc/fstab</a></li>
+<li><a href="#sec-8">mount・umount・findmnt</a></li>
+<li><a href="#sec-9">ハードリンク</a></li>
+<li><a href="#sec-10">シンボリックリンク</a></li>
+<li><a href="#sec-11">30秒チェック</a></li>
+<li><a href="#sec-12">要約</a></li>
+</ol>
+</section>
+
+<section id="sec-1">
+<h2>ファイルシステムの全体像</h2>
+<p>ファイルシステムは、ストレージ上のデータをファイルやディレクトリとして管理する仕組みです。単にデータ本体を保存するだけでなく、所有者、パーミッション、時刻、サイズ、配置情報なども管理します。</p>
+
+<table>
+<thead><tr><th>要素</th><th>主な役割</th><th>確認例</th></tr></thead>
+<tbody>
+<tr><td>ブロックデバイス</td><td>ディスクやパーティションなど、ファイルシステムを置く土台</td><td><code>lsblk</code></td></tr>
+<tr><td>ファイルシステム</td><td>ファイル、ディレクトリ、メタデータを管理する</td><td>ext4、XFS、vfatなど</td></tr>
+<tr><td>inode</td><td>ファイルの種類、所有者、権限、サイズ、時刻などのメタデータを保持する</td><td><code>stat</code>、<code>ls -li</code></td></tr>
+<tr><td>ディレクトリエントリ</td><td>ファイル名とinode番号を対応付ける</td><td><code>ls -i</code></td></tr>
+<tr><td>マウントポイント</td><td>ファイルシステムをディレクトリツリーへ接続する場所</td><td><code>findmnt</code></td></tr>
+<tr><td>UUID・LABEL</td><td>ファイルシステムを識別するために使う</td><td><code>lsblk -f</code>、<code>blkid</code></td></tr>
+</tbody>
+</table>
+
+<h3>ファイルを開く大まかな流れ</h3>
+<ol>
+<li>パスをディレクトリごとにたどる</li>
+<li>ディレクトリエントリから、名前に対応するinode番号を得る</li>
+<li>inodeからファイルの種類、権限、データの位置などを確認する</li>
+<li>権限があれば、ファイルのデータを読み書きする</li>
+</ol>
+
+<p>Linuxでは、複数のファイルシステムを一つのディレクトリツリーへマウントして利用します。利用者からは一つのツリーに見えても、<code>/</code>、<code>/boot</code>、<code>/home</code>などが別々のファイルシステムになっている場合があります。</p>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>重要：</strong>「ファイル名」「inode」「データ本体」は同じものではありません。ファイル名はディレクトリ側にあり、inodeがメタデータとデータの所在を管理します。</p>
+</aside>
+</section>
+
+<section id="sec-2">
+<h2>inode</h2>
+<p>inodeは、ファイルシステム内のファイルやディレクトリを管理するための情報です。inode番号は、そのファイルシステム内でinodeを識別します。</p>
+
+<h3>inodeに含まれる主な情報</h3>
+<ul>
+<li>ファイルの種類</li>
+<li>パーミッション</li>
+<li>所有者のUIDとグループのGID</li>
+<li>ファイルサイズ</li>
+<li>ハードリンク数</li>
+<li>アクセス時刻、更新時刻、状態変更時刻など</li>
+<li>データブロックを参照するための情報</li>
+</ul>
+
+<h3>inodeに通常含まれないもの</h3>
+<ul>
+<li>ファイル名</li>
+<li>ファイルが表示される完全なパス名</li>
+</ul>
+
+<pre><code>stat report.txt
+ls -li report.txt</code></pre>
+
+<p><code>stat</code>では、inode番号、ファイルサイズ、ブロック数、リンク数、UID、GID、パーミッション、各種時刻などを確認できます。</p>
+
+<h3>inode番号の範囲</h3>
+<p>inode番号が一意なのは、そのファイルシステムの中だけです。別のファイルシステムでは、同じinode番号が使われることがあります。</p>
+
+<pre><code>stat -c 'device=%d inode=%i links=%h name=%n' report.txt</code></pre>
+
+<p>ファイルを厳密に区別するときは、inode番号だけでなく、どのファイルシステムやデバイスに属しているかも考える必要があります。</p>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>覚え方：</strong>inodeは「名前」ではなく、ファイルの中身へ到達するための管理票です。名前とinode番号の対応は、親ディレクトリが管理します。</p>
+</aside>
+</section>
+
+<section id="sec-3">
+<h2>ファイル名とディレクトリエントリ</h2>
+<p>ディレクトリは、名前とinode番号の対応を持ちます。この対応をディレクトリエントリと考えると、リンクの仕組みを理解しやすくなります。</p>
+
+<pre><code>ファイル名 report.txt
+        ↓
+ディレクトリエントリ
+        ↓ inode番号 12345
+inode 12345
+        ↓
+データ本体</code></pre>
+
+<h3>ファイル名を変更した場合</h3>
+<pre><code>mv report.txt report-old.txt
+ls -li report-old.txt</code></pre>
+<p>同じファイルシステム内で単純に名前を変更した場合、一般にディレクトリエントリの名前が変わり、inodeとデータ本体は同じままです。</p>
+
+<h3>ファイルを削除した場合</h3>
+<pre><code>rm report-old.txt</code></pre>
+<p><code>rm</code>は、基本的にはファイル名とinodeの対応を取り除きます。最後のハードリンクが削除され、さらにそのファイルを開いているプロセスもなくなると、inodeやデータ領域が再利用可能になります。</p>
+
+<h3>開いたまま削除されたファイル</h3>
+<p>プロセスがファイルを開いたまま、そのファイル名が削除されることがあります。この場合、名前からは見えなくても、プロセスが閉じるまでデータ領域が解放されないことがあります。</p>
+
+<pre><code>lsof +L1</code></pre>
+
+<p><code>df</code>では使用量が多いのに、<code>du</code>で大きなファイルが見つからない場合は、削除済みのファイルをプロセスが開いたままにしていないか確認する方法があります。</p>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>注意：</strong>「rmを実行した瞬間に必ずデータ領域が完全解放される」とは限りません。ハードリンク数と、プロセスがファイルを開いているかが関係します。</p>
+</aside>
+</section>
+
+<section id="sec-4">
+<h2>inodeの確認と枯渇</h2>
+<p>ファイルシステムには、データを保存する領域だけでなく、inodeを管理するための資源があります。空き容量が残っていても、利用可能なinodeがなくなると、新しいファイルを作成できないことがあります。</p>
+
+<h3>容量とinode使用量</h3>
+<pre><code>df -h
+df -i</code></pre>
+
+<table>
+<thead><tr><th>コマンド</th><th>主な確認内容</th></tr></thead>
+<tbody>
+<tr><td><code>df -h</code></td><td>ファイルシステムのデータ領域の使用量</td></tr>
+<tr><td><code>df -i</code></td><td>inodeの総数、使用数、空き数、使用率</td></tr>
+<tr><td><code>du -sh ディレクトリ</code></td><td>指定したディレクトリ以下のファイルが使用する容量</td></tr>
+</tbody>
+</table>
+
+<h3>inode枯渇が起きやすい例</h3>
+<ul>
+<li>非常に小さなログや一時ファイルが大量に作られた</li>
+<li>メールキューやキャッシュに小さなファイルが蓄積した</li>
+<li>アプリケーションが不要なセッションファイルを削除していない</li>
+</ul>
+
+<h3>inode番号から探す</h3>
+<pre><code>find /var -xdev -inum 12345 2&gt;/dev/null</code></pre>
+<p><code>-inum</code>はinode番号で検索します。<code>-xdev</code>を付けると、検索開始地点とは異なるファイルシステムへ降りないようにできます。</p>
+
+<h3>同じinodeを持つ名前を確認する</h3>
+<pre><code>find /data -xdev -samefile /data/report.txt</code></pre>
+<p>ハードリンクが複数ある場合は、同じinodeを参照する複数のパスが表示されます。</p>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>切り分け：</strong>「No space left on device」が出たら、<code>df -h</code>だけでなく<code>df -i</code>も確認します。容量不足とinode不足は別の問題です。</p>
+</aside>
+</section>
+
+<section id="sec-5">
+<h2>UUID・LABEL・PARTUUID</h2>
+<p>ストレージを指定するとき、<code>/dev/sdb1</code>のようなデバイス名だけでなく、UUIDやLABELなどの識別子を利用できます。</p>
+
+<table>
+<thead><tr><th>識別子</th><th>主な対象</th><th>例</th></tr></thead>
+<tbody>
+<tr><td>UUID</td><td>ファイルシステム</td><td><code>UUID=8c12a0d5-...</code></td></tr>
+<tr><td>LABEL</td><td>ファイルシステムに付けた人間向けの名前</td><td><code>LABEL=DATA</code></td></tr>
+<tr><td>PARTUUID</td><td>パーティションテーブル上のパーティション</td><td><code>PARTUUID=1a2b3c4d-...</code></td></tr>
+<tr><td>PARTLABEL</td><td>GPTなどのパーティションに付けた名前</td><td><code>PARTLABEL=LinuxData</code></td></tr>
+<tr><td>デバイス名</td><td>カーネルが認識したデバイスノード</td><td><code>/dev/sdb1</code></td></tr>
+</tbody>
+</table>
+
+<h3>なぜUUIDを使うのか</h3>
+<p><code>/dev/sdb1</code>のような名前は、機器の追加や認識順序の変化によって変わる可能性があります。UUIDを使うと、特定のファイルシステムをより安定して指定できます。</p>
+
+<h3>UUIDとPARTUUIDの違い</h3>
+<ul>
+<li>UUIDは、ext4やXFSなどのファイルシステムに付く識別子</li>
+<li>PARTUUIDは、パーティションテーブルのパーティションに付く識別子</li>
+<li>ファイルシステムを作り直すと、そのUUIDが変わる場合がある</li>
+<li>パーティションを作り直すと、PARTUUIDが変わる場合がある</li>
+</ul>
+
+<p>UUIDやLABELは実用上便利ですが、複製したディスクなどでは重複する可能性があります。絶対に重複しないと決めつけず、必要に応じて確認します。</p>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>試験ポイント：</strong><code>/etc/fstab</code>では、認識順序で変化し得るデバイス名より、<code>UUID=</code>や<code>LABEL=</code>による指定がよく使われます。</p>
+</aside>
+</section>
+
+<section id="sec-6">
+<h2>ブロックデバイスと識別情報の確認</h2>
+<p>デバイス、ファイルシステム種別、UUID、LABEL、マウント先を確認する代表的なコマンドは、<code>lsblk</code>、<code>blkid</code>、<code>findmnt</code>です。</p>
+
+<h3>lsblk</h3>
+<pre><code>lsblk
+lsblk -f
+lsblk -o NAME,SIZE,FSTYPE,UUID,PARTUUID,LABEL,MOUNTPOINTS</code></pre>
+<p><code>lsblk</code>は、利用可能なブロックデバイスをツリー状に確認するのに向きます。<code>-f</code>では、ファイルシステム種別、UUID、LABEL、マウント先などを表示します。</p>
+
+<h3>blkid</h3>
+<pre><code>sudo blkid
+sudo blkid /dev/sdb1
+blkid -s UUID -o value /dev/sdb1</code></pre>
+<p><code>blkid</code>は、デバイスからファイルシステム種別やUUIDなどの属性を確認します。一般ユーザーではキャッシュされた情報が表示される場合があるため、直接確認したいときは権限にも注意します。</p>
+
+<h3>findmnt</h3>
+<pre><code>findmnt
+findmnt /home
+findmnt --target /var/log
+findmnt --source UUID=8c12a0d5-0000-0000-0000-000000000000</code></pre>
+<p><code>findmnt</code>は、現在マウントされているファイルシステムを表示したり、特定のパスがどのファイルシステムに属するかを確認したりできます。</p>
+
+<h3>役割の違い</h3>
+<table>
+<thead><tr><th>コマンド</th><th>向いている確認</th></tr></thead>
+<tbody>
+<tr><td><code>lsblk</code></td><td>ディスク、パーティション、ファイルシステム、マウント先の全体像</td></tr>
+<tr><td><code>blkid</code></td><td>指定デバイスのUUID、LABEL、TYPEなどの属性</td></tr>
+<tr><td><code>findmnt</code></td><td>現在のマウント関係や、指定パスが属するファイルシステム</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="sec-7">
+<h2>/etc/fstab</h2>
+<p><code>/etc/fstab</code>は、通常どのファイルシステムを、どこへ、どのオプションでマウントするかを記述する設定ファイルです。</p>
+
+<h3>基本形式</h3>
+<pre><code>UUID=8c12a0d5-0000-0000-0000-000000000000 /data ext4 defaults 0 2</code></pre>
+
+<table>
+<thead><tr><th>フィールド</th><th>例</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><code>UUID=...</code></td><td>マウントするデバイスやファイルシステム</td></tr>
+<tr><td>2</td><td><code>/data</code></td><td>マウントポイント</td></tr>
+<tr><td>3</td><td><code>ext4</code></td><td>ファイルシステム種別</td></tr>
+<tr><td>4</td><td><code>defaults</code></td><td>マウントオプション</td></tr>
+<tr><td>5</td><td><code>0</code></td><td><code>dump</code>によるバックアップ対象の指定</td></tr>
+<tr><td>6</td><td><code>2</code></td><td>起動時のファイルシステムチェック順序</td></tr>
+</tbody>
+</table>
+
+<h3>第6フィールドの基本</h3>
+<ul>
+<li><code>0</code>：起動時のチェック対象にしない</li>
+<li><code>1</code>：通常はルートファイルシステム</li>
+<li><code>2</code>：その他のチェック対象ファイルシステム</li>
+</ul>
+
+<h3>代表的なマウントオプション</h3>
+<table>
+<thead><tr><th>オプション</th><th>主な意味</th></tr></thead>
+<tbody>
+<tr><td><code>defaults</code></td><td>カーネルやファイルシステムの標準的なオプションを使う</td></tr>
+<tr><td><code>ro</code> / <code>rw</code></td><td>読み取り専用 / 読み書き可能</td></tr>
+<tr><td><code>auto</code> / <code>noauto</code></td><td><code>mount -a</code>の対象にする / 対象にしない</td></tr>
+<tr><td><code>user</code></td><td>一般ユーザーによるマウントを許可する</td></tr>
+<tr><td><code>nofail</code></td><td>デバイスが存在しない場合でも、失敗を致命的に扱わない</td></tr>
+<tr><td><code>exec</code> / <code>noexec</code></td><td>実行ファイルの実行を許可 / 制限する</td></tr>
+<tr><td><code>suid</code> / <code>nosuid</code></td><td>SUID・SGIDの効果を許可 / 無効化する</td></tr>
+<tr><td><code>dev</code> / <code>nodev</code></td><td>デバイスファイルを解釈 / 解釈しない</td></tr>
+</tbody>
+</table>
+
+<h3>変更後の確認</h3>
+<pre><code>sudo cp /etc/fstab /etc/fstab.bak
+findmnt --verify
+sudo mount -a
+findmnt /data</code></pre>
+
+<p><code>mount -a</code>は、<code>noauto</code>を除く<code>/etc/fstab</code>の対象をマウントします。誤った設定は起動障害につながることがあるため、バックアップを取り、再起動前に検証します。</p>
+
+<p>systemdを使う環境では、<code>/etc/fstab</code>の内容がマウントユニットへ変換されます。変更後に必要であれば、<code>systemctl daemon-reload</code>でsystemdの設定を再読み込みします。</p>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>よくあるミス：</strong>UUIDの入力間違い、存在しないマウントポイント、ファイルシステム種別の誤り、オプションの綴り間違いです。再起動の前に<code>findmnt --verify</code>と<code>mount -a</code>で確認します。</p>
+</aside>
+</section>
+
+<section id="sec-8">
+<h2>mount・umount・findmnt</h2>
+<p>マウントは、ファイルシステムをLinuxのディレクトリツリーへ接続する操作です。アンマウントは、その接続を外す操作です。</p>
+
+<h3>一時的にマウントする</h3>
+<pre><code>sudo mkdir -p /mnt/data
+sudo mount /dev/sdb1 /mnt/data
+findmnt /mnt/data</code></pre>
+
+<h3>ファイルシステム種別やオプションを指定する</h3>
+<pre><code>sudo mount -t ext4 -o ro /dev/sdb1 /mnt/data
+sudo mount -o remount,rw /mnt/data</code></pre>
+
+<h3>/etc/fstabを利用する</h3>
+<pre><code>sudo mount /data
+sudo mount -a</code></pre>
+<p><code>/etc/fstab</code>に登録済みなら、デバイスまたはマウントポイントだけを指定してマウントできます。</p>
+
+<h3>アンマウントする</h3>
+<pre><code>sudo umount /mnt/data
+sudo umount /dev/sdb1</code></pre>
+<p>コマンド名は<code>unmount</code>ではなく、<code>umount</code>です。</p>
+
+<h3>busyでアンマウントできない場合</h3>
+<pre><code>findmnt /mnt/data
+lsof +f -- /mnt/data
+fuser -vm /mnt/data</code></pre>
+<ul>
+<li>シェルのカレントディレクトリがマウントポイント内にないか</li>
+<li>プロセスがファイルを開いていないか</li>
+<li>別のファイルシステムがその下へマウントされていないか</li>
+</ul>
+
+<h3>マウントポイントの下に元からあるファイル</h3>
+<p>空でないディレクトリへ別のファイルシステムをマウントすると、元のファイルは削除されませんが、マウント中は見えなくなります。アンマウントすると再び見えるようになります。</p>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>確認のコツ：</strong><code>df</code>は容量、<code>lsblk</code>はブロックデバイス、<code>findmnt</code>はマウント関係を見るコマンドとして整理します。</p>
+</aside>
+</section>
+
+<section id="sec-9">
+<h2>ハードリンク</h2>
+<p>ハードリンクは、同じinodeを参照する別のファイル名です。元の名前と新しい名前のどちらが本物という区別はなく、どちらも同じファイルを表します。</p>
+
+<h3>作成と確認</h3>
+<pre><code>echo 'Linux' &gt; original.txt
+ln original.txt hardlink.txt
+ls -li original.txt hardlink.txt
+stat original.txt hardlink.txt</code></pre>
+
+<p>二つの名前は同じinode番号を持ち、リンク数が増えます。一方の名前から内容を書き換えると、もう一方から見ても同じ内容が変化します。</p>
+
+<h3>元の名前を削除する</h3>
+<pre><code>rm original.txt
+cat hardlink.txt</code></pre>
+<p><code>original.txt</code>を削除しても、<code>hardlink.txt</code>が残っていればinodeへの参照は残るため、データへアクセスできます。</p>
+
+<h3>主な制約</h3>
+<ul>
+<li>異なるファイルシステムをまたいで作成できない</li>
+<li>通常、ディレクトリに対するハードリンクは作成できない</li>
+<li>同じinodeを共有するため、所有者やパーミッションも共通する</li>
+</ul>
+
+<h3>異なるファイルシステムをまたげない理由</h3>
+<p>inode番号はファイルシステム内でのみ一意です。ハードリンクは同じinodeを直接参照するため、別のファイルシステムにあるinodeを参照できません。</p>
+
+<table>
+<thead><tr><th>操作</th><th>結果</th></tr></thead>
+<tbody>
+<tr><td>一方の名前で内容を変更</td><td>同じinodeとデータを参照するため、他方から見ても変わる</td></tr>
+<tr><td>一方の名前を削除</td><td>リンク数が減る。別のハードリンクがあればデータは残る</td></tr>
+<tr><td>別ファイルシステムへ作成</td><td>作成できない</td></tr>
+</tbody>
+</table>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>試験ポイント：</strong>ハードリンクは「元ファイルへのショートカット」ではありません。複数の名前が、同じinodeを対等に参照しています。</p>
+</aside>
+</section>
+
+<section id="sec-10">
+<h2>シンボリックリンク</h2>
+<p>シンボリックリンクは、別のファイルやディレクトリのパス名を内容として持つ、独立した特殊ファイルです。ソフトリンクとも呼ばれます。</p>
+
+<h3>作成と確認</h3>
+<pre><code>ln -s /var/log/syslog syslog-link
+ls -l syslog-link
+readlink syslog-link
+readlink -f syslog-link</code></pre>
+
+<p><code>ls -l</code>では、<code>syslog-link -&gt; /var/log/syslog</code>のように参照先が表示されます。シンボリックリンク自身は、参照先とは異なるinodeを持ちます。</p>
+
+<h3>シンボリックリンクの特徴</h3>
+<ul>
+<li>ファイルにもディレクトリにも作成できる</li>
+<li>異なるファイルシステムをまたげる</li>
+<li>参照先が存在しなくてもリンク自体は作成できる</li>
+<li>参照先が削除または移動されると、リンク切れになることがある</li>
+</ul>
+
+<h3>絶対パスと相対パス</h3>
+<pre><code>ln -s /opt/app/config.yml config-absolute
+ln -s ../config/config.yml config-relative</code></pre>
+<p>絶対パスのリンクはルートディレクトリから参照先をたどります。相対パスのリンクは、シンボリックリンクが置かれているディレクトリを基準に解決されます。</p>
+
+<h3>リンク切れを確認する</h3>
+<pre><code>ls -l config-relative
+readlink config-relative
+namei -l config-relative
+find . -xtype l</code></pre>
+<p><code>find -xtype l</code>は、参照先をたどれないシンボリックリンクを探す用途に使えます。</p>
+
+<h3>リンク自体を削除する</h3>
+<pre><code>rm syslog-link
+unlink syslog-link</code></pre>
+<p>リンク名を削除しても、通常は参照先のファイルそのものは削除されません。末尾のスラッシュを付けるとコマンドの解釈が変わることがあるため、リンク自体を操作するときは表示を確認します。</p>
+
+<h3>ハードリンクとの比較</h3>
+<table>
+<thead><tr><th>項目</th><th>ハードリンク</th><th>シンボリックリンク</th></tr></thead>
+<tbody>
+<tr><td>参照するもの</td><td>同じinode</td><td>別のパス名</td></tr>
+<tr><td>inode番号</td><td>元の名前と同じ</td><td>参照先とは異なる</td></tr>
+<tr><td>別ファイルシステム</td><td>不可</td><td>可能</td></tr>
+<tr><td>ディレクトリへの作成</td><td>通常不可</td><td>可能</td></tr>
+<tr><td>参照先削除後</td><td>他のハードリンクから利用可能</td><td>リンク切れになる</td></tr>
+<tr><td>作成コマンド</td><td><code>ln TARGET LINK</code></td><td><code>ln -s TARGET LINK</code></td></tr>
+</tbody>
+</table>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>覚え方：</strong>ハードリンクはinodeへつながり、シンボリックリンクはパスへつながります。</p>
+</aside>
+</section>
+
+<section id="sec-11">
+<h2>30秒チェック</h2>
+<ol>
+<li>inodeに通常保存されていない情報は、ファイル名とパーミッションのどちらでしょうか。</li>
+<li>inode番号は、システム全体とファイルシステム内のどちらで一意でしょうか。</li>
+<li>空き容量があるのに新しいファイルを作成できない場合、何の枯渇を確認するでしょうか。</li>
+<li><code>df -h</code>と<code>df -i</code>は、それぞれ何を確認するでしょうか。</li>
+<li>UUIDとPARTUUIDは、主に何を識別するでしょうか。</li>
+<li><code>/etc/fstab</code>の第2フィールドは何でしょうか。</li>
+<li><code>/etc/fstab</code>の第6フィールドで、ルートファイルシステムに通常指定する値は何でしょうか。</li>
+<li>ハードリンク同士のinode番号は同じでしょうか、異なるでしょうか。</li>
+<li>異なるファイルシステムをまたげるのは、ハードリンクとシンボリックリンクのどちらでしょうか。</li>
+<li>シンボリックリンクの参照先が削除された場合、そのリンクはどうなるでしょうか。</li>
+</ol>
+
+<details>
+<summary>答えを表示</summary>
+<ol>
+<li>ファイル名。パーミッションはinodeの情報です。</li>
+<li>ファイルシステム内</li>
+<li>inodeの枯渇</li>
+<li><code>df -h</code>はデータ領域の容量、<code>df -i</code>はinode使用量</li>
+<li>UUIDはファイルシステム、PARTUUIDはパーティション</li>
+<li>マウントポイント</li>
+<li>通常は<code>1</code></li>
+<li>同じ</li>
+<li>シンボリックリンク</li>
+<li>リンク切れ、またはdangling symlinkになる</li>
+</ol>
+</details>
+</section>
+
+<section id="sec-12">
+<h2>要約</h2>
+<ul>
+<li>ファイルシステムは、データ本体だけでなく、inodeやディレクトリエントリなどを使ってファイルを管理します。</li>
+<li>inodeはファイルの種類、所有者、権限、サイズ、時刻、リンク数などを持ちますが、通常ファイル名は持ちません。</li>
+<li>ディレクトリエントリが、ファイル名とinode番号を対応付けます。</li>
+<li>inode番号が一意なのは、そのファイルシステム内です。</li>
+<li><code>df -h</code>は容量、<code>df -i</code>はinode使用量を確認します。</li>
+<li>UUIDはファイルシステム、PARTUUIDはパーティションを主に識別します。</li>
+<li><code>lsblk -f</code>は全体像、<code>blkid</code>は属性、<code>findmnt</code>はマウント関係の確認に向きます。</li>
+<li><code>/etc/fstab</code>は、デバイス、マウントポイント、種別、オプション、dump、チェック順序の六つのフィールドで記述します。</li>
+<li>ハードリンクは同じinodeを参照し、別ファイルシステムをまたげません。</li>
+<li>シンボリックリンクはパス名を保持し、別ファイルシステムやディレクトリも参照できます。</li>
+<li>ハードリンクはinodeへ、シンボリックリンクはパスへつながると整理します。</li>
+</ul>
+</section>
+
+<section id="sec-sources">
+<h2>参考資料</h2>
+<ul>
+<li><a href="https://man7.org/linux/man-pages/man7/inode.7.html" target="_blank" rel="noopener noreferrer">inode(7) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/stat.1.html" target="_blank" rel="noopener noreferrer">stat(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man2/stat.2.html" target="_blank" rel="noopener noreferrer">stat(2) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man2/link.2.html" target="_blank" rel="noopener noreferrer">link(2) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man7/symlink.7.html" target="_blank" rel="noopener noreferrer">symlink(7) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/ln.1.html" target="_blank" rel="noopener noreferrer">ln(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/readlink.1.html" target="_blank" rel="noopener noreferrer">readlink(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/df.1.html" target="_blank" rel="noopener noreferrer">df(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/find.1.html" target="_blank" rel="noopener noreferrer">find(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man5/fstab.5.html" target="_blank" rel="noopener noreferrer">fstab(5) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/mount.8.html" target="_blank" rel="noopener noreferrer">mount(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/umount.8.html" target="_blank" rel="noopener noreferrer">umount(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/findmnt.8.html" target="_blank" rel="noopener noreferrer">findmnt(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/lsblk.8.html" target="_blank" rel="noopener noreferrer">lsblk(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/blkid.8.html" target="_blank" rel="noopener noreferrer">blkid(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man5/systemd.mount.5.html" target="_blank" rel="noopener noreferrer">systemd.mount(5) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/systemd-fstab-generator.8.html" target="_blank" rel="noopener noreferrer">systemd-fstab-generator(8) — Linux manual page</a></li>
+<li><a href="https://docs.kernel.org/filesystems/ext4/inodes.html" target="_blank" rel="noopener noreferrer">Linux Kernel Documentation：ext4 Index Nodes</a></li>
+<li><a href="https://docs.kernel.org/filesystems/ext4/dynamic.html" target="_blank" rel="noopener noreferrer">Linux Kernel Documentation：ext4 Dynamic Structures</a></li>
+</ul>
+</section>
+
+</article>
+</main>
+</body>
+</html>

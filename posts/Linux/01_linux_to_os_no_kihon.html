@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 01：Linuxとは</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 01：Linuxとは</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/01_linux_to_os_no_kihon_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">OSとは</a></li>
+          <li><a href="#sec-2">Linuxとは</a></li>
+          <li><a href="#sec-3">カーネルとシェル</a></li>
+          <li><a href="#sec-4">GNUとは</a></li>
+          <li><a href="#sec-5">ディストリビューションとは</a></li>
+          <li><a href="#sec-6">FHSとは</a></li>
+          <li><a href="#sec-7">30秒チェック</a></li>
+          <li><a href="#sec-8">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>OSとは</h2>
+        <p>OSは、Operating Systemの略です。日本語では、オペレーティングシステムと呼びます。</p>
+        <p>OSは、アプリケーションとハードウェアの間に入り、CPU、メモリ、ストレージ、キーボード、ネットワーク機器などを管理します。</p>
+        <p>例えば、アプリケーションがファイルを保存するとき、通常はSSDを直接操作しません。OSがアプリケーションから要求を受け取り、必要な処理をハードウェアへ伝えます。</p>
+
+        <div class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>アプリケーション → OS → ハードウェア</strong></p>
+        </div>
+
+        <p>この仕組みにより、アプリケーションは機器ごとの細かな違いをすべて意識せずに動作できます。</p>
+      </section>
+
+      <section id="sec-2">
+        <h2>Linuxとは</h2>
+        <p>厳密には、Linuxという名前はOS全体ではなく、中心部分である<strong>Linuxカーネル</strong>を指します。</p>
+        <p>ただし日常会話では、Linuxカーネルにシェル、各種コマンド、ライブラリ、管理ツール、アプリケーションなどを組み合わせたシステム全体を「Linux」と呼ぶことも一般的です。</p>
+        <p>LPICの学習では、問題文によって「Linuxカーネル」を指しているのか、「Linuxを使ったOS全体」を指しているのかを意識すると、用語を整理しやすくなります。</p>
+      </section>
+
+      <section id="sec-3">
+        <h2>カーネルとシェル</h2>
+
+        <h3>カーネル</h3>
+        <p>カーネルはOSの中核です。主に、次のような仕事を担当します。</p>
+        <ul>
+          <li>CPUをどのプロセスに使わせるかを管理する</li>
+          <li>メモリを割り当て、使用状況を管理する</li>
+          <li>ストレージやネットワーク機器などのデバイスを制御する</li>
+          <li>ファイルシステムやネットワーク通信の基本機能を提供する</li>
+          <li>ユーザー空間のプログラムからの要求を受け付ける</li>
+        </ul>
+        <p>アプリケーションは、必要な処理をシステムコールなどの仕組みを通してカーネルへ依頼します。</p>
+
+        <h3>シェル</h3>
+        <p>シェルは、利用者が入力したコマンドを解釈して実行するプログラムです。英語のshellには「殻」という意味があります。</p>
+        <p>カーネルを直接操作するのではなく、その外側にあるシェルを通して命令する、というイメージです。</p>
+        <p>代表的なシェルには、<code>bash</code>、<code>sh</code>、<code>zsh</code>などがあります。LPIC Level1では、特にbashの操作や設定が重要です。</p>
+
+        <div class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>利用者 → シェル → カーネル → ハードウェア</strong></p>
+        </div>
+
+        <p>なお、シェルは文字入力で利用するCLIだけに関係するものです。画面上のアイコンやウィンドウを操作するGUIとは区別して覚えます。</p>
+      </section>
+
+      <section id="sec-4">
+        <h2>GNUとは</h2>
+        <p>GNUは、自由に利用・調査・変更・再配布できるUnix風のOSを作ることを目的として始まったプロジェクトです。</p>
+        <p>GNUという名前は、<strong>GNU's Not Unix</strong>の略です。自分自身の名前を含む再帰的頭字語になっています。</p>
+        <p>Linux環境で利用する基本コマンドの多くは、GNUプロジェクトが提供するソフトウェアです。例えば、<code>ls</code>、<code>cp</code>、<code>mv</code>、<code>rm</code>などは、GNU Coreutilsに含まれています。</p>
+        <p>LinuxカーネルとGNUのツール群を組み合わせたシステムを、GNU/Linuxと表現することがあります。</p>
+        <p>復習では、<strong>Linuxはカーネル、GNUは多くの基本ツールを提供する</strong>という関係を押さえておけば十分です。</p>
+      </section>
+
+      <section id="sec-5">
+        <h2>ディストリビューションとは</h2>
+        <p>Linuxカーネルだけでは、一般利用者がすぐに使えるOSにはなりません。</p>
+        <p>Linuxカーネル、GNUなどのコマンド、ライブラリ、パッケージ管理システム、インストーラ、設定ツールなどをまとめて、導入しやすい形にしたものを<strong>Linuxディストリビューション</strong>と呼びます。略して「ディストリビューション」や「ディストロ」とも呼ばれます。</p>
+
+        <p>代表的な系統には、次のようなものがあります。</p>
+        <ul>
+          <li><strong>Debian系：</strong>Debian、Ubuntuなど</li>
+          <li><strong>Red Hat系：</strong>Red Hat Enterprise Linux、Fedora、Rocky Linuxなど</li>
+          <li><strong>SUSE系：</strong>SUSE Linux Enterprise、openSUSEなど</li>
+        </ul>
+
+        <p>ディストリビューションによって、パッケージ形式や管理コマンド、初期設定などに違いがあります。</p>
+        <p>例えば、Debian系では主に<code>deb</code>形式と<code>apt</code>、Red Hat系では主に<code>rpm</code>形式と<code>dnf</code>などを利用します。詳しくはパッケージ管理のページで扱います。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>FHSとは</h2>
+        <p>FHSは、Filesystem Hierarchy Standardの略です。</p>
+        <p>LinuxなどのUnix系システムで、ファイルやディレクトリをどこへ配置するかについて定めた標準です。</p>
+        <p>例えば、設定ファイルは主に<code>/etc</code>、利用者のホームディレクトリは主に<code>/home</code>、変化するログや一時データは主に<code>/var</code>に配置されます。</p>
+        <p>ディストリビューションごとに違いはありますが、FHSによって基本的な配置がある程度共通化されています。</p>
+        <p>このページでは「Linuxのディレクトリには役割に応じた配置ルールがある」と覚えてください。各ディレクトリの詳しい役割は、05ページの「ディレクトリ構成」で扱います。</p>
+      </section>
+
+      <section id="sec-7">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>Linuxという名前が厳密に指すものは何でしょうか。</li>
+          <li>コマンドを解釈して実行するプログラムを何と呼ぶでしょうか。</li>
+          <li>Linuxカーネルや各種ツールをまとめて配布するものを何と呼ぶでしょうか。</li>
+          <li>ファイルやディレクトリの配置ルールを定めた標準は何でしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li>Linuxカーネル</li>
+            <li>シェル</li>
+            <li>Linuxディストリビューション</li>
+            <li>FHS</li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-8">
+        <h2>要約</h2>
+        <ul>
+          <li>OSは、アプリケーションとハードウェアの間で資源を管理します。</li>
+          <li>Linuxは厳密にはカーネルの名前です。</li>
+          <li>カーネルはCPU、メモリ、デバイス、ファイルシステムなどを管理します。</li>
+          <li>シェルは、利用者のコマンドを解釈して実行します。</li>
+          <li>GNUは、Linux環境でも使われる多くの基本ツールを提供しています。</li>
+          <li>ディストリビューションは、Linuxカーネルと各種ソフトウェアをまとめたものです。</li>
+          <li>FHSは、ファイルやディレクトリの基本的な配置を定める標準です。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://docs.kernel.org/" target="_blank" rel="noopener noreferrer">The Linux Kernel documentation</a></li>
+          <li><a href="https://docs.kernel.org/userspace-api/index.html" target="_blank" rel="noopener noreferrer">The Linux kernel user-space API guide</a></li>
+          <li><a href="https://www.gnu.org/" target="_blank" rel="noopener noreferrer">The GNU Operating System and the Free Software Movement</a></li>
+          <li><a href="https://www.gnu.org/gnu/linux-and-gnu.html" target="_blank" rel="noopener noreferrer">Linux and GNU</a></li>
+          <li><a href="https://www.debian.org/intro/index" target="_blank" rel="noopener noreferrer">Introduction to Debian</a></li>
+          <li><a href="https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html" target="_blank" rel="noopener noreferrer">Filesystem Hierarchy Standard 3.0</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

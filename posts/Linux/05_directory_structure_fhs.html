@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 05：ディレクトリ構成（FHS）</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 05：ディレクトリ構成（FHS）</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/05_directory_structure_fhs_audio.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">FHSとは</a></li>
+          <li><a href="#sec-2">ルートディレクトリ</a></li>
+          <li><a href="#sec-3">コマンドとライブラリのディレクトリ</a></li>
+          <li><a href="#sec-4">設定・利用者・追加ソフトウェア</a></li>
+          <li><a href="#sec-5">変化するデータと一時ファイル</a></li>
+          <li><a href="#sec-6">起動と管理者のディレクトリ</a></li>
+          <li><a href="#sec-7">仮想ファイルシステム</a></li>
+          <li><a href="#sec-8">確認コマンド</a></li>
+          <li><a href="#sec-9">30秒チェック</a></li>
+          <li><a href="#sec-10">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>FHSとは</h2>
+        <p>FHSは、Filesystem Hierarchy Standardの略です。</p>
+        <p>Unix系OSで、ファイルやディレクトリをどこへ配置するかについて定めた標準です。</p>
+        <p>配置をある程度共通化することで、利用者、管理者、プログラム、スクリプトが、必要なファイルの場所を予測しやすくなります。</p>
+        <p>ただし、すべてのLinuxディストリビューションが完全に同じ構成とは限りません。FHSを基本にしつつ、ディストリビューション独自の構成や、systemdなどによる現代的な構成もあります。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>今回の目標：</strong>ディレクトリ名を暗記するだけでなく、「設定」「ログ」「利用者データ」「仮想的な情報」など、役割の違いで整理します。</p>
+        </aside>
+      </section>
+
+      <section id="sec-2">
+        <h2>ルートディレクトリ</h2>
+
+        <h3><code>/</code> ― すべての起点</h3>
+        <p><code>/</code>は、ルートディレクトリです。Linuxのディレクトリ階層の最上位にあります。</p>
+        <p>Windowsのドライブ文字とは異なり、Linuxでは別のストレージやファイルシステムも、基本的にこの一つの階層へマウントして利用します。</p>
+
+        <pre><code>/
+├── etc
+├── home
+├── usr
+├── var
+└── ...</code></pre>
+
+        <p>なお、管理者ユーザーであるrootと、最上位のディレクトリであるルートディレクトリは、同じ「root」という言葉が使われますが別物です。</p>
+      </section>
+
+      <section id="sec-3">
+        <h2>コマンドとライブラリのディレクトリ</h2>
+
+        <h3><code>/bin</code> ― 基本コマンド</h3>
+        <p><code>/bin</code>には、システムの基本操作に必要なコマンドが置かれてきました。</p>
+        <p>例えば、<code>ls</code>、<code>cp</code>、<code>mv</code>、<code>cat</code>などです。</p>
+
+        <h3><code>/sbin</code> ― システム管理用コマンド</h3>
+        <p><code>/sbin</code>には、主にシステム管理で使う重要なコマンドが置かれてきました。</p>
+        <p>sbinは、一般にsystem binariesなどの意味で説明されます。</p>
+
+        <h3><code>/lib</code>・<code>/lib64</code> ― 共有ライブラリなど</h3>
+        <p><code>/lib</code>や<code>/lib64</code>には、基本コマンドの実行に必要な共有ライブラリや、カーネルモジュールなどが置かれます。</p>
+
+        <h3><code>/usr</code> ― 多くのプログラムと共有データ</h3>
+        <p><code>/usr</code>には、多くのコマンド、ライブラリ、文書などが置かれます。</p>
+        <ul>
+          <li><code>/usr/bin</code>：一般的なコマンド</li>
+          <li><code>/usr/sbin</code>：主に管理用のコマンド</li>
+          <li><code>/usr/lib</code>：ライブラリ</li>
+          <li><code>/usr/share</code>：アーキテクチャに依存しにくい共有データ</li>
+          <li><code>/usr/local</code>：そのコンピューターで個別に導入したソフトウェア</li>
+        </ul>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>現代のLinux：</strong><code>/bin</code>が<code>/usr/bin</code>、<code>/sbin</code>が<code>/usr/sbin</code>へのシンボリックリンクになっていることがあります。実機の配置がこの形でも、各ディレクトリの歴史的な役割はLPICの基礎知識として押さえます。</p>
+        </aside>
+      </section>
+
+      <section id="sec-4">
+        <h2>設定・利用者・追加ソフトウェア</h2>
+
+        <h3><code>/etc</code> ― システム設定</h3>
+        <p><code>/etc</code>には、そのコンピューター固有のシステム設定ファイルが置かれます。</p>
+        <p>代表例には、ユーザー情報に関係する<code>/etc/passwd</code>、自動マウント設定の<code>/etc/fstab</code>、ホスト名とIPアドレスの対応を書く<code>/etc/hosts</code>などがあります。</p>
+        <p><code>/etc</code>は設定の場所であり、通常は実行プログラムそのものを置く場所ではありません。</p>
+
+        <h3><code>/home</code> ― 一般利用者のホーム</h3>
+        <p><code>/home</code>には、一般利用者のホームディレクトリが置かれます。</p>
+        <p>例えば、ユーザー名が<code>alice</code>なら、ホームディレクトリは<code>/home/alice</code>となることが一般的です。</p>
+        <p>個人の文書や、ドットで始まる個人設定ファイルなどが保存されます。</p>
+
+        <h3><code>/opt</code> ― 追加アプリケーション</h3>
+        <p><code>/opt</code>は、追加導入するアプリケーションパッケージを配置するためのディレクトリです。</p>
+        <p>ディストリビューションの標準構成とは別に提供される、大きなソフトウェア一式などが置かれることがあります。</p>
+
+        <h3><code>/srv</code> ― サービスが提供するデータ</h3>
+        <p><code>/srv</code>には、そのシステムが提供するサービスに関係するデータを置きます。</p>
+        <p>例えば、WebやFTPで公開するデータを配置する構成があります。ただし、実際の配置はディストリビューションや管理方針によって異なります。</p>
+      </section>
+
+      <section id="sec-5">
+        <h2>変化するデータと一時ファイル</h2>
+
+        <h3><code>/var</code> ― 変化するデータ</h3>
+        <p><code>/var</code>のvarは、variableに由来します。</p>
+        <p>運用中に内容や大きさが変化するデータが置かれます。</p>
+        <ul>
+          <li><code>/var/log</code>：ログ</li>
+          <li><code>/var/cache</code>：再生成可能なキャッシュ</li>
+          <li><code>/var/spool</code>：処理待ちのメールや印刷データなど</li>
+          <li><code>/var/tmp</code>：一時ファイル</li>
+        </ul>
+        <p>「ログはどこか」と聞かれたら、まず<code>/var/log</code>を思い出します。</p>
+
+        <h3><code>/tmp</code> ― 一時ファイル</h3>
+        <p><code>/tmp</code>には、プログラムが使う一時ファイルを置きます。</p>
+        <p>複数の利用者やプログラムが利用できるため、一般にSticky Bitが設定されています。</p>
+        <p><code>/tmp</code>のファイルは、再起動時や一定期間後に削除される可能性があります。長期保存には向きません。</p>
+
+        <h3><code>/var/tmp</code>との違い</h3>
+        <p><code>/var/tmp</code>も一時ファイル用ですが、FHSでは<code>/tmp</code>より長く保持され、再起動をまたいで残す必要がある一時データに利用する場所とされています。</p>
+
+        <h3><code>/run</code> ― 起動後の実行時データ</h3>
+        <p><code>/run</code>には、OS起動後に必要となる実行時データが置かれます。</p>
+        <p>PIDファイル、ソケット、ロックに関係する情報などが置かれることがあります。通常は起動時に作り直される揮発性の領域です。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>起動と管理者のディレクトリ</h2>
+
+        <h3><code>/boot</code> ― 起動に必要なファイル</h3>
+        <p><code>/boot</code>には、Linuxの起動に必要なファイルが置かれます。</p>
+        <p>Linuxカーネル、初期RAMファイルシステム、ブートローダー関連ファイルなどが含まれます。</p>
+
+        <h3><code>/root</code> ― rootユーザーのホーム</h3>
+        <p><code>/root</code>は、管理者ユーザーrootのホームディレクトリです。</p>
+        <p>一般利用者のホームは通常<code>/home/ユーザー名</code>ですが、rootのホームは<code>/root</code>です。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>混同注意：</strong><code>/</code>はディレクトリ階層の最上位、<code>/root</code>はrootユーザーのホームディレクトリです。</p>
+        </aside>
+      </section>
+
+      <section id="sec-7">
+        <h2>仮想ファイルシステム</h2>
+        <p><code>/dev</code>、<code>/proc</code>、<code>/sys</code>は、通常の文書を長期保存するディレクトリとは性格が異なります。</p>
+
+        <h3><code>/dev</code> ― デバイスファイル</h3>
+        <p><code>/dev</code>には、ディスク、端末、乱数生成器などを表すデバイスファイルが置かれます。</p>
+        <ul>
+          <li><code>/dev/sda</code>：ストレージを表す場合がある</li>
+          <li><code>/dev/tty</code>：端末</li>
+          <li><code>/dev/null</code>：書き込んだデータを捨てる特殊なデバイス</li>
+        </ul>
+        <p>Linuxでは、さまざまなデバイスをファイルのような形で扱います。</p>
+
+        <h3><code>/proc</code> ― プロセスとカーネル情報</h3>
+        <p><code>/proc</code>は、procfsという疑似ファイルシステムがマウントされる場所です。</p>
+        <p>実行中プロセスやカーネルの情報を、ファイルのような形式で参照できます。</p>
+        <ul>
+          <li><code>/proc/cpuinfo</code>：CPU情報</li>
+          <li><code>/proc/meminfo</code>：メモリ情報</li>
+          <li><code>/proc/番号</code>：そのPIDを持つプロセスの情報</li>
+        </ul>
+        <p>多くの項目は読み取り専用ですが、書き込みによってカーネル設定を変更できる項目もあります。</p>
+
+        <h3><code>/sys</code> ― デバイスとカーネルオブジェクト</h3>
+        <p><code>/sys</code>には、通常sysfsがマウントされます。</p>
+        <p>カーネルが認識しているデバイス、ドライバー、バスなどの情報を階層構造で参照できます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>覚え方：</strong><code>/proc</code>はプロセスとカーネル情報、<code>/sys</code>はデバイスやカーネルオブジェクト、<code>/dev</code>はデバイスを表すファイルです。</p>
+        </aside>
+      </section>
+
+      <section id="sec-8">
+        <h2>確認コマンド</h2>
+
+        <h3>最上位のディレクトリを確認する</h3>
+        <pre><code>ls -l /</code></pre>
+
+        <h3>シンボリックリンクも含めて確認する</h3>
+        <pre><code>ls -ld /bin /sbin /lib</code></pre>
+
+        <h3>現在のファイルシステム階層を確認する</h3>
+        <pre><code>findmnt</code></pre>
+
+        <h3>ディレクトリごとの容量を確認する</h3>
+        <pre><code>du -sh /var/*</code></pre>
+
+        <h3>マニュアルを確認する</h3>
+        <pre><code>man hier
+man proc
+man file-hierarchy</code></pre>
+
+        <p><code>hier</code>はhierarchyの略で、ファイルシステム階層の説明を確認できます。ただし、利用できるマニュアルや記載内容はディストリビューションによって異なります。</p>
+      </section>
+
+      <section id="sec-9">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>システム設定ファイルが主に置かれるディレクトリはどこでしょうか。</li>
+          <li>ログが主に置かれるディレクトリはどこでしょうか。</li>
+          <li>一般利用者とrootユーザーのホームディレクトリは、それぞれどこでしょうか。</li>
+          <li>プロセスやカーネル情報を参照できる疑似ファイルシステムはどこにマウントされるでしょうか。</li>
+          <li><code>/tmp</code>と<code>/var/tmp</code>では、一般にどちらが再起動後も残す一時ファイルに向いているでしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li><code>/etc</code></li>
+            <li><code>/var/log</code></li>
+            <li>一般利用者は通常<code>/home/ユーザー名</code>、rootは<code>/root</code></li>
+            <li><code>/proc</code></li>
+            <li><code>/var/tmp</code></li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-10">
+        <h2>要約</h2>
+        <ul>
+          <li>FHSは、Unix系OSのファイルやディレクトリ配置を定めた標準です。</li>
+          <li><code>/</code>は、すべてのディレクトリ階層の起点です。</li>
+          <li><code>/etc</code>には設定、<code>/home</code>には一般利用者のデータが置かれます。</li>
+          <li><code>/usr</code>には多くのコマンドやライブラリ、共有データが置かれます。</li>
+          <li><code>/var</code>にはログなど、運用中に変化するデータが置かれます。</li>
+          <li><code>/tmp</code>と<code>/var/tmp</code>は一時ファイル用ですが、保持期間の考え方が異なります。</li>
+          <li><code>/boot</code>には起動用ファイル、<code>/root</code>にはrootのホームが置かれます。</li>
+          <li><code>/dev</code>、<code>/proc</code>、<code>/sys</code>は、デバイスやカーネル情報を扱う特殊な領域です。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html" target="_blank" rel="noopener noreferrer">Filesystem Hierarchy Standard 3.0</a></li>
+          <li><a href="https://refspecs.linuxfoundation.org/FHS_3.0/fhs/ch05.html" target="_blank" rel="noopener noreferrer">FHS 3.0：/var Hierarchy</a></li>
+          <li><a href="https://refspecs.linuxfoundation.org/FHS_3.0/fhs/ch03s13.html" target="_blank" rel="noopener noreferrer">FHS 3.0：/opt</a></li>
+          <li><a href="https://www.freedesktop.org/software/systemd/man/latest/file-hierarchy.html" target="_blank" rel="noopener noreferrer">systemd：File system hierarchy</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man5/proc.5.html" target="_blank" rel="noopener noreferrer">proc(5) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man5/sysfs.5.html" target="_blank" rel="noopener noreferrer">sysfs(5) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man5/tmpfs.5.html" target="_blank" rel="noopener noreferrer">tmpfs(5) manual page</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 14：プロセス管理</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 14：プロセス管理</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/14_process_management_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">プロセスとは</a></li>
+          <li><a href="#sec-2">PID・PPID・プロセス状態</a></li>
+          <li><a href="#sec-3">psの基本</a></li>
+          <li><a href="#sec-4">psの絞り込み・表示形式・並べ替え</a></li>
+          <li><a href="#sec-5">top</a></li>
+          <li><a href="#sec-6">シグナルとkill</a></li>
+          <li><a href="#sec-7">killall</a></li>
+          <li><a href="#sec-8">jobs・bg・fg</a></li>
+          <li><a href="#sec-9">nice・renice</a></li>
+          <li><a href="#sec-10">確認から終了までの実践手順</a></li>
+          <li><a href="#sec-11">30秒チェック</a></li>
+          <li><a href="#sec-12">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>プロセスとは</h2>
+        <p>プロセスは、実行中のプログラムです。ディスク上に保存されているプログラムを実行すると、カーネルがメモリやCPU時間などを管理するプロセスとして扱います。</p>
+
+        <p>同じプログラムから、複数のプロセスが起動することもあります。</p>
+
+        <pre><code>sleep 300 &amp;
+sleep 300 &amp;
+ps -C sleep</code></pre>
+
+        <p>この例では、同じ<code>sleep</code>プログラムから二つのプロセスが起動し、それぞれ異なるPIDを持ちます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>用語</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>プログラム</td>
+              <td>ディスクなどに保存された実行可能な命令やデータ</td>
+            </tr>
+            <tr>
+              <td>プロセス</td>
+              <td>実行中のプログラムをカーネルが管理する単位</td>
+            </tr>
+            <tr>
+              <td>スレッド</td>
+              <td>プロセス内で実行される処理の流れ</td>
+            </tr>
+            <tr>
+              <td>デーモン</td>
+              <td>通常はバックグラウンドで継続的に動作するサービス用プロセス</td>
+            </tr>
+            <tr>
+              <td>ジョブ</td>
+              <td>対話型シェルがまとめて管理するコマンドやパイプライン</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>プロセスとジョブは同じではありません。一つのジョブがパイプラインを含み、複数のプロセスで構成される場合があります。</p>
+
+        <pre><code>grep ERROR access.log | less</code></pre>
+
+        <p>このパイプラインは、シェルから見ると一つのジョブですが、通常は<code>grep</code>と<code>less</code>という複数のプロセスを含みます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>今回の目標：</strong><code>ps</code>や<code>top</code>で対象を確認し、シグナルで制御し、シェルのジョブ制御とnice値による優先度調整を使い分けられるようにします。</p>
+        </aside>
+      </section>
+
+      <section id="sec-2">
+        <h2>PID・PPID・プロセス状態</h2>
+
+        <h3>PIDとPPID</h3>
+        <p>各プロセスには、プロセスIDであるPIDが割り当てられます。PPIDは、そのプロセスを起動した親プロセスのPIDです。</p>
+
+        <pre><code>echo $$
+ps -o pid,ppid,stat,cmd -p $$</code></pre>
+
+        <p><code>$$</code>は、現在のシェルのPIDへ展開されます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>PID</code></td><td>プロセスを識別する番号</td></tr>
+            <tr><td><code>PPID</code></td><td>親プロセスのPID</td></tr>
+            <tr><td><code>UID</code>・<code>USER</code></td><td>プロセスを所有する利用者</td></tr>
+            <tr><td><code>TTY</code></td><td>関連付けられた端末</td></tr>
+            <tr><td><code>STAT</code></td><td>プロセス状態と追加属性</td></tr>
+            <tr><td><code>CMD</code>・<code>COMMAND</code></td><td>実行中のコマンド</td></tr>
+          </tbody>
+        </table>
+
+        <h3>主なプロセス状態</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>状態</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>R</code></td><td>実行中、またはCPUで実行されるのを待っている</td></tr>
+            <tr><td><code>S</code></td><td>割り込み可能なスリープ。イベントを待っている</td></tr>
+            <tr><td><code>D</code></td><td>割り込み不可能なスリープ。主にI/O待ちなど</td></tr>
+            <tr><td><code>T</code></td><td>停止中、またはトレース中</td></tr>
+            <tr><td><code>Z</code></td><td>ゾンビ。終了済みだが親が終了状態を回収していない</td></tr>
+            <tr><td><code>I</code></td><td>アイドル状態のカーネルスレッド</td></tr>
+          </tbody>
+        </table>
+
+        <p><code>STAT</code>には、状態を示す先頭文字に加えて、追加属性が表示されることがあります。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>追加記号</th>
+              <th>主な意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>&lt;</code></td><td>高い優先度</td></tr>
+            <tr><td><code>N</code></td><td>低い優先度、つまりnice値が正</td></tr>
+            <tr><td><code>s</code></td><td>セッションリーダー</td></tr>
+            <tr><td><code>l</code></td><td>マルチスレッド</td></tr>
+            <tr><td><code>+</code></td><td>フォアグラウンドのプロセスグループに属する</td></tr>
+          </tbody>
+        </table>
+
+        <h3>ゾンビプロセス</h3>
+        <p>ゾンビは、すでに実行を終了しています。そのため、ゾンビ自身へ<code>SIGKILL</code>を送って通常のプロセスのように終了させることはできません。</p>
+
+        <pre><code>ps -eo pid,ppid,stat,cmd | grep '[Z]'</code></pre>
+
+        <p>ゾンビが残る場合は、PPIDを確認し、親プロセスが子の終了状態を回収していない原因を調べます。親プロセスを無条件に終了するのではなく、サービスへの影響を確認します。</p>
+      </section>
+
+      <section id="sec-3">
+        <h2>psの基本</h2>
+        <p><code>ps</code>は、選択したプロセスの情報を、その時点のスナップショットとして表示します。</p>
+
+        <pre><code>ps [オプション]</code></pre>
+
+        <p>Linuxで一般的なprocps-ng版の<code>ps</code>は、主に三種類のオプション形式を受け付けます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>形式</th>
+              <th>例</th>
+              <th>特徴</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>UNIX形式</td><td><code>ps -ef</code></td><td>オプションの前にハイフンを付ける</td></tr>
+            <tr><td>BSD形式</td><td><code>ps aux</code></td><td>通常はハイフンを付けない</td></tr>
+            <tr><td>GNU長形式</td><td><code>ps --forest</code></td><td>二つのハイフンと長い名前を使う</td></tr>
+          </tbody>
+        </table>
+
+        <p>形式を混ぜると、選択範囲や既定の表示内容が変わることがあります。まずは、よく使う形をまとまりとして覚えます。</p>
+
+        <h3>現在の端末に関係するプロセスを表示する</h3>
+        <pre><code>ps</code></pre>
+
+        <p>オプションなしでは、通常、現在の利用者と端末に関連する一部のプロセスが表示されます。</p>
+
+        <h3>全プロセスを詳細表示する</h3>
+        <pre><code>ps -ef</code></pre>
+
+        <p><code>-e</code>は全プロセス、<code>-f</code>は完全形式の表示です。UID、PID、PPID、開始時刻、コマンドなどを確認できます。</p>
+
+        <h3>BSD形式で全体を表示する</h3>
+        <pre><code>ps aux</code></pre>
+
+        <p><code>a</code>は端末を持つ他利用者のプロセスも含め、<code>x</code>は端末を持たないプロセスも含めます。<code>u</code>は利用者指向の表示形式です。</p>
+
+        <p><code>ps aux</code>の<code>aux</code>には、通常ハイフンを付けません。</p>
+
+        <h3>階層を表示する</h3>
+        <pre><code>ps -ef --forest
+ps axf</code></pre>
+
+        <p>親子関係を木構造に近い形で確認できます。</p>
+
+        <h3>特定PIDを表示する</h3>
+        <pre><code>ps -p 1234
+ps -fp 1234</code></pre>
+
+        <p><code>-p</code>はPIDで対象を選択します。</p>
+      </section>
+
+      <section id="sec-4">
+        <h2>psの絞り込み・表示形式・並べ替え</h2>
+
+        <h3>利用者で絞り込む</h3>
+        <pre><code>ps -u alice
+ps -U alice</code></pre>
+
+        <p>procps-ng版では、<code>-u</code>は実効ユーザーID、<code>-U</code>は実ユーザーIDによる選択です。一般的な確認では、所有者名で<code>ps -u 利用者名</code>を使うことが多くあります。</p>
+
+        <h3>コマンド名で絞り込む</h3>
+        <pre><code>ps -C sshd
+ps -C nginx -o pid,ppid,user,stat,cmd</code></pre>
+
+        <p><code>-C</code>は、実行可能ファイル名によって対象を選択します。</p>
+
+        <h3>親PIDで絞り込む</h3>
+        <pre><code>ps --ppid 1234
+ps -o pid,ppid,stat,cmd --ppid 1234</code></pre>
+
+        <p>指定した親プロセスの子プロセスを確認できます。</p>
+
+        <h3>表示項目を指定する</h3>
+        <pre><code>ps -eo pid,ppid,user,stat,ni,%cpu,%mem,cmd
+ps -p 1234 -o pid,etimes,stat,ni,cmd</code></pre>
+
+        <p><code>-o</code>は、表示する列を指定します。<code>-e</code>と組み合わせると、全プロセスについて必要な列だけを表示できます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>列名</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>pid</code></td><td>PID</td></tr>
+            <tr><td><code>ppid</code></td><td>PPID</td></tr>
+            <tr><td><code>user</code></td><td>所有者名</td></tr>
+            <tr><td><code>stat</code></td><td>プロセス状態</td></tr>
+            <tr><td><code>ni</code></td><td>nice値</td></tr>
+            <tr><td><code>%cpu</code></td><td>CPU使用率に関する値</td></tr>
+            <tr><td><code>%mem</code></td><td>物理メモリに対する使用率</td></tr>
+            <tr><td><code>etime</code>・<code>etimes</code></td><td>起動後の経過時間</td></tr>
+            <tr><td><code>cmd</code>・<code>args</code></td><td>引数を含むコマンドライン</td></tr>
+          </tbody>
+        </table>
+
+        <h3>並べ替える</h3>
+        <pre><code>ps -eo pid,user,%cpu,%mem,stat,cmd --sort=-%cpu
+ps -eo pid,user,%mem,%cpu,stat,cmd --sort=-%mem
+ps -eo pid,ppid,cmd --sort=ppid,pid</code></pre>
+
+        <p><code>--sort</code>では、列名の前のマイナスが降順、プラスまたは記号なしが昇順です。</p>
+
+        <h3>grepと組み合わせる場合</h3>
+        <pre><code>ps -ef | grep '[s]shd'</code></pre>
+
+        <p><code>grep sshd</code>では、検索中の<code>grep</code>自身も結果に含まれる場合があります。角括弧を使う方法のほか、利用できる環境では<code>pgrep</code>や<code>ps -C</code>も選択肢です。</p>
+
+        <h3>スナップショットであることを意識する</h3>
+        <p><code>ps</code>は実行した時点の情報です。継続的に変化を見る場合は<code>top</code>を使います。</p>
+      </section>
+
+      <section id="sec-5">
+        <h2>top</h2>
+        <p><code>top</code>は、システムの概要とプロセス一覧を動的に更新して表示します。</p>
+
+        <pre><code>top</code></pre>
+
+        <h3>上部の概要</h3>
+        <p>表示内容は設定やバージョンで変わりますが、一般的には次の情報を確認できます。</p>
+
+        <ul>
+          <li>現在時刻、稼働時間、ログイン利用者数</li>
+          <li>ロードアベレージ</li>
+          <li>プロセスやスレッドの状態別件数</li>
+          <li>CPU時間の内訳</li>
+          <li>物理メモリとスワップの使用状況</li>
+        </ul>
+
+        <p>ロードアベレージは、単純なCPU使用率ではありません。実行可能状態や割り込み不可能な待ち状態にある処理数の平均を示す指標として扱います。</p>
+
+        <h3>主なプロセス列</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>列</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>PID</code></td><td>プロセスID</td></tr>
+            <tr><td><code>USER</code></td><td>所有者</td></tr>
+            <tr><td><code>PR</code></td><td>スケジューリング優先度</td></tr>
+            <tr><td><code>NI</code></td><td>nice値</td></tr>
+            <tr><td><code>VIRT</code></td><td>仮想メモリの総量</td></tr>
+            <tr><td><code>RES</code></td><td>物理メモリ上に常駐している量</td></tr>
+            <tr><td><code>SHR</code></td><td>共有可能なメモリ量</td></tr>
+            <tr><td><code>S</code></td><td>プロセス状態</td></tr>
+            <tr><td><code>%CPU</code></td><td>CPU使用状況</td></tr>
+            <tr><td><code>%MEM</code></td><td>物理メモリに対する使用率</td></tr>
+            <tr><td><code>TIME+</code></td><td>使用したCPU時間の累計</td></tr>
+            <tr><td><code>COMMAND</code></td><td>コマンド名またはコマンドライン</td></tr>
+          </tbody>
+        </table>
+
+        <h3>主な対話キー</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>キー</th>
+              <th>主な操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>P</code></td><td>CPU使用状況を基準に並べ替える</td></tr>
+            <tr><td><code>M</code></td><td>メモリ使用状況を基準に並べ替える</td></tr>
+            <tr><td><code>T</code></td><td>CPU時間を基準に並べ替える</td></tr>
+            <tr><td><code>k</code></td><td>PIDとシグナルを指定してシグナルを送る</td></tr>
+            <tr><td><code>r</code></td><td>指定プロセスのnice値を変更する</td></tr>
+            <tr><td><code>d</code>または<code>s</code></td><td>更新間隔を変更する</td></tr>
+            <tr><td><code>1</code></td><td>CPUごとの表示を切り替える</td></tr>
+            <tr><td><code>H</code></td><td>スレッド表示を切り替える</td></tr>
+            <tr><td><code>h</code>または<code>?</code></td><td>ヘルプを表示する</td></tr>
+            <tr><td><code>q</code></td><td>終了する</td></tr>
+          </tbody>
+        </table>
+
+        <h3>バッチモード</h3>
+        <pre><code>top -b -n 1
+top -b -n 1 -o %MEM | head -n 20
+top -p 1234</code></pre>
+
+        <ul>
+          <li><code>-b</code>：端末操作を前提としないバッチモード</li>
+          <li><code>-n 1</code>：一回更新した後に終了する</li>
+          <li><code>-p PID</code>：指定PIDを監視する</li>
+        </ul>
+
+        <p>スクリプトやログ取得では、対話画面ではなくバッチモードを使います。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>シグナルとkill</h2>
+        <p>シグナルは、プロセスへイベントを通知する仕組みです。<code>kill</code>という名前でも、必ずしも強制終了だけを行うコマンドではありません。</p>
+
+        <pre><code>kill [シグナル指定] PID...</code></pre>
+
+        <h3>利用できるシグナルを確認する</h3>
+        <pre><code>kill -l
+kill -l 15</code></pre>
+
+        <p>シグナルは、名前または番号で指定できます。移植性や可読性を考えると、スクリプトでは名前による指定が分かりやすい場合があります。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>シグナル</th>
+              <th>Linuxで一般的な番号</th>
+              <th>主な意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>SIGHUP</code></td><td>1</td><td>端末切断の通知。デーモンが設定再読み込みに利用する場合もある</td></tr>
+            <tr><td><code>SIGINT</code></td><td>2</td><td>端末からの割り込み。通常はCtrl+Cで送られる</td></tr>
+            <tr><td><code>SIGKILL</code></td><td>9</td><td>強制終了。捕捉、無視、ブロックできない</td></tr>
+            <tr><td><code>SIGTERM</code></td><td>15</td><td>終了要求。<code>kill</code>の既定シグナル</td></tr>
+            <tr><td><code>SIGCONT</code></td><td>18</td><td>停止中のプロセスを再開する</td></tr>
+            <tr><td><code>SIGSTOP</code></td><td>19</td><td>強制停止。捕捉、無視、ブロックできない</td></tr>
+            <tr><td><code>SIGTSTP</code></td><td>20</td><td>端末からの停止要求。通常はCtrl+Zで送られる</td></tr>
+          </tbody>
+        </table>
+
+        <p>シグナル番号はアーキテクチャによって異なる場合があります。試験で頻出する<code>1</code>、<code>2</code>、<code>9</code>、<code>15</code>などを押さえつつ、実機では<code>kill -l</code>で確認します。</p>
+
+        <h3>通常の終了要求</h3>
+        <pre><code>kill 1234
+kill -TERM 1234
+kill -15 1234</code></pre>
+
+        <p>シグナルを省略すると<code>SIGTERM</code>です。対象プロセスは終了処理を実装していれば、ファイルを閉じる、状態を保存するなどの後始末を行えます。</p>
+
+        <h3>強制終了</h3>
+        <pre><code>kill -KILL 1234
+kill -9 1234</code></pre>
+
+        <p><code>SIGKILL</code>はプロセス側で処理できず、後始末の機会を与えません。最初から<code>kill -9</code>を使うのではなく、通常は<code>SIGTERM</code>で終了を依頼し、応答しない場合に限って検討します。</p>
+
+        <h3>停止と再開</h3>
+        <pre><code>kill -STOP 1234
+kill -CONT 1234</code></pre>
+
+        <p><code>SIGSTOP</code>は実行を停止し、<code>SIGCONT</code>は再開します。停止は終了ではありません。</p>
+
+        <h3>設定再読み込み</h3>
+        <pre><code>kill -HUP 1234</code></pre>
+
+        <p><code>SIGHUP</code>の扱いはプログラムごとに異なります。設定再読み込みとして利用するデーモンもありますが、必ず公式ドキュメントやサービスのmanページを確認します。</p>
+
+        <h3>シグナル0による確認</h3>
+        <pre><code>kill -0 1234
+echo $?</code></pre>
+
+        <p>シグナル0では実際のシグナルを送らず、PIDの存在や送信権限を確認できます。ただし、終了直後にPIDが別プロセスへ再利用される可能性もあるため、PIDだけで長時間後の同一性を保証できるとは考えません。</p>
+      </section>
+
+      <section id="sec-7">
+        <h2>killall</h2>
+        <p><code>killall</code>は、指定したコマンド名で動作するプロセス群へシグナルを送ります。Linuxで一般的なpsmisc版では、シグナルを省略すると<code>SIGTERM</code>です。</p>
+
+        <pre><code>killall [オプション] コマンド名...</code></pre>
+
+        <h3>コマンド名で終了を依頼する</h3>
+        <pre><code>killall sleep
+killall -TERM sleep</code></pre>
+
+        <p>同じ名前で動いている複数のプロセスが対象になる可能性があります。実行前に<code>ps -C</code>などで対象を確認します。</p>
+
+        <h3>強制終了する</h3>
+        <pre><code>killall -KILL sleep</code></pre>
+
+        <p><code>kill</code>と同様、<code>SIGKILL</code>は最後の手段として扱います。</p>
+
+        <h3>確認しながら実行する</h3>
+        <pre><code>killall -i sleep</code></pre>
+
+        <p><code>-i</code>は、各プロセスへシグナルを送る前に確認します。</p>
+
+        <h3>利用者を指定する</h3>
+        <pre><code>killall -u alice sleep</code></pre>
+
+        <p><code>-u</code>は、指定利用者が所有する対象に絞り込みます。</p>
+
+        <h3>終了を待つ</h3>
+        <pre><code>killall -w sleep</code></pre>
+
+        <p><code>-w</code>は、対象プロセスが終了するまで待ちます。対象がシグナルを無視する、ゾンビになる、PIDが再利用されるなどの状況では、待ち続ける可能性があるため注意します。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>使い分け：</strong>対象PIDを正確に指定できるなら<code>kill</code>、同じコマンド名の複数プロセスを対象にするなら<code>killall</code>です。名前で一括指定するときほど、事前確認が重要です。</p>
+        </aside>
+      </section>
+
+      <section id="sec-8">
+        <h2>jobs・bg・fg</h2>
+        <p><code>jobs</code>、<code>bg</code>、<code>fg</code>は、現在の対話型シェルが管理しているジョブを操作するBashの組み込みコマンドです。</p>
+
+        <h3>フォアグラウンドとバックグラウンド</h3>
+        <p>フォアグラウンドジョブは端末の前面で動作し、通常はキーボード入力を受け取ります。バックグラウンドジョブは、シェルのプロンプトを利用できる状態で動作します。</p>
+
+        <pre><code>sleep 300 &amp;</code></pre>
+
+        <p>行末の<code>&amp;</code>を付けると、コマンドをバックグラウンドで開始します。</p>
+
+        <h3>実行中のジョブを停止する</h3>
+        <pre><code>sleep 300
+# 実行中に Ctrl+Z</code></pre>
+
+        <p>通常、<code>Ctrl+Z</code>はフォアグラウンドジョブへ<code>SIGTSTP</code>を送り、ジョブを停止状態にします。終了ではありません。</p>
+
+        <h3>ジョブ一覧を表示する</h3>
+        <pre><code>jobs
+jobs -l</code></pre>
+
+        <p><code>jobs</code>は、現在のシェルが管理するジョブ番号と状態を表示します。<code>-l</code>を付けると、PIDも表示します。</p>
+
+        <pre><code>[1]-  Running    sleep 300 &amp;
+[2]+  Stopped    less large.log</code></pre>
+
+        <p><code>[1]</code>や<code>[2]</code>がジョブ番号です。プラス記号は現在のジョブ、マイナス記号はその一つ前のジョブを表します。</p>
+
+        <h3>バックグラウンドで再開する</h3>
+        <pre><code>bg %2</code></pre>
+
+        <p><code>bg</code>は、停止中のジョブをバックグラウンドで再開します。</p>
+
+        <h3>フォアグラウンドへ戻す</h3>
+        <pre><code>fg %1
+fg %2</code></pre>
+
+        <p><code>fg</code>は、指定ジョブをフォアグラウンドへ移動します。</p>
+
+        <h3>ジョブ指定</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>指定</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>%1</code></td><td>ジョブ番号1</td></tr>
+            <tr><td><code>%+</code>または<code>%%</code></td><td>現在のジョブ</td></tr>
+            <tr><td><code>%-</code></td><td>一つ前のジョブ</td></tr>
+            <tr><td><code>%文字列</code></td><td>その文字列で始まるコマンドのジョブ</td></tr>
+            <tr><td><code>%?文字列</code></td><td>その文字列を含むコマンドのジョブ</td></tr>
+          </tbody>
+        </table>
+
+        <h3>ジョブへシグナルを送る</h3>
+        <pre><code>kill %1
+kill -STOP %1
+kill -CONT %1</code></pre>
+
+        <p>Bash組み込みの<code>kill</code>では、PIDだけでなくジョブ指定を使えます。</p>
+
+        <h3>ジョブ番号とPIDの違い</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>識別子</th>
+              <th>管理範囲</th>
+              <th>主な確認方法</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>ジョブ番号</td><td>現在のシェル内</td><td><code>jobs</code></td></tr>
+            <tr><td>PID</td><td>OSが管理するプロセス</td><td><code>ps</code>、<code>top</code></td></tr>
+          </tbody>
+        </table>
+
+        <p>別の端末や別のシェルで開始した処理は、現在のシェルの<code>jobs</code>には通常表示されません。その場合はPIDを調べて管理します。</p>
+
+        <p>また、バックグラウンド化しても、標準出力や標準エラー出力は端末へ表示される場合があります。必要に応じて、開始時にリダイレクトします。</p>
+
+        <pre><code>long_command &gt; output.log 2&gt;&amp;1 &amp;</code></pre>
+      </section>
+
+      <section id="sec-9">
+        <h2>nice・renice</h2>
+        <p>nice値は、通常のタイムシェアリング対象プロセスについて、CPUスケジューリング上の扱われやすさに影響する値です。</p>
+
+        <p>Linuxでは一般に、nice値は<code>-20</code>から<code>19</code>の範囲です。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>nice値</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-20</code>に近い</td><td>プロセスにとって有利。高い優先度</td></tr>
+            <tr><td><code>0</code></td><td>一般的な初期値</td></tr>
+            <tr><td><code>19</code>に近い</td><td>プロセスにとって不利。低い優先度</td></tr>
+          </tbody>
+        </table>
+
+        <p>数字が小さいほど優先度が高く、数字が大きいほど優先度が低い点に注意します。「niceなプロセスほど他の処理へCPUを譲る」と覚えると整理しやすくなります。</p>
+
+        <h3>niceで新しいコマンドを起動する</h3>
+        <pre><code>nice -n 10 long_command
+nice -n 15 tar -czf backup.tar.gz large_directory/</code></pre>
+
+        <p>GNU <code>nice</code>の<code>-n</code>は、現在のnice値へ指定値を加えた状態でコマンドを実行します。指定しない場合の調整値は10です。</p>
+
+        <pre><code>nice long_command</code></pre>
+
+        <p>多くの場合、通常利用者はnice値を増やして優先度を下げられます。nice値を減らして優先度を上げる操作には、通常は追加の権限が必要です。</p>
+
+        <h3>現在のnice値を確認する</h3>
+        <pre><code>nice
+ps -o pid,ni,stat,cmd -p 1234
+top -p 1234</code></pre>
+
+        <p>引数なしのGNU <code>nice</code>は、現在のnicenessを表示します。個別プロセスは<code>ps</code>の<code>NI</code>列や<code>top</code>で確認します。</p>
+
+        <h3>reniceで実行中プロセスを変更する</h3>
+        <pre><code>renice 10 -p 1234
+renice --priority 15 -p 1234</code></pre>
+
+        <p>util-linux版の<code>renice</code>では、通常、指定値を新しい絶対nice値として扱います。</p>
+
+        <h3>利用者やプロセスグループを対象にする</h3>
+        <pre><code>renice 10 -u alice
+renice 5 -g 4321</code></pre>
+
+        <ul>
+          <li><code>-p</code>：PIDを指定する</li>
+          <li><code>-u</code>：利用者を指定する</li>
+          <li><code>-g</code>：プロセスグループIDを指定する</li>
+        </ul>
+
+        <h3>niceとreniceの違い</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>コマンド</th>
+              <th>対象</th>
+              <th>代表例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>nice</code></td><td>これから起動するコマンド</td><td><code>nice -n 10 command</code></td></tr>
+            <tr><td><code>renice</code></td><td>すでに動いているプロセスなど</td><td><code>renice 10 -p PID</code></td></tr>
+          </tbody>
+        </table>
+
+        <p>nice値はCPUスケジューリングへのヒントであり、メモリ使用量、ディスクI/O、ネットワーク帯域を直接制限する値ではありません。また、リアルタイムスケジューリングなど、別の方針には別の仕組みがあります。</p>
+      </section>
+
+      <section id="sec-10">
+        <h2>確認から終了までの実践手順</h2>
+
+        <h3>1. 対象を特定する</h3>
+        <pre><code>ps -C program_name -o pid,ppid,user,stat,ni,%cpu,%mem,cmd
+ps -eo pid,ppid,user,stat,ni,%cpu,%mem,cmd --sort=-%cpu
+top</code></pre>
+
+        <p>名前だけで判断せず、PID、所有者、親プロセス、状態、コマンドラインを確認します。</p>
+
+        <h3>2. サービス管理対象かを確認する</h3>
+        <p>systemdで管理されているサービスなら、個別プロセスを直接終了するより、サービス単位で操作する方が適切な場合があります。</p>
+
+        <pre><code>systemctl status service_name
+systemctl stop service_name</code></pre>
+
+        <p>自動再起動が設定されたサービスでは、個別PIDへ<code>kill</code>しても再び起動する場合があります。</p>
+
+        <h3>3. 通常の終了要求を送る</h3>
+        <pre><code>kill -TERM 1234</code></pre>
+
+        <p>まずは<code>SIGTERM</code>で、後始末を行える形の終了を依頼します。</p>
+
+        <h3>4. 終了したか確認する</h3>
+        <pre><code>ps -p 1234
+kill -0 1234
+echo $?</code></pre>
+
+        <p>対象が消えたか、状態が変化したか、別のPIDで再起動していないかを確認します。</p>
+
+        <h3>5. 応答しない原因を確認する</h3>
+        <pre><code>ps -o pid,ppid,stat,wchan:24,cmd -p 1234</code></pre>
+
+        <p><code>D</code>状態などでは、プロセスがカーネル内のI/O待ちから戻るまで、シグナルによる終了が直ちに反映されない場合があります。単純にシグナルを繰り返すのではなく、ストレージやネットワークファイルシステムなどの待ち原因も確認します。</p>
+
+        <h3>6. 最後の手段として強制終了する</h3>
+        <pre><code>kill -KILL 1234</code></pre>
+
+        <p>影響を理解した上で、通常終了できない場合に限って使用します。</p>
+
+        <h3>よくある間違い</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>間違いやすい点</th>
+              <th>確認すること</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>最初から<code>kill -9</code>を使う</td>
+              <td>まず<code>SIGTERM</code>で終了を依頼し、後始末の機会を与える</td>
+            </tr>
+            <tr>
+              <td><code>kill</code>は終了専用だと思う</td>
+              <td>停止、再開、再読み込みなど、各種シグナルを送るコマンド</td>
+            </tr>
+            <tr>
+              <td><code>ps aux</code>を<code>ps -aux</code>と覚える</td>
+              <td>BSD形式の代表例はハイフンなしの<code>ps aux</code></td>
+            </tr>
+            <tr>
+              <td><code>jobs</code>で全システムのプロセスを探す</td>
+              <td><code>jobs</code>は現在のシェルが管理するジョブだけ</td>
+            </tr>
+            <tr>
+              <td><code>Ctrl+Z</code>で終了したと思う</td>
+              <td><code>Ctrl+Z</code>は通常停止。<code>jobs</code>で状態を確認する</td>
+            </tr>
+            <tr>
+              <td>nice値が大きいほど優先度が高いと思う</td>
+              <td>nice値は小さいほど高優先度、大きいほど低優先度</td>
+            </tr>
+            <tr>
+              <td><code>nice</code>と<code>renice</code>を混同する</td>
+              <td><code>nice</code>は新規起動、<code>renice</code>は実行中の対象</td>
+            </tr>
+            <tr>
+              <td>ゾンビへ<code>kill -9</code>を繰り返す</td>
+              <td>ゾンビは終了済み。PPIDを確認し、親側の回収処理を調べる</td>
+            </tr>
+            <tr>
+              <td><code>killall</code>を対象確認なしで使う</td>
+              <td>同名プロセスを複数対象にする可能性があるため、先に一覧を確認する</td>
+            </tr>
+            <tr>
+              <td>サービスの子プロセスだけを終了する</td>
+              <td>systemd管理対象なら、サービス単位の停止や再起動を検討する</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>manページとヘルプを確認する</h3>
+        <pre><code>man ps
+man top
+man kill
+man killall
+help jobs
+help bg
+help fg
+help kill
+man nice
+man renice
+man 7 signal</code></pre>
+      </section>
+
+      <section id="sec-11">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>PIDとPPIDは、それぞれ何を表すでしょうか。</li>
+          <li><code>ps</code>と<code>top</code>は、表示の性質がどのように違うでしょうか。</li>
+          <li>全プロセスを完全形式で表示する代表的な<code>ps</code>コマンドは何でしょうか。</li>
+          <li><code>ps aux</code>の<code>aux</code>には、通常ハイフンを付けるでしょうか。</li>
+          <li><code>kill</code>でシグナルを省略したとき、何が送られるでしょうか。</li>
+          <li><code>SIGTERM</code>と<code>SIGKILL</code>の重要な違いは何でしょうか。</li>
+          <li><code>jobs</code>で表示されるジョブ番号とPIDは、管理範囲がどう違うでしょうか。</li>
+          <li><code>Ctrl+Z</code>、<code>bg</code>、<code>fg</code>は、それぞれ何をするでしょうか。</li>
+          <li>nice値は、小さい値と大きい値のどちらが高い優先度でしょうか。</li>
+          <li><code>nice</code>と<code>renice</code>の対象は、どう違うでしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li>PIDはプロセス自身の識別番号、PPIDは親プロセスのPID</li>
+            <li><code>ps</code>は実行時点のスナップショット、<code>top</code>は動的に更新する表示</li>
+            <li><code>ps -ef</code></li>
+            <li>付けない。代表的なBSD形式は<code>ps aux</code></li>
+            <li><code>SIGTERM</code></li>
+            <li><code>SIGTERM</code>はプロセスが処理して後始末できるが、<code>SIGKILL</code>は捕捉や無視ができず、後始末の機会を与えない</li>
+            <li>ジョブ番号は現在のシェル内、PIDはOSが管理するプロセスの識別番号</li>
+            <li><code>Ctrl+Z</code>は通常ジョブを停止し、<code>bg</code>はバックグラウンドで再開、<code>fg</code>はフォアグラウンドへ移動する</li>
+            <li>小さい値。<code>-20</code>に近いほど高く、<code>19</code>に近いほど低い</li>
+            <li><code>nice</code>はこれから起動するコマンド、<code>renice</code>は実行中のプロセスなど</li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-12">
+        <h2>要約</h2>
+        <ul>
+          <li>プロセスは実行中のプログラムで、PIDにより識別され、PPIDで親プロセスを確認できます。</li>
+          <li><code>R</code>は実行可能、<code>S</code>は割り込み可能なスリープ、<code>D</code>は割り込み不可能な待ち、<code>T</code>は停止、<code>Z</code>はゾンビです。</li>
+          <li><code>ps</code>は実行時点のスナップショット、<code>top</code>は動的に更新される一覧です。</li>
+          <li><code>ps -ef</code>と<code>ps aux</code>は全体確認の代表例で、<code>ps aux</code>は通常ハイフンなしです。</li>
+          <li><code>ps -o</code>で列を指定し、<code>--sort=-%cpu</code>などで並べ替えられます。</li>
+          <li><code>kill</code>はPIDへシグナルを送り、省略時は<code>SIGTERM</code>です。</li>
+          <li><code>SIGKILL</code>は捕捉、無視、ブロックができず、後始末の機会を与えないため最後の手段です。</li>
+          <li><code>killall</code>はコマンド名で複数プロセスを対象にできるため、事前確認が重要です。</li>
+          <li><code>jobs</code>、<code>bg</code>、<code>fg</code>は、現在のシェルが管理するジョブを操作します。</li>
+          <li><code>Ctrl+Z</code>は通常停止であり、終了ではありません。</li>
+          <li>nice値は<code>-20</code>に近いほど高優先度、<code>19</code>に近いほど低優先度です。</li>
+          <li><code>nice</code>は新しく起動するコマンド、<code>renice</code>は実行中のプロセスなどのnice値を変更します。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://man7.org/linux/man-pages/man1/ps.1.html" target="_blank" rel="noopener noreferrer">ps(1) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/top.1.html" target="_blank" rel="noopener noreferrer">top(1) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/kill.1.html" target="_blank" rel="noopener noreferrer">kill(1) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/killall.1.html" target="_blank" rel="noopener noreferrer">killall(1) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man7/signal.7.html" target="_blank" rel="noopener noreferrer">signal(7) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man5/proc_pid_stat.5.html" target="_blank" rel="noopener noreferrer">proc_pid_stat(5) — Linux manual page</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Job-Control-Basics.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Job Control Basics</a></li>
+          <li><a href="https://www.gnu.org/software/bash/manual/html_node/Job-Control-Builtins.html" target="_blank" rel="noopener noreferrer">GNU Bash Manual：Job Control Builtins</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/nice-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：nice invocation</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/nice.1.html" target="_blank" rel="noopener noreferrer">nice(1) — Linux manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man1/renice.1.html" target="_blank" rel="noopener noreferrer">renice(1) — Linux manual page</a></li>
+          <li><a href="https://gitlab.com/procps-ng/procps" target="_blank" rel="noopener noreferrer">procps-ng Project</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

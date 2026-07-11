@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LPIC Level1 復習ラジオ 24：LPIC Level1総まとめ</title>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<main class="container">
+<article class="card">
+<header>
+<h1>LPIC Level1 復習ラジオ 24：LPIC Level1総まとめ</h1>
+<nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+<p class="meta">投稿日：2026-07-11</p>
+</header>
+
+<section class="card" style="margin-top:12px;">
+<h2 style="margin:0 0 8px 0;">音声</h2>
+<audio controls preload="none" src="/posts/Linux/audio/24_lpic_level1_soumatome_compact.mp3"></audio>
+<p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+</section>
+
+<section id="sec-toc">
+<h2>目次</h2>
+<ol>
+<li><a href="#sec-1">24回分を一枚の地図にする</a></li>
+<li><a href="#sec-2">第1章 Linuxの基礎</a></li>
+<li><a href="#sec-3">第2章 Linuxコマンド</a></li>
+<li><a href="#sec-4">第3章 シェル</a></li>
+<li><a href="#sec-5">第4章 LPIC頻出知識</a></li>
+<li><a href="#sec-6">重要用語の対比</a></li>
+<li><a href="#sec-7">目的から引くコマンド整理</a></li>
+<li><a href="#sec-8">覚え方と結び付け方</a></li>
+<li><a href="#sec-9">試験で間違えやすいポイント</a></li>
+<li><a href="#sec-10">問題を解くときの考え方</a></li>
+<li><a href="#sec-11">30秒チェック</a></li>
+<li><a href="#sec-12">最終要約</a></li>
+</ol>
+</section>
+
+<section id="sec-1">
+<h2>24回分を一枚の地図にする</h2>
+<p>このシリーズでは、Linuxの仕組み、基本コマンド、bash、そしてLPIC Level1で混同しやすい知識を24回に分けて復習してきました。最終回では、個別の暗記を一つの流れへつなげます。</p>
+
+<p>この復習ラジオは、教科書や問題演習を置き換えるものではありません。普段の勉強で疲れたときに、重要語を思い出し、知識同士のつながりを戻すための軽い復習用です。</p>
+
+<h3>Linuxを扱う大きな流れ</h3>
+<pre><code>電源投入
+  ↓
+BIOS・UEFI
+  ↓
+ブートローダー
+  ↓
+Linuxカーネル
+  ↓
+init・systemd
+  ↓
+サービスとログ
+  ↓
+シェルからコマンドを実行
+  ↓
+ファイル・プロセス・ネットワークを操作</code></pre>
+
+<h3>問題を見たときの四つの視点</h3>
+<table>
+<thead><tr><th>視点</th><th>考えること</th><th>代表例</th></tr></thead>
+<tbody>
+<tr><td>対象</td><td>ファイル、プロセス、サービス、デバイス、ネットワークのどれか</td><td><code>ls</code>、<code>ps</code>、<code>systemctl</code>、<code>lsblk</code>、<code>ip</code></td></tr>
+<tr><td>状態</td><td>存在するか、動作中か、接続済みか、権限があるか</td><td><code>test</code>、<code>ps</code>、<code>ss</code>、<code>ls -l</code></td></tr>
+<tr><td>設定</td><td>どの設定ファイルやオプションが状態を決めるか</td><td><code>/etc/fstab</code>、サービスのunit、環境変数</td></tr>
+<tr><td>記録</td><td>何が起きたかをどのログで確認するか</td><td><code>journalctl</code>、<code>/var/log</code></td></tr>
+</tbody>
+</table>
+
+<h3>24回の一行振り返り</h3>
+<table>
+<thead><tr><th>回</th><th>テーマ</th><th>一行で思い出す</th></tr></thead>
+<tbody>
+<tr><td>01</td><td>Linuxとは</td><td>カーネルが中核、シェルが窓口、ディストリビューションが利用できる形へまとめる</td></tr>
+<tr><td>02</td><td>ハードウェアと起動</td><td>CPU・メモリ・ストレージを初期化し、BIOS・UEFIから起動処理が始まる</td></tr>
+<tr><td>03</td><td>Linuxの起動</td><td>ブートローダー、カーネル、PID 1、サービスの順につなげる</td></tr>
+<tr><td>04</td><td>ファイルシステム</td><td>データ、inode、マウント、UUID、fstabを一つの仕組みとして見る</td></tr>
+<tr><td>05</td><td>FHS</td><td>設定は<code>/etc</code>、変化するデータは<code>/var</code>、利用者は<code>/home</code></td></tr>
+<tr><td>06</td><td>ユーザーと権限</td><td>UID・GIDと、所有者・グループ・その他へのrwxを確認する</td></tr>
+<tr><td>07</td><td>ネットワーク基礎</td><td>IPで宛先、ARPで同一リンク、DNSで名前、DHCPで設定、経路表で転送先を決める</td></tr>
+<tr><td>08</td><td>パッケージ管理</td><td>dpkg・rpmは個別操作、apt・dnfはリポジトリと依存関係を扱う</td></tr>
+<tr><td>09</td><td>ファイル操作</td><td>一覧、複製、移動、削除、作成、リンクを対象と影響範囲で区別する</td></tr>
+<tr><td>10</td><td>ファイル閲覧</td><td>全体はcat、長文はless、先頭はhead、末尾はtail、件数はwc</td></tr>
+<tr><td>11</td><td>検索</td><td>中身はgrep、ファイル自体はfind、データベース検索はlocate</td></tr>
+<tr><td>12</td><td>テキスト処理</td><td>列はcut、並べるsort、隣接重複はuniq、文字変換はtr</td></tr>
+<tr><td>13</td><td>圧縮・アーカイブ</td><td>tarでまとめ、gzip・bzip2・xzで圧縮する</td></tr>
+<tr><td>14</td><td>プロセス管理</td><td>ps・topで確認し、killでシグナル、jobs・bg・fgでシェルのジョブを操作する</td></tr>
+<tr><td>15</td><td>ディスク管理</td><td>dfはファイルシステム、duはパス、lsblkはデバイス、findmntはマウント関係</td></tr>
+<tr><td>16</td><td>ネットワークコマンド</td><td>ip、ping、ss、digを使い、層を上げながら切り分ける</td></tr>
+<tr><td>17</td><td>bashの基本</td><td>PATH、変数、export、alias、historyはシェルの実行環境を形作る</td></tr>
+<tr><td>18</td><td>リダイレクトとパイプ</td><td>0・1・2の入出力を、ファイルや次のコマンドへ接続し直す</td></tr>
+<tr><td>19</td><td>ワイルドカードと正規表現</td><td>ワイルドカードはファイル名展開、正規表現は文字列パターン</td></tr>
+<tr><td>20</td><td>パーミッション総復習</td><td>数値表記、umask、特殊ビットを通常ファイルとディレクトリで区別する</td></tr>
+<tr><td>21</td><td>systemd総復習</td><td>unitの現在状態、自動起動設定、依存関係、journalを分けて確認する</td></tr>
+<tr><td>22</td><td>ネットワーク総復習</td><td>リンク、アドレス、経路、ARP、DNS、ポート、サービスの順で調べる</td></tr>
+<tr><td>23</td><td>ファイルシステム総復習</td><td>ファイル名、inode、データ、UUID、fstab、二種類のリンクを結び付ける</td></tr>
+<tr><td>24</td><td>総まとめ</td><td>個別の暗記を、対象・状態・設定・記録という共通の考え方へ戻す</td></tr>
+</tbody>
+</table>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>全体の軸：</strong>Linuxの問題は、「何を対象に」「現在どうなっていて」「何が設定し」「どこに記録されたか」を分けると整理しやすくなります。</p>
+</aside>
+</section>
+
+<section id="sec-2">
+<h2>第1章 Linuxの基礎</h2>
+<p>第1章では、Linuxが動作する土台と、管理対象の基本概念を確認しました。</p>
+
+<h3>01. Linuxとは</h3>
+<table>
+<thead><tr><th>用語</th><th>要点</th></tr></thead>
+<tbody>
+<tr><td>OS</td><td>ハードウェアを管理し、アプリケーションが動作する基盤を提供する</td></tr>
+<tr><td>Linux</td><td>厳密にはカーネルを指すことがあり、一般にはLinuxを使ったOS全体を指すこともある</td></tr>
+<tr><td>カーネル</td><td>CPU、メモリ、デバイス、プロセス、ファイルシステムなどを管理する中核</td></tr>
+<tr><td>シェル</td><td>利用者の入力を解釈し、コマンドを実行するプログラム</td></tr>
+<tr><td>GNU</td><td>bashやGNU Coreutilsなど、多くの基本ツールを提供するプロジェクト</td></tr>
+<tr><td>ディストリビューション</td><td>カーネル、ツール、パッケージ管理、設定などをまとめた配布形態</td></tr>
+</tbody>
+</table>
+
+<h3>02. ハードウェアと起動</h3>
+<ul>
+<li>CPUは命令を実行し、メモリは実行中のプログラムやデータを保持します。</li>
+<li>SSDやHDDは、電源を切っても残るデータを保存します。</li>
+<li>BIOSとUEFIは、起動時にハードウェアを初期化し、次の起動処理へ制御を渡します。</li>
+<li>MBRとGPTは、ディスクのパーティション情報を管理する方式です。</li>
+<li>UEFI環境では、EFIシステムパーティションが起動に使われます。</li>
+</ul>
+
+<h3>03. Linuxの起動</h3>
+<pre><code>ファームウェア → ブートローダー → カーネル → init/systemd → target・service</code></pre>
+<p>systemdを採用する環境では、systemdがPID 1として起動し、unitの依存関係に基づいてサービスやマウントなどを管理します。</p>
+
+<h3>04・05. ファイルシステムとFHS</h3>
+<table>
+<thead><tr><th>場所・用語</th><th>要点</th></tr></thead>
+<tbody>
+<tr><td><code>/</code></td><td>ディレクトリツリーの起点</td></tr>
+<tr><td><code>/etc</code></td><td>ホスト固有の設定ファイル</td></tr>
+<tr><td><code>/usr</code></td><td>共有可能なプログラムや静的データを置く階層</td></tr>
+<tr><td><code>/var</code></td><td>ログ、スプール、キャッシュなど変化するデータ</td></tr>
+<tr><td><code>/home</code></td><td>一般ユーザーのホームディレクトリ</td></tr>
+<tr><td><code>/tmp</code></td><td>一時ファイル</td></tr>
+<tr><td><code>/proc</code></td><td>プロセスやカーネル情報を表す仮想ファイルシステム</td></tr>
+<tr><td><code>/sys</code></td><td>デバイスやカーネルオブジェクトの情報を表す仮想ファイルシステム</td></tr>
+<tr><td>inode</td><td>所有者、権限、サイズ、時刻、データ位置などを管理する。通常ファイル名は持たない</td></tr>
+<tr><td>UUID</td><td>ファイルシステムを安定して識別するために使う</td></tr>
+</tbody>
+</table>
+
+<h3>06. ユーザーと権限</h3>
+<ul>
+<li>UIDはユーザー、GIDはグループを数値で識別します。</li>
+<li>rootは特権ユーザーで、sudoは設定に基づいて別ユーザーとしてコマンドを実行します。</li>
+<li>パーミッションは、所有者、グループ、その他の三組に対してrwxを設定します。</li>
+<li>umaskは、新規作成時の権限から無効にするビットを決めます。</li>
+<li>SUID、SGID、Sticky Bitは通常のrwxに加わる特殊ビットです。</li>
+</ul>
+
+<h3>07. ネットワーク基礎</h3>
+<ul>
+<li>IPアドレスはネットワーク層で相手を識別し、MACアドレスは同一リンク上の通信で使われます。</li>
+<li>ARPはIPv4アドレスに対応するMACアドレスを調べます。</li>
+<li>DNSは名前とIPアドレスなどの情報を対応付けます。</li>
+<li>DHCPはIPアドレス、サブネットマスク、デフォルトゲートウェイ、DNSサーバーなどを配布できます。</li>
+<li>ルーティングテーブルは、宛先ごとに次の送信先とインターフェースを決めます。</li>
+</ul>
+
+<h3>08. パッケージ管理</h3>
+<table>
+<thead><tr><th>系統</th><th>低レベルツール</th><th>依存関係を扱う上位ツール</th></tr></thead>
+<tbody>
+<tr><td>Debian系</td><td><code>dpkg</code></td><td><code>apt</code></td></tr>
+<tr><td>RPM系</td><td><code>rpm</code></td><td><code>dnf</code>、<code>yum</code></td></tr>
+</tbody>
+</table>
+<p>リポジトリは、パッケージとメタデータを配布する場所です。低レベルツールは個別パッケージの操作に強く、上位ツールはリポジトリ検索や依存関係の解決を行います。</p>
+</section>
+
+<section id="sec-3">
+<h2>第2章 Linuxコマンド</h2>
+<p>コマンドは、名前だけでなく「標準入力を受けるのか」「ファイル名を引数に取るのか」「結果を標準出力へ出すのか」を意識すると、パイプやリダイレクトへつなげやすくなります。</p>
+
+<h3>09・10. ファイル操作と閲覧</h3>
+<table>
+<thead><tr><th>目的</th><th>代表コマンド</th><th>頻出ポイント</th></tr></thead>
+<tbody>
+<tr><td>一覧表示</td><td><code>ls</code></td><td><code>-l</code>、<code>-a</code>、<code>-i</code></td></tr>
+<tr><td>コピー</td><td><code>cp</code></td><td>ディレクトリには<code>-r</code>または<code>-R</code></td></tr>
+<tr><td>移動・改名</td><td><code>mv</code></td><td>同一ファイルシステム内の改名と、別領域への移動を区別する</td></tr>
+<tr><td>削除</td><td><code>rm</code></td><td>ディレクトリには<code>-r</code>。復元機能ではない</td></tr>
+<tr><td>作成</td><td><code>mkdir</code>、<code>touch</code></td><td><code>mkdir -p</code>、touchは時刻更新にも使う</td></tr>
+<tr><td>リンク</td><td><code>ln</code></td><td><code>ln</code>はハードリンク、<code>ln -s</code>はシンボリックリンク</td></tr>
+<tr><td>全体表示</td><td><code>cat</code></td><td>短いファイルや結合向き</td></tr>
+<tr><td>ページ表示</td><td><code>less</code></td><td>長い出力の閲覧や検索向き</td></tr>
+<tr><td>先頭・末尾</td><td><code>head</code>、<code>tail</code></td><td><code>tail -f</code>で追跡表示</td></tr>
+<tr><td>数える</td><td><code>wc</code></td><td><code>-l</code>行数、<code>-w</code>単語数、<code>-c</code>バイト数</td></tr>
+</tbody>
+</table>
+
+<h3>11. 検索</h3>
+<pre><code>grep -R "ERROR" /var/log
+find /home -type f -name '*.log'
+locate ssh_config
+which python3
+whereis bash</code></pre>
+<ul>
+<li><code>grep</code>は、ファイルの中身や標準入力からパターンに一致する行を探します。</li>
+<li><code>find</code>は、現在のファイルシステムをたどり、名前、種類、サイズ、時刻、所有者などの条件で探します。</li>
+<li><code>locate</code>はデータベースを使って高速にパス名を検索しますが、データベースが古い可能性があります。</li>
+<li><code>which</code>はPATHから実行されるコマンドを探し、<code>whereis</code>はバイナリ、ソース、manページなどの候補を探します。</li>
+</ul>
+
+<h3>12. テキスト処理</h3>
+<pre><code>cut -d: -f1 /etc/passwd
+sort names.txt | uniq -c
+tr 'a-z' 'A-Z' &lt; input.txt</code></pre>
+<table>
+<thead><tr><th>コマンド</th><th>要点</th></tr></thead>
+<tbody>
+<tr><td><code>cut</code></td><td>区切り文字や文字位置を基準に列を切り出す</td></tr>
+<tr><td><code>sort</code></td><td>行を並べ替える。<code>-n</code>は数値順</td></tr>
+<tr><td><code>uniq</code></td><td>隣接する重複行を処理するため、通常はsortと組み合わせる</td></tr>
+<tr><td><code>tr</code></td><td>文字の変換、削除、連続文字の圧縮を行う</td></tr>
+</tbody>
+</table>
+
+<h3>13. 圧縮・アーカイブ</h3>
+<table>
+<thead><tr><th>形式・コマンド</th><th>役割</th><th>代表例</th></tr></thead>
+<tbody>
+<tr><td><code>tar</code></td><td>複数ファイルを一つのアーカイブへまとめる</td><td><code>tar -cvf files.tar dir/</code></td></tr>
+<tr><td><code>gzip</code></td><td>gzip形式で圧縮する</td><td><code>gzip file</code></td></tr>
+<tr><td><code>bzip2</code></td><td>bzip2形式で圧縮する</td><td><code>bzip2 file</code></td></tr>
+<tr><td><code>xz</code></td><td>xz形式で圧縮する</td><td><code>xz file</code></td></tr>
+<tr><td><code>zip</code></td><td>アーカイブと圧縮をまとめて行える</td><td><code>zip -r files.zip dir/</code></td></tr>
+</tbody>
+</table>
+<p><code>tar</code>の基本は、作成が<code>c</code>、展開が<code>x</code>、一覧が<code>t</code>、ファイル指定が<code>f</code>です。gzipは<code>z</code>、bzip2は<code>j</code>、xzは<code>J</code>を組み合わせます。</p>
+
+<h3>14. プロセス管理</h3>
+<ul>
+<li><code>ps</code>はある時点のプロセス一覧、<code>top</code>は継続的な状態表示です。</li>
+<li><code>kill</code>はPIDへシグナルを送り、<code>killall</code>は名前で対象を選びます。</li>
+<li>まず通常終了を求めるSIGTERMを使い、必要な場合に限ってSIGKILLを検討します。</li>
+<li><code>jobs</code>、<code>bg</code>、<code>fg</code>は、現在のシェルが管理するジョブを操作します。</li>
+<li><code>nice</code>は起動時、<code>renice</code>は実行中のプロセスのnice値を変更します。</li>
+</ul>
+
+<h3>15・16. ディスクとネットワーク</h3>
+<table>
+<thead><tr><th>確認対象</th><th>代表コマンド</th></tr></thead>
+<tbody>
+<tr><td>ファイルシステムの使用量</td><td><code>df -h</code></td></tr>
+<tr><td>ディレクトリやファイルの使用量</td><td><code>du -sh</code></td></tr>
+<tr><td>ブロックデバイス</td><td><code>lsblk</code></td></tr>
+<tr><td>UUID・ファイルシステム種別</td><td><code>blkid</code>、<code>lsblk -f</code></td></tr>
+<tr><td>IPアドレス</td><td><code>ip address</code></td></tr>
+<tr><td>ルーティング</td><td><code>ip route</code></td></tr>
+<tr><td>疎通</td><td><code>ping</code></td></tr>
+<tr><td>待受・ソケット</td><td><code>ss -lntup</code></td></tr>
+<tr><td>経路</td><td><code>traceroute</code></td></tr>
+<tr><td>DNS</td><td><code>dig</code>、<code>host</code></td></tr>
+<tr><td>HTTPなどの取得</td><td><code>curl</code>、<code>wget</code></td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="sec-4">
+<h2>第3章 シェル</h2>
+<p>シェルの問題では、コマンドそのものだけでなく、シェルが実行前に何を展開し、どこへ入出力を接続するかを考えます。</p>
+
+<h3>17. bashの基本</h3>
+<table>
+<thead><tr><th>用語</th><th>要点</th></tr></thead>
+<tbody>
+<tr><td>PATH</td><td>コマンド名から実行ファイルを探すディレクトリの一覧</td></tr>
+<tr><td>シェル変数</td><td>現在のシェルが保持する変数</td></tr>
+<tr><td>環境変数</td><td>子プロセスへ渡される環境の一部</td></tr>
+<tr><td><code>export</code></td><td>変数を子プロセスの環境へ渡せるようにする</td></tr>
+<tr><td><code>alias</code></td><td>短い別名としてコマンド文字列を登録する</td></tr>
+<tr><td><code>history</code></td><td>コマンド履歴を表示、再利用する</td></tr>
+</tbody>
+</table>
+
+<pre><code>EDITOR=vim
+export EDITOR
+alias ll='ls -alF'
+echo "$PATH"
+history</code></pre>
+
+<h3>18. リダイレクトとパイプ</h3>
+<table>
+<thead><tr><th>記号</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td><code>&gt;</code></td><td>標準出力をファイルへ書き込み、既存内容を上書きする</td></tr>
+<tr><td><code>&gt;&gt;</code></td><td>標準出力をファイル末尾へ追記する</td></tr>
+<tr><td><code>&lt;</code></td><td>ファイルを標準入力として接続する</td></tr>
+<tr><td><code>2&gt;</code></td><td>標準エラー出力をリダイレクトする</td></tr>
+<tr><td><code>|</code></td><td>左の標準出力を右の標準入力へ渡す</td></tr>
+<tr><td><code>tee</code></td><td>標準入力を標準出力とファイルの両方へ複製する</td></tr>
+</tbody>
+</table>
+
+<pre><code>command &gt; output.txt 2&gt; error.txt
+command &gt; all.txt 2&gt;&amp;1
+journalctl -u ssh.service | grep -i error | tee errors.txt</code></pre>
+<p><code>2&gt;&amp;1</code>は、標準エラー出力を、その時点で標準出力が接続されている先へ複製します。リダイレクトは左から右へ処理されるため、順序が重要です。</p>
+
+<h3>19. ワイルドカードと正規表現</h3>
+<table>
+<thead><tr><th>種類</th><th>主に処理するもの</th><th>例</th></tr></thead>
+<tbody>
+<tr><td>ワイルドカード</td><td>シェルがファイル名へ展開する</td><td><code>*.log</code>、<code>file?.txt</code></td></tr>
+<tr><td>正規表現</td><td>grepなどのプログラムが文字列パターンとして解釈する</td><td><code>^ERROR</code>、<code>[0-9]$</code></td></tr>
+</tbody>
+</table>
+
+<ul>
+<li><code>*</code>は任意個の文字、<code>?</code>は任意の1文字、<code>[]</code>は候補の1文字を表します。</li>
+<li>基本正規表現では、<code>^</code>が行頭、<code>$</code>が行末、<code>.</code>が任意の1文字、<code>*</code>が直前要素の0回以上です。</li>
+<li>正規表現をシェルに解釈させないため、grepのパターンは単一引用符で囲む習慣が役立ちます。</li>
+</ul>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>重要：</strong><code>grep '*.log'</code>と<code>grep '.*\.log'</code>は同じ意味ではありません。前者のアスタリスクは、正規表現では直前の文字を繰り返す記号です。</p>
+</aside>
+</section>
+
+<section id="sec-5">
+<h2>第4章 LPIC頻出知識</h2>
+<p>第4章では、複数の分野にまたがって繰り返し出てくる知識を、改めてまとめました。</p>
+
+<h3>20. パーミッション総復習</h3>
+<table>
+<thead><tr><th>対象</th><th>r</th><th>w</th><th>x</th></tr></thead>
+<tbody>
+<tr><td>通常ファイル</td><td>内容を読む</td><td>内容を変更する</td><td>プログラムとして実行する</td></tr>
+<tr><td>ディレクトリ</td><td>名前の一覧を読む</td><td>項目を作成・削除する</td><td>中へ入り、名前をたどる</td></tr>
+</tbody>
+</table>
+
+<pre><code>chmod 640 report.txt
+chown alice:staff report.txt
+umask 027</code></pre>
+<ul>
+<li>数値表記はrが4、wが2、xが1です。</li>
+<li>通常ファイルは基準0666、ディレクトリは基準0777からumaskを無効化して考えます。</li>
+<li>SUIDは実行ファイルの所有者、SGIDは実行ファイルのグループ権限で実行させる働きがあります。</li>
+<li>ディレクトリのSGIDは、新規項目に親ディレクトリのグループを引き継がせる用途があります。</li>
+<li>Sticky Bitを設定した共有ディレクトリでは、通常、自分のファイルまたはディレクトリ所有者などだけが削除できます。</li>
+</ul>
+
+<h3>21. systemd総復習</h3>
+<pre><code>systemctl status ssh.service
+systemctl start ssh.service
+systemctl enable ssh.service
+systemctl is-active ssh.service
+systemctl is-enabled ssh.service
+journalctl -u ssh.service
+journalctl -b</code></pre>
+<p><code>start</code>は現在の起動、<code>enable</code>は次回以降の起動設定です。状態と自動起動設定は別なので、<code>active</code>と<code>enabled</code>を混同しないようにします。</p>
+
+<h3>22. ネットワーク総復習</h3>
+<pre><code>ip link
+ip address
+ip route
+ip neigh
+ping 192.0.2.1
+dig example.com
+ss -lntup</code></pre>
+<p>通信の切り分けでは、リンク、IPアドレス、経路、近隣解決、名前解決、待受、アプリケーションの順に確認すると整理しやすくなります。</p>
+
+<h3>23. ファイルシステム総復習</h3>
+<ul>
+<li>ファイル名はディレクトリエントリ、メタデータはinodeが管理します。</li>
+<li><code>df -h</code>はデータ領域、<code>df -i</code>はinode使用量を確認します。</li>
+<li><code>/etc/fstab</code>は、デバイス、マウントポイント、種別、オプション、dump、fsck順序の六フィールドです。</li>
+<li>ハードリンクは同じinodeを参照し、シンボリックリンクは別のパス名を保持します。</li>
+</ul>
+</section>
+
+<section id="sec-6">
+<h2>重要用語の対比</h2>
+<p>似た言葉を単独で暗記するより、対にして違いを説明できるようにします。</p>
+
+<table>
+<thead><tr><th>対比</th><th>左側</th><th>右側</th></tr></thead>
+<tbody>
+<tr><td>カーネル / シェル</td><td>ハードウェアや資源を管理する中核</td><td>コマンドを解釈して実行する利用者との窓口</td></tr>
+<tr><td>BIOS / UEFI</td><td>従来型ファームウェア</td><td>より新しいファームウェア仕様でESPなどを利用</td></tr>
+<tr><td>MBR / GPT</td><td>従来型のパーティション方式</td><td>多数のパーティションや大容量ディスクに対応しやすい方式</td></tr>
+<tr><td>init / systemd</td><td>起動後の初期化を担う仕組みの総称や従来実装</td><td>unitと依存関係を使うシステム・サービスマネージャー</td></tr>
+<tr><td>serviceのstart / enable</td><td>今すぐ起動する</td><td>起動時に開始されるよう設定する</td></tr>
+<tr><td>UID / GID</td><td>ユーザー識別番号</td><td>グループ識別番号</td></tr>
+<tr><td>chmod / chown</td><td>権限ビットを変更する</td><td>所有者や所有グループを変更する</td></tr>
+<tr><td>df / du</td><td>ファイルシステム全体の使用量</td><td>指定パス以下のファイル使用量</td></tr>
+<tr><td>dpkg・rpm / apt・dnf</td><td>個別パッケージを直接操作する</td><td>リポジトリと依存関係を含めて管理する</td></tr>
+<tr><td>ps / top</td><td>ある時点の一覧</td><td>継続的に更新される状態表示</td></tr>
+<tr><td>kill / killall</td><td>主にPIDを指定</td><td>主にプロセス名を指定</td></tr>
+<tr><td>nice / renice</td><td>起動時のnice値</td><td>実行中プロセスのnice値</td></tr>
+<tr><td>grep / find</td><td>内容の行を検索</td><td>ファイルやディレクトリ自体を検索</td></tr>
+<tr><td>which / whereis</td><td>PATH上の実行候補</td><td>バイナリ、ソース、manページなどの候補</td></tr>
+<tr><td>gzip / tar</td><td>主に一つのデータを圧縮</td><td>複数ファイルをアーカイブ</td></tr>
+<tr><td>&gt; / &gt;&gt;</td><td>上書き</td><td>追記</td></tr>
+<tr><td>標準出力 / 標準エラー</td><td>通常の結果、ファイル記述子1</td><td>エラーメッセージ、ファイル記述子2</td></tr>
+<tr><td>ワイルドカード / 正規表現</td><td>シェルがファイル名へ展開</td><td>grepなどが文字列パターンとして解釈</td></tr>
+<tr><td>IPアドレス / MACアドレス</td><td>ネットワークを越えた論理的な宛先</td><td>同一リンク上で使うインターフェースの識別子</td></tr>
+<tr><td>DNS / DHCP</td><td>名前と情報を対応付ける</td><td>ネットワーク設定を配布する</td></tr>
+<tr><td>UUID / PARTUUID</td><td>主にファイルシステムを識別</td><td>パーティションを識別</td></tr>
+<tr><td>ハードリンク / シンボリックリンク</td><td>同じinodeへの別名</td><td>別のパスを指す特殊ファイル</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="sec-7">
+<h2>目的から引くコマンド整理</h2>
+<p>問題文ではコマンド名ではなく、「確認したいこと」が書かれます。目的からコマンドを逆引きできるようにします。</p>
+
+<table>
+<thead><tr><th>やりたいこと</th><th>まず考えるコマンド</th></tr></thead>
+<tbody>
+<tr><td>隠しファイルを含めて詳細表示したい</td><td><code>ls -la</code></td></tr>
+<tr><td>ファイルのinode番号を見たい</td><td><code>ls -li</code>、<code>stat</code></td></tr>
+<tr><td>ログの末尾を監視したい</td><td><code>tail -f</code></td></tr>
+<tr><td>ファイル内のERRORを再帰検索したい</td><td><code>grep -R 'ERROR' DIR</code></td></tr>
+<tr><td>名前や種類を条件にファイルを探したい</td><td><code>find</code></td></tr>
+<tr><td>重複行の件数を数えたい</td><td><code>sort | uniq -c</code></td></tr>
+<tr><td>二つ目の列を取り出したい</td><td><code>cut</code>、状況によって<code>awk</code></td></tr>
+<tr><td>アーカイブの中身を確認したい</td><td><code>tar -tf</code></td></tr>
+<tr><td>プロセスを一覧表示したい</td><td><code>ps</code>、継続監視なら<code>top</code></td></tr>
+<tr><td>プロセスへ終了要求を送りたい</td><td><code>kill PID</code></td></tr>
+<tr><td>バックグラウンドジョブを前面へ戻したい</td><td><code>fg</code></td></tr>
+<tr><td>ディスク全体の空き容量を確認したい</td><td><code>df -h</code></td></tr>
+<tr><td>どのディレクトリが容量を使っているか知りたい</td><td><code>du</code></td></tr>
+<tr><td>ブロックデバイスの構成を見たい</td><td><code>lsblk</code></td></tr>
+<tr><td>現在のマウント関係を見たい</td><td><code>findmnt</code>、<code>mount</code></td></tr>
+<tr><td>IPアドレスを確認したい</td><td><code>ip address</code></td></tr>
+<tr><td>デフォルトゲートウェイを確認したい</td><td><code>ip route</code></td></tr>
+<tr><td>ARP・近隣キャッシュを確認したい</td><td><code>ip neigh</code></td></tr>
+<tr><td>名前解決を確認したい</td><td><code>dig</code>、<code>host</code></td></tr>
+<tr><td>ポートの待受を確認したい</td><td><code>ss -lntup</code></td></tr>
+<tr><td>サービスの状態を確認したい</td><td><code>systemctl status</code></td></tr>
+<tr><td>サービスのログを確認したい</td><td><code>journalctl -u UNIT</code></td></tr>
+<tr><td>コマンドの詳細な使用方法を確認したい</td><td><code>man</code>、<code>info</code>、<code>--help</code></td></tr>
+</tbody>
+</table>
+
+<h3>確認の優先順位</h3>
+<ol>
+<li>読み取り専用の確認コマンドを使う</li>
+<li>現在の状態と設定を比較する</li>
+<li>ログから時刻とエラーを確認する</li>
+<li>変更内容と戻し方を考えてから操作する</li>
+</ol>
+</section>
+
+<section id="sec-8">
+<h2>覚え方と結び付け方</h2>
+<p>語呂合わせだけでなく、コマンド名の由来や処理の流れと結び付けると忘れにくくなります。</p>
+
+<h3>名前から覚える</h3>
+<table>
+<thead><tr><th>コマンド</th><th>結び付け</th></tr></thead>
+<tbody>
+<tr><td><code>pwd</code></td><td>print working directory</td></tr>
+<tr><td><code>cp</code></td><td>copy</td></tr>
+<tr><td><code>mv</code></td><td>move</td></tr>
+<tr><td><code>rm</code></td><td>remove</td></tr>
+<tr><td><code>mkdir</code></td><td>make directory</td></tr>
+<tr><td><code>chmod</code></td><td>change mode</td></tr>
+<tr><td><code>chown</code></td><td>change owner</td></tr>
+<tr><td><code>ps</code></td><td>process status</td></tr>
+<tr><td><code>df</code></td><td>ファイルシステムの空き容量を見るものとして覚える</td></tr>
+<tr><td><code>du</code></td><td>disk usage</td></tr>
+<tr><td><code>ss</code></td><td>socket statistics</td></tr>
+</tbody>
+</table>
+
+<h3>流れで覚える</h3>
+<pre><code>ファイルを探す
+find → 対象ファイルそのもの
+ grep → 中身の一致行
+
+通信を確認する
+ip link → ip address → ip route → ip neigh → ping → dig → ss
+
+サービスを確認する
+systemctl status → journalctl -u → 設定確認 → restart/reload</code></pre>
+
+<h3>一文字の対を作る</h3>
+<ul>
+<li><code>tar -c</code>のcはcreate、<code>tar -x</code>のxはextract、<code>tar -t</code>のtはtable of contentsと結び付けます。</li>
+<li><code>grep -i</code>は大文字小文字を無視、<code>-v</code>は一致を反転、<code>-n</code>は行番号です。</li>
+<li><code>head</code>は頭、<code>tail</code>は末尾です。</li>
+<li><code>bg</code>はbackground、<code>fg</code>はforegroundです。</li>
+<li><code>systemctl is-active</code>は現在、<code>is-enabled</code>は起動設定です。</li>
+</ul>
+
+<h3>権限は足し算で覚える</h3>
+<pre><code>r = 4
+w = 2
+x = 1
+
+7 = rwx
+6 = rw-
+5 = r-x
+4 = r--</code></pre>
+
+<h3>リンクは接続先で覚える</h3>
+<ul>
+<li>ハードリンクはinodeへつながる。</li>
+<li>シンボリックリンクはパスへつながる。</li>
+</ul>
+</section>
+
+<section id="sec-9">
+<h2>試験で間違えやすいポイント</h2>
+<ol>
+<li><strong>Linuxとディストリビューションを同じものとして扱う。</strong><br>Linuxはカーネルを指す場合があり、ディストリビューションはカーネルやツールなどをまとめたものです。</li>
+<li><strong>シェル変数へ代入しただけで子プロセスにも渡ると思う。</strong><br>環境として渡すには、通常<code>export</code>が必要です。</li>
+<li><strong><code>start</code>と<code>enable</code>を混同する。</strong><br>startは現在の起動、enableは起動時の設定です。</li>
+<li><strong>ファイル名がinodeに保存されていると思う。</strong><br>ファイル名とinode番号の対応はディレクトリエントリが持ちます。</li>
+<li><strong><code>df</code>と<code>du</code>が必ず同じ値になると思う。</strong><br>対象と集計方法が異なり、削除済みファイルをプロセスが開いている場合などに差が出ます。</li>
+<li><strong>空き容量だけを確認してinode不足を見落とす。</strong><br><code>df -h</code>に加えて<code>df -i</code>を確認します。</li>
+<li><strong>ディレクトリのrwxを通常ファイルと同じ意味で覚える。</strong><br>ディレクトリのxは、名前をたどって中へアクセスする権限です。</li>
+<li><strong>umaskを単純な十進数の引き算として扱う。</strong><br>権限ビットを無効化するマスクとして考えます。</li>
+<li><strong>rootなら常にすべての操作が無条件で成功すると思う。</strong><br>読み取り専用マウント、能力制限、セキュリティ機構、壊れた状態など、別の制約があります。</li>
+<li><strong><code>kill</code>はプロセスを必ず強制終了するコマンドだと思う。</strong><br>killはシグナル送信です。既定は一般にSIGTERMで、SIGKILLとは異なります。</li>
+<li><strong>nice値が大きいほど優先度が高いと思う。</strong><br>一般にnice値が大きいほど、他の処理へ譲る度合いが大きくなります。</li>
+<li><strong><code>uniq</code>がファイル全体の重複を自動的にまとめると思う。</strong><br>隣接行を比較するため、通常は先に<code>sort</code>します。</li>
+<li><strong><code>tar</code>自体を圧縮方式だと思う。</strong><br>tarはアーカイブが基本で、gzip、bzip2、xzと組み合わせます。</li>
+<li><strong><code>&gt;</code>で追記できると思う。</strong><br><code>&gt;</code>は上書き、<code>&gt;&gt;</code>が追記です。</li>
+<li><strong>標準出力と標準エラーを同じ経路だと思う。</strong><br>ファイル記述子1と2で別々に扱えます。</li>
+<li><strong>ワイルドカードと正規表現の<code>*</code>を同じ意味だと思う。</strong><br>ワイルドカードでは任意個の文字、正規表現では直前要素の0回以上です。</li>
+<li><strong>pingが通ればアプリケーションも必ず使えると思う。</strong><br>TCPポートの待受、ファイアウォール、サービス状態、認証などは別に確認します。</li>
+<li><strong>DNSが失敗するとIP通信も不可能だと思う。</strong><br>IPアドレスを直接指定した通信が可能な場合があります。</li>
+<li><strong>ハードリンクを元ファイルへのショートカットだと思う。</strong><br>複数の名前が同じinodeを対等に参照します。</li>
+<li><strong>シンボリックリンクを削除すると参照先も消えると思う。</strong><br>通常、リンク名だけが削除され、参照先は残ります。</li>
+</ol>
+</section>
+
+<section id="sec-10">
+<h2>問題を解くときの考え方</h2>
+<h3>1. 主語を探す</h3>
+<p>問題が聞いている対象を特定します。ファイルの内容なのか、ファイル自体なのか、プロセスなのか、サービスなのかでコマンドが変わります。</p>
+
+<h3>2. 動詞をコマンドへ置き換える</h3>
+<table>
+<thead><tr><th>問題文の動詞</th><th>候補</th></tr></thead>
+<tbody>
+<tr><td>表示する</td><td><code>cat</code>、<code>less</code>、<code>ls</code>、<code>ps</code></td></tr>
+<tr><td>検索する</td><td><code>grep</code>、<code>find</code>、<code>locate</code></td></tr>
+<tr><td>変更する</td><td><code>chmod</code>、<code>chown</code>、<code>mv</code>、<code>renice</code></td></tr>
+<tr><td>確認する</td><td><code>stat</code>、<code>df</code>、<code>ip</code>、<code>ss</code>、<code>systemctl status</code></td></tr>
+<tr><td>抽出する</td><td><code>grep</code>、<code>cut</code>、<code>head</code>、<code>tail</code></td></tr>
+<tr><td>数える</td><td><code>wc</code>、<code>uniq -c</code></td></tr>
+</tbody>
+</table>
+
+<h3>3. オプションの作用を言葉にする</h3>
+<p>選択肢に似たオプションが並んでいる場合、丸暗記ではなく、「再帰する」「数値として並べる」「逆転する」「人間が読みやすい単位にする」など、作用を日本語に戻します。</p>
+
+<h3>4. 入力と出力を追う</h3>
+<pre><code>cat access.log | grep '404' | cut -d' ' -f1 | sort | uniq -c | sort -nr</code></pre>
+<ol>
+<li>ログ全体を出力する</li>
+<li>404を含む行だけ残す</li>
+<li>1列目を取り出す</li>
+<li>同じ値を隣接させる</li>
+<li>件数を数える</li>
+<li>件数の多い順に並べる</li>
+</ol>
+
+<h3>5. 変更系コマンドでは影響範囲を見る</h3>
+<ul>
+<li><code>rm -r</code>は下位階層まで削除します。</li>
+<li><code>chmod -R</code>は配下へ再帰的に権限を変更します。</li>
+<li><code>mount -a</code>はfstabの対象をまとめて処理します。</li>
+<li><code>systemctl restart</code>はサービスを停止して再起動するため、一時的な停止が起こり得ます。</li>
+</ul>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>解法の型：</strong>対象を決める → 動作を決める → オプションを確認する → 入出力を追う → 影響範囲を確認する、の順で考えます。</p>
+</aside>
+
+<h3>代表的な五つの切り分け</h3>
+<h4>コマンドが見つからない</h4>
+<pre><code>type commandname
+command -v commandname
+echo "$PATH"
+find /usr /opt -type f -name 'commandname' 2&gt;/dev/null</code></pre>
+<ul>
+<li>入力ミスや大文字小文字を確認します。</li>
+<li>シェルの組み込み、alias、関数、外部コマンドのどれかを確認します。</li>
+<li>実行ファイルが存在するか、PATHへ含まれているか、実行権限があるかを分けます。</li>
+<li>未導入なら、どのパッケージが提供するかをパッケージ管理ツールで調べます。</li>
+</ul>
+
+<h4>Permission deniedが出る</h4>
+<pre><code>id
+namei -l /path/to/file
+ls -ld /path /path/to /path/to/file
+getfacl /path/to/file</code></pre>
+<ul>
+<li>実行ユーザーのUID、所属グループを確認します。</li>
+<li>対象ファイルだけでなく、親ディレクトリをたどるx権限も確認します。</li>
+<li>通常のrwx以外にACL、読み取り専用マウント、セキュリティ機構などの可能性もあります。</li>
+<li>すぐに<code>chmod 777</code>へ逃げず、必要な主体へ必要な権限だけを与えます。</li>
+</ul>
+
+<h4>サービスが起動しない</h4>
+<pre><code>systemctl status example.service
+journalctl -u example.service -b
+systemctl cat example.service
+systemctl list-dependencies example.service</code></pre>
+<ul>
+<li>状態、終了コード、直近のログを確認します。</li>
+<li>設定ファイルの構文、ポート重複、依存unit、実行ユーザーの権限を確認します。</li>
+<li>設定だけを読み直せるサービスではreload、プロセスの再起動が必要ならrestartを使い分けます。</li>
+</ul>
+
+<h4>No space left on deviceが出る</h4>
+<pre><code>df -h
+df -i
+du -xhd1 /var | sort -h
+lsof +L1</code></pre>
+<ul>
+<li>データ領域とinodeの両方を確認します。</li>
+<li><code>du</code>でディレクトリごとの使用量を絞ります。</li>
+<li><code>df</code>と<code>du</code>が大きく異なる場合、削除済みファイルをプロセスが開いていないか確認します。</li>
+<li>別ファイルシステムへ降りたくない場合は、<code>du -x</code>や<code>find -xdev</code>を利用します。</li>
+</ul>
+
+<h4>ネットワークへ接続できない</h4>
+<pre><code>ip link
+ip address
+ip route
+ip neigh
+ping GATEWAY
+dig example.com
+ss -lntup</code></pre>
+<ul>
+<li>インターフェースがUPか、正しいIPアドレスがあるかを確認します。</li>
+<li>宛先への経路とデフォルトルートを確認します。</li>
+<li>同一リンク上の相手なら、近隣解決の状態を確認します。</li>
+<li>IPアドレスでは通信できるが名前では失敗するなら、DNSを切り分けます。</li>
+<li>相手へ到達できても接続できないなら、ポート待受、サービス、ファイアウォールを確認します。</li>
+</ul>
+</section>
+
+<section id="sec-11">
+<h2>30秒チェック</h2>
+<ol>
+<li>ハードウェアやプロセスを管理するLinuxの中核は何でしょうか。</li>
+<li>コマンドを解釈して実行するプログラムは何でしょうか。</li>
+<li>systemd環境でサービスの現在の状態を確認するコマンドは何でしょうか。</li>
+<li><code>systemctl start</code>と<code>systemctl enable</code>の違いは何でしょうか。</li>
+<li>ファイル名とinode番号の対応を持つものは何でしょうか。</li>
+<li><code>/etc</code>と<code>/var</code>には、主に何が置かれるでしょうか。</li>
+<li>パーミッションのr、w、xを数値にすると、それぞれいくつでしょうか。</li>
+<li>通常ファイルとディレクトリで、xの意味はどう違うでしょうか。</li>
+<li>Debian系の低レベルと上位のパッケージ管理ツールは何でしょうか。</li>
+<li>ファイルの内容を検索するコマンドと、ファイル自体を検索するコマンドは何でしょうか。</li>
+<li><code>uniq</code>の前に<code>sort</code>を置くことが多いのはなぜでしょうか。</li>
+<li>tarの作成、展開、一覧表示を表す文字は何でしょうか。</li>
+<li>プロセスへ通常終了を求める代表的なシグナルは何でしょうか。</li>
+<li><code>df</code>と<code>du</code>は何を確認するでしょうか。</li>
+<li>標準出力と標準エラーのファイル記述子は何番でしょうか。</li>
+<li><code>&gt;</code>と<code>&gt;&gt;</code>の違いは何でしょうか。</li>
+<li>ワイルドカードと正規表現は、主に誰が解釈するでしょうか。</li>
+<li>IPアドレスから同一リンク上のMACアドレスを調べる仕組みは何でしょうか。</li>
+<li>ポートの待受状態を確認する代表的なコマンドは何でしょうか。</li>
+<li>ハードリンクとシンボリックリンクは、それぞれ何へつながるでしょうか。</li>
+</ol>
+
+<details>
+<summary>答えを表示</summary>
+<ol>
+<li>カーネル</li>
+<li>シェル</li>
+<li><code>systemctl status UNIT</code></li>
+<li>startは現在起動し、enableは起動時に開始されるよう設定する</li>
+<li>ディレクトリエントリ</li>
+<li><code>/etc</code>は設定、<code>/var</code>はログなど変化するデータ</li>
+<li>rは4、wは2、xは1</li>
+<li>通常ファイルのxは実行、ディレクトリのxは中の名前をたどる権限</li>
+<li><code>dpkg</code>と<code>apt</code></li>
+<li><code>grep</code>と<code>find</code></li>
+<li><code>uniq</code>は隣接する重複行を処理するため</li>
+<li>作成はc、展開はx、一覧はt</li>
+<li>SIGTERM</li>
+<li><code>df</code>はファイルシステム、<code>du</code>は指定パス以下の使用量</li>
+<li>標準出力は1、標準エラーは2</li>
+<li><code>&gt;</code>は上書き、<code>&gt;&gt;</code>は追記</li>
+<li>ワイルドカードはシェル、正規表現はgrepなどのプログラム</li>
+<li>ARP</li>
+<li><code>ss</code></li>
+<li>ハードリンクはinode、シンボリックリンクはパス</li>
+</ol>
+</details>
+</section>
+
+<section id="sec-12">
+<h2>最終要約</h2>
+<ul>
+<li>Linuxは、カーネルを中心に、シェル、GNUツール、パッケージ管理などを組み合わせて利用します。</li>
+<li>起動は、ファームウェア、ブートローダー、カーネル、systemd、サービスという流れで整理します。</li>
+<li>FHSは、設定、変化するデータ、ユーザーデータなどを置く場所の役割を整理します。</li>
+<li>パーミッションは、誰に対して、どの操作を許可するかをrwxで表します。</li>
+<li>コマンドは、対象、入力、処理、出力を追うとパイプへつなげやすくなります。</li>
+<li><code>grep</code>は中身、<code>find</code>はファイル自体を検索します。</li>
+<li><code>sort | uniq -c</code>は、並べてから隣接する重複を数えます。</li>
+<li><code>ps</code>はある時点、<code>top</code>は継続表示です。</li>
+<li><code>df</code>はファイルシステム、<code>du</code>は指定パス以下の使用量です。</li>
+<li>startとenable、activeとenabledは別の状態です。</li>
+<li>リダイレクトは標準入力、標準出力、標準エラーの接続を変更します。</li>
+<li>ワイルドカードはファイル名、正規表現は文字列パターンを扱います。</li>
+<li>ネットワークは、リンク、アドレス、経路、近隣、名前解決、ポート、アプリケーションの順で切り分けます。</li>
+<li>ハードリンクはinodeへ、シンボリックリンクはパスへつながります。</li>
+<li>迷ったときはmanページで、コマンドの概要、書式、オプション、終了ステータス、関連項目を確認します。</li>
+</ul>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>最後に：</strong>すべてを一度で思い出せなくても問題ありません。「この確認には、たしかこの系統のコマンドを使う」と方向が戻れば、復習ラジオとしては十分です。</p>
+</aside>
+</section>
+
+<section id="sec-sources">
+<h2>参考資料</h2>
+<ul>
+<li><a href="https://www.lpi.org/our-certifications/exam-101-102-objectives/" target="_blank" rel="noopener noreferrer">Linux Professional Institute：LPIC-1 Exam 101 and 102 Objectives</a></li>
+<li><a href="https://learning.lpi.org/en/learning-materials/101-500/" target="_blank" rel="noopener noreferrer">Linux Professional Institute Learning：LPIC-1 Exam 101</a></li>
+<li><a href="https://learning.lpi.org/en/learning-materials/102-500/" target="_blank" rel="noopener noreferrer">Linux Professional Institute Learning：LPIC-1 Exam 102</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/bash.html" target="_blank" rel="noopener noreferrer">GNU Bash Reference Manual</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/html_node/Redirections.html" target="_blank" rel="noopener noreferrer">GNU Bash Reference Manual：Redirections</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Expansions.html" target="_blank" rel="noopener noreferrer">GNU Bash Reference Manual：Shell Expansions</a></li>
+<li><a href="https://www.gnu.org/software/coreutils/manual/coreutils.html" target="_blank" rel="noopener noreferrer">GNU Coreutils Manual</a></li>
+<li><a href="https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html" target="_blank" rel="noopener noreferrer">Filesystem Hierarchy Standard 3.0</a></li>
+<li><a href="https://man7.org/linux/man-pages/man7/inode.7.html" target="_blank" rel="noopener noreferrer">inode(7) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/chmod.1.html" target="_blank" rel="noopener noreferrer">chmod(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/chown.1.html" target="_blank" rel="noopener noreferrer">chown(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man2/umask.2.html" target="_blank" rel="noopener noreferrer">umask(2) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/grep.1.html" target="_blank" rel="noopener noreferrer">grep(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/find.1.html" target="_blank" rel="noopener noreferrer">find(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/sort.1.html" target="_blank" rel="noopener noreferrer">sort(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/uniq.1.html" target="_blank" rel="noopener noreferrer">uniq(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/tar.1.html" target="_blank" rel="noopener noreferrer">tar(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/ps.1.html" target="_blank" rel="noopener noreferrer">ps(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/kill.1.html" target="_blank" rel="noopener noreferrer">kill(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/df.1.html" target="_blank" rel="noopener noreferrer">df(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/du.1.html" target="_blank" rel="noopener noreferrer">du(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man5/fstab.5.html" target="_blank" rel="noopener noreferrer">fstab(5) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/systemctl.1.html" target="_blank" rel="noopener noreferrer">systemctl(1) — Linux manual page</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/journalctl.html" target="_blank" rel="noopener noreferrer">journalctl — systemd manual</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/ip.8.html" target="_blank" rel="noopener noreferrer">ip(8) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/ss.8.html" target="_blank" rel="noopener noreferrer">ss(8) — Linux manual page</a></li>
+<li><a href="https://www.rfc-editor.org/info/rfc1122/" target="_blank" rel="noopener noreferrer">RFC 1122：Requirements for Internet Hosts</a></li>
+</ul>
+</section>
+
+</article>
+</main>
+</body>
+</html>

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LPIC Level1 復習ラジオ 21：systemd総復習</title>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<main class="container">
+<article class="card">
+<header>
+<h1>LPIC Level1 復習ラジオ 21：systemd総復習</h1>
+<nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+<p class="meta">投稿日：2026-07-11</p>
+</header>
+
+<section class="card" style="margin-top:12px;">
+<h2 style="margin:0 0 8px 0;">音声</h2>
+<audio controls preload="none" src="/posts/Linux/audio/21_systemd_review_tts.mp3"></audio>
+<p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+</section>
+
+
+<section id="sec-toc">
+<h2>目次</h2>
+<ol>
+<li><a href="#sec-1">initとsystemd</a></li>
+<li><a href="#sec-2">ユニットの基本</a></li>
+<li><a href="#sec-3"><code>systemctl</code>による状態確認</a></li>
+<li><a href="#sec-4">サービスの起動・停止・再読み込み</a></li>
+<li><a href="#sec-5">自動起動の有効化と無効化</a></li>
+<li><a href="#sec-6">target</a></li>
+<li><a href="#sec-7">serviceユニット</a></li>
+<li><a href="#sec-8">ユニットファイルと設定変更</a></li>
+<li><a href="#sec-9"><code>journalctl</code></a></li>
+<li><a href="#sec-10">実践的な障害確認手順</a></li>
+<li><a href="#sec-11">30秒チェック</a></li>
+<li><a href="#sec-12">要約</a></li>
+</ol>
+</section>
+
+
+<section id="sec-1">
+<h2>initとsystemd</h2>
+<p>Linuxでは、カーネルの起動後にユーザー空間を初期化する最初のプロセスが動作します。systemdを採用する環境では、systemdが通常PID 1として起動し、システムとサービスを管理します。</p>
+<pre><code>ps -p 1 -o pid=,comm=,args=
+readlink -f /sbin/init</code></pre>
+<p><code>/sbin/init</code>は、systemdへのシンボリックリンクになっている場合があります。</p>
+
+<h3>SysV initとの違い</h3>
+<table>
+<thead><tr><th>観点</th><th>SysV init</th><th>systemd</th></tr></thead>
+<tbody>
+<tr><td>管理単位</td><td>主に起動スクリプト</td><td>ユニット</td></tr>
+<tr><td>起動状態</td><td>ランレベル</td><td>target</td></tr>
+<tr><td>サービス操作</td><td><code>service</code>など</td><td><code>systemctl</code></td></tr>
+<tr><td>ログ</td><td>主にテキストログ</td><td>journalと各種ログ</td></tr>
+<tr><td>起動方式</td><td>順序付きスクリプトが中心</td><td>依存関係を基に並行起動可能</td></tr>
+</tbody>
+</table>
+
+<p>従来は<code>/etc/init.d/</code>以下のスクリプトやランレベルを中心に管理しました。systemdでは、サービス、ソケット、マウント、タイマー、デバイスなどをユニットとして管理します。</p>
+
+<pre><code>systemctl status ssh.service
+systemctl --user status example.service</code></pre>
+<p>引数なしの<code>systemctl</code>は通常、システムマネージャーを操作します。<code>--user</code>を付けると、利用者ごとのユーザーマネージャーを操作します。</p>
+</section>
+
+<section id="sec-2">
+<h2>ユニットの基本</h2>
+<p>ユニットは、systemdが管理する対象です。ユニット名は、名前と種類を表すサフィックスで構成されます。</p>
+<pre><code>sshd.service
+multi-user.target
+home.mount
+backup.timer
+example.socket</code></pre>
+
+<table>
+<thead><tr><th>種類</th><th>主な対象</th></tr></thead>
+<tbody>
+<tr><td><code>.service</code></td><td>デーモンや処理</td></tr>
+<tr><td><code>.socket</code></td><td>通信ソケット</td></tr>
+<tr><td><code>.target</code></td><td>複数ユニットをまとめる同期点や起動目標</td></tr>
+<tr><td><code>.mount</code></td><td>ファイルシステムのマウント</td></tr>
+<tr><td><code>.automount</code></td><td>自動マウント</td></tr>
+<tr><td><code>.timer</code></td><td>時刻や間隔による起動</td></tr>
+<tr><td><code>.path</code></td><td>パスの変化による起動</td></tr>
+<tr><td><code>.device</code></td><td>デバイス</td></tr>
+<tr><td><code>.swap</code></td><td>スワップ領域</td></tr>
+</tbody>
+</table>
+
+<pre><code>systemctl status ssh
+systemctl status ssh.service</code></pre>
+<p>多くの操作では、種類を省略すると<code>.service</code>として補完されます。ただし、targetなどを操作するときは完全なユニット名を書くと明確です。</p>
+
+<h3>依存関係と順序</h3>
+<pre><code>systemctl list-dependencies ssh.service
+systemctl list-dependencies --reverse ssh.service</code></pre>
+<p><code>Wants=</code>や<code>Requires=</code>は、ユニットを一緒に起動する要求関係です。<code>After=</code>や<code>Before=</code>は起動順序を表します。「必要とすること」と「後に起動すること」は別です。</p>
+
+<h3>statusの主な項目</h3>
+<table>
+<thead><tr><th>項目</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td>Loaded</td><td>ユニットファイルを読み込めたか、有効化状態はどうか</td></tr>
+<tr><td>Active</td><td>現在の稼働状態</td></tr>
+<tr><td>Main PID</td><td>主プロセスのPID</td></tr>
+<tr><td>CGroup</td><td>ユニットに属するプロセス</td></tr>
+<tr><td>ログ</td><td>journalから取得した直近の一部</td></tr>
+</tbody>
+</table>
+<p><code>loaded</code>や<code>enabled</code>は、現在動作しているという意味ではありません。設定状態と実行状態を分けて考えます。</p>
+</section>
+
+<section id="sec-3">
+<h2><code>systemctl</code>による状態確認</h2>
+
+<h3>詳細な状態</h3>
+<pre><code>systemctl status ssh.service
+systemctl status ssh.service --no-pager -l</code></pre>
+<p><code>status</code>は、ロード状態、稼働状態、PID、直近ログなどをまとめて表示します。詳細なログは<code>journalctl</code>で確認します。</p>
+
+<h3>判定用コマンド</h3>
+<pre><code>systemctl is-active ssh.service
+systemctl is-enabled ssh.service
+systemctl is-failed ssh.service</code></pre>
+<table>
+<thead><tr><th>コマンド</th><th>確認内容</th></tr></thead>
+<tbody>
+<tr><td><code>is-active</code></td><td>現在稼働中か</td></tr>
+<tr><td><code>is-enabled</code></td><td>自動起動などが有効か</td></tr>
+<tr><td><code>is-failed</code></td><td>失敗状態か</td></tr>
+</tbody>
+</table>
+<p>これらは終了ステータスも返すため、シェルスクリプトの条件判定にも使えます。</p>
+
+<pre><code>if systemctl is-active --quiet ssh.service; then
+    echo "ssh is active"
+fi</code></pre>
+
+<h3>一覧表示</h3>
+<pre><code>systemctl list-units
+systemctl list-units --type=service
+systemctl list-units --type=service --state=running
+systemctl list-units --failed
+
+systemctl list-unit-files
+systemctl list-unit-files --type=service
+systemctl list-unit-files --state=enabled</code></pre>
+<p><code>list-units</code>は主に、現在メモリへロードされているユニットを表示します。<code>list-unit-files</code>は、ディスク上のユニットファイルと有効化状態を表示します。</p>
+
+<h3>プロパティ表示</h3>
+<pre><code>systemctl show ssh.service
+systemctl show ssh.service \
+  -p ActiveState \
+  -p SubState \
+  -p MainPID \
+  -p FragmentPath \
+  -p UnitFileState</code></pre>
+<p><code>show</code>は、機械処理にも向いた形式で内部プロパティを表示します。</p>
+</section>
+
+<section id="sec-4">
+<h2>サービスの起動・停止・再読み込み</h2>
+
+<pre><code>sudo systemctl start ssh.service
+sudo systemctl stop ssh.service
+sudo systemctl restart ssh.service</code></pre>
+<p><code>start</code>は現在起動し、<code>stop</code>は現在停止します。<code>restart</code>は停止してから再度起動するため、短時間のサービス停止が発生する可能性があります。</p>
+
+<h3>サービス自身の設定を再読み込み</h3>
+<pre><code>sudo systemctl reload nginx.service
+sudo systemctl reload-or-restart nginx.service
+sudo systemctl try-restart nginx.service</code></pre>
+<ul>
+<li><code>reload</code>：サービスのプロセスを終了させず、サービス自身へ設定再読み込みを要求する</li>
+<li><code>reload-or-restart</code>：reload可能ならreloadし、不可能ならrestart</li>
+<li><code>try-restart</code>：現在動作中の場合だけrestart</li>
+</ul>
+
+<h3><code>reload</code>と<code>daemon-reload</code></h3>
+<table>
+<thead><tr><th>コマンド</th><th>読み直す対象</th></tr></thead>
+<tbody>
+<tr><td><code>systemctl reload サービス</code></td><td>サービス自身の設定</td></tr>
+<tr><td><code>systemctl daemon-reload</code></td><td>systemdが読むユニットファイルや依存関係</td></tr>
+</tbody>
+</table>
+
+<pre><code>sudo nginx -t
+sudo systemctl reload nginx.service
+
+sudo systemctl edit nginx.service
+sudo systemctl daemon-reload
+sudo systemctl restart nginx.service</code></pre>
+
+<p>アプリケーションの設定ファイルを変更したのか、<code>.service</code>ユニットを変更したのかで、必要な操作が異なります。</p>
+
+<h3>失敗状態の解除</h3>
+<pre><code>sudo systemctl reset-failed ssh.service
+sudo systemctl reset-failed</code></pre>
+<p><code>reset-failed</code>は、失敗状態や起動回数制限に関する記録をリセットします。失敗原因を修正するコマンドではありません。</p>
+</section>
+
+<section id="sec-5">
+<h2>自動起動の有効化と無効化</h2>
+
+<pre><code>sudo systemctl enable ssh.service
+sudo systemctl disable ssh.service</code></pre>
+<p><code>enable</code>は、ユニットの<code>[Install]</code>セクションに基づいてシンボリックリンクを作成し、起動時などに要求されるよう設定します。通常、その場ではサービスを起動しません。</p>
+<p><code>disable</code>は自動起動用のリンクを削除します。現在動作中のサービスを停止する操作ではありません。</p>
+
+<pre><code>sudo systemctl enable --now ssh.service
+sudo systemctl disable --now ssh.service</code></pre>
+<p><code>--now</code>を付けると、有効化と起動、または無効化と停止を同時に行います。</p>
+
+<h3>代表的な有効化状態</h3>
+<table>
+<thead><tr><th>状態</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td><code>enabled</code></td><td>自動起動用のリンクなどが設定されている</td></tr>
+<tr><td><code>disabled</code></td><td>有効化されていない</td></tr>
+<tr><td><code>static</code></td><td>通常のenable情報がなく、他ユニットの依存などで起動される</td></tr>
+<tr><td><code>masked</code></td><td>起動を拒否するようマスクされている</td></tr>
+<tr><td><code>indirect</code></td><td>別名などを通じた間接的な有効化に関係する</td></tr>
+</tbody>
+</table>
+
+<h3>mask</h3>
+<pre><code>sudo systemctl mask example.service
+sudo systemctl unmask example.service</code></pre>
+<p><code>disable</code>は自動起動を外すだけで、手動の<code>start</code>は可能です。<code>mask</code>は通常、ユニットを<code>/dev/null</code>へリンクし、手動起動や依存関係からの起動も拒否します。</p>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>重要：</strong>今動かすなら<code>start</code>、次回起動時などの自動起動を設定するなら<code>enable</code>です。</p>
+</aside>
+</section>
+
+<section id="sec-6">
+<h2>target</h2>
+<p>targetユニットは、複数のユニットをまとめる同期点や、システムの起動目標として使われます。SysV initのランレベルに似た役割を持つものがありますが、完全に同じ仕組みではありません。</p>
+
+<table>
+<thead><tr><th>target</th><th>主な役割</th><th>代表的なランレベル対応</th></tr></thead>
+<tbody>
+<tr><td><code>poweroff.target</code></td><td>電源停止</td><td>0</td></tr>
+<tr><td><code>rescue.target</code></td><td>基本システムとレスキューシェル</td><td>1</td></tr>
+<tr><td><code>multi-user.target</code></td><td>非グラフィカルな複数利用者環境</td><td>2、3、4に近い</td></tr>
+<tr><td><code>graphical.target</code></td><td>GUIを含む環境</td><td>5</td></tr>
+<tr><td><code>reboot.target</code></td><td>再起動</td><td>6</td></tr>
+<tr><td><code>emergency.target</code></td><td>最小限の緊急シェル</td><td>直接対応しない</td></tr>
+</tbody>
+</table>
+
+<h3>デフォルトtarget</h3>
+<pre><code>systemctl get-default
+sudo systemctl set-default multi-user.target
+sudo systemctl set-default graphical.target
+readlink -f /etc/systemd/system/default.target</code></pre>
+<p><code>default.target</code>は通常、<code>multi-user.target</code>または<code>graphical.target</code>へのリンクです。</p>
+
+<h3>現在の状態を切り替える</h3>
+<pre><code>sudo systemctl isolate multi-user.target
+sudo systemctl isolate rescue.target</code></pre>
+<p><code>isolate</code>は、指定targetに不要なユニットを停止する場合があります。GUI、ネットワークサービス、遠隔接続が停止する可能性があるため注意します。</p>
+
+<h3>activeなtarget</h3>
+<pre><code>systemctl list-units --type=target
+systemctl list-units --type=target --state=active</code></pre>
+
+<h3>ネットワーク関係</h3>
+<ul>
+<li><code>network.target</code>：ネットワーク管理機能の起動に関係する同期点</li>
+<li><code>network-online.target</code>：ネットワークが利用可能になることを必要とする処理の同期点</li>
+</ul>
+<p><code>network.target</code>がactiveでも、IPアドレス取得や外部通信が完了しているとは限りません。必要に応じてwait-onlineサービスとの関係も確認します。</p>
+
+<pre><code>systemctl isolate runlevel3.target
+systemctl isolate runlevel5.target</code></pre>
+<p>互換用の<code>runlevel3.target</code>や<code>runlevel5.target</code>は、それぞれ代表的に<code>multi-user.target</code>や<code>graphical.target</code>への別名です。</p>
+</section>
+
+<section id="sec-7">
+<h2>serviceユニット</h2>
+<p><code>.service</code>ユニットは、systemdが制御・監視するプロセスを記述します。</p>
+
+<pre><code>[Unit]
+Description=Example Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/example
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+
+<table>
+<thead><tr><th>セクション</th><th>主な内容</th></tr></thead>
+<tbody>
+<tr><td><code>[Unit]</code></td><td>説明、依存関係、順序、条件</td></tr>
+<tr><td><code>[Service]</code></td><td>実行コマンド、Type、実行利用者、再起動方針</td></tr>
+<tr><td><code>[Install]</code></td><td>enable時に作るリンクなど</td></tr>
+</tbody>
+</table>
+
+<h3>主な項目</h3>
+<table>
+<thead><tr><th>項目</th><th>意味</th></tr></thead>
+<tbody>
+<tr><td><code>Description=</code></td><td>説明</td></tr>
+<tr><td><code>After=</code></td><td>起動順序</td></tr>
+<tr><td><code>Wants=</code></td><td>比較的弱い要求関係</td></tr>
+<tr><td><code>Requires=</code></td><td>強い要求関係</td></tr>
+<tr><td><code>ExecStart=</code></td><td>開始時に実行するコマンド</td></tr>
+<tr><td><code>ExecReload=</code></td><td>reload時のコマンド</td></tr>
+<tr><td><code>ExecStop=</code></td><td>停止時のコマンド</td></tr>
+<tr><td><code>User=</code>・<code>Group=</code></td><td>実行利用者とグループ</td></tr>
+<tr><td><code>WorkingDirectory=</code></td><td>作業ディレクトリ</td></tr>
+<tr><td><code>Environment=</code></td><td>環境変数</td></tr>
+<tr><td><code>Restart=</code></td><td>終了後の再起動方針</td></tr>
+<tr><td><code>WantedBy=</code></td><td>enable時の代表的な関連先</td></tr>
+</tbody>
+</table>
+
+<h3>主なType</h3>
+<table>
+<thead><tr><th>Type</th><th>考え方</th></tr></thead>
+<tbody>
+<tr><td><code>simple</code></td><td><code>ExecStart</code>で起動したプロセスを主プロセスとして扱う</td></tr>
+<tr><td><code>exec</code></td><td>実行ファイルの起動成功後に開始成功とみなす</td></tr>
+<tr><td><code>forking</code></td><td>従来型デーモンがforkして親を終了する形式</td></tr>
+<tr><td><code>oneshot</code></td><td>短時間の処理を実行して終了する</td></tr>
+<tr><td><code>notify</code></td><td>サービスが準備完了をsystemdへ通知する</td></tr>
+</tbody>
+</table>
+
+<h3>activeでも正常とは限らない</h3>
+<pre><code>systemctl is-active nginx.service
+ss -lntp
+curl -I http://127.0.0.1/
+journalctl -u nginx.service</code></pre>
+<p><code>active (running)</code>は、systemdがサービスを稼働中として管理している状態です。アプリケーションが正しく応答することや、外部依存先へ接続できることまで保証しません。</p>
+
+<p><code>Type=oneshot</code>は、正常終了後に<code>inactive (dead)</code>になることがあります。<code>RemainAfterExit=yes</code>なら、プロセス終了後もactiveとして扱われます。</p>
+</section>
+
+<section id="sec-8">
+<h2>ユニットファイルと設定変更</h2>
+
+<table>
+<thead><tr><th>場所</th><th>主な用途</th></tr></thead>
+<tbody>
+<tr><td><code>/etc/systemd/system/</code></td><td>管理者が作成・変更するユニット。高い優先度</td></tr>
+<tr><td><code>/run/systemd/system/</code></td><td>実行中に生成される一時設定</td></tr>
+<tr><td><code>/usr/lib/systemd/system/</code></td><td>パッケージ提供ユニット。環境により<code>/lib/systemd/system/</code></td></tr>
+<tr><td><code>~/.config/systemd/user/</code></td><td>利用者用ユニット</td></tr>
+</tbody>
+</table>
+
+<p>パッケージ提供ユニットを直接編集すると、更新時に上書きされる可能性があります。管理者独自の変更にはdrop-inを使うのが基本です。</p>
+
+<h3>読み込まれる内容を確認</h3>
+<pre><code>systemctl cat ssh.service
+systemctl show ssh.service \
+  -p FragmentPath \
+  -p DropInPaths</code></pre>
+
+<h3>drop-inを作成</h3>
+<pre><code>sudo systemctl edit ssh.service</code></pre>
+<p>通常、次のような場所へ上書き設定を作ります。</p>
+<pre><code>/etc/systemd/system/ssh.service.d/override.conf</code></pre>
+
+<pre><code>[Service]
+Restart=on-failure
+RestartSec=5s</code></pre>
+
+<pre><code>sudo systemctl daemon-reload
+sudo systemctl restart ssh.service</code></pre>
+
+<h3>既存値を置き換える例</h3>
+<pre><code>[Service]
+ExecStart=
+ExecStart=/usr/local/bin/example --new-option</code></pre>
+<p><code>ExecStart=</code>などは、空の代入で既存値をリセットしてから新しい値を指定する場合があります。項目ごとに上書き規則が異なるため、対象のmanページを確認します。</p>
+
+<h3>構文確認と復元</h3>
+<pre><code>systemd-analyze verify /etc/systemd/system/example.service
+sudo systemctl revert ssh.service</code></pre>
+<p><code>verify</code>は、構文や一部の参照関係を検証します。実行ファイル、権限、外部接続まで正常とは限りません。</p>
+<p><code>revert</code>は、管理者側の上書きを削除し、提供元の設定へ戻すために利用できます。削除対象を確認してから実行します。</p>
+
+<p><code>daemon-reload</code>はsystemd自体を再起動する操作ではありません。ユニット設定と依存関係を再読み込みします。</p>
+</section>
+
+<section id="sec-9">
+<h2><code>journalctl</code></h2>
+<p><code>systemd-journald</code>は、カーネル、サービス、標準出力・標準エラー、syslog経由などからログを収集し、構造化されたjournalとして保存します。<code>journalctl</code>は、そのjournalを表示・検索します。</p>
+
+<h3>基本表示</h3>
+<pre><code>journalctl
+journalctl -n 50
+journalctl --no-pager</code></pre>
+
+<h3>特定サービス</h3>
+<pre><code>journalctl -u ssh.service
+journalctl -u nginx.service -n 100
+journalctl -u nginx.service -f</code></pre>
+<p><code>-u</code>はユニット指定、<code>-f</code>は新しいログの継続表示です。</p>
+
+<h3>起動単位</h3>
+<pre><code>journalctl -b
+journalctl -b -1
+journalctl --list-boots</code></pre>
+<ul>
+<li><code>-b</code>：現在の起動</li>
+<li><code>-b -1</code>：一つ前の起動</li>
+<li><code>--list-boots</code>：保存されている起動履歴</li>
+</ul>
+
+<h3>カーネルログ</h3>
+<pre><code>journalctl -k
+journalctl -k -b
+journalctl -k -p warning</code></pre>
+
+<h3>時刻指定</h3>
+<pre><code>journalctl --since "2026-07-11 09:00:00"
+journalctl --since "1 hour ago"
+journalctl --since today --until now
+journalctl -u ssh.service --since "10 minutes ago"</code></pre>
+
+<h3>優先度</h3>
+<pre><code>journalctl -p err
+journalctl -p warning..alert
+journalctl -b -p err</code></pre>
+<pre><code>emerg, alert, crit, err, warning, notice, info, debug</code></pre>
+<p><code>-p err</code>は、err以上の高い優先度を表示します。</p>
+
+<h3>フィールド検索</h3>
+<pre><code>journalctl _PID=1234
+journalctl _UID=1000
+journalctl _COMM=sshd
+journalctl _SYSTEMD_UNIT=ssh.service</code></pre>
+
+<h3>出力形式</h3>
+<pre><code>journalctl -u ssh.service -o short-iso
+journalctl -u ssh.service -o verbose
+journalctl -u ssh.service -o json-pretty</code></pre>
+
+<h3>使用量と保持</h3>
+<pre><code>journalctl --disk-usage
+sudo journalctl --vacuum-time=14d
+sudo journalctl --vacuum-size=500M</code></pre>
+<p>障害調査に必要なログまで削除しないよう注意します。</p>
+
+<h3>永続保存</h3>
+<p>再起動後もjournalが保持されるかは、<code>journald.conf</code>の<code>Storage=</code>設定や<code>/var/log/journal/</code>の有無などに依存します。</p>
+<pre><code>ls -ld /var/log/journal /run/log/journal 2&gt;/dev/null
+systemctl cat systemd-journald.service</code></pre>
+<p><code>/run/log/journal</code>は揮発性領域、<code>/var/log/journal</code>は永続保存に使われます。実際の動作は設定とディストリビューション方針を確認します。</p>
+
+<aside class="card" style="margin-top:12px;">
+<p style="margin:0;"><strong>注意：</strong><code>systemctl status</code>に表示されるログは直近の一部です。原因調査では<code>journalctl -u ユニット名 -b</code>や時刻指定で前後を確認します。</p>
+</aside>
+</section>
+
+<section id="sec-10">
+<h2>実践的な障害確認手順</h2>
+
+<h3>1. ユニット名を確認する</h3>
+<pre><code>systemctl list-unit-files --type=service | grep -i ssh
+systemctl list-units --type=service --all | grep -i ssh</code></pre>
+<p>ディストリビューションによって、SSHサービス名が<code>ssh.service</code>または<code>sshd.service</code>など異なる場合があります。</p>
+
+<h3>2. 状態を分けて確認する</h3>
+<pre><code>systemctl status ssh.service --no-pager -l
+systemctl is-active ssh.service
+systemctl is-enabled ssh.service
+systemctl is-failed ssh.service</code></pre>
+
+<h3>3. ログを確認する</h3>
+<pre><code>journalctl -u ssh.service -b -n 100 --no-pager
+journalctl -u ssh.service --since "15 minutes ago"
+journalctl -p err -b</code></pre>
+<p>エラー行だけでなく、直前の設定読み込み、依存先、ポート競合、権限不足なども確認します。</p>
+
+<h3>4. ユニット定義を確認する</h3>
+<pre><code>systemctl cat ssh.service
+systemctl show ssh.service \
+  -p FragmentPath \
+  -p DropInPaths \
+  -p ExecStart \
+  -p User \
+  -p Group</code></pre>
+
+<h3>5. アプリケーション自身の設定を検証する</h3>
+<pre><code>sudo sshd -t
+sudo nginx -t
+sudo apachectl configtest</code></pre>
+<p>systemdのユニットが正しくても、アプリケーション設定が不正なら起動できません。</p>
+
+<h3>6. 実行ファイル、権限、ポート</h3>
+<pre><code>systemctl show ssh.service -p ExecStart
+ls -l /usr/sbin/sshd
+namei -l /usr/sbin/sshd
+ss -lntp
+ps -ef | grep '[s]shd'</code></pre>
+
+<h3>7. 依存関係と失敗ユニット</h3>
+<pre><code>systemctl list-dependencies ssh.service
+systemctl list-dependencies --reverse ssh.service
+systemctl --failed</code></pre>
+
+<h3>8. ユニット変更後</h3>
+<pre><code>sudo systemd-analyze verify \
+  /etc/systemd/system/example.service
+
+sudo systemctl daemon-reload
+sudo systemctl restart example.service
+systemctl status example.service --no-pager -l
+journalctl -u example.service -b -n 100 --no-pager</code></pre>
+
+<h3>9. 短時間に起動失敗を繰り返す場合</h3>
+<pre><code>systemctl show example.service \
+  -p Restart \
+  -p RestartUSec \
+  -p StartLimitBurst \
+  -p StartLimitIntervalUSec
+
+sudo systemctl reset-failed example.service
+sudo systemctl start example.service</code></pre>
+<p>先に失敗原因を修正します。<code>reset-failed</code>だけを繰り返しても、原因が残っていれば再び失敗します。</p>
+
+<h3>10. activeでも接続できない場合</h3>
+<pre><code>systemctl is-active example.service
+systemctl show example.service -p MainPID -p SubState
+ss -lntp
+curl -v http://127.0.0.1:8080/
+journalctl -u example.service -b</code></pre>
+<p>systemd上の稼働、プロセス、待受、アプリケーション応答、ファイアウォール、外部依存を別々に確認します。</p>
+
+<h3>よくある症状</h3>
+<table>
+<thead><tr><th>症状</th><th>主な確認点</th></tr></thead>
+<tbody>
+<tr><td><code>Unit ... not found</code></td><td>名前、インストール、配置場所、<code>daemon-reload</code></td></tr>
+<tr><td>startしたのに再起動後は停止</td><td><code>enable</code>の有無</td></tr>
+<tr><td>enableしたのに現在は停止</td><td><code>start</code>または<code>enable --now</code></td></tr>
+<tr><td>ユニット変更が反映されない</td><td><code>daemon-reload</code>、FragmentPath、drop-in</td></tr>
+<tr><td>アプリ設定が反映されない</td><td>構文確認、<code>reload</code>または<code>restart</code></td></tr>
+<tr><td>サービスがfailed</td><td>status、journal、実行ファイル、権限、依存先</td></tr>
+<tr><td>activeだが接続できない</td><td>待受アドレス、ポート、FW、アプリ応答、外部依存</td></tr>
+<tr><td>手動起動も拒否される</td><td>masked状態、条件、依存関係</td></tr>
+<tr><td>前回起動時のログがない</td><td>journalの永続保存と保持期間</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="sec-11">
+<h2>30秒チェック</h2>
+<ol>
+<li>systemdがinitシステムとして起動するとき、通常のPIDはいくつでしょうか。</li>
+<li><code>systemctl start</code>と<code>systemctl enable</code>は何が違うでしょうか。</li>
+<li><code>reload</code>と<code>daemon-reload</code>は、それぞれ何を読み直すでしょうか。</li>
+<li>現在のデフォルトtargetを表示するコマンドは何でしょうか。</li>
+<li><code>multi-user.target</code>は、従来のどのランレベルに近いでしょうか。</li>
+<li><code>static</code>なユニットは、どのように起動されることが多いでしょうか。</li>
+<li>現在の起動における特定サービスのログを表示するコマンドは何でしょうか。</li>
+<li><code>systemctl status</code>がactiveでも、サービスが利用可能とは限らないのはなぜでしょうか。</li>
+</ol>
+
+<details>
+<summary>答えを表示</summary>
+<ol>
+<li>PID 1</li>
+<li><code>start</code>は現在起動し、<code>enable</code>は起動時などの自動起動設定を行う</li>
+<li><code>reload</code>はサービス自身の設定、<code>daemon-reload</code>はsystemdが読むユニット設定</li>
+<li><code>systemctl get-default</code></li>
+<li>主にランレベル2、3、4に近い</li>
+<li>他ユニットの依存関係などから起動される</li>
+<li><code>journalctl -u サービス名 -b</code></li>
+<li>systemdがプロセスを管理していても、待受やアプリ応答、外部依存の正常性までは保証しないため</li>
+</ol>
+</details>
+</section>
+
+<section id="sec-12">
+<h2>要約</h2>
+<ul>
+<li>systemdは通常PID 1として起動し、Linuxのシステムとサービスを管理します。</li>
+<li>サービス、target、socket、mount、timerなどをユニットとして扱います。</li>
+<li><code>status</code>は詳細確認、<code>is-active</code>、<code>is-enabled</code>、<code>is-failed</code>は状態判定に使います。</li>
+<li><code>list-units</code>は主にロード済みユニット、<code>list-unit-files</code>はディスク上のユニットファイルを表示します。</li>
+<li><code>start</code>は現在起動し、<code>stop</code>は現在停止します。</li>
+<li><code>enable</code>は自動起動設定、<code>disable</code>はその設定解除です。</li>
+<li><code>enable --now</code>は有効化と起動を同時に行います。</li>
+<li><code>mask</code>は、手動や依存関係からの起動も拒否する強い無効化です。</li>
+<li><code>reload</code>はサービス自身の設定、<code>daemon-reload</code>はユニット設定を再読み込みします。</li>
+<li>targetは複数ユニットをまとめる同期点や起動目標です。</li>
+<li><code>multi-user.target</code>は非グラフィカルな複数利用者環境、<code>graphical.target</code>はGUIを含む環境です。</li>
+<li><code>isolate</code>は不要なユニットを停止し、接続断を起こす可能性があります。</li>
+<li>serviceユニットは主に<code>[Unit]</code>、<code>[Service]</code>、<code>[Install]</code>で構成されます。</li>
+<li><code>After=</code>は順序関係、<code>Wants=</code>や<code>Requires=</code>は要求関係です。</li>
+<li>管理者独自の変更には<code>systemctl edit</code>でdrop-inを作ります。</li>
+<li><code>journalctl -u</code>はユニット、<code>-b</code>は起動、<code>-k</code>はカーネル、<code>-f</code>は継続表示です。</li>
+<li><code>--since</code>、<code>--until</code>、<code>-p</code>で時刻や優先度を絞り込めます。</li>
+<li><code>status</code>のログは一部なので、障害調査では<code>journalctl</code>で前後を確認します。</li>
+<li>activeはsystemd上の稼働状態であり、アプリケーションの正常応答までは保証しません。</li>
+<li>障害時は、ユニット名、状態、journal、ユニット定義、アプリ設定、権限、ポート、依存関係の順に確認します。</li>
+</ul>
+</section>
+
+
+<section id="sec-sources">
+<h2>参考資料</h2>
+<ul>
+<li><a href="https://systemd.io/" target="_blank" rel="noopener noreferrer">systemd 公式サイト</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/systemd.html" target="_blank" rel="noopener noreferrer">systemd — System and Service Manager</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/systemctl.html" target="_blank" rel="noopener noreferrer">systemctl</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html" target="_blank" rel="noopener noreferrer">systemd.unit</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/systemd.service.html" target="_blank" rel="noopener noreferrer">systemd.service</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/systemd.target.html" target="_blank" rel="noopener noreferrer">systemd.target</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/systemd.special.html" target="_blank" rel="noopener noreferrer">systemd.special</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/bootup.html" target="_blank" rel="noopener noreferrer">bootup</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/journalctl.html" target="_blank" rel="noopener noreferrer">journalctl</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/systemd-journald.service.html" target="_blank" rel="noopener noreferrer">systemd-journald.service</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/journald.conf.html" target="_blank" rel="noopener noreferrer">journald.conf</a></li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/systemd-analyze.html" target="_blank" rel="noopener noreferrer">systemd-analyze</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/systemctl.1.html" target="_blank" rel="noopener noreferrer">systemctl(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man5/systemd.unit.5.html" target="_blank" rel="noopener noreferrer">systemd.unit(5) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man5/systemd.service.5.html" target="_blank" rel="noopener noreferrer">systemd.service(5) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man7/systemd.special.7.html" target="_blank" rel="noopener noreferrer">systemd.special(7) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man7/bootup.7.html" target="_blank" rel="noopener noreferrer">bootup(7) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/journalctl.1.html" target="_blank" rel="noopener noreferrer">journalctl(1) — Linux manual page</a></li>
+<li><a href="https://man7.org/linux/man-pages/man8/systemd-journald.service.8.html" target="_blank" rel="noopener noreferrer">systemd-journald.service(8) — Linux manual page</a></li>
+</ul>
+</section>
+
+</article>
+</main>
+</body>
+</html>

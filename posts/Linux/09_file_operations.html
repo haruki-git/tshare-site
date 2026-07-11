@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LPIC Level1 復習ラジオ 09：ファイル操作コマンド</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <article class="card">
+      <header>
+        <h1>LPIC Level1 復習ラジオ 09：ファイル操作コマンド</h1>
+        <nav><a href="/posts/Linux/linux_index.html">Linux記事一覧</a></nav>
+        <p class="meta">投稿日：2026-07-11</p>
+      </header>
+
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px 0;">音声</h2>
+        <audio controls preload="none" src="/posts/Linux/audio/09_file_operations_tts.mp3"></audio>
+        <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+      </section>
+
+      <section id="sec-toc">
+        <h2>目次</h2>
+        <ol>
+          <li><a href="#sec-1">ファイル操作の基本</a></li>
+          <li><a href="#sec-2">パスと安全な指定</a></li>
+          <li><a href="#sec-3">ls</a></li>
+          <li><a href="#sec-4">cp</a></li>
+          <li><a href="#sec-5">mv</a></li>
+          <li><a href="#sec-6">rm</a></li>
+          <li><a href="#sec-7">mkdir</a></li>
+          <li><a href="#sec-8">touch</a></li>
+          <li><a href="#sec-9">ln</a></li>
+          <li><a href="#sec-10">実践的な確認手順</a></li>
+          <li><a href="#sec-11">30秒チェック</a></li>
+          <li><a href="#sec-12">要約</a></li>
+        </ol>
+      </section>
+
+      <section id="sec-1">
+        <h2>ファイル操作の基本</h2>
+        <p>Linuxでは、通常ファイル、ディレクトリ、シンボリックリンクなどを、コマンドラインから作成・コピー・移動・削除できます。</p>
+        <p>今回扱うコマンドは、次の七つです。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>コマンド</th>
+              <th>主な役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>ls</code></td><td>ファイルやディレクトリの情報を一覧表示する</td></tr>
+            <tr><td><code>cp</code></td><td>ファイルやディレクトリをコピーする</td></tr>
+            <tr><td><code>mv</code></td><td>ファイルやディレクトリを移動・改名する</td></tr>
+            <tr><td><code>rm</code></td><td>ファイルやディレクトリを削除する</td></tr>
+            <tr><td><code>mkdir</code></td><td>ディレクトリを作成する</td></tr>
+            <tr><td><code>touch</code></td><td>タイムスタンプを変更し、存在しなければ空ファイルを作成する</td></tr>
+            <tr><td><code>ln</code></td><td>ハードリンクまたはシンボリックリンクを作成する</td></tr>
+          </tbody>
+        </table>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>今回の目標：</strong>「何を操作するか」「上書きされるか」「再帰処理が必要か」「元とコピー・リンクの関係はどうなるか」を確認してから実行できるようにします。</p>
+        </aside>
+      </section>
+
+      <section id="sec-2">
+        <h2>パスと安全な指定</h2>
+
+        <h3>絶対パスと相対パス</h3>
+        <p>絶対パスは、ルートディレクトリの<code>/</code>から始まるパスです。相対パスは、現在の作業ディレクトリを基準にしたパスです。</p>
+
+        <pre><code>/home/alice/report.txt
+./report.txt
+../backup/report.txt</code></pre>
+
+        <ul>
+          <li><code>.</code>：現在のディレクトリ</li>
+          <li><code>..</code>：一つ上の親ディレクトリ</li>
+          <li><code>~</code>：シェルによって展開される、現在のユーザーのホームディレクトリ</li>
+        </ul>
+
+        <h3>空白を含む名前</h3>
+        <p>空白を含むファイル名は、引用符で囲むか、空白をバックスラッシュでエスケープします。</p>
+
+        <pre><code>cp "monthly report.txt" backup/
+cp monthly\ report.txt backup/</code></pre>
+
+        <h3>ハイフンで始まる名前</h3>
+        <p><code>-file</code>のような名前は、コマンドのオプションと解釈される可能性があります。<code>--</code>でオプションの終わりを示すか、<code>./</code>を付けます。</p>
+
+        <pre><code>rm -- -file
+rm ./-file</code></pre>
+
+        <h3>操作前の確認</h3>
+        <pre><code>pwd
+ls -ld -- 対象
+printf '%s\n' -- 対象</code></pre>
+
+        <p>特に削除や上書きの前には、<code>pwd</code>で現在地を確認し、対象を<code>ls</code>で表示してから実行します。</p>
+      </section>
+
+      <section id="sec-3">
+        <h2>ls</h2>
+        <p><code>ls</code>は、ファイルやディレクトリの情報を一覧表示するコマンドです。</p>
+
+        <pre><code>ls
+ls /etc
+ls file1 file2</code></pre>
+
+        <p>引数を指定しない場合は、現在のディレクトリの内容を表示します。通常、名前がドットで始まる隠しファイルは表示しません。</p>
+
+        <h3>よく使うオプション</h3>
+        <pre><code>ls -l
+ls -a
+ls -A
+ls -h
+ls -lh
+ls -ld directory
+ls -lt
+ls -ltr
+ls -R</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-l</code></td><td>パーミッション、リンク数、所有者、グループ、サイズ、時刻などを長い形式で表示する</td></tr>
+            <tr><td><code>-a</code></td><td><code>.</code>と<code>..</code>を含む、ドットで始まる項目も表示する</td></tr>
+            <tr><td><code>-A</code></td><td><code>.</code>と<code>..</code>を除き、ドットで始まる項目を表示する</td></tr>
+            <tr><td><code>-h</code></td><td>サイズをKiB、MiBなど読みやすい単位で表示する。通常は<code>-l</code>と組み合わせる</td></tr>
+            <tr><td><code>-d</code></td><td>ディレクトリの中身ではなく、ディレクトリ自身の情報を表示する</td></tr>
+            <tr><td><code>-t</code></td><td>更新時刻を基準に並べ替える</td></tr>
+            <tr><td><code>-r</code></td><td>並び順を逆にする</td></tr>
+            <tr><td><code>-R</code></td><td>サブディレクトリを再帰的に表示する</td></tr>
+            <tr><td><code>-i</code></td><td>inode番号を表示する</td></tr>
+          </tbody>
+        </table>
+
+        <h3><code>ls -l</code>の見方</h3>
+        <pre><code>-rw-r----- 1 alice developers 2048 Jul 11 10:00 report.txt
+lrwxrwxrwx 1 alice developers   10 Jul 11 10:10 latest -> report.txt</code></pre>
+
+        <p>先頭文字はファイルの種類です。<code>-</code>は通常ファイル、<code>d</code>はディレクトリ、<code>l</code>はシンボリックリンクを表します。</p>
+        <p>シンボリックリンクでは、通常、<code>リンク名 -&gt; リンク先</code>が表示されます。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>注意：</strong><code>ls -l directory</code>はディレクトリの中身を表示します。ディレクトリ自身の所有者や権限を見たい場合は<code>ls -ld directory</code>を使います。</p>
+        </aside>
+      </section>
+
+      <section id="sec-4">
+        <h2>cp</h2>
+        <p><code>cp</code>は、ファイルまたはディレクトリをコピーします。通常のコピーでは、コピー先は元ファイルから独立した別のファイルになります。</p>
+
+        <h3>基本形</h3>
+        <pre><code>cp source.txt destination.txt
+cp source.txt backup/
+cp file1 file2 backup/</code></pre>
+
+        <p>二つのファイル名を指定すると、一つ目を二つ目へコピーします。最後の引数が既存ディレクトリの場合は、そのディレクトリ内へ元と同じ名前でコピーします。</p>
+
+        <h3>ディレクトリのコピー</h3>
+        <pre><code>cp -R source_dir backup/
+cp -a source_dir backup/</code></pre>
+
+        <ul>
+          <li><code>-R</code>または<code>-r</code>：ディレクトリを再帰的にコピーする</li>
+          <li><code>-a</code>：再帰コピーし、シンボリックリンクや属性などを可能な限り保持するアーカイブモード</li>
+        </ul>
+
+        <p>バックアップや構成の複製では、単なる<code>-R</code>よりも属性保持を含む<code>-a</code>が適する場合があります。</p>
+
+        <h3>上書きと属性</h3>
+        <pre><code>cp -i source.txt destination.txt
+cp -n source.txt destination.txt
+cp -p source.txt destination.txt
+cp -v source.txt backup/
+cp --backup source.txt destination.txt</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-i</code></td><td>既存ファイルを上書きする前に確認する</td></tr>
+            <tr><td><code>-n</code></td><td>既存ファイルを上書きせずスキップする。GNU Coreutilsでは移植性上の注意がある</td></tr>
+            <tr><td><code>-p</code></td><td>モード、所有者、タイムスタンプなど、指定された属性を保持する</td></tr>
+            <tr><td><code>-v</code></td><td>処理したファイル名を表示する</td></tr>
+            <tr><td><code>--backup</code></td><td>上書き対象のバックアップを作成する</td></tr>
+          </tbody>
+        </table>
+
+        <h3>末尾スラッシュで迷わない</h3>
+        <p>コピー先に同名ディレクトリが存在するかどうかで、出来上がる階層が変わる場合があります。実行前後に<code>ls -ld</code>や<code>find</code>で確認します。</p>
+
+        <pre><code>cp -a project backup/
+ls -ld backup backup/project</code></pre>
+      </section>
+
+      <section id="sec-5">
+        <h2>mv</h2>
+        <p><code>mv</code>は、ファイルやディレクトリを移動します。同じ場所で名前を変える場合は、改名コマンドとして使えます。</p>
+
+        <h3>改名と移動</h3>
+        <pre><code>mv old.txt new.txt
+mv report.txt archive/
+mv file1 file2 archive/</code></pre>
+
+        <p>同じファイルシステム内の移動では、ディレクトリエントリの付け替えで完了することが多く、内容全体をコピーするより高速です。</p>
+        <p>異なるファイルシステム間では、実質的にコピーしてから元を削除する処理になることがあります。この場合は、容量や処理時間にも注意します。</p>
+
+        <h3>上書きへの対応</h3>
+        <pre><code>mv -i old.txt new.txt
+mv -n old.txt new.txt
+mv -v old.txt archive/
+mv --backup old.txt new.txt</code></pre>
+
+        <ul>
+          <li><code>-i</code>：上書き前に確認する</li>
+          <li><code>-n</code>：既存の宛先を上書きしない</li>
+          <li><code>-v</code>：実行した処理を表示する</li>
+          <li><code>--backup</code>：上書きされる宛先のバックアップを作る</li>
+        </ul>
+
+        <p><code>mv</code>は元の場所から項目がなくなるため、コピーとは異なります。保険として元を残したい場合は、先に<code>cp</code>で複製し、確認後に削除します。</p>
+      </section>
+
+      <section id="sec-6">
+        <h2>rm</h2>
+        <p><code>rm</code>は、指定したファイルを削除します。標準ではディレクトリを削除しません。</p>
+
+        <pre><code>rm file.txt
+rm file1 file2
+rm -i file.txt
+rm -I *.log
+rm -v file.txt</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-i</code></td><td>各ファイルを削除する前に確認する</td></tr>
+            <tr><td><code>-I</code></td><td>多数のファイルや再帰削除のとき、全体について一度確認する</td></tr>
+            <tr><td><code>-f</code></td><td>存在しないファイルを無視し、確認を行わない</td></tr>
+            <tr><td><code>-r</code>、<code>-R</code></td><td>ディレクトリとその中身を再帰的に削除する</td></tr>
+            <tr><td><code>-v</code></td><td>削除するファイル名を表示する</td></tr>
+          </tbody>
+        </table>
+
+        <h3>ディレクトリの削除</h3>
+        <pre><code>rmdir empty_dir
+rm -r directory
+rm -rI directory</code></pre>
+
+        <p><code>rmdir</code>は空のディレクトリだけを削除します。中身を含めて削除する場合は<code>rm -r</code>を使います。</p>
+
+        <h3><code>rm -rf</code>の注意</h3>
+        <p><code>rm -rf</code>は、再帰的な削除を確認なしで進めます。ワイルドカード、変数、カレントディレクトリの勘違いがあると、意図しない範囲を消す可能性があります。</p>
+
+        <pre><code>pwd
+ls -ld -- directory
+find directory -maxdepth 2 -print
+rm -rI -- directory</code></pre>
+
+        <p>いきなり<code>-f</code>を付けず、対象を表示し、可能なら<code>-I</code>で全体確認を入れます。</p>
+        <p>一般的な<code>rm</code>は、ごみ箱へ移動する操作ではありません。バックアップやスナップショットがなければ、簡単には元へ戻せません。</p>
+
+        <aside class="card" style="margin-top:12px;">
+          <p style="margin:0;"><strong>重要：</strong>削除コマンドは「正しいコマンドを覚えたか」より、「現在地と展開後の対象を確認したか」が重要です。</p>
+        </aside>
+      </section>
+
+      <section id="sec-7">
+        <h2>mkdir</h2>
+        <p><code>mkdir</code>は、指定した名前のディレクトリを作成します。</p>
+
+        <pre><code>mkdir reports
+mkdir dir1 dir2 dir3</code></pre>
+
+        <h3>親ディレクトリもまとめて作成</h3>
+        <pre><code>mkdir -p project/log/archive
+mkdir -pv project/{bin,etc,var}</code></pre>
+
+        <ul>
+          <li><code>-p</code>：不足している親ディレクトリも作成し、すでに存在するディレクトリをエラーにしない</li>
+          <li><code>-v</code>：作成したディレクトリを表示する</li>
+          <li><code>-m</code>：作成するディレクトリのモードを指定する</li>
+        </ul>
+
+        <pre><code>mkdir -m 750 private_dir
+mkdir -p -m 750 parent/child</code></pre>
+
+        <p><code>-m</code>は、コマンドラインで直接指定したディレクトリのモードに影響します。<code>-p</code>によって途中に作られた親ディレクトリへ同じモードが必ず適用されるわけではありません。</p>
+        <p>新規ディレクトリの最終的な権限には、umaskやACLも関係します。</p>
+      </section>
+
+      <section id="sec-8">
+        <h2>touch</h2>
+        <p><code>touch</code>の本来の役割は、ファイルのアクセス時刻や更新時刻を変更することです。指定したファイルが存在しない場合、標準では空のファイルを作成します。</p>
+
+        <pre><code>touch memo.txt
+touch file1 file2
+touch existing.txt</code></pre>
+
+        <p><code>existing.txt</code>が存在する場合、内容は空にならず、標準ではアクセス時刻と更新時刻が現在時刻へ変更されます。</p>
+
+        <h3>よく使うオプション</h3>
+        <pre><code>touch -a file.txt
+touch -m file.txt
+touch -c missing.txt
+touch -d "2026-07-01 09:00" file.txt
+touch -r reference.txt target.txt</code></pre>
+
+        <table>
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>意味</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>-a</code></td><td>アクセス時刻だけを変更する</td></tr>
+            <tr><td><code>-m</code></td><td>更新時刻だけを変更する</td></tr>
+            <tr><td><code>-c</code></td><td>存在しないファイルを新規作成しない</td></tr>
+            <tr><td><code>-d</code></td><td>文字列で指定した日時を使う</td></tr>
+            <tr><td><code>-r</code></td><td>参照ファイルの時刻を使う</td></tr>
+          </tbody>
+        </table>
+
+        <p><code>touch</code>では、ctimeと呼ばれる状態変更時刻を任意の値へ設定できません。また、ファイルシステムが対応していても、作成時刻を任意に変更する用途のコマンドではありません。</p>
+
+        <pre><code>stat file.txt</code></pre>
+
+        <p>時刻の違いを確認する場合は、<code>stat</code>を使うと、アクセス時刻、更新時刻、状態変更時刻などを詳しく確認できます。</p>
+      </section>
+
+      <section id="sec-9">
+        <h2>ln</h2>
+        <p><code>ln</code>は、ファイルへ別の名前を付けるリンクを作成します。リンクには、ハードリンクとシンボリックリンクがあります。</p>
+
+        <h3>ハードリンク</h3>
+        <pre><code>ln original.txt hardlink.txt
+ls -li original.txt hardlink.txt</code></pre>
+
+        <p>ハードリンクは、既存ファイルと同じinodeを参照する、もう一つのファイル名です。元の名前とハードリンクのどちらが本体という区別はありません。</p>
+        <p>一つの名前を削除しても、同じinodeを指す別のハードリンクが残り、開いているプロセスなどの参照もなくなるまでは、ファイル内容は解放されません。</p>
+        <p>通常、ハードリンクは別のファイルシステムを越えて作成できません。また、多くのシステムでは一般ユーザーがディレクトリのハードリンクを作成できません。</p>
+
+        <h3>シンボリックリンク</h3>
+        <pre><code>ln -s /opt/app/current app
+ls -l app
+readlink app
+readlink -f app</code></pre>
+
+        <p>シンボリックリンクは、リンク先のパス名を保持する特別なファイルです。別ファイルシステムやディレクトリもリンク先にできます。</p>
+        <p>リンク先が削除・移動されると、リンクだけが残り、参照できない壊れたリンクになることがあります。</p>
+
+        <h3>相対リンクと絶対リンク</h3>
+        <pre><code>ln -s ../shared/config.ini config.ini
+ln -s /srv/shared/config.ini config.ini</code></pre>
+
+        <p>相対パスのシンボリックリンクは、リンクが置かれているディレクトリを基準に解釈されます。コマンドを実行したカレントディレクトリが基準ではありません。</p>
+
+        <h3>上書きへの対応</h3>
+        <pre><code>ln -s target linkname
+ln -sf target linkname
+ln -sfn target directory_link</code></pre>
+
+        <p><code>-f</code>は既存の宛先を削除して作り直します。<code>-n</code>は、宛先がディレクトリへのシンボリックリンクの場合に、そのリンク自体を通常ファイルのように扱うために使われます。</p>
+        <p>リンク更新では、リンク先とリンク名の順番を逆にしやすいため、<code>ln -s リンク先 リンク名</code>と覚えます。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>ハードリンク</th>
+              <th>シンボリックリンク</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>参照するもの</td><td>同じinode</td><td>リンク先のパス名</td></tr>
+            <tr><td>別ファイルシステム</td><td>通常不可</td><td>可能</td></tr>
+            <tr><td>ディレクトリへのリンク</td><td>通常不可</td><td>可能</td></tr>
+            <tr><td>リンク先削除後</td><td>他のハードリンクから内容へアクセス可能</td><td>壊れたリンクになる</td></tr>
+            <tr><td>確認方法</td><td><code>ls -li</code></td><td><code>ls -l</code>、<code>readlink</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="sec-10">
+        <h2>実践的な確認手順</h2>
+        <p>ファイル操作で事故を減らすため、実行前・実行時・実行後の三段階で確認します。</p>
+
+        <h3>実行前</h3>
+        <pre><code>pwd
+ls -ld -- source destination
+stat -- source
+df -h -- source destination</code></pre>
+
+        <ul>
+          <li>現在のディレクトリは正しいか</li>
+          <li>対象は通常ファイル、ディレクトリ、シンボリックリンクのどれか</li>
+          <li>コピー先や移動先に同名の項目がないか</li>
+          <li>別ファイルシステムをまたぐ処理か</li>
+        </ul>
+
+        <h3>実行時</h3>
+        <pre><code>cp -iv source destination
+mv -iv source destination
+rm -rI directory
+mkdir -pv path/to/directory</code></pre>
+
+        <p>最初は<code>-i</code>、<code>-I</code>、<code>-v</code>などを使い、確認と表示を増やします。</p>
+
+        <h3>実行後</h3>
+        <pre><code>ls -l
+ls -li
+stat destination
+readlink -f symbolic_link</code></pre>
+
+        <p>ファイルの存在だけでなく、所有者、パーミッション、サイズ、時刻、inode、リンク先も必要に応じて確認します。</p>
+
+        <h3>よくある間違い</h3>
+        <ul>
+          <li><code>ls -l directory</code>で、ディレクトリ自身ではなく中身を見ている</li>
+          <li><code>cp</code>や<code>mv</code>で、既存ファイルを意図せず上書きする</li>
+          <li><code>rm -rf</code>へ、空の変数や想定外に展開されたワイルドカードを渡す</li>
+          <li><code>touch</code>は既存ファイルの内容を空にすると誤解する</li>
+          <li><code>ln -s</code>で、リンク先とリンク名の順番を逆にする</li>
+          <li>相対シンボリックリンクを、リンクの設置場所ではなく現在地基準で考える</li>
+        </ul>
+
+        <p>詳しい使い方は、次のマニュアルでも確認できます。</p>
+        <pre><code>man ls
+man cp
+man mv
+man rm
+man mkdir
+man touch
+man ln
+man stat
+man readlink</code></pre>
+      </section>
+
+      <section id="sec-11">
+        <h2>30秒チェック</h2>
+        <ol>
+          <li>ディレクトリ自身の情報を長い形式で表示するコマンドは何でしょうか。</li>
+          <li>属性を可能な限り保持しながらディレクトリを再帰コピーする、GNU <code>cp</code>の代表的なオプションは何でしょうか。</li>
+          <li><code>rm -r</code>と<code>rm -f</code>は、それぞれ何を意味するでしょうか。</li>
+          <li><code>touch</code>で既存ファイルを指定すると、標準では内容はどうなるでしょうか。</li>
+          <li>ハードリンクが同じであることを確認しやすい、<code>ls</code>のオプションは何でしょうか。</li>
+          <li>シンボリックリンクの相対パスは、どの場所を基準に解釈されるでしょうか。</li>
+        </ol>
+
+        <details>
+          <summary>答えを表示</summary>
+          <ol>
+            <li><code>ls -ld ディレクトリ</code></li>
+            <li><code>-a</code>、つまり<code>cp -a</code></li>
+            <li><code>-r</code>は再帰処理、<code>-f</code>は確認せず強制的に処理する指定</li>
+            <li>内容は変更せず、標準ではアクセス時刻と更新時刻を現在時刻へ変更する</li>
+            <li><code>-i</code>、つまり<code>ls -li</code></li>
+            <li>シンボリックリンクが置かれているディレクトリ</li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="sec-12">
+        <h2>要約</h2>
+        <ul>
+          <li><code>ls</code>は一覧表示、<code>ls -ld</code>はディレクトリ自身の情報確認に使います。</li>
+          <li><code>cp</code>は独立したコピーを作り、ディレクトリには<code>-R</code>、属性保持を含む複製には<code>-a</code>を使います。</li>
+          <li><code>mv</code>は移動と改名に使い、元の場所から項目がなくなります。</li>
+          <li><code>rm</code>は削除を行い、<code>-r</code>は再帰、<code>-f</code>は確認なしの強制処理です。</li>
+          <li><code>mkdir -p</code>は、不足する親ディレクトリもまとめて作成します。</li>
+          <li><code>touch</code>はタイムスタンプを変更し、存在しない場合は標準で空ファイルを作ります。</li>
+          <li>ハードリンクは同じinodeへの別名で、シンボリックリンクはリンク先のパス名を保持します。</li>
+          <li>空白やハイフンを含む名前は、引用符、<code>--</code>、<code>./</code>を使って安全に指定します。</li>
+          <li>上書きや削除では、<code>-i</code>、<code>-I</code>、<code>-v</code>を使って確認を増やします。</li>
+          <li>実行前に<code>pwd</code>と<code>ls</code>、実行後に<code>stat</code>や<code>readlink</code>で結果を確認します。</li>
+        </ul>
+      </section>
+
+      <section id="sec-sources">
+        <h2>参考資料</h2>
+        <ul>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/ls-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：ls invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/What-information-is-listed.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：What information is listed</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/cp-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：cp invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/mv-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：mv invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/rm-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：rm invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/mkdir-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：mkdir invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/touch-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：touch invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/ln-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：ln invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/stat-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：stat invocation</a></li>
+          <li><a href="https://www.gnu.org/software/coreutils/manual/html_node/readlink-invocation.html" target="_blank" rel="noopener noreferrer">GNU Coreutils：readlink invocation</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man7/inode.7.html" target="_blank" rel="noopener noreferrer">inode(7) manual page</a></li>
+          <li><a href="https://man7.org/linux/man-pages/man7/symlink.7.html" target="_blank" rel="noopener noreferrer">symlink(7) manual page</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
