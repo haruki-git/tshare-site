@@ -1,124 +1,112 @@
 {
-  "date": "2026-07-12",
-  "generatedAtJST": "2026-07-12T07:15:37.757+09:00",
+  "date": "2026-07-13",
+  "generatedAtJST": "2026-07-13T07:15:27.818+09:00",
   "items": [
     {
-      "url": "https://en.antaranews.com/news/422217/investors-eye-13-gw-data-center-expansion-in-indonesia",
-      "source": "Antaranews.com",
-      "publishedAt": "2026-07-10T19:43:42Z",
-      "title": "Investors eye 1.3 GW data center expansion in Indonesia",
-      "title_ja": "投資家がインドネシアにおける1.3 GWのデータセンター拡張に注目",
-      "summary_ja": "インドネシアの経済調整大臣エアランガ・ハルタルトが、グローバル投資家が合計1.3 GWのデータセンター建設に強い関心を示していることを発表しました。現在、同国のデータセンターの運用能力は約580 MWであり、拡張プロジェクトへの投資は150億〜200億ドルと見込まれています。Nvidiaがオーストラリアのパートナーと共に市場に参入する意向を持ち、デジタルインフラの成長を支援するための人材育成が進められています。",
+      "url": "https://finance.yahoo.com/technology/ai/articles/vertiv-vrt-expanding-ai-data-195901778.html",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-07-11T19:59:01Z",
+      "title": "How Vertiv (VRT) Is Expanding Its AI Data Center Cooling Platform Through the ThermoKey Acquisition",
+      "title_ja": "Vertiv (VRT)、ThermoKey買収を通じてAIデータセンター冷却プラットフォームを拡大",
+      "summary_ja": "Vertiv Holdings Coは、ThermoKeyの買収を通じてAIデータセンター冷却プラットフォームを強化しています。この買収により、データセンターの効率性とエネルギー管理能力が向上する見込みです。これにより、Vertivは競争力を維持し、急成長する市場において更なる展開を図ることができます。",
       "key_points": [
-        "インドネシア政府はデータセンターの運用能力を580 MWから1.3 GWに拡張予定。",
-        "約150億〜200億ドルの追加投資管が見込まれている。",
-        "Nvidiaがオーストラリアのパートナーと共同で市場参入を計画。",
-        "ほとんどのビッグテック企業がカラワンでデータセンターを開発・拡張する予定。",
-        "政府は人材育成策を進めており、1万5000人のエンジニアをArmのエコシステムに統合する計画がある。"
+        "Vertivは過去3年間で134%のCAGRを記録している。",
+        "6月12日にThermoKeyを買収した。",
+        "この買収によりAIを活用したデータセンター冷却技術が強化される。",
+        "エネルギー効率の向上が期待されている。",
+        "競争力のある市場での地位を強固にする狙いがある。"
       ],
       "glossary": [
+        {
+          "term": "CAGR",
+          "explain_ja": "年平均成長率を示す指標で、一定期間の成長率を平均的に示す。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能のこと。機械が人間の知能を模倣する技術を指す。"
+        }
+      ],
+      "personal_actions": [
+        "新しい冷却技術への知識を深め、データセンターの効率向上策を検討する。",
+        "業界動向を定期的にチェックし、競合他社の動きに注意を払う。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/ai-trade-shifts-chips-infrastructure-stocks/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-07-11T18:01:20Z",
+      "title": "AI trade shifts focus from chips to infrastructure, and two stocks are cashing in",
+      "title_ja": "AI関連投資、チップからインフラへシフトし2銘柄が利益を得る",
+      "summary_ja": "AIインフラへの支出のシフトが、電力管理やデータセンターの拡張の重要性を浮き彫りにしています。これにより、投資戦略にも影響が出ています。特定の企業がこの変化から利益を得ていることが注目されています。",
+      "key_points": [
+        "AIインフラ支出のシフトが顕著に",
+        "電力管理の重要性が増加",
+        "データセンターの拡張が求められている",
+        "これに伴い、新たな投資戦略が必要",
+        "特定の2銘柄がこのトレンドから利益を得ている"
+      ],
+      "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能の略で、機械が人間の知能を模倣する技術"
+        },
+        {
+          "term": "インフラストラクチャ",
+          "explain_ja": "基盤となる設備やシステムの集合"
+        },
         {
           "term": "データセンター",
-          "explain_ja": "データを集約、管理、保存するための施設。"
-        },
-        {
-          "term": "AI（人工知能）",
-          "explain_ja": "コンピュータが人間の知能を模倣する技術。"
-        },
-        {
-          "term": "Nvidia",
-          "explain_ja": "米国のテクノロジー企業で、主にGPUを製造している。"
-        },
-        {
-          "term": "Arm Ltd.",
-          "explain_ja": "イギリスの半導体企業で、プロセッサーの設計を行っている。"
+          "explain_ja": "データを収集、保管、管理するための施設"
         }
       ],
       "personal_actions": [
-        "現場のデータセンターの性能と運用状況を確認する。",
-        "拡張に伴う新しい技術や研修プログラムの情報を収集する。",
-        "人材育成に関する社内の方針を見直す。"
+        "電力管理に関する最新の技術トレンドを確認する",
+        "データセンターの最新設備を把握する",
+        "関連する投資機会を調査する"
       ],
       "tags": [
-        "DC"
+        "AI"
       ]
     },
     {
-      "url": "https://en.antaranews.com/news/422181/trane-launches-hswe-magnetic-bearing-chiller-to-advance-data-center-cooling-across-asia-pacific",
-      "source": "Antaranews.com",
-      "publishedAt": "2026-07-10T16:07:41Z",
-      "title": "Trane Launches HSWE Magnetic Bearing Chiller to Advance Data Center Cooling Across Asia Pacific",
-      "title_ja": "トレイン、アジア太平洋地域のデータセンター冷却を進化させるHSWE磁気軸受チラーを発表",
-      "summary_ja": "トレイン・テクノロジーズは、アジア太平洋市場向けにHSWE磁気軸受遠心チラーを発表しました。この新製品は、データセンターの高い冷却要件に対応し、高効率で信頼性の高い性能を提供します。HSWEは、エネルギーコスト削減や持続可能性の基準を満たすための技術革新を強化し、冷却業界に大きな影響を与えることが期待されています。",
+      "url": "https://freerepublic.com/focus/f-bloggers/4387567/posts",
+      "source": "Freerepublic.com",
+      "publishedAt": "2026-07-11T13:35:41Z",
+      "title": "Say Hello To Google, The Mystery Owner Behind Wyoming's Largest Data Center Project",
+      "title_ja": "グーグル、ワイオミング州最大のデータセンター計画の謎のオーナーに",
+      "summary_ja": "グーグルがワイオミング州最大のデータセンターであるProject Temboのオーナーであることが明らかになった。この施設は2.7ギガワットの能力を持ち、シェリダンに近いスイッチグラス工業団地に位置する。ワイオミング州はテクノロジー企業の進出が続いており、地域の経済にも影響を与える可能性がある。",
       "key_points": [
-        "HSWEはアジア太平洋市場専用に設計された磁気軸受技術を採用。",
-        "フルロードCOPは7.3、AHRI IPLVは最大12.3を達成。",
-        "冷却容量は500 - 1,250 RT、データセンター向けには600 - 1,500 RTを提供。",
-        "復旧後25秒で再起動可能、2分でフルロード到達。",
-        "超静音設計、騒音レベルは最大73 dB(A)。"
+        "GoogleがProject Temboを所有し運営することが確認された。",
+        "施設は716エーカーのキャンパスで、2031年までに完成予定。",
+        "ワイオミング州にはMicrosoftやMetaなど他の大手テクノロジー企業も進出中。",
+        "プロジェクトは新しい電源設備を利用し、地元の環境保護にも留意している。",
+        "Googleのデータセンターが進出することで、地域経済への影響が期待される。"
       ],
       "glossary": [
         {
-          "term": "HSWE",
-          "explain_ja": "トレインの最新の磁気軸受遠心チラーで、データセンター向けに特化されている。"
+          "term": "Project Tembo",
+          "explain_ja": "Googleが進めるワイオミング州のデータセンター計画の名称。"
         },
         {
-          "term": "COP",
-          "explain_ja": "冷凍機の性能を示す指標で、高い値ほど効率が良い。"
+          "term": "データセンター",
+          "explain_ja": "ITサービスを提供するために必要なサーバーやネットワーク機器を収納する施設。"
         },
         {
-          "term": "AHRI",
-          "explain_ja": "暖房、冷却、空気調和の産業標準を策定する協会。"
-        },
-        {
-          "term": "HFO refrigerants",
-          "explain_ja": "次世代の環境に優しい冷媒として期待される化合物。"
+          "term": "スイッチグラス工業団地",
+          "explain_ja": "Googleのデータセンターが建設される工業用地の名称。"
         }
       ],
       "personal_actions": [
-        "新しい冷却技術の情報を把握し、最適な設備更新を検討する。",
-        "データセンターの冷却ニーズを再評価し、効率向上策を検討する。",
-        "トレインのHSWE使用による利点を現場で評価する。"
+        "地域のデータセンターの動向を追跡し、利点を理解する。",
+        "新たな電源資源や環境への影響に関する地域の取り組みを確認する。",
+        "地元の住民や企業と連携し、データセンターの進出に対する意見を共有する。"
       ],
       "tags": [
         "DC"
-      ]
-    },
-    {
-      "url": "https://www.telecompetitor.com/virginia-fiber-express-clears-state-licensing-hurdle-for-first-phase-of-six-phase-network/",
-      "source": "Telecompetitor",
-      "publishedAt": "2026-07-10T15:30:00Z",
-      "title": "Virginia Fiber Express clears state licensing hurdle for first phase of six-phase network",
-      "title_ja": "バージニアファイバーエクスプレス、州ライセンスの障害をクリアし、6フェーズネットワークの第一フェーズへ",
-      "summary_ja": "バージニアファイバーエクスプレスネットワークが、6フェーズのファイバーネットワークの第一フェーズに向けて州のライセンスを取得しました。この新しいネットワークは、データセンターキャンパスの南進に伴い、混雑したI-95回廊を避けるために設計されています。第一フェーズでは、北バージニアからリッチモンドのサンドストンまでの126マイルの異なるファイバー経路が構築される予定です。",
-      "key_points": [
-        "バージニアファイバーエクスプレスが州の CLEC と IXC ライセンスを取得。",
-        "第一フェーズは126マイルの経路で、I-95回廊を避ける設計。",
-        "データセンターの拡大に伴い、フェーズ1は2027年のサービス開始を目指す。",
-        "既存のファイバーネットワークと冗長性のある接続を提供する。",
-        "Express Technologies と S&N Infrastructure が建設パートナーとして参加。"
-      ],
-      "glossary": [
-        {
-          "term": "CLEC",
-          "explain_ja": "Competitive Local Exchange Carrier の略。競争的な地域交換事業者を指す。"
-        },
-        {
-          "term": "IXC",
-          "explain_ja": "Interexchange Carrier の略。長距離通信を行う事業者を指す。"
-        },
-        {
-          "term": "ファイバーブロードバンド",
-          "explain_ja": "光ファイバーを用いた高速インターネット接続を示す。"
-        }
-      ],
-      "personal_actions": [
-        "新しいファイバーネットワークの影響を調査し、データセンター業務における接続性ニーズを再評価する。",
-        "地域の通信インフラの進展に注目し、将来の投資機会を見極める。",
-        "新しいパートナーシップや提携機会を探索し、プロジェクトに関与する可能性を考慮する。"
-      ],
-      "tags": [
-        "インフラ"
       ]
     }
   ]
