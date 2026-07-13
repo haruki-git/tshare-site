@@ -1,34 +1,34 @@
 {
-  "date": "2026-07-13",
-  "generatedAtJST": "2026-07-13T07:15:27.818+09:00",
+  "date": "2026-07-14",
+  "generatedAtJST": "2026-07-14T07:15:37.422+09:00",
   "items": [
     {
-      "url": "https://finance.yahoo.com/technology/ai/articles/vertiv-vrt-expanding-ai-data-195901778.html",
-      "source": "Yahoo Entertainment",
-      "publishedAt": "2026-07-11T19:59:01Z",
-      "title": "How Vertiv (VRT) Is Expanding Its AI Data Center Cooling Platform Through the ThermoKey Acquisition",
-      "title_ja": "Vertiv (VRT)、ThermoKey買収を通じてAIデータセンター冷却プラットフォームを拡大",
-      "summary_ja": "Vertiv Holdings Coは、ThermoKeyの買収を通じてAIデータセンター冷却プラットフォームを強化しています。この買収により、データセンターの効率性とエネルギー管理能力が向上する見込みです。これにより、Vertivは競争力を維持し、急成長する市場において更なる展開を図ることができます。",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/meta-to-put-ai-chip-into-production-in-september-as-it-looks-to-double-computing-capacity/articleshow/132351525.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-07-12T18:57:04Z",
+      "title": "Meta to put AI chip into production in September as it looks to double computing capacity",
+      "title_ja": "Meta、AIチップを9月に生産開始し計算能力を倍増へ",
+      "summary_ja": "Metaは自社設計のAIチップ「Iris」を9月に生産開始する。このチップはMeta Training and Inference Accelerators (MTIA)の一環であり、計算能力を向上させることを目指している。これにより、Facebookやその他のサービスのAI機能が強化される見込みである。",
       "key_points": [
-        "Vertivは過去3年間で134%のCAGRを記録している。",
-        "6月12日にThermoKeyを買収した。",
-        "この買収によりAIを活用したデータセンター冷却技術が強化される。",
-        "エネルギー効率の向上が期待されている。",
-        "競争力のある市場での地位を強固にする狙いがある。"
+        "MetaはAIチップ「Iris」を9月に生産開始予定。",
+        "「Iris」はMeta Training and Inference Accelerators (MTIA)プロジェクトの一部。",
+        "カスタム設計の半導体を使用してAI機能を改善する。",
+        "計算能力が倍増することでサービスが強化される。"
       ],
       "glossary": [
         {
-          "term": "CAGR",
-          "explain_ja": "年平均成長率を示す指標で、一定期間の成長率を平均的に示す。"
+          "term": "Iris",
+          "explain_ja": "MetaのAIチップのコードネーム。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能のこと。機械が人間の知能を模倣する技術を指す。"
+          "term": "MTIA",
+          "explain_ja": "Meta Training and Inference Acceleratorsの略で、Metaが設計するAIチッププロジェクト。"
         }
       ],
       "personal_actions": [
-        "新しい冷却技術への知識を深め、データセンターの効率向上策を検討する。",
-        "業界動向を定期的にチェックし、競合他社の動きに注意を払う。"
+        "MetaのAI関連のニュースを定期的にチェックし、技術の進展を把握する。",
+        "自社データセンターのAIチップの導入計画を見直す。",
+        "新しい技術が導入された際の影響を評価するための議論をチームで行う。"
       ],
       "tags": [
         "DC",
@@ -36,74 +36,41 @@
       ]
     },
     {
-      "url": "https://cryptobriefing.com/ai-trade-shifts-chips-infrastructure-stocks/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-07-11T18:01:20Z",
-      "title": "AI trade shifts focus from chips to infrastructure, and two stocks are cashing in",
-      "title_ja": "AI関連投資、チップからインフラへシフトし2銘柄が利益を得る",
-      "summary_ja": "AIインフラへの支出のシフトが、電力管理やデータセンターの拡張の重要性を浮き彫りにしています。これにより、投資戦略にも影響が出ています。特定の企業がこの変化から利益を得ていることが注目されています。",
+      "url": "https://www.naturalnews.com/2026-07-12-data-center-expansion-targets-native-american-lands.html",
+      "source": "Naturalnews.com",
+      "publishedAt": "2026-07-12T06:00:00Z",
+      "title": "Data Center Expansion Targets Native American Lands, Sparking Tribal Resistance   – NaturalNews.com",
+      "title_ja": "データセンターの拡張がネイティブアメリカンの土地を標的に、部族の抵抗を引き起こす",
+      "summary_ja": "大手テクノロジー企業がネイティブアメリカンの部族土地でのデータセンター建設を増加させており、少なくとも37件の提案があります。連邦政策がこの動きを加速させており、経済的機会と見なされる一方で、地域の資源への負担を懸念される声も多い。特に、部族の電気料金やインフラに与える影響が深刻であり、部族からは反発も出ている。",
       "key_points": [
-        "AIインフラ支出のシフトが顕著に",
-        "電力管理の重要性が増加",
-        "データセンターの拡張が求められている",
-        "これに伴い、新たな投資戦略が必要",
-        "特定の2銘柄がこのトレンドから利益を得ている"
+        "37件のデータセンター建設がネイティブアメリカン土地で提案されている。",
+        "経済機会としての面がある一方、地域の電気コストが200%以上上昇する可能性がある。",
+        "部族による反応は、拒否からパートナーシップまで多様。",
+        "既存の契約は土地賃貸の形式が一般的で、部族に対する影響が懸念されている。",
+        "データセンターの急増が停電や水不足の危機を引き起こす可能性がある。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略で、機械が人間の知能を模倣する技術"
-        },
-        {
-          "term": "インフラストラクチャ",
-          "explain_ja": "基盤となる設備やシステムの集合"
-        },
-        {
           "term": "データセンター",
-          "explain_ja": "データを収集、保管、管理するための施設"
+          "explain_ja": "データを保存・管理・配信するための施設で、主に大規模な計算処理を行う。"
+        },
+        {
+          "term": "部族土地",
+          "explain_ja": "ネイティブアメリカンの部族が保有し、米国政府によって承認された土地。"
+        },
+        {
+          "term": "エミネントドメイン",
+          "explain_ja": "政府が公共の利益のために私有財産を取得する権利。"
+        },
+        {
+          "term": "セミノール族",
+          "explain_ja": "アメリカ合衆国のフロリダ州に居住するネイティブアメリカンの部族で、データセンターへのモラトリアムを導入したことが報じられた。"
         }
       ],
       "personal_actions": [
-        "電力管理に関する最新の技術トレンドを確認する",
-        "データセンターの最新設備を把握する",
-        "関連する投資機会を調査する"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://freerepublic.com/focus/f-bloggers/4387567/posts",
-      "source": "Freerepublic.com",
-      "publishedAt": "2026-07-11T13:35:41Z",
-      "title": "Say Hello To Google, The Mystery Owner Behind Wyoming's Largest Data Center Project",
-      "title_ja": "グーグル、ワイオミング州最大のデータセンター計画の謎のオーナーに",
-      "summary_ja": "グーグルがワイオミング州最大のデータセンターであるProject Temboのオーナーであることが明らかになった。この施設は2.7ギガワットの能力を持ち、シェリダンに近いスイッチグラス工業団地に位置する。ワイオミング州はテクノロジー企業の進出が続いており、地域の経済にも影響を与える可能性がある。",
-      "key_points": [
-        "GoogleがProject Temboを所有し運営することが確認された。",
-        "施設は716エーカーのキャンパスで、2031年までに完成予定。",
-        "ワイオミング州にはMicrosoftやMetaなど他の大手テクノロジー企業も進出中。",
-        "プロジェクトは新しい電源設備を利用し、地元の環境保護にも留意している。",
-        "Googleのデータセンターが進出することで、地域経済への影響が期待される。"
-      ],
-      "glossary": [
-        {
-          "term": "Project Tembo",
-          "explain_ja": "Googleが進めるワイオミング州のデータセンター計画の名称。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "ITサービスを提供するために必要なサーバーやネットワーク機器を収納する施設。"
-        },
-        {
-          "term": "スイッチグラス工業団地",
-          "explain_ja": "Googleのデータセンターが建設される工業用地の名称。"
-        }
-      ],
-      "personal_actions": [
-        "地域のデータセンターの動向を追跡し、利点を理解する。",
-        "新たな電源資源や環境への影響に関する地域の取り組みを確認する。",
-        "地元の住民や企業と連携し、データセンターの進出に対する意見を共有する。"
+        "データセンターの近くでのプロジェクトが自分の地域に影響を与える可能性を確認する。",
+        "地域の電気料金やインフラ状況について最新情報を入手する。",
+        "部族の権利や意志を尊重したプロジェクトへの関与について考える。"
       ],
       "tags": [
         "DC"
