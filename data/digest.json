@@ -1,34 +1,39 @@
 {
-  "date": "2026-07-14",
-  "generatedAtJST": "2026-07-14T07:15:37.422+09:00",
+  "date": "2026-07-15",
+  "generatedAtJST": "2026-07-15T07:15:40.034+09:00",
   "items": [
     {
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/meta-to-put-ai-chip-into-production-in-september-as-it-looks-to-double-computing-capacity/articleshow/132351525.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-07-12T18:57:04Z",
-      "title": "Meta to put AI chip into production in September as it looks to double computing capacity",
-      "title_ja": "Meta、AIチップを9月に生産開始し計算能力を倍増へ",
-      "summary_ja": "Metaは自社設計のAIチップ「Iris」を9月に生産開始する。このチップはMeta Training and Inference Accelerators (MTIA)の一環であり、計算能力を向上させることを目指している。これにより、Facebookやその他のサービスのAI機能が強化される見込みである。",
+      "url": "https://www.businessinsider.com/meta-expands-ai-data-center-louisiana-50k-teacher-bonuses-2026-7#article",
+      "source": "Business Insider",
+      "publishedAt": "2026-07-13T17:45:41Z",
+      "title": "Meta says it's expanding the Louisiana AI data center that helped fuel $50K teacher bonuses",
+      "title_ja": "MetaがルイジアナのAIデータセンターを拡大、教師ボーナスを支援",
+      "summary_ja": "Metaは、ルイジアナのAIデータセンターの拡張を発表しました。この拡張により、計算能力は5ギガワットに達し、総コストは500億ドルを超える見込みです。このプロジェクトは、同州の教師に50,000ドルのボーナスをもたらす重要な要素となっています。",
       "key_points": [
-        "MetaはAIチップ「Iris」を9月に生産開始予定。",
-        "「Iris」はMeta Training and Inference Accelerators (MTIA)プロジェクトの一部。",
-        "カスタム設計の半導体を使用してAI機能を改善する。",
-        "計算能力が倍増することでサービスが強化される。"
+        "Metaがルイジアナのハイペリオンデータセンターを拡張。",
+        "計算能力は5ギガワットに増加する予定。",
+        "プロジェクトの総コストは500億ドルを越える。",
+        "拡張はルイジアナ州の教育資金に寄与。",
+        "教師への50,000ドルのボーナスに繋がった。"
       ],
       "glossary": [
         {
-          "term": "Iris",
-          "explain_ja": "MetaのAIチップのコードネーム。"
+          "term": "AI",
+          "explain_ja": "人工知能の略称。機械が人間の知能を模倣する技術。"
         },
         {
-          "term": "MTIA",
-          "explain_ja": "Meta Training and Inference Acceleratorsの略で、Metaが設計するAIチッププロジェクト。"
+          "term": "データセンター",
+          "explain_ja": "データを保存、管理、処理するための施設。"
+        },
+        {
+          "term": "ギガワット",
+          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当。"
         }
       ],
       "personal_actions": [
-        "MetaのAI関連のニュースを定期的にチェックし、技術の進展を把握する。",
-        "自社データセンターのAIチップの導入計画を見直す。",
-        "新しい技術が導入された際の影響を評価するための議論をチームで行う。"
+        "データセンターの最新情報を追い、地域の経済への影響を理解する。",
+        "教師や教育に関わる新しい資金調達の機会を探る。",
+        "AI技術が教育分野に与える影響について調査する。"
       ],
       "tags": [
         "DC",
@@ -36,44 +41,69 @@
       ]
     },
     {
-      "url": "https://www.naturalnews.com/2026-07-12-data-center-expansion-targets-native-american-lands.html",
-      "source": "Naturalnews.com",
-      "publishedAt": "2026-07-12T06:00:00Z",
-      "title": "Data Center Expansion Targets Native American Lands, Sparking Tribal Resistance   – NaturalNews.com",
-      "title_ja": "データセンターの拡張がネイティブアメリカンの土地を標的に、部族の抵抗を引き起こす",
-      "summary_ja": "大手テクノロジー企業がネイティブアメリカンの部族土地でのデータセンター建設を増加させており、少なくとも37件の提案があります。連邦政策がこの動きを加速させており、経済的機会と見なされる一方で、地域の資源への負担を懸念される声も多い。特に、部族の電気料金やインフラに与える影響が深刻であり、部族からは反発も出ている。",
+      "url": "https://www.theadvocate.com/baton_rouge/news/politics/jeff-landry-meta-data-center-louisiana-press-conference/article_2633e7fd-dd29-5da3-a2cb-07e7b9cd80e1.html",
+      "source": "The Advocate",
+      "publishedAt": "2026-07-13T16:30:00Z",
+      "title": "Gov. Jeff Landry hails expansion of Meta’s massive data center in Louisiana",
+      "title_ja": "ルイジアナ州のMetaデータセンター拡張を称賛するジェフ・ランドリー知事",
+      "summary_ja": "ルイジアナ州のジェフ・ランドリー知事は、Metaがリッチランド郡のハイペリオンデータセンターのサイズを倍増させることを発表したことを歓迎しました。この拡張は、州の経済発展に寄与するとされています。Metaのデータセンター拡張は地方の雇用創出や投資促進に繋がると期待されています。",
       "key_points": [
-        "37件のデータセンター建設がネイティブアメリカン土地で提案されている。",
-        "経済機会としての面がある一方、地域の電気コストが200%以上上昇する可能性がある。",
-        "部族による反応は、拒否からパートナーシップまで多様。",
-        "既存の契約は土地賃貸の形式が一般的で、部族に対する影響が懸念されている。",
-        "データセンターの急増が停電や水不足の危機を引き起こす可能性がある。"
+        "Metaがハイペリオンデータセンターを倍増する計画を発表",
+        "知事はこの決定がルイジアナ州にとって重要な出来事であると強調",
+        "データセンターの拡張は地域経済にプラスの影響を与える",
+        "地方の雇用創出や投資を促進する見込み",
+        "今後のインフラ整備にも寄与する可能性がある"
       ],
       "glossary": [
         {
+          "term": "Meta",
+          "explain_ja": "Facebookの親会社で、ソーシャルメディアやテクノロジー企業。"
+        },
+        {
           "term": "データセンター",
-          "explain_ja": "データを保存・管理・配信するための施設で、主に大規模な計算処理を行う。"
-        },
-        {
-          "term": "部族土地",
-          "explain_ja": "ネイティブアメリカンの部族が保有し、米国政府によって承認された土地。"
-        },
-        {
-          "term": "エミネントドメイン",
-          "explain_ja": "政府が公共の利益のために私有財産を取得する権利。"
-        },
-        {
-          "term": "セミノール族",
-          "explain_ja": "アメリカ合衆国のフロリダ州に居住するネイティブアメリカンの部族で、データセンターへのモラトリアムを導入したことが報じられた。"
+          "explain_ja": "データを集中管理し、処理するための施設。"
         }
       ],
       "personal_actions": [
-        "データセンターの近くでのプロジェクトが自分の地域に影響を与える可能性を確認する。",
-        "地域の電気料金やインフラ状況について最新情報を入手する。",
-        "部族の権利や意志を尊重したプロジェクトへの関与について考える。"
+        "地元のデータセンターが自社にどのような影響を与えるか確認する",
+        "これからのインフラ整備について社内で議論する"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://finance.yahoo.com/technology/ai/articles/meta-ai-data-center-cost-162154660.html",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-07-13T16:21:54Z",
+      "title": "Meta’s AI data center cost went from $10 billion to $50 billion in under 2 years—and split the town in two",
+      "title_ja": "メタのAIデータセンター費用が2年で100億ドルから500億ドルに跳ね上がり、街を二分化",
+      "summary_ja": "メタのAIデータセンター、ハイペリオン・スーパークラスターの建設費用が2024年までに100億ドルから500億ドルに急増しました。メタは自社で電力コストを負担するとしていますが、批判者は地元住民がその影響を受ける可能性があると警鐘を鳴らしています。この状況は、地域コミュニティに深刻な影響を及ぼし、意見が分かれています。",
+      "key_points": [
+        "ハイペリオン・スーパークラスターのコストが急増。",
+        "2024年までに費用が100億ドルから500億ドルに。",
+        "メタは電力コストを自社で負担すると主張。",
+        "地方住民は依然として影響を受ける可能性があると警告。",
+        "地域社会で意見が分かれている。"
+      ],
+      "glossary": [
+        {
+          "term": "Hyperion supercluster",
+          "explain_ja": "メタが建設中のAIデータセンターのプロジェクト名。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能。データセンターでの計算や解析に使用される技術。"
+        }
+      ],
+      "personal_actions": [
+        "プロジェクトの最新情報を地域のニュースで確認する。",
+        "メタからの公式発表を定期的にチェックする。",
+        "地域コミュニティの意見交換会に参加して状況を把握する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
