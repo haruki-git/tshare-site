@@ -1,109 +1,111 @@
 {
-  "date": "2026-07-15",
-  "generatedAtJST": "2026-07-15T07:15:40.034+09:00",
+  "date": "2026-07-16",
+  "generatedAtJST": "2026-07-16T07:15:32.849+09:00",
   "items": [
     {
-      "url": "https://www.businessinsider.com/meta-expands-ai-data-center-louisiana-50k-teacher-bonuses-2026-7#article",
-      "source": "Business Insider",
-      "publishedAt": "2026-07-13T17:45:41Z",
-      "title": "Meta says it's expanding the Louisiana AI data center that helped fuel $50K teacher bonuses",
-      "title_ja": "MetaがルイジアナのAIデータセンターを拡大、教師ボーナスを支援",
-      "summary_ja": "Metaは、ルイジアナのAIデータセンターの拡張を発表しました。この拡張により、計算能力は5ギガワットに達し、総コストは500億ドルを超える見込みです。このプロジェクトは、同州の教師に50,000ドルのボーナスをもたらす重要な要素となっています。",
+      "url": "https://wccftech.com/hochuls-data-center-moratorium-lands-as-130-billion-in-projects-stalled-nationwide-in-a-single-quarter/",
+      "source": "Wccftech",
+      "publishedAt": "2026-07-14T21:01:25Z",
+      "title": "Hochul’s Data Center Moratorium Lands as $130 Billion in Projects Stalled Nationwide in a Single Quarter",
+      "title_ja": "ホクル知事がデータセンターの建設禁止を発表、1四半期で1300億ドルのプロジェクトが停止",
+      "summary_ja": "ニューヨーク州知事キャシー・ホクルがデータセンター建設に対する州レベルの禁止を宣言した。この決定は、資源集約型のデータセンターがユーティリティ料金を押し上げ、自然資源を枯渇させるとの懸念から来ている。結果として、アメリカ全土で少なくとも75のデータセンターが停止または遅延し、1四半期で1300億ドル相当のプロジェクトが影響を受けた。",
       "key_points": [
-        "Metaがルイジアナのハイペリオンデータセンターを拡張。",
-        "計算能力は5ギガワットに増加する予定。",
-        "プロジェクトの総コストは500億ドルを越える。",
-        "拡張はルイジアナ州の教育資金に寄与。",
-        "教師への50,000ドルのボーナスに繋がった。"
+        "ニューヨーク州で初めてのデータセンター建設禁止が宣言された。",
+        "ホクル知事は資源集約型の性質が懸念されたため禁止を導入。",
+        "データセンターの建設停止により、全国で75プロジェクトが影響を受けた。",
+        "州内のユーティリティ顧客や環境を保護するための規制フレームワークを構築する計画。",
+        "データセンター運営者によるコミュニティ投資フレームワークの導入指示。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略称。機械が人間の知能を模倣する技術。"
-        },
-        {
           "term": "データセンター",
-          "explain_ja": "データを保存、管理、処理するための施設。"
+          "explain_ja": "デジタルデータを保存・処理するための施設。通常、サーバーやストレージ、ネットワーク機器を含む。"
         },
         {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当。"
+          "term": "ホクル知事",
+          "explain_ja": "ニューヨーク州の州知事で、データセンターに関する規制を導入した。"
+        },
+        {
+          "term": "ユーティリティ料金",
+          "explain_ja": "電気や水道、ガスなどの公共サービスに対して支払う料金。"
         }
       ],
       "personal_actions": [
-        "データセンターの最新情報を追い、地域の経済への影響を理解する。",
-        "教師や教育に関わる新しい資金調達の機会を探る。",
-        "AI技術が教育分野に与える影響について調査する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.theadvocate.com/baton_rouge/news/politics/jeff-landry-meta-data-center-louisiana-press-conference/article_2633e7fd-dd29-5da3-a2cb-07e7b9cd80e1.html",
-      "source": "The Advocate",
-      "publishedAt": "2026-07-13T16:30:00Z",
-      "title": "Gov. Jeff Landry hails expansion of Meta’s massive data center in Louisiana",
-      "title_ja": "ルイジアナ州のMetaデータセンター拡張を称賛するジェフ・ランドリー知事",
-      "summary_ja": "ルイジアナ州のジェフ・ランドリー知事は、Metaがリッチランド郡のハイペリオンデータセンターのサイズを倍増させることを発表したことを歓迎しました。この拡張は、州の経済発展に寄与するとされています。Metaのデータセンター拡張は地方の雇用創出や投資促進に繋がると期待されています。",
-      "key_points": [
-        "Metaがハイペリオンデータセンターを倍増する計画を発表",
-        "知事はこの決定がルイジアナ州にとって重要な出来事であると強調",
-        "データセンターの拡張は地域経済にプラスの影響を与える",
-        "地方の雇用創出や投資を促進する見込み",
-        "今後のインフラ整備にも寄与する可能性がある"
-      ],
-      "glossary": [
-        {
-          "term": "Meta",
-          "explain_ja": "Facebookの親会社で、ソーシャルメディアやテクノロジー企業。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データを集中管理し、処理するための施設。"
-        }
-      ],
-      "personal_actions": [
-        "地元のデータセンターが自社にどのような影響を与えるか確認する",
-        "これからのインフラ整備について社内で議論する"
+        "データセンター建設に関する地元の規制や議論を把握しておく。",
+        "エネルギー効率の高い設備を導入する方法を検討する。",
+        "地域の環境保護活動に参加する。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://finance.yahoo.com/technology/ai/articles/meta-ai-data-center-cost-162154660.html",
-      "source": "Yahoo Entertainment",
-      "publishedAt": "2026-07-13T16:21:54Z",
-      "title": "Meta’s AI data center cost went from $10 billion to $50 billion in under 2 years—and split the town in two",
-      "title_ja": "メタのAIデータセンター費用が2年で100億ドルから500億ドルに跳ね上がり、街を二分化",
-      "summary_ja": "メタのAIデータセンター、ハイペリオン・スーパークラスターの建設費用が2024年までに100億ドルから500億ドルに急増しました。メタは自社で電力コストを負担するとしていますが、批判者は地元住民がその影響を受ける可能性があると警鐘を鳴らしています。この状況は、地域コミュニティに深刻な影響を及ぼし、意見が分かれています。",
+      "url": "https://financialpost.com/pmn/business-pmn/largest-us-grid-misses-power-supply-target-amid-ai-surge",
+      "source": "Financial Post",
+      "publishedAt": "2026-07-14T20:59:09Z",
+      "title": "Largest US Grid Misses Power Supply Target Amid AI Surge",
+      "title_ja": "米国最大の電力網、データセンター需要の急増に伴い供給目標を再び下回る",
+      "summary_ja": "米国最大の電力網が、データセンター需要の急増により、今後数年の信頼性を保証するための十分な供給確保に失敗した。これは3回連続の失敗であり、電力供給の不安定性が懸念されている。AI関連の需要増加が、この問題をさらに悪化させている。",
       "key_points": [
-        "ハイペリオン・スーパークラスターのコストが急増。",
-        "2024年までに費用が100億ドルから500億ドルに。",
-        "メタは電力コストを自社で負担すると主張。",
-        "地方住民は依然として影響を受ける可能性があると警告。",
-        "地域社会で意見が分かれている。"
+        "米国最大の電力網が供給目標を3回連続で下回った",
+        "データセンターの需要が急増している",
+        "将来の電力供給の信頼性に懸念が生じている",
+        "AI関連の需要が問題を複雑にしている"
       ],
       "glossary": [
         {
-          "term": "Hyperion supercluster",
-          "explain_ja": "メタが建設中のAIデータセンターのプロジェクト名。"
+          "term": "AI",
+          "explain_ja": "人工知能を指し、自動化やデータ処理に活用される技術。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能。データセンターでの計算や解析に使用される技術。"
+          "term": "電力網（Grid）",
+          "explain_ja": "発電所から消費者に電力を供給するための電気インフラ。"
         }
       ],
       "personal_actions": [
-        "プロジェクトの最新情報を地域のニュースで確認する。",
-        "メタからの公式発表を定期的にチェックする。",
-        "地域コミュニティの意見交換会に参加して状況を把握する。"
+        "地域の電力供給ポリシーについて確認する",
+        "データセンター関連の新規プロジェクトの影響を考慮する"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://www.theregister.com/ai-and-ml/2026/07/14/new-york-becomes-first-state-to-halt-datacenter-buildouts/5271377",
+      "source": "Theregister.com",
+      "publishedAt": "2026-07-14T18:30:57Z",
+      "title": "New York becomes first state to halt datacenter buildouts",
+      "title_ja": "ニューヨーク州、大規模データセンター建設を初停止",
+      "summary_ja": "ニューヨーク州は、大規模データセンターの環境許可申請を一時停止しました。これは、公共料金や公衆衛生に対する影響を懸念する中での措置であり、ルールの整備に最大1年を要する見込みです。この決定は、データセンターの発展がニューヨーカーに与える影響を軽減するための第一歩とされています。",
+      "key_points": [
+        "ニューヨーク知事が50 MW以上の大規模データセンターの建設を一時的に停止。",
+        "環境影響評価を行うために1年をかけて新しいルールを策定する予定。",
+        "大規模データセンターは公共料金の引き上げや資源の枯渇を懸念されている。",
+        "エルン・マスクのデータセンターが公害防止法違反の法的課題に直面。",
+        "他州にも影響を与える可能性があるモラトリアムとして注目されている。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データやアプリケーションを保存、管理、配信するための施設。"
+        },
+        {
+          "term": "MW",
+          "explain_ja": "メガワットの略で、電力の単位。1 MWは1,000,000ワットに相当。"
+        },
+        {
+          "term": "公害防止法",
+          "explain_ja": "環境保護に関する法律。特に空気の質を守るための規制が含まれる。"
+        }
+      ],
+      "personal_actions": [
+        "新しいデータセンターに関する地域の影響を評価し、現状を把握する。",
+        "環境に配慮したデータセンター運営のための地域プログラムに参加する。",
+        "公共料金への影響を議論する地域の公開会議に参加して意見を述べる。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
