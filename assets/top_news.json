@@ -1,109 +1,107 @@
 {
-  "date": "2026-07-17",
-  "generatedAtJST": "2026-07-17T07:15:27.583+09:00",
+  "date": "2026-07-18",
+  "generatedAtJST": "2026-07-18T07:15:30.518+09:00",
   "items": [
     {
-      "url": "https://www.storagereview.com/news/supermicro-expands-dcbbs-liquid-cooling-with-ten-rear-door-heat-exchangers-up-to-120kw",
-      "source": "Storagereview.com",
-      "publishedAt": "2026-07-15T19:12:41Z",
-      "title": "Supermicro Expands DCBBS Liquid Cooling With Ten Rear Door Heat Exchangers Up to 120kW",
-      "title_ja": "Supermicro、120kWまで対応のリアドア熱交換器を追加し、DCBBS液冷を拡張",
-      "summary_ja": "Supermicroは、DCBBS液冷のラインアップを拡充し、10kWから120kWの冷却能力を持つ10モデルのリアドア熱交換器を発表しました。この新しいポートフォリオは、特にAIインフラの構築や既存の施設への密なラックの導入を目指すデータセンター運営者に向けられています。これにより、冷却効率が向上し、既存施設のリファイティングに必要なコストや作業を大幅に削減できる点が大きな影響を与えると見られています。",
+      "url": "https://financialpost.com/pmn/business-pmn/new-mexico-denies-gas-pipeline-permit-for-oracle-data-center",
+      "source": "Financial Post",
+      "publishedAt": "2026-07-16T19:20:58Z",
+      "title": "New Mexico Denies Gas Pipeline Permit for Oracle Data Center",
+      "title_ja": "ニューメキシコ州、オラクルデータセンター向けガスパイプライン許可を再度拒否",
+      "summary_ja": "ニューメキシコ州の規制当局は、オラクル社のデータセンター計画に必要な天然ガスパイプラインの許可申請を再び却下しました。この決定は、州土地を横断するパイプラインに対するもので、プロジェクトの電力供給システムに影響を与えます。オラクルのデータセンター開発にとっては、今後の方向性が問われる重要な結果となります。",
       "key_points": [
-        "新しいリアドア熱交換器は10kWから120kWの冷却能力を提供",
-        "データセンターの運用において迅速かつ低影響の液冷ソリューションを提供",
-        "従来のラック設計に影響を与えず、熱を効率的に管理できる",
-        "AI時代における液冷の必要性に応じて再注目されている",
-        "D2C冷却と組み合わせることで、効率的に熱を施設ループに排出可能",
-        "SupermicroのDCBBSはシステム統合や必要な管理ソフトウェアも用意"
+        "オラクルデータセンター向けの天然ガスパイプライン許可が再び拒否された。",
+        "州土地を横断するパイプラインの申請が対象。",
+        "電力供給システムに直接的な影響を及ぼす可能性がある。",
+        "これにより、オラクルのデータセンター計画に不確実性が生じる。"
       ],
       "glossary": [
         {
-          "term": "DCBBS",
-          "explain_ja": "Data Center Building Block Solutionsの略で、データセンター用のモジュラー型インフラソリューションを指します。"
+          "term": "オラクル社",
+          "explain_ja": "情報技術およびデータベース管理ソフトウェアの大手企業。"
         },
         {
-          "term": "RDHx",
-          "explain_ja": "Rear Door Heat Exchangerの略で、ラックの背面に取り付けられる熱交換器です。"
-        },
-        {
-          "term": "D2C",
-          "explain_ja": "Direct-to-Chipの略で、チップに直接冷却液を供給する冷却方式を示します。"
+          "term": "天然ガスパイプライン",
+          "explain_ja": "天然ガスを輸送するための配管システム。"
         }
       ],
       "personal_actions": [
-        "自社のラック配置でリアドア熱交換器の導入可能性を検討する",
-        "新技術の導入に向けた予算計画を策定する",
-        "冷却効率の改善に向けて、既存の設備の評価を行う"
+        "データセンター計画に関する最新情報を確認する。",
+        "地域の規制チームと連絡を取り、今後の動向を把握する。",
+        "プロジェクトの代替エネルギーソースについて検討する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://www.ai-cio.com/news/ais-build-out-has-a-deliverability-problem/",
-      "source": "Ai-cio.com",
-      "publishedAt": "2026-07-15T17:56:43Z",
-      "title": "AI’s Build-Out Has a Deliverability Problem",
-      "title_ja": "AIの構築には配信性の問題がある",
-      "summary_ja": "データセンターおよび電力プロジェクトのリスクを理解することが、投資家の成功に直結することが明らかになりました。特に、これらのプロジェクトが建設されるコミュニティのニーズが重要です。アロケーターはこれらの要素を十分に考慮する必要があります。",
+      "url": "https://www.rigzone.com/news/slb_liberty_agree_to_form_data_center_alliance-16-jul-2026-184148-article/",
+      "source": "Rigzone",
+      "publishedAt": "2026-07-16T15:00:13Z",
+      "title": "SLB, Liberty Agree to Form Data Center Alliance",
+      "title_ja": "SLBとLibertyがデータセンターアライアンスを結成",
+      "summary_ja": "SLBとLiberty Energyが戦略的提携を結び、世界中の新しいデータセンター向けにモジュラインフラと統合型電力供給ソリューションを提供することを発表しました。この提携は、高性能コンピューティングとAIの急成長によるデータセンター需要の高まりに応えるものです。双方の専門知識を活かし、より効率的かつ柔軟なエネルギーシステムの開発を目指します。",
       "key_points": [
-        "投資家はデータセンターと電力プロジェクトのリスクを理解する必要がある。",
-        "コミュニティのニーズはプロジェクト成功に不可欠である。",
-        "AI関連のプロジェクトは特定の配信性の問題を抱えている。",
-        "アロケーターの成功は、地域の実情に依存する。"
+        "SLBとLibertyがデータセンタープロジェクト向けのアライアンスを発表",
+        "データセンターの電力需要が急増する中、独立した電力ソリューションの必要性が高まっている",
+        "SLBはモジュアルインフラ、Libertyは電力生成システムを提供",
+        "エネルギー効率向上に向けた技術の共同開発を計画",
+        "データセンターの電力消費が2030年までに倍増する見込み"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データの保存、処理、管理を行う施設。"
+          "explain_ja": "情報を保存、処理、配信するための専用施設。"
         },
         {
-          "term": "アロケーター",
-          "explain_ja": "資金を投資先に配分する役割を持つ投資家。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの関連許可申請や地域貢献プログラムの進捗を確認する。",
-        "投資先のプロジェクトが地域のニーズにどう応えるかを分析する。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.rt.com/india/643094-india-data-centers/",
-      "source": "RT",
-      "publishedAt": "2026-07-15T16:41:07Z",
-      "title": "India not ready for 30x infra needs for data centers – analyst (VIDEO)",
-      "title_ja": "インドのデータセンターインフラ需要は30倍に達する準備が整っていない",
-      "summary_ja": "インドは急成長するAIデータセンター業界に対して、電力、水、グリッドインフラの不足に直面しています。テクノロジーアナリストのニール・シャー氏によれば、現状ではこれらのインフラが不足しており、成長を支える体制が整っていないとのことです。この状況は、データセンターの運営に重大な影響を及ぼす可能性があります。",
-      "key_points": [
-        "インドのデータセンターインフラ需要が急増している。",
-        "電力と水の供給が不足している。",
-        "グリッドインフラも成長に対応できていない。",
-        "テクノロジーアナリストの見解が示されている。",
-        "成長を支えるための対策が必要とされる。"
-      ],
-      "glossary": [
+          "term": "モジュラインフラ",
+          "explain_ja": "独立して展開可能なユニットで構成される構造。"
+        },
         {
           "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）を指し、データセンターではAI計算処理が重要である。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データの保存、管理、処理を行うための専門施設。"
+          "explain_ja": "人工知能。システムが人間のような知的行動を模倣する技術。"
         }
       ],
       "personal_actions": [
-        "データセンター関連のプロジェクトがある場合は、インフラニーズを見直す。",
-        "インフラの現状を確認し、必要なリソースを事前に確保する。",
-        "業界ニュースを定期的にチェックし、変化に対応できるようにする。"
+        "自社のデータセンターインフラを見直し、モジュラインフラの導入可能性を検討する",
+        "エネルギー効率の向上に向けた最新技術のリサーチを行う",
+        "データセンターの電力需要予測を更新し、ストラテジーの見直しを行う"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://www.techtarget.com/searchdatacenter/tip/Data-center-sustainability-What-are-renewable-energy-credits",
+      "source": "Techtarget.com",
+      "publishedAt": "2026-07-16T13:06:00Z",
+      "title": "Data center sustainability: What are renewable energy credits?",
+      "title_ja": "データセンターの持続可能性: 再生可能エネルギークレジットとは？",
+      "summary_ja": "データセンターは、再生可能エネルギークレジット（RECs）と電力購入契約（PPAs）を利用して100%再生可能エネルギーを主張しています。これにより、実際の持続可能性の複雑さが浮き彫りになります。また、RECsはクリーンエネルギーの利用を証明する手段としても重要です。持続可能な運営を追求するには、これらの仕組みの理解が不可欠です。",
+      "key_points": [
+        "データセンターは100%再生可能エネルギーを主張。",
+        "再生可能エネルギークレジット（RECs）はクリーンエネルギーの証明に利用。",
+        "電力購入契約（PPAs）は持続可能性をサポート。",
+        "真の持続可能性の実現には多様なアプローチが必要。"
+      ],
+      "glossary": [
+        {
+          "term": "再生可能エネルギークレジット (RECs)",
+          "explain_ja": "再生可能エネルギーの生成を証明するためのクレジット。"
+        },
+        {
+          "term": "電力購入契約 (PPAs)",
+          "explain_ja": "事前に定めた価格で電力を購入する契約、主に再生可能エネルギーを使用する際に利用される。"
+        }
+      ],
+      "personal_actions": [
+        "自社の再生可能エネルギー利用状況を確認する。",
+        "再生可能エネルギークレジットの取得方法を調査する。",
+        "電力購入契約の可能性について検討する。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
