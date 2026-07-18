@@ -1,71 +1,73 @@
 {
-  "date": "2026-07-18",
-  "generatedAtJST": "2026-07-18T07:15:30.518+09:00",
+  "date": "2026-07-19",
+  "generatedAtJST": "2026-07-19T07:15:19.396+09:00",
   "items": [
     {
-      "url": "https://financialpost.com/pmn/business-pmn/new-mexico-denies-gas-pipeline-permit-for-oracle-data-center",
-      "source": "Financial Post",
-      "publishedAt": "2026-07-16T19:20:58Z",
-      "title": "New Mexico Denies Gas Pipeline Permit for Oracle Data Center",
-      "title_ja": "ニューメキシコ州、オラクルデータセンター向けガスパイプライン許可を再度拒否",
-      "summary_ja": "ニューメキシコ州の規制当局は、オラクル社のデータセンター計画に必要な天然ガスパイプラインの許可申請を再び却下しました。この決定は、州土地を横断するパイプラインに対するもので、プロジェクトの電力供給システムに影響を与えます。オラクルのデータセンター開発にとっては、今後の方向性が問われる重要な結果となります。",
+      "url": "https://futurism.com/space/spacex-support-pentagons-ai-models",
+      "source": "Futurism",
+      "publishedAt": "2026-07-17T21:50:00Z",
+      "title": "SpaceX Eager to Support the Pentagon’s Lethal AI Models",
+      "title_ja": "SpaceX、ペンタゴンの致死的AIモデルの支援に意欲",
+      "summary_ja": "SpaceXがペンタゴンとAIモデルの運用に関する交渉を進めている。これにより、軍に対してデータセンターのコンピューティング能力を提供することで、膨大な収益を見込む。過去にもSpaceXは軍との関係を深めており、最近では重要な契約を複数獲得している。",
       "key_points": [
-        "オラクルデータセンター向けの天然ガスパイプライン許可が再び拒否された。",
-        "州土地を横断するパイプラインの申請が対象。",
-        "電力供給システムに直接的な影響を及ぼす可能性がある。",
-        "これにより、オラクルのデータセンター計画に不確実性が生じる。"
+        "SpaceXはペンタゴンにコンピューティング能力を提供する交渉中。",
+        "この契約は数十億ドル規模になる可能性がある。",
+        "Muskは大規模なデータセンターを構築し、利用率は11％にとどまっている。",
+        "SpaceXは軍関連の契約を増やしており、2.29億ドルの契約や4.16億ドルの契約を獲得している。",
+        "他のテック企業も同様にペンタゴンと提携しているが、Muskの行動は矛盾を孕んでいる。"
       ],
       "glossary": [
         {
-          "term": "オラクル社",
-          "explain_ja": "情報技術およびデータベース管理ソフトウェアの大手企業。"
+          "term": "AI",
+          "explain_ja": "人工知能。データを分析し、学習することで自動的に判断を行う技術。"
         },
         {
-          "term": "天然ガスパイプライン",
-          "explain_ja": "天然ガスを輸送するための配管システム。"
+          "term": "ペンタゴン",
+          "explain_ja": "アメリカ国防総省の本部。軍の戦略や政策を策定する組織。"
+        },
+        {
+          "term": "Starlink",
+          "explain_ja": "SpaceXが提供する衛星インターネット通信サービス。"
+        },
+        {
+          "term": "Grok",
+          "explain_ja": "SpaceXが開発したチャットボット。"
         }
       ],
       "personal_actions": [
-        "データセンター計画に関する最新情報を確認する。",
-        "地域の規制チームと連絡を取り、今後の動向を把握する。",
-        "プロジェクトの代替エネルギーソースについて検討する。"
+        "データセンターやAIの関連ニュースを定期的に確認し、業界の動向を把握する。",
+        "自社のデータセンターの利用状況を見直し、効率的な運用を検討する。",
+        "AI技術の進展に伴い、自社のシステムとプロセスをAI対応にアップデートする。"
       ],
       "tags": [
-        "DC"
+        "AI"
       ]
     },
     {
-      "url": "https://www.rigzone.com/news/slb_liberty_agree_to_form_data_center_alliance-16-jul-2026-184148-article/",
-      "source": "Rigzone",
-      "publishedAt": "2026-07-16T15:00:13Z",
-      "title": "SLB, Liberty Agree to Form Data Center Alliance",
-      "title_ja": "SLBとLibertyがデータセンターアライアンスを結成",
-      "summary_ja": "SLBとLiberty Energyが戦略的提携を結び、世界中の新しいデータセンター向けにモジュラインフラと統合型電力供給ソリューションを提供することを発表しました。この提携は、高性能コンピューティングとAIの急成長によるデータセンター需要の高まりに応えるものです。双方の専門知識を活かし、より効率的かつ柔軟なエネルギーシステムの開発を目指します。",
+      "url": "https://4sysops.com/archives/anthropic-in-preliminary-talks-to-lease-meta-data-center-capacity-for-ai-training/",
+      "source": "4sysops.com",
+      "publishedAt": "2026-07-17T20:56:56Z",
+      "title": "Anthropic in preliminary talks to lease Meta data center capacity for AI training",
+      "title_ja": "Anthropic、Metaのデータセンターキャパシティを借りる交渉中",
+      "summary_ja": "Anthropicは、MetaのデータセンターからGPUベースのコンピューティングキャパシティを借りるための初期的な交渉を行っています。この契約は2年間で約100億ドルの価値があり、月ごとに支払われる予定です。この取引が成立すれば、AnthropicのAIトレーニング能力が大幅に向上することが期待されます。",
       "key_points": [
-        "SLBとLibertyがデータセンタープロジェクト向けのアライアンスを発表",
-        "データセンターの電力需要が急増する中、独立した電力ソリューションの必要性が高まっている",
-        "SLBはモジュアルインフラ、Libertyは電力生成システムを提供",
-        "エネルギー効率向上に向けた技術の共同開発を計画",
-        "データセンターの電力消費が2030年までに倍増する見込み"
+        "AnthropicがMetaとGPUコンピューティングのリース交渉を進めている",
+        "契約額は約100億ドルで、2年間の支払いを月ごとに行う予定",
+        "AIトレーニングの能力向上が期待される"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "情報を保存、処理、配信するための専用施設。"
-        },
-        {
-          "term": "モジュラインフラ",
-          "explain_ja": "独立して展開可能なユニットで構成される構造。"
+          "term": "GPU",
+          "explain_ja": "グラフィックス処理ユニット。コンピュータのグラフィックス処理を高速化するためのプロセッサ。"
         },
         {
           "term": "AI",
-          "explain_ja": "人工知能。システムが人間のような知的行動を模倣する技術。"
+          "explain_ja": "人工知能。人間の知能に類似した知的な行動をコンピュータに実行させる技術。"
         }
       ],
       "personal_actions": [
-        "自社のデータセンターインフラを見直し、モジュラインフラの導入可能性を検討する",
-        "エネルギー効率の向上に向けた最新技術のリサーチを行う",
-        "データセンターの電力需要予測を更新し、ストラテジーの見直しを行う"
+        "データセンターの計画中のキャパシティを確認する",
+        "AIトレーニング用の資源の最適化を検討する"
       ],
       "tags": [
         "DC",
@@ -73,35 +75,41 @@
       ]
     },
     {
-      "url": "https://www.techtarget.com/searchdatacenter/tip/Data-center-sustainability-What-are-renewable-energy-credits",
-      "source": "Techtarget.com",
-      "publishedAt": "2026-07-16T13:06:00Z",
-      "title": "Data center sustainability: What are renewable energy credits?",
-      "title_ja": "データセンターの持続可能性: 再生可能エネルギークレジットとは？",
-      "summary_ja": "データセンターは、再生可能エネルギークレジット（RECs）と電力購入契約（PPAs）を利用して100%再生可能エネルギーを主張しています。これにより、実際の持続可能性の複雑さが浮き彫りになります。また、RECsはクリーンエネルギーの利用を証明する手段としても重要です。持続可能な運営を追求するには、これらの仕組みの理解が不可欠です。",
+      "url": "https://www.channelnewsasia.com/business/musks-spacex-in-talks-supply-pentagon-computing-power-wsj-reports-6261976",
+      "source": "CNA",
+      "publishedAt": "2026-07-17T19:27:08Z",
+      "title": "Musk's SpaceX in talks to supply the Pentagon with computing power, WSJ reports",
+      "title_ja": "マスクのスペースX、米国防総省への計算能力供給に向けた協議中",
+      "summary_ja": "スペースXが米国防総省に対し、AIモデルを運用するためのデータセンター容量を提供するための協議を行っている。報道によれば、この契約は数十億ドル相当になる可能性がある。アメリカの国防のデジタル能力を強化する動きが進んでいることが影響を及ぼす。",
       "key_points": [
-        "データセンターは100%再生可能エネルギーを主張。",
-        "再生可能エネルギークレジット（RECs）はクリーンエネルギーの証明に利用。",
-        "電力購入契約（PPAs）は持続可能性をサポート。",
-        "真の持続可能性の実現には多様なアプローチが必要。"
+        "スペースXが米国防総省と協議中",
+        "提供されるのは数十億ドル相当のデータセンター容量",
+        "AIモデルの実行に必要な計算能力",
+        "契約成立の可能性もあり、国防デジタル能力の強化に寄与する",
+        "報道はウォール・ストリート・ジャーナルによるもの"
       ],
       "glossary": [
         {
-          "term": "再生可能エネルギークレジット (RECs)",
-          "explain_ja": "再生可能エネルギーの生成を証明するためのクレジット。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略。機械が人間のように学習し、判断する技術。"
         },
         {
-          "term": "電力購入契約 (PPAs)",
-          "explain_ja": "事前に定めた価格で電力を購入する契約、主に再生可能エネルギーを使用する際に利用される。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータ処理、保存を行うための専用施設。"
+        },
+        {
+          "term": "国防総省",
+          "explain_ja": "アメリカ合衆国の軍事を管轄する政府機関。"
         }
       ],
       "personal_actions": [
-        "自社の再生可能エネルギー利用状況を確認する。",
-        "再生可能エネルギークレジットの取得方法を調査する。",
-        "電力購入契約の可能性について検討する。"
+        "データセンターの運用可能性に関する最新情報を確認する",
+        "AI技術の導入に向けて、業務検討を進める",
+        "国防関連の契約状況を追跡し、関連スキルを向上させる"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
