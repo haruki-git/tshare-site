@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+        <html lang="ja">
+        <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>ITインフラ基礎 復習ラジオ 04：RADIUS</title>
+          <link rel="stylesheet" href="/assets/styles.css">
+        </head>
+        <body>
+          <main class="container">
+            <article class="card">
+              <header>
+                <h1>ITインフラ基礎 復習ラジオ：RADIUS</h1>
+                <nav><a href="/posts/genba/">解説記事一覧</a></nav>
+                <p class="meta">投稿日：2026-07-18</p>
+              </header>
+
+              <section class="card" style="margin-top:12px;">
+                <h2 style="margin:0 0 8px 0;">音声</h2>
+                <audio controls preload="none" src="/posts/genba/audio/04_radius_audio.mp3"></audio>
+                <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+              </section>
+
+              <section id="sec-toc">
+                <h2>目次</h2>
+                <ol>
+                  <li><a href="#sec-1">今回のテーマ</a></li>
+                  <li><a href="#sec-2">RADIUSとは</a></li>
+                  <li><a href="#sec-3">何のために使われるか</a></li>
+                  <li><a href="#sec-4">システム全体のどこに存在するか</a></li>
+                  <li><a href="#sec-5">RADIUSを構成する基本要素</a></li>
+                  <li><a href="#sec-6">基本的な仕組みと処理の流れ</a></li>
+                  <li><a href="#sec-7">利用者・端末・サーバー・ネットワークとの関係</a></li>
+                  <li><a href="#sec-8">実務のイメージ</a></li>
+                  <li><a href="#sec-9">一般利用者・運用担当者・管理者の役割</a></li>
+                  <li><a href="#sec-10">問い合わせ・障害時の切り分け</a></li>
+                  <li><a href="#sec-11">よくある勘違い</a></li>
+                  <li><a href="#sec-12">関連する用語や製品</a></li>
+                  <li><a href="#sec-13">30秒チェック</a></li>
+                  <li><a href="#sec-14">要約</a></li>
+                  <li><a href="#sec-sources">参考資料</a></li>
+                </ol>
+              </section>
+
+              <section id="sec-1">
+                <h2>今回のテーマ</h2>
+                <p>今回のテーマは、RADIUSです。読み方は「レイディアス」です。</p>
+                <p>会社や学校の無線LANへ接続するとき、VPNへログインするとき、有線LANのポートへ端末を接続するときなどに、利用者名、パスワード、端末証明書が確認されることがあります。その裏側で、ネットワーク機器と認証サーバーの間をつなぐために使われる代表的な仕組みがRADIUSです。</p>
+                <p>利用者から見ると、「Wi-Fiの認証に失敗した」「VPNへ入れない」という現象に見えます。しかし、内部では端末、アクセスポイント、スイッチ、VPN装置、RADIUSサーバー、ID情報、証明書、ネットワークポリシーなど、複数の要素が関係します。</p>
+
+                <aside class="card" style="margin-top:12px;">
+                  <p style="margin:0;"><strong>今回の目標：</strong>RADIUSを製品名ではなくネットワーク認証で使われるプロトコルとして理解し、認証要求がどこを通り、どの段階で失敗しているかを整理できるようにします。</p>
+                </aside>
+              </section>
+
+              <section id="sec-2">
+                <h2>RADIUSとは</h2>
+                <p><strong>RADIUS</strong>は、Remote Authentication Dial-In User Serviceの略称です。名称には古いダイヤルアップ接続を思わせる言葉が含まれていますが、現在は無線LAN、有線LAN、VPNなど、さまざまなネットワークアクセスの認証と制御に利用されています。</p>
+                <p>RADIUSは、特定メーカーの製品名ではありません。ネットワーク機器とRADIUSサーバーが、認証要求や認証結果などを交換するためのプロトコルです。MicrosoftのNetwork Policy Server、FreeRADIUS、Cisco ISEなどは、RADIUSを扱える製品やソフトウェアの例です。</p>
+                <p>RADIUSでは、よく<strong>AAA</strong>という考え方が使われます。AAAは、Authentication、Authorization、Accountingの頭文字です。</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>要素</th>
+                      <th>意味</th>
+                      <th>例</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Authentication</td>
+                      <td>認証。誰、またはどの端末なのかを確認する</td>
+                      <td>パスワード、端末証明書などを確認する</td>
+                    </tr>
+                    <tr>
+                      <td>Authorization</td>
+                      <td>認可。認証後に何を許可するかを決める</td>
+                      <td>接続可否、VLAN、アクセス条件を決める</td>
+                    </tr>
+                    <tr>
+                      <td>Accounting</td>
+                      <td>アカウンティング。接続の記録を残す</td>
+                      <td>接続開始、終了、利用時間などを記録する</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>認証に成功したことと、すべての通信が許可されることは同じではありません。RADIUSサーバーは認証結果や属性を返しますが、実際にネットワークへ接続させ、VLANやアクセス制御を適用するのは、アクセスポイント、スイッチ、VPN装置などです。</p>
+              </section>
+
+              <section id="sec-3">
+                <h2>何のために使われるか</h2>
+                <p>RADIUSは、複数のネットワーク機器で行う認証を、中央のサーバーへ集約するために使われます。</p>
+                <p>RADIUSを使わず、アクセスポイントやVPN装置ごとに利用者情報を登録すると、利用者の追加、削除、パスワード変更、権限変更を機器ごとに管理する必要があります。RADIUSを利用すると、ネットワーク機器は認証判断をRADIUSサーバーへ問い合わせ、RADIUSサーバーは共通のポリシーやID情報を使って判断できます。</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>利用場面</th>
+                      <th>RADIUSの役割</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>企業・学校の無線LAN</td>
+                      <td>利用者や端末を確認し、接続の可否や割り当て先を決める</td>
+                    </tr>
+                    <tr>
+                      <td>有線LANの802.1X認証</td>
+                      <td>スイッチのポートへ接続した利用者や端末を確認する</td>
+                    </tr>
+                    <tr>
+                      <td>VPN接続</td>
+                      <td>VPN装置からの認証要求を受け、リモート接続の可否を判断する</td>
+                    </tr>
+                    <tr>
+                      <td>ネットワーク機器の管理ログイン</td>
+                      <td>管理者のログイン情報を中央で確認する構成に使われることがある</td>
+                    </tr>
+                    <tr>
+                      <td>ゲスト・端末別のネットワーク制御</td>
+                      <td>属性に応じてVLANやアクセス条件を変える</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>RADIUSを使う目的は、単にパスワードを確認することだけではありません。利用者、端末、接続場所、接続方式などを条件にして、誰をどのネットワークへ接続させるかを一元的に判断しやすくすることにもあります。</p>
+              </section>
+
+              <section id="sec-4">
+                <h2>システム全体のどこに存在するか</h2>
+                <p>RADIUSは、利用者端末と業務サーバーの間で直接データを中継するプロキシではありません。ネットワークへ接続しようとする端末と、その接続を受け付けるネットワーク機器の裏側に存在する認証用の仕組みです。</p>
+
+                <pre><code>利用者・端末
+  ├─ 無線LANへ接続
+  ├─ 有線LANへ接続
+  └─ VPNへ接続
+          ↓ 認証情報やEAPのやり取り
+アクセスポイント・スイッチ・VPN装置
+  └─ RADIUSクライアント / NAS
+          ↓ Access-Request
+RADIUSサーバー
+  ├─ 認証ポリシーの確認
+  ├─ ID情報や証明書の確認
+  └─ 接続条件の判断
+          ↓ Access-Accept / Access-Reject / Access-Challenge
+アクセスポイント・スイッチ・VPN装置
+          ↓ 接続許可、拒否、VLANなどを適用
+利用者・端末がネットワークを利用</code></pre>
+
+                <p>ここで重要なのは、RADIUSの用語でいう<strong>RADIUSクライアント</strong>が、一般利用者のパソコンやスマートフォンとは限らないことです。多くの構成では、アクセスポイント、無線LANコントローラー、スイッチ、VPN装置など、RADIUSサーバーへ要求を送るネットワーク機器をRADIUSクライアントと呼びます。</p>
+                <p>RADIUSの元の仕様では、ネットワークアクセスを提供する装置を<strong>NAS</strong>、Network Access Serverと呼びます。現在の構成では、アクセスポイント、スイッチ、VPNゲートウェイなどがこの役割を持つと考えると分かりやすくなります。</p>
+              </section>
+
+              <section id="sec-5">
+                <h2>RADIUSを構成する基本要素</h2>
+
+                <h3>利用者端末</h3>
+                <p>パソコン、スマートフォン、タブレットなど、ネットワークへ接続しようとする端末です。802.1Xの構成では、認証を受ける側を<strong>サプリカント</strong>と呼びます。サプリカントは、OSの機能や専用ソフトウェアとして動作します。</p>
+
+                <h3>RADIUSクライアント</h3>
+                <p>アクセスポイント、スイッチ、VPN装置など、RADIUSサーバーへ認証要求を送る機器です。RADIUSサーバー側には、許可されたRADIUSクライアントのIPアドレスや共有シークレットなどを登録します。</p>
+
+                <h3>RADIUSサーバー</h3>
+                <p>RADIUSクライアントから要求を受け取り、認証方法、利用者や端末の情報、接続ポリシーなどを確認して結果を返します。RADIUSサーバー自体が利用者情報を持つ場合もあれば、Active Directory、LDAPディレクトリ、データベースなど、別のID情報源を参照する場合もあります。</p>
+
+                <h3>ID情報源</h3>
+                <p>利用者名、グループ、パスワードに関する情報や、端末情報などを管理する仕組みです。RADIUSとActive DirectoryやLDAPは同じものではありません。RADIUSサーバーが外部のID情報源へ問い合わせる構成があります。</p>
+
+                <h3>認証方式</h3>
+                <p>認証方式は一種類ではありません。利用者名とパスワードを使う方式、端末や利用者の証明書を使う方式、EAPという認証の枠組みを利用する方式などがあります。安全性や端末対応、運用方法は方式によって異なります。</p>
+
+                <h3>ポリシー</h3>
+                <p>誰を接続させるか、どの接続方式を許可するか、どのグループにどのVLANを割り当てるかなどを決める条件です。製品によって名称は異なりますが、接続要求がどのポリシーに一致したかは重要な確認点です。</p>
+
+                <h3>共有シークレット</h3>
+                <p>RADIUSクライアントとRADIUSサーバーの間で設定する秘密情報です。両側の値が一致していないと、要求が正しく処理されないことがあります。これは利用者のパスワードとは別のものです。</p>
+
+                <h3>アカウンティングとログ</h3>
+                <p>RADIUS Accountingを使うと、接続開始、接続終了、利用時間などの情報を記録できます。認証ログとアカウンティング情報は目的が異なります。環境によっては、認証だけを使い、アカウンティングを利用しない場合もあります。</p>
+              </section>
+
+              <section id="sec-6">
+                <h2>基本的な仕組みと処理の流れ</h2>
+                <p>RADIUS認証の基本的な流れを、無線LANやVPNで共通する形にして確認します。</p>
+
+                <pre><code>1. 利用者または端末がネットワークへの接続を開始する
+        ↓
+2. アクセスポイント、スイッチ、VPN装置が認証情報を受け取る
+        ↓
+3. ネットワーク機器がRADIUSサーバーへAccess-Requestを送る
+        ↓
+4. RADIUSサーバーがID情報、証明書、ポリシーなどを確認する
+        ↓
+5. 必要に応じてAccess-Challengeで追加のやり取りを行う
+        ↓
+6. 成功ならAccess-Accept、失敗ならAccess-Rejectを返す
+        ↓
+7. ネットワーク機器が接続を許可または拒否する
+        ↓
+8. 許可時はVLAN、アクセス制御、セッション条件などを適用する
+        ↓
+9. 構成によってAccounting-Startなどの利用記録を送る</code></pre>
+
+                <p><strong>Access-Request</strong>は認証要求です。<strong>Access-Accept</strong>は接続を許可する結果、<strong>Access-Reject</strong>は拒否する結果です。<strong>Access-Challenge</strong>は、認証を続けるために追加の応答を求めるときに使われます。</p>
+                <p>Access-Acceptには、単なる「許可」だけでなく、VLAN番号、セッション時間、アクセス制御に関する情報などが属性として含まれる場合があります。ただし、その属性を実際に適用するのはネットワーク機器です。RADIUSサーバーが正しい結果を返していても、ネットワーク機器側のVLANや設定に問題があれば、利用者は通信できません。</p>
+
+                <h3>802.1XとEAPを使う場合</h3>
+                <p>企業や学校の無線LAN、有線LANでは、802.1Xというポートベースのネットワークアクセス制御がよく使われます。この場合、端末はサプリカント、アクセスポイントやスイッチはオーセンティケーター、RADIUSサーバーは認証サーバーとして動作します。</p>
+                <p><strong>EAP</strong>はExtensible Authentication Protocolの略で、さまざまな認証方式を扱うための枠組みです。端末とアクセスポイントやスイッチの間でEAPの情報を交換し、ネットワーク機器がRADIUSを使って認証サーバーへ中継します。</p>
+                <p><strong>EAP-TLS</strong>は、証明書を使う代表的な認証方式です。証明書の有効期限、信頼された認証局、証明書の用途、端末時刻などが認証に関係します。RADIUSそのものが証明書認証という意味ではなく、RADIUSがEAP-TLSなどの認証方式を運ぶ構成がある、と理解します。</p>
+
+                <h3>通信ポートと暗号化</h3>
+                <p>一般的なRADIUS認証ではUDPの1812番、RADIUS AccountingではUDPの1813番がよく使われます。ただし、実際のポート番号やトランスポート方式は製品や構成によって変更される場合があります。ファイアウォールでは、設定値と通信方向を確認します。</p>
+                <p>標準的なRADIUS over UDPでは、共有シークレットを使ってRADIUSクライアントとサーバーの関係や一部の情報を保護しますが、通信全体を暗号化する仕組みではありません。そのため、信頼できる管理ネットワークで利用する、IPsecを組み合わせる、RADIUS over TLSを検討するなど、環境に応じた保護が必要です。</p>
+              </section>
+
+              <section id="sec-7">
+                <h2>利用者・端末・サーバー・ネットワークとの関係</h2>
+
+                <h3>利用者との関係</h3>
+                <p>利用者には、入力する利用者名やパスワード、所属グループ、利用を許可された時間帯などが関係します。パスワードが正しくても、利用者がネットワーク利用対象のグループに含まれていなければ、ポリシーによって拒否されることがあります。</p>
+
+                <h3>端末との関係</h3>
+                <p>端末では、接続先SSID、802.1X設定、認証方式、保存された資格情報、端末証明書、信頼する認証局、端末時刻などが関係します。同じ利用者が別端末では接続できる場合、元の端末設定や証明書へ範囲を絞りやすくなります。</p>
+
+                <h3>ネットワーク機器との関係</h3>
+                <p>アクセスポイント、スイッチ、VPN装置は、利用者端末からの接続を受け、RADIUSサーバーへ要求を送ります。RADIUSサーバーの宛先、送信元IPアドレス、共有シークレット、ポート番号、再送設定などが正しくなければ認証は成立しません。</p>
+
+                <h3>RADIUSサーバーとの関係</h3>
+                <p>RADIUSサーバーでは、要求を送ってきた機器が登録済みか、どのポリシーに一致したか、どの認証方式が使われたか、ID情報源へ問い合わせられたか、どの理由で許可または拒否したかを確認します。</p>
+
+                <h3>ID基盤との関係</h3>
+                <p>Active Directory、LDAPディレクトリ、利用者データベースなどを参照する構成では、RADIUSサーバーが正常でも、ID情報源との接続やアカウント状態に問題があると認証できません。RADIUSログとID基盤側の状態を分けて確認します。</p>
+
+                <h3>証明書基盤との関係</h3>
+                <p>EAP-TLSなどを使う場合は、端末証明書、サーバー証明書、認証局、失効確認などが関係します。証明書が期限内でも、信頼関係や用途が合わなければ認証に失敗することがあります。</p>
+
+                <h3>接続後のネットワークとの関係</h3>
+                <p>認証成功後は、VLAN、DHCP、DNS、デフォルトゲートウェイ、ファイアウォールなどが通信に関係します。「認証に成功したがインターネットへ接続できない」という場合、RADIUSより後の処理を確認する必要があります。</p>
+              </section>
+
+              <section id="sec-8">
+                <h2>実務のイメージ</h2>
+                <p>運用担当者や一次対応者は、RADIUSサーバーを直接設定する立場でなくても、「社内Wi-Fiへ接続できない」「有線LANにつないでもネットワークが使えない」「VPNの認証がタイムアウトする」といった問い合わせを受けます。</p>
+                <p>このとき、最初から「RADIUSサーバーの障害」と断定しないことが大切です。まず、利用者側、端末側、ネットワーク機器側、RADIUS側、IDや証明書側、認証後のネットワーク側に分けます。</p>
+
+                <ol>
+                  <li>一人だけか、同じ拠点やSSIDの複数利用者で発生しているか</li>
+                  <li>同じ利用者が別端末では接続できるか</li>
+                  <li>同じ端末が別のネットワークでは通信できるか</li>
+                  <li>接続処理がタイムアウトするのか、明確に拒否されるのか</li>
+                  <li>ネットワーク機器からRADIUSサーバーへ要求が届いているか</li>
+                  <li>RADIUSログにAccess-Accept、Access-Reject、または要求自体が記録されているか</li>
+                  <li>認証成功後にIPアドレス、VLAN、DNS、ゲートウェイが正常か</li>
+                </ol>
+
+                <p>例えば、RADIUSサーバーのログに要求が一件も届いていなければ、利用者のパスワードより前に、アクセスポイントやスイッチからサーバーまでの通信、RADIUSサーバーの宛先、送信元IPアドレス、ファイアウォールなどを確認します。</p>
+                <p>Access-Rejectが記録されていれば、RADIUSサーバーまでは要求が届いています。次に、利用者名、アカウント状態、証明書、認証方式、ポリシー条件、グループなどを確認します。</p>
+                <p>Access-Acceptが記録されているのに利用者が通信できない場合は、応答がネットワーク機器へ戻っているか、ネットワーク機器が属性を正しく適用したか、割り当て先VLAN、DHCP、ファイアウォールが正常かを確認します。</p>
+                <p>上位担当へ連携するときは、「Wi-Fiにつながらない」だけでなく、「利用者一名、同じSSIDで別端末は正常、RADIUSログはAccess-Reject、証明書期限切れが表示されている」のように、正常な範囲と異常な段階を整理します。</p>
+              </section>
+
+              <section id="sec-9">
+                <h2>一般利用者・運用担当者・管理者の役割</h2>
+
+                <h3>一般利用者</h3>
+                <p>指定されたSSIDやVPN接続先を使い、正しいアカウントや認証方法で接続します。問題が起きた場合は、発生時刻、場所、SSIDやVPN名、表示されたメッセージ、ほかの端末での状況を伝えます。</p>
+
+                <h3>運用担当者・一次対応者</h3>
+                <p>影響範囲を確認し、端末、ネットワーク機器、RADIUS、ID情報、証明書、認証後の通信を段階に分けます。利用者から情報を集め、確認できるログや監視情報を確認し、必要な情報をそろえて管理者へ連携します。</p>
+
+                <h3>ネットワーク管理者</h3>
+                <p>アクセスポイント、無線LANコントローラー、スイッチ、VPN装置、ファイアウォールなどを管理します。RADIUSサーバーの宛先、共有シークレット、送信元IP、VLAN、ACL、通信経路などを確認します。</p>
+
+                <h3>RADIUS・認証管理者</h3>
+                <p>RADIUSクライアント登録、認証方式、ポリシー、属性、ログ、冗長化などを管理します。Access-Rejectの理由や、要求が一致したポリシーを確認します。</p>
+
+                <h3>ID・証明書管理者</h3>
+                <p>利用者や端末のアカウント、グループ、証明書、認証局、失効情報などを管理します。RADIUS管理者と同じ担当者の場合もありますが、組織によって役割は分かれます。</p>
+
+                <p>一次対応者がすべての管理画面を見られる必要はありません。どの担当者に、どの情報を渡せば次の確認へ進めるかを理解することが重要です。</p>
+              </section>
+
+              <section id="sec-10">
+                <h2>問い合わせ・障害時の切り分け</h2>
+
+                <h3>1. 発生条件と影響範囲を確認する</h3>
+                <ul>
+                  <li>発生日時、場所、SSID、スイッチポート、VPN接続先を確認する</li>
+                  <li>一人だけか、複数利用者か、特定拠点全体かを確認する</li>
+                  <li>特定端末だけか、複数端末かを確認する</li>
+                  <li>直前にパスワード変更、証明書更新、機器交換、設定変更がなかったか確認する</li>
+                </ul>
+
+                <h3>2. 利用者・端末側を確認する</h3>
+                <ul>
+                  <li>正しいSSID、接続先、利用者名を使っているか</li>
+                  <li>保存された古いパスワードや資格情報が残っていないか</li>
+                  <li>端末時刻が大きくずれていないか</li>
+                  <li>指定された認証方式が選ばれているか</li>
+                  <li>証明書が存在し、有効期限内で、信頼関係に問題がないか</li>
+                </ul>
+
+                <h3>3. ネットワーク機器からRADIUSまでを確認する</h3>
+                <ul>
+                  <li>RADIUSサーバーのIPアドレスまたは名前が正しいか</li>
+                  <li>名前を使う場合はDNSで解決できるか</li>
+                  <li>必要なUDPポートなどがファイアウォールで許可されているか</li>
+                  <li>RADIUSクライアントの送信元IPが、サーバー側の登録と一致しているか</li>
+                  <li>共有シークレットが両側で一致しているか</li>
+                  <li>冗長構成の場合、どのRADIUSサーバーへ要求しているか</li>
+                </ul>
+
+                <p>タイムアウトは、必ずしもRADIUSサーバー停止だけを意味しません。通信遮断、宛先誤り、未登録のRADIUSクライアント、共有シークレット不一致などでも、明確な拒否応答が返らずタイムアウトに見える場合があります。</p>
+
+                <h3>4. RADIUSサーバーとポリシーを確認する</h3>
+                <ul>
+                  <li>要求がログへ記録されているか</li>
+                  <li>Access-Accept、Access-Reject、Access-Challengeのどれか</li>
+                  <li>どのポリシーに一致したか、または一致しなかったか</li>
+                  <li>利用者や端末のアカウントが有効か</li>
+                  <li>グループ、接続方式、時間帯、機器種別などの条件を満たしているか</li>
+                  <li>RADIUSサーバーからID情報源へ接続できているか</li>
+                </ul>
+
+                <h3>5. 証明書認証を使う場合に確認する</h3>
+                <ul>
+                  <li>端末証明書とサーバー証明書の有効期限</li>
+                  <li>証明書を発行した認証局が信頼されているか</li>
+                  <li>証明書の用途や名前が設計と合っているか</li>
+                  <li>失効確認先へ接続できるか</li>
+                  <li>端末とサーバーの日時が正しいか</li>
+                </ul>
+
+                <h3>6. 認証後のネットワークを確認する</h3>
+                <ul>
+                  <li>Access-Accept後に正しいVLANへ割り当てられたか</li>
+                  <li>DHCPでIPアドレス、デフォルトゲートウェイ、DNSを取得できたか</li>
+                  <li>割り当て先VLANの経路やファイアウォールが正常か</li>
+                  <li>RADIUS属性をネットワーク機器が対応・適用できているか</li>
+                </ul>
+
+                <p>切り分けでは、「認証できない」と「認証後に通信できない」を分けます。端末画面ではどちらも「ネットワークが使えない」に見えるため、RADIUSログと端末のIP設定を確認することが重要です。</p>
+              </section>
+
+              <section id="sec-11">
+                <h2>よくある勘違い</h2>
+
+                <h3>RADIUSは製品名である</h3>
+                <p>RADIUSはプロトコルです。Microsoft NPS、FreeRADIUS、Cisco ISEなどは、RADIUSを実装または利用する製品やソフトウェアの例です。</p>
+
+                <h3>RADIUSクライアントは利用者のパソコンである</h3>
+                <p>多くの構成では、RADIUSサーバーへ要求を送るアクセスポイント、スイッチ、VPN装置がRADIUSクライアントです。利用者端末は、802.1Xではサプリカントと呼ばれます。</p>
+
+                <h3>RADIUSがWi-Fiの電波や暗号化を提供する</h3>
+                <p>RADIUSは認証や認可に関係する仕組みです。無線の電波、SSID、WPA2やWPA3の通信暗号化は、無線LAN側の別の仕組みです。WPA2-EnterpriseやWPA3-Enterpriseでは、802.1X、EAP、RADIUSが組み合わされます。</p>
+
+                <h3>パスワードが正しければ必ず接続できる</h3>
+                <p>パスワード以外にも、アカウント状態、グループ、証明書、端末条件、接続場所、ポリシーなどが関係します。認証に成功しても、認可条件や接続後のネットワークで失敗することがあります。</p>
+
+                <h3>Access-Acceptなら利用者は必ず通信できる</h3>
+                <p>Access-AcceptはRADIUS側の許可結果です。その後、ネットワーク機器がVLANやアクセス制御を適用し、DHCPやルーティングが動作して初めて通信できます。</p>
+
+                <h3>RADIUSとActive Directoryは同じである</h3>
+                <p>RADIUSはネットワーク機器と認証サーバーの通信に使うプロトコルです。Active Directoryはアカウントやコンピューターなどを管理するディレクトリサービスです。RADIUSサーバーがActive Directoryを参照する構成があります。</p>
+
+                <h3>共有シークレットは利用者のパスワードである</h3>
+                <p>共有シークレットは、RADIUSクライアントとRADIUSサーバー間で設定する秘密情報です。利用者が入力するパスワードとは別です。</p>
+
+                <h3>RADIUS通信はすべて暗号化される</h3>
+                <p>標準的なRADIUS over UDPは、通信全体を暗号化する方式ではありません。認証方式やネットワーク設計に応じて、RADIUS over TLS、IPsec、管理ネットワークの分離などを検討します。</p>
+              </section>
+
+              <section id="sec-12">
+                <h2>関連する用語や製品</h2>
+
+                <dl>
+                  <dt><strong>AAA</strong></dt>
+                  <dd>認証、認可、アカウンティングをまとめた考え方です。</dd>
+
+                  <dt><strong>802.1X</strong></dt>
+                  <dd>有線LANや無線LANのポートで、認証が完了するまで通常の通信を制限するための仕組みです。</dd>
+
+                  <dt><strong>EAP</strong></dt>
+                  <dd>複数の認証方式を扱うための枠組みです。RADIUSと組み合わせて使われることがあります。</dd>
+
+                  <dt><strong>EAP-TLS</strong></dt>
+                  <dd>主に証明書を使って認証するEAP方式です。</dd>
+
+                  <dt><strong>NAS</strong></dt>
+                  <dd>Network Access Serverの略です。利用者へネットワークアクセスを提供し、RADIUSサーバーへ要求を送る装置を指します。</dd>
+
+                  <dt><strong>Active Directory・LDAP</strong></dt>
+                  <dd>利用者やグループなどを管理するID情報源として、RADIUSサーバーから参照される場合があります。</dd>
+
+                  <dt><strong>VLAN</strong></dt>
+                  <dd>ネットワークを論理的に分ける仕組みです。RADIUSの認証結果に応じて、割り当てるVLANを変える構成があります。</dd>
+
+                  <dt><strong>NAC</strong></dt>
+                  <dd>Network Access Controlの略で、利用者や端末の状態に応じてネットワークアクセスを制御する考え方や製品群です。</dd>
+
+                  <dt><strong>RADIUSプロキシ</strong></dt>
+                  <dd>受け取ったRADIUS要求を、別のRADIUSサーバーへ転送する仕組みです。</dd>
+
+                  <dt><strong>RadSec</strong></dt>
+                  <dd>一般にRADIUS over TLSを指す呼び方です。RADIUS通信をTLSで保護する方式です。</dd>
+
+                  <dt><strong>Microsoft NPS</strong></dt>
+                  <dd>Windows Serverで利用できる、MicrosoftのRADIUSサーバーおよびRADIUSプロキシ機能です。</dd>
+
+                  <dt><strong>FreeRADIUS</strong></dt>
+                  <dd>オープンソースのRADIUSサーバーソフトウェアです。</dd>
+                </dl>
+              </section>
+
+              <section id="sec-13">
+                <h2>30秒チェック</h2>
+                <ol>
+                  <li>RADIUSは製品名ではなく、ネットワーク機器と認証サーバーが情報を交換するためのプロトコルです。</li>
+                  <li>RADIUSクライアントは、多くの場合、アクセスポイント、スイッチ、VPN装置などです。</li>
+                  <li>AAAは、認証、認可、アカウンティングを表します。</li>
+                  <li>基本的な応答には、Access-Accept、Access-Reject、Access-Challengeがあります。</li>
+                  <li>認証成功後も、VLAN、DHCP、DNS、ファイアウォールなどで通信できない場合があります。</li>
+                  <li>障害時は、要求がRADIUSサーバーへ届いたか、何の応答を返したかを確認します。</li>
+                  <li>証明書方式では、有効期限だけでなく、信頼関係、用途、端末時刻も確認します。</li>
+                </ol>
+              </section>
+
+              <section id="sec-14">
+                <h2>要約</h2>
+                <p>RADIUSは、無線LAN、有線LAN、VPNなどのネットワークアクセスで、認証、認可、アカウンティングを中央管理するために使われるプロトコルです。</p>
+                <p>利用者端末から接続要求を受けたアクセスポイント、スイッチ、VPN装置などがRADIUSクライアントとなり、RADIUSサーバーへAccess-Requestを送ります。RADIUSサーバーはID情報、証明書、ポリシーなどを確認し、Access-AcceptやAccess-Rejectを返します。</p>
+                <p>障害対応では、利用者端末、ネットワーク機器からRADIUSまでの通信、RADIUSポリシー、IDや証明書、認証後のVLANやDHCPを分けて確認します。要求が届いていないのか、拒否されているのか、許可後の通信で止まっているのかを見分けることが重要です。</p>
+                <p>RADIUSの設定画面を操作しない担当者でも、この流れを理解していれば、問い合わせ内容を整理し、適切な担当者へ具体的に連携できます。</p>
+              </section>
+
+              <section id="sec-sources">
+                <h2>参考資料</h2>
+                <p class="meta">参照日：2026-07-18。RADIUSの実装、対応する認証方式、属性、ログ、既定ポート、暗号化方式などは製品やバージョンによって異なる場合があります。実際の環境では、使用製品の最新公式資料と設定を確認してください。</p>
+                <ul>
+                  <li><a href="https://datatracker.ietf.org/doc/html/rfc2865" target="_blank" rel="noopener noreferrer">RFC 2865: Remote Authentication Dial In User Service (RADIUS)</a> — IETF（参照日：2026-07-18）</li>
+                  <li><a href="https://datatracker.ietf.org/doc/html/rfc2866" target="_blank" rel="noopener noreferrer">RFC 2866: RADIUS Accounting</a> — IETF（参照日：2026-07-18）</li>
+                  <li><a href="https://datatracker.ietf.org/doc/html/rfc3579" target="_blank" rel="noopener noreferrer">RFC 3579: RADIUS Support For Extensible Authentication Protocol (EAP)</a> — IETF（参照日：2026-07-18）</li>
+                  <li><a href="https://datatracker.ietf.org/doc/html/rfc3580" target="_blank" rel="noopener noreferrer">RFC 3580: IEEE 802.1X RADIUS Usage Guidelines</a> — IETF（参照日：2026-07-18）</li>
+                  <li><a href="https://datatracker.ietf.org/doc/html/rfc3748" target="_blank" rel="noopener noreferrer">RFC 3748: Extensible Authentication Protocol (EAP)</a> — IETF（参照日：2026-07-18）</li>
+                  <li><a href="https://datatracker.ietf.org/doc/html/rfc5216" target="_blank" rel="noopener noreferrer">RFC 5216: The EAP-TLS Authentication Protocol</a> — IETF（参照日：2026-07-18）</li>
+                  <li><a href="https://datatracker.ietf.org/doc/html/rfc9190" target="_blank" rel="noopener noreferrer">RFC 9190: EAP-TLS 1.3</a> — IETF（参照日：2026-07-18）</li>
+                  <li><a href="https://datatracker.ietf.org/doc/html/rfc6614" target="_blank" rel="noopener noreferrer">RFC 6614: TLS Encryption for RADIUS</a> — IETF（参照日：2026-07-18）</li>
+                  <li><a href="https://datatracker.ietf.org/doc/html/rfc9813" target="_blank" rel="noopener noreferrer">RFC 9813: Operational Considerations for TLS-PSK with RADIUS/TLS and RADIUS/DTLS</a> — IETF（参照日：2026-07-18）</li>
+                  <li><a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml" target="_blank" rel="noopener noreferrer">Service Name and Transport Protocol Port Number Registry</a> — IANA（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/windows-server/networking/technologies/nps/nps-top" target="_blank" rel="noopener noreferrer">ネットワーク ポリシー サーバー（NPS）の概要</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://www.freeradius.org/documentation/" target="_blank" rel="noopener noreferrer">FreeRADIUS Documentation</a> — The FreeRADIUS Project（参照日：2026-07-18）</li>
+                </ul>
+              </section>
+            </article>
+          </main>
+        </body>
+        </html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+        <html lang="ja">
+        <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>ITインフラ基礎 復習ラジオ 03：Microsoft 365</title>
+          <link rel="stylesheet" href="/assets/styles.css">
+        </head>
+        <body>
+          <main class="container">
+            <article class="card">
+              <header>
+                <h1>ITインフラ基礎 復習ラジオ：Microsoft 365</h1>
+                <nav><a href="/posts/genba/">解説記事一覧</a></nav>
+                <p class="meta">投稿日：2026-07-18</p>
+              </header>
+
+              <section class="card" style="margin-top:12px;">
+                <h2 style="margin:0 0 8px 0;">音声</h2>
+                <audio controls preload="none" src="/posts/genba/audio/03_microsoft_365_audio.mp3"></audio>
+                <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+              </section>
+
+              <section id="sec-toc">
+                <h2>目次</h2>
+                <ol>
+                  <li><a href="#sec-1">今回のテーマ</a></li>
+                  <li><a href="#sec-2">Microsoft 365とは</a></li>
+                  <li><a href="#sec-3">何のために使われるか</a></li>
+                  <li><a href="#sec-4">システム全体のどこに存在するか</a></li>
+                  <li><a href="#sec-5">Microsoft 365を構成する基本要素</a></li>
+                  <li><a href="#sec-6">基本的な仕組みと処理の流れ</a></li>
+                  <li><a href="#sec-7">利用者・端末・サーバー・ネットワークとの関係</a></li>
+                  <li><a href="#sec-8">実務のイメージ</a></li>
+                  <li><a href="#sec-9">一般利用者・運用担当者・管理者の役割</a></li>
+                  <li><a href="#sec-10">問い合わせ・障害時の切り分け</a></li>
+                  <li><a href="#sec-11">よくある勘違い</a></li>
+                  <li><a href="#sec-12">関連する用語や製品</a></li>
+                  <li><a href="#sec-13">30秒チェック</a></li>
+                  <li><a href="#sec-14">要約</a></li>
+                  <li><a href="#sec-sources">参考資料</a></li>
+                </ol>
+              </section>
+
+              <section id="sec-1">
+                <h2>今回のテーマ</h2>
+                <p>今回のテーマは、Microsoft 365です。通称として「M365」と書かれることもあります。</p>
+                <p>Microsoft 365という言葉を聞くと、Word、Excel、PowerPointなどのOfficeアプリを思い浮かべるかもしれません。しかし、組織で利用するMicrosoft 365は、それだけではありません。メール、予定表、チャット、会議、ファイル共有、ID管理、端末管理、セキュリティなど、複数のクラウドサービスとアプリがつながった仕組みです。</p>
+                <p>そのため、「Microsoft 365が使えない」という問い合わせだけでは、原因の場所を特定できません。サインインできないのか、Outlookだけ使えないのか、Teamsの会議に入れないのか、SharePointのファイルだけ開けないのかによって、確認する対象が変わります。</p>
+
+                <aside class="card" style="margin-top:12px;">
+                  <p style="margin:0;"><strong>今回の目標：</strong>Microsoft 365を一つのアプリではなく、ID、ライセンス、クラウドサービス、端末アプリ、ネットワークが連携する基盤として理解し、問い合わせをサービス単位で切り分けられるようにします。</p>
+                </aside>
+              </section>
+
+              <section id="sec-2">
+                <h2>Microsoft 365とは</h2>
+                <p><strong>Microsoft 365</strong>は、Microsoftが提供するクラウドサービス、アプリ、管理機能などを組み合わせた製品群です。組織向けの環境では、Outlookで利用するメールや予定表、Teams、SharePoint、OneDrive、WordやExcelなどのMicrosoft 365 Apps、さらに契約内容に応じてID管理、端末管理、セキュリティ、コンプライアンス関連の機能が含まれます。</p>
+                <p>ここで大切なのは、Microsoft 365のすべての利用者が、すべての機能を使えるわけではないという点です。利用できるサービスは、組織が契約しているプラン、利用者へ割り当てられたライセンス、管理者が有効にしたサービス、利用者の権限などによって変わります。</p>
+                <p><strong>Office 365</strong>という名称も現在の公式資料で使われています。一般にOffice 365は、メール、共同作業、Officeアプリなどのクラウドサービスを中心とする名称です。Microsoft 365は、これらに加えて、契約プランによって端末管理やセキュリティなどを含む、より広い製品群として使われます。ただし、実際の機能は製品名だけで判断せず、契約中のサービス説明を確認します。</p>
+                <p>また、WordやExcelの買い切り版と、サブスクリプション形式のMicrosoft 365 Appsは、同じような画面を持っていても、ライセンス方式や更新方法が異なります。</p>
+              </section>
+
+              <section id="sec-3">
+                <h2>何のために使われるか</h2>
+                <p>Microsoft 365は、組織の仕事に必要な連絡、共同作業、情報共有、ID管理などを、一つのクラウド基盤の中で連携させるために使われます。</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>主な目的</th>
+                      <th>代表的なサービスや機能</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>メールと予定管理</td>
+                      <td>Exchange Online、Outlook</td>
+                    </tr>
+                    <tr>
+                      <td>チャット・会議・共同作業</td>
+                      <td>Microsoft Teams</td>
+                    </tr>
+                    <tr>
+                      <td>組織やチームの情報共有</td>
+                      <td>SharePoint</td>
+                    </tr>
+                    <tr>
+                      <td>個人の業務ファイル管理</td>
+                      <td>OneDrive</td>
+                    </tr>
+                    <tr>
+                      <td>文書・表・資料の作成</td>
+                      <td>Word、Excel、PowerPointなどのMicrosoft 365 Apps</td>
+                    </tr>
+                    <tr>
+                      <td>利用者とサインインの管理</td>
+                      <td>Microsoft Entra ID</td>
+                    </tr>
+                    <tr>
+                      <td>端末やアプリの管理</td>
+                      <td>Microsoft Intuneなど</td>
+                    </tr>
+                    <tr>
+                      <td>脅威対策や情報保護</td>
+                      <td>Microsoft Defender、Microsoft Purviewなど</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>上の表は代表例です。製品や機能の提供範囲、名称、管理画面は更新されることがあります。また、Intune、Defender、Purviewなどを利用できるかどうかは契約内容によって異なります。</p>
+                <p>Microsoft 365の利点は、各サービスが完全に独立しているのではなく、共通の利用者情報やグループを使って連携できることです。一方で、連携しているからこそ、問い合わせの入口と実際の保存先や管理先が異なる場合があります。</p>
+              </section>
+
+              <section id="sec-4">
+                <h2>システム全体のどこに存在するか</h2>
+                <p>組織向けのMicrosoft 365は、インターネット経由で利用するクラウドサービスです。利用者は、会社や学校などのアカウントでサインインし、ブラウザー、デスクトップアプリ、スマートフォンアプリなどから各サービスへ接続します。</p>
+                <p>組織ごとのMicrosoft 365環境は、一般に<strong>テナント</strong>という単位で管理されます。テナントは、組織の利用者、グループ、ドメイン、ライセンス、設定、クラウド上のデータなどを管理するための境界です。</p>
+
+                <pre><code>利用者・端末
+  ├─ ブラウザー
+  ├─ Outlook・Teams
+  └─ Word・Excel・OneDrive同期アプリ
+          ↓ インターネット / HTTPS
+Microsoft Entra ID
+  ├─ アカウント確認
+  ├─ パスワード・多要素認証
+  └─ サインイン条件の確認
+          ↓ 認証結果
+Microsoft 365テナント
+  ├─ Exchange Online：メール・予定表
+  ├─ Teams：チャット・会議・共同作業
+  ├─ SharePoint：組織・チームのファイルや情報
+  ├─ OneDrive：利用者の業務ファイル
+  └─ 各種管理・セキュリティ機能</code></pre>
+
+                <p>Microsoftがクラウド側のサーバーやサービス基盤を運用しますが、組織側にも管理する部分があります。利用者アカウント、ライセンス、アクセス権、端末設定、ネットワーク経路、セキュリティポリシーなどは、組織の設計と運用に関係します。</p>
+              </section>
+
+              <section id="sec-5">
+                <h2>Microsoft 365を構成する基本要素</h2>
+
+                <h3>テナント</h3>
+                <p><strong>テナント</strong>は、組織ごとのMicrosoft 365環境を表す管理単位です。同じ利用者が複数組織のテナントへ所属したり、ゲストとして招待されたりする場合もあります。そのため、正しいメールアドレスでサインインしていても、別の組織を選択していると目的のデータへアクセスできないことがあります。</p>
+
+                <h3>アカウントとID</h3>
+                <p>利用者のサインインには、主にMicrosoft Entra IDで管理される職場または学校のアカウントが使われます。IDは利用者を識別する情報です。認証は、その利用者が本人であることを確認する処理です。</p>
+                <p>パスワードだけでなく、多要素認証、端末の状態、接続場所、組織のポリシーなどがサインイン条件に関係することがあります。</p>
+
+                <h3>ライセンス</h3>
+                <p><strong>ライセンス</strong>は、利用者がどの製品やサービスを利用できるかを決める契約上の割り当てです。アカウントが存在しても、必要なライセンスやサービスが割り当てられていなければ、メールボックスが作成されない、デスクトップアプリを利用できない、特定の機能が表示されないといったことがあります。</p>
+                <p>ただし、ライセンスがあることと、対象データへの権限があることは別です。SharePointのファイルを開くには、サービスを利用できることに加えて、そのサイトやファイルへのアクセス権が必要です。</p>
+
+                <h3>クラウドサービス</h3>
+                <p>Exchange Online、Teams、SharePoint、OneDriveなどは、それぞれ役割の異なるクラウドサービスです。共通のアカウントで利用できても、障害や設定の影響はサービスごとに異なる場合があります。</p>
+
+                <h3>Microsoft 365 Apps</h3>
+                <p><strong>Microsoft 365 Apps</strong>は、Word、Excel、PowerPoint、Outlookなどのデスクトップアプリを含む名称です。クラウドサービスそのものではなく、端末へインストールして使うアプリも含まれます。サインイン、ライセンス認証、更新チャネル、アプリのバージョン、端末状態などが動作に関係します。</p>
+
+                <h3>管理センターと管理者ロール</h3>
+                <p>Microsoft 365には、Microsoft 365管理センターのほか、Exchange、Teams、SharePoint、Entra、Intune、Defender、Purviewなど、目的別の管理画面があります。</p>
+                <p>管理者には、担当範囲に応じた<strong>管理者ロール</strong>が割り当てられます。ロールは、実行できる管理作業の範囲です。すべての担当者へ強い権限を与えるのではなく、必要な範囲だけを割り当てる考え方が基本です。</p>
+              </section>
+
+              <section id="sec-6">
+                <h2>基本的な仕組みと処理の流れ</h2>
+                <p>利用者がMicrosoft 365のサービスを利用するときは、単にアプリを起動するだけでなく、通信、認証、ライセンス、権限、サービスの処理が順番に関係します。</p>
+
+                <pre><code>1. 利用者がブラウザーやアプリからサービスへ接続する
+        ↓
+2. DNSで接続先の名前を解決し、HTTPSで通信する
+        ↓
+3. Microsoft Entra IDが利用者を認証する
+        ↓
+4. 多要素認証やアクセス条件がある場合は追加確認する
+        ↓
+5. サインイン結果を示すトークンがアプリへ渡される
+        ↓
+6. 対象サービスがライセンスやアクセス権を確認する
+        ↓
+7. メール、会議、ファイルなどの機能やデータを提供する</code></pre>
+
+                <p><strong>トークン</strong>は、認証済みであることや許可された範囲をサービスへ伝えるための情報です。通常、利用者が内容を直接見るものではありません。</p>
+                <p>この流れから分かるように、パスワードが正しくても、ネットワークで接続先が遮断されていれば利用できません。また、サインインに成功しても、ライセンスやファイル権限がなければ目的の操作はできません。</p>
+                <p>Microsoft 365はシングルサインオンに対応するため、一度のサインインで複数のサービスを利用しやすくなります。ただし、すべてのサービスが常に同じ状態になるという意味ではありません。アプリごとのキャッシュやセッション、サービス固有の権限も関係します。</p>
+              </section>
+
+              <section id="sec-7">
+                <h2>利用者・端末・サーバー・ネットワークとの関係</h2>
+
+                <h3>利用者との関係</h3>
+                <p>利用者には、アカウント、グループ、ライセンス、サービスごとの権限などが関係します。異動、入退職、姓やメールアドレスの変更、ライセンス変更、グループ変更の後は、利用できる範囲が変わることがあります。</p>
+
+                <h3>端末との関係</h3>
+                <p>端末では、ブラウザーのサインイン状態、Officeアプリのアカウント、TeamsやOneDrive同期アプリの状態、端末時刻、証明書、アプリのバージョン、端末管理ポリシーなどが影響します。</p>
+                <p>同じ利用者が別の端末やブラウザーでは利用できる場合、Microsoft 365全体の障害よりも、元の端末、アプリ、キャッシュ、端末ポリシーなどを中心に確認できます。</p>
+
+                <h3>ネットワークとの関係</h3>
+                <p>Microsoft 365はインターネット上の複数のエンドポイントへ接続します。エンドポイントとは、通信先となるDNS名、URL、IPアドレスなどのまとまりです。DNS、HTTPS、ファイアウォール、プロキシ、VPN、TLS検査などが通信に影響する場合があります。</p>
+                <p>Microsoft 365の接続先は更新される可能性があります。古い固定リストだけで通信を許可せず、Microsoftの最新の公式情報と、組織のネットワーク設計を確認します。</p>
+
+                <h3>クラウド側のサーバーとの関係</h3>
+                <p>利用者からは一つのMicrosoft 365に見えても、実際には複数のクラウドサービスが連携しています。Microsoftがクラウド基盤を運用し、組織の管理者はテナント内の設定や利用者を管理します。</p>
+                <p>Teamsで共有したファイルのように、画面はTeamsでも、保存先がSharePointやOneDriveになる機能があります。表示しているアプリと、データを保存しているサービスを分けて考えることが大切です。</p>
+              </section>
+
+              <section id="sec-8">
+                <h2>実務のイメージ</h2>
+                <p>運用担当者や一次対応者は、Microsoft 365のすべてを設定する立場でなくても、利用者からさまざまな問い合わせを受けます。</p>
+                <p>例えば、「Microsoft 365に入れない」「Outlookで送受信できない」「Teamsには入れるがファイルを開けない」「Wordがライセンス認証を求める」「異動後に以前の共有フォルダーが見えない」といった問い合わせです。</p>
+                <p>ここで、いきなりMicrosoft 365全体の障害と判断しないことが大切です。まず、どこからどこまで正常かを確認します。</p>
+
+                <ol>
+                  <li>一人だけか、同じ部署や拠点の複数利用者で発生しているか</li>
+                  <li>Microsoft 365のすべてか、特定サービスだけか</li>
+                  <li>ブラウザーとデスクトップアプリの両方で発生するか</li>
+                  <li>別の端末や別のネットワークでも発生するか</li>
+                  <li>正しい職場または学校のアカウントとテナントを使っているか</li>
+                  <li>サインイン、ライセンス、サービス権限のどこで止まっているか</li>
+                  <li>サービス正常性、設定変更、アプリ更新に関連する情報がないか</li>
+                </ol>
+
+                <p>例えば、Outlookだけ送受信できず、Teamsとブラウザー版Outlookは使える場合は、端末のOutlookアプリやプロファイルを中心に確認できます。Teamsのチャットは使えるがチャネルのファイルだけ開けない場合は、Teams全体よりもSharePoint側の保存先や権限を確認します。</p>
+                <p>上位担当へ連携するときは、「Microsoft 365が使えない」ではなく、「利用者一名で、ブラウザー版は正常、Windows版Outlookだけ起動時にエラーが出る」のように、影響範囲と確認結果を整理します。</p>
+              </section>
+
+              <section id="sec-9">
+                <h2>一般利用者・運用担当者・管理者の役割</h2>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>役割</th>
+                      <th>主な対応</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>一般利用者</td>
+                      <td>正しいアカウントでサインインし、許可された範囲で各サービスを利用する。発生時刻、対象アプリ、エラー内容を伝える</td>
+                    </tr>
+                    <tr>
+                      <td>運用担当者・一次対応者</td>
+                      <td>影響範囲、端末、ネットワーク、認証、ライセンス、権限、サービス正常性を確認し、担当サービスを絞る</td>
+                    </tr>
+                    <tr>
+                      <td>サービス管理者</td>
+                      <td>Exchange、Teams、SharePointなど、担当サービスの設定、ログ、ポリシー、障害情報を確認する</td>
+                    </tr>
+                    <tr>
+                      <td>ID・端末・セキュリティ管理者</td>
+                      <td>アカウント、認証方法、アクセス条件、端末管理、脅威対策、情報保護などを管理する</td>
+                    </tr>
+                    <tr>
+                      <td>全体管理者</td>
+                      <td>テナント全体に関わる管理を行う。強い権限であるため、日常作業では必要最小限の利用と保護が求められる</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>管理者という言葉は一種類ではありません。Microsoft 365では、役割ごとに管理者ロールを分けられます。一次対応者が管理画面を見られない場合でも、必要な情報をそろえて担当管理者へ連携することが重要です。</p>
+              </section>
+
+              <section id="sec-10">
+                <h2>問い合わせ・障害時の切り分け</h2>
+
+                <h3>最初に確認する範囲</h3>
+                <ul>
+                  <li>発生日時、利用者、部署、拠点、影響人数</li>
+                  <li>利用できないサービスと、利用できるサービス</li>
+                  <li>ブラウザー、デスクトップアプリ、スマートフォンのどこで発生するか</li>
+                  <li>表示されたエラー文、画面、対象URL</li>
+                  <li>直前のパスワード変更、異動、ライセンス変更、設定変更、アプリ更新</li>
+                </ul>
+
+                <h3>利用者・アカウント側</h3>
+                <p>正しい職場または学校のアカウントを使っているか、別の個人用Microsoftアカウントや別テナントでサインインしていないかを確認します。アカウントが無効化されていないか、パスワード変更後に古い資格情報が残っていないかも確認対象です。</p>
+
+                <h3>端末・アプリ側</h3>
+                <p>別ブラウザー、プライベートブラウズ、Web版、別端末で再現するかを確認します。Web版だけ正常なら、端末アプリ、アカウントキャッシュ、プロファイル、アプリ更新などに範囲を絞れます。</p>
+                <p>端末の日時が大きくずれていると、認証や証明書の確認に影響する場合があります。Office、Teams、OneDriveなどは更新方法が同じとは限らないため、対象アプリのバージョンと更新状態を確認します。</p>
+
+                <h3>ネットワーク側</h3>
+                <p>インターネット接続、DNS名前解決、HTTPS通信を確認します。特定拠点だけ、VPN接続時だけ、手動プロキシ設定時だけ発生する場合は、通信経路、ファイアウォール、プロキシ、TLS検査などを確認します。</p>
+                <p>一つのMicrosoft 365の画面が開くからといって、すべての必要な接続先へ通信できているとは限りません。サービスごとに利用するエンドポイントが異なる場合があります。</p>
+
+                <h3>認証側</h3>
+                <p>パスワード入力後のどこで止まるかを確認します。多要素認証の通知が届かない、登録方法が使えない、アクセス条件で拒否されるなど、パスワード以外の要因もあります。</p>
+                <p>サインインに成功するがサービスへ入れない場合は、認証だけでなく、ライセンスとアクセス権へ確認を進めます。</p>
+
+                <h3>ライセンス・権限側</h3>
+                <p>対象サービスを利用できるライセンスが割り当てられているか、ライセンス内のサービスが無効になっていないかを管理者へ確認します。ファイルやチームなど特定のデータだけ開けない場合は、そのサービス内のメンバーシップやアクセス権も確認します。</p>
+
+                <h3>サービス側</h3>
+                <p>Microsoft 365管理センターのサービス正常性で、対象サービスに既知の問題が出ていないかを確認します。サービス正常性を見られない一次対応者は、確認できる管理者へ発生時刻、影響範囲、対象サービスを伝えます。</p>
+                <p>複数利用者、複数端末、複数拠点で同じサービスだけに同時発生している場合は、サービス側の問題を疑う材料になります。ただし、共通のプロキシや認証ポリシーの変更でも広範囲に影響するため、直前の変更もあわせて確認します。</p>
+
+                <aside class="card" style="margin-top:12px;">
+                  <p style="margin:0;"><strong>切り分けの基本：</strong>利用者側、端末側、ネットワーク側、認証側、ライセンス・権限側、サービス側を分けます。「何が使えないか」だけでなく、「何は使えるか」を確認すると、原因の範囲を狭めやすくなります。</p>
+                </aside>
+              </section>
+
+              <section id="sec-11">
+                <h2>よくある勘違い</h2>
+
+                <h3>Microsoft 365はWordやExcelのことだけ</h3>
+                <p>WordやExcelはMicrosoft 365の一部です。組織向け環境では、メール、Teams、SharePoint、OneDrive、認証、管理機能なども関係します。</p>
+
+                <h3>Microsoft 365とWindowsは同じもの</h3>
+                <p>Windowsは端末のオペレーティングシステムです。Microsoft 365はクラウドサービスやアプリを含む製品群です。Windows上でMicrosoft 365 Appsを利用できますが、同じ製品ではありません。</p>
+
+                <h3>サインインできれば、すべてのデータを開ける</h3>
+                <p>サインインは本人確認です。その後に、ライセンス、グループ、サイト、チーム、ファイルなどのアクセス権が確認されます。</p>
+
+                <h3>Microsoft 365のどれかが使えなければ、全体障害</h3>
+                <p>Microsoft 365は複数サービスで構成されています。Exchange Onlineだけ、SharePointだけ、端末上のOutlookだけというように、影響が限定される場合があります。</p>
+
+                <h3>TeamsのデータはすべてTeamsだけに保存される</h3>
+                <p>Teamsは複数サービスと連携します。チャネルのファイルはSharePoint、チャットで共有したファイルはOneDriveが関係するなど、機能によって保存先が異なります。</p>
+
+                <h3>OneDriveは単なるバックアップ</h3>
+                <p>OneDriveはクラウド上のファイル保存と共有のサービスです。同期フォルダーで削除や変更を行うとクラウド側へ反映される場合があるため、同期とバックアップを同じものとして扱いません。</p>
+
+                <h3>クラウドサービスなので社内ネットワークは関係ない</h3>
+                <p>クラウド側のサーバーをMicrosoftが運用していても、利用者の接続にはDNS、インターネット回線、ファイアウォール、プロキシ、VPNなどが関係します。</p>
+              </section>
+
+              <section id="sec-12">
+                <h2>関連する用語や製品</h2>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>用語・製品</th>
+                      <th>概要</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Microsoft Entra ID</td>
+                      <td>利用者、グループ、アプリ、認証などを管理するID基盤。旧称はAzure Active Directory</td>
+                    </tr>
+                    <tr>
+                      <td>Exchange Online</td>
+                      <td>メール、予定表、連絡先などを提供するクラウドサービス</td>
+                    </tr>
+                    <tr>
+                      <td>Microsoft Teams</td>
+                      <td>チャット、会議、通話、共同作業のためのサービス</td>
+                    </tr>
+                    <tr>
+                      <td>SharePoint</td>
+                      <td>組織やチームのサイト、文書、リストなどを管理する情報共有基盤</td>
+                    </tr>
+                    <tr>
+                      <td>OneDrive</td>
+                      <td>主に利用者個人の業務ファイルをクラウド上で保存・同期・共有するサービス</td>
+                    </tr>
+                    <tr>
+                      <td>Microsoft 365 Apps</td>
+                      <td>Word、Excel、PowerPoint、Outlookなどのサブスクリプション型アプリ群</td>
+                    </tr>
+                    <tr>
+                      <td>Microsoft Intune</td>
+                      <td>端末やアプリの管理に使われるクラウドサービス</td>
+                    </tr>
+                    <tr>
+                      <td>Microsoft Defender</td>
+                      <td>エンドポイント、ID、メール、クラウドアプリなどの脅威対策に関する製品群</td>
+                    </tr>
+                    <tr>
+                      <td>Microsoft Purview</td>
+                      <td>情報保護、データ管理、監査、コンプライアンスなどに関する製品群</td>
+                    </tr>
+                    <tr>
+                      <td>多要素認証</td>
+                      <td>パスワードに加えて、別の方法でも本人確認を行う仕組み</td>
+                    </tr>
+                    <tr>
+                      <td>シングルサインオン</td>
+                      <td>一度のサインインで複数のサービスへアクセスしやすくする仕組み</td>
+                    </tr>
+                    <tr>
+                      <td>テナント</td>
+                      <td>組織ごとの利用者、設定、ライセンス、データなどを管理する境界</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+
+              <section id="sec-13">
+                <h2>30秒チェック</h2>
+                <ol>
+                  <li>Microsoft 365は、WordやExcelだけではなく、複数のクラウドサービスと管理機能を含む製品群です。</li>
+                  <li>Microsoft Entra IDによる認証、ライセンス、サービス内の権限は、それぞれ別の確認項目です。</li>
+                  <li>Microsoft 365が使えないときは、全体ではなく、どのサービス、端末、利用者で発生しているかを確認します。</li>
+                  <li>ブラウザー版だけ使える、別端末では使えるといった正常な範囲も切り分けに役立ちます。</li>
+                  <li>DNS、プロキシ、ファイアウォール、VPNなど、組織側のネットワークも利用に関係します。</li>
+                  <li>Teamsのファイルなど、利用画面と実際の保存先サービスが異なる場合があります。</li>
+                </ol>
+              </section>
+
+              <section id="sec-14">
+                <h2>要約</h2>
+                <p>Microsoft 365は、メール、チャット、会議、ファイル共有、Officeアプリ、ID管理、端末管理、セキュリティなどを組み合わせた製品群です。</p>
+                <p>利用時には、端末からネットワークを通ってMicrosoft 365へ接続し、Microsoft Entra IDで認証します。その後、ライセンスやサービス内の権限が確認され、各機能が提供されます。</p>
+                <p>障害対応では、「Microsoft 365が使えない」という大きなくくりのまま考えず、利用者、端末、ネットワーク、認証、ライセンス・権限、サービスのどこまで正常かを確認します。</p>
+                <p>Microsoft 365は一つの製品名ですが、内部では複数のサービスが連携しています。この全体像を理解すると、問い合わせの内容を担当サービスへつなぎやすくなります。</p>
+              </section>
+
+              <section id="sec-sources">
+                <h2>参考資料</h2>
+                <p class="meta">参照日：2026-07-18。Microsoft 365の製品名、管理画面、ライセンス、提供機能、更新方式、サポート状況は変更される場合があります。実際の利用環境では、契約内容と最新の公式資料を確認してください。</p>
+                <ul>
+                  <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/?view=o365-worldwide" target="_blank" rel="noopener noreferrer">Microsoft 365 ドキュメント</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-service-descriptions-technet-library" target="_blank" rel="noopener noreferrer">Microsoft 365 と Office 365 のサービス説明</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/admin-overview/admin-center-overview?view=o365-worldwide" target="_blank" rel="noopener noreferrer">Microsoft 365 管理センター - 概要</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide" target="_blank" rel="noopener noreferrer">Microsoft 365 管理センターの管理者ロールについて</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/view-service-health?view=o365-worldwide" target="_blank" rel="noopener noreferrer">Microsoft 365 サービス正常性を確認する方法</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?view=o365-worldwide" target="_blank" rel="noopener noreferrer">Microsoft 365 ネットワーク接続の原則</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide" target="_blank" rel="noopener noreferrer">Microsoft 365 の URL と IP アドレスの範囲</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/entra/identity/authentication/overview-authentication" target="_blank" rel="noopener noreferrer">Microsoft Entra ID - 認証</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/entra/identity/enterprise-apps/what-is-single-sign-on" target="_blank" rel="noopener noreferrer">Microsoft Entra ID でのシングル サインオンとは</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/sharepoint/introduction" target="_blank" rel="noopener noreferrer">管理者向け Microsoft 365 の SharePoint と OneDrive の概要</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/set-up-file-storage-and-sharing?view=o365-worldwide" target="_blank" rel="noopener noreferrer">OneDrive ファイルのストレージと共有を設定する</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/updates/overview-update-channels" target="_blank" rel="noopener noreferrer">Microsoft 365 Apps 用更新プログラム チャネルの概要</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/updates/overview-update-process-microsoft-365-apps" target="_blank" rel="noopener noreferrer">Microsoft 365 Apps の更新プロセスの概要</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                </ul>
+              </section>
+            </article>
+          </main>
+        </body>
+        </html>

@@ -1,0 +1,420 @@
+        <!DOCTYPE html>
+        <html lang="ja">
+        <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>ITインフラ基礎 復習ラジオ 02：Microsoft SharePoint</title>
+          <link rel="stylesheet" href="/assets/styles.css">
+        </head>
+        <body>
+          <main class="container">
+            <article class="card">
+              <header>
+                <h1>ITインフラ基礎 復習ラジオ：Microsoft SharePoint</h1>
+                <nav><a href="/posts/genba/">解説記事一覧</a></nav>
+                <p class="meta">投稿日：2026-07-18</p>
+              </header>
+
+              <section class="card" style="margin-top:12px;">
+                <h2 style="margin:0 0 8px 0;">音声</h2>
+                <audio controls preload="none" src="/posts/genba/audio/02_sharepoint_audio.mp3"></audio>
+                <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+              </section>
+
+              <section id="sec-toc">
+                <h2>目次</h2>
+                <ol>
+                  <li><a href="#sec-1">今回のテーマ</a></li>
+                  <li><a href="#sec-2">Microsoft SharePointとは</a></li>
+                  <li><a href="#sec-3">何のために使われるか</a></li>
+                  <li><a href="#sec-4">システム全体のどこに存在するか</a></li>
+                  <li><a href="#sec-5">SharePointを構成する基本要素</a></li>
+                  <li><a href="#sec-6">基本的な仕組みと処理の流れ</a></li>
+                  <li><a href="#sec-7">利用者・端末・サーバー・ネットワークとの関係</a></li>
+                  <li><a href="#sec-8">実務のイメージ</a></li>
+                  <li><a href="#sec-9">一般利用者・運用担当者・管理者の役割</a></li>
+                  <li><a href="#sec-10">問い合わせ・障害時の切り分け</a></li>
+                  <li><a href="#sec-11">よくある勘違い</a></li>
+                  <li><a href="#sec-12">関連する用語や製品</a></li>
+                  <li><a href="#sec-13">30秒チェック</a></li>
+                  <li><a href="#sec-14">要約</a></li>
+                  <li><a href="#sec-sources">参考資料</a></li>
+                </ol>
+              </section>
+
+              <section id="sec-1">
+                <h2>今回のテーマ</h2>
+                <p>今回のテーマは、Microsoft SharePointです。</p>
+                <p>SharePointは、Microsoft 365で文書や情報を共有し、組織やチームのためのサイトを作る基盤です。利用者からは、社内ポータル、資料置き場、Teamsのファイル画面などとして見えることがあります。</p>
+                <p>ただし、SharePointを単なるクラウド上の共有フォルダーとして理解すると、権限、共有リンク、Teams、OneDrive同期との関係が分かりにくくなります。今回は、SharePointがシステム全体のどこにあり、どのように認証やファイル共有とつながるのかを整理します。</p>
+
+                <aside class="card" style="margin-top:12px;">
+                  <p style="margin:0;"><strong>今回の目標：</strong>SharePointのサイト、文書ライブラリ、リスト、権限の役割を理解し、「開けない」「編集できない」「同期されない」「共有した相手が見られない」といった問い合わせを基本的な観点で切り分けられるようにします。</p>
+                </aside>
+              </section>
+
+              <section id="sec-2">
+                <h2>Microsoft SharePointとは</h2>
+                <p><strong>Microsoft SharePoint</strong>は、組織やチームが情報を保存、整理、共有し、共同作業を行うための製品・サービスです。</p>
+                <p>Microsoft 365のクラウドサービスとして提供されるものは、公式資料では<strong>SharePoint in Microsoft 365</strong>と表現されます。一般にはSharePoint Onlineと呼ばれることもあります。一方、組織内のサーバーへ構築する<strong>SharePoint Server</strong>もあり、同じSharePointでも運用方式は異なります。</p>
+                <p>この記事では、主にMicrosoft 365上のSharePointを扱います。画面名称や利用できる機能は、契約プラン、組織の設定、更新時期、権限によって異なる場合があります。</p>
+                <p>SharePointでは、Webサイトのようなページを作るだけでなく、文書ライブラリにファイルを保存したり、リストに表形式の情報を登録したりできます。検索、バージョン履歴、共同編集、アクセス権の管理なども組み合わせて使います。</p>
+              </section>
+
+              <section id="sec-3">
+                <h2>何のために使われるか</h2>
+                <p>SharePointは、組織の情報を一か所へ集め、必要な人が必要な範囲で利用できるようにするために使われます。</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>主な用途</th>
+                      <th>内容</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>文書共有</td>
+                      <td>手順書、申請書、会議資料などを文書ライブラリで保存・共有する</td>
+                    </tr>
+                    <tr>
+                      <td>共同作業</td>
+                      <td>複数の利用者がOffice文書を共同編集し、更新履歴を管理する</td>
+                    </tr>
+                    <tr>
+                      <td>社内ポータル</td>
+                      <td>お知らせ、規程、リンク、予定、部門情報などをページにまとめる</td>
+                    </tr>
+                    <tr>
+                      <td>情報管理</td>
+                      <td>問い合わせ、備品、課題、申請状況などをリストで管理する</td>
+                    </tr>
+                    <tr>
+                      <td>検索</td>
+                      <td>サイト、ページ、文書、リスト項目などから必要な情報を探す</td>
+                    </tr>
+                    <tr>
+                      <td>アクセス制御</td>
+                      <td>閲覧、編集、管理など、利用者ごとに可能な操作を制御する</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>ファイルサーバーでも文書は共有できますが、SharePointはページ、リスト、検索、バージョン履歴、共有リンク、Microsoft 365との連携を含む情報共有基盤です。フォルダー構造だけで整理するのではなく、列やビューを使って情報を分類することもできます。</p>
+              </section>
+
+              <section id="sec-4">
+                <h2>システム全体のどこに存在するか</h2>
+                <p>Microsoft 365上のSharePointは、利用者の端末からインターネット経由で接続するクラウドサービスです。利用者はブラウザー、Officeアプリ、Teams、OneDrive同期アプリなどからSharePoint上の情報へアクセスします。</p>
+                <p>認証には、Microsoft Entra IDを中心としたMicrosoft 365のID基盤が関係します。利用者がサインインした後、SharePointはサイトやファイルに対するアクセス権を確認します。</p>
+
+                <pre><code>利用者
+  ↓ サインイン
+Microsoft Entra IDなどの認証基盤
+  ↓ 認証結果
+Microsoft 365のSharePoint
+  ├─ サイト・ページ
+  ├─ 文書ライブラリ・ファイル
+  └─ リスト・リスト項目
+  ↑
+ブラウザー / Office / Teams / OneDrive同期アプリ</code></pre>
+
+                <p>Microsoft Teamsのチャネルへアップロードしたファイルは、対応するチームのSharePointに保存されます。一方、Teamsの1対1チャットやグループチャットで共有したファイルは、送信者側のOneDriveに保存されるため、同じTeams上のファイルでも保存先が異なります。</p>
+                <p>したがって、Teamsでファイルが開けない問い合わせでも、実際に確認する対象はSharePointのサイト、文書ライブラリ、OneDrive、権限設定のいずれかである可能性があります。</p>
+              </section>
+
+              <section id="sec-5">
+                <h2>SharePointを構成する基本要素</h2>
+
+                <h3>サイト</h3>
+                <p><strong>サイト</strong>は、ページ、ファイル、リスト、権限などをまとめる単位です。プロジェクト、部門、業務、全社ポータルなど、目的ごとに作成されます。</p>
+                <p>チームで共同作業をするための<strong>チームサイト</strong>と、多くの利用者へ情報を発信するための<strong>コミュニケーションサイト</strong>が代表的です。</p>
+
+                <h3>ページ</h3>
+                <p><strong>ページ</strong>は、ニュース、文章、リンク、画像、文書一覧などを配置して情報を見せる画面です。ページ自体にすべての情報を保存するのではなく、文書ライブラリやリストの内容を表示することもあります。</p>
+
+                <h3>文書ライブラリ</h3>
+                <p><strong>文書ライブラリ</strong>は、ファイルを保存・管理する場所です。ファイル名やフォルダーだけでなく、更新者、更新日時、分類などの列を持たせることができます。バージョン履歴、共同編集、共有、同期も文書ライブラリと関係します。</p>
+
+                <h3>リスト</h3>
+                <p><strong>リスト</strong>は、行と列で情報を管理する仕組みです。表計算ファイルに似ていますが、入力項目、表示方法、権限、通知、Power Automateなどとの連携を設定できます。</p>
+
+                <h3>権限</h3>
+                <p><strong>権限</strong>は、誰が閲覧、編集、管理できるかを決める仕組みです。サイト全体の権限を引き継ぐ構成もあれば、特定のライブラリ、フォルダー、ファイルだけに個別の権限を設定する構成もあります。</p>
+                <p>代表的な役割として、所有者、メンバー、閲覧者があります。ただし、組織独自のグループや権限レベルが使われる場合もあるため、名称だけで操作範囲を断定しません。</p>
+              </section>
+
+              <section id="sec-6">
+                <h2>基本的な仕組みと処理の流れ</h2>
+                <p>利用者がSharePoint上のファイルを開く場合、認証、アクセス先の特定、権限確認、ファイル取得という流れで処理されます。</p>
+
+                <pre><code>1. 利用者がサイトや共有リンクへアクセスする
+        ↓
+2. Microsoft 365のアカウントで認証する
+        ↓
+3. 対象テナント、サイト、ライブラリ、ファイルを特定する
+        ↓
+4. SharePointが利用者やグループの権限を確認する
+        ↓
+5. 許可された操作に応じて閲覧・編集・共有を行う
+        ↓
+6. 変更内容やバージョン履歴がクラウド側に保存される</code></pre>
+
+                <p>共有リンクを使う場合も、リンクを知っているだけで必ず開けるとは限りません。リンクの種類、対象者、サインインしているアカウント、組織やサイトの外部共有設定などが関係します。</p>
+                <p>ファイルをOneDrive同期アプリで同期する場合、クラウド上の文書ライブラリと端末上の同期フォルダーが連携します。端末上で行った変更や削除がクラウド側にも反映されることがあるため、単なるバックアップ用コピーとは考えません。</p>
+              </section>
+
+              <section id="sec-7">
+                <h2>利用者・端末・サーバー・ネットワークとの関係</h2>
+
+                <h3>利用者との関係</h3>
+                <p>利用者は、ブラウザーやTeamsからサイトを開き、文書の閲覧、共同編集、共有、検索などを行います。同じ利用者でも、サインインしたアカウントや所属グループが違えば、表示される情報や操作できる範囲が変わります。</p>
+
+                <h3>端末との関係</h3>
+                <p>ブラウザーのサインイン状態、Officeアプリのアカウント、OneDrive同期アプリの状態、端末時刻、キャッシュなどが利用に影響する場合があります。ブラウザーでは開けるが同期フォルダーでは開けない場合、SharePointサービス全体ではなく同期アプリ側を中心に確認できます。</p>
+
+                <h3>クラウドサービスとの関係</h3>
+                <p>SharePointは、Microsoft Entra ID、Teams、OneDrive、Officeアプリ、Power AutomateなどのMicrosoft 365サービスと連携します。問い合わせを受けた画面と、実際にデータを保存しているサービスが同じとは限りません。</p>
+
+                <h3>ネットワークとの関係</h3>
+                <p>SharePointへのアクセスには、インターネット接続、名前解決、HTTPS通信、プロキシやファイアウォールの許可などが関係します。ブイ・ピー・エヌ経由時だけ開けない場合は、通信経路や組織のアクセス制御も確認します。</p>
+                <p>Microsoft 365の接続先や通信要件は変更される可能性があります。固定的なユーアールエルやIPアドレスを推測で登録せず、Microsoftの最新の公式資料と組織の設計を確認します。</p>
+              </section>
+
+              <section id="sec-8">
+                <h2>実務のイメージ</h2>
+                <p>一次対応者は、SharePointのサイト設計や権限設定を自分で変更しなくても、利用者から多くの問い合わせを受けます。</p>
+                <p>例えば、「昨日まで見られた資料が開けない」「共有リンクを送った相手がアクセス拒否になる」「Teamsのファイルが同期されない」「編集できるはずなのに読み取り専用になる」「削除したファイルを戻したい」といった問い合わせです。</p>
+                <p>このときは、SharePointが壊れていると決めつけず、利用者側、端末側、ネットワーク側、認証側、権限側、サービス側を分けて確認します。</p>
+
+                <ol>
+                  <li>一人だけか、同じサイトの複数利用者で発生しているか</li>
+                  <li>サイト全体が開けないのか、特定のファイルだけ開けないのか</li>
+                  <li>ブラウザー、Teams、Office、同期フォルダーのどこで発生するか</li>
+                  <li>正しいMicrosoft 365アカウントと組織へサインインしているか</li>
+                  <li>対象サイト、ライブラリ、フォルダー、ファイルの権限がどうなっているか</li>
+                  <li>共有リンクの対象者と、実際にアクセスしているアカウントが一致するか</li>
+                  <li>Microsoft 365のサービス正常性に問題が出ていないか</li>
+                </ol>
+
+                <p>一次対応では、利用者の画面だけでなく、対象のサイト名、ファイルの場所、ユーアールエル、発生時刻、エラー文、利用中のアプリを記録します。上位担当へ連携するときに、「SharePointが使えない」から一段具体的な情報へ変えることが重要です。</p>
+              </section>
+
+              <section id="sec-9">
+                <h2>一般利用者・運用担当者・管理者の役割</h2>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>役割</th>
+                      <th>主な対応</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>一般利用者</td>
+                      <td>正しいサイトとアカウントを使い、権限の範囲内で閲覧・編集・共有する。エラー内容と対象ファイルを伝える</td>
+                    </tr>
+                    <tr>
+                      <td>運用担当者・一次対応者</td>
+                      <td>影響範囲、アクセス経路、認証状態、対象URL、権限、同期状態、サービス正常性を確認して切り分ける</td>
+                    </tr>
+                    <tr>
+                      <td>サイト所有者</td>
+                      <td>サイト内のメンバー、ライブラリ、ページ、共有方法などを業務目的に合わせて管理する</td>
+                    </tr>
+                    <tr>
+                      <td>Microsoft 365・SharePoint管理者</td>
+                      <td>組織全体やサイト単位の設定、外部共有、アクセス制御、容量、監査、サービス障害への対応を行う</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>利用者へ閲覧権限を追加できるのが、必ずしもMicrosoft 365全体の管理者とは限りません。サイト所有者が対応する構成もあります。誰がどの範囲を管理しているかを整理しておくと、問い合わせの連携先を判断しやすくなります。</p>
+              </section>
+
+              <section id="sec-10">
+                <h2>問い合わせ・障害時の切り分け</h2>
+
+                <h3>最初に記録する情報</h3>
+                <ul>
+                  <li>発生日時、利用者、影響を受けている人数</li>
+                  <li>サイト名、ライブラリ名、フォルダー名、ファイル名</li>
+                  <li>アクセスしたURLや共有リンク</li>
+                  <li>表示されたエラー文と画面</li>
+                  <li>ブラウザー、Teams、Office、同期フォルダーのどこで発生したか</li>
+                  <li>サインインしているアカウントと組織</li>
+                  <li>直前の権限変更、ファイル移動、名前変更、共有設定変更</li>
+                </ul>
+
+                <h3>利用者・認証側</h3>
+                <p>正しいアカウントでサインインしているかを確認します。複数組織のゲストとして登録されている利用者や、個人用Microsoftアカウントも使っている利用者では、別のアカウントで開いていることがあります。</p>
+                <p>Microsoft 365のほかのサービスへサインインできるかも確認します。サインイン自体ができなければ、SharePointの権限より前に、アカウント、パスワード、多要素認証、条件付きアクセスなどの認証側を確認します。</p>
+
+                <h3>権限・共有側</h3>
+                <p>サイト全体が開けるか、ライブラリが開けるか、特定のフォルダーやファイルだけ開けないかを確認します。上位の権限を引き継いでいるか、個別の権限が設定されているかも重要です。</p>
+                <p>共有リンクでは、組織内のユーザー、特定のユーザー、リンクを知っているユーザーなど、選ばれた共有範囲を確認します。編集リンクと閲覧リンクも区別します。組織やサイトの設定によって、外部共有の選択肢が制限されることがあります。</p>
+
+                <h3>ブラウザー・端末側</h3>
+                <p>別ブラウザーやプライベートウィンドウで同じ問題が再現するかを確認すると、保存されたアカウント情報やキャッシュの影響を切り分けやすくなります。Officeアプリだけで失敗する場合は、Office側のサインインアカウントや更新状態も確認します。</p>
+
+                <h3>同期側</h3>
+                <p>ブラウザーで文書ライブラリを開けるかを先に確認します。ブラウザーでは正常で、端末の同期フォルダーだけに問題がある場合は、OneDrive同期アプリのサインイン状態、同期アイコン、エラー表示、対象ライブラリ、ファイル名やパスの制限を確認します。</p>
+                <p>同期エラーがあるからといって、すぐに同期解除やリセットを行うとは限りません。未同期の変更が残っていないかを確認し、組織の手順に従います。</p>
+
+                <h3>ネットワーク側</h3>
+                <p>インターネット接続、名前解決、HTTPS通信、プロキシ、ファイアウォール、ブイ・ピー・エヌを確認します。特定の拠点やネットワークだけで発生する場合は、通信経路や許可設定の可能性が高くなります。</p>
+
+                <h3>サービス側</h3>
+                <p>複数の利用者や複数サイトで同時に発生している場合は、Microsoft 365管理センターのサービス正常性を確認します。障害情報が出ていない場合でも、発生時刻、対象地域、対象機能を整理して管理者へ連携します。</p>
+
+                <h3>削除・変更・検索の問題</h3>
+                <p>ファイルが見つからない場合は、削除だけでなく、移動、名前変更、表示ビューのフィルター、権限変更も確認します。削除されたファイルは、ごみ箱やバージョン履歴から復元できる場合があります。</p>
+                <p>検索結果にすぐ表示されない場合は、検索インデックスへ反映されるまでの時間や、利用者の権限も関係します。検索に出ないことと、ファイル自体が存在しないことは分けて考えます。</p>
+
+                <aside class="card" style="margin-top:12px;">
+                  <p style="margin:0;"><strong>切り分けの基本：</strong>「SharePointが開かない」ではなく、「サイトには入れるが特定ファイルだけアクセス拒否」「ブラウザーでは開けるがOneDrive同期だけ停止」のように、正常な範囲と異常な範囲を言葉にします。</p>
+                </aside>
+              </section>
+
+              <section id="sec-11">
+                <h2>よくある勘違い</h2>
+
+                <h3>SharePointは、クラウド上の共有フォルダーである</h3>
+                <p>ファイル共有は主要な機能ですが、サイト、ページ、リスト、検索、権限、バージョン管理などを含む情報共有基盤です。</p>
+
+                <h3>Teamsにあるファイルは、Teamsだけに保存されている</h3>
+                <p>Teamsのチャネルファイルは、対応するSharePointサイトに保存されます。チャットで共有したファイルはOneDriveに保存されるため、保存場所を区別します。</p>
+
+                <h3>OneDriveとSharePointは同じものである</h3>
+                <p>どちらもMicrosoft 365のファイル機能と深く関係しますが、OneDriveは主に個人を起点としたファイル領域、SharePointは主にチームや組織を起点とした情報共有基盤です。</p>
+
+                <h3>共有リンクを送れば、相手は必ず開ける</h3>
+                <p>リンクの対象者、相手のアカウント、外部共有設定、サイトやファイルの権限によっては開けません。どのアカウントで開くリンクかを確認します。</p>
+
+                <h3>サイトが開けるなら、すべてのファイルを編集できる</h3>
+                <p>サイト、ライブラリ、フォルダー、ファイルで権限が異なる場合があります。また、閲覧権限はあっても編集権限がないことがあります。</p>
+
+                <h3>同期フォルダーのファイルは、クラウドとは別のコピーである</h3>
+                <p>OneDrive同期アプリで同期している場合、変更や削除がクラウド側へ反映されることがあります。通常のローカルバックアップと同じ感覚で扱わないようにします。</p>
+
+                <h3>アクセス拒否は、ネットワーク障害である</h3>
+                <p>ネットワーク障害でもアクセスできなくなりますが、アクセス拒否は、誤ったアカウントや権限不足によって表示されることも多くあります。エラー文と到達できている範囲を確認します。</p>
+              </section>
+
+              <section id="sec-12">
+                <h2>関連する用語や製品</h2>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>用語・製品</th>
+                      <th>SharePointとの関係</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Microsoft 365</td>
+                      <td>SharePoint、Teams、OneDrive、Officeなどを含むクラウドサービス群</td>
+                    </tr>
+                    <tr>
+                      <td>Microsoft Entra ID</td>
+                      <td>利用者、グループ、サインインなどを管理するID基盤</td>
+                    </tr>
+                    <tr>
+                      <td>Microsoft Teams</td>
+                      <td>チャネルのファイル保存先としてSharePointを利用する</td>
+                    </tr>
+                    <tr>
+                      <td>OneDrive</td>
+                      <td>個人用のクラウドファイル領域。SharePointライブラリの同期にもOneDrive同期アプリを使う</td>
+                    </tr>
+                    <tr>
+                      <td>Microsoft 365グループ</td>
+                      <td>メンバーシップを通じて、SharePointチームサイトなど複数サービスをつなぐ</td>
+                    </tr>
+                    <tr>
+                      <td>Power Automate</td>
+                      <td>リストやライブラリを起点に、通知や承認などの処理を自動化する</td>
+                    </tr>
+                    <tr>
+                      <td>共有リンク</td>
+                      <td>ファイルやフォルダーへアクセスするためのリンク。対象者や操作権限を設定する</td>
+                    </tr>
+                    <tr>
+                      <td>バージョン履歴</td>
+                      <td>ファイルや項目の過去の状態を確認・復元するための機能</td>
+                    </tr>
+                    <tr>
+                      <td>外部共有</td>
+                      <td>組織外の利用者とサイトやファイルを共有する仕組み</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>製品の画面が変わっても、認証する、保存場所を特定する、権限を確認する、利用経路を分ける、サービス状態を確認する、という基本的な考え方は共通します。</p>
+              </section>
+
+              <section id="sec-13">
+                <h2>30秒チェック</h2>
+                <ol>
+                  <li>SharePointは、単なる共有フォルダーと何が違うでしょうか。</li>
+                  <li>文書ライブラリとリストは、何を管理する仕組みでしょうか。</li>
+                  <li>Teamsのチャネルへアップロードしたファイルは、主にどこへ保存されるでしょうか。</li>
+                  <li>SharePointサイトが開けても、特定のファイルを編集できないことがあるのはなぜでしょうか。</li>
+                  <li>ブラウザーでは開けるが同期フォルダーでは開けない場合、どこを中心に確認するでしょうか。</li>
+                  <li>共有リンクを送った相手が開けない場合、何を確認するでしょうか。</li>
+                  <li>複数利用者で同時に利用できない場合、管理者は何を確認するでしょうか。</li>
+                </ol>
+
+                <details>
+                  <summary>答えを表示</summary>
+                  <ol>
+                    <li>ファイル共有だけでなく、サイト、ページ、リスト、検索、権限、バージョン管理などを含む情報共有基盤です。</li>
+                    <li>文書ライブラリは主にファイル、リストは行と列で構成された業務情報を管理します。</li>
+                    <li>対応するチームのSharePointサイトに保存されます。</li>
+                    <li>サイト、ライブラリ、フォルダー、ファイルで権限が異なる場合や、閲覧権限しかない場合があるためです。</li>
+                    <li>OneDrive同期アプリのサインイン、同期状態、エラー、ファイル名やパスの制限を確認します。</li>
+                    <li>リンクの対象者、閲覧・編集の種類、利用しているアカウント、外部共有設定、対象ファイルの権限を確認します。</li>
+                    <li>Microsoft 365管理センターのサービス正常性や、共通するネットワーク・設定変更を確認します。</li>
+                  </ol>
+                </details>
+              </section>
+
+              <section id="sec-14">
+                <h2>要約</h2>
+                <ul>
+                  <li>SharePointは、文書や情報を保存・整理・共有し、共同作業を行うための製品・サービスです。</li>
+                  <li>主な構成要素は、サイト、ページ、文書ライブラリ、リスト、権限です。</li>
+                  <li>Microsoft 365上では、Microsoft Entra IDの認証やグループと連携してアクセスを制御します。</li>
+                  <li>TeamsのチャネルファイルはSharePoint、チャットで共有したファイルは主にOneDriveへ保存されます。</li>
+                  <li>SharePointライブラリの端末同期には、OneDrive同期アプリを使用します。</li>
+                  <li>障害時は、利用者、端末、ネットワーク、認証、権限、サービスを分けて確認します。</li>
+                  <li>サイト全体、ライブラリ、フォルダー、ファイルのどこまで開けるかを確認します。</li>
+                  <li>一次対応では、URL、アカウント、エラー文、アクセス経路、影響範囲、直前の変更を記録します。</li>
+                </ul>
+              </section>
+
+              <section id="sec-sources">
+                <h2>参考資料</h2>
+                <p class="meta">参照日：2026-07-18。SharePointおよびMicrosoft 365の画面名称、機能、ライセンス、制限、外部共有方式は変更される場合があります。利用中の環境では最新の公式資料と管理者設定を確認してください。</p>
+                <ul>
+                  <li><a href="https://support.microsoft.com/en-us/sharepoint/sharepoint-training/what-is-sharepoint" target="_blank" rel="noopener noreferrer">What is SharePoint?</a> — Microsoft Support（参照日：2026-07-18）</li>
+                  <li><a href="https://support.microsoft.com/en-us/sharepoint/sites-in-sharepoint/what-is-a-sharepoint-team-site" target="_blank" rel="noopener noreferrer">What is a SharePoint team site?</a> — Microsoft Support（参照日：2026-07-18）</li>
+                  <li><a href="https://support.microsoft.com/en-us/sharepoint/sites-in-sharepoint/create-a-communication-site-in-sharepoint" target="_blank" rel="noopener noreferrer">Create a communication site in SharePoint</a> — Microsoft Support（参照日：2026-07-18）</li>
+                  <li><a href="https://support.microsoft.com/en-us/sharepoint/documents-and-library/what-is-a-document-library" target="_blank" rel="noopener noreferrer">What is a document library?</a> — Microsoft Support（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/en-us/sharepoint/understanding-permission-levels" target="_blank" rel="noopener noreferrer">Understanding permission levels in SharePoint</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://support.microsoft.com/en-us/office/understand-groups-and-permissions-on-a-sharepoint-site-258e5f33-1b5a-4766-a503-d86655cf950d" target="_blank" rel="noopener noreferrer">Understand groups and permissions on a SharePoint site</a> — Microsoft Support（参照日：2026-07-18）</li>
+                  <li><a href="https://support.microsoft.com/en-us/sharepoint/sharepoint-sharing-and-permissions/share-sharepoint-files-or-folders" target="_blank" rel="noopener noreferrer">Share SharePoint files or folders</a> — Microsoft Support（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/ja-jp/sharepoint/external-sharing-overview" target="_blank" rel="noopener noreferrer">Microsoft 365のSharePointとOneDriveでの外部共有の概要</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                  <li><a href="https://support.microsoft.com/ja-jp/teams/files/file-storage-in-microsoft-teams" target="_blank" rel="noopener noreferrer">Microsoft Teams内のファイルストレージ</a> — Microsoft Support（参照日：2026-07-18）</li>
+                  <li><a href="https://support.microsoft.com/en-us/onedrive/sync/sharepoint-training/sync-sharepoint-files-and-folders" target="_blank" rel="noopener noreferrer">Sync SharePoint files and folders</a> — Microsoft Support（参照日：2026-07-18）</li>
+                  <li><a href="https://support.microsoft.com/en-us/sharepoint/sync/fix-sharepoint-online-sync-problems" target="_blank" rel="noopener noreferrer">Fix SharePoint Online sync problems</a> — Microsoft Support（参照日：2026-07-18）</li>
+                  <li><a href="https://support.microsoft.com/en-us/office/restrictions-and-limitations-in-onedrive-and-sharepoint-64883a5d-228e-48f5-b3d2-eb39e07630fa" target="_blank" rel="noopener noreferrer">Restrictions and limitations in OneDrive and SharePoint</a> — Microsoft Support（参照日：2026-07-18）</li>
+                  <li><a href="https://learn.microsoft.com/en-us/microsoft-365/enterprise/view-service-health?view=o365-worldwide" target="_blank" rel="noopener noreferrer">How to check Microsoft 365 service health</a> — Microsoft Learn（参照日：2026-07-18）</li>
+                </ul>
+              </section>
+            </article>
+          </main>
+        </body>
+        </html>

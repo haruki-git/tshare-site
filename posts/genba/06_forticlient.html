@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+        <html lang="ja">
+        <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>ITインフラ基礎 復習ラジオ 06：FortiClient</title>
+          <link rel="stylesheet" href="/assets/styles.css">
+        </head>
+        <body>
+          <main class="container">
+            <article class="card">
+              <header>
+                <h1>ITインフラ基礎 復習ラジオ：FortiClient</h1>
+                <nav><a href="/posts/genba/">解説記事一覧</a></nav>
+                <p class="meta">投稿日：2026-07-18</p>
+              </header>
+
+              <section class="card" style="margin-top:12px;">
+                <h2 style="margin:0 0 8px 0;">音声</h2>
+                <audio controls preload="none" src="/posts/genba/audio/06_forticlient_audio.mp3"></audio>
+                <p class="meta" style="margin-top:8px; opacity:0.85;">※ AI音声で読み上げます</p>
+              </section>
+
+              <section id="sec-toc">
+                <h2>目次</h2>
+                <ol>
+                  <li><a href="#sec-1">今回のテーマ</a></li>
+                  <li><a href="#sec-2">FortiClientとは</a></li>
+                  <li><a href="#sec-3">何のために使われるか</a></li>
+                  <li><a href="#sec-4">システム全体のどこに存在するか</a></li>
+                  <li><a href="#sec-5">FortiClientを構成する基本要素</a></li>
+                  <li><a href="#sec-6">VPNとZTNAの違い</a></li>
+                  <li><a href="#sec-7">基本的な仕組みと処理の流れ</a></li>
+                  <li><a href="#sec-8">利用者・端末・サーバー・ネットワークとの関係</a></li>
+                  <li><a href="#sec-9">実務のイメージ</a></li>
+                  <li><a href="#sec-10">一般利用者・運用担当者・管理者の役割</a></li>
+                  <li><a href="#sec-11">問い合わせ・障害時の切り分け</a></li>
+                  <li><a href="#sec-12">よくある勘違い</a></li>
+                  <li><a href="#sec-13">関連する用語や製品</a></li>
+                  <li><a href="#sec-14">30秒チェック</a></li>
+                  <li><a href="#sec-15">要約</a></li>
+                  <li><a href="#sec-sources">参考資料</a></li>
+                </ol>
+              </section>
+
+              <section id="sec-1">
+                <h2>今回のテーマ</h2>
+                <p>今回のテーマは、FortiClientです。読み方は「フォーティクライアント」です。</p>
+                <p>FortiClientは、ノートパソコンやスマートフォンなどの端末に導入される、Fortinetのクライアントソフトウェアです。業務では、社外から組織内のシステムへ安全に接続するVPNクライアントとして目にすることが多いでしょう。</p>
+                <p>ただし、FortiClientは単に「VPNの接続ボタンを表示するアプリ」ではありません。導入されているエディション、ライセンス、モジュール、管理方式によって、VPN、ZTNA、端末状態の確認、Webアクセス制御、脅威対策、FortiClient EMSによる一元管理など、役割が変わります。</p>
+
+                <aside class="card" style="margin-top:12px;">
+                  <p style="margin:0;"><strong>今回の目標：</strong>FortiClient、VPN、FortiGate、FortiClient EMS、認証基盤、接続先サービスの関係を整理します。接続できないときに、端末、ネットワーク、認証、トンネル、接続先のどこまで正常かを順番に確認できるようにします。</p>
+                </aside>
+              </section>
+
+              <section id="sec-2">
+                <h2>FortiClientとは</h2>
+                <p><strong>FortiClient</strong>は製品名です。Fortinetは、FortiClientを、端末上で動作してFortinet Security Fabricと連携するモジュール式のクライアント、つまりFabric Agentとして説明しています。</p>
+                <p>ここでいう<strong>エンドポイント</strong>とは、利用者が操作するパソコン、スマートフォン、タブレットなどの端末です。FortiClientは、そのエンドポイント側で通信やセキュリティ機能を担当します。</p>
+                <p>一方、<strong>VPN</strong>は製品名ではなく、離れたネットワーク同士や端末と組織ネットワークの間に、暗号化された仮想的な通信経路を作る一般技術です。FortiClientは、そのVPNを利用するためのクライアントとして使われることがあります。</p>
+                <p>同様に、<strong>ZTNA</strong>はZero Trust Network Accessの略で、接続元が社内か社外かだけで信頼せず、利用者、端末状態、接続先アプリケーションなどを確認してアクセスを許可する考え方と仕組みです。FortiClientは、FortiGateやFortiClient EMSと連携してZTNAを構成する場合があります。</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>名称</th>
+                      <th>区分</th>
+                      <th>主な役割</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>FortiClient</td>
+                      <td>製品・クライアントソフトウェア</td>
+                      <td>端末側でVPN、ZTNA、端末保護などの機能を提供する</td>
+                    </tr>
+                    <tr>
+                      <td>FortiGate</td>
+                      <td>製品・セキュリティ装置</td>
+                      <td>VPNの終端、アクセス制御、ファイアウォール処理などを行う</td>
+                    </tr>
+                    <tr>
+                      <td>FortiClient EMS</td>
+                      <td>製品・管理サーバー</td>
+                      <td>複数端末のFortiClientを一元管理し、設定や状態を扱う</td>
+                    </tr>
+                    <tr>
+                      <td>VPN</td>
+                      <td>一般技術</td>
+                      <td>暗号化された仮想的な通信経路を作る</td>
+                    </tr>
+                    <tr>
+                      <td>ZTNA</td>
+                      <td>一般概念・アクセス方式</td>
+                      <td>利用者や端末の状態を確認し、必要なアプリ単位でアクセスを許可する</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>FortiClientという名前だけでは、実際に有効な機能までは判断できません。問い合わせ対応では、製品名に加えて、FortiClientのバージョン、エディション、管理状態、接続方式、適用プロファイルを確認することが重要です。</p>
+              </section>
+
+              <section id="sec-3">
+                <h2>何のために使われるか</h2>
+                <p>FortiClientの代表的な目的は、端末から組織のシステムへ安全に接続し、必要に応じて端末の状態を確認・管理することです。</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>目的</th>
+                      <th>具体的な内容</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>リモートアクセス</td>
+                      <td>自宅や出張先などから、組織内のサーバーや業務システムへ接続する</td>
+                    </tr>
+                    <tr>
+                      <td>通信の暗号化</td>
+                      <td>端末とVPNゲートウェイなどの間に暗号化された経路を作る</td>
+                    </tr>
+                    <tr>
+                      <td>アクセス制御</td>
+                      <td>認証された利用者や条件を満たす端末だけに接続を許可する</td>
+                    </tr>
+                    <tr>
+                      <td>端末状態の可視化</td>
+                      <td>EMS管理下で、バージョン、接続状態、セキュリティ状態などを確認する</td>
+                    </tr>
+                    <tr>
+                      <td>設定の一元配布</td>
+                      <td>複数端末へVPN設定や各種プロファイルを配布する</td>
+                    </tr>
+                    <tr>
+                      <td>端末保護</td>
+                      <td>契約や構成に応じて、Webフィルタリングやマルウェア対策などを行う</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>組織によっては、FortiClientをVPN接続だけに使います。別の組織では、EMSで管理し、端末の状態やセキュリティポリシーまで扱います。利用者から見える画面が似ていても、背後の構成は同じとは限りません。</p>
+                <p>そのため、「FortiClientが入っているから、この端末はすべて同じ保護を受けている」とは断定できません。実際に導入されたモジュールと、管理者が有効にした機能を確認する必要があります。</p>
+              </section>
+
+              <section id="sec-4">
+                <h2>システム全体のどこに存在するか</h2>
+                <p>FortiClientは、利用者が操作する端末側に存在します。VPN構成では、端末と組織側のFortiGateなどのVPNゲートウェイが通信し、その先に認証基盤や業務システムがあります。</p>
+
+                <pre><code>利用者
+  ↓ ID・パスワード・多要素認証など
+端末
+  ├─ OS
+  ├─ FortiClient
+  ├─ 証明書・端末時刻・ネットワーク設定
+  └─ ルーティング・DNS設定
+  ↓ インターネットや拠点ネットワーク
+ファイアウォール / プロキシ / 回線
+  ↓
+FortiGateなどの接続先ゲートウェイ
+  ├─ VPNの終端
+  ├─ 認証要求の処理
+  ├─ アクセスポリシーの判定
+  └─ 組織内ネットワークへの中継
+  ↓
+認証基盤・DNS・業務サーバー・クラウドサービス</code></pre>
+
+                <p>EMS管理構成では、FortiClientとFortiClient EMSの間に、管理用の通信も加わります。EMSは、端末へ設定を配布し、FortiClientから端末情報や状態を受け取ります。ZTNA構成では、その端末状態やタグがアクセス判定に利用されることがあります。</p>
+
+                <pre><code>FortiClient搭載端末
+  ⇄ Telemetry・管理通信
+FortiClient EMS
+  ├─ 端末情報の管理
+  ├─ プロファイル・ポリシーの配布
+  ├─ セキュリティ状態の判定
+  └─ FortiGateとの情報連携
+             ⇅
+          FortiGate
+             ↓
+      許可されたアプリケーション</code></pre>
+
+                <p>重要なのは、FortiClientだけで接続が成立するわけではないという点です。端末のネットワーク、名前解決、接続先ゲートウェイ、認証基盤、証明書、アクセス制御、接続先サービスが連携して、初めて利用できます。</p>
+              </section>
+
+              <section id="sec-5">
+                <h2>FortiClientを構成する基本要素</h2>
+
+                <h3>FortiClient本体</h3>
+                <p>端末上で動作するクライアントです。利用者がVPN接続を開始する画面だけでなく、バックグラウンドで動作するサービスやドライバーを含む場合があります。導入される機能は、OS、エディション、ライセンス、インストール時の選択、EMSのポリシーによって異なります。</p>
+
+                <h3>VPNプロファイル</h3>
+                <p>接続先のアドレス、接続方式、認証方法などをまとめた設定です。利用者が手動で作成する構成もあれば、管理者がEMSなどから配布する構成もあります。設定が表示されない場合、単なる入力ミスではなく、プロファイル配布や管理状態の問題も考えます。</p>
+
+                <h3>FortiGate</h3>
+                <p>Fortinetのファイアウォール製品です。リモートアクセスVPNでは、FortiClientからの接続を受けるVPNゲートウェイとして使われることがあります。接続後は、利用者やグループ、接続元、宛先、サービスなどに基づいて、通信を許可または拒否します。</p>
+
+                <h3>FortiClient EMS</h3>
+                <p>Endpoint Management Serverの略です。複数端末のFortiClientを一元管理し、端末への設定配布、ポリシー適用、状態確認、ログ収集、セキュリティポスチャータグなどを扱います。</p>
+
+                <h3>認証基盤</h3>
+                <p>利用者が接続を許可された本人かを確認する仕組みです。構成により、FortiGate上の利用者情報、Active DirectoryやLDAP、RADIUS、SAMLによるクラウド認証、多要素認証などが利用されます。</p>
+
+                <h3>証明書</h3>
+                <p>接続先サーバーが正しいことを確認したり、端末や利用者を識別したりするために使われます。証明書の期限切れ、端末時刻のずれ、信頼する認証局の不足、名前の不一致などがあると、接続に失敗する場合があります。</p>
+
+                <h3>DNSとルーティング</h3>
+                <p>VPN接続が完了しても、名前解決や経路設定が正しくなければ、業務サーバーへ到達できません。接続後に配布されるDNSサーバー、検索サフィックス、宛先ネットワークへの経路、スプリットトンネルの設定などが関係します。</p>
+              </section>
+
+              <section id="sec-6">
+                <h2>VPNとZTNAの違い</h2>
+                <p>VPNとZTNAは、どちらも離れた場所から安全にアクセスするために使われますが、考え方と許可の単位が異なります。</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>観点</th>
+                      <th>VPN</th>
+                      <th>ZTNA</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>基本的な役割</td>
+                      <td>端末とネットワークの間に暗号化されたトンネルを作る</td>
+                      <td>必要なアプリケーションへのアクセスを条件付きで許可する</td>
+                    </tr>
+                    <tr>
+                      <td>主な許可単位</td>
+                      <td>接続後に到達できるネットワークや宛先をポリシーで制御する</td>
+                      <td>利用者、端末状態、アプリケーションなどを基に細かく判定する</td>
+                    </tr>
+                    <tr>
+                      <td>端末状態</td>
+                      <td>構成により確認する</td>
+                      <td>端末状態やセキュリティポスチャーを判断材料にしやすい</td>
+                    </tr>
+                    <tr>
+                      <td>利用者の見え方</td>
+                      <td>接続・切断を意識する構成が多い</td>
+                      <td>対象アプリへのアクセス時に自動的に処理される構成もある</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>VPNだから広く無制限に接続できる、ZTNAだから必ず安全、という単純な話ではありません。どちらも、認証、証明書、ポリシー、ログ、運用設計が適切であることが重要です。</p>
+                <p>FortiClientのZTNA構成では、FortiClientが端末側のローカルプロキシゲートウェイとして動作し、FortiGateのアプリケーションプロキシ機能と連携して、保護されたアプリケーションへの暗号化接続を作る方式があります。EMSから受け取る証明書や端末情報が、判定に使われる構成もあります。</p>
+              </section>
+
+              <section id="sec-7">
+                <h2>基本的な仕組みと処理の流れ</h2>
+                <p>まず、リモートアクセスVPNの代表的な流れを見てみましょう。実際の認証方法や画面は、構成とバージョンによって異なります。</p>
+
+                <pre><code>1. 利用者がFortiClientで接続を開始する
+        ↓
+2. 端末が接続先名をDNSで解決する
+        ↓
+3. 端末からFortiGateなどのVPNゲートウェイへ通信する
+        ↓
+4. サーバー証明書などを確認し、暗号化通信を準備する
+        ↓
+5. ID・パスワード・証明書・多要素認証などで認証する
+        ↓
+6. FortiGateが利用者やグループ、ポリシーを確認する
+        ↓
+7. VPN用IPアドレス、経路、DNS情報などを受け取る
+        ↓
+8. 暗号化トンネルが確立する
+        ↓
+9. 利用者が許可された業務システムへアクセスする</code></pre>
+
+                <p>FortiClientで「接続済み」と表示されるのは、主にVPNトンネルが確立したことを示します。接続先の業務システムが正常であることや、すべての宛先への通信が許可されたことまで保証する表示ではありません。</p>
+                <p>接続後の通信経路には、二つの代表的な考え方があります。<strong>フルトンネル</strong>は、原則として端末の通信をVPN側へ送ります。<strong>スプリットトンネル</strong>は、組織が指定した宛先だけをVPNへ送り、それ以外は通常のインターネット回線へ送ります。実際の動作は管理者の設定によって決まります。</p>
+                <p>SSL VPNでは、管理者が指定したHTTPS系のポートを利用する構成があります。IPsec VPNでは、UDP 500番や4500番、ESPなどが関係することがあります。ただし、使用するポート、プロトコル、NAT越えの方式は構成によって異なるため、固定値だけで判断しないようにします。</p>
+              </section>
+
+              <section id="sec-8">
+                <h2>利用者・端末・サーバー・ネットワークとの関係</h2>
+
+                <h3>利用者との関係</h3>
+                <p>利用者は、FortiClientを通して接続を開始し、認証情報や多要素認証を入力します。パスワード変更後、アカウントロック、所属変更、利用権限の変更などは、FortiClient本体ではなく認証基盤やアクセス権の問題として表れる場合があります。</p>
+
+                <h3>端末との関係</h3>
+                <p>FortiClientは端末上で動作するため、OSの更新、端末時刻、証明書、ネットワークアダプター、ローカルファイアウォール、ほかのVPNソフト、セキュリティソフトなどの影響を受けます。特定端末だけの問題では、この層を重点的に確認します。</p>
+
+                <h3>ネットワークとの関係</h3>
+                <p>接続前には、端末がインターネットや必要なネットワークへ到達できること、接続先名を名前解決できること、必要な通信がファイアウォールや回線で遮断されていないことが必要です。公衆無線LANでは、ブラウザーで利用規約への同意が必要な場合もあります。</p>
+
+                <h3>認証との関係</h3>
+                <p>FortiClientの画面に認証エラーが表示されても、原因はFortiClientとは限りません。RADIUS、LDAP、Active Directory、SAML認証、ワンタイムパスワードなど、背後の認証処理を確認します。</p>
+
+                <h3>サーバーやサービスとの関係</h3>
+                <p>VPN接続後に業務システムだけ開けない場合は、そのシステムの稼働状況、宛先ポート、名前解決、アクセス権、サーバー側ファイアウォールを確認します。FortiClientの再インストールから始めるより、到達できる範囲を確認する方が切り分けやすくなります。</p>
+
+                <h3>プロキシとの関係</h3>
+                <p>Windowsなどの手動プロキシ設定は、主にWeb通信を指定したプロキシサーバーへ送るための設定です。FortiClientが入っているだけで、その端末が一般的なプロキシサーバーになるわけではありません。</p>
+                <p>ただし、プロキシ設定によって、認証画面、SAMLログイン、Webアクセス、EMSとの通信などの経路が変わり、結果としてFortiClient関連の処理へ影響する場合があります。また、FortiClientの一部機能が端末内でローカルプロキシとして動作する構成もあります。どの通信がプロキシ対象かを分けて確認します。</p>
+              </section>
+
+              <section id="sec-9">
+                <h2>実務のイメージ</h2>
+                <p>運用担当者や一次対応者は、FortiClientの詳細設定を変更しない場合でも、利用者から「VPNにつながらない」「接続済みなのに業務システムが開かない」「昨日まで使えた」という問い合わせを受けます。</p>
+                <p>このとき大切なのは、最初から原因をFortiClientに決めつけないことです。FortiClientは、端末、ネットワーク、認証、FortiGate、DNS、接続先サーバーの間にある一つの要素です。</p>
+
+                <h3>問い合わせを受けたとき</h3>
+                <p>まず、発生日時、利用場所、接続している回線、FortiClientの表示、エラーメッセージ、接続先、直前の変更を確認します。利用者一人だけか、同じ拠点や複数利用者でも起きているかを確認すると、端末固有か共通基盤かを判断しやすくなります。</p>
+
+                <h3>状況を確認するとき</h3>
+                <p>「インターネットは使えるか」「VPNゲートウェイの名前を解決できるか」「認証画面まで進むか」「接続済みになるか」「接続後にどの宛先まで届くか」の順で確認します。各段階の境目を意識すると、上位担当へ伝える情報も具体的になります。</p>
+
+                <h3>上位担当へ連携するとき</h3>
+                <p>「つながりません」だけではなく、利用者数、端末名、OSとFortiClientのバージョン、接続プロファイル、エラー文、発生時刻、利用回線、認証の成否、VPN接続状態、対象サーバー、再現条件を整理します。ログを取得できる場合は、端末時刻と発生時刻をそろえて共有します。</p>
+
+                <h3>変更作業の後</h3>
+                <p>FortiClientの更新、Windows Update、証明書更新、認証方式変更、FortiGateの設定変更、プロキシ変更などの後に発生した場合は、変更内容と発生開始時刻を照合します。ただし、時刻が近いだけで原因と断定せず、影響範囲と再現性を確認します。</p>
+              </section>
+
+              <section id="sec-10">
+                <h2>一般利用者・運用担当者・管理者の役割</h2>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>立場</th>
+                      <th>主な役割</th>
+                      <th>確認する内容</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>一般利用者</td>
+                      <td>決められた方法で接続し、異常時の状況を伝える</td>
+                      <td>エラー表示、発生時刻、利用回線、接続先、直前の操作</td>
+                    </tr>
+                    <tr>
+                      <td>運用担当者・一次対応者</td>
+                      <td>影響範囲を確認し、端末・通信・認証・サービスを切り分ける</td>
+                      <td>複数利用者への影響、名前解決、認証成否、トンネル状態、ログ</td>
+                    </tr>
+                    <tr>
+                      <td>管理者</td>
+                      <td>FortiGate、EMS、認証基盤、証明書、ポリシーを設計・変更する</td>
+                      <td>設定、ライセンス、プロファイル、アクセスルール、サーバー側ログ</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>一次対応者の役割は、すべての設定を変更して直すことではありません。安全に確認できる範囲で事実を集め、原因候補を狭め、適切な担当へつなぐことです。</p>
+                <p>管理対象のFortiClientでは、利用者が設定変更や切断、アンインストールを自由に行えない場合があります。管理ポリシーを回避しようとせず、決められた運用手順に従います。</p>
+              </section>
+
+              <section id="sec-11">
+                <h2>問い合わせ・障害時の切り分け</h2>
+                <p>FortiClientの障害対応では、接続処理を段階に分けます。どこまで進み、どこから失敗するかを確認すると、原因を絞りやすくなります。</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>確認する層</th>
+                      <th>主な確認ポイント</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>影響範囲</td>
+                      <td>一人だけか、特定端末だけか、同じ拠点全体か、複数拠点か</td>
+                    </tr>
+                    <tr>
+                      <td>端末</td>
+                      <td>OSとFortiClientのバージョン、端末時刻、サービス状態、直前の更新</td>
+                    </tr>
+                    <tr>
+                      <td>ネットワーク</td>
+                      <td>インターネット接続、名前解決、必要なポート、プロキシや他VPNの影響</td>
+                    </tr>
+                    <tr>
+                      <td>接続先</td>
+                      <td>VPNゲートウェイの稼働、証明書、到達性、メンテナンス情報</td>
+                    </tr>
+                    <tr>
+                      <td>認証</td>
+                      <td>ID、パスワード、アカウントロック、多要素認証、RADIUSやSAMLの状態</td>
+                    </tr>
+                    <tr>
+                      <td>トンネル</td>
+                      <td>接続済み表示、割り当てIP、ルート、DNS、送受信の有無</td>
+                    </tr>
+                    <tr>
+                      <td>接続先サービス</td>
+                      <td>業務サーバーの稼働、宛先ポート、アクセス権、サーバー側ログ</td>
+                    </tr>
+                    <tr>
+                      <td>EMS・ZTNA</td>
+                      <td>Telemetry接続、ポリシー適用、証明書、端末状態、タグ判定</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h3>1. 利用者だけの問題か確認する</h3>
+                <p>同じ時間帯にほかの利用者が接続できるなら、端末、アカウント、回線など個別要因の可能性が高まります。複数利用者で同時に発生しているなら、FortiGate、認証基盤、回線、証明書、共通設定などを疑います。</p>
+
+                <h3>2. VPNの前に通常の通信を確認する</h3>
+                <p>端末がインターネットへ接続できているか、ホテルや公衆無線LANの認証ページが残っていないか、VPNゲートウェイの名前を解決できるかを確認します。名前解決に失敗している状態で、認証設定を変更しても改善しません。</p>
+
+                <h3>3. 認証前か認証後かを分ける</h3>
+                <p>接続先へ到達できないのか、認証画面までは表示されるのか、認証後に拒否されるのかで、見る場所が変わります。多要素認証の通知が届かない場合も、認証要求自体が届いているかを確認します。</p>
+
+                <h3>4. 証明書と時刻を確認する</h3>
+                <p>証明書の有効期限、接続先名との一致、信頼する認証局、端末時刻を確認します。証明書エラーを警告だけとして無視するのではなく、正しい接続先か、更新漏れがないかを管理者へ確認します。</p>
+
+                <h3>5. 接続済み後の情報を確認する</h3>
+                <p>VPN用IPアドレスが割り当てられているか、対象ネットワークへのルートがあるか、組織内DNSで名前解決できるかを確認します。IPアドレス指定では届くが名前では届かない場合、DNS側の問題が考えられます。</p>
+
+                <h3>6. 対象サービスを確認する</h3>
+                <p>一つの業務システムだけ利用できない場合は、VPN全体ではなく、宛先サービス、アクセス権、ファイアウォールポリシー、サーバー側の稼働状況を確認します。</p>
+
+                <h3>7. ログと変更履歴を確認する</h3>
+                <p>FortiClient、FortiGate、EMS、認証サーバー、対象サービスのログを、同じ発生時刻で照合します。更新や設定変更の直後なら、変更前後の差分を確認します。ログの詳細度や保存期間は構成によって異なります。</p>
+
+                <aside class="card" style="margin-top:12px;">
+                  <p style="margin:0;"><strong>切り分けの基本：</strong>「FortiClientが悪い」と考えるのではなく、「接続先まで到達したか」「認証は成功したか」「トンネルは確立したか」「必要な宛先へ到達したか」を一段ずつ確認します。</p>
+                </aside>
+              </section>
+
+              <section id="sec-12">
+                <h2>よくある勘違い</h2>
+
+                <h3>FortiClientはVPNそのものである</h3>
+                <p>FortiClientは製品です。VPNは一般技術です。FortiClientはVPNクライアントとして使えますが、VPN以外の機能を持つ構成もあります。</p>
+
+                <h3>FortiClientが入っていれば、端末がプロキシサーバーになる</h3>
+                <p>通常は違います。手動プロキシ設定は、指定されたプロキシサーバーへWeb通信を送る設定です。FortiClientの導入とは別に考えます。ただし、FortiClientの機能やZTNAでは端末内のローカルプロキシ処理が使われる場合があります。</p>
+
+                <h3>接続済みなら、すべての社内システムへ接続できる</h3>
+                <p>接続後も、利用者権限、ファイアウォールポリシー、ルーティング、DNS、接続先サービスの状態によって、利用できる範囲は制限されます。</p>
+
+                <h3>VPNではすべての通信が必ず組織側を通る</h3>
+                <p>フルトンネルなら多くの通信をVPN側へ送りますが、スプリットトンネルでは指定された宛先だけをVPNへ送ります。実際の経路は設定を確認します。</p>
+
+                <h3>認証エラーは、入力したパスワードだけが原因である</h3>
+                <p>アカウントロック、期限切れ、所属グループ、多要素認証、RADIUSやSAMLの障害、時刻ずれ、証明書なども関係します。</p>
+
+                <h3>再インストールすれば大半の問題が直る</h3>
+                <p>再インストールが有効な場合もありますが、認証基盤やネットワーク、FortiGate、DNS、接続先サービスの問題には効果がありません。設定を失う可能性もあるため、原因の層を確認してから実施します。</p>
+
+                <h3>FortiClientはどの端末でも同じ機能である</h3>
+                <p>OS、バージョン、エディション、ライセンス、導入モジュール、EMSポリシーにより、画面と機能が異なります。公式ドキュメントは対象バージョンを合わせて確認します。</p>
+              </section>
+
+              <section id="sec-13">
+                <h2>関連する用語や製品</h2>
+                <dl>
+                  <dt><strong>FortiGate</strong></dt>
+                  <dd>Fortinetのファイアウォール製品です。VPNゲートウェイ、アクセス制御、ZTNAのアプリケーションゲートウェイなどを担当します。</dd>
+
+                  <dt><strong>FortiClient EMS</strong></dt>
+                  <dd>FortiClientを導入した複数端末を一元管理する製品です。設定配布、端末情報、Telemetry、ポリシー、タグなどを扱います。</dd>
+
+                  <dt><strong>SSL VPN</strong></dt>
+                  <dd>TLSを利用して暗号化されたリモートアクセスを実現する方式です。FortiClientではトンネルモード接続に使われる構成があります。</dd>
+
+                  <dt><strong>IPsec VPN</strong></dt>
+                  <dd>IP層で通信を暗号化・認証するVPN方式です。端末とFortiGateの間のリモートアクセスに使われることがあります。</dd>
+
+                  <dt><strong>ZTNA</strong></dt>
+                  <dd>接続場所だけを信頼せず、利用者、端末、アプリケーションなどを確認してアクセスを許可する考え方と仕組みです。</dd>
+
+                  <dt><strong>Telemetry</strong></dt>
+                  <dd>FortiClientとEMSの間で、管理情報や端末状態などをやり取りする通信です。VPNトンネルとは別の管理経路として考えます。</dd>
+
+                  <dt><strong>セキュリティポスチャー</strong></dt>
+                  <dd>OS、FortiClientの状態、脆弱性、特定ソフトウェアの有無など、端末がセキュリティ要件を満たしているかを表す状態です。</dd>
+
+                  <dt><strong>RADIUS</strong></dt>
+                  <dd>ネットワークアクセスの認証、認可、利用記録に使われる一般的なプロトコルです。FortiGateから認証サーバーへ問い合わせる構成があります。</dd>
+
+                  <dt><strong>SAML</strong></dt>
+                  <dd>ブラウザーを介したシングルサインオンなどに使われる認証連携の標準です。FortiClientのVPNやZTNAで利用される構成があります。</dd>
+
+                  <dt><strong>多要素認証</strong></dt>
+                  <dd>パスワードに加えて、ワンタイムコード、承認通知、証明書など複数の要素で本人確認を行う方式です。</dd>
+                </dl>
+              </section>
+
+              <section id="sec-14">
+                <h2>30秒チェック</h2>
+                <ol>
+                  <li><strong>FortiClientは何ですか。</strong><br>端末上で動作し、VPN、ZTNA、端末保護、EMS連携などを提供するFortinetのクライアント製品です。</li>
+                  <li><strong>FortiClientとVPNは同じ意味ですか。</strong><br>同じではありません。FortiClientは製品名、VPNは暗号化された仮想通信経路を作る一般技術です。</li>
+                  <li><strong>FortiClient EMSの役割は何ですか。</strong><br>複数端末のFortiClientを一元管理し、設定配布、状態確認、ポリシーやタグの管理などを行います。</li>
+                  <li><strong>接続済みなのに業務システムが開けないときは何を確認しますか。</strong><br>割り当てIP、ルート、DNS、アクセス権、ファイアウォールポリシー、接続先サービスの稼働を確認します。</li>
+                  <li><strong>障害切り分けの基本順序は何ですか。</strong><br>影響範囲、端末、通常のネットワーク、接続先到達、認証、トンネル、接続先サービス、ログの順に確認します。</li>
+                </ol>
+              </section>
+
+              <section id="sec-15">
+                <h2>要約</h2>
+                <p>FortiClientは、端末上で動作するFortinetのクライアント製品です。VPNクライアントとして使われることが多い一方、構成によってZTNA、端末状態の確認、セキュリティ機能、EMSによる一元管理なども担当します。</p>
+                <p>VPN接続は、FortiClientだけで完結しません。端末、ネットワーク、DNS、FortiGate、認証基盤、証明書、ルーティング、接続先サービスが連携します。接続済み表示は、すべての業務システムが正常であることを意味しません。</p>
+                <p>問い合わせ対応では、利用者だけか複数利用者かを確認し、通常のネットワーク、名前解決、接続先到達、認証、トンネル、接続後の経路、対象サービスを順番に確認します。製品を再インストールする前に、どの層まで正常かを把握することが大切です。</p>
+                <p>FortiClientの機能、画面、ライセンス、対応OS、管理方式は、バージョンや契約によって変わります。実際の運用では、対象バージョンのFortinet公式ドキュメントと、組織の設計資料を合わせて確認します。</p>
+              </section>
+
+              <section id="sec-sources">
+                <h2>参考資料</h2>
+                <p class="meta">参照日：2026-07-18。FortiClientの機能、エディション、ライセンス、対応OS、画面名称、FortiGateやEMSとの連携方法は、バージョンと構成によって異なる場合があります。利用環境に対応する公式ドキュメントを確認してください。</p>
+                <ul>
+                  <li><a href="https://www.fortinet.com/jp/products/endpoint-security/forticlient" target="_blank" rel="noopener noreferrer">FortiClientユニファイドエージェント</a> — Fortinet（参照日：2026-07-18）</li>
+                  <li><a href="https://docs.fortinet.com/product/forticlient/7.4" target="_blank" rel="noopener noreferrer">FortiClient 7.4 Documentation</a> — Fortinet Document Library（参照日：2026-07-18）</li>
+                  <li><a href="https://docs.fortinet.com/document/forticlient/7.4.7/ems-administration-guide/24450/introduction" target="_blank" rel="noopener noreferrer">FortiClient EMS Administration Guide 7.4.7：Introduction</a> — Fortinet Document Library（参照日：2026-07-18）</li>
+                  <li><a href="https://docs.fortinet.com/document/forticlient/7.4.7/ems-administration-guide/181730/endpoint-profiles" target="_blank" rel="noopener noreferrer">FortiClient EMS Administration Guide 7.4.7：Endpoint Profiles</a> — Fortinet Document Library（参照日：2026-07-18）</li>
+                  <li><a href="https://docs.fortinet.com/document/forticlient/7.4.7/administration-guide/550622/zero-trust-telemetry" target="_blank" rel="noopener noreferrer">FortiClient Administration Guide 7.4.7：Zero Trust Telemetry</a> — Fortinet Document Library（参照日：2026-07-18）</li>
+                  <li><a href="https://docs.fortinet.com/document/forticlient/7.4.7/ems-administration-guide/937027/tags" target="_blank" rel="noopener noreferrer">FortiClient EMS Administration Guide 7.4.7：Tags</a> — Fortinet Document Library（参照日：2026-07-18）</li>
+                  <li><a href="https://docs.fortinet.com/document/forticlient/7.4.7/ems-administration-guide/439480/required-services-and-ports" target="_blank" rel="noopener noreferrer">FortiClient EMS Administration Guide 7.4.7：Required services and ports</a> — Fortinet Document Library（参照日：2026-07-18）</li>
+                  <li><a href="https://docs.fortinet.com/document/forticlient/7.4.7/xml-reference-guide/71194/ztna" target="_blank" rel="noopener noreferrer">FortiClient XML Reference 7.4.7：ZTNA</a> — Fortinet Document Library（参照日：2026-07-18）</li>
+                  <li><a href="https://csrc.nist.gov/pubs/sp/800/207/final" target="_blank" rel="noopener noreferrer">NIST SP 800-207：Zero Trust Architecture</a> — National Institute of Standards and Technology（参照日：2026-07-18）</li>
+                </ul>
+              </section>
+            </article>
+          </main>
+        </body>
+        </html>
