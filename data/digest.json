@@ -1,73 +1,39 @@
 {
-  "date": "2026-07-19",
-  "generatedAtJST": "2026-07-19T07:15:19.396+09:00",
+  "date": "2026-07-20",
+  "generatedAtJST": "2026-07-20T07:15:20.741+09:00",
   "items": [
     {
-      "url": "https://futurism.com/space/spacex-support-pentagons-ai-models",
-      "source": "Futurism",
-      "publishedAt": "2026-07-17T21:50:00Z",
-      "title": "SpaceX Eager to Support the Pentagon’s Lethal AI Models",
-      "title_ja": "SpaceX、ペンタゴンの致死的AIモデルの支援に意欲",
-      "summary_ja": "SpaceXがペンタゴンとAIモデルの運用に関する交渉を進めている。これにより、軍に対してデータセンターのコンピューティング能力を提供することで、膨大な収益を見込む。過去にもSpaceXは軍との関係を深めており、最近では重要な契約を複数獲得している。",
+      "url": "https://cryptobriefing.com/bloom-energy-ai-data-center-setbacks/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-07-18T12:34:04Z",
+      "title": "Bloom Energy faces setbacks in AI data center growth as execution risks mount",
+      "title_ja": "Bloom Energy、AIデータセンター成長の障害に直面",
+      "summary_ja": "Bloom EnergyはAIデータセンターの成長に困難を抱えており、実行リスクが高まっています。この影響で、同社の株価は約1,000%の上昇にもかかわらず、電力網の遅延と実行リスクによって影響を受けています。AIデータセンターの電力需要が暗号通貨マイニングと交錯する中、さらなる課題が予想されます。",
       "key_points": [
-        "SpaceXはペンタゴンにコンピューティング能力を提供する交渉中。",
-        "この契約は数十億ドル規模になる可能性がある。",
-        "Muskは大規模なデータセンターを構築し、利用率は11％にとどまっている。",
-        "SpaceXは軍関連の契約を増やしており、2.29億ドルの契約や4.16億ドルの契約を獲得している。",
-        "他のテック企業も同様にペンタゴンと提携しているが、Muskの行動は矛盾を孕んでいる。"
+        "Bloom Energyの株価は約1,000%上昇したが、課題が発生している。",
+        "AIデータセンターの電力需要が急増している。",
+        "電力網の遅延がデータセンター成長に影響を与えている。",
+        "実行リスクがBloom Energyの取り組みの脅威となっている。",
+        "AIと暗号通貨マイニングの需要が交差している。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能。データを分析し、学習することで自動的に判断を行う技術。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能を利用するために設計されたデータセンター。"
         },
         {
-          "term": "ペンタゴン",
-          "explain_ja": "アメリカ国防総省の本部。軍の戦略や政策を策定する組織。"
+          "term": "実行リスク",
+          "explain_ja": "計画の成功に影響を与える可能性のあるリスク。"
         },
         {
-          "term": "Starlink",
-          "explain_ja": "SpaceXが提供する衛星インターネット通信サービス。"
-        },
-        {
-          "term": "Grok",
-          "explain_ja": "SpaceXが開発したチャットボット。"
+          "term": "暗号通貨マイニング",
+          "explain_ja": "ブロックチェーン技術を利用して新しい暗号通貨を生成するプロセス。"
         }
       ],
       "personal_actions": [
-        "データセンターやAIの関連ニュースを定期的に確認し、業界の動向を把握する。",
-        "自社のデータセンターの利用状況を見直し、効率的な運用を検討する。",
-        "AI技術の進展に伴い、自社のシステムとプロセスをAI対応にアップデートする。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://4sysops.com/archives/anthropic-in-preliminary-talks-to-lease-meta-data-center-capacity-for-ai-training/",
-      "source": "4sysops.com",
-      "publishedAt": "2026-07-17T20:56:56Z",
-      "title": "Anthropic in preliminary talks to lease Meta data center capacity for AI training",
-      "title_ja": "Anthropic、Metaのデータセンターキャパシティを借りる交渉中",
-      "summary_ja": "Anthropicは、MetaのデータセンターからGPUベースのコンピューティングキャパシティを借りるための初期的な交渉を行っています。この契約は2年間で約100億ドルの価値があり、月ごとに支払われる予定です。この取引が成立すれば、AnthropicのAIトレーニング能力が大幅に向上することが期待されます。",
-      "key_points": [
-        "AnthropicがMetaとGPUコンピューティングのリース交渉を進めている",
-        "契約額は約100億ドルで、2年間の支払いを月ごとに行う予定",
-        "AIトレーニングの能力向上が期待される"
-      ],
-      "glossary": [
-        {
-          "term": "GPU",
-          "explain_ja": "グラフィックス処理ユニット。コンピュータのグラフィックス処理を高速化するためのプロセッサ。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能。人間の知能に類似した知的な行動をコンピュータに実行させる技術。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの計画中のキャパシティを確認する",
-        "AIトレーニング用の資源の最適化を検討する"
+        "現在のデータセンターの電力需要を確認する。",
+        "実行リスクを評価するための社内プロジェクトの進捗を確認する。",
+        "他企業の事例を参考にして効率改善策を検討する。"
       ],
       "tags": [
         "DC",
@@ -75,41 +41,74 @@
       ]
     },
     {
-      "url": "https://www.channelnewsasia.com/business/musks-spacex-in-talks-supply-pentagon-computing-power-wsj-reports-6261976",
-      "source": "CNA",
-      "publishedAt": "2026-07-17T19:27:08Z",
-      "title": "Musk's SpaceX in talks to supply the Pentagon with computing power, WSJ reports",
-      "title_ja": "マスクのスペースX、米国防総省への計算能力供給に向けた協議中",
-      "summary_ja": "スペースXが米国防総省に対し、AIモデルを運用するためのデータセンター容量を提供するための協議を行っている。報道によれば、この契約は数十億ドル相当になる可能性がある。アメリカの国防のデジタル能力を強化する動きが進んでいることが影響を及ぼす。",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/us-data-center-protests-go-national-as-backlash-grows/articleshow/132479566.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-07-18T11:46:47Z",
+      "title": "US data center protests go national as backlash grows",
+      "title_ja": "データセンター拡張に対する全国的な抗議活動が広がる",
+      "summary_ja": "AIデータセンターの拡張に対する反対運動が全米で拡大している。HumansFirstは、アメリカ国内の少なくとも125か所で抗議活動を調整している。抗議者たちは、環境への影響や地域の自主性に対する懸念を表明している。",
       "key_points": [
-        "スペースXが米国防総省と協議中",
-        "提供されるのは数十億ドル相当のデータセンター容量",
-        "AIモデルの実行に必要な計算能力",
-        "契約成立の可能性もあり、国防デジタル能力の強化に寄与する",
-        "報道はウォール・ストリート・ジャーナルによるもの"
+        "データセンターの拡張に対する抗議活動が全米規模で行われる。",
+        "HumansFirstが少なくとも125の地点でデモを調整。",
+        "抗議者は環境への影響を懸念。",
+        "地域住民の自主性の重要性が強調されている。",
+        "抗議日は今週の土曜日に設定されている。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。機械が人間のように学習し、判断する技術。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能を活用したデータ処理やストレージを提供する施設。"
         },
+        {
+          "term": "HumansFirst",
+          "explain_ja": "AI技術の影響を批判し、倫理的な使用を推進する団体。"
+        }
+      ],
+      "personal_actions": [
+        "地元のデータセンターの計画を確認し、懸念される点をリストアップする。",
+        "地域の住民団体やフォーラムで情報を共有し、声を上げる。",
+        "抗議活動に参加するか、支援する方法を探る。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/news/international/world-news/us-data-centre-protests-go-national-as-backlash-grows/articleshow/132478359.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-07-18T10:39:41Z",
+      "title": "US data centre protests go national as backlash grows",
+      "title_ja": "データセンターに対する抗議が全国的に広がる",
+      "summary_ja": "米国のデータセンターに対する抗議が全国規模で広がっている。地域社会や環境に与える影響への懸念を表明するために、抗議者たちはデモを組織している。データセンター開発者に対し、透明性と責任を求めることが目的である。",
+      "key_points": [
+        "データセンターの急速な拡大に対する抗議が発生",
+        "環境および地域社会への影響が懸念されている",
+        "デモは全国的に広がっている",
+        "抗議者たちは透明性と責任を要求",
+        "データセンター開発者への圧力が強まっている"
+      ],
+      "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "大量のデータ処理、保存を行うための専用施設。"
+          "explain_ja": "データの保存、処理、管理が行われる施設。"
         },
         {
-          "term": "国防総省",
-          "explain_ja": "アメリカ合衆国の軍事を管轄する政府機関。"
+          "term": "透明性",
+          "explain_ja": "情報や方針が明確であること。"
+        },
+        {
+          "term": "責任",
+          "explain_ja": "行動の結果に対し説明や対策を求められる義務。"
         }
       ],
       "personal_actions": [
-        "データセンターの運用可能性に関する最新情報を確認する",
-        "AI技術の導入に向けて、業務検討を進める",
-        "国防関連の契約状況を追跡し、関連スキルを向上させる"
+        "地域のデータセンターの開発計画を確認する",
+        "環境影響評価が実施されているか調べる",
+        "地域コミュニティの意見を集める"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "その他"
       ]
     }
   ]
