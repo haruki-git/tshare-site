@@ -1,114 +1,115 @@
 {
-  "date": "2026-07-20",
-  "generatedAtJST": "2026-07-20T07:15:20.741+09:00",
+  "date": "2026-07-21",
+  "generatedAtJST": "2026-07-21T07:15:30.741+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/bloom-energy-ai-data-center-setbacks/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-07-18T12:34:04Z",
-      "title": "Bloom Energy faces setbacks in AI data center growth as execution risks mount",
-      "title_ja": "Bloom Energy、AIデータセンター成長の障害に直面",
-      "summary_ja": "Bloom EnergyはAIデータセンターの成長に困難を抱えており、実行リスクが高まっています。この影響で、同社の株価は約1,000%の上昇にもかかわらず、電力網の遅延と実行リスクによって影響を受けています。AIデータセンターの電力需要が暗号通貨マイニングと交錯する中、さらなる課題が予想されます。",
+      "url": "https://247wallst.com/investing/2026/07/19/ai-is-keeping-dram-prices-high-heres-exactly-when-the-market-finally-loosens-up/",
+      "source": "24/7 Wall St.",
+      "publishedAt": "2026-07-19T16:06:29Z",
+      "title": "AI Is Keeping DRAM Prices High — Here’s Exactly When the Market Finally Loosens Up",
+      "title_ja": "AIがDRAM価格を高騰させている — 市場が緩和される時期とは",
+      "summary_ja": "AIの進展により、ハイパースケールデータセンターがDRAMの供給を圧迫しています。この現象は、半導体メーカーが対応できる以上の速度で需給バランスを崩しています。今後の市場の緩和時期については、不透明感が強い状況です。",
       "key_points": [
-        "Bloom Energyの株価は約1,000%上昇したが、課題が発生している。",
-        "AIデータセンターの電力需要が急増している。",
-        "電力網の遅延がデータセンター成長に影響を与えている。",
-        "実行リスクがBloom Energyの取り組みの脅威となっている。",
-        "AIと暗号通貨マイニングの需要が交差している。"
+        "ハイパースケールデータセンターがDRAMを急速に消費",
+        "半導体メーカーの生産能力を上回る需要",
+        "供給状況は投資家の予想以上に厳しい",
+        "市場の緩和がいつ起こるかは不明"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能を利用するために設計されたデータセンター。"
+          "term": "DRAM",
+          "explain_ja": "動的ランダムアクセスメモリの略で、コンピュータメモリの一種。"
         },
         {
-          "term": "実行リスク",
-          "explain_ja": "計画の成功に影響を与える可能性のあるリスク。"
-        },
-        {
-          "term": "暗号通貨マイニング",
-          "explain_ja": "ブロックチェーン技術を利用して新しい暗号通貨を生成するプロセス。"
+          "term": "ハイパースケールデータセンター",
+          "explain_ja": "大規模なデータ処理を行うために、膨大な数のサーバーを使用するデータセンター。"
         }
       ],
       "personal_actions": [
-        "現在のデータセンターの電力需要を確認する。",
-        "実行リスクを評価するための社内プロジェクトの進捗を確認する。",
-        "他企業の事例を参考にして効率改善策を検討する。"
+        "最新のDRAM需要動向をチェックする",
+        "供給チェーンの問題に備えたストック管理を見直す"
       ],
       "tags": [
-        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/us-data-center-protests-go-national-as-backlash-grows/articleshow/132479566.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-07-18T11:46:47Z",
-      "title": "US data center protests go national as backlash grows",
-      "title_ja": "データセンター拡張に対する全国的な抗議活動が広がる",
-      "summary_ja": "AIデータセンターの拡張に対する反対運動が全米で拡大している。HumansFirstは、アメリカ国内の少なくとも125か所で抗議活動を調整している。抗議者たちは、環境への影響や地域の自主性に対する懸念を表明している。",
+      "url": "https://www.forbes.com/sites/kensilverstein/2026/07/19/the-digital-dust-bowl-the-brutal-physical-reality-of-the-ai-boom/",
+      "source": "Forbes",
+      "publishedAt": "2026-07-19T12:45:00Z",
+      "title": "The Digital Dust Bowl: The Brutal Physical Reality Of The AI Boom",
+      "title_ja": "デジタルダストボウル：AIブームの厳しい物理的現実",
+      "summary_ja": "AIの発展は、デジタルの世界だけでなく、実際の土地、水、エネルギーにも依存している。データセンターの急増は、地域コミュニティに隠れたコストをもたらしており、その影響は深刻である。これにより、持続可能性が問われる新たな現実が浮き彫りとなっている。",
       "key_points": [
-        "データセンターの拡張に対する抗議活動が全米規模で行われる。",
-        "HumansFirstが少なくとも125の地点でデモを調整。",
-        "抗議者は環境への影響を懸念。",
-        "地域住民の自主性の重要性が強調されている。",
-        "抗議日は今週の土曜日に設定されている。"
+        "AIは物理的リソースに依存している",
+        "データセンターの急増が地域社会に影響を及ぼす",
+        "持続可能性が新たな課題として浮上",
+        "土地、水、電力の負担が増大している",
+        "地域コミュニティのコストの問題が顕在化している"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能を活用したデータ処理やストレージを提供する施設。"
+          "term": "AI",
+          "explain_ja": "人工知能の略称で、人間の知的な作業を模倣する技術を指す。"
         },
-        {
-          "term": "HumansFirst",
-          "explain_ja": "AI技術の影響を批判し、倫理的な使用を推進する団体。"
-        }
-      ],
-      "personal_actions": [
-        "地元のデータセンターの計画を確認し、懸念される点をリストアップする。",
-        "地域の住民団体やフォーラムで情報を共有し、声を上げる。",
-        "抗議活動に参加するか、支援する方法を探る。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://economictimes.indiatimes.com/news/international/world-news/us-data-centre-protests-go-national-as-backlash-grows/articleshow/132478359.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-07-18T10:39:41Z",
-      "title": "US data centre protests go national as backlash grows",
-      "title_ja": "データセンターに対する抗議が全国的に広がる",
-      "summary_ja": "米国のデータセンターに対する抗議が全国規模で広がっている。地域社会や環境に与える影響への懸念を表明するために、抗議者たちはデモを組織している。データセンター開発者に対し、透明性と責任を求めることが目的である。",
-      "key_points": [
-        "データセンターの急速な拡大に対する抗議が発生",
-        "環境および地域社会への影響が懸念されている",
-        "デモは全国的に広がっている",
-        "抗議者たちは透明性と責任を要求",
-        "データセンター開発者への圧力が強まっている"
-      ],
-      "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データの保存、処理、管理が行われる施設。"
+          "explain_ja": "データの保存、管理、処理を行うための施設。"
         },
         {
-          "term": "透明性",
-          "explain_ja": "情報や方針が明確であること。"
-        },
-        {
-          "term": "責任",
-          "explain_ja": "行動の結果に対し説明や対策を求められる義務。"
+          "term": "持続可能性",
+          "explain_ja": "現在のニーズを満たしつつ、未来の世代のために資源を守る考え方。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンターの開発計画を確認する",
-        "環境影響評価が実施されているか調べる",
-        "地域コミュニティの意見を集める"
+        "地域のデータセンターの影響を調査する",
+        "持続可能なエネルギー使用を促進するプログラムに参加する",
+        "地域住民と連携して影響を評価する"
       ],
       "tags": [
-        "その他"
+        "AI"
+      ]
+    },
+    {
+      "url": "https://futurism.com/artificial-intelligence/climate-activists-microsoft-ai-data-center-acid-balloons",
+      "source": "Futurism",
+      "publishedAt": "2026-07-19T12:30:00Z",
+      "title": "Climate Activists Pelt Microsoft Data Center With Balloons Full of Acid",
+      "title_ja": "気候活動家、Microsoftデータセンターに酸性バルーンを投げる",
+      "summary_ja": "気候問題に対する反発が高まる中、活動家たちは過激な手段に出ています。アムステルダムでのMicrosoftデータセンター建設プロジェクトに対し、環境団体Extinction Rebellionが酸性の水風船を投げつけました。この行動は、データセンターが環境に与える影響の重要性を訴えるためのものであり、電力不足に悩む地域での特大のエネルギー消費に対する懸念が表明されています。",
+      "key_points": [
+        "Extinction RebellionがMicrosoftデータセンターに酸性水風船を投げた。",
+        "風船はコンクリートにダメージを与え、鉄鋼を早く錆びさせる成分を含んでいる。",
+        "データセンターはAIブームの影響で、カーボン排出を増やす大きな要因。",
+        "建設中のデータセンターは、既存の電力不足のある地域で膨大な電力を消費する懸念がある。",
+        "活動家はデータセンターを資本の強大さに対抗する象徴として捉えている。"
+      ],
+      "glossary": [
+        {
+          "term": "Extinction Rebellion",
+          "explain_ja": "気候変動に対する行動を呼びかける国際的な環境団体。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "大量のデータを保存・処理するための施設で、エネルギー消費が大きい。"
+        },
+        {
+          "term": "水風船",
+          "explain_ja": "水などの液体を入れるために使われる風船で、ここでは酸性の混合物が使用された。"
+        },
+        {
+          "term": "カーボン排出",
+          "explain_ja": "二酸化炭素など温室効果ガスが排出される現象。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの環境影響についての情報を収集し、理解を深める。",
+        "地域の電力需要と供給についての議論に参加する。",
+        "企業の環境への取り組みを監視し、社会的責任を求める声を上げる。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
