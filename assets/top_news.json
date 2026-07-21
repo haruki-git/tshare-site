@@ -1,111 +1,115 @@
 {
-  "date": "2026-07-21",
-  "generatedAtJST": "2026-07-21T07:15:30.741+09:00",
+  "date": "2026-07-22",
+  "generatedAtJST": "2026-07-22T07:15:29.819+09:00",
   "items": [
     {
-      "url": "https://247wallst.com/investing/2026/07/19/ai-is-keeping-dram-prices-high-heres-exactly-when-the-market-finally-loosens-up/",
-      "source": "24/7 Wall St.",
-      "publishedAt": "2026-07-19T16:06:29Z",
-      "title": "AI Is Keeping DRAM Prices High — Here’s Exactly When the Market Finally Loosens Up",
-      "title_ja": "AIがDRAM価格を高騰させている — 市場が緩和される時期とは",
-      "summary_ja": "AIの進展により、ハイパースケールデータセンターがDRAMの供給を圧迫しています。この現象は、半導体メーカーが対応できる以上の速度で需給バランスを崩しています。今後の市場の緩和時期については、不透明感が強い状況です。",
+      "url": "https://siliconangle.com/2026/07/20/microsoft-will-use-amds-ai-optimized-helios-racks-azure/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-07-20T20:20:47Z",
+      "title": "Microsoft will use AMD’s AI-optimized Helios racks in Azure - SiliconANGLE",
+      "title_ja": "Microsoft、AMDのAI最適化ヘリオスラックをAzureで使用へ",
+      "summary_ja": "Microsoftは、AMDのヘリオスラック設計を使用してAzureサービスを強化すると発表しました。この新たなパートナーシップにより、AMDのInstinct MI455 GPUを搭載したデータセンターラックが用意されます。これにより、AI業務を効率的に処理できる新しい仮想マシンシリーズが展開され、コストの削減とパフォーマンスの向上が期待されます。",
       "key_points": [
-        "ハイパースケールデータセンターがDRAMを急速に消費",
-        "半導体メーカーの生産能力を上回る需要",
-        "供給状況は投資家の予想以上に厳しい",
-        "市場の緩和がいつ起こるかは不明"
+        "AMDのHeliosラック設計をMicrosoft Azureで使用。",
+        "Heliosは72のInstinct MI455 GPUを含むデータセンターラック。",
+        "新しいAzureインスタンスシリーズND MI455X v7を発表。",
+        "HEv2シリーズはCPUを基にしたAIアプリケーション向けに最適化。",
+        "HXv2シリーズは科学シミュレーションを含む多様な業務をサポート。"
       ],
       "glossary": [
         {
-          "term": "DRAM",
-          "explain_ja": "動的ランダムアクセスメモリの略で、コンピュータメモリの一種。"
+          "term": "Helios",
+          "explain_ja": "AMDがデータセンター用として提供するラック設計。"
         },
         {
-          "term": "ハイパースケールデータセンター",
-          "explain_ja": "大規模なデータ処理を行うために、膨大な数のサーバーを使用するデータセンター。"
+          "term": "Instinct MI455",
+          "explain_ja": "AMDの次世代GPUで、432 GBのHBM4メモリを搭載。"
+        },
+        {
+          "term": "Epyc",
+          "explain_ja": "AMDのデータセンター向けCPUシリーズ。"
+        },
+        {
+          "term": "Azure Boost",
+          "explain_ja": "仮想化ソフトウェアの処理をより効率的なチップにオフロードする技術。"
         }
       ],
       "personal_actions": [
-        "最新のDRAM需要動向をチェックする",
-        "供給チェーンの問題に備えたストック管理を見直す"
+        "新しいAzureインスタンスの展開に向けた社内インフラを見直す。",
+        "AMDおよびMicrosoftの公式発表や技術文書を定期的にチェックする。",
+        "Heliosラックの導入に伴うシステムの最適化計画を検討する。"
       ],
       "tags": [
         "AI"
       ]
     },
     {
-      "url": "https://www.forbes.com/sites/kensilverstein/2026/07/19/the-digital-dust-bowl-the-brutal-physical-reality-of-the-ai-boom/",
-      "source": "Forbes",
-      "publishedAt": "2026-07-19T12:45:00Z",
-      "title": "The Digital Dust Bowl: The Brutal Physical Reality Of The AI Boom",
-      "title_ja": "デジタルダストボウル：AIブームの厳しい物理的現実",
-      "summary_ja": "AIの発展は、デジタルの世界だけでなく、実際の土地、水、エネルギーにも依存している。データセンターの急増は、地域コミュニティに隠れたコストをもたらしており、その影響は深刻である。これにより、持続可能性が問われる新たな現実が浮き彫りとなっている。",
+      "url": "https://cryptobriefing.com/iran-attacks-bahraini-power-station-claims-us-military-ai-data-center/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-07-20T18:16:51Z",
+      "title": "Iran attacks Bahraini power station, claims US military AI data center",
+      "title_ja": "イラン、バーレーンの発電所を攻撃し米軍AIデータセンターを主張",
+      "summary_ja": "イランがバーレーンの発電所を攻撃し、そこが米軍のAI作戦を支援していると主張しています。これは7月22日に発生した軍事行動で、影響が広がる可能性があります。この攻撃は、地域の緊張を高める要因となっていると言えるでしょう。",
       "key_points": [
-        "AIは物理的リソースに依存している",
-        "データセンターの急増が地域社会に影響を及ぼす",
-        "持続可能性が新たな課題として浮上",
-        "土地、水、電力の負担が増大している",
-        "地域コミュニティのコストの問題が顕在化している"
+        "イランがバーレーンの発電所を攻撃した。",
+        "攻撃は米軍のAI作戦を支持する目的があると主張。",
+        "この事件は地域の軍事的緊張を引き起こす可能性あり。"
       ],
       "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能の略称で、人間の知的な作業を模倣する技術を指す。"
+          "explain_ja": "人工知能（Artificial Intelligence）の略で、コンピュータによる知能を表す。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データの保存、管理、処理を行うための施設。"
-        },
-        {
-          "term": "持続可能性",
-          "explain_ja": "現在のニーズを満たしつつ、未来の世代のために資源を守る考え方。"
+          "explain_ja": "コンピュータシステムやサーバを収容し、データの保存や処理を行う施設。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンターの影響を調査する",
-        "持続可能なエネルギー使用を促進するプログラムに参加する",
-        "地域住民と連携して影響を評価する"
+        "地域のインフラやセキュリティ状況を監視する。",
+        "AIシステムの安全性や脆弱性をチェックする。"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://futurism.com/artificial-intelligence/climate-activists-microsoft-ai-data-center-acid-balloons",
-      "source": "Futurism",
-      "publishedAt": "2026-07-19T12:30:00Z",
-      "title": "Climate Activists Pelt Microsoft Data Center With Balloons Full of Acid",
-      "title_ja": "気候活動家、Microsoftデータセンターに酸性バルーンを投げる",
-      "summary_ja": "気候問題に対する反発が高まる中、活動家たちは過激な手段に出ています。アムステルダムでのMicrosoftデータセンター建設プロジェクトに対し、環境団体Extinction Rebellionが酸性の水風船を投げつけました。この行動は、データセンターが環境に与える影響の重要性を訴えるためのものであり、電力不足に悩む地域での特大のエネルギー消費に対する懸念が表明されています。",
+      "url": "https://www.carriermanagement.com/news/2026/07/20/290209.htm",
+      "source": "Carriermanagement.com",
+      "publishedAt": "2026-07-20T15:54:09Z",
+      "title": "Aon Ups Data Center Lifecycle Program Capacity Again: Now $5B - Carrier Management",
+      "title_ja": "Aon、データセンターライフサイクルプログラムの容量を再び拡大：現在50億ドル",
+      "summary_ja": "Aon plcは、データセンターライフサイクル保険プログラム(DCLP)の第一者補償容量を追加の15億ドルで拡大し、合計50億ドルに達しました。このプログラムは、デジタルインフラ資産の開発から長期運用までを支援する統合リスクソリューションを提供します。デジタルインフラは世界経済において重要な資産クラスとなっており、クライアントはリスク管理と保険容量の拡大が求められています。",
       "key_points": [
-        "Extinction RebellionがMicrosoftデータセンターに酸性水風船を投げた。",
-        "風船はコンクリートにダメージを与え、鉄鋼を早く錆びさせる成分を含んでいる。",
-        "データセンターはAIブームの影響で、カーボン排出を増やす大きな要因。",
-        "建設中のデータセンターは、既存の電力不足のある地域で膨大な電力を消費する懸念がある。",
-        "活動家はデータセンターを資本の強大さに対抗する象徴として捉えている。"
+        "AonのDCLPは保険容量を50億ドルに引き上げた。",
+        "プログラムは開発から運用までのデジタルインフラ資産をサポートする。",
+        "保険内容には工事全リスク、営業損失、サイバーリスクが含まれる。",
+        "Aonは、よりよいリスク管理を目指して保険とエンジニアリングの専門知識を結集している。",
+        "AIやクラウドコンピューティングの進展により、複雑なプロジェクトへの保険需要が高まっている。"
       ],
       "glossary": [
         {
-          "term": "Extinction Rebellion",
-          "explain_ja": "気候変動に対する行動を呼びかける国際的な環境団体。"
+          "term": "DCLP",
+          "explain_ja": "データセンターライフサイクル保険プログラム。データセンター関連のさまざまなリスクをカバーする保険ソリューション。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを保存・処理するための施設で、エネルギー消費が大きい。"
+          "term": "CAR",
+          "explain_ja": "Construction All Risks。工事中の全リスクをカバーする保険。"
         },
         {
-          "term": "水風船",
-          "explain_ja": "水などの液体を入れるために使われる風船で、ここでは酸性の混合物が使用された。"
+          "term": "DSU",
+          "explain_ja": "Delay in Startup。開始の遅延による損失をカバーする保険。"
         },
         {
-          "term": "カーボン排出",
-          "explain_ja": "二酸化炭素など温室効果ガスが排出される現象。"
+          "term": "OPPI",
+          "explain_ja": "Owners Protective Professional Indemnity。所有者保護の職業上過失補償。"
         }
       ],
       "personal_actions": [
-        "データセンターの環境影響についての情報を収集し、理解を深める。",
-        "地域の電力需要と供給についての議論に参加する。",
-        "企業の環境への取り組みを監視し、社会的責任を求める声を上げる。"
+        "現在のデータセンターのリスク評価を行い、自社の保険ニーズを確認する。",
+        "DCLPに関しての最新情報をAonの担当者から入手する。",
+        "デジタルインフラのリスク管理と保険について、社内でのトレーニングを始める。"
       ],
       "tags": [
         "DC",
