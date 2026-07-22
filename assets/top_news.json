@@ -1,119 +1,120 @@
 {
-  "date": "2026-07-22",
-  "generatedAtJST": "2026-07-22T07:15:29.819+09:00",
+  "date": "2026-07-23",
+  "generatedAtJST": "2026-07-23T07:15:25.068+09:00",
   "items": [
     {
-      "url": "https://siliconangle.com/2026/07/20/microsoft-will-use-amds-ai-optimized-helios-racks-azure/",
-      "source": "SiliconANGLE News",
-      "publishedAt": "2026-07-20T20:20:47Z",
-      "title": "Microsoft will use AMD’s AI-optimized Helios racks in Azure - SiliconANGLE",
-      "title_ja": "Microsoft、AMDのAI最適化ヘリオスラックをAzureで使用へ",
-      "summary_ja": "Microsoftは、AMDのヘリオスラック設計を使用してAzureサービスを強化すると発表しました。この新たなパートナーシップにより、AMDのInstinct MI455 GPUを搭載したデータセンターラックが用意されます。これにより、AI業務を効率的に処理できる新しい仮想マシンシリーズが展開され、コストの削減とパフォーマンスの向上が期待されます。",
+      "url": "https://4sysops.com/archives/iran-claims-fresh-cruise-missile-strike-on-aws-bahrain-data-center/",
+      "source": "4sysops.com",
+      "publishedAt": "2026-07-21T19:38:45Z",
+      "title": "Iran claims fresh cruise missile strike on AWS Bahrain data center",
+      "title_ja": "イラン、バーレーンのAWSデータセンターに対する新たな巡航ミサイル攻撃を主張",
+      "summary_ja": "イランのイスラム革命防衛隊（IRGC）は2026年7月21日、バーレーンにあるAmazon Web Services（AWS）のデータセンターに巡航ミサイルを発射したと発表しました。この攻撃は、アメリカの何らかの行動に対する報復として行われたとされています。攻撃の結果、施設が破壊されたとのことです。",
       "key_points": [
-        "AMDのHeliosラック設計をMicrosoft Azureで使用。",
-        "Heliosは72のInstinct MI455 GPUを含むデータセンターラック。",
-        "新しいAzureインスタンスシリーズND MI455X v7を発表。",
-        "HEv2シリーズはCPUを基にしたAIアプリケーション向けに最適化。",
-        "HXv2シリーズは科学シミュレーションを含む多様な業務をサポート。"
+        "IRGCがバーレーンのAWSデータセンターに攻撃を主張",
+        "攻撃は2026年7月21日に実施された",
+        "報復行為としての意義が強調されている",
+        "施設が破壊されたとの主張"
       ],
       "glossary": [
         {
-          "term": "Helios",
-          "explain_ja": "AMDがデータセンター用として提供するラック設計。"
+          "term": "IRGC",
+          "explain_ja": "イスラム革命防衛隊。イランの武装部隊の一部で、主に国内外の敵に対する防衛を担う。"
         },
         {
-          "term": "Instinct MI455",
-          "explain_ja": "AMDの次世代GPUで、432 GBのHBM4メモリを搭載。"
-        },
-        {
-          "term": "Epyc",
-          "explain_ja": "AMDのデータセンター向けCPUシリーズ。"
-        },
-        {
-          "term": "Azure Boost",
-          "explain_ja": "仮想化ソフトウェアの処理をより効率的なチップにオフロードする技術。"
+          "term": "AWS",
+          "explain_ja": "Amazon Web Services。アマゾンが提供するクラウドコンピューティングサービス。"
         }
       ],
       "personal_actions": [
-        "新しいAzureインスタンスの展開に向けた社内インフラを見直す。",
-        "AMDおよびMicrosoftの公式発表や技術文書を定期的にチェックする。",
-        "Heliosラックの導入に伴うシステムの最適化計画を検討する。"
+        "データセンターのセキュリティ対策を見直す",
+        "攻撃に備えたBCP（事業継続計画）の確認",
+        "最新の脅威情報に基づくリスク評価を行う"
       ],
       "tags": [
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://cryptobriefing.com/iran-attacks-bahraini-power-station-claims-us-military-ai-data-center/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-07-20T18:16:51Z",
-      "title": "Iran attacks Bahraini power station, claims US military AI data center",
-      "title_ja": "イラン、バーレーンの発電所を攻撃し米軍AIデータセンターを主張",
-      "summary_ja": "イランがバーレーンの発電所を攻撃し、そこが米軍のAI作戦を支援していると主張しています。これは7月22日に発生した軍事行動で、影響が広がる可能性があります。この攻撃は、地域の緊張を高める要因となっていると言えるでしょう。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184563728",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-07-21T17:13:31Z",
+      "title": "Oracle faces $100M annual bill to back Wisconsin datacenter power promises - Slashdot",
+      "title_ja": "オラクル、ウィスコンシンのデータセンター電力約束に年間1億ドルの請求書直面",
+      "summary_ja": "オラクルは、ウィスコンシン州で開発中のデータセンターに関して、年間1億ドルの費用を負担する可能性があります。これは、VantageとOpenAIとの共同プロジェクトに必要な約1GWの電力保証に関連しています。規制当局は、70億ドルの保証についてのスタンスを変えていません。",
       "key_points": [
-        "イランがバーレーンの発電所を攻撃した。",
-        "攻撃は米軍のAI作戦を支持する目的があると主張。",
-        "この事件は地域の軍事的緊張を引き起こす可能性あり。"
+        "オラクルはウィスコンシン州でデータセンターを開発中。",
+        "年間1億ドルの電力コストが想定されている。",
+        "VantageとOpenAIとの提携によるプロジェクト。",
+        "約1GWの電力を保証する必要がある。",
+        "規制当局は70億ドルの保証を改訂しない意向を示している。"
       ],
       "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略で、コンピュータによる知能を表す。"
-        },
         {
           "term": "データセンター",
-          "explain_ja": "コンピュータシステムやサーバを収容し、データの保存や処理を行う施設。"
+          "explain_ja": "データを保存、管理し、処理するための施設。"
+        },
+        {
+          "term": "Vantage",
+          "explain_ja": "データセンターの開発を行う企業。"
+        },
+        {
+          "term": "OpenAI",
+          "explain_ja": "人工知能の研究開発を行う企業。"
+        },
+        {
+          "term": "GW",
+          "explain_ja": "ギガワット、電力の単位で1GWは10億ワットを意味する。"
         }
       ],
       "personal_actions": [
-        "地域のインフラやセキュリティ状況を監視する。",
-        "AIシステムの安全性や脆弱性をチェックする。"
+        "プロジェクトの進行状況や影響を定期的に確認する。",
+        "電力コストや保証について理解を深める。",
+        "業界の規制動向を追う。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://www.carriermanagement.com/news/2026/07/20/290209.htm",
-      "source": "Carriermanagement.com",
-      "publishedAt": "2026-07-20T15:54:09Z",
-      "title": "Aon Ups Data Center Lifecycle Program Capacity Again: Now $5B - Carrier Management",
-      "title_ja": "Aon、データセンターライフサイクルプログラムの容量を再び拡大：現在50億ドル",
-      "summary_ja": "Aon plcは、データセンターライフサイクル保険プログラム(DCLP)の第一者補償容量を追加の15億ドルで拡大し、合計50億ドルに達しました。このプログラムは、デジタルインフラ資産の開発から長期運用までを支援する統合リスクソリューションを提供します。デジタルインフラは世界経済において重要な資産クラスとなっており、クライアントはリスク管理と保険容量の拡大が求められています。",
+      "url": "https://sputnikglobe.com/20260721/irgc-attacks-amazon-data-center-in-bahrain-in-response-to-us-strikes-on-nuclear-power-plant-1124472798.html",
+      "source": "Sputnikglobe.com",
+      "publishedAt": "2026-07-21T13:10:30Z",
+      "title": "IRGC Attacks Amazon’s Bahrain Data Center to Retaliate for US Strikes on Nuclear Power Plant",
+      "title_ja": "IRGCがアメリカのバーレーンデータセンターを攻撃、米国の核発電所への攻撃に報復",
+      "summary_ja": "IRGCは、バーレーンにあるアメリカのアマゾンのデータセンターを攻撃したと発表した。この攻撃は、米国がイランのダルコビン核発電所建設現場に対して実施した攻撃への報復である。国際原子力機関は、この攻撃が放射線リスクを引き起こさないとの見解を示している。米国とイランの間での緊張が高まる中、この事件はさらなる軍事的対立を引き起こす可能性がある。",
       "key_points": [
-        "AonのDCLPは保険容量を50億ドルに引き上げた。",
-        "プログラムは開発から運用までのデジタルインフラ資産をサポートする。",
-        "保険内容には工事全リスク、営業損失、サイバーリスクが含まれる。",
-        "Aonは、よりよいリスク管理を目指して保険とエンジニアリングの専門知識を結集している。",
-        "AIやクラウドコンピューティングの進展により、複雑なプロジェクトへの保険需要が高まっている。"
+        "IRGCがアメリカのアマゾンデータセンターを攻撃したと発表。",
+        "攻撃は、米国のダルコビン核発電所建設現場への攻撃に対する報復。",
+        "国際原子力機関は、攻撃に放射線リスクはないと判断。",
+        "2月28日に始まった米・イスラエルによるイラン攻撃に対抗する一環。",
+        "戦闘の中で合意された停戦が維持されていないとイランは主張。",
+        "トランプ元大統領は7月9日に停戦を無効と宣言。"
       ],
       "glossary": [
         {
-          "term": "DCLP",
-          "explain_ja": "データセンターライフサイクル保険プログラム。データセンター関連のさまざまなリスクをカバーする保険ソリューション。"
+          "term": "IRGC",
+          "explain_ja": "イランのイスラム革命防衛隊。イランの軍事組織であり、政治的影響力も持つ。"
         },
         {
-          "term": "CAR",
-          "explain_ja": "Construction All Risks。工事中の全リスクをカバーする保険。"
+          "term": "NPP",
+          "explain_ja": "原子力発電所（Nuclear Power Plant）の略。原子力を利用して電力を生成する施設。"
         },
         {
-          "term": "DSU",
-          "explain_ja": "Delay in Startup。開始の遅延による損失をカバーする保険。"
+          "term": "米イスラエル戦争",
+          "explain_ja": "アメリカとイスラエルがイランに対して行った軍事的な攻撃を指す。"
         },
         {
-          "term": "OPPI",
-          "explain_ja": "Owners Protective Professional Indemnity。所有者保護の職業上過失補償。"
+          "term": "国際原子力機関（IAEA）",
+          "explain_ja": "原子力の平和利用を促進することを目的とした国際的な機関。"
         }
       ],
       "personal_actions": [
-        "現在のデータセンターのリスク評価を行い、自社の保険ニーズを確認する。",
-        "DCLPに関しての最新情報をAonの担当者から入手する。",
-        "デジタルインフラのリスク管理と保険について、社内でのトレーニングを始める。"
+        "攻撃に関連するサイバーセキュリティの強化を確認する。",
+        "データセンターやクラウドサービスのバックアップ体制を再評価する。",
+        "関連する国際情勢をウォッチし、業務に影響が出る可能性について準備する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     }
   ]
