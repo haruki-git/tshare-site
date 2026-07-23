@@ -1,120 +1,121 @@
 {
-  "date": "2026-07-23",
-  "generatedAtJST": "2026-07-23T07:15:25.068+09:00",
+  "date": "2026-07-24",
+  "generatedAtJST": "2026-07-24T07:15:39.808+09:00",
   "items": [
     {
-      "url": "https://4sysops.com/archives/iran-claims-fresh-cruise-missile-strike-on-aws-bahrain-data-center/",
-      "source": "4sysops.com",
-      "publishedAt": "2026-07-21T19:38:45Z",
-      "title": "Iran claims fresh cruise missile strike on AWS Bahrain data center",
-      "title_ja": "イラン、バーレーンのAWSデータセンターに対する新たな巡航ミサイル攻撃を主張",
-      "summary_ja": "イランのイスラム革命防衛隊（IRGC）は2026年7月21日、バーレーンにあるAmazon Web Services（AWS）のデータセンターに巡航ミサイルを発射したと発表しました。この攻撃は、アメリカの何らかの行動に対する報復として行われたとされています。攻撃の結果、施設が破壊されたとのことです。",
+      "url": "https://wccftech.com/spacexai-hunts-multiple-texas-sites-for-ground-up-data-centers-doubling-down-on-ai-after-xai-absorption/",
+      "source": "Wccftech",
+      "publishedAt": "2026-07-22T21:16:32Z",
+      "title": "SpaceXAI Hunts Multiple Texas Sites for Ground-Up Data Centers, Doubling Down on AI After xAI Absorption",
+      "title_ja": "SpaceXAI、テキサスでの新たなデータセンター建設を検討しAI事業を強化中",
+      "summary_ja": "SpaceXは、計算能力の多様化を目指し新たなデータセンターの建設を計画しています。自社のAIスタートアップであるxAIの買収に伴い、AIソフトウェア業界にも進出しました。テキサスに複数の施設を構築することで、テネシー州のColossusデータセンターの規模を超えることを目指しています。",
       "key_points": [
-        "IRGCがバーレーンのAWSデータセンターに攻撃を主張",
-        "攻撃は2026年7月21日に実施された",
-        "報復行為としての意義が強調されている",
-        "施設が破壊されたとの主張"
+        "SpaceXはデータセンターの能力を拡大する計画を立てている。",
+        "AIスタートアップxAIの買収により、AIソフトウェア領域に参入。",
+        "テキサスでの新しいデータセンターの建設を検討中。",
+        "Googleとの契約により、月額9億2000万ドルの収益を見込む。",
+        "SpaceXは宇宙データセンターの構想も進めている。"
       ],
       "glossary": [
         {
-          "term": "IRGC",
-          "explain_ja": "イスラム革命防衛隊。イランの武装部隊の一部で、主に国内外の敵に対する防衛を担う。"
+          "term": "xAI",
+          "explain_ja": "Elon Muskが設立したAIに特化したスタートアップ。"
         },
         {
-          "term": "AWS",
-          "explain_ja": "Amazon Web Services。アマゾンが提供するクラウドコンピューティングサービス。"
+          "term": "Colossus",
+          "explain_ja": "SpaceXAIが運営するデータセンターの名称。"
+        },
+        {
+          "term": "NVIDIA",
+          "explain_ja": "AIやグラフィックス処理に特化した半導体企業。"
         }
       ],
       "personal_actions": [
-        "データセンターのセキュリティ対策を見直す",
-        "攻撃に備えたBCP（事業継続計画）の確認",
-        "最新の脅威情報に基づくリスク評価を行う"
+        "自社のデータセンター戦略における最新動向を確認する。",
+        "AI技術の進展に備えた計画を立てる。",
+        "同業他社との提携の可能性を検討する。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184563728",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-07-21T17:13:31Z",
-      "title": "Oracle faces $100M annual bill to back Wisconsin datacenter power promises - Slashdot",
-      "title_ja": "オラクル、ウィスコンシンのデータセンター電力約束に年間1億ドルの請求書直面",
-      "summary_ja": "オラクルは、ウィスコンシン州で開発中のデータセンターに関して、年間1億ドルの費用を負担する可能性があります。これは、VantageとOpenAIとの共同プロジェクトに必要な約1GWの電力保証に関連しています。規制当局は、70億ドルの保証についてのスタンスを変えていません。",
+      "url": "https://cryptobriefing.com/aalo-atomics-funding-ai-power-demand/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-07-22T19:51:57Z",
+      "title": "Aalo Atomics raises funding amid AI data center power demand",
+      "title_ja": "Aalo Atomics、AIデータセンター向けに資金調達",
+      "summary_ja": "Aalo AtomicsがAIデータセンターの電力需要に応えるため、1億ドルを調達した。この資金は、新しいエネルギーソリューションとしての原子炉の開発に使用される。AIの普及に伴い、電力需要が増大している背景がある。",
       "key_points": [
-        "オラクルはウィスコンシン州でデータセンターを開発中。",
-        "年間1億ドルの電力コストが想定されている。",
-        "VantageとOpenAIとの提携によるプロジェクト。",
-        "約1GWの電力を保証する必要がある。",
-        "規制当局は70億ドルの保証を改訂しない意向を示している。"
+        "Aalo Atomicsが1億ドルの資金を調達",
+        "目標はAIデータセンターの電力需要に応えること",
+        "原子炉の開発に向けた投資",
+        "革新的なエネルギーソリューションを提供予定",
+        "AI技術の成長が電力需要を押し上げている"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存、管理し、処理するための施設。"
+          "term": "Aalo Atomics",
+          "explain_ja": "AIデータセンター向けに原子炉を開発する企業"
         },
         {
-          "term": "Vantage",
-          "explain_ja": "データセンターの開発を行う企業。"
+          "term": "データセンター",
+          "explain_ja": "データを処理・保管するための施設"
+        },
+        {
+          "term": "電力需要",
+          "explain_ja": "特定の時期に必要とされる電力の量"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能、コンピュータが知的なタスクを実行する技術"
+        }
+      ],
+      "personal_actions": [
+        "AIデータセンターの電力消費について社内で情報共有を行う",
+        "新しいエネルギーソリューションのトレンドを追跡する",
+        "原子炉や代替エネルギーの導入可能性について議論する"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://4sysops.com/archives/openai-increases-infrastructure-spending-to-750-billion-by-2030/",
+      "source": "4sysops.com",
+      "publishedAt": "2026-07-22T17:29:01Z",
+      "title": "OpenAI increases infrastructure spending to $750 billion by 2030",
+      "title_ja": "OpenAI、2030年までにインフラ投資を7,500億ドルに増加",
+      "summary_ja": "OpenAIは2030年までのインフラ投資を7,500億ドルに引き上げると発表した。これは従来の予測から25%の増加を示している。主要な戦略の一つとして、ジョージア州にある20億ドルのデータセンターキャンパス「プロジェクトカメリア」が挙げられる。",
+      "key_points": [
+        "OpenAIのインフラ投資が2030年までに7500億ドルに達する見込み",
+        "従来の予測から25%増加",
+        "ジョージア州に20億ドルのデータセンターキャンパスを計画",
+        "プロジェクトカメリアが主要なプロジェクト",
+        "インフラ強化を通じてAIサービスの拡大を目指す"
+      ],
+      "glossary": [
+        {
+          "term": "Project Camellia",
+          "explain_ja": "ジョージア州に計画された20億ドルのデータセンタープロジェクト。"
         },
         {
           "term": "OpenAI",
-          "explain_ja": "人工知能の研究開発を行う企業。"
+          "explain_ja": "人工知能の研究と開発を行う企業。"
         },
         {
-          "term": "GW",
-          "explain_ja": "ギガワット、電力の単位で1GWは10億ワットを意味する。"
+          "term": "データセンター",
+          "explain_ja": "データの保存と処理を行うための施設。"
         }
       ],
       "personal_actions": [
-        "プロジェクトの進行状況や影響を定期的に確認する。",
-        "電力コストや保証について理解を深める。",
-        "業界の規制動向を追う。"
+        "社内のインフラ投資計画を再評価する",
+        "今後のプロジェクトに対するリソース配分を見直す"
       ],
       "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://sputnikglobe.com/20260721/irgc-attacks-amazon-data-center-in-bahrain-in-response-to-us-strikes-on-nuclear-power-plant-1124472798.html",
-      "source": "Sputnikglobe.com",
-      "publishedAt": "2026-07-21T13:10:30Z",
-      "title": "IRGC Attacks Amazon’s Bahrain Data Center to Retaliate for US Strikes on Nuclear Power Plant",
-      "title_ja": "IRGCがアメリカのバーレーンデータセンターを攻撃、米国の核発電所への攻撃に報復",
-      "summary_ja": "IRGCは、バーレーンにあるアメリカのアマゾンのデータセンターを攻撃したと発表した。この攻撃は、米国がイランのダルコビン核発電所建設現場に対して実施した攻撃への報復である。国際原子力機関は、この攻撃が放射線リスクを引き起こさないとの見解を示している。米国とイランの間での緊張が高まる中、この事件はさらなる軍事的対立を引き起こす可能性がある。",
-      "key_points": [
-        "IRGCがアメリカのアマゾンデータセンターを攻撃したと発表。",
-        "攻撃は、米国のダルコビン核発電所建設現場への攻撃に対する報復。",
-        "国際原子力機関は、攻撃に放射線リスクはないと判断。",
-        "2月28日に始まった米・イスラエルによるイラン攻撃に対抗する一環。",
-        "戦闘の中で合意された停戦が維持されていないとイランは主張。",
-        "トランプ元大統領は7月9日に停戦を無効と宣言。"
-      ],
-      "glossary": [
-        {
-          "term": "IRGC",
-          "explain_ja": "イランのイスラム革命防衛隊。イランの軍事組織であり、政治的影響力も持つ。"
-        },
-        {
-          "term": "NPP",
-          "explain_ja": "原子力発電所（Nuclear Power Plant）の略。原子力を利用して電力を生成する施設。"
-        },
-        {
-          "term": "米イスラエル戦争",
-          "explain_ja": "アメリカとイスラエルがイランに対して行った軍事的な攻撃を指す。"
-        },
-        {
-          "term": "国際原子力機関（IAEA）",
-          "explain_ja": "原子力の平和利用を促進することを目的とした国際的な機関。"
-        }
-      ],
-      "personal_actions": [
-        "攻撃に関連するサイバーセキュリティの強化を確認する。",
-        "データセンターやクラウドサービスのバックアップ体制を再評価する。",
-        "関連する国際情勢をウォッチし、業務に影響が出る可能性について準備する。"
-      ],
-      "tags": [
-        "DC"
+        "AI"
       ]
     }
   ]
