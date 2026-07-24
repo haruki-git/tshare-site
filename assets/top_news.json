@@ -1,39 +1,32 @@
 {
-  "date": "2026-07-24",
-  "generatedAtJST": "2026-07-24T07:15:39.808+09:00",
+  "date": "2026-07-25",
+  "generatedAtJST": "2026-07-25T07:15:21.303+09:00",
   "items": [
     {
-      "url": "https://wccftech.com/spacexai-hunts-multiple-texas-sites-for-ground-up-data-centers-doubling-down-on-ai-after-xai-absorption/",
-      "source": "Wccftech",
-      "publishedAt": "2026-07-22T21:16:32Z",
-      "title": "SpaceXAI Hunts Multiple Texas Sites for Ground-Up Data Centers, Doubling Down on AI After xAI Absorption",
-      "title_ja": "SpaceXAI、テキサスでの新たなデータセンター建設を検討しAI事業を強化中",
-      "summary_ja": "SpaceXは、計算能力の多様化を目指し新たなデータセンターの建設を計画しています。自社のAIスタートアップであるxAIの買収に伴い、AIソフトウェア業界にも進出しました。テキサスに複数の施設を構築することで、テネシー州のColossusデータセンターの規模を超えることを目指しています。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184617412",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-07-23T20:12:13Z",
+      "title": "Trump expands a voluntary pledge to protect consumers from high utility bills from AI data centers - AP News - Slashdot",
+      "title_ja": "トランプ、AIデータセンターによる高額電気料金から消費者を守るための自主的誓約を拡大",
+      "summary_ja": "トランプ氏は、AIデータセンターによる高額電気料金から消費者を守るための自主的誓約を拡大しました。この誓約には、全米の23州の知事が参加しています。目的は、エネルギーコストの上昇を抑制し、消費者に対する影響を軽減することです。",
       "key_points": [
-        "SpaceXはデータセンターの能力を拡大する計画を立てている。",
-        "AIスタートアップxAIの買収により、AIソフトウェア領域に参入。",
-        "テキサスでの新しいデータセンターの建設を検討中。",
-        "Googleとの契約により、月額9億2000万ドルの収益を見込む。",
-        "SpaceXは宇宙データセンターの構想も進めている。"
+        "トランプ氏がAIデータセンターによる電気料金の上昇を抑えるための誓約を拡大",
+        "23州の知事がこの誓約に参加",
+        "自発的な誓約は消費者保護を目的としている"
       ],
       "glossary": [
         {
-          "term": "xAI",
-          "explain_ja": "Elon Muskが設立したAIに特化したスタートアップ。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能を利用するためのデータを処理・保存する施設。"
         },
         {
-          "term": "Colossus",
-          "explain_ja": "SpaceXAIが運営するデータセンターの名称。"
-        },
-        {
-          "term": "NVIDIA",
-          "explain_ja": "AIやグラフィックス処理に特化した半導体企業。"
+          "term": "電気料金",
+          "explain_ja": "家庭やビジネスが支払う電力の料金。"
         }
       ],
       "personal_actions": [
-        "自社のデータセンター戦略における最新動向を確認する。",
-        "AI技術の進展に備えた計画を立てる。",
-        "同業他社との提携の可能性を検討する。"
+        "自社の電気料金プランを確認し、必要に応じて見直す。",
+        "AI関連のサービスや設備のコスト影響を分析する。"
       ],
       "tags": [
         "DC",
@@ -41,80 +34,71 @@
       ]
     },
     {
-      "url": "https://cryptobriefing.com/aalo-atomics-funding-ai-power-demand/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-07-22T19:51:57Z",
-      "title": "Aalo Atomics raises funding amid AI data center power demand",
-      "title_ja": "Aalo Atomics、AIデータセンター向けに資金調達",
-      "summary_ja": "Aalo AtomicsがAIデータセンターの電力需要に応えるため、1億ドルを調達した。この資金は、新しいエネルギーソリューションとしての原子炉の開発に使用される。AIの普及に伴い、電力需要が増大している背景がある。",
+      "url": "https://newrepublic.com/post/213444/trump-people-begging-live-near-data-centers-neighborhoods",
+      "source": "The New Republic",
+      "publishedAt": "2026-07-23T20:00:53Z",
+      "title": "Clip & Save: Trump Says People Are “Begging” to Live Near Data Centers",
+      "title_ja": "トランプ、「データセンター近くに住むことを渇望する人々」と発言",
+      "summary_ja": "トランプ大統領は、データセンターに反対するアメリカ人が外国のプロパガンダに騙されていると述べ、実際には多くの人々がデータセンターの近くに住むことを望んでいると主張しています。この発言は、データセンター建設に対する他国からの圧力に対抗する文脈で行われました。データセンターに対する認識が地域社会にも影響を及ぼしている可能性があります。",
       "key_points": [
-        "Aalo Atomicsが1億ドルの資金を調達",
-        "目標はAIデータセンターの電力需要に応えること",
-        "原子炉の開発に向けた投資",
-        "革新的なエネルギーソリューションを提供予定",
-        "AI技術の成長が電力需要を押し上げている"
+        "トランプ大統領がデータセンターに対する反対意見を批判した。",
+        "データセンター近くに住むことを望む人々が多いと主張。",
+        "外国からのプロパガンダが影響していると警告。",
+        "データセンター建設の重要性を強調。"
       ],
       "glossary": [
         {
-          "term": "Aalo Atomics",
-          "explain_ja": "AIデータセンター向けに原子炉を開発する企業"
-        },
-        {
           "term": "データセンター",
-          "explain_ja": "データを処理・保管するための施設"
+          "explain_ja": "大量のデータを管理・保存・処理するための施設。"
         },
         {
-          "term": "電力需要",
-          "explain_ja": "特定の時期に必要とされる電力の量"
-        },
+          "term": "プロパガンダ",
+          "explain_ja": "特定の意見や主張を広めるための情報操作。"
+        }
+      ],
+      "personal_actions": [
+        "地域のデータセンターに関する意見を収集する。",
+        "データセンターの建設計画について最新情報を確認する。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://financialpost.com/pmn/business-pmn/trump-expands-ai-data-center-pledge-in-bid-to-ease-power-costs",
+      "source": "Financial Post",
+      "publishedAt": "2026-07-23T19:36:15Z",
+      "title": "Trump Expands AI Data Center Pledge in Bid to Ease Power Costs",
+      "title_ja": "トランプ大統領、AIデータセンターへの電力コスト負担の拡大を発表",
+      "summary_ja": "トランプ大統領は、電力コストを軽減するためにAIデータセンター向けの新たなコミットメントを歓迎しました。これにより、テクノロジー企業はエネルギー消費の責任を負うことになります。この政策は、電力供給者とデータセンター開発者からの支援を受けており、AIシステムの需要に対応することを目的としています。",
+      "key_points": [
+        "トランプ大統領が新たな電力コスト軽減策を推進。",
+        "電力会社とデータセンター開発者がコミットメントを発表。",
+        "テクノロジー企業が電力消費の責任を負うことになる。",
+        "AIシステムによるエネルギー需要の増加を背景にした政策。",
+        "電力供給者の支援を受けての取り組み。"
+      ],
+      "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能、コンピュータが知的なタスクを実行する技術"
-        }
-      ],
-      "personal_actions": [
-        "AIデータセンターの電力消費について社内で情報共有を行う",
-        "新しいエネルギーソリューションのトレンドを追跡する",
-        "原子炉や代替エネルギーの導入可能性について議論する"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://4sysops.com/archives/openai-increases-infrastructure-spending-to-750-billion-by-2030/",
-      "source": "4sysops.com",
-      "publishedAt": "2026-07-22T17:29:01Z",
-      "title": "OpenAI increases infrastructure spending to $750 billion by 2030",
-      "title_ja": "OpenAI、2030年までにインフラ投資を7,500億ドルに増加",
-      "summary_ja": "OpenAIは2030年までのインフラ投資を7,500億ドルに引き上げると発表した。これは従来の予測から25%の増加を示している。主要な戦略の一つとして、ジョージア州にある20億ドルのデータセンターキャンパス「プロジェクトカメリア」が挙げられる。",
-      "key_points": [
-        "OpenAIのインフラ投資が2030年までに7500億ドルに達する見込み",
-        "従来の予測から25%増加",
-        "ジョージア州に20億ドルのデータセンターキャンパスを計画",
-        "プロジェクトカメリアが主要なプロジェクト",
-        "インフラ強化を通じてAIサービスの拡大を目指す"
-      ],
-      "glossary": [
-        {
-          "term": "Project Camellia",
-          "explain_ja": "ジョージア州に計画された20億ドルのデータセンタープロジェクト。"
-        },
-        {
-          "term": "OpenAI",
-          "explain_ja": "人工知能の研究と開発を行う企業。"
+          "explain_ja": "人工知能（Artificial Intelligence）の略で、人間の知的作業を模倣する技術。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データの保存と処理を行うための施設。"
+          "explain_ja": "情報を集約、管理するための施設で、多数のサーバーを収容している。"
+        },
+        {
+          "term": "電力コスト",
+          "explain_ja": "電力の消費にかかる費用のこと。"
         }
       ],
       "personal_actions": [
-        "社内のインフラ投資計画を再評価する",
-        "今後のプロジェクトに対するリソース配分を見直す"
+        "データセンターにおける電力使用を効率的に管理する方法を検討する。",
+        "最新のAI技術に関する自社の電力消費を評価する。",
+        "電力契約の見直しを行い、コスト削減の可能性を探る。"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     }
