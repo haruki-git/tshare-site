@@ -1,32 +1,64 @@
 {
-  "date": "2026-07-25",
-  "generatedAtJST": "2026-07-25T07:15:21.303+09:00",
+  "date": "2026-07-26",
+  "generatedAtJST": "2026-07-26T07:15:18.934+09:00",
   "items": [
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184617412",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-07-23T20:12:13Z",
-      "title": "Trump expands a voluntary pledge to protect consumers from high utility bills from AI data centers - AP News - Slashdot",
-      "title_ja": "トランプ、AIデータセンターによる高額電気料金から消費者を守るための自主的誓約を拡大",
-      "summary_ja": "トランプ氏は、AIデータセンターによる高額電気料金から消費者を守るための自主的誓約を拡大しました。この誓約には、全米の23州の知事が参加しています。目的は、エネルギーコストの上昇を抑制し、消費者に対する影響を軽減することです。",
+      "url": "https://www.motherjones.com/politics/2026/07/trumps-epa-wants-fewer-people-asking-questions-about-data-center-pollution/",
+      "source": "Mother Jones",
+      "publishedAt": "2026-07-24T20:16:42Z",
+      "title": "Trump’s EPA Wants Fewer People Asking Questions About Data Center Pollution",
+      "title_ja": "トランプ政権のEPA、データセンターの汚染に関する質問を減らす方針",
+      "summary_ja": "トランプ政権の環境保護庁（EPA）は、データセンターの汚染に関する質疑を減らすための規則変更を検討しています。この変更により、汚染者が新しい施設を建設しやすくなる可能性があります。この影響により環境への配慮が後退し、さらなる汚染が懸念されています。",
       "key_points": [
-        "トランプ氏がAIデータセンターによる電気料金の上昇を抑えるための誓約を拡大",
-        "23州の知事がこの誓約に参加",
-        "自発的な誓約は消費者保護を目的としている"
+        "トランプ政権のEPAが新規則を検討中",
+        "データセンターの汚染に対する質疑を減らす意向",
+        "汚染者の施設建設が容易になる可能性",
+        "環境への影響が懸念されている",
+        "規則変更はより広範な汚染を助長する恐れがある"
+      ],
+      "glossary": [
+        {
+          "term": "EPA",
+          "explain_ja": "アメリカ合衆国の環境保護庁。環境保護政策を監督・実施する機関。"
+        },
+        {
+          "term": "汚染",
+          "explain_ja": "環境に有害な物質が放出されること。特に、空気や水に含まれる有害物質を指す。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの運営における環境基準の確認を行う",
+        "新しい規則の動向を追跡し、影響を評価する"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/eaton-nvent-ai-data-center-revenue-growth/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-07-24T17:42:30Z",
+      "title": "Eaton and nVent Electric scale revenues amid AI data center boom, with ripple effects for crypto mining",
+      "title_ja": "EatonとnVent、AIデータセンターのブームで収益成長と暗号マイニングへの波及効果",
+      "summary_ja": "EatonとnVent ElectricはAIデータセンターの需要によって強い収益成長を実現しています。これに伴い、エネルギー市場やグリッド容量に影響が及んでおり、暗号マイニングにも波及効果が見込まれています。この成長は、需要の増加を背景にしたビジネスの変化を示しています。",
+      "key_points": [
+        "EatonとnVentは、AIデータセンターの需要により収益を大幅に伸ばした。",
+        "エネルギー市場とグリッド容量に影響を与えている。",
+        "暗号マイニング業界にも波及効果が見られる。"
       ],
       "glossary": [
         {
           "term": "AIデータセンター",
-          "explain_ja": "人工知能を利用するためのデータを処理・保存する施設。"
+          "explain_ja": "人工知能向けのデータ処理を行う専門のデータセンター。"
         },
         {
-          "term": "電気料金",
-          "explain_ja": "家庭やビジネスが支払う電力の料金。"
+          "term": "収益成長",
+          "explain_ja": "企業の売上や利益が増加すること。"
         }
       ],
       "personal_actions": [
-        "自社の電気料金プランを確認し、必要に応じて見直す。",
-        "AI関連のサービスや設備のコスト影響を分析する。"
+        "AIデータセンターの需要の変化に注意し、関連業界の動向を確認する。",
+        "地域のエネルギー供給状況やグリッド容量について情報を集める。"
       ],
       "tags": [
         "DC",
@@ -34,68 +66,33 @@
       ]
     },
     {
-      "url": "https://newrepublic.com/post/213444/trump-people-begging-live-near-data-centers-neighborhoods",
-      "source": "The New Republic",
-      "publishedAt": "2026-07-23T20:00:53Z",
-      "title": "Clip & Save: Trump Says People Are “Begging” to Live Near Data Centers",
-      "title_ja": "トランプ、「データセンター近くに住むことを渇望する人々」と発言",
-      "summary_ja": "トランプ大統領は、データセンターに反対するアメリカ人が外国のプロパガンダに騙されていると述べ、実際には多くの人々がデータセンターの近くに住むことを望んでいると主張しています。この発言は、データセンター建設に対する他国からの圧力に対抗する文脈で行われました。データセンターに対する認識が地域社会にも影響を及ぼしている可能性があります。",
+      "url": "https://www.theblaze.com/news/you-cant-fight-it-trump-defends-data-centers-signs-up-23-governors-to-shield-americans-from-price-hikes",
+      "source": "TheBlaze",
+      "publishedAt": "2026-07-24T15:40:00Z",
+      "title": "'You can't fight it': Trump defends data centers, signs up 23 governors to shield Americans from price hikes",
+      "title_ja": "トランプ大統領、データセンターを擁護し23州知事と連携して価格高騰から国民を守る",
+      "summary_ja": "トランプ大統領はデータセンターの重要性を強調し、AI分野におけるアメリカの優位性を追求しています。彼は23州の知事と共に、価格高騰から国民を守るための方策を講じています。この取り組みは、技術競争が激化する中でのアメリカの立場を強化することを目指しています。",
       "key_points": [
-        "トランプ大統領がデータセンターに対する反対意見を批判した。",
-        "データセンター近くに住むことを望む人々が多いと主張。",
-        "外国からのプロパガンダが影響していると警告。",
-        "データセンター建設の重要性を強調。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを管理・保存・処理するための施設。"
-        },
-        {
-          "term": "プロパガンダ",
-          "explain_ja": "特定の意見や主張を広めるための情報操作。"
-        }
-      ],
-      "personal_actions": [
-        "地域のデータセンターに関する意見を収集する。",
-        "データセンターの建設計画について最新情報を確認する。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://financialpost.com/pmn/business-pmn/trump-expands-ai-data-center-pledge-in-bid-to-ease-power-costs",
-      "source": "Financial Post",
-      "publishedAt": "2026-07-23T19:36:15Z",
-      "title": "Trump Expands AI Data Center Pledge in Bid to Ease Power Costs",
-      "title_ja": "トランプ大統領、AIデータセンターへの電力コスト負担の拡大を発表",
-      "summary_ja": "トランプ大統領は、電力コストを軽減するためにAIデータセンター向けの新たなコミットメントを歓迎しました。これにより、テクノロジー企業はエネルギー消費の責任を負うことになります。この政策は、電力供給者とデータセンター開発者からの支援を受けており、AIシステムの需要に対応することを目的としています。",
-      "key_points": [
-        "トランプ大統領が新たな電力コスト軽減策を推進。",
-        "電力会社とデータセンター開発者がコミットメントを発表。",
-        "テクノロジー企業が電力消費の責任を負うことになる。",
-        "AIシステムによるエネルギー需要の増加を背景にした政策。",
-        "電力供給者の支援を受けての取り組み。"
+        "トランプ大統領がアメリカのデータセンターを擁護。",
+        "23州の知事と連携して国民を価格高騰から守る方策を実施。",
+        "AI分野におけるアメリカの優位性を強調。",
+        "連邦政府が所有するデータセンターの利用促進を推進。",
+        "技術競争におけるアメリカの立場を強化する意図。"
       ],
       "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略で、人間の知的作業を模倣する技術。"
+          "explain_ja": "人工知能（AI）は、機械が人間のように学習、推論、問題解決を行う技術。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "情報を集約、管理するための施設で、多数のサーバーを収容している。"
-        },
-        {
-          "term": "電力コスト",
-          "explain_ja": "電力の消費にかかる費用のこと。"
+          "explain_ja": "データとアプリケーションを保存、管理、配信するための施設。"
         }
       ],
       "personal_actions": [
-        "データセンターにおける電力使用を効率的に管理する方法を検討する。",
-        "最新のAI技術に関する自社の電力消費を評価する。",
-        "電力契約の見直しを行い、コスト削減の可能性を探る。"
+        "データセンターの運営についての最新情報をキャッチアップする。",
+        "地元の政府が技術投資にどのように関与しているかを確認する。",
+        "価格高騰に対処するための地域の政策を調べる。"
       ],
       "tags": [
         "DC",
