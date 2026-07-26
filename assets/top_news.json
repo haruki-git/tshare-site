@@ -1,102 +1,108 @@
 {
-  "date": "2026-07-26",
-  "generatedAtJST": "2026-07-26T07:15:18.934+09:00",
+  "date": "2026-07-27",
+  "generatedAtJST": "2026-07-27T07:15:19.170+09:00",
   "items": [
     {
-      "url": "https://www.motherjones.com/politics/2026/07/trumps-epa-wants-fewer-people-asking-questions-about-data-center-pollution/",
-      "source": "Mother Jones",
-      "publishedAt": "2026-07-24T20:16:42Z",
-      "title": "Trump’s EPA Wants Fewer People Asking Questions About Data Center Pollution",
-      "title_ja": "トランプ政権のEPA、データセンターの汚染に関する質問を減らす方針",
-      "summary_ja": "トランプ政権の環境保護庁（EPA）は、データセンターの汚染に関する質疑を減らすための規則変更を検討しています。この変更により、汚染者が新しい施設を建設しやすくなる可能性があります。この影響により環境への配慮が後退し、さらなる汚染が懸念されています。",
+      "url": "https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-07-25T13:06:23Z",
+      "title": "One fallen power line exposed a growing AI data center problem. Here's how to fix it. | TechCrunch",
+      "title_ja": "倒れた電線が浮き彫りにしたAIデータセンターの問題とその解決策",
+      "summary_ja": "北バージニアでの事故が、データセンターの電力網の混乱時の対応の不十分さを明らかにしました。この問題は、AIデータセンターの運用において重要であり、今後の対策が求められています。早急な改善策を講じることが、運用の安定性と信頼性を高める鍵となるでしょう。",
       "key_points": [
-        "トランプ政権のEPAが新規則を検討中",
-        "データセンターの汚染に対する質疑を減らす意向",
-        "汚染者の施設建設が容易になる可能性",
-        "環境への影響が懸念されている",
-        "規則変更はより広範な汚染を助長する恐れがある"
+        "北バージニアでの電線倒壊によりデータセンターの脆弱性が露呈",
+        "データセンターは電力供給障害に対する対応が不十分",
+        "AIの急速な普及に伴い、安定した電力供給の重要性が増大",
+        "効果的な対策を講じることで運用の信頼性を向上可能",
+        "電力網の混乱に備えた新たな運営基準が必要"
       ],
       "glossary": [
         {
-          "term": "EPA",
-          "explain_ja": "アメリカ合衆国の環境保護庁。環境保護政策を監督・実施する機関。"
+          "term": "データセンター",
+          "explain_ja": "コンピュータシステムと関連設備を集中的に配置した施設。"
         },
         {
-          "term": "汚染",
-          "explain_ja": "環境に有害な物質が放出されること。特に、空気や水に含まれる有害物質を指す。"
+          "term": "AI",
+          "explain_ja": "人工知能の略称で、人間の知能を模倣したシステムや技術。"
         }
       ],
       "personal_actions": [
-        "データセンターの運営における環境基準の確認を行う",
-        "新しい規則の動向を追跡し、影響を評価する"
+        "データセンターの電力供給計画を見直す",
+        "災害時の対応手順を確認・更新する"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.techradar.com/pro/the-government-has-all-but-forgotten-that-most-data-centres-require-water-to-cool-their-systems-industry-trade-board-warns-uk-government-over-data-center-thirst-for-resources",
+      "source": "TechRadar",
+      "publishedAt": "2026-07-25T06:00:00Z",
+      "title": "'The government has all but forgotten that most data centres require water to cool their systems': Industry trade board warns UK government over data center thirst for resources",
+      "title_ja": "データセンターの冷却に必要な水を政府が忘れたと業界団体が警告",
+      "summary_ja": "イギリスの業界団体Water UKが、政府のデータセンター水資源への配慮不足を指摘している。2030年までにデータセンター容量を3倍に拡大する計画があるにも関わらず、水の重要性が軽視されていると警告。これにより資源の不足が懸念され、冷却システムの持続可能性に影響を与えかねない。",
+      "key_points": [
+        "Water UKがイギリス政府に警告を発した",
+        "データセンター容量を2030年までに3倍にする計画",
+        "データセンターは水を冷却に必要とする",
+        "政府の水資源への配慮が不足している",
+        "資源不足の懸念が生じている"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "サーバーを保管し、データを処理するための施設。"
+        },
+        {
+          "term": "冷却システム",
+          "explain_ja": "データセンター内の機器を適切な温度に保つための技術。"
+        },
+        {
+          "term": "Water UK",
+          "explain_ja": "イギリスの水業界を代表する業界団体。"
+        }
+      ],
+      "personal_actions": [
+        "データセンター内の冷却方法を見直す",
+        "水資源管理の重要性を意識する",
+        "今後の増設計画を考慮し、水の利用効率を改善する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://cryptobriefing.com/eaton-nvent-ai-data-center-revenue-growth/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-07-24T17:42:30Z",
-      "title": "Eaton and nVent Electric scale revenues amid AI data center boom, with ripple effects for crypto mining",
-      "title_ja": "EatonとnVent、AIデータセンターのブームで収益成長と暗号マイニングへの波及効果",
-      "summary_ja": "EatonとnVent ElectricはAIデータセンターの需要によって強い収益成長を実現しています。これに伴い、エネルギー市場やグリッド容量に影響が及んでおり、暗号マイニングにも波及効果が見込まれています。この成長は、需要の増加を背景にしたビジネスの変化を示しています。",
+      "url": "https://wattsupwiththat.com/2026/07/24/renewables-cant-keep-up-with-data-center-pace-as-usual-the-left-wants-government-to-step-in/",
+      "source": "Wattsupwiththat.com",
+      "publishedAt": "2026-07-25T05:00:00Z",
+      "title": "Renewables ‘Can’t Keep Up’ With Data Center Pace. As Usual, the Left Wants Government to Step In.",
+      "title_ja": "再生可能エネルギーはデータセンターのペースに追いつけない問題",
+      "summary_ja": "データセンターの急速な拡大が、再生可能エネルギーの利用を上回っているという懸念が高まっています。特に米国の情報技術競争において、中国との競争が影響しています。これに対して、政治的な左派は政府の介入を求めています。",
       "key_points": [
-        "EatonとnVentは、AIデータセンターの需要により収益を大幅に伸ばした。",
-        "エネルギー市場とグリッド容量に影響を与えている。",
-        "暗号マイニング業界にも波及効果が見られる。"
+        "データセンターの急速な増加が続いている。",
+        "再生可能エネルギーの供給が需要に追いついていない。",
+        "政治的な左派は、政府の介入を提案している。",
+        "米国と中国の競争が背景にある。",
+        "スタンドアロンの天然ガス施設の建設が進んでいる。"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能向けのデータ処理を行う専門のデータセンター。"
-        },
-        {
-          "term": "収益成長",
-          "explain_ja": "企業の売上や利益が増加すること。"
-        }
-      ],
-      "personal_actions": [
-        "AIデータセンターの需要の変化に注意し、関連業界の動向を確認する。",
-        "地域のエネルギー供給状況やグリッド容量について情報を集める。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.theblaze.com/news/you-cant-fight-it-trump-defends-data-centers-signs-up-23-governors-to-shield-americans-from-price-hikes",
-      "source": "TheBlaze",
-      "publishedAt": "2026-07-24T15:40:00Z",
-      "title": "'You can't fight it': Trump defends data centers, signs up 23 governors to shield Americans from price hikes",
-      "title_ja": "トランプ大統領、データセンターを擁護し23州知事と連携して価格高騰から国民を守る",
-      "summary_ja": "トランプ大統領はデータセンターの重要性を強調し、AI分野におけるアメリカの優位性を追求しています。彼は23州の知事と共に、価格高騰から国民を守るための方策を講じています。この取り組みは、技術競争が激化する中でのアメリカの立場を強化することを目指しています。",
-      "key_points": [
-        "トランプ大統領がアメリカのデータセンターを擁護。",
-        "23州の知事と連携して国民を価格高騰から守る方策を実施。",
-        "AI分野におけるアメリカの優位性を強調。",
-        "連邦政府が所有するデータセンターの利用促進を推進。",
-        "技術競争におけるアメリカの立場を強化する意図。"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能（AI）は、機械が人間のように学習、推論、問題解決を行う技術。"
+          "term": "再生可能エネルギー",
+          "explain_ja": "持続可能なエネルギー源で、再生産可能な資源から得られるエネルギーを指します。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データとアプリケーションを保存、管理、配信するための施設。"
+          "explain_ja": "データの保存、管理、処理を主な目的とした施設です。"
         }
       ],
       "personal_actions": [
-        "データセンターの運営についての最新情報をキャッチアップする。",
-        "地元の政府が技術投資にどのように関与しているかを確認する。",
-        "価格高騰に対処するための地域の政策を調べる。"
+        "データセンターの拡大に伴うエネルギー供給の動向を追跡する。",
+        "ローカルな再生可能エネルギーの利用や導入を見直す。",
+        "政府のエネルギー政策について意見を持つ。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     }
   ]
