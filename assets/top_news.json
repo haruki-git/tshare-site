@@ -1,108 +1,109 @@
 {
-  "date": "2026-07-27",
-  "generatedAtJST": "2026-07-27T07:15:19.170+09:00",
+  "date": "2026-07-28",
+  "generatedAtJST": "2026-07-28T07:15:26.916+09:00",
   "items": [
     {
-      "url": "https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-07-25T13:06:23Z",
-      "title": "One fallen power line exposed a growing AI data center problem. Here's how to fix it. | TechCrunch",
-      "title_ja": "倒れた電線が浮き彫りにしたAIデータセンターの問題とその解決策",
-      "summary_ja": "北バージニアでの事故が、データセンターの電力網の混乱時の対応の不十分さを明らかにしました。この問題は、AIデータセンターの運用において重要であり、今後の対策が求められています。早急な改善策を講じることが、運用の安定性と信頼性を高める鍵となるでしょう。",
+      "url": "https://brobible.com/culture/article/appalachia-data-center/",
+      "source": "BroBible",
+      "publishedAt": "2026-07-26T18:00:08Z",
+      "title": "Coal Companies Blew Up Long Ridge Mountain 100 Years Ago. All That’s Left Are The ‘Cheap Trees’ They Planted. West Virginia Woman Says It’s Happening All Over Again With Data Centers",
+      "title_ja": "データセンターが再び地域に影響を及ぼす？",
+      "summary_ja": "米国でデータセンターが住宅地に増加し、住民の不満が高まっている。人工知能の需要に応じて、企業が土地を取得しデータセンターを建設している。これにより環境や地域社会に過去の炭鉱採掘と同様の影響が懸念されている。",
       "key_points": [
-        "北バージニアでの電線倒壊によりデータセンターの脆弱性が露呈",
-        "データセンターは電力供給障害に対する対応が不十分",
-        "AIの急速な普及に伴い、安定した電力供給の重要性が増大",
-        "効果的な対策を講じることで運用の信頼性を向上可能",
-        "電力網の混乱に備えた新たな運営基準が必要"
+        "データセンターが住宅地に急増している",
+        "人工知能の需要が背景にある",
+        "地域住民が新たな環境問題を懸念している",
+        "過去の炭鉱採掘に似た影響が示唆されている",
+        "企業が土地を買い進めている"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "コンピュータシステムと関連設備を集中的に配置した施設。"
+          "explain_ja": "データの保存、処理、管理を行う施設。"
         },
         {
           "term": "AI",
-          "explain_ja": "人工知能の略称で、人間の知能を模倣したシステムや技術。"
+          "explain_ja": "人工知能（Artificial Intelligence）の略。機械が人間のような知能を持つ技術。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力供給計画を見直す",
-        "災害時の対応手順を確認・更新する"
+        "地域のデータセンター建設計画について確認する",
+        "住民会議に参加して情報交換を行う",
+        "影響を受ける地域についての意見を集約する"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://oilprice.com/Energy/Energy-General/Molten-Salt-Reactors-Just-Cleared-A-Major-US-Regulatory-Hurdle.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-07-26T17:00:00Z",
+      "title": "Molten Salt Reactors Just Cleared A Major U.S. Regulatory Hurdle",
+      "title_ja": "塩融解炉が米国の主要規制ハードルをクリア",
+      "summary_ja": "塩融解炉技術が米国で重要な規制のハードルを越え、国内の原子力エネルギー産業が復活する見込みです。この技術は、クリーンエネルギーを24時間提供できる能力が評価され、政策立案者や一般市民の支持を得ています。データセンターの膨大なエネルギー需要が不安定性を招く中、塩融解炉の導入が期待されています。",
+      "key_points": [
+        "塩融解炉技術が米国で重要な規制をクリアした。",
+        "この技術は24時間稼働可能なクリーンエネルギーを提供する。",
+        "政策立案者や一般市民の支持を得つつある。",
+        "データセンターのエネルギー需要が増加している。",
+        "原子力エネルギー産業の復活が期待されている。"
+      ],
+      "glossary": [
+        {
+          "term": "Molten Salt Reactor",
+          "explain_ja": "塩融解炉は、塩を冷却材として使用する原子炉の一種で、効率的なエネルギー生成が可能。"
+        },
+        {
+          "term": "Renewable Energy",
+          "explain_ja": "持続可能な方法で生成されるエネルギーで、自然エネルギー資源に基づいている。"
+        }
+      ],
+      "personal_actions": [
+        "塩融解炉技術についての最新情報を追う。",
+        "エネルギー効率向上のための設備投資を検討する。",
+        "クリーンエネルギーの導入可能性についてチームで議論する。"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://financialpost.com/pmn/business-pmn/power-grids-reach-tipping-point-as-100f-weather-us-data-center-boom-stress-aging-networks",
+      "source": "Financial Post",
+      "publishedAt": "2026-07-26T13:48:41Z",
+      "title": "Power Grids Reach Tipping Point as 100F Weather, US Data Center Boom Stress Aging Networks",
+      "title_ja": "米国のデータセンター急増と高温が電力網に圧力をかける",
+      "summary_ja": "米国での高温が続く中、電力網が限界に達しています。データセンターの需要が急増しており、低下する電力供給の中で多くの家庭や企業に影響を及ぼしています。これにより、インフラへのストレスが増大し、持続可能な電力供給が懸念されています。",
+      "key_points": [
+        "米国での連続する熱波が電力網に影響を与えている。",
+        "データセンターの需要が増加しており、24時間の電力が必要。",
+        "電力網の老朽化が現在の状況をさらに悪化させている。",
+        "多くの家庭や企業がこの影響を受けている。",
+        "持続可能な電力供給が求められている。"
+      ],
+      "glossary": [
+        {
+          "term": "電力網",
+          "explain_ja": "電力を供給するためのインフラストラクチャ。発電所から消費者に送電するシステムを指す。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "大量のデータを保存・処理するための施設。高い電力消費が特徴。"
+        },
+        {
+          "term": "熱波",
+          "explain_ja": "異常に高い気温が続く気象現象。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの要求に対応するための電源供給計画を見直す。",
+        "エネルギー効率の向上を検討し、無駄を減らす戦略を採用する。",
+        "老朽化したインフラのアップグレードを計画する。"
       ],
       "tags": [
         "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.techradar.com/pro/the-government-has-all-but-forgotten-that-most-data-centres-require-water-to-cool-their-systems-industry-trade-board-warns-uk-government-over-data-center-thirst-for-resources",
-      "source": "TechRadar",
-      "publishedAt": "2026-07-25T06:00:00Z",
-      "title": "'The government has all but forgotten that most data centres require water to cool their systems': Industry trade board warns UK government over data center thirst for resources",
-      "title_ja": "データセンターの冷却に必要な水を政府が忘れたと業界団体が警告",
-      "summary_ja": "イギリスの業界団体Water UKが、政府のデータセンター水資源への配慮不足を指摘している。2030年までにデータセンター容量を3倍に拡大する計画があるにも関わらず、水の重要性が軽視されていると警告。これにより資源の不足が懸念され、冷却システムの持続可能性に影響を与えかねない。",
-      "key_points": [
-        "Water UKがイギリス政府に警告を発した",
-        "データセンター容量を2030年までに3倍にする計画",
-        "データセンターは水を冷却に必要とする",
-        "政府の水資源への配慮が不足している",
-        "資源不足の懸念が生じている"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "サーバーを保管し、データを処理するための施設。"
-        },
-        {
-          "term": "冷却システム",
-          "explain_ja": "データセンター内の機器を適切な温度に保つための技術。"
-        },
-        {
-          "term": "Water UK",
-          "explain_ja": "イギリスの水業界を代表する業界団体。"
-        }
-      ],
-      "personal_actions": [
-        "データセンター内の冷却方法を見直す",
-        "水資源管理の重要性を意識する",
-        "今後の増設計画を考慮し、水の利用効率を改善する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://wattsupwiththat.com/2026/07/24/renewables-cant-keep-up-with-data-center-pace-as-usual-the-left-wants-government-to-step-in/",
-      "source": "Wattsupwiththat.com",
-      "publishedAt": "2026-07-25T05:00:00Z",
-      "title": "Renewables ‘Can’t Keep Up’ With Data Center Pace. As Usual, the Left Wants Government to Step In.",
-      "title_ja": "再生可能エネルギーはデータセンターのペースに追いつけない問題",
-      "summary_ja": "データセンターの急速な拡大が、再生可能エネルギーの利用を上回っているという懸念が高まっています。特に米国の情報技術競争において、中国との競争が影響しています。これに対して、政治的な左派は政府の介入を求めています。",
-      "key_points": [
-        "データセンターの急速な増加が続いている。",
-        "再生可能エネルギーの供給が需要に追いついていない。",
-        "政治的な左派は、政府の介入を提案している。",
-        "米国と中国の競争が背景にある。",
-        "スタンドアロンの天然ガス施設の建設が進んでいる。"
-      ],
-      "glossary": [
-        {
-          "term": "再生可能エネルギー",
-          "explain_ja": "持続可能なエネルギー源で、再生産可能な資源から得られるエネルギーを指します。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データの保存、管理、処理を主な目的とした施設です。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの拡大に伴うエネルギー供給の動向を追跡する。",
-        "ローカルな再生可能エネルギーの利用や導入を見直す。",
-        "政府のエネルギー政策について意見を持つ。"
-      ],
-      "tags": [
-        "DC"
+        "インフラ"
       ]
     }
   ]
