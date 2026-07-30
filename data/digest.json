@@ -1,109 +1,108 @@
 {
-  "date": "2026-07-28",
-  "generatedAtJST": "2026-07-28T07:15:26.916+09:00",
+  "date": "2026-07-31",
+  "generatedAtJST": "2026-07-31T07:15:32.957+09:00",
   "items": [
     {
-      "url": "https://brobible.com/culture/article/appalachia-data-center/",
-      "source": "BroBible",
-      "publishedAt": "2026-07-26T18:00:08Z",
-      "title": "Coal Companies Blew Up Long Ridge Mountain 100 Years Ago. All That’s Left Are The ‘Cheap Trees’ They Planted. West Virginia Woman Says It’s Happening All Over Again With Data Centers",
-      "title_ja": "データセンターが再び地域に影響を及ぼす？",
-      "summary_ja": "米国でデータセンターが住宅地に増加し、住民の不満が高まっている。人工知能の需要に応じて、企業が土地を取得しデータセンターを建設している。これにより環境や地域社会に過去の炭鉱採掘と同様の影響が懸念されている。",
+      "url": "http://electrek.co/2026/07/29/trump-feds-solar-review-ai-data-center-public-land-boulder-city-nevada/",
+      "source": "Electrek",
+      "publishedAt": "2026-07-29T22:03:08Z",
+      "title": "Trump feds use a solar review to approve the first AI data center on public land",
+      "title_ja": "トランプ政権、公共地に初のAIデータセンターを承認",
+      "summary_ja": "トランプ政権は、異なるプロジェクトの環境審査を転用する形で公共地に初のAIデータセンターを承認しました。この計画は、ネバダ州ボールダーシティにおいてクリーンエネルギーからデータセンターへの切り替えを伴い、地域の住民の意見を無視した形で進められました。市の関係者は、この決定に対して地域社会の合意が得られていないことから強い不満を表明しています。",
       "key_points": [
-        "データセンターが住宅地に急増している",
-        "人工知能の需要が背景にある",
-        "地域住民が新たな環境問題を懸念している",
-        "過去の炭鉱採掘に似た影響が示唆されている",
-        "企業が土地を買い進めている"
+        "トランプ政権のBLMが異なるプロジェクトの環境審査を利用してAIデータセンターを承認した。",
+        "データセンターは167MWの電力を消費し、75,000軒の家庭に電力を供給できる。",
+        "ボールダーシティは市民の意見を聴取せず、このプロジェクトの承認を受け入れられないと抗議している。",
+        "地域住民は新たなレビューを要求したが、プロジェクトは連邦政府によって承認された。",
+        "環境団体は、この手法が将来的に類似の案件に悪影響を及ぼす可能性を懸念している。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、処理、管理を行う施設。"
+          "term": "BLM",
+          "explain_ja": "アメリカ合衆国国土資源庁（Bureau of Land Management）。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。機械が人間のような知能を持つ技術。"
+          "term": "NEPA",
+          "explain_ja": "国家環境政策法（National Environmental Policy Act）。"
+        },
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能のデータ処理を行うための特化型データセンター。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンター建設計画について確認する",
-        "住民会議に参加して情報交換を行う",
-        "影響を受ける地域についての意見を集約する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://oilprice.com/Energy/Energy-General/Molten-Salt-Reactors-Just-Cleared-A-Major-US-Regulatory-Hurdle.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-07-26T17:00:00Z",
-      "title": "Molten Salt Reactors Just Cleared A Major U.S. Regulatory Hurdle",
-      "title_ja": "塩融解炉が米国の主要規制ハードルをクリア",
-      "summary_ja": "塩融解炉技術が米国で重要な規制のハードルを越え、国内の原子力エネルギー産業が復活する見込みです。この技術は、クリーンエネルギーを24時間提供できる能力が評価され、政策立案者や一般市民の支持を得ています。データセンターの膨大なエネルギー需要が不安定性を招く中、塩融解炉の導入が期待されています。",
-      "key_points": [
-        "塩融解炉技術が米国で重要な規制をクリアした。",
-        "この技術は24時間稼働可能なクリーンエネルギーを提供する。",
-        "政策立案者や一般市民の支持を得つつある。",
-        "データセンターのエネルギー需要が増加している。",
-        "原子力エネルギー産業の復活が期待されている。"
-      ],
-      "glossary": [
-        {
-          "term": "Molten Salt Reactor",
-          "explain_ja": "塩融解炉は、塩を冷却材として使用する原子炉の一種で、効率的なエネルギー生成が可能。"
-        },
-        {
-          "term": "Renewable Energy",
-          "explain_ja": "持続可能な方法で生成されるエネルギーで、自然エネルギー資源に基づいている。"
-        }
-      ],
-      "personal_actions": [
-        "塩融解炉技術についての最新情報を追う。",
-        "エネルギー効率向上のための設備投資を検討する。",
-        "クリーンエネルギーの導入可能性についてチームで議論する。"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://financialpost.com/pmn/business-pmn/power-grids-reach-tipping-point-as-100f-weather-us-data-center-boom-stress-aging-networks",
-      "source": "Financial Post",
-      "publishedAt": "2026-07-26T13:48:41Z",
-      "title": "Power Grids Reach Tipping Point as 100F Weather, US Data Center Boom Stress Aging Networks",
-      "title_ja": "米国のデータセンター急増と高温が電力網に圧力をかける",
-      "summary_ja": "米国での高温が続く中、電力網が限界に達しています。データセンターの需要が急増しており、低下する電力供給の中で多くの家庭や企業に影響を及ぼしています。これにより、インフラへのストレスが増大し、持続可能な電力供給が懸念されています。",
-      "key_points": [
-        "米国での連続する熱波が電力網に影響を与えている。",
-        "データセンターの需要が増加しており、24時間の電力が必要。",
-        "電力網の老朽化が現在の状況をさらに悪化させている。",
-        "多くの家庭や企業がこの影響を受けている。",
-        "持続可能な電力供給が求められている。"
-      ],
-      "glossary": [
-        {
-          "term": "電力網",
-          "explain_ja": "電力を供給するためのインフラストラクチャ。発電所から消費者に送電するシステムを指す。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを保存・処理するための施設。高い電力消費が特徴。"
-        },
-        {
-          "term": "熱波",
-          "explain_ja": "異常に高い気温が続く気象現象。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの要求に対応するための電源供給計画を見直す。",
-        "エネルギー効率の向上を検討し、無駄を減らす戦略を採用する。",
-        "老朽化したインフラのアップグレードを計画する。"
+        "地域の環境影響を定期的に確認し、新たな開発計画について情報収集を行う。",
+        "市のコミュニティミーティングに参加し、意見を表明する。",
+        "環境保護団体の活動に参加し、地域の環境問題に対して声を上げる。"
       ],
       "tags": [
         "DC",
-        "インフラ"
+        "AI"
+      ]
+    },
+    {
+      "url": "https://offgridsurvival.com/maga-socialism-the-feds-just-handed-public-land-to-a-texas-hedge-fund-for-datacenters-in-a-desert/",
+      "source": "Offgridsurvival.com",
+      "publishedAt": "2026-07-29T21:50:21Z",
+      "title": "MAGA Socialism: The Feds Just Handed Public Land to a Texas Hedge Fund for Datacenters in a Desert!",
+      "title_ja": "MAGA社会主義：連邦政府がテキサスのヘッジファンドに公有地をデータセンター用に譲渡",
+      "summary_ja": "連邦政府がテキサスのヘッジファンドに公有地を譲渡し、AIデータセンターが一夜にして大規模化しました。ネバダ州の土地、水、電力網が大手テクノロジー企業に渡されることになり、MAGA社会主義の影響が囁かれています。この決定は、公共資源の私有化や、技術界へのさらなる依存を助長する懸念を呼んでいます。",
+      "key_points": [
+        "テキサスのヘッジファンドが公有地をデータセンター用に取得",
+        "ネバダ州の資源が大手テクノロジー企業に渡る",
+        "AIデータセンターが急速に拡大している",
+        "MAGA社会主義の概念が影響を及ぼしている"
+      ],
+      "glossary": [
+        {
+          "term": "MAGA",
+          "explain_ja": "「Make America Great Again」の略語で、政治的スローガンとして知られる。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データの収集、保管、管理、処理を行うための施設。"
+        }
+      ],
+      "personal_actions": [
+        "地域の公共資源の利用状況を確認する",
+        "データセンターの影響を調査する",
+        "地域社会での資源の管理について意見を交わす"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://hardware.slashdot.org/story/26/07/29/1826214/nextera-brookfield-to-build-100-billion-kentucky-data-campus",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-07-29T20:00:00Z",
+      "title": "NextEra, Brookfield to Build $100 Billion Kentucky Data Campus - Slashdot",
+      "title_ja": "NextEraとBrookfieldが100億ドルのケンタッキー情報センターを建設予定",
+      "summary_ja": "NextEraとBrookfieldは、ケンタッキー州の退役したウラン濃縮サイトをデータセンターキャンパスと発電所に変えるために、1000億ドル以上を投資する計画を発表しました。このプロジェクトには、ガス火力発電とバッテリー蓄電を含む大規模な施設が含まれています。約8,000の建設作業と600の常勤職が創出される見込みです。",
+      "key_points": [
+        "NextEraとBrookfieldが1000億ドル投資でデータセンター建設へ",
+        "ケンタッキー州パデューカにおける元ウラン濃縮サイトを利用",
+        "2ギガワットのガス火力発電所と2.6ギガワットのバッテリー蓄電を計画",
+        "プロジェクトにより約8,000の建設作業と600の常勤職が創出される",
+        "2023年に完了予定で、米国のAI競争力向上を目的"
+      ],
+      "glossary": [
+        {
+          "term": "ギガワット",
+          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当します。"
+        },
+        {
+          "term": "ウラン濃縮",
+          "explain_ja": "ウランを濃縮し、核燃料の製造に使用するプロセスです。"
+        }
+      ],
+      "personal_actions": [
+        "プロジェクトの進捗をチェックし、地域の影響を注視する",
+        "データセンター関連の職業機会を調査する"
+      ],
+      "tags": [
+        "AI"
       ]
     }
   ]
