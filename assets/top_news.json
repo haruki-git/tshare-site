@@ -1,39 +1,39 @@
 {
-  "date": "2026-07-31",
-  "generatedAtJST": "2026-07-31T07:15:32.957+09:00",
+  "date": "2026-08-01",
+  "generatedAtJST": "2026-08-01T07:15:24.084+09:00",
   "items": [
     {
-      "url": "http://electrek.co/2026/07/29/trump-feds-solar-review-ai-data-center-public-land-boulder-city-nevada/",
-      "source": "Electrek",
-      "publishedAt": "2026-07-29T22:03:08Z",
-      "title": "Trump feds use a solar review to approve the first AI data center on public land",
-      "title_ja": "トランプ政権、公共地に初のAIデータセンターを承認",
-      "summary_ja": "トランプ政権は、異なるプロジェクトの環境審査を転用する形で公共地に初のAIデータセンターを承認しました。この計画は、ネバダ州ボールダーシティにおいてクリーンエネルギーからデータセンターへの切り替えを伴い、地域の住民の意見を無視した形で進められました。市の関係者は、この決定に対して地域社会の合意が得られていないことから強い不満を表明しています。",
+      "url": "https://www.nextbigfuture.com/2026/07/supermicro-and-dell-with-building-block-data-centers-for-spacex.html",
+      "source": "Next Big Future",
+      "publishedAt": "2026-07-30T21:01:06Z",
+      "title": "Supermicro and Dell With Building Block Data Centers for SpaceX | NextBigFuture.com",
+      "title_ja": "SupermicroとDellがSpaceX向けデータセンター構築を加速",
+      "summary_ja": "SupermicroはSpaceX向けに高密度AIデータセンター用のラックを提供するBuilding Block Data Center Solutions®を展開しています。この技術は液冷対応で、運用コストの削減と導入スピードの向上を実現します。高い製造能力により、月間3,000ユニットのラックが供給可能で、急速なスケーリングを目指しています。",
       "key_points": [
-        "トランプ政権のBLMが異なるプロジェクトの環境審査を利用してAIデータセンターを承認した。",
-        "データセンターは167MWの電力を消費し、75,000軒の家庭に電力を供給できる。",
-        "ボールダーシティは市民の意見を聴取せず、このプロジェクトの承認を受け入れられないと抗議している。",
-        "地域住民は新たなレビューを要求したが、プロジェクトは連邦政府によって承認された。",
-        "環境団体は、この手法が将来的に類似の案件に悪影響を及ぼす可能性を懸念している。"
+        "Supermicroは月間3,000台の高密度ラックを提供可能。",
+        "ラックは液冷対応で、運用コストを大幅に削減。",
+        "CEOチャールズ・リアンによると、導入は最短3ヶ月で可能。",
+        "SupermicroはSpaceXAIと協力して新しいギガワットAIデータセンターを構築中。",
+        "Fiscal 2026年末までに月間6,000ラックのスケーリングを計画。"
       ],
       "glossary": [
         {
-          "term": "BLM",
-          "explain_ja": "アメリカ合衆国国土資源庁（Bureau of Land Management）。"
+          "term": "DCBBS",
+          "explain_ja": "Data Center Building Block Solutionsの略で、高密度のラックソリューションを提供するSupermicroの技術です。"
         },
         {
-          "term": "NEPA",
-          "explain_ja": "国家環境政策法（National Environmental Policy Act）。"
+          "term": "TCO",
+          "explain_ja": "Total Cost of Ownershipの略で、所有コストの総合的な評価を指します。"
         },
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能のデータ処理を行うための特化型データセンター。"
+          "term": "液冷",
+          "explain_ja": "データセンターの冷却手法の一つで、液体を使用して熱を効率的に管理します。"
         }
       ],
       "personal_actions": [
-        "地域の環境影響を定期的に確認し、新たな開発計画について情報収集を行う。",
-        "市のコミュニティミーティングに参加し、意見を表明する。",
-        "環境保護団体の活動に参加し、地域の環境問題に対して声を上げる。"
+        "現在のラックや冷却システムの状況を確認し、アップグレードの必要性を評価する。",
+        "新技術の導入が必要な場合、信頼できるサプライヤーの情報を集める。",
+        "データセンターの効率化に向けて、運用コストの見直しを行う。"
       ],
       "tags": [
         "DC",
@@ -41,68 +41,65 @@
       ]
     },
     {
-      "url": "https://offgridsurvival.com/maga-socialism-the-feds-just-handed-public-land-to-a-texas-hedge-fund-for-datacenters-in-a-desert/",
-      "source": "Offgridsurvival.com",
-      "publishedAt": "2026-07-29T21:50:21Z",
-      "title": "MAGA Socialism: The Feds Just Handed Public Land to a Texas Hedge Fund for Datacenters in a Desert!",
-      "title_ja": "MAGA社会主義：連邦政府がテキサスのヘッジファンドに公有地をデータセンター用に譲渡",
-      "summary_ja": "連邦政府がテキサスのヘッジファンドに公有地を譲渡し、AIデータセンターが一夜にして大規模化しました。ネバダ州の土地、水、電力網が大手テクノロジー企業に渡されることになり、MAGA社会主義の影響が囁かれています。この決定は、公共資源の私有化や、技術界へのさらなる依存を助長する懸念を呼んでいます。",
+      "url": "https://financialpost.com/globe-newswire/sonoco-expands-wood-reels-manufacturing-and-assembly-capacity-to-meet-growing-market-demand",
+      "source": "Financial Post",
+      "publishedAt": "2026-07-30T20:45:21Z",
+      "title": "Sonoco Expands Wood Reels Manufacturing and Assembly Capacity to Meet Growing Market Demand",
+      "title_ja": "ソノコ、木製リール製造と組立能力を拡張し市場の需要に対応",
+      "summary_ja": "ソノコ・プロダクツ社は、木製リールの製造と組立能力を拡張する投資を発表しました。この拡張は、持続可能な金属および紙包装のリーダーとしての地位を維持し、増大する市場の需要に応える目的があります。この取り組みにより、今後の生産能力が向上する見込みです。",
       "key_points": [
-        "テキサスのヘッジファンドが公有地をデータセンター用に取得",
-        "ネバダ州の資源が大手テクノロジー企業に渡る",
-        "AIデータセンターが急速に拡大している",
-        "MAGA社会主義の概念が影響を及ぼしている"
+        "ソノコが木製リールの製造能力を拡張",
+        "持続可能な包装の市場需要に対応",
+        "2026年に発表された投資計画"
       ],
       "glossary": [
         {
-          "term": "MAGA",
-          "explain_ja": "「Make America Great Again」の略語で、政治的スローガンとして知られる。"
+          "term": "Sonoco Products Company",
+          "explain_ja": "持続可能な包装ソリューションを提供する世界的な企業。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの収集、保管、管理、処理を行うための施設。"
+          "term": "Wood Reels",
+          "explain_ja": "木製のリールで、主に製品の梱包に使用される。"
         }
       ],
       "personal_actions": [
-        "地域の公共資源の利用状況を確認する",
-        "データセンターの影響を調査する",
-        "地域社会での資源の管理について意見を交わす"
+        "木製リールの需要に対応するため、製品の梱包方法を見直す。",
+        "持続可能な資材の使用についてチーム内で議論する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://hardware.slashdot.org/story/26/07/29/1826214/nextera-brookfield-to-build-100-billion-kentucky-data-campus",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-07-29T20:00:00Z",
-      "title": "NextEra, Brookfield to Build $100 Billion Kentucky Data Campus - Slashdot",
-      "title_ja": "NextEraとBrookfieldが100億ドルのケンタッキー情報センターを建設予定",
-      "summary_ja": "NextEraとBrookfieldは、ケンタッキー州の退役したウラン濃縮サイトをデータセンターキャンパスと発電所に変えるために、1000億ドル以上を投資する計画を発表しました。このプロジェクトには、ガス火力発電とバッテリー蓄電を含む大規模な施設が含まれています。約8,000の建設作業と600の常勤職が創出される見込みです。",
+      "url": "https://4sysops.com/archives/off-premises-it-takes-the-lead/",
+      "source": "4sysops.com",
+      "publishedAt": "2026-07-30T19:34:40Z",
+      "title": "Off-premises IT takes the lead",
+      "title_ja": "オフプレミスITが主導権を握る",
+      "summary_ja": "Uptime Instituteの2026年グローバルデータセンター調査によると、初めてサードパーティ施設が企業所有のデータセンターよりも多くのITワークロードをホストしています。この変化は、企業が外部に依存する傾向の高まりを示しています。また、標準的なラックの電力密度も11kWを超え、組織のニーズが進化しています。",
       "key_points": [
-        "NextEraとBrookfieldが1000億ドル投資でデータセンター建設へ",
-        "ケンタッキー州パデューカにおける元ウラン濃縮サイトを利用",
-        "2ギガワットのガス火力発電所と2.6ギガワットのバッテリー蓄電を計画",
-        "プロジェクトにより約8,000の建設作業と600の常勤職が創出される",
-        "2023年に完了予定で、米国のAI競争力向上を目的"
+        "サードパーティ施設がITワークロードの主なホストとなった。",
+        "企業所有のデータセンターとの逆転が初めて発生。",
+        "標準的なラックの電力密度が11kWを超えた。",
+        "ITワークロードのオフプレミスシフトが進行中。",
+        "Uptime Instituteの調査結果による信頼性の高いデータ。"
       ],
       "glossary": [
         {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当します。"
+          "term": "オフプレミスIT",
+          "explain_ja": "企業内ではなく、外部のデータセンターやクラウドサービスを利用するITインフラの形態。"
         },
         {
-          "term": "ウラン濃縮",
-          "explain_ja": "ウランを濃縮し、核燃料の製造に使用するプロセスです。"
+          "term": "Uptime Institute",
+          "explain_ja": "データセンターの運用や信頼性に関する調査や基準を提供する組織。"
         }
       ],
       "personal_actions": [
-        "プロジェクトの進捗をチェックし、地域の影響を注視する",
-        "データセンター関連の職業機会を調査する"
+        "自社のITインフラの利用状況を見直し、外部依存度を評価する。",
+        "ラックの電力密度を確認し、必要に応じて設備を調整する。"
       ],
       "tags": [
-        "AI"
+        "その他"
       ]
     }
   ]
