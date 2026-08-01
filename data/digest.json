@@ -1,105 +1,114 @@
 {
-  "date": "2026-08-01",
-  "generatedAtJST": "2026-08-01T07:15:24.084+09:00",
+  "date": "2026-08-02",
+  "generatedAtJST": "2026-08-02T07:15:24.730+09:00",
   "items": [
     {
-      "url": "https://www.nextbigfuture.com/2026/07/supermicro-and-dell-with-building-block-data-centers-for-spacex.html",
-      "source": "Next Big Future",
-      "publishedAt": "2026-07-30T21:01:06Z",
-      "title": "Supermicro and Dell With Building Block Data Centers for SpaceX | NextBigFuture.com",
-      "title_ja": "SupermicroとDellがSpaceX向けデータセンター構築を加速",
-      "summary_ja": "SupermicroはSpaceX向けに高密度AIデータセンター用のラックを提供するBuilding Block Data Center Solutions®を展開しています。この技術は液冷対応で、運用コストの削減と導入スピードの向上を実現します。高い製造能力により、月間3,000ユニットのラックが供給可能で、急速なスケーリングを目指しています。",
+      "url": "https://www.computerworld.com/article/4203999/data-center-developer-eyes-disused-newpaper-printing-plant-2.html",
+      "source": "Computerworld",
+      "publishedAt": "2026-07-31T16:16:28Z",
+      "title": "Data center developer eyes disused newpaper printing plant",
+      "title_ja": "データセンター開発業者、使われなくなった新聞印刷工場に注目",
+      "summary_ja": "新聞がオンラインに移行する中、その印刷工場は新たな利用方法を模索しています。ミネソタ州のスター・トリビューンが、ミネアポリス郊外の古い印刷工場を『レガシー・インベスティング』に売却しました。この動きは、古いインフラを持続可能なデータセンターとして再生させる試みと見なされます。",
       "key_points": [
-        "Supermicroは月間3,000台の高密度ラックを提供可能。",
-        "ラックは液冷対応で、運用コストを大幅に削減。",
-        "CEOチャールズ・リアンによると、導入は最短3ヶ月で可能。",
-        "SupermicroはSpaceXAIと協力して新しいギガワットAIデータセンターを構築中。",
-        "Fiscal 2026年末までに月間6,000ラックのスケーリングを計画。"
+        "新聞印刷工場がオンライン移行に伴い閉鎖。",
+        "レガシー・インベスティングが工場を購入。",
+        "データセンターへの転用が進むトレンド。"
       ],
       "glossary": [
         {
-          "term": "DCBBS",
-          "explain_ja": "Data Center Building Block Solutionsの略で、高密度のラックソリューションを提供するSupermicroの技術です。"
+          "term": "Legacy Investing",
+          "explain_ja": "古い資産を新たな価値に変えることを目指すプロパティ開発業者。"
         },
         {
-          "term": "TCO",
-          "explain_ja": "Total Cost of Ownershipの略で、所有コストの総合的な評価を指します。"
-        },
-        {
-          "term": "液冷",
-          "explain_ja": "データセンターの冷却手法の一つで、液体を使用して熱を効率的に管理します。"
+          "term": "データセンター",
+          "explain_ja": "デジタル情報を保存・管理するための専門施設。"
         }
       ],
       "personal_actions": [
-        "現在のラックや冷却システムの状況を確認し、アップグレードの必要性を評価する。",
-        "新技術の導入が必要な場合、信頼できるサプライヤーの情報を集める。",
-        "データセンターの効率化に向けて、運用コストの見直しを行う。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://financialpost.com/globe-newswire/sonoco-expands-wood-reels-manufacturing-and-assembly-capacity-to-meet-growing-market-demand",
-      "source": "Financial Post",
-      "publishedAt": "2026-07-30T20:45:21Z",
-      "title": "Sonoco Expands Wood Reels Manufacturing and Assembly Capacity to Meet Growing Market Demand",
-      "title_ja": "ソノコ、木製リール製造と組立能力を拡張し市場の需要に対応",
-      "summary_ja": "ソノコ・プロダクツ社は、木製リールの製造と組立能力を拡張する投資を発表しました。この拡張は、持続可能な金属および紙包装のリーダーとしての地位を維持し、増大する市場の需要に応える目的があります。この取り組みにより、今後の生産能力が向上する見込みです。",
-      "key_points": [
-        "ソノコが木製リールの製造能力を拡張",
-        "持続可能な包装の市場需要に対応",
-        "2026年に発表された投資計画"
-      ],
-      "glossary": [
-        {
-          "term": "Sonoco Products Company",
-          "explain_ja": "持続可能な包装ソリューションを提供する世界的な企業。"
-        },
-        {
-          "term": "Wood Reels",
-          "explain_ja": "木製のリールで、主に製品の梱包に使用される。"
-        }
-      ],
-      "personal_actions": [
-        "木製リールの需要に対応するため、製品の梱包方法を見直す。",
-        "持続可能な資材の使用についてチーム内で議論する。"
+        "地元の廃工場の利用法について調査する。",
+        "データセンターの設計基準について理解を深める。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://4sysops.com/archives/off-premises-it-takes-the-lead/",
-      "source": "4sysops.com",
-      "publishedAt": "2026-07-30T19:34:40Z",
-      "title": "Off-premises IT takes the lead",
-      "title_ja": "オフプレミスITが主導権を握る",
-      "summary_ja": "Uptime Instituteの2026年グローバルデータセンター調査によると、初めてサードパーティ施設が企業所有のデータセンターよりも多くのITワークロードをホストしています。この変化は、企業が外部に依存する傾向の高まりを示しています。また、標準的なラックの電力密度も11kWを超え、組織のニーズが進化しています。",
+      "url": "https://www.techpowerup.com/351268/montage-technology-enters-trial-production-of-cxl-3-2-mxc-chip-supporting-8000-mt-s-ddr5",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-07-31T15:07:05Z",
+      "title": "Montage Technology Enters Trial Production of CXL 3.2 MXC Chip Supporting 8000 MT/s DDR5",
+      "title_ja": "Montage Technology、CXL 3.2 MXCチップの試作生産に入る—8000 MT/s DDR5をサポート",
+      "summary_ja": "Montage Technologyは、CXL 3.2 Memory eXpander Controller (MXC)チップの試作生産を発表しました。このチップは、AIやクラウドコンピューティング、データセンター環境でのメモリ拡張とリソースプーリングの需要に応えるために設計されています。CXL技術を活用することで、高い帯域幅と大容量のメモリ拡張ソリューションを提供し、データセンターとAIインフラの大規模な導入を加速します。",
       "key_points": [
-        "サードパーティ施設がITワークロードの主なホストとなった。",
-        "企業所有のデータセンターとの逆転が初めて発生。",
-        "標準的なラックの電力密度が11kWを超えた。",
-        "ITワークロードのオフプレミスシフトが進行中。",
-        "Uptime Instituteの調査結果による信頼性の高いデータ。"
+        "CXL 3.2 MXCは、メモリ拡張とリソース利用を向上させるためのチップ。",
+        "DDR5メモリを8000 MT/sでサポートし、ホストサイドのリクエストをリアルタイムに処理。",
+        "多様なCXLメモリ拡張形式に対応し、次世代のメモリアプリケーションを支援。",
+        "SamsungやSK hynixなどの主要なメモリモジュールメーカーと協力し、初期のバリデーションを完了。",
+        "CXLとデータセンターとの最適な相互運用性を提供する設計。"
       ],
       "glossary": [
         {
-          "term": "オフプレミスIT",
-          "explain_ja": "企業内ではなく、外部のデータセンターやクラウドサービスを利用するITインフラの形態。"
+          "term": "CXL",
+          "explain_ja": "CXL（Compute Express Link）は、高速なインターコネクト技術で、メモリやリソースの共有を可能にする。"
         },
         {
-          "term": "Uptime Institute",
-          "explain_ja": "データセンターの運用や信頼性に関する調査や基準を提供する組織。"
+          "term": "MXC",
+          "explain_ja": "Memory eXpander Controllerの略で、メモリ拡張とリソース管理を行うチップ。"
+        },
+        {
+          "term": "DDR5",
+          "explain_ja": "Double Data Rate 5の略で、次世代のメモリ技術であり、高速データ転送を実現する。"
+        },
+        {
+          "term": "PCIe",
+          "explain_ja": "Peripheral Component Interconnect Expressの略で、コンピュータ内部のデバイス間でデータを高速に転送するためのインターフェース。"
         }
       ],
       "personal_actions": [
-        "自社のITインフラの利用状況を見直し、外部依存度を評価する。",
-        "ラックの電力密度を確認し、必要に応じて設備を調整する。"
+        "CXL技術を活用した新しいメモリ拡張ソリューションを評価する。",
+        "自社のデータセンターインフラにCXL技術の導入可能性を検討する。",
+        "最新のCXL関連製品情報を追跡し、業界の動向を把握する。"
       ],
       "tags": [
-        "その他"
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.techpowerup.com/351265/xcena-unveils-mx1-production-lineup-to-accelerate-push-into-hyperscale-ai-infrastructure",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-07-31T14:35:39Z",
+      "title": "XCENA Unveils MX1 Production Lineup to Accelerate Push Into Hyperscale AI Infrastructure",
+      "title_ja": "XCENA、ハイパースケールAIインフラ向けのMX1製品ラインを発表",
+      "summary_ja": "XCENAはAIインフラ向けのメモリ中心コンピューティングソリューションMX1を発表しました。この新製品は、AI推論をスケールで制約しうる容量やデータ移動の問題を克服することを目的としています。MX1の導入により、データ近傍での処理が実現し、AI推論性能の向上とコスト削減が期待されます。",
+      "key_points": [
+        "MX1はCXLベースでメモリ拡張を行い、高効率な計算を実現する。",
+        "AI推論の性能は計算からメモリに制約されているため、MX1が解決策となる。",
+        "MX1 ComputeはRISC-Vコアを搭載し、データの移動を最小化。",
+        "MX1 Expandは8つのDRAMスロットを提供し、サーバーのスケールアップが可能。",
+        "FMS 2026でMX1のデモンストレーションを実施し、業界の注目を集めている。"
+      ],
+      "glossary": [
+        {
+          "term": "MX1",
+          "explain_ja": "XCENAが発表したメモリ中心コンピューティングソリューションの製品ライン。"
+        },
+        {
+          "term": "CXL",
+          "explain_ja": "Compute Express Linkの略。メモリ拡張のためのインターフェース技術。"
+        },
+        {
+          "term": "KV Cache",
+          "explain_ja": "キー・バリューキャッシュ。AI推論において使用されるデータの一部。"
+        }
+      ],
+      "personal_actions": [
+        "MX1の技術や製品について社内での理解を深める。",
+        "CXL技術に関する資料を調査し、業務にどのように応用できるか検討する。",
+        "AIインフラにおけるメモリの重要性をチーム内で共有する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
