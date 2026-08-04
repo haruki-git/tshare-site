@@ -1,73 +1,32 @@
 {
-  "date": "2026-08-04",
-  "generatedAtJST": "2026-08-04T07:15:28.801+09:00",
+  "date": "2026-08-05",
+  "generatedAtJST": "2026-08-05T07:15:32.343+09:00",
   "items": [
     {
-      "url": "https://freerepublic.com/focus/f-chat/4390294/posts",
-      "source": "Freerepublic.com",
-      "publishedAt": "2026-08-02T14:00:29Z",
-      "title": "Dumbstruck residents of pretty suburb say local officials used sneaky trick to green light huge data center on site of beloved golf course",
-      "title_ja": "美しい郊外に住む住民たち、地元政府が愛されるゴルフコース跡地に巨大データセンターを承認した裏事情に衝撃",
-      "summary_ja": "カリフォルニア州ピッツバーグの住民は、地元のゴルフコース跡地に76エーカーのデータセンターが建設されることに対し激しく反発している。計画は、関係者が技術パークとして誤解を招く情報を提供し、透明性が欠如しているとの声が上がっている。この移転は住民の日常生活に大きな影響を及ぼす恐れがあり、コミュニティからの反対の声が強まっている。",
+      "url": "https://www.channelnewsasia.com/business/onsemi-forecasts-upbeat-revenue-surging-ai-data-center-chip-demand-6296316",
+      "source": "CNA",
+      "publishedAt": "2026-08-03T21:58:10Z",
+      "title": "Onsemi forecasts upbeat revenue on surging AI data center chip demand",
+      "title_ja": "Onsemi、AIデータセンター向けチップ需要の急増で楽観的な収益を予測",
+      "summary_ja": "Onsemiは、第3四半期の収益をウォール街の予想を超えると予測しており、AIデータセンターで使用される電力管理チップの需要の急増に期待を寄せています。会社は、70億ドルの全株式の契約を見据えた結果であり、将来的な成長を支える新たな収益源を探求しています。この需要の増加は、AI技術の進化とデータ処理能力の向上にともなうものです。",
       "key_points": [
-        "カリフォルニア州ピッツバーグで76エーカーのデータセンター建設計画が発表され、住民が反発している。",
-        "地域住民は市議会がプロジェクトを技術パークとして誤解させる情報を提供したと主張。",
-        "データセンターの建設による長期的な雇用は約20件と少なく、地域経済への影響が懸念されている。",
-        "データセンターは騒音公害や住民の生活に悪影響を与える可能性がある。",
-        "米国では4600以上のデータセンターが稼働中で、今後多くの計画が進行中。",
-        "住民は公共の利益が無視されていると感じており、今後も反発が続く見込み。"
+        "Onsemiは第3四半期の収益見通しをポジティブに設定。",
+        "AIデータセンター向けの電力管理チップの需要が急増。",
+        "70億ドルの全株式取引に向けた重要な契約を進行中。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを収集、保存、管理するための施設。通常は高い処理能力を持つサーバーを備えている。"
+          "term": "Onsemi",
+          "explain_ja": "半導体メーカーで、特に電力管理チップに強みを持つ。"
         },
         {
-          "term": "ゴルフコース",
-          "explain_ja": "ゴルフをプレイするために設計された広大な土地。緑地や自然環境が重要な要素とされる。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能技術を支えるデータ処理用のインフラ。"
         }
       ],
       "personal_actions": [
-        "地元の市議会の決定に対する透明性を求める署名活動に参加する。",
-        "地域の住民と連携し、データセンター計画に対する意見をまとめて市に提出する。",
-        "他のデータセンターに関する影響を調査し、情報を共有する。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.foxnews.com/world/us-companies-win-billions-african-data-center-deals-direct-competition-china",
-      "source": "Fox News",
-      "publishedAt": "2026-08-02T10:00:03Z",
-      "title": "US companies win billions in African data center deals in direct competition with China",
-      "title_ja": "アメリカ企業がアフリカのデータセンター契約で数十億ドルを獲得",
-      "summary_ja": "アメリカの企業がアフリカ各地でAIデータセンターや電力契約を通じて数十億ドルを獲得している。これは米中貿易戦争の激化に伴う競争の一環であり、アフリカ市場における影響力を強化する動きともなっている。今後の技術と経済の発展に大きな影響を与える可能性がある。",
-      "key_points": [
-        "アメリカ企業がアフリカでAIデータセンター契約を獲得中",
-        "契約の総額は数十億ドルに上る",
-        "米中貿易戦争の影響で競争が激化",
-        "アフリカ市場でのアメリカの存在感が増す",
-        "中国との直接競争が成長を促進している"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略で、機械が人間のように学習や判断を行う技術。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データを保存・管理するための施設。"
-        },
-        {
-          "term": "米中貿易戦争",
-          "explain_ja": "アメリカと中国の間で発生している経済的な対立や制裁。"
-        }
-      ],
-      "personal_actions": [
-        "目前のプロジェクトに影響を与える最新の契約情報を確認する",
-        "競争環境の変化に応じた戦略を見直す",
-        "アフリカ市場の動向を追跡する"
+        "AIデータセンター向けの新たな技術動向をフォローする。",
+        "自社の電力管理チップの使用状況を確認し、最適化を検討する。"
       ],
       "tags": [
         "DC",
@@ -75,41 +34,70 @@
       ]
     },
     {
-      "url": "https://www.debugbear.com/blog/network-efficiency-guardrails",
-      "source": "Debugbear.com",
-      "publishedAt": "2026-08-02T17:00:00Z",
-      "title": "Network Efficiency Guardrails: Detect Web Performance Issues",
-      "title_ja": "ネットワーク効率ガードレール：ウェブパフォーマンスの問題を検出",
-      "summary_ja": "マイクロソフトが導入したネットワーク効率ガードレールは、ウェブアプリケーションにおけるリソースロードの非効率なパターンを自動的に検出する実験的なブラウザ機能です。これにより、開発者はリアルタイムでパフォーマンスの問題を把握でき、過去のデプロイ後に発生する可能性のあるリグレッションに対処できます。特に、圧縮されていないリソースや大きな画像、データURLの使用に関する警告がモニタリングされます。",
+      "url": "https://www.coindesk.com/es/business/2026/08/03/trump-linked-american-bitcoin-president-matt-prusak-departs-for-giga-energy",
+      "source": "CoinDesk",
+      "publishedAt": "2026-08-03T19:10:24Z",
+      "title": "Matt Prusak, ejecutivo de American Bitcoin (ABTC) respaldado por Trump, se une a Giga Energy",
+      "title_ja": "トランプ支援のアメリカンビットコインのマット・プルサクがギガエナジーに移籍",
+      "summary_ja": "アメリカンビットコインのマット・プルサクが、トランプ氏が支援するマイニング企業からAIパワーインフラのギガエナジーに移籍します。この動きは、エネルギーとデータセンターの構築へとシフトしていることを示しています。この人事変更は、業界の需要の変化を反映しています。",
       "key_points": [
-        "ネットワーク効率ガードレールは、リソースロードの効率を自動的に監視する機能。",
-        "Microsoft Edgeでのみ使用可能で、ブラウザフラグを有効にする必要がある。",
-        "監視される問題には、200 KBを超える画像や圧縮なしのテキストリソースが含まれる。",
-        "Document PolicyとReporting APIを活用して報告を生成する。",
-        "リアルユーザーの環境でパフォーマンスリグレッションを特定できる。",
-        "DevToolsでのレポート確認とバックエンドへの報告設定が可能。"
+        "マット・プルサクがアメリカンビットコインを離れ、ギガエナジーに加入。",
+        "トランプ氏の支援を受けた企業間の人事移動。",
+        "エネルギーとデータセンターの重要性が高まっている。",
+        "AIを活用した新たなパワーインフラの必要性が浮上。"
       ],
       "glossary": [
         {
-          "term": "Document Policy",
-          "explain_ja": "ウェブアプリケーションのリソースロードの方針を定義するためのAPI。"
+          "term": "アメリカンビットコイン（ABTC）",
+          "explain_ja": "トランプ氏が支援するビットコインマイニング企業。"
         },
         {
-          "term": "Reporting API",
-          "explain_ja": "ブラウザが開発者に報告を送信するための方式。"
-        },
-        {
-          "term": "gzip",
-          "explain_ja": "データ圧縮の一種で、主にウェブリソースの圧縮に使用される。"
+          "term": "ギガエナジー",
+          "explain_ja": "AIパワーインフラを提供する企業。"
         }
       ],
       "personal_actions": [
-        "Microsoft Edgeの設定でネットワーク効率ガードレール機能を有効化する。",
-        "アプリケーションにDocument Policyヘッダーを追加し、ガードレールをオプトインする。",
-        "DevToolsで生成されたレポートを確認し、パフォーマンスの問題を特定する。"
+        "現場のエネルギー効率向上策を検討する。",
+        "データセンターの構成と冗長性を再評価する。"
       ],
       "tags": [
-        "インフラ"
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.coindesk.com/business/2026/08/03/trump-linked-american-bitcoin-president-matt-prusak-departs-for-giga-energy",
+      "source": "CoinDesk",
+      "publishedAt": "2026-08-03T15:24:45Z",
+      "title": "Trump-linked American Bitcoin president Matt Prusak departs for Giga Energy",
+      "title_ja": "トランプ関連のビットコイン企業社長マット・プルサクがギガエナジーへ移籍",
+      "summary_ja": "マット・プルサクがトランプ氏支援のビットコイン採掘企業を離れ、AIパワーインフラ企業のギガエナジーに移籍することが明らかになった。この移籍は、エネルギーおよびデータセンターの拡張へのシフトを浮き彫りにしている。業界内の人材の流動が、エネルギー管理の新たな方向性を示唆していると言える。",
+      "key_points": [
+        "マット・プルサクはトランプ氏関連のビットコイン企業から移籍。",
+        "新たな職場はAIパワーインフラ企業のギガエナジー。",
+        "この移籍はエネルギーとデータセンターの拡張流れを強調。",
+        "業界における人材流動が、変化する市場の影響を反映している。"
+      ],
+      "glossary": [
+        {
+          "term": "ビットコイン",
+          "explain_ja": "デジタル通貨の一種で、ブロックチェーン技術を利用している。"
+        },
+        {
+          "term": "ギガエナジー",
+          "explain_ja": "AIパワーインフラ関連の企業で、エネルギー管理に特化している。"
+        },
+        {
+          "term": "エネルギーインフラ",
+          "explain_ja": "エネルギーの生成、供給、管理を支える基盤や施設を指す。"
+        }
+      ],
+      "personal_actions": [
+        "業界の新しい動向に注意を払う。",
+        "エネルギー効率の改善に向けた最新技術を調査する。",
+        "データセンターのエネルギー管理のベストプラクティスを確認する。"
+      ],
+      "tags": [
+        "AI"
       ]
     }
   ]
