@@ -1,32 +1,39 @@
 {
-  "date": "2026-08-05",
-  "generatedAtJST": "2026-08-05T07:15:32.343+09:00",
+  "date": "2026-08-06",
+  "generatedAtJST": "2026-08-06T07:15:26.347+09:00",
   "items": [
     {
-      "url": "https://www.channelnewsasia.com/business/onsemi-forecasts-upbeat-revenue-surging-ai-data-center-chip-demand-6296316",
-      "source": "CNA",
-      "publishedAt": "2026-08-03T21:58:10Z",
-      "title": "Onsemi forecasts upbeat revenue on surging AI data center chip demand",
-      "title_ja": "Onsemi、AIデータセンター向けチップ需要の急増で楽観的な収益を予測",
-      "summary_ja": "Onsemiは、第3四半期の収益をウォール街の予想を超えると予測しており、AIデータセンターで使用される電力管理チップの需要の急増に期待を寄せています。会社は、70億ドルの全株式の契約を見据えた結果であり、将来的な成長を支える新たな収益源を探求しています。この需要の増加は、AI技術の進化とデータ処理能力の向上にともなうものです。",
+      "url": "https://freerepublic.com/focus/f-news/4390605/posts",
+      "source": "Freerepublic.com",
+      "publishedAt": "2026-08-04T21:06:46Z",
+      "title": "Bergen Engines secures 400MW Contract for US AI Data Center Power Plant [in Vineland, NJ].",
+      "title_ja": "Bergen Enginesが米国AIデータセンター向け400MW契約を獲得",
+      "summary_ja": "Bergen Enginesは、米国東海岸に新設されるAIデータセンター向けに400MWの発電所を供給する契約を獲得しました。この発電所は完全に独立した運転が可能で、北米初の中速往復動エンジンによるAI専用の発電所です。36基のエンジンが使用され、2025年12月の出荷が予定されています。新設データセンターは、2026年11月の完成を目指して現在建設中です。",
       "key_points": [
-        "Onsemiは第3四半期の収益見通しをポジティブに設定。",
-        "AIデータセンター向けの電力管理チップの需要が急増。",
-        "70億ドルの全株式取引に向けた重要な契約を進行中。"
+        "Bergen Enginesは400MWの発電所供給契約を締結",
+        "この発電所はAIワークロード用に設計された初の中速エンジン発電所",
+        "36基の11.2MWのガスエンジンを使用",
+        "発電所は完全にオフグリッドでの運転を目指す",
+        "建設は2025年初頭に開始され、2026年11月の完成を目指す"
       ],
       "glossary": [
         {
-          "term": "Onsemi",
-          "explain_ja": "半導体メーカーで、特に電力管理チップに強みを持つ。"
+          "term": "Bergen Engines",
+          "explain_ja": "ノルウェーのエンジン製造会社で、特にガスエンジンの供給に特化している。"
+        },
+        {
+          "term": "MW",
+          "explain_ja": "メガワット。電力の単位で、1メガワットは1000キロワットに相当する。"
         },
         {
           "term": "AIデータセンター",
-          "explain_ja": "人工知能技術を支えるデータ処理用のインフラ。"
+          "explain_ja": "人工知能（AI）専用の処理能力を持つデータセンターで、大量のデータを迅速に処理することを目的としている。"
         }
       ],
       "personal_actions": [
-        "AIデータセンター向けの新たな技術動向をフォローする。",
-        "自社の電力管理チップの使用状況を確認し、最適化を検討する。"
+        "プロジェクトに関する最新情報を収集し、今後の発展を把握する。",
+        "地元の電力供給状況や影響を確認する。",
+        "新しい技術やエネルギーソリューションのトレンドに注目し、今後のビジネス機会を検討する。"
       ],
       "tags": [
         "DC",
@@ -34,69 +41,72 @@
       ]
     },
     {
-      "url": "https://www.coindesk.com/es/business/2026/08/03/trump-linked-american-bitcoin-president-matt-prusak-departs-for-giga-energy",
-      "source": "CoinDesk",
-      "publishedAt": "2026-08-03T19:10:24Z",
-      "title": "Matt Prusak, ejecutivo de American Bitcoin (ABTC) respaldado por Trump, se une a Giga Energy",
-      "title_ja": "トランプ支援のアメリカンビットコインのマット・プルサクがギガエナジーに移籍",
-      "summary_ja": "アメリカンビットコインのマット・プルサクが、トランプ氏が支援するマイニング企業からAIパワーインフラのギガエナジーに移籍します。この動きは、エネルギーとデータセンターの構築へとシフトしていることを示しています。この人事変更は、業界の需要の変化を反映しています。",
+      "url": "https://www.theverge.com/tech/975381/amd-q2-2026-earnings-ai-gaming-ryzen",
+      "source": "The Verge",
+      "publishedAt": "2026-08-04T20:59:24Z",
+      "title": "AMD’s datacenter business is booming while gaming takes a backseat",
+      "title_ja": "AMDのデータセンター事業は好調、ゲームは後回し",
+      "summary_ja": "AMDのデータセンター事業は、AI需要の高まりにより前年同期比で売上が倍増し、67億ドルに達しました。これは、前四半期の58億ドルから増加し、前年の32億ドルからも107%の成長を示しています。これにより、AMDはデータセンター市場での影響力を高めています。",
       "key_points": [
-        "マット・プルサクがアメリカンビットコインを離れ、ギガエナジーに加入。",
-        "トランプ氏の支援を受けた企業間の人事移動。",
-        "エネルギーとデータセンターの重要性が高まっている。",
-        "AIを活用した新たなパワーインフラの必要性が浮上。"
+        "AMDのデータセンター収益は67億ドルに達した。",
+        "前年同期比で107%の増加。",
+        "AIの需要が成長の原動力。",
+        "ゲーム事業は相対的に関心が薄れている。",
+        "データセンター市場での競争が激化。"
       ],
       "glossary": [
         {
-          "term": "アメリカンビットコイン（ABTC）",
-          "explain_ja": "トランプ氏が支援するビットコインマイニング企業。"
+          "term": "AI",
+          "explain_ja": "人工知能のこと。データ処理や分析に利用される。"
         },
         {
-          "term": "ギガエナジー",
-          "explain_ja": "AIパワーインフラを提供する企業。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを保存し、処理するための施設。"
+        },
+        {
+          "term": "収益",
+          "explain_ja": "企業が得た利益のこと。"
         }
       ],
       "personal_actions": [
-        "現場のエネルギー効率向上策を検討する。",
-        "データセンターの構成と冗長性を再評価する。"
+        "AMDの最新の決算報告を確認する。",
+        "データセンターの技術トレンドや競合分析を行う。",
+        "AI関連のプロジェクトや案件について最新情報を収集する。"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://www.coindesk.com/business/2026/08/03/trump-linked-american-bitcoin-president-matt-prusak-departs-for-giga-energy",
-      "source": "CoinDesk",
-      "publishedAt": "2026-08-03T15:24:45Z",
-      "title": "Trump-linked American Bitcoin president Matt Prusak departs for Giga Energy",
-      "title_ja": "トランプ関連のビットコイン企業社長マット・プルサクがギガエナジーへ移籍",
-      "summary_ja": "マット・プルサクがトランプ氏支援のビットコイン採掘企業を離れ、AIパワーインフラ企業のギガエナジーに移籍することが明らかになった。この移籍は、エネルギーおよびデータセンターの拡張へのシフトを浮き彫りにしている。業界内の人材の流動が、エネルギー管理の新たな方向性を示唆していると言える。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184856924",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-08-04T20:53:19Z",
+      "title": "Texas halts data center connections to power grid amid overwhelming demand - Slashdot",
+      "title_ja": "テキサス州、需要の高まりを受けてデータセンターの電力網接続を停止",
+      "summary_ja": "テキサス州は、データセンターの電力網接続を一時停止しました。これは、急増する電力需要に対処するための措置です。テキサス州知事は、州をAIの「エピセンター」として宣伝していましたが、その影響が表れています。",
       "key_points": [
-        "マット・プルサクはトランプ氏関連のビットコイン企業から移籍。",
-        "新たな職場はAIパワーインフラ企業のギガエナジー。",
-        "この移籍はエネルギーとデータセンターの拡張流れを強調。",
-        "業界における人材流動が、変化する市場の影響を反映している。"
+        "テキサス州がデータセンターの電力網接続を停止。",
+        "急激な電力需要の増加が原因。",
+        "州知事はテキサスをAIの中心地と宣伝していた。"
       ],
       "glossary": [
         {
-          "term": "ビットコイン",
-          "explain_ja": "デジタル通貨の一種で、ブロックチェーン技術を利用している。"
+          "term": "データセンター",
+          "explain_ja": "データを収集、保存、処理するための施設。"
         },
         {
-          "term": "ギガエナジー",
-          "explain_ja": "AIパワーインフラ関連の企業で、エネルギー管理に特化している。"
-        },
-        {
-          "term": "エネルギーインフラ",
-          "explain_ja": "エネルギーの生成、供給、管理を支える基盤や施設を指す。"
+          "term": "電力網",
+          "explain_ja": "電力を供給するためのインフラストラクチャ。"
         }
       ],
       "personal_actions": [
-        "業界の新しい動向に注意を払う。",
-        "エネルギー効率の改善に向けた最新技術を調査する。",
-        "データセンターのエネルギー管理のベストプラクティスを確認する。"
+        "データセンターの電力管理状況を確認する。",
+        "将来の電力需要を予測し、対策を考える。",
+        "地域の電力供給に関する最新情報を追う。"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     }
