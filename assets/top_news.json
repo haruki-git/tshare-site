@@ -1,109 +1,109 @@
 {
-  "date": "2026-08-06",
-  "generatedAtJST": "2026-08-06T07:15:26.347+09:00",
+  "date": "2026-08-07",
+  "generatedAtJST": "2026-08-07T07:15:33.854+09:00",
   "items": [
     {
-      "url": "https://freerepublic.com/focus/f-news/4390605/posts",
-      "source": "Freerepublic.com",
-      "publishedAt": "2026-08-04T21:06:46Z",
-      "title": "Bergen Engines secures 400MW Contract for US AI Data Center Power Plant [in Vineland, NJ].",
-      "title_ja": "Bergen Enginesが米国AIデータセンター向け400MW契約を獲得",
-      "summary_ja": "Bergen Enginesは、米国東海岸に新設されるAIデータセンター向けに400MWの発電所を供給する契約を獲得しました。この発電所は完全に独立した運転が可能で、北米初の中速往復動エンジンによるAI専用の発電所です。36基のエンジンが使用され、2025年12月の出荷が予定されています。新設データセンターは、2026年11月の完成を目指して現在建設中です。",
+      "url": "https://www.commondreams.org/news/lawrence-wins-michigan-primary",
+      "source": "Common Dreams",
+      "publishedAt": "2026-08-05T16:36:05Z",
+      "title": "‘Organized People Can Beat Organized Money’: Lawrence Wins House Primary After Harnessing Opposition to Data Centers",
+      "title_ja": "「組織された人々は組織されたお金に勝てる」：ローレンスがデータセンターへの反対を活用して下院予備選を制す",
+      "summary_ja": "ウィリアム・ローレンスがミシガン州第7区の下院予備選で勝利しました。彼はデータセンターに対する反対意見を利用し、資金を持つ既存の対立候補に立ち向かいました。この結果、地域の住民の不満が票に結びついたことが示されました。",
       "key_points": [
-        "Bergen Enginesは400MWの発電所供給契約を締結",
-        "この発電所はAIワークロード用に設計された初の中速エンジン発電所",
-        "36基の11.2MWのガスエンジンを使用",
-        "発電所は完全にオフグリッドでの運転を目指す",
-        "建設は2025年初頭に開始され、2026年11月の完成を目指す"
+        "ウィリアム・ローレンスがミシガン州第7区で下院予備選に勝利",
+        "データセンターに対する地域住民の強い反対が背景に",
+        "ローレンスは進歩主義的な立場を示す候補者として支持を集めた",
+        "資金力のある対立候補に打ち勝つ結果となった",
+        "地域の問題が選挙結果に大きく影響した"
       ],
       "glossary": [
         {
-          "term": "Bergen Engines",
-          "explain_ja": "ノルウェーのエンジン製造会社で、特にガスエンジンの供給に特化している。"
+          "term": "データセンター",
+          "explain_ja": "データの保存、管理、処理を行う施設で、インターネットや企業のデータ処理基盤として重要。"
         },
         {
-          "term": "MW",
-          "explain_ja": "メガワット。電力の単位で、1メガワットは1000キロワットに相当する。"
-        },
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能（AI）専用の処理能力を持つデータセンターで、大量のデータを迅速に処理することを目的としている。"
+          "term": "進歩主義",
+          "explain_ja": "社会的、政治的、経済的改革を重視し、特に弱者の権利や環境保護を支持する政治思想。"
         }
       ],
       "personal_actions": [
-        "プロジェクトに関する最新情報を収集し、今後の発展を把握する。",
-        "地元の電力供給状況や影響を確認する。",
-        "新しい技術やエネルギーソリューションのトレンドに注目し、今後のビジネス機会を検討する。"
+        "地域の政治に関心を持ち、参加することを検討する",
+        "データセンターについての地域の議論に参加し、意見を表明する",
+        "進歩的な候補者や政策を支持する活動を探る"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://www.theverge.com/tech/975381/amd-q2-2026-earnings-ai-gaming-ryzen",
-      "source": "The Verge",
-      "publishedAt": "2026-08-04T20:59:24Z",
-      "title": "AMD’s datacenter business is booming while gaming takes a backseat",
-      "title_ja": "AMDのデータセンター事業は好調、ゲームは後回し",
-      "summary_ja": "AMDのデータセンター事業は、AI需要の高まりにより前年同期比で売上が倍増し、67億ドルに達しました。これは、前四半期の58億ドルから増加し、前年の32億ドルからも107%の成長を示しています。これにより、AMDはデータセンター市場での影響力を高めています。",
+      "url": "https://blockspace.media/insight/galaxy-digital-q2-loss-helios-financing-2026/",
+      "source": "Blockspace.media",
+      "publishedAt": "2026-08-05T13:48:32Z",
+      "title": "Galaxy Digital reports narrower loss as Helios Phase I comes online: Q2 Earnings",
+      "title_ja": "Galaxy DigitalがヘリオスフェーズIの稼働で損失を縮小：Q2業績",
+      "summary_ja": "Galaxy Digitalは、データセンター部門の収益化により、第2四半期の損失を61%縮小した。ヘリオスプロジェクトの第1フェーズがオンラインとなり、同社は260MWの重要なITキャパシティを支援した。この進展は、将来の成長に向けた一歩となる。",
       "key_points": [
-        "AMDのデータセンター収益は67億ドルに達した。",
-        "前年同期比で107%の増加。",
-        "AIの需要が成長の原動力。",
-        "ゲーム事業は相対的に関心が薄れている。",
-        "データセンター市場での競争が激化。"
+        "第2四半期の損失が61%縮小",
+        "データセンター部門が収益を上げ始めた",
+        "ヘリオスプロジェクトの第1フェーズが稼働",
+        "260MWのITキャパシティの資金提供を実施",
+        "将来の成長に向けた重要なステップ"
       ],
       "glossary": [
+        {
+          "term": "Galaxy Digital",
+          "explain_ja": "仮想通貨やブロックチェーン関連の金融サービスを提供する企業"
+        },
+        {
+          "term": "ヘリオスプロジェクト",
+          "explain_ja": "Galaxy Digitalのデータセンタープロジェクトで、収益化を目指す重要な取り組み"
+        },
+        {
+          "term": "ITキャパシティ",
+          "explain_ja": "データセンターが処理可能な情報技術の能力"
+        }
+      ],
+      "personal_actions": [
+        "Galaxy Digitalの業績報告をチェックし、業界動向を把握する",
+        "データセンターのビジネスモデルについて理解を深める",
+        "自社のデータセンター運営における収益化戦略を再評価する"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://cryptoslate.com/bitcoin-miners-ai-pipelines-are-on-trial-as-texas-freezes-474-gw-of-data-center-requests/",
+      "source": "CryptoSlate",
+      "publishedAt": "2026-08-05T12:45:46Z",
+      "title": "Bitcoin miners’ AI pipelines are on trial as Texas freezes 474 GW of data center requests",
+      "title_ja": "テキサス州、ビットコインマイナーのAIパイプラインを審査中で474 GWのデータセンターリクエストを凍結",
+      "summary_ja": "テキサス州のグレッグ・アボット知事が、電力接続を求めるデータセンターのプロジェクトすべてを監査するよう命じました。この命令により、ビットコインマイナーに関連するAIインフラが注目を浴びています。これにより、電力供給の安定性と持続可能性への影響が懸念されています。",
+      "key_points": [
+        "テキサス州がすべてのデータセンタープロジェクトの監査を命じた。",
+        "474 GWのデータセンターリクエストが凍結されている。",
+        "ビットコインマイナーに関連するAIインフラが特に注視されている。",
+        "この動きは電力供給の安定性に影響を与える可能性がある。",
+        "ERCOTが新規プロジェクトの承認を一時停止している。"
+      ],
+      "glossary": [
+        {
+          "term": "ERCOT",
+          "explain_ja": "テキサス州の電力送電ネットワークの管理を行う団体。"
+        },
+        {
+          "term": "GW",
+          "explain_ja": "ギガワット。エネルギーの単位で、1 GWは10億ワットに相当する。"
+        },
         {
           "term": "AI",
-          "explain_ja": "人工知能のこと。データ処理や分析に利用される。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを保存し、処理するための施設。"
-        },
-        {
-          "term": "収益",
-          "explain_ja": "企業が得た利益のこと。"
+          "explain_ja": "人工知能。データ分析や自動化に用いられる技術。"
         }
       ],
       "personal_actions": [
-        "AMDの最新の決算報告を確認する。",
-        "データセンターの技術トレンドや競合分析を行う。",
-        "AI関連のプロジェクトや案件について最新情報を収集する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184856924",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-08-04T20:53:19Z",
-      "title": "Texas halts data center connections to power grid amid overwhelming demand - Slashdot",
-      "title_ja": "テキサス州、需要の高まりを受けてデータセンターの電力網接続を停止",
-      "summary_ja": "テキサス州は、データセンターの電力網接続を一時停止しました。これは、急増する電力需要に対処するための措置です。テキサス州知事は、州をAIの「エピセンター」として宣伝していましたが、その影響が表れています。",
-      "key_points": [
-        "テキサス州がデータセンターの電力網接続を停止。",
-        "急激な電力需要の増加が原因。",
-        "州知事はテキサスをAIの中心地と宣伝していた。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データを収集、保存、処理するための施設。"
-        },
-        {
-          "term": "電力網",
-          "explain_ja": "電力を供給するためのインフラストラクチャ。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの電力管理状況を確認する。",
-        "将来の電力需要を予測し、対策を考える。",
-        "地域の電力供給に関する最新情報を追う。"
+        "現在進行中のデータセンターのプロジェクトについて最新情報を確認する。",
+        "テキサス州の電力供給に関する規制の変更を追跡する。",
+        "ビットコインマイニングのエネルギー使用についての知識を深める。"
       ],
       "tags": [
         "DC",
