@@ -1,109 +1,113 @@
 {
-  "date": "2026-08-07",
-  "generatedAtJST": "2026-08-07T07:15:33.854+09:00",
+  "date": "2026-08-08",
+  "generatedAtJST": "2026-08-08T07:15:29.086+09:00",
   "items": [
     {
-      "url": "https://www.commondreams.org/news/lawrence-wins-michigan-primary",
-      "source": "Common Dreams",
-      "publishedAt": "2026-08-05T16:36:05Z",
-      "title": "‘Organized People Can Beat Organized Money’: Lawrence Wins House Primary After Harnessing Opposition to Data Centers",
-      "title_ja": "「組織された人々は組織されたお金に勝てる」：ローレンスがデータセンターへの反対を活用して下院予備選を制す",
-      "summary_ja": "ウィリアム・ローレンスがミシガン州第7区の下院予備選で勝利しました。彼はデータセンターに対する反対意見を利用し、資金を持つ既存の対立候補に立ち向かいました。この結果、地域の住民の不満が票に結びついたことが示されました。",
+      "url": "https://gcaptain.com/abs-and-samsung-heavy-industries-advance-50-mw-and-200-mw-floating-data-center-designs/",
+      "source": "gcaptain.com",
+      "publishedAt": "2026-08-06T18:43:34Z",
+      "title": "ABS and Samsung Heavy Industries Advance 50 MW and 200 MW Floating Data Center Designs",
+      "title_ja": "ABSとサムスン重工、50MWおよび200MWの浮体型データセンター設計を前進",
+      "summary_ja": "ABSとサムスン重工業は、浮体型データセンターの開発において二つの重要なマイルストーンを発表した。これは、韓国と米国の造船パートナーシップの開設以来の一連の革新的な合意の一部である。これにより、データセンターの効率性と柔軟性が向上し、持続可能な技術に基づく新たなビジネスモデルの創出が期待されている。",
       "key_points": [
-        "ウィリアム・ローレンスがミシガン州第7区で下院予備選に勝利",
-        "データセンターに対する地域住民の強い反対が背景に",
-        "ローレンスは進歩主義的な立場を示す候補者として支持を集めた",
-        "資金力のある対立候補に打ち勝つ結果となった",
-        "地域の問題が選挙結果に大きく影響した"
+        "ABSとサムスン重工、浮体型データセンターの設計を進展させる",
+        "50MWおよび200MWの二つのデザインが発表された",
+        "韓国・米国の造船パートナーシップが背景にある",
+        "新技術による効率性向上が見込まれる",
+        "持続可能な事業モデルの実現に寄与する可能性がある"
       ],
       "glossary": [
+        {
+          "term": "浮体型データセンター",
+          "explain_ja": "水面に設置されたデータセンターで、環境への影響を最小限に抑える設計が特徴。"
+        },
+        {
+          "term": "ABS",
+          "explain_ja": "アメリカン・ブルー・シールド（American Bureau of Shipping）の略称で、海上安全と環境保護に関連する基準を提供する機関。"
+        },
+        {
+          "term": "サムスン重工業",
+          "explain_ja": "韓国の大手造船企業で、先端技術の開発に関与。"
+        }
+      ],
+      "personal_actions": [
+        "浮体型データセンターの最新技術について調査する",
+        "関連する業界動向を把握し、影響を評価する",
+        "浮体型データセンターに関するセミナーやウェビナーに参加する"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.tomshardware.com/tech-industry/data-centers/after-severe-76-percent-electricity-price-hikes-due-to-ai-data-centers-virginia-requires-firms-to-pay-for-all-dedicated-upstream-electrical-infrastructure-state-regulators-crack-down-governor-says-move-will-save-civilians-hundreds-of-millions-of-dollars",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-08-06T15:32:08Z",
+      "title": "After severe 76% electricity price hikes due to AI data centers, Virginia requires firms to pay for all dedicated upstream electrical infrastructure — state regulators crack down, governor says move will save civilians ‘hundreds of millions of dollars’",
+      "title_ja": "VA、データセンター向け電力インフラの全額負担を企業に要求",
+      "summary_ja": "バージニア州ではAIデータセンターによる電気料金の76%の急騰を受け、すべてのデータセンターが必要な電力供給インフラを自己負担することが求められています。これは、州の公共事業規制機関が「料金支払者保護の誓約」を実行可能な政策に変えた例となります。この政策により、州の市民は数億ドルの節約が期待されています。",
+      "key_points": [
+        "バージニア州がデータセンターに電力インフラの全額負担を要求。",
+        "AIデータセンターによる電力料金の76%増加が背景。",
+        "「料金支払者保護の誓約」が実行可能な政策に転換された。",
+        "州民に対して数億ドルの節約が見込まれる。"
+      ],
+      "glossary": [
+        {
+          "term": "バージニア州",
+          "explain_ja": "アメリカ合衆国の州で、データセンターの設置が進んでいる地域。"
+        },
         {
           "term": "データセンター",
-          "explain_ja": "データの保存、管理、処理を行う施設で、インターネットや企業のデータ処理基盤として重要。"
+          "explain_ja": "データを集約し、管理する施設。主にクラウドサービスやAIの運用に使用される。"
         },
         {
-          "term": "進歩主義",
-          "explain_ja": "社会的、政治的、経済的改革を重視し、特に弱者の権利や環境保護を支持する政治思想。"
+          "term": "料金支払者保護の誓約",
+          "explain_ja": "消費者が受ける電力料金の影響を軽減するための政策の一環。"
         }
       ],
       "personal_actions": [
-        "地域の政治に関心を持ち、参加することを検討する",
-        "データセンターについての地域の議論に参加し、意見を表明する",
-        "進歩的な候補者や政策を支持する活動を探る"
+        "自社のデータセンターがバージニア州にある場合、今後の電力インフラ費用について認識を深める。",
+        "公共事業規制機関からの最新情報を定期的に確認し、政策変更に備える。",
+        "インフラの自己負担による予算影響を評価し、必要な対策を立てる。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://blockspace.media/insight/galaxy-digital-q2-loss-helios-financing-2026/",
-      "source": "Blockspace.media",
-      "publishedAt": "2026-08-05T13:48:32Z",
-      "title": "Galaxy Digital reports narrower loss as Helios Phase I comes online: Q2 Earnings",
-      "title_ja": "Galaxy DigitalがヘリオスフェーズIの稼働で損失を縮小：Q2業績",
-      "summary_ja": "Galaxy Digitalは、データセンター部門の収益化により、第2四半期の損失を61%縮小した。ヘリオスプロジェクトの第1フェーズがオンラインとなり、同社は260MWの重要なITキャパシティを支援した。この進展は、将来の成長に向けた一歩となる。",
+      "url": "https://www.nextbigfuture.com/2026/08/understanding-different-ai-data-center-leasing-prices-and-categories.html",
+      "source": "Next Big Future",
+      "publishedAt": "2026-08-06T15:02:20Z",
+      "title": "Understanding Different AI Data Center Leasing Prices and Categories – NextBigFuture.com",
+      "title_ja": "AIデータセンターのリース価格とカテゴリーの理解",
+      "summary_ja": "AIデータセンターのリース価格は、供給不足により高騰しており、特に最先端のGPU集約型クラスターがその中心となっています。SpaceXのColossusプロジェクトは、高い即時使用可能性が特徴で、通常の契約と比べて高いプレミアムがついています。この状況はAI需要の急増を反映しており、今後数年にわたり供給の緊迫状態が続くと予想されています。",
       "key_points": [
-        "第2四半期の損失が61%縮小",
-        "データセンター部門が収益を上げ始めた",
-        "ヘリオスプロジェクトの第1フェーズが稼働",
-        "260MWのITキャパシティの資金提供を実施",
-        "将来の成長に向けた重要なステップ"
+        "Colossusプロジェクトのリース価格は、特に高性能GPUに対して高い需要を反映している。",
+        "AIデータセンターの通常のリースが数年契約であるのに対し、Colossusスタイルのリースは短期的な契約が可能。",
+        "現在のAIニーズの高まりにより、即時使用可能なキャパシティのプレミアムが形成されている。",
+        "AIに特化したインフラの構築コストは、従来よりも高騰している。",
+        "供給が限られたため、スポット市場での価格が長期契約よりも高くなることが多い。"
       ],
       "glossary": [
-        {
-          "term": "Galaxy Digital",
-          "explain_ja": "仮想通貨やブロックチェーン関連の金融サービスを提供する企業"
-        },
-        {
-          "term": "ヘリオスプロジェクト",
-          "explain_ja": "Galaxy Digitalのデータセンタープロジェクトで、収益化を目指す重要な取り組み"
-        },
-        {
-          "term": "ITキャパシティ",
-          "explain_ja": "データセンターが処理可能な情報技術の能力"
-        }
-      ],
-      "personal_actions": [
-        "Galaxy Digitalの業績報告をチェックし、業界動向を把握する",
-        "データセンターのビジネスモデルについて理解を深める",
-        "自社のデータセンター運営における収益化戦略を再評価する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://cryptoslate.com/bitcoin-miners-ai-pipelines-are-on-trial-as-texas-freezes-474-gw-of-data-center-requests/",
-      "source": "CryptoSlate",
-      "publishedAt": "2026-08-05T12:45:46Z",
-      "title": "Bitcoin miners’ AI pipelines are on trial as Texas freezes 474 GW of data center requests",
-      "title_ja": "テキサス州、ビットコインマイナーのAIパイプラインを審査中で474 GWのデータセンターリクエストを凍結",
-      "summary_ja": "テキサス州のグレッグ・アボット知事が、電力接続を求めるデータセンターのプロジェクトすべてを監査するよう命じました。この命令により、ビットコインマイナーに関連するAIインフラが注目を浴びています。これにより、電力供給の安定性と持続可能性への影響が懸念されています。",
-      "key_points": [
-        "テキサス州がすべてのデータセンタープロジェクトの監査を命じた。",
-        "474 GWのデータセンターリクエストが凍結されている。",
-        "ビットコインマイナーに関連するAIインフラが特に注視されている。",
-        "この動きは電力供給の安定性に影響を与える可能性がある。",
-        "ERCOTが新規プロジェクトの承認を一時停止している。"
-      ],
-      "glossary": [
-        {
-          "term": "ERCOT",
-          "explain_ja": "テキサス州の電力送電ネットワークの管理を行う団体。"
-        },
-        {
-          "term": "GW",
-          "explain_ja": "ギガワット。エネルギーの単位で、1 GWは10億ワットに相当する。"
-        },
         {
           "term": "AI",
-          "explain_ja": "人工知能。データ分析や自動化に用いられる技術。"
+          "explain_ja": "人工知能。コンピュータが人間のように学習・判断する能力を指す。"
+        },
+        {
+          "term": "GPU",
+          "explain_ja": "グラフィックス処理ユニット。並列処理が得意で、高度な計算を必要とするAIモデルの学習に使われる。"
+        },
+        {
+          "term": "Colossus",
+          "explain_ja": "SpaceXが運営する高性能AIデータセンター。即時に大規模なGPUキャパシティを提供。"
         }
       ],
       "personal_actions": [
-        "現在進行中のデータセンターのプロジェクトについて最新情報を確認する。",
-        "テキサス州の電力供給に関する規制の変更を追跡する。",
-        "ビットコインマイニングのエネルギー使用についての知識を深める。"
+        "最新のAIデータセンターのリース価格や設備状況を確認する。",
+        "供給状況の変化を追跡し、将来的なリースを検討する際の参考にする。",
+        "AI関連技術の動向や市場の変化について情報収集を続ける。"
       ],
       "tags": [
         "DC",
