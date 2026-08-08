@@ -1,75 +1,37 @@
 {
-  "date": "2026-08-08",
-  "generatedAtJST": "2026-08-08T07:15:29.086+09:00",
+  "date": "2026-08-09",
+  "generatedAtJST": "2026-08-09T07:15:21.335+09:00",
   "items": [
     {
-      "url": "https://gcaptain.com/abs-and-samsung-heavy-industries-advance-50-mw-and-200-mw-floating-data-center-designs/",
-      "source": "gcaptain.com",
-      "publishedAt": "2026-08-06T18:43:34Z",
-      "title": "ABS and Samsung Heavy Industries Advance 50 MW and 200 MW Floating Data Center Designs",
-      "title_ja": "ABSとサムスン重工、50MWおよび200MWの浮体型データセンター設計を前進",
-      "summary_ja": "ABSとサムスン重工業は、浮体型データセンターの開発において二つの重要なマイルストーンを発表した。これは、韓国と米国の造船パートナーシップの開設以来の一連の革新的な合意の一部である。これにより、データセンターの効率性と柔軟性が向上し、持続可能な技術に基づく新たなビジネスモデルの創出が期待されている。",
+      "url": "https://oilprice.com/Energy/Energy-General/China-Is-Betting-on-Quantum-Tech-to-Fix-Its-Power-Grid.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-08-07T21:00:00Z",
+      "title": "China Is Betting on Quantum Tech to Fix Its Power Grid",
+      "title_ja": "中国、量子技術で電力網の改善を目指す",
+      "summary_ja": "中国は、複雑化するエネルギー需給の管理を強化するために量子技術に依存する戦略を進めています。再生可能エネルギーの普及とAIの活用が進む中、電力網には新たな課題が生まれています。これに対処するため、中国は量子コンピュータを用いて電力の流れを最適化し、持続可能なエネルギー供給を確保しようとしています。",
       "key_points": [
-        "ABSとサムスン重工、浮体型データセンターの設計を進展させる",
-        "50MWおよび200MWの二つのデザインが発表された",
-        "韓国・米国の造船パートナーシップが背景にある",
-        "新技術による効率性向上が見込まれる",
-        "持続可能な事業モデルの実現に寄与する可能性がある"
+        "中国は量子技術を利用して電力網を改善する計画を持っている。",
+        "エネルギーの流れがより複雑になっているため、電力管理は難しくなっている。",
+        "AIの利用がエネルギー需要を急増させている。",
+        "量子コンピュータの導入により、電力供給の最適化が期待されている。"
       ],
       "glossary": [
         {
-          "term": "浮体型データセンター",
-          "explain_ja": "水面に設置されたデータセンターで、環境への影響を最小限に抑える設計が特徴。"
+          "term": "量子技術",
+          "explain_ja": "物理学の原理を基にした技術で、計算やデータ処理に革命的な性能を提供する。"
         },
         {
-          "term": "ABS",
-          "explain_ja": "アメリカン・ブルー・シールド（American Bureau of Shipping）の略称で、海上安全と環境保護に関連する基準を提供する機関。"
+          "term": "再生可能エネルギー",
+          "explain_ja": "自然の力を利用した持続可能なエネルギー源。"
         },
         {
-          "term": "サムスン重工業",
-          "explain_ja": "韓国の大手造船企業で、先端技術の開発に関与。"
+          "term": "AI（人工知能）",
+          "explain_ja": "コンピュータや機械が人間の知能を模倣し、学習や判断を行う技術。"
         }
       ],
       "personal_actions": [
-        "浮体型データセンターの最新技術について調査する",
-        "関連する業界動向を把握し、影響を評価する",
-        "浮体型データセンターに関するセミナーやウェビナーに参加する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.tomshardware.com/tech-industry/data-centers/after-severe-76-percent-electricity-price-hikes-due-to-ai-data-centers-virginia-requires-firms-to-pay-for-all-dedicated-upstream-electrical-infrastructure-state-regulators-crack-down-governor-says-move-will-save-civilians-hundreds-of-millions-of-dollars",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-08-06T15:32:08Z",
-      "title": "After severe 76% electricity price hikes due to AI data centers, Virginia requires firms to pay for all dedicated upstream electrical infrastructure — state regulators crack down, governor says move will save civilians ‘hundreds of millions of dollars’",
-      "title_ja": "VA、データセンター向け電力インフラの全額負担を企業に要求",
-      "summary_ja": "バージニア州ではAIデータセンターによる電気料金の76%の急騰を受け、すべてのデータセンターが必要な電力供給インフラを自己負担することが求められています。これは、州の公共事業規制機関が「料金支払者保護の誓約」を実行可能な政策に変えた例となります。この政策により、州の市民は数億ドルの節約が期待されています。",
-      "key_points": [
-        "バージニア州がデータセンターに電力インフラの全額負担を要求。",
-        "AIデータセンターによる電力料金の76%増加が背景。",
-        "「料金支払者保護の誓約」が実行可能な政策に転換された。",
-        "州民に対して数億ドルの節約が見込まれる。"
-      ],
-      "glossary": [
-        {
-          "term": "バージニア州",
-          "explain_ja": "アメリカ合衆国の州で、データセンターの設置が進んでいる地域。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データを集約し、管理する施設。主にクラウドサービスやAIの運用に使用される。"
-        },
-        {
-          "term": "料金支払者保護の誓約",
-          "explain_ja": "消費者が受ける電力料金の影響を軽減するための政策の一環。"
-        }
-      ],
-      "personal_actions": [
-        "自社のデータセンターがバージニア州にある場合、今後の電力インフラ費用について認識を深める。",
-        "公共事業規制機関からの最新情報を定期的に確認し、政策変更に備える。",
-        "インフラの自己負担による予算影響を評価し、必要な対策を立てる。"
+        "電力使用の最適化を考慮し、エネルギー管理の方針を見直す。",
+        "量子技術に関する最新情報を調査し、業務に取り入れる可能性を検討する。"
       ],
       "tags": [
         "DC",
@@ -77,40 +39,71 @@
       ]
     },
     {
-      "url": "https://www.nextbigfuture.com/2026/08/understanding-different-ai-data-center-leasing-prices-and-categories.html",
-      "source": "Next Big Future",
-      "publishedAt": "2026-08-06T15:02:20Z",
-      "title": "Understanding Different AI Data Center Leasing Prices and Categories – NextBigFuture.com",
-      "title_ja": "AIデータセンターのリース価格とカテゴリーの理解",
-      "summary_ja": "AIデータセンターのリース価格は、供給不足により高騰しており、特に最先端のGPU集約型クラスターがその中心となっています。SpaceXのColossusプロジェクトは、高い即時使用可能性が特徴で、通常の契約と比べて高いプレミアムがついています。この状況はAI需要の急増を反映しており、今後数年にわたり供給の緊迫状態が続くと予想されています。",
+      "url": "https://siliconangle.com/2026/08/07/sk-hynix-approves-38b-investment-two-new-memory-fabs/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-08-07T20:53:42Z",
+      "title": "SK hynix approves $38B+ investment in two new memory fabs - SiliconANGLE",
+      "title_ja": "SK hynixが新たに2つのメモリファブ建設に380億ドル以上の投資を承認",
+      "summary_ja": "SK hynixが2つの新しいメモリファブの建設を承認しました。これにかかる費用は54兆ウォン（約380億ドル）で、同社の製造能力を拡大するための4300億ドルの投資計画の一環です。この取り組みは、韓国政府が地元の半導体産業を成長させるための大規模なプロジェクトにも関連しています。",
       "key_points": [
-        "Colossusプロジェクトのリース価格は、特に高性能GPUに対して高い需要を反映している。",
-        "AIデータセンターの通常のリースが数年契約であるのに対し、Colossusスタイルのリースは短期的な契約が可能。",
-        "現在のAIニーズの高まりにより、即時使用可能なキャパシティのプレミアムが形成されている。",
-        "AIに特化したインフラの構築コストは、従来よりも高騰している。",
-        "供給が限られたため、スポット市場での価格が長期契約よりも高くなることが多い。"
+        "SK hynixがYongin Semiconductor Clusterに2つの新しいファブを建設。",
+        "Yongin Y2ファブはDRAM専用で、2029年6月に初のクリーンルームを稼働予定。",
+        "世界最大のHBM生産者であるSK hynixが、高速RAMを製造する計画。",
+        "NANDフラッシュ用の2つ目のファブも開設予定で、既存のインフラを活用して工事を加速。",
+        "Samsungも垂直メモリ技術を開発中で、競争が激化。",
+        "HBMおよびNANDフラッシュの新技術による性能向上が期待される。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能。コンピュータが人間のように学習・判断する能力を指す。"
+          "term": "HBM",
+          "explain_ja": "High Bandwidth Memoryの略で、高速RAMを指します。複数のRAM層を重ねてデータ移動を高速化します。"
         },
         {
-          "term": "GPU",
-          "explain_ja": "グラフィックス処理ユニット。並列処理が得意で、高度な計算を必要とするAIモデルの学習に使われる。"
+          "term": "NANDフラッシュ",
+          "explain_ja": "データを永続的に保存するための非揮発性メモリの一種です。主にデータストレージに使用されます。"
         },
         {
-          "term": "Colossus",
-          "explain_ja": "SpaceXが運営する高性能AIデータセンター。即時に大規模なGPUキャパシティを提供。"
+          "term": "クリーンルーム",
+          "explain_ja": "半導体製造において、微細な粒子や汚染物質を排除するための部屋です。"
         }
       ],
       "personal_actions": [
-        "最新のAIデータセンターのリース価格や設備状況を確認する。",
-        "供給状況の変化を追跡し、将来的なリースを検討する際の参考にする。",
-        "AI関連技術の動向や市場の変化について情報収集を続ける。"
+        "自社のメモリニーズに対する将来的な計画を再評価する。",
+        "HBMやNANDフラッシュの技術トレンドをフォローし、競争力を保つための最新情報を収集する。",
+        "新しいファブの建設が自社に与える影響を分析し、必要な対策を立てる。"
       ],
       "tags": [
-        "DC",
+        "その他"
+      ]
+    },
+    {
+      "url": "https://newrepublic.com/post/214111/amazon-data-center-biggest-pollution-source-entire-country",
+      "source": "The New Republic",
+      "publishedAt": "2026-08-07T19:26:27Z",
+      "title": "Amazon Is Creating the Biggest Pollution Source in the Entire Country",
+      "title_ja": "アマゾンが国内最大の汚染源を創出中",
+      "summary_ja": "アマゾンは、国内最大のガス発電所を建設しようとしている。テキサス州ペコス郡で、AIデータセンターを運営するために7.65ギガワットのガス発電を用いる計画が進行中である。このプロジェクトは、環境への影響が懸念されている。",
+      "key_points": [
+        "アマゾンがテキサス州で最大のガス発電所を建設する計画を進行中",
+        "プロジェクトはAIデータセンターに供給される予定",
+        "環境への影響や汚染の懸念が高まっている"
+      ],
+      "glossary": [
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能の運用に必要な計算資源を提供するデータセンターのこと。"
+        },
+        {
+          "term": "ガス発電所",
+          "explain_ja": "天然ガスを使用して発電する施設。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターのエネルギー源に関する情報を調査する",
+        "地域の環境影響を確認する",
+        "持続可能なエネルギー使用の選択肢を検討する"
+      ],
+      "tags": [
         "AI"
       ]
     }
