@@ -1,102 +1,105 @@
 {
-  "date": "2026-08-10",
-  "generatedAtJST": "2026-08-10T07:15:26.032+09:00",
+  "date": "2026-08-11",
+  "generatedAtJST": "2026-08-11T07:15:24.937+09:00",
   "items": [
     {
-      "url": "https://techcrunch.com/2026/08/08/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-08-08T21:24:02Z",
-      "title": "Planned Amazon data center could become the biggest climate polluter in the U.S. | TechCrunch",
-      "title_ja": "アマゾンの予定されているデータセンターが米国最大の気候汚染源になる可能性",
-      "summary_ja": "アマゾンがテキサス州に計画中のデータセンターには、現地発電所の投資が含まれており、これが米国で最大の気候汚染源になる可能性があると報じられています。この計画は、環境への影響が懸念されています。データセンターの大規模化に伴い、気候変動への寄与が大きくなる可能性があります。",
+      "url": "https://www.techradar.com/pro/samsung-wants-to-bring-a-floating-data-center-to-texas-a-huge-waterborne-facility-could-offer-50mw-of-capacity-and-even-cool-itself",
+      "source": "TechRadar",
+      "publishedAt": "2026-08-09T21:05:00Z",
+      "title": "Samsung wants to bring a floating data center to Texas — huge waterborne facility could offer 50MW of capacity and even cool itself",
+      "title_ja": "サムスン、テキサスに浮遊データセンターを計画 — 自冷機能を備えた50MWの水上施設",
+      "summary_ja": "サムスンは、テキサス州に浮遊データセンターを導入する計画を進めています。この巨大な水上施設は、50MWの電力供給能力を有するとされ、自冷機能も備える予定です。ERCOTグリッド接続に関する規制の厳格化が進む中、サムスンとMousterianはその計画を着実に進めています。",
       "key_points": [
-        "アマゾンのテキサス州データセンター計画が発表された。",
-        "新たな発電所が設置される予定である。",
-        "この発電所は米国で最大の気候汚染源になる可能性がある。",
-        "環境への影響が懸念されている。",
-        "データセンターの拡大が気候変動に寄与する恐れがある。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データの保存、管理、処理を行う施設。"
-        },
-        {
-          "term": "発電所",
-          "explain_ja": "電力を生成するための施設。"
-        },
-        {
-          "term": "気候汚染",
-          "explain_ja": "温室効果ガスや有害物質による環境への悪影響。"
-        }
-      ],
-      "personal_actions": [
-        "社内でのデータセンターのエネルギー使用状況を確認する。",
-        "環境影響評価に関する会社の方針を把握する。",
-        "持続可能なエネルギー源の導入検討を促進する。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/texas-governor-freezes-data-center-ercot-audit/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-08-08T21:08:10Z",
-      "title": "Texas governor freezes data center rollout amid ERCOT power strain",
-      "title_ja": "テキサス州知事、ERCOTの電力逼迫を受けデータセンターの構築を凍結",
-      "summary_ja": "テキサス州知事はERCOT（電力信頼性委員会）の電力逼迫に対応するため、データセンターのプロジェクトを凍結しました。この決定は、技術的成長と電力網の安定性を両立させるための持続可能なエネルギーソリューションの必要性を浮き彫りにしています。結果として、データセンターの増加が地域の電力供給に与える影響が懸念されています。",
-      "key_points": [
-        "テキサス州知事がデータセンターの新プロジェクトを凍結",
-        "ERCOTの電力不足が背景に",
-        "持続可能なエネルギーソリューションの必要が高まる"
+        "サムスンがテキサス州に浮遊データセンターを提案。",
+        "計画されているデータセンターは50MWの電力供給が可能。",
+        "自冷機能を備えており、効率的な運用が期待される。",
+        "ERCOTグリッド接続に関する規制が強化されている。",
+        "Mousterianと共同でこのプロジェクトを進めている。"
       ],
       "glossary": [
         {
           "term": "ERCOT",
-          "explain_ja": "テキサス州の電力網を管理する機関で、電力供給の信頼性を維持する役割を担う。"
+          "explain_ja": "テキサス州の電力を管理する非営利団体。電力供給の安定性を確保するための規制を行っている。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存や処理を行うための設備で、企業やサービスの基盤ともなる。"
+          "term": "MW",
+          "explain_ja": "メガワット。電力の単位で、1メガワットは1000キロワットに相当する。"
         }
       ],
       "personal_actions": [
-        "地域の電力供給についてのトレンドを確認する",
-        "持続可能なエネルギーの導入を検討する"
+        "テキサス州でのデータセンター関連の規制動向を確認する。",
+        "浮遊データセンターのメリットや影響について社内で議論する。",
+        "再生可能エネルギーを利用したデータセンターの運用について調査する。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.nextbigfuture.com/2026/08/microsoft-will-lease-3-gigawatts-of-ai-data-center-from-spacex-in-2027.html",
-      "source": "Next Big Future",
-      "publishedAt": "2026-08-08T18:29:09Z",
-      "title": "Microsoft Will Lease 3+ Gigawatts of AI Data Center from SpaceX in 2027 – NextBigFuture.com",
-      "title_ja": "マイクロソフト、2027年にSpaceXから3ギガワットのAIデータセンターをリース予定",
-      "summary_ja": "マイクロソフトは、2027年までにSpaceXから3ギガワットのAIデータセンターをリースする意向を示しています。これにより、同社はOpenAIとの契約で得られる収益を最大化し、急成長を図ることができます。SpaceXは、データセンターの提供においても大きな役割を果たす可能性があり、2027年には約1兆ドルのARRを見込むことができる状況です。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184906820",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-08-09T12:53:11Z",
+      "title": "Amazon’s new 7.65GW Texas AI data center power plant could become the largest source of CO pollution in the US — custom 35-turbine gas plant author - Slashdot",
+      "title_ja": "アマゾンのテキサス州新AIデータセンター向け7.65GW発電所が米国最大のCO排出源になる可能性",
+      "summary_ja": "アマゾンはテキサス州に新たに7.65GWの天然ガス発電所を建設する計画を発表しました。この発電所は新しいAIデータセンターに電力を供給するためのもので、年間3300万トンのCO排出が許可されています。これにより、米国で最大のCO排出源となる可能性があります。",
       "key_points": [
-        "マイクロソフトは2027年末までに3000億ドルのARRを目指す。",
-        "AIデータセンターの契約は、主にOpenAIとの協力から収益を得ることに依存している。",
-        "SpaceXは、年あたり1000億ドルを超える収益の可能性を持つ。",
-        "マイクロソフトのAzureは、収益成長を42%から100%以上に加速させる可能性がある。",
-        "データセンターの提供は、スペースXにとって一世代に一度の機会となる。"
+        "アマゾンが7.65GWの天然ガス発電所をテキサス州に建設予定。",
+        "新しいAIデータセンターに電力を供給。",
+        "年間3300万トンのCO排出を許可されている。",
+        "米国最大のCO排出源になる可能性がある。"
       ],
       "glossary": [
         {
-          "term": "ARR",
-          "explain_ja": "年間繰り返し収益（Annual Recurring Revenue）の略で、定期的に得られる収益を指す。"
+          "term": "GW",
+          "explain_ja": "ギガワットの略で、電力の単位。1GWは10億ワットに相当する。"
         },
         {
-          "term": "MW",
-          "explain_ja": "メガワット（Megawatt）の略で、電力の単位。1MWは1000キロワットに相当する。"
+          "term": "CO",
+          "explain_ja": "一酸化炭素の略称。高い毒性を持つガスで、環境に悪影響を及ぼす。"
+        },
+        {
+          "term": "天然ガス発電所",
+          "explain_ja": "天然ガスを燃料とする発電施設。比較的クリーンなエネルギー源とされるが、CO排出が避けられない。"
         }
       ],
       "personal_actions": [
-        "データセンターの契約状況や市場動向を定期的にチェックする。",
-        "関連するテクノロジーのトレンドを学び、業界の最新情報に精通しておく。",
-        "自身の与信状況や資金計画を見直すことで、AIやデータセンター関連の投資に備える。"
+        "新しい発電所の環境影響を調査し、地域の取り組みに参加する。",
+        "CO排出削減に向けた施策を企業に提案する。",
+        "持続可能なエネルギーの利用を促進する情報を収集する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.tomshardware.com/tech-industry/data-centers/amazons-new-7-65gw-texas-ai-data-center-power-plant-could-become-the-largest-source-of-co2-pollution-in-the-us-custom-35-turbine-gas-plant-authorized-to-emit-33-million-tons-of-annual-greenhouse-gases",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-08-09T12:40:00Z",
+      "title": "Amazon’s new 7.65GW Texas AI data center power plant could become the largest source of CO₂ pollution in the US — custom 35-turbine gas plant authorized to emit 33 million tons of annual greenhouse gases",
+      "title_ja": "アマゾン、テキサス州に新設の7.65GW AIデータセンター用発電所が米国最大のCO₂排出源になる可能性",
+      "summary_ja": "アマゾンがテキサス州に7.65GWの天然ガス発電所を建設する計画を進めており、これは新しいAIデータセンターに電力を供給するためです。この発電所は、年間3300万トンのCO₂排出を許可されており、米国で最大の排出源となる可能性があります。これにより、環境への影響が懸念されています。",
+      "key_points": [
+        "アマゾンはテキサス州に7.65GWの天然ガス発電所を構築中。",
+        "この発電所は新しいAIデータセンターに電力を供給するため。",
+        "発電所は年間3300万トンのCO₂排出を許可されている。",
+        "この規模の排出は米国で最大となる見込み。",
+        "環境への長期的な影響が懸念されている。"
+      ],
+      "glossary": [
+        {
+          "term": "CO₂",
+          "explain_ja": "二酸化炭素。温室効果ガスの一種で、主に化石燃料の燃焼により発生する。"
+        },
+        {
+          "term": "発電所",
+          "explain_ja": "電力を生成する施設。ここでは天然ガスを使用。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターや発電所の環境影響についての最新情報を確認する。",
+        "地域の環境保護団体の活動をフォローし、サポートを検討する。",
+        "持続可能なエネルギーの使用について自分の業務を見直す。"
       ],
       "tags": [
         "DC",
