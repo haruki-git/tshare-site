@@ -1,71 +1,34 @@
 {
-  "date": "2026-08-11",
-  "generatedAtJST": "2026-08-11T07:15:24.937+09:00",
+  "date": "2026-08-12",
+  "generatedAtJST": "2026-08-12T07:15:23.905+09:00",
   "items": [
     {
-      "url": "https://www.techradar.com/pro/samsung-wants-to-bring-a-floating-data-center-to-texas-a-huge-waterborne-facility-could-offer-50mw-of-capacity-and-even-cool-itself",
-      "source": "TechRadar",
-      "publishedAt": "2026-08-09T21:05:00Z",
-      "title": "Samsung wants to bring a floating data center to Texas — huge waterborne facility could offer 50MW of capacity and even cool itself",
-      "title_ja": "サムスン、テキサスに浮遊データセンターを計画 — 自冷機能を備えた50MWの水上施設",
-      "summary_ja": "サムスンは、テキサス州に浮遊データセンターを導入する計画を進めています。この巨大な水上施設は、50MWの電力供給能力を有するとされ、自冷機能も備える予定です。ERCOTグリッド接続に関する規制の厳格化が進む中、サムスンとMousterianはその計画を着実に進めています。",
+      "url": "https://financialpost.com/pmn/business-pmn/openai-is-hiring-a-power-trading-lead-for-its-data-center-portfolio",
+      "source": "Financial Post",
+      "publishedAt": "2026-08-10T19:13:02Z",
+      "title": "OpenAI Is Hiring a Power-Trading Lead for Its Data Center Portfolio",
+      "title_ja": "OpenAIがデータセンター向けの電力取引リードを募集",
+      "summary_ja": "OpenAIは、AIモデルを運営する電力を多く消費するデータセンターのエネルギー管理を支援するため、電力取引リードを募集しています。このポジションは、企業の成長に伴うエネルギー需要の増加に対応する重要な役割を果たします。最終的には、データセンターの運用効率を向上させ、コスト削減に寄与することが期待されています。",
       "key_points": [
-        "サムスンがテキサス州に浮遊データセンターを提案。",
-        "計画されているデータセンターは50MWの電力供給が可能。",
-        "自冷機能を備えており、効率的な運用が期待される。",
-        "ERCOTグリッド接続に関する規制が強化されている。",
-        "Mousterianと共同でこのプロジェクトを進めている。"
+        "OpenAIはデータセンターのエネルギー管理を担当する人材を募集",
+        "AIモデル運用に必要な大量の電力に対応する役割",
+        "電力取引リードはエネルギー効率向上を目指す",
+        "企業の成長に伴うエネルギー需要の増加に対応",
+        "コスト削減に貢献することが期待される"
       ],
       "glossary": [
         {
-          "term": "ERCOT",
-          "explain_ja": "テキサス州の電力を管理する非営利団体。電力供給の安定性を確保するための規制を行っている。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを処理するための施設で、電力を多く消費する。"
         },
         {
-          "term": "MW",
-          "explain_ja": "メガワット。電力の単位で、1メガワットは1000キロワットに相当する。"
+          "term": "AIモデル",
+          "explain_ja": "人工知能がデータを学習し、推論を行うためのアルゴリズムやシステム。"
         }
       ],
       "personal_actions": [
-        "テキサス州でのデータセンター関連の規制動向を確認する。",
-        "浮遊データセンターのメリットや影響について社内で議論する。",
-        "再生可能エネルギーを利用したデータセンターの運用について調査する。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184906820",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-08-09T12:53:11Z",
-      "title": "Amazon’s new 7.65GW Texas AI data center power plant could become the largest source of CO pollution in the US — custom 35-turbine gas plant author - Slashdot",
-      "title_ja": "アマゾンのテキサス州新AIデータセンター向け7.65GW発電所が米国最大のCO排出源になる可能性",
-      "summary_ja": "アマゾンはテキサス州に新たに7.65GWの天然ガス発電所を建設する計画を発表しました。この発電所は新しいAIデータセンターに電力を供給するためのもので、年間3300万トンのCO排出が許可されています。これにより、米国で最大のCO排出源となる可能性があります。",
-      "key_points": [
-        "アマゾンが7.65GWの天然ガス発電所をテキサス州に建設予定。",
-        "新しいAIデータセンターに電力を供給。",
-        "年間3300万トンのCO排出を許可されている。",
-        "米国最大のCO排出源になる可能性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "GW",
-          "explain_ja": "ギガワットの略で、電力の単位。1GWは10億ワットに相当する。"
-        },
-        {
-          "term": "CO",
-          "explain_ja": "一酸化炭素の略称。高い毒性を持つガスで、環境に悪影響を及ぼす。"
-        },
-        {
-          "term": "天然ガス発電所",
-          "explain_ja": "天然ガスを燃料とする発電施設。比較的クリーンなエネルギー源とされるが、CO排出が避けられない。"
-        }
-      ],
-      "personal_actions": [
-        "新しい発電所の環境影響を調査し、地域の取り組みに参加する。",
-        "CO排出削減に向けた施策を企業に提案する。",
-        "持続可能なエネルギーの利用を促進する情報を収集する。"
+        "自社のデータセンターがエネルギー効率を持っているか確認する",
+        "今後の電力需要予測に備えたプランを見直す"
       ],
       "tags": [
         "DC",
@@ -73,37 +36,74 @@
       ]
     },
     {
-      "url": "https://www.tomshardware.com/tech-industry/data-centers/amazons-new-7-65gw-texas-ai-data-center-power-plant-could-become-the-largest-source-of-co2-pollution-in-the-us-custom-35-turbine-gas-plant-authorized-to-emit-33-million-tons-of-annual-greenhouse-gases",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-08-09T12:40:00Z",
-      "title": "Amazon’s new 7.65GW Texas AI data center power plant could become the largest source of CO₂ pollution in the US — custom 35-turbine gas plant authorized to emit 33 million tons of annual greenhouse gases",
-      "title_ja": "アマゾン、テキサス州に新設の7.65GW AIデータセンター用発電所が米国最大のCO₂排出源になる可能性",
-      "summary_ja": "アマゾンがテキサス州に7.65GWの天然ガス発電所を建設する計画を進めており、これは新しいAIデータセンターに電力を供給するためです。この発電所は、年間3300万トンのCO₂排出を許可されており、米国で最大の排出源となる可能性があります。これにより、環境への影響が懸念されています。",
+      "url": "https://economictimes.indiatimes.com/news/international/global-trends/amazons-texas-ai-data-center-faces-a-huge-climate-problem-7-65gw-gas-plant-could-become-americas-biggest-source-of-co-emissions-in-the-us-as-tech-giant-races-to-power-the-ai-boom/articleshow/133121315.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-08-10T16:56:38Z",
+      "title": "Amazon’s Texas AI data center faces a huge climate problem: 7.65GW gas plant could become America’s biggest source of CO₂ emissions in the US as tech giant races to power the AI boom",
+      "title_ja": "アマゾンのテキサスAIデータセンターが直面する重大な気候問題",
+      "summary_ja": "アマゾンのテキサスにあるAIデータセンターが、7.65GWの天然ガス発電所計画により環境への影響が注視されている。この発電所は年間最大で3300万トンのCO₂を排出する可能性があり、アマゾンの2040年のネットゼロ目標への疑問が生じている。この問題は、テクノロジー産業全体における気候変動への対応を再考させるものである。",
       "key_points": [
-        "アマゾンはテキサス州に7.65GWの天然ガス発電所を構築中。",
-        "この発電所は新しいAIデータセンターに電力を供給するため。",
-        "発電所は年間3300万トンのCO₂排出を許可されている。",
-        "この規模の排出は米国で最大となる見込み。",
-        "環境への長期的な影響が懸念されている。"
+        "アマゾンのAIデータセンターが7.65GWの天然ガスプラントを計画している",
+        "このプラントは年間3300万トンのCO₂を排出する可能性がある",
+        "計画はアマゾンの2040年のネットゼロ宣言に矛盾する可能性がある",
+        "環境への影響がテクノロジー業界全体での再評価を促す",
+        "気候変動への対応がますます重要視されている"
       ],
       "glossary": [
         {
           "term": "CO₂",
-          "explain_ja": "二酸化炭素。温室効果ガスの一種で、主に化石燃料の燃焼により発生する。"
+          "explain_ja": "二酸化炭素。主に化石燃料の燃焼によって発生する温室効果ガスの一つ。"
         },
         {
-          "term": "発電所",
-          "explain_ja": "電力を生成する施設。ここでは天然ガスを使用。"
+          "term": "ネットゼロ",
+          "explain_ja": "温室効果ガスの排出と吸収が均衡する状態を指す。"
         }
       ],
       "personal_actions": [
-        "データセンターや発電所の環境影響についての最新情報を確認する。",
-        "地域の環境保護団体の活動をフォローし、サポートを検討する。",
-        "持続可能なエネルギーの使用について自分の業務を見直す。"
+        "データセンターの環境影響評価を確認する",
+        "自社の炭素排出量を見直し、削減計画を立てる",
+        "持続可能なエネルギーオプションを検討する"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/openai-power-trading-lead-energy/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-08-10T16:29:42Z",
+      "title": "OpenAI hires Power Trading Lead to manage energy trading as data center appetite grows",
+      "title_ja": "OpenAI、データセンターの需要増加に伴い電力取引リードを採用",
+      "summary_ja": "OpenAIはエネルギー管理の重要性を強調し、電力取引戦略を強化するために電力取引リードを採用しました。この動きは、テクノロジー業界における運用コストや持続可能性に影響を与えることが期待されています。データセンターの増加に伴い、効果的なエネルギー管理がますます重要になっています。",
+      "key_points": [
+        "OpenAIが電力取引リードを新たに採用した。",
+        "エネルギー管理の重要性が増している。",
+        "運用コストと持続可能性に影響を与える。",
+        "データセンターの需要が高まっている。",
+        "エネルギー取引戦略の強化を目指している。"
+      ],
+      "glossary": [
+        {
+          "term": "エネルギー取引",
+          "explain_ja": "エネルギー資源の売買を管理するプロセス。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データを保存、処理、管理するための施設。"
+        },
+        {
+          "term": "持続可能性",
+          "explain_ja": "環境に配慮した方法で資源を利用すること。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターのエネルギー効率を見直す。",
+        "今後のエネルギー供給戦略を検討する。",
+        "持続可能な運用のための措置を検討する。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
