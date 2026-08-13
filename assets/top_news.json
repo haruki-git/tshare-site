@@ -1,110 +1,103 @@
 {
-  "date": "2026-08-13",
-  "generatedAtJST": "2026-08-13T07:15:18.653+09:00",
+  "date": "2026-08-14",
+  "generatedAtJST": "2026-08-14T07:15:22.258+09:00",
   "items": [
     {
-      "url": "https://www.commondreams.org/news/ai-and-fossil-fuels",
-      "source": "Common Dreams",
-      "publishedAt": "2026-08-11T22:03:52Z",
-      "title": "Peer-Reviewed Study Exposes How Big Tech and Big Oil Work 'Hand-in-Glove' to Profit Off AI",
-      "title_ja": "大手テックと大手石油の結託、AI利用での利益を暴露した研究",
-      "summary_ja": "新たな研究が、米国での人工知能（AI）データセンターの影響についての抗議が広がる中、AIが環境に与える影響を浮き彫りにした。AIがどのようにして温室効果ガスの排出を増加させているのか、テクノロジーと石油産業の結びつきが明らかにされ、今後の政策に影響を与える可能性が示唆されている。特に、地元の電力料金や環境に対する懸念が高まる中、この問題は重要な注目を浴びている。",
+      "url": "https://www.channelnewsasia.com/business/cerebras-raises-annual-targets-strong-ai-chip-demand-6315786",
+      "source": "CNA",
+      "publishedAt": "2026-08-12T20:07:32Z",
+      "title": "Cerebras raises annual targets on strong AI chip demand",
+      "title_ja": "Cerebras、AIチップ需要の高まりで年次目標を引き上げ",
+      "summary_ja": "Cerebras Systemsは、AIサービスのためにデータセンターのキャパシティを増強する企業からの強力なチップ需要に後押しされ、年次収益と粗利率の予測を引き上げました。しかし、発表後に株価は7%以上の下落となりました。",
       "key_points": [
-        "AIデータセンターが温室効果ガス排出を増加させる仕組みが明らかにされた。",
-        "大手テック企業と石油産業の協力関係が、利益追求のために形成されていることが指摘された。",
-        "米国における電力料金の上昇が、地域の住民に悪影響を及ぼしている。",
-        "環境への影響から、AIの利用に関する新たな政策提言が求められている。"
+        "Cerebras Systemsが年次予測を引き上げ。",
+        "AIチップの需要が増加している。",
+        "データセンターのキャパシティ拡張が背景に。",
+        "発表後、株価が7%以上下落。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能。データを分析し、人間のように学習・判断する能力を持つ技術。"
+          "term": "Cerebras Systems",
+          "explain_ja": "AIチップを開発・製造している企業。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "大量のデータを保存・管理する施設。AIの運用に必要な計算資源を提供する。"
+          "explain_ja": "データを管理・保管するための施設。"
+        },
+        {
+          "term": "AIチップ",
+          "explain_ja": "人工知能向けに特化した半導体。"
         }
       ],
       "personal_actions": [
-        "当地でのAIデータセンターの影響に関する地域情報を収集する。",
-        "電力供給業者の方針変更が必要か確認する。"
+        "自社のAI関連のハードウェア戦略を再確認する。",
+        "データセンターのキャパシティに関する現在の状況を評価する。",
+        "AIチップの最新動向に注意を払う。"
       ],
       "tags": [
         "AI"
       ]
     },
     {
-      "url": "https://cryptobriefing.com/lumentum-sales-double-ai-demand/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-08-11T21:55:40Z",
-      "title": "Lumentum sales more than double amid surging AI demand",
-      "title_ja": "Lumentumの売上がAI需要急増で2倍に",
-      "summary_ja": "Lumentumの売上が急増し、AIインフラにおける供給チェーンの制約がデータセンターの拡張スケジュールに影響を与える可能性が示唆されています。背景には、急速なAIの需要拡大があります。この成長は、業界全体に波及効果を及ぼす可能性があります。",
+      "url": "https://aws.amazon.com/blogs/compute/burst-to-region-overflow-aws-outposts-workloads-to-amazon-ec2/",
+      "source": "Amazon.com",
+      "publishedAt": "2026-08-12T17:06:54Z",
+      "title": "Burst to Region: Overflow AWS Outposts workloads to Amazon EC2",
+      "title_ja": "バースト to リージョン: AWS OutpostsワークロードをAmazon EC2にオーバーフローさせる",
+      "summary_ja": "AWS Outpostsは、低遅延とデータの所在を提供しながら、データセンターにAWSインフラを持ち込む。しかし、Outpostsラックのコンピュートは固定である。この記事では、ローカルキャパシティが不足した場合に、ワークロードを親リージョンのAmazon EC2にオーバーフローさせる方法について解説している。",
       "key_points": [
-        "Lumentumの売上が2倍になった。",
-        "AIインフラの需要が急増している。",
-        "供給チェーンに制約が生じる可能性がある。",
-        "データセンターの拡張タイムラインに影響が出る。",
-        "Lumentumのパフォーマンスは業界の重要な指標となる。"
+        "AWS Outpostsは低遅延とデータの所在を提供する。",
+        "Outpostsラックには固定のコンピュートリソースがある。",
+        "バースト to リージョンパターンを用いることで、EC2にワークロードをオーバーフローが可能。",
+        "ローカルキャパシティが不足した際の対処法に触れている。"
       ],
       "glossary": [
         {
-          "term": "Lumentum",
-          "explain_ja": "光デバイスメーカーで、特に通信やAIインフラ向けの技術を提供。"
+          "term": "AWS Outposts",
+          "explain_ja": "AWSのインフラをオンプレミスに持ち込むソリューション。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略。機械が人間の知能を模倣する技術。"
-        },
-        {
-          "term": "供給チェーン",
-          "explain_ja": "製品が原料から完成品になるまでの流れ。"
+          "term": "EC2",
+          "explain_ja": "Amazon Elastic Compute Cloudの略で、仮想サーバーを提供するAWSのサービス。"
         }
       ],
       "personal_actions": [
-        "AIインフラ関連の供給状況を確認する。",
-        "自社のデータセンター計画の見直しを行う。"
+        "AWS Outpostsのリソース使用状況を確認する。",
+        "Amazon EC2へのオーバーフローが必要なシナリオを検討する。",
+        "ローカルキャパシティの管理マニュアルを見直す。"
       ],
       "tags": [
-        "AI"
+        "その他"
       ]
     },
     {
-      "url": "https://cryptobriefing.com/alpha-compute-55m-pennsylvania-data-center/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-08-11T17:29:33Z",
-      "title": "Alpha Compute signs $55M deal for land and gas rights in Pennsylvania to build 200 MW data center campus",
-      "title_ja": "Alpha Compute、ペンシルベニア州で5200万ドルの土地およびガス権利契約を締結し、200MWのデータセンターキャンパスを建設へ",
-      "summary_ja": "Alpha Computeはペンシルベニア州で5200万ドルの土地およびガス権利契約を締結しました。これにより、同社は200MWのデータセンターキャンパスを建設する計画です。この拡張はAIインフラの成長を加速させ、技術投資を呼び込み、地元経済の活性化に寄与する可能性があります。",
+      "url": "https://finance.yahoo.com/energy/articles/navigating-liberty-energy-lbrt-journey-141347774.html",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-08-12T14:13:47Z",
+      "title": "Navigating Liberty Energy’s (LBRT) Journey From Oilfield Services to Data Center Power",
+      "title_ja": "リバティエナジー（LBRT）の石油サービスからデータセンター電力への移行",
+      "summary_ja": "リバティエナジーは、石油サービスからデータセンター向け電力供給へと事業を移行しています。この変革は、エネルギー市場の変化に対応したものであり、特に再生可能エネルギーの需要が高まっています。この新たな方向性は、企業の成長戦略に重要な影響を与えると予測されています。",
       "key_points": [
-        "Alpha Computeが5200万ドルの契約を締結",
-        "ペンシルベニア州に200MWのデータセンターキャンパスを建設予定",
-        "AIインフラの成長を加速させる可能性",
-        "技術投資の増加が期待される",
-        "地元経済の活性化に寄与することが予想される"
+        "リバティエナジーは石油サービスからデータセンター電力供給に移行中",
+        "再生可能エネルギーの需要増加に対応した事業戦略",
+        "成長を目指す新しい市場への進出が期待される"
       ],
       "glossary": [
         {
+          "term": "LBRT",
+          "explain_ja": "リバティエナジーの株式ティッカーシンボル。"
+        },
+        {
           "term": "データセンター",
-          "explain_ja": "データを管理・保管・処理するための施設。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能の略称。"
-        },
-        {
-          "term": "MW",
-          "explain_ja": "メガワットの略称。電力の単位です。"
+          "explain_ja": "サーバーと通信設備を保有し、データの保存、処理、配信を行う施設。"
         }
       ],
       "personal_actions": [
-        "新しいデータセンター計画が地域にもたらす影響を考慮する",
-        "AI技術の導入に備えて関連知識を深める",
-        "エネルギー効率の良い技術について調査する"
+        "リバティエナジーの最新の動向を確認する",
+        "データセンター向けの電力インフラのニーズを調査する"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     }
   ]
