@@ -1,110 +1,114 @@
 {
-  "date": "2026-08-15",
-  "generatedAtJST": "2026-08-15T07:15:23.563+09:00",
+  "date": "2026-08-16",
+  "generatedAtJST": "2026-08-16T07:15:24.457+09:00",
   "items": [
     {
-      "url": "https://oilprice.com/Energy/Energy-General/US-Power-Grid-Strains-Under-Record-Electricity-Demand.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-08-13T22:00:00Z",
-      "title": "U.S. Power Grid Strains Under Record Electricity Demand",
-      "title_ja": "米国の電力網、記録的な電力需要に圧力",
-      "summary_ja": "米国の電力需要は、今年と来年にかけて史上最高を記録する見込みです。これは主にビッグテックによるデータセンターの拡張が原因です。この状況下で、電力情報局はさらに高い需要の予測を発表していますが、問題が浮上しています。",
+      "url": "https://hardware.slashdot.org/story/26/08/14/1747213/pbs-station-fears-losing-50tb-of-data-after-being-ghosted-by-cloud-provider",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-08-14T20:00:00Z",
+      "title": "PBS Station Fears Losing 50TB of Data After Being Ghosted By Cloud Provider",
+      "title_ja": "PBS局、クラウドプロバイダーの消失で50TBのデータ喪失危機",
+      "summary_ja": "PBSの関連局は、クラウドストレージプロバイダーの破綻により50TBのデータを失う恐れがある。70年分のテレビ番組や動画などの重要なデータが含まれている。現在、データセンターのプロバイダーに対して訴訟を起こし、データへのアクセス回復を目指している。",
       "key_points": [
-        "米国の電力需要が歴史的な高水準に達する見込み。",
-        "ビッグテック企業によるデータセンターの建設が主な要因。",
-        "電力情報局からの記録的な需給予測が続く。"
+        "PBS関連局がクラウドストレージプロバイダーの破綻に直面",
+        "失われたデータは70年分のテレビ番組や動画を含む",
+        "約50TBのデータが影響を受けている",
+        "データセンターのプロバイダーに対して訴訟を提起",
+        "データアクセスの回復を目指している"
       ],
       "glossary": [
+        {
+          "term": "PBS",
+          "explain_ja": "Public Broadcasting Serviceの略称で、アメリカの公共放送ネットワーク。"
+        },
+        {
+          "term": "クラウドストレージ",
+          "explain_ja": "インターネット経由でデータを保存および管理するサービス。"
+        },
         {
           "term": "データセンター",
-          "explain_ja": "データの収集、保管、管理を行う施設。"
-        },
-        {
-          "term": "ビッグテック",
-          "explain_ja": "大規模なテクノロジー企業群を指す。"
-        },
-        {
-          "term": "電力情報局",
-          "explain_ja": "アメリカ合衆国のエネルギー関連データを提供する機関。"
+          "explain_ja": "データの保存、管理、配信を行う施設。"
         }
       ],
       "personal_actions": [
-        "地域の電力供給状況を確認し、ピーク時間帯の利用を控える。",
-        "エネルギー効率の良い設備や機器を導入することを検討する。",
-        "非常時の備えとして、エネルギー供給の計画を見直す。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=184961143",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-08-13T20:12:03Z",
-      "title": "Hosting provider Namecheap is down after data center cooling failure - Slashdot",
-      "title_ja": "ホスティングプロバイダーNamecheapがデータセンターの冷却障害でダウン",
-      "summary_ja": "ホスティングプロバイダーのNamecheapがデータセンターの冷却システムの故障によりダウンしています。この障害は、同社のサービスに影響を与え、多くのユーザーが接続できない状態です。この問題の解決には時間がかかる可能性があり、顧客に与える影響が懸念されています。",
-      "key_points": [
-        "Namecheapがデータセンターの冷却システム障害でダウン",
-        "サービスの影響を受けているユーザーが多数",
-        "問題解決には時間がかかる可能性あり"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データサーバーやインフラを集中管理する施設。"
-        },
-        {
-          "term": "冷却システム",
-          "explain_ja": "サーバーの温度を適切に保つための設備。"
-        }
-      ],
-      "personal_actions": [
-        "サービスの状況を定期的に確認する",
-        "代替プランを検討する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://slashdot.org/submission/17349837/namecheap-down-due-to-heat",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-08-13T19:12:20Z",
-      "title": "Namecheap Down Due to Heat - Slashdot",
-      "title_ja": "Namecheapが冷却システムの故障でダウン",
-      "summary_ja": "Namecheapは冷却システムの故障によりダウンしています。この問題はアリゾナ州フェニックスのデータセンターで発生しており、影響を受けているサービスが多くあります。PhoenixNAPは、冷却装置の一部を復旧させ、温度が低下し始めているとのことです。今後、サービスの復旧が期待されています。",
-      "key_points": [
-        "Namecheapが冷却システムの故障でサービスダウン",
-        "影響のあるデータセンターはPhoenixNAPが運営",
-        "2台の冷却装置が復旧し、温度が低下中",
-        "サービスの復旧へ向けてインフラが整備されている"
-      ],
-      "glossary": [
-        {
-          "term": "Namecheap",
-          "explain_ja": "多くの小規模ウェブサイトにDNSサービスを提供する企業"
-        },
-        {
-          "term": "PhoenixNAP",
-          "explain_ja": "グローバルに展開するデータセンター運営企業"
-        },
-        {
-          "term": "RadiusDC",
-          "explain_ja": "最近PhoenixNAPのデータセンターを取得した企業"
-        },
-        {
-          "term": "チラー",
-          "explain_ja": "冷却装置の一種で、データセンターの温度管理に使用される"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの冷却システムの重要性を再確認する",
-        "クリティカルなサービスのバックアッププランを見直す",
-        "温度管理のプロセスを点検する"
+        "クラウドストレージのバックアッププランを確認する",
+        "データセンターとの契約条件を再確認する",
+        "重要データのローカルバックアップを作成する"
       ],
       "tags": [
         "その他"
+      ]
+    },
+    {
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Oracles-165-Billion-Data-Center-Plan-Hits-a-Gas-Pipeline-Delay.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-08-14T19:39:00Z",
+      "title": "Oracle's $165 Billion Data Center Plan Hits a Gas Pipeline Delay",
+      "title_ja": "オラクルの1650億ドルデータセンター計画、ガスパイプラインの遅延に直面",
+      "summary_ja": "オラクルのニューメキシコにおける1650億ドルのデータセンタープロジェクトが、天然ガスパイプラインの遅延により影響を受けています。エネルギートランスファーの子会社であるトランスウェスタンパイプラインは、パイプラインの稼働開始日を2027年2月1日に変更しました。この遅延は、オラクルのプロジェクトジュピターのスケジュールに深刻な影響を及ぼす可能性があります。",
+      "key_points": [
+        "オラクルのデータセンター計画は1650億ドルの規模。",
+        "トランスウェスタンパイプラインがガス供給の開始日を6ヶ月遅らせる。",
+        "プロジェクトジュピターは2.5ギガワットの燃料電池を使用予定。",
+        "遅延によりオラクルの広範なプロジェクトが危険にさらされる。",
+        "ニューメキシコ州の土地局がパイプラインのルートを繰り返し承認していない。"
+      ],
+      "glossary": [
+        {
+          "term": "プロジェクトジュピター",
+          "explain_ja": "オラクルによるニューメキシコのデータセンター開発計画。"
+        },
+        {
+          "term": "トランスウェスタンパイプライン",
+          "explain_ja": "エネルギートランスファーの子会社で、天然ガスパイプラインを運営。"
+        },
+        {
+          "term": "グリーンチリプロジェクト",
+          "explain_ja": "トランスウェスタンによる、オラクルデータセンターへの天然ガス供給を目的としたプロジェクト。"
+        }
+      ],
+      "personal_actions": [
+        "プロジェクトの影響を受ける可能性のあるインフラの進捗状況を確認する。",
+        "ガス供給の新しい契約内容についての理解を深める。",
+        "同様のプロジェクトにおけるガス供給の依存度を再評価する。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.credaily.com/briefs/texas-data-center-boom-faces-new-power-hurdle/",
+      "source": "Credaily.com",
+      "publishedAt": "2026-08-14T16:15:11Z",
+      "title": "Texas Data Center Boom Faces New Power Hurdle",
+      "title_ja": "テキサスのデータセンター急成長に新たな電力の障害",
+      "summary_ja": "テキサス州はデータセンターの新しい電力接続を一時停止しており、急成長する市場での新たな開発にハードルを設けています。これは地域の電力供給に対する需要の増加が影響しています。この状況は今後のデータセンター市場において重要な課題となるでしょう。",
+      "key_points": [
+        "テキサス州がデータセンターの新しい電力接続を一時停止した。",
+        "急成長するテキサス市場の開発に影響を与える。",
+        "地域の電力供給と需要のバランスが問題視されている。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター (Data Center)",
+          "explain_ja": "データを保存、処理、配信するための施設。"
+        },
+        {
+          "term": "電力接続 (Power Connection)",
+          "explain_ja": "電力供給源と施設を結ぶインフラ。"
+        },
+        {
+          "term": "電力供給 (Power Supply)",
+          "explain_ja": "その地域に電力を供給する能力。"
+        }
+      ],
+      "personal_actions": [
+        "地元の電力供給状況を確認する。",
+        "新しいデータセンターの開発状況を追跡する。",
+        "電力使用の最適化を検討する。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
