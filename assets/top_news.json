@@ -1,114 +1,108 @@
 {
-  "date": "2026-08-16",
-  "generatedAtJST": "2026-08-16T07:15:24.457+09:00",
+  "date": "2026-08-17",
+  "generatedAtJST": "2026-08-17T07:15:39.513+09:00",
   "items": [
     {
-      "url": "https://hardware.slashdot.org/story/26/08/14/1747213/pbs-station-fears-losing-50tb-of-data-after-being-ghosted-by-cloud-provider",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-08-14T20:00:00Z",
-      "title": "PBS Station Fears Losing 50TB of Data After Being Ghosted By Cloud Provider",
-      "title_ja": "PBS局、クラウドプロバイダーの消失で50TBのデータ喪失危機",
-      "summary_ja": "PBSの関連局は、クラウドストレージプロバイダーの破綻により50TBのデータを失う恐れがある。70年分のテレビ番組や動画などの重要なデータが含まれている。現在、データセンターのプロバイダーに対して訴訟を起こし、データへのアクセス回復を目指している。",
+      "url": "https://247wallst.com/investing/etf/2026/08/15/the-landlords-of-the-ai-boom-are-up-35-this-year-and-their-pricing-power-keeps-climbing/",
+      "source": "24/7 Wall St.",
+      "publishedAt": "2026-08-15T14:14:42Z",
+      "title": "The Landlords of the AI Boom Are Up 35% This Year and Their Pricing Power Keeps Climbing",
+      "title_ja": "AIブームの家主たち、今年35%の上昇と価格力の向上",
+      "summary_ja": "データセンターの家主たちが過去最高の予約を記録し、歴史的なレベルでの見通しを引き上げています。これにより、彼らの価格力は持続的に向上しています。この景気が続く限り、業界全体に好影響をもたらすと期待されています。",
       "key_points": [
-        "PBS関連局がクラウドストレージプロバイダーの破綻に直面",
-        "失われたデータは70年分のテレビ番組や動画を含む",
-        "約50TBのデータが影響を受けている",
-        "データセンターのプロバイダーに対して訴訟を提起",
-        "データアクセスの回復を目指している"
+        "データセンター家主は今年35%の成長を記録",
+        "過去最高の予約が実現",
+        "価格力が向上し続けている",
+        "業界全体にプラスの影響を与える可能性",
+        "マクロ経済の変数が背景に存在"
       ],
       "glossary": [
         {
-          "term": "PBS",
-          "explain_ja": "Public Broadcasting Serviceの略称で、アメリカの公共放送ネットワーク。"
+          "term": "データセンター",
+          "explain_ja": "情報を保存・処理するための施設で、ビジネス運営に不可欠な役割を果たす。"
         },
         {
-          "term": "クラウドストレージ",
-          "explain_ja": "インターネット経由でデータを保存および管理するサービス。"
+          "term": "予約",
+          "explain_ja": "データセンターのスペースやサービスを事前に確保すること。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの運営状況を確認し、業界トレンドを把握する",
+        "価格戦略を見直し、競争力を維持する"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://finance.yahoo.com/technology/ai/articles/early-tesla-investor-steve-jurvetson-094522451.html",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-08-15T09:45:22Z",
+      "title": "Early Tesla Investor Steve Jurvetson Bets on SpaceX Alumni to Solve AI’s Power Problem: ‘The Endgame for Datacenter...'",
+      "title_ja": "初期テスラ投資家スティーブ・ジュルヴェンソンがスペースX出身者を支援、AIの電力問題解決を目指す",
+      "summary_ja": "スティーブ・ジュルヴェンソン氏が、エロン・マスクの宇宙企業で働いていた二人の元リーダーを支援しています。彼らはAIの電力効率向上に向けた革新的なソリューションを開発中であり、データセンターの最適化も視野に入れています。この取り組みは、AI技術の進化に貢献する可能性があります。",
+      "key_points": [
+        "スティーブ・ジュルヴェンソンが元スペースXリーダーに投資",
+        "AIの電力問題解決を目指す新しいプロジェクト",
+        "データセンターの効率化が重要なテーマ",
+        "ジュルヴェンソンはテスラの初期投資家",
+        "AI技術の発展が期待される"
+      ],
+      "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能のこと。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データの保存、管理、配信を行う施設。"
+          "explain_ja": "データ処理や保存を行うための施設。"
         }
       ],
       "personal_actions": [
-        "クラウドストレージのバックアッププランを確認する",
-        "データセンターとの契約条件を再確認する",
-        "重要データのローカルバックアップを作成する"
+        "最新のAIソリューションに関する情報を収集する",
+        "データセンターの電力効率を検討するための現状分析を行う",
+        "AI関連の投資動向に注目する"
       ],
       "tags": [
-        "その他"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Oracles-165-Billion-Data-Center-Plan-Hits-a-Gas-Pipeline-Delay.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-08-14T19:39:00Z",
-      "title": "Oracle's $165 Billion Data Center Plan Hits a Gas Pipeline Delay",
-      "title_ja": "オラクルの1650億ドルデータセンター計画、ガスパイプラインの遅延に直面",
-      "summary_ja": "オラクルのニューメキシコにおける1650億ドルのデータセンタープロジェクトが、天然ガスパイプラインの遅延により影響を受けています。エネルギートランスファーの子会社であるトランスウェスタンパイプラインは、パイプラインの稼働開始日を2027年2月1日に変更しました。この遅延は、オラクルのプロジェクトジュピターのスケジュールに深刻な影響を及ぼす可能性があります。",
+      "url": "https://finance.yahoo.com/technology/ai/articles/jim-cramer-reviews-nvidia-nvda-235846609.html",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-08-14T23:58:46Z",
+      "title": "Jim Cramer Reviews NVIDIA (NVDA) and Data Center Demand",
+      "title_ja": "ジム・クレイマーが語るNVIDIA（NVDA）とデータセンター需要",
+      "summary_ja": "ジム・クレイマーがNVIDIAの最近の展開とデータセンターの需要について分析しました。NVIDIAは人工知能（AI）の分野での成長を背景に、高まる需要に応じた戦略を強調しています。これは、同社の株価や市場の動向にも大きな影響を与えると考えられています。",
       "key_points": [
-        "オラクルのデータセンター計画は1650億ドルの規模。",
-        "トランスウェスタンパイプラインがガス供給の開始日を6ヶ月遅らせる。",
-        "プロジェクトジュピターは2.5ギガワットの燃料電池を使用予定。",
-        "遅延によりオラクルの広範なプロジェクトが危険にさらされる。",
-        "ニューメキシコ州の土地局がパイプラインのルートを繰り返し承認していない。"
+        "ジム・クレイマーがNVIDIAの重要性を強調した。",
+        "NVIDIAの製品がAI分野での成長を支えている。",
+        "データセンターの需要がNVIDIAにとって大きなビジネスチャンスとなっている。"
       ],
       "glossary": [
         {
-          "term": "プロジェクトジュピター",
-          "explain_ja": "オラクルによるニューメキシコのデータセンター開発計画。"
+          "term": "NVIDIA",
+          "explain_ja": "米国の半導体メーカーで、主にグラフィックプロセッサー（GPU）で知られる。"
         },
         {
-          "term": "トランスウェスタンパイプライン",
-          "explain_ja": "エネルギートランスファーの子会社で、天然ガスパイプラインを運営。"
+          "term": "AI",
+          "explain_ja": "人工知能の略称で、機械が人間の知能を模倣する技術。"
         },
         {
-          "term": "グリーンチリプロジェクト",
-          "explain_ja": "トランスウェスタンによる、オラクルデータセンターへの天然ガス供給を目的としたプロジェクト。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを処理・保存するための設備や施設。"
         }
       ],
       "personal_actions": [
-        "プロジェクトの影響を受ける可能性のあるインフラの進捗状況を確認する。",
-        "ガス供給の新しい契約内容についての理解を深める。",
-        "同様のプロジェクトにおけるガス供給の依存度を再評価する。"
+        "NVIDIAに関する最新情報をチェックする。",
+        "データセンターの需要に関する市場動向を注視する。",
+        "AI製品に対する需要を分析する。"
       ],
       "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.credaily.com/briefs/texas-data-center-boom-faces-new-power-hurdle/",
-      "source": "Credaily.com",
-      "publishedAt": "2026-08-14T16:15:11Z",
-      "title": "Texas Data Center Boom Faces New Power Hurdle",
-      "title_ja": "テキサスのデータセンター急成長に新たな電力の障害",
-      "summary_ja": "テキサス州はデータセンターの新しい電力接続を一時停止しており、急成長する市場での新たな開発にハードルを設けています。これは地域の電力供給に対する需要の増加が影響しています。この状況は今後のデータセンター市場において重要な課題となるでしょう。",
-      "key_points": [
-        "テキサス州がデータセンターの新しい電力接続を一時停止した。",
-        "急成長するテキサス市場の開発に影響を与える。",
-        "地域の電力供給と需要のバランスが問題視されている。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター (Data Center)",
-          "explain_ja": "データを保存、処理、配信するための施設。"
-        },
-        {
-          "term": "電力接続 (Power Connection)",
-          "explain_ja": "電力供給源と施設を結ぶインフラ。"
-        },
-        {
-          "term": "電力供給 (Power Supply)",
-          "explain_ja": "その地域に電力を供給する能力。"
-        }
-      ],
-      "personal_actions": [
-        "地元の電力供給状況を確認する。",
-        "新しいデータセンターの開発状況を追跡する。",
-        "電力使用の最適化を検討する。"
-      ],
-      "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
