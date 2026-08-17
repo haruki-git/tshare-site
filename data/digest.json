@@ -1,34 +1,39 @@
 {
-  "date": "2026-08-17",
-  "generatedAtJST": "2026-08-17T07:15:39.513+09:00",
+  "date": "2026-08-18",
+  "generatedAtJST": "2026-08-18T07:15:26.602+09:00",
   "items": [
     {
-      "url": "https://247wallst.com/investing/etf/2026/08/15/the-landlords-of-the-ai-boom-are-up-35-this-year-and-their-pricing-power-keeps-climbing/",
-      "source": "24/7 Wall St.",
-      "publishedAt": "2026-08-15T14:14:42Z",
-      "title": "The Landlords of the AI Boom Are Up 35% This Year and Their Pricing Power Keeps Climbing",
-      "title_ja": "AIブームの家主たち、今年35%の上昇と価格力の向上",
-      "summary_ja": "データセンターの家主たちが過去最高の予約を記録し、歴史的なレベルでの見通しを引き上げています。これにより、彼らの価格力は持続的に向上しています。この景気が続く限り、業界全体に好影響をもたらすと期待されています。",
+      "url": "https://newsonjapan.com/article/150389.php",
+      "source": "Newsonjapan.com",
+      "publishedAt": "2026-08-16T19:46:42Z",
+      "title": "Data Centers Spread Across Japan",
+      "title_ja": "日本全土で進むデータセンターの拡大",
+      "summary_ja": "日本国内でデータセンターの建設が加速しており、特に人工知能の需要がその要因とされています。この動きは、建設やインフラ関連企業にとって新たなビジネスチャンスを生み出しています。経済への影響は計り知れず、戦略的な分野として政府も支援を強化しています。",
       "key_points": [
-        "データセンター家主は今年35%の成長を記録",
-        "過去最高の予約が実現",
-        "価格力が向上し続けている",
-        "業界全体にプラスの影響を与える可能性",
-        "マクロ経済の変数が背景に存在"
+        "日本各地でデータセンター建設が進行中。",
+        "秋田市では約2兆円のAIデータセンター計画が進行。",
+        "ソフトバンクは北海道で再生可能エネルギーを利用したデータセンターを計画中。",
+        "データセンター建設は多様な企業に利益をもたらすと予測。",
+        "日本政府はデータセンターを成長戦略の一環として位置付け、投資を促進中。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "情報を保存・処理するための施設で、ビジネス運営に不可欠な役割を果たす。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能に特化したデータセンターで、処理能力が求められる。"
         },
         {
-          "term": "予約",
-          "explain_ja": "データセンターのスペースやサービスを事前に確保すること。"
+          "term": "再生可能エネルギー",
+          "explain_ja": "自然界に存在するエネルギー源から得られる持続可能なエネルギー。"
+        },
+        {
+          "term": "Kagawa AI Factory Promotion Consortium",
+          "explain_ja": "香川県が設立したAI推進の公私連携機関。"
         }
       ],
       "personal_actions": [
-        "データセンターの運営状況を確認し、業界トレンドを把握する",
-        "価格戦略を見直し、競争力を維持する"
+        "近隣のデータセンター計画について情報収集を行う。",
+        "再生可能エネルギー活用に関する地域プロジェクトを検討する。",
+        "データセンター向けの新技術について学ぶ。"
       ],
       "tags": [
         "DC",
@@ -36,73 +41,81 @@
       ]
     },
     {
-      "url": "https://finance.yahoo.com/technology/ai/articles/early-tesla-investor-steve-jurvetson-094522451.html",
-      "source": "Yahoo Entertainment",
-      "publishedAt": "2026-08-15T09:45:22Z",
-      "title": "Early Tesla Investor Steve Jurvetson Bets on SpaceX Alumni to Solve AI’s Power Problem: ‘The Endgame for Datacenter...'",
-      "title_ja": "初期テスラ投資家スティーブ・ジュルヴェンソンがスペースX出身者を支援、AIの電力問題解決を目指す",
-      "summary_ja": "スティーブ・ジュルヴェンソン氏が、エロン・マスクの宇宙企業で働いていた二人の元リーダーを支援しています。彼らはAIの電力効率向上に向けた革新的なソリューションを開発中であり、データセンターの最適化も視野に入れています。この取り組みは、AI技術の進化に貢献する可能性があります。",
+      "url": "https://www.bgr.com/2234051/data-centers-groundwater-pollution-explained/",
+      "source": "BGR",
+      "publishedAt": "2026-08-16T17:17:00Z",
+      "title": "Do Data Centers Pollute Local Groundwater?",
+      "title_ja": "データセンターは地域の地下水を汚染するのか？",
+      "summary_ja": "データセンターの急速な成長は、地域住民に高いコストをもたらしています。データセンターは正常に運営されていれば地下水を汚染することはないものの、冷却に使用する化学物質が漏れる可能性があり、環境への影響が懸念されます。特に田舎に進出するデータセンターが増える中、水質の安全性への関心が高まっています。",
       "key_points": [
-        "スティーブ・ジュルヴェンソンが元スペースXリーダーに投資",
-        "AIの電力問題解決を目指す新しいプロジェクト",
-        "データセンターの効率化が重要なテーマ",
-        "ジュルヴェンソンはテスラの初期投資家",
-        "AI技術の発展が期待される"
+        "データセンターは水を大量に消費し、地下水位を下げる可能性がある。",
+        "適切に運営されれば地下水を汚染することはないが、漏洩のリスクは存在する。",
+        "Wyomingではデータセンターの建設により水再生施設が一時停止した。",
+        "Amazonはオレゴン州での水質問題に関して20.5百万ドルの和解金を支払ったが、責任を認めたわけではない。",
+        "データセンターの増加は水消費を増やし、環境災害の可能性を高める。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能のこと。"
+          "term": "地下水汚染",
+          "explain_ja": "地表からの汚染物質が地下水に侵入すること。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データ処理や保存を行うための施設。"
+          "term": "冷却剤",
+          "explain_ja": "データセンターのサーバーを冷却するために使用する物質。"
+        },
+        {
+          "term": "PFAS",
+          "explain_ja": "医療や工業で使用される有機フルオロ化合物の一種。"
         }
       ],
       "personal_actions": [
-        "最新のAIソリューションに関する情報を収集する",
-        "データセンターの電力効率を検討するための現状分析を行う",
-        "AI関連の投資動向に注目する"
+        "近隣のデータセンターが使用する化学物質について情報を確認する。",
+        "地域の水質監視情報を定期的にチェックする。",
+        "データセンターの環境影響について地域住民に話し合う機会を設ける。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://finance.yahoo.com/technology/ai/articles/jim-cramer-reviews-nvidia-nvda-235846609.html",
-      "source": "Yahoo Entertainment",
-      "publishedAt": "2026-08-14T23:58:46Z",
-      "title": "Jim Cramer Reviews NVIDIA (NVDA) and Data Center Demand",
-      "title_ja": "ジム・クレイマーが語るNVIDIA（NVDA）とデータセンター需要",
-      "summary_ja": "ジム・クレイマーがNVIDIAの最近の展開とデータセンターの需要について分析しました。NVIDIAは人工知能（AI）の分野での成長を背景に、高まる需要に応じた戦略を強調しています。これは、同社の株価や市場の動向にも大きな影響を与えると考えられています。",
+      "url": "https://www.geeky-gadgets.com/steamos-beta-update-features/",
+      "source": "Geeky Gadgets",
+      "publishedAt": "2026-08-16T14:00:00Z",
+      "title": "SteamOS Beta Update Fixes CPU Degradation and Wi-Fi Bugs",
+      "title_ja": "SteamOSベータアップデートがCPU劣化とWi-Fiバグを修正",
+      "summary_ja": "Valveの最新SteamOSベータアップデートは、ゲームハードウェアエコシステムの重要な改善を導入しました。これには、CPUの劣化やWi-Fi接続の問題を修正し、システムの安定性を強化する内容が含まれています。また、2015年製のSteamコントローラーの機能が復活し、各デバイスの互換性が拡大されました。このアップデートにより、より良いゲーム体験が提供されることが期待されます。",
       "key_points": [
-        "ジム・クレイマーがNVIDIAの重要性を強調した。",
-        "NVIDIAの製品がAI分野での成長を支えている。",
-        "データセンターの需要がNVIDIAにとって大きなビジネスチャンスとなっている。"
+        "CPU劣化やWi-Fi接続の問題を解決し、システムの安定性を向上。",
+        "Steam Machineのファームウェアバージョン108がHDMI CEC機能やスリープモードの不具合を修正。",
+        "第三者のハンドヘルドデバイスへの対応が強化され、より幅広い互換性が実現。",
+        "2015年製Steamコントローラーに新機能を追加し、デスクトップモードの使いやすさを向上。",
+        "Steam Frame無線アダプターの初期サポートが含まれ、無線ゲーミングの未来に期待。"
       ],
       "glossary": [
         {
-          "term": "NVIDIA",
-          "explain_ja": "米国の半導体メーカーで、主にグラフィックプロセッサー（GPU）で知られる。"
+          "term": "SteamOS",
+          "explain_ja": "Valveが開発したLinuxベースのゲームオペレーティングシステム。特にゲーム機に最適化されている。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略称で、機械が人間の知能を模倣する技術。"
+          "term": "Steam Deck",
+          "explain_ja": "Valveが開発した携帯型ゲームコンソールで、SteamOSが動作する。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを処理・保存するための設備や施設。"
+          "term": "HDMI CEC",
+          "explain_ja": "HDMI機器間でコントロール信号を統一する技術。"
+        },
+        {
+          "term": "ファームウェア",
+          "explain_ja": "ハードウェアを制御するためのソフトウェア。"
         }
       ],
       "personal_actions": [
-        "NVIDIAに関する最新情報をチェックする。",
-        "データセンターの需要に関する市場動向を注視する。",
-        "AI製品に対する需要を分析する。"
+        "最新のSteamOSベータアップデートを確認してインストールする。",
+        "Steam Controllerの新機能を試し、デスクトップモードでの使用感を確認する。",
+        "ハードウェアの互換性に関するアップデートを定期的にチェックし、性能向上を図る。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "その他"
       ]
     }
   ]
