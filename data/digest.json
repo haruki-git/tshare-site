@@ -1,111 +1,117 @@
 {
-  "date": "2026-08-19",
-  "generatedAtJST": "2026-08-19T07:15:29.296+09:00",
+  "date": "2026-08-20",
+  "generatedAtJST": "2026-08-20T07:15:26.789+09:00",
   "items": [
     {
-      "url": "https://www.digitaljournal.com/article/openai-to-lease-massive-new-ai-data-center-in-us-backed-by-nvidia/",
-      "source": "Digital Journal",
-      "publishedAt": "2026-08-17T21:00:10Z",
-      "title": "OpenAI to lease massive new AI data center in US, backed by Nvidia",
-      "title_ja": "OpenAI、Nvidiaの支援で米国に巨大AIデータセンターを賃貸",
-      "summary_ja": "OpenAIは、Nvidiaから1050億ドルの資金調達を受けて、米国に新たなデータセンターを20年間賃貸することを発表しました。このデータセンターは、オハイオ州の旧ウラン濃縮工場の敷地に建設され、AI用としては最大の容量8GWに達する可能性があります。さらに、地元エネルギーインフラへの40億ドル以上の投資が行われる予定で、地域経済への影響やエネルギー投資に関する期待も高まっています。",
+      "url": "https://oilprice.com/Energy/Crude-Oil/AI-Could-Make-Big-Oil-Even-Bigger.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-08-18T21:00:00Z",
+      "title": "AI Could Make Big Oil Even Bigger",
+      "title_ja": "AIがビッグオイルをさらに大きくする可能性",
+      "summary_ja": "AIはエネルギーシステムを変革しており、データセンターはその影響の一部に過ぎません。AIとデータセンターの急成長がグローバルな電力需要に与える影響については多くの議論があります。エネルギー市場において、AIの導入がビッグオイル企業の成長を加速させる可能性があります。",
       "key_points": [
-        "OpenAIはNvidiaに支援され、20年間のデータセンター賃貸を発表。",
-        "データセンターはオハイオ州の旧ウラン濃縮工場に建設され、最大8GWの容量を計画。",
-        "地域のエネルギーインフラに40億ドル以上の投資を行い、10GW以上の新エネルギー発電を予定。",
-        "プロジェクトは35,000の一時的建設職と2,500の長期運営職を創出する見込み。",
-        "データセンターはNvidiaのチップのみを使用し、エネルギーコストを地元住民に負担させないと主張。"
+        "AIがエネルギーシステムを変革する役割を果たしている",
+        "データセンターの電力消費が増加している",
+        "AIの活用によりビッグオイル企業の成長が期待される",
+        "エネルギー供給の効率性が向上する可能性がある",
+        "グリッドインフラが影響を受ける可能性がある"
       ],
       "glossary": [
         {
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略で、コンピュータが人間のように学習・判断する能力を持つ技術のこと。"
+        },
+        {
           "term": "データセンター",
-          "explain_ja": "データを保存、管理、配信するための施設。AIの運用に必要なインフラの一部。"
+          "explain_ja": "コンピュータシステムや関連機器を設置する施設で、データの保存や処理を行う。"
         },
         {
-          "term": "Nvidia",
-          "explain_ja": "GPUメーカーで、AIおよびデータセンター用ハードウェアの主要なサプライヤー。"
-        },
-        {
-          "term": "エネルギーインフラ",
-          "explain_ja": "電力供給や発電施設を含む、エネルギーを供給するための基盤全体。"
+          "term": "ビッグオイル",
+          "explain_ja": "大手石油企業を指し、国際的なエネルギー市場における影響力が大きい企業群。"
         }
       ],
       "personal_actions": [
-        "新しいデータセンターの影響を業界ニュースで確認。",
-        "地域経済への影響を評価するために、地元のエネルギー政策を調査。",
-        "AI技術の進展や新しいデータセンターについて、関連する技術セミナーやウェビナーに参加。"
+        "AIによるエネルギー効率化の取り組みを社内で確認する",
+        "データセンターの電力使用状況をモニタリングする",
+        "新しいAI技術の導入についてチームで議論する"
       ],
       "tags": [
-        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://nypost.com/2026/08/17/business/nvidia-provides-105b-in-financing-toward-openais-massive-ohio-data-center/",
-      "source": "New York Post",
-      "publishedAt": "2026-08-17T19:05:29Z",
-      "title": "Nvidia provides $105B in financing toward OpenAI’s massive Ohio data center — will be one of biggest in world",
-      "title_ja": "Nvidia、OpenAIの巨大オハイオデータセンター向けに1050億ドルの資金提供",
-      "summary_ja": "NvidiaはOpenAIのオハイオ州に建設中の巨大データセンターに対し、1050億ドルの資金を提供しました。この施設は、最終的に約8ギガワットの計算能力を発揮し、ChatGPTなどの製品を支えることになります。1ギガワットは約75万戸の家庭に電力を供給できる規模です。",
+      "url": "https://financialpost.com/pmn/business-wire-news-releases-pmn/infratech-capital-advances-2-7-billion-data-center-investment-initiative-in-texas-panhandle",
+      "source": "Financial Post",
+      "publishedAt": "2026-08-18T16:46:57Z",
+      "title": "InfraTech Capital Advances $2.7 Billion Data Center Investment Initiative in Texas Panhandle",
+      "title_ja": "InfraTech Capital、テキサス・パナハンドルで27億ドルのデータセンター投資イニシアティブを進展",
+      "summary_ja": "InfraTech Capitalは、テキサス州のパナハンドル地区において、5,000エーカー以上のキャンパスを計画し、27億ドルのデータセンター投資を進めています。この記念碑的なプロジェクトには、ハイパースケーラーが核となることが期待されており、ファイバー光ケーブル生産能力の拡大も含まれています。このイニシアティブは、地域の経済発展に貢献する見込みです。",
       "key_points": [
-        "OpenAIのデータセンターはオハイオ州に位置する。",
-        "Nvidiaはこのプロジェクトに1050億ドルを投資する。",
-        "データセンターは最終的に8ギガワットの計算能力を提供予定。",
-        "1ギガワットは約750,000戸の家庭に電力供給可能。",
-        "この施設は世界で最大級のデータセンターの一つとなる。"
+        "InfraTech Capitalが27億ドルのデータセンター投資を発表",
+        "テキサス州カーロン郡に5,000エーカー以上のキャンパスを提案",
+        "ハイパースケーラーが核となる見込み",
+        "ファイバー光ケーブル生産能力の拡大を計画",
+        "地域経済への貢献が期待される"
       ],
       "glossary": [
         {
-          "term": "Nvidia",
-          "explain_ja": "米国の半導体メーカーで、特にGPUで有名。"
+          "term": "InfraTech Capital",
+          "explain_ja": "インフラ投資および運営プラットフォーム企業。"
         },
         {
-          "term": "OpenAI",
-          "explain_ja": "人工知能の研究と開発を行う企業。"
+          "term": "ハイパースケーラー",
+          "explain_ja": "大規模なデータセンターを運営し、クラウドサービスを提供する企業。"
         },
         {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当。"
+          "term": "ファイバー光ケーブル",
+          "explain_ja": "光信号を使用してデータを伝送するケーブル。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "サーバーやネットワーク機器を収容する施設。"
         }
       ],
       "personal_actions": [
-        "データセンターの関連ニュースを定期的にチェックする。",
-        "NvidiaやOpenAIの技術進展に関心を持つ。",
-        "エネルギー効率の良い技術について学ぶ。"
+        "地域のデータセンター投資に関連する最新情報をチェックする",
+        "ハイパースケーラーの動向を調査する",
+        "投資関連のイベントやウェビナーに参加する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://hardware.slashdot.org/story/26/08/17/1842250/us-grid-operator-pjm-proposes-forcing-data-center-off-grid-during-emergencies",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-08-17T19:00:00Z",
-      "title": "US Grid Operator PJM Proposes Forcing Data Center Off Grid During Emergencies",
-      "title_ja": "米国グリッド運営者PJM、非常時にデータセンターをオフグリッドにする提案",
-      "summary_ja": "PJMインタコネクションが、電力供給が危険な低水準に達した際にデータセンターにバックアップ発電機の使用を強制する提案を発表しました。この提案は、エネルギー供給の安定性を確保するための新たな枠組みを示しています。その影響として、データセンターの運営方法やコストが見直される可能性があります。",
+      "url": "https://www.marketbeat.com/instant-alerts/applied-optoelectronics-bets-on-us-laser-capacity-to-capture-ai-data-center-demand-2026-08-18/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+      "source": "MarketBeat",
+      "publishedAt": "2026-08-18T16:02:04Z",
+      "title": "Applied Optoelectronics Bets on U.S. Laser Capacity to Capture AI Data Center Demand",
+      "title_ja": "Applied Optoelectronics、米国のレーザー生産能力を活用しAIデータセンター需要を取り込む",
+      "summary_ja": "Applied Optoelectronicsは、米国でのレーザー製造と自動化された生産能力を強みに、急成長するAIデータセンターの需要に応えようとしています。市場の需要増加に合わせた戦略を取ることで、競争力を高める狙いがあります。この取り組みが成功すれば、同社の成長に大きな影響を与えるでしょう。",
       "key_points": [
-        "PJMインタコネクションは、米国最大のグリッド運営者である。",
-        "非常時にデータセンターにバックアップ発電機を使用させる提案を行った。",
-        "提案は電力供給の安定性を維持するためのもの。",
-        "データセンターがオフグリッドになることで運営に影響が出る可能性がある。"
+        "Applied Optoelectronicsは、米国におけるレーザー製造能力を強調している。",
+        "同社はAIデータセンター向けの需要取り込みを目指す。",
+        "自動化された生産プロセスが競争上の利点となる。",
+        "市場の需要に応じた迅速な対応が可能。",
+        "同社の戦略は今後の成長を決定づける要素となる。"
       ],
       "glossary": [
         {
-          "term": "PJMインタコネクション",
-          "explain_ja": "アメリカで最大の電力グリッド運営者で、主に中部および東部の各州をカバーしている。"
+          "term": "Applied Optoelectronics",
+          "explain_ja": "米国の光通信機器メーカーで、レーザー技術で知られる。"
         },
         {
-          "term": "バックアップ発電機",
-          "explain_ja": "主電源が停止した際に電力を供給するための予備の発電設備。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能（AI）技術を活用するデータ処理施設。"
         }
       ],
       "personal_actions": [
-        "非常時に備えたバックアップ電力ソリューションの導入を検討する。",
-        "データセンターの運営方針や手順を見直すこと。"
+        "自社のレーザー製造能力や技術の最新情報を確認する。",
+        "AI関連のデータセンター市場動向を把握するためのリサーチを行う。",
+        "競合他社の戦略分析を通じて、ビジネス戦略を見直す。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
