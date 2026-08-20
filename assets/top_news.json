@@ -1,113 +1,114 @@
 {
-  "date": "2026-08-20",
-  "generatedAtJST": "2026-08-20T07:15:26.789+09:00",
+  "date": "2026-08-21",
+  "generatedAtJST": "2026-08-21T07:15:26.446+09:00",
   "items": [
     {
-      "url": "https://oilprice.com/Energy/Crude-Oil/AI-Could-Make-Big-Oil-Even-Bigger.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-08-18T21:00:00Z",
-      "title": "AI Could Make Big Oil Even Bigger",
-      "title_ja": "AIがビッグオイルをさらに大きくする可能性",
-      "summary_ja": "AIはエネルギーシステムを変革しており、データセンターはその影響の一部に過ぎません。AIとデータセンターの急成長がグローバルな電力需要に与える影響については多くの議論があります。エネルギー市場において、AIの導入がビッグオイル企業の成長を加速させる可能性があります。",
+      "url": "https://siliconangle.com/2026/08/19/ai-inference-infrastructure-requires-full-stack-coordination-supermicroopenstoragesummit/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-08-19T20:59:28Z",
+      "title": "The AI inference race moves beyond GPUs to reshape data center infrastructure",
+      "title_ja": "AIインファレンス競争がGPUを超えてデータセンターインフラを再構築",
+      "summary_ja": "AIインファレンスのインフラがシステム全体の課題となっています。特に、ストレージの遅延、ネットワークの帯域幅、データの移動、電力消費が重要な要素となっています。これにより、AIシステムは負荷に応じた効率性を求められ、多様なデータアーキテクチャと統合的なインフラ設計が求められています。",
       "key_points": [
-        "AIがエネルギーシステムを変革する役割を果たしている",
-        "データセンターの電力消費が増加している",
-        "AIの活用によりビッグオイル企業の成長が期待される",
-        "エネルギー供給の効率性が向上する可能性がある",
-        "グリッドインフラが影響を受ける可能性がある"
+        "AIインファレンスは、GPUのパフォーマンスだけでなく、ストレージ遅延やネットワーク帯域幅が重要。",
+        "負荷の種類によってシステム設計は変わるべきで、レイテンシやスループットの要求が多様化している。",
+        "企業内のデータ散在問題が、AIモデルへの情報提供を難しくしている。",
+        "エネルギー効率が重要視されており、新技術によって改善が図られている。",
+        "Supermicroが開発したアーキテクチャは、ストレージを中心に構築されている。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略で、コンピュータが人間のように学習・判断する能力を持つ技術のこと。"
+          "term": "AIインファレンス",
+          "explain_ja": "AIモデルが新しいデータに基づいて結果を出すプロセスのこと。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "コンピュータシステムや関連機器を設置する施設で、データの保存や処理を行う。"
+          "term": "ストレージ遅延",
+          "explain_ja": "データがストレージから読み取られるまでの時間。"
         },
         {
-          "term": "ビッグオイル",
-          "explain_ja": "大手石油企業を指し、国際的なエネルギー市場における影響力が大きい企業群。"
+          "term": "データ重力",
+          "explain_ja": "データの分散がその利用に与える影響。"
+        },
+        {
+          "term": "エネルギー効率",
+          "explain_ja": "データセンターが使用するエネルギーの効率性の指標。"
         }
       ],
       "personal_actions": [
-        "AIによるエネルギー効率化の取り組みを社内で確認する",
-        "データセンターの電力使用状況をモニタリングする",
-        "新しいAI技術の導入についてチームで議論する"
+        "現在のAIインフラを評価し、ストレージやネットワークのパフォーマンスを確認する。",
+        "エネルギー効率を高めるための改善案を検討する。",
+        "新しいAI負荷に応じたシステム設計のトレンドを調査する。"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://financialpost.com/pmn/business-wire-news-releases-pmn/infratech-capital-advances-2-7-billion-data-center-investment-initiative-in-texas-panhandle",
-      "source": "Financial Post",
-      "publishedAt": "2026-08-18T16:46:57Z",
-      "title": "InfraTech Capital Advances $2.7 Billion Data Center Investment Initiative in Texas Panhandle",
-      "title_ja": "InfraTech Capital、テキサス・パナハンドルで27億ドルのデータセンター投資イニシアティブを進展",
-      "summary_ja": "InfraTech Capitalは、テキサス州のパナハンドル地区において、5,000エーカー以上のキャンパスを計画し、27億ドルのデータセンター投資を進めています。この記念碑的なプロジェクトには、ハイパースケーラーが核となることが期待されており、ファイバー光ケーブル生産能力の拡大も含まれています。このイニシアティブは、地域の経済発展に貢献する見込みです。",
+      "url": "https://4sysops.com/archives/cerebras-targets-20x-more-ai-throughput-with-cs-4-server-rack/",
+      "source": "4sysops.com",
+      "publishedAt": "2026-08-19T20:04:40Z",
+      "title": "Cerebras targets 20x more AI throughput with CS-4 server rack",
+      "title_ja": "Cerebras、CS-4サーバーラックでAIスループットを20倍に目指す",
+      "summary_ja": "Cerebrasは新しいCS-4サーバーラックを発表し、AI推論能力の大幅な向上を目指しています。2027年末までに処理速度を4倍、スループットを20倍にすることを約束しています。このシステムは、3つのWSE-3 Turboプロセッサを組み合わせ、CerebrasのNexusアーキテクチャを採用しています。",
       "key_points": [
-        "InfraTech Capitalが27億ドルのデータセンター投資を発表",
-        "テキサス州カーロン郡に5,000エーカー以上のキャンパスを提案",
-        "ハイパースケーラーが核となる見込み",
-        "ファイバー光ケーブル生産能力の拡大を計画",
-        "地域経済への貢献が期待される"
+        "CS-4サーバーラックはAI推論能力の大幅な向上を実現する。",
+        "2027年末までに処理速度を4倍に、スループットを20倍にすることを目指す。",
+        "システムは3つのWSE-3 Turboプロセッサを搭載している。",
+        "Cerebras独自のNexusアーキテクチャが用いられている。"
       ],
       "glossary": [
         {
-          "term": "InfraTech Capital",
-          "explain_ja": "インフラ投資および運営プラットフォーム企業。"
+          "term": "WSE-3 Turbo",
+          "explain_ja": "Cerebrasが開発した高性能AIプロセッサのシリーズ。"
         },
         {
-          "term": "ハイパースケーラー",
-          "explain_ja": "大規模なデータセンターを運営し、クラウドサービスを提供する企業。"
-        },
-        {
-          "term": "ファイバー光ケーブル",
-          "explain_ja": "光信号を使用してデータを伝送するケーブル。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "サーバーやネットワーク機器を収容する施設。"
+          "term": "Nexusアーキテクチャ",
+          "explain_ja": "Cerebrasの独自技術で、AI処理の効率化を図る設計。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンター投資に関連する最新情報をチェックする",
-        "ハイパースケーラーの動向を調査する",
-        "投資関連のイベントやウェビナーに参加する"
+        "Cerebras製品の最新情報をチェックし、導入の可能性を検討する。",
+        "AIインフラのアップグレード計画を見直し、最新の技術を取り入れることを考える。",
+        "現在のAIシステムの性能評価を行い、改善点を洗い出す。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.marketbeat.com/instant-alerts/applied-optoelectronics-bets-on-us-laser-capacity-to-capture-ai-data-center-demand-2026-08-18/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
-      "source": "MarketBeat",
-      "publishedAt": "2026-08-18T16:02:04Z",
-      "title": "Applied Optoelectronics Bets on U.S. Laser Capacity to Capture AI Data Center Demand",
-      "title_ja": "Applied Optoelectronics、米国のレーザー生産能力を活用しAIデータセンター需要を取り込む",
-      "summary_ja": "Applied Optoelectronicsは、米国でのレーザー製造と自動化された生産能力を強みに、急成長するAIデータセンターの需要に応えようとしています。市場の需要増加に合わせた戦略を取ることで、競争力を高める狙いがあります。この取り組みが成功すれば、同社の成長に大きな影響を与えるでしょう。",
+      "url": "https://www.commondreams.org/news/gop-data-center-memo",
+      "source": "Common Dreams",
+      "publishedAt": "2026-08-19T17:25:49Z",
+      "title": "Leaked GOP Memo Warns Big Tech That AI Data Centers as Popular as 'Nuclear Waste'",
+      "title_ja": "流出したGOPメモが警告：AIデータセンターは「核廃棄物」に匹敵する人気",
+      "summary_ja": "流出したGOPメモは、人工知能（AI）データセンターが政治的な負担になる可能性を警告している。特に、シリコンバレーのAIデータ企業が、2024年の米国上院選挙において重要な課題となることが示唆されている。この状況は、候補者や政党にとっての新たな挑戦をもたらす可能性がある。",
       "key_points": [
-        "Applied Optoelectronicsは、米国におけるレーザー製造能力を強調している。",
-        "同社はAIデータセンター向けの需要取り込みを目指す。",
-        "自動化された生産プロセスが競争上の利点となる。",
-        "市場の需要に応じた迅速な対応が可能。",
-        "同社の戦略は今後の成長を決定づける要素となる。"
+        "流出したGOPメモはシリコンバレーへの警告を含む",
+        "AIデータセンターが政治的リスクになるとされている",
+        "2024年の米国上院選挙が背景にある",
+        "企業のイメージが影響を受ける恐れがある",
+        "政治的な対立や影響が生じる可能性がある"
       ],
       "glossary": [
         {
-          "term": "Applied Optoelectronics",
-          "explain_ja": "米国の光通信機器メーカーで、レーザー技術で知られる。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能（AI）を支えるデータ処理施設。"
         },
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能（AI）技術を活用するデータ処理施設。"
+          "term": "GOP",
+          "explain_ja": "アメリカ合衆国の共和党（Republican Party）の略称。"
+        },
+        {
+          "term": "シリコンバレー",
+          "explain_ja": "カリフォルニア州にあるテクノロジー企業の集積地。"
         }
       ],
       "personal_actions": [
-        "自社のレーザー製造能力や技術の最新情報を確認する。",
-        "AI関連のデータセンター市場動向を把握するためのリサーチを行う。",
-        "競合他社の戦略分析を通じて、ビジネス戦略を見直す。"
+        "自社のAIデータセンターのリスク評価を行う",
+        "政治的な影響を考慮した戦略を見直す",
+        "業界動向に関する情報を収集する"
       ],
       "tags": [
         "DC",
