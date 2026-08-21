@@ -1,43 +1,38 @@
 {
-  "date": "2026-08-21",
-  "generatedAtJST": "2026-08-21T07:15:26.446+09:00",
+  "date": "2026-08-22",
+  "generatedAtJST": "2026-08-22T07:15:24.920+09:00",
   "items": [
     {
-      "url": "https://siliconangle.com/2026/08/19/ai-inference-infrastructure-requires-full-stack-coordination-supermicroopenstoragesummit/",
-      "source": "SiliconANGLE News",
-      "publishedAt": "2026-08-19T20:59:28Z",
-      "title": "The AI inference race moves beyond GPUs to reshape data center infrastructure",
-      "title_ja": "AIインファレンス競争がGPUを超えてデータセンターインフラを再構築",
-      "summary_ja": "AIインファレンスのインフラがシステム全体の課題となっています。特に、ストレージの遅延、ネットワークの帯域幅、データの移動、電力消費が重要な要素となっています。これにより、AIシステムは負荷に応じた効率性を求められ、多様なデータアーキテクチャと統合的なインフラ設計が求められています。",
+      "url": "https://www.digitimes.com/news/a20260820PD226/nitto-denko-hdd-demand-capacity-data-center.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-08-20T22:14:36Z",
+      "title": "Nitto Denko to expand HDD baseboard capacity for AI data center demand",
+      "title_ja": "日東電工、AIデータセンター需要に対応するためHDD基板の容量を拡大",
+      "summary_ja": "日東電工がAIデータセンター向けの需要に応えるため、HDD基板の生産能力を拡大する計画を発表しました。デジタルトランスフォーメーションの進展に伴い、ストレージ機器に対する需要が急増しています。この取り組みにより、同社は市場での競争力を高めることを目指しています。",
       "key_points": [
-        "AIインファレンスは、GPUのパフォーマンスだけでなく、ストレージ遅延やネットワーク帯域幅が重要。",
-        "負荷の種類によってシステム設計は変わるべきで、レイテンシやスループットの要求が多様化している。",
-        "企業内のデータ散在問題が、AIモデルへの情報提供を難しくしている。",
-        "エネルギー効率が重要視されており、新技術によって改善が図られている。",
-        "Supermicroが開発したアーキテクチャは、ストレージを中心に構築されている。"
+        "日東電工がHDD基板の容量拡大へ",
+        "AIデータセンターの需要が急増",
+        "デジタルトランスフォーメーションが影響を及ぼす",
+        "市場競争力の強化を目指す"
       ],
       "glossary": [
         {
-          "term": "AIインファレンス",
-          "explain_ja": "AIモデルが新しいデータに基づいて結果を出すプロセスのこと。"
+          "term": "HDD",
+          "explain_ja": "ハードディスクドライブの略。データを磁気によって記録・読み出しするストレージデバイス。"
         },
         {
-          "term": "ストレージ遅延",
-          "explain_ja": "データがストレージから読み取られるまでの時間。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能（AI）向けの計算資源やストレージが最適化されたデータセンター。"
         },
         {
-          "term": "データ重力",
-          "explain_ja": "データの分散がその利用に与える影響。"
-        },
-        {
-          "term": "エネルギー効率",
-          "explain_ja": "データセンターが使用するエネルギーの効率性の指標。"
+          "term": "デジタルトランスフォーメーション",
+          "explain_ja": "企業や組織がデジタル技術を活用して業務を変革するプロセス。"
         }
       ],
       "personal_actions": [
-        "現在のAIインフラを評価し、ストレージやネットワークのパフォーマンスを確認する。",
-        "エネルギー効率を高めるための改善案を検討する。",
-        "新しいAI負荷に応じたシステム設計のトレンドを調査する。"
+        "HDDやストレージ機器のアップグレード計画を検討する",
+        "AI技術やデータセンターの最新情報をフォローする",
+        "データ保護やバックアップ戦略の見直しを行う"
       ],
       "tags": [
         "DC",
@@ -45,73 +40,69 @@
       ]
     },
     {
-      "url": "https://4sysops.com/archives/cerebras-targets-20x-more-ai-throughput-with-cs-4-server-rack/",
-      "source": "4sysops.com",
-      "publishedAt": "2026-08-19T20:04:40Z",
-      "title": "Cerebras targets 20x more AI throughput with CS-4 server rack",
-      "title_ja": "Cerebras、CS-4サーバーラックでAIスループットを20倍に目指す",
-      "summary_ja": "Cerebrasは新しいCS-4サーバーラックを発表し、AI推論能力の大幅な向上を目指しています。2027年末までに処理速度を4倍、スループットを20倍にすることを約束しています。このシステムは、3つのWSE-3 Turboプロセッサを組み合わせ、CerebrasのNexusアーキテクチャを採用しています。",
+      "url": "https://www.digitimes.com/news/a20260820PD233/taiwan-economy-capacity-digitimes-data-center.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-08-20T22:10:38Z",
+      "title": "DIGITIMES's Colley Hwang warns Taiwan AI data center capacity lags South Korea",
+      "title_ja": "台湾のAIデータセンター容量、韓国に遅れをとるとDIGITIMESのColley Hwangが警告",
+      "summary_ja": "DIGITIMESのColley Hwangは、台湾のAIデータセンターの容量が韓国に対して遅れをとっていると指摘しています。この背景には、台湾のデータセンター投資の課題が存在し、急速に成長するAI市場において競争力を維持する必要があることがあります。これにより、台湾のテクノロジー産業は今後の成長機会を逃す可能性があると言えます。",
       "key_points": [
-        "CS-4サーバーラックはAI推論能力の大幅な向上を実現する。",
-        "2027年末までに処理速度を4倍に、スループットを20倍にすることを目指す。",
-        "システムは3つのWSE-3 Turboプロセッサを搭載している。",
-        "Cerebras独自のNexusアーキテクチャが用いられている。"
-      ],
-      "glossary": [
-        {
-          "term": "WSE-3 Turbo",
-          "explain_ja": "Cerebrasが開発した高性能AIプロセッサのシリーズ。"
-        },
-        {
-          "term": "Nexusアーキテクチャ",
-          "explain_ja": "Cerebrasの独自技術で、AI処理の効率化を図る設計。"
-        }
-      ],
-      "personal_actions": [
-        "Cerebras製品の最新情報をチェックし、導入の可能性を検討する。",
-        "AIインフラのアップグレード計画を見直し、最新の技術を取り入れることを考える。",
-        "現在のAIシステムの性能評価を行い、改善点を洗い出す。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.commondreams.org/news/gop-data-center-memo",
-      "source": "Common Dreams",
-      "publishedAt": "2026-08-19T17:25:49Z",
-      "title": "Leaked GOP Memo Warns Big Tech That AI Data Centers as Popular as 'Nuclear Waste'",
-      "title_ja": "流出したGOPメモが警告：AIデータセンターは「核廃棄物」に匹敵する人気",
-      "summary_ja": "流出したGOPメモは、人工知能（AI）データセンターが政治的な負担になる可能性を警告している。特に、シリコンバレーのAIデータ企業が、2024年の米国上院選挙において重要な課題となることが示唆されている。この状況は、候補者や政党にとっての新たな挑戦をもたらす可能性がある。",
-      "key_points": [
-        "流出したGOPメモはシリコンバレーへの警告を含む",
-        "AIデータセンターが政治的リスクになるとされている",
-        "2024年の米国上院選挙が背景にある",
-        "企業のイメージが影響を受ける恐れがある",
-        "政治的な対立や影響が生じる可能性がある"
+        "台湾のAIデータセンターの容量が韓国よりも劣る",
+        "データセンターへの投資の課題が指摘される",
+        "急成長するAI市場での競争力維持が求められる",
+        "台湾のテクノロジー産業への影響が懸念される"
       ],
       "glossary": [
         {
           "term": "AIデータセンター",
-          "explain_ja": "人工知能（AI）を支えるデータ処理施設。"
+          "explain_ja": "人工知能(AI)関連の処理を行うために特化されたデータセンター。"
         },
         {
-          "term": "GOP",
-          "explain_ja": "アメリカ合衆国の共和党（Republican Party）の略称。"
+          "term": "投資",
+          "explain_ja": "資産や資金を特定のプロジェクトや事業に使うこと。"
         },
         {
-          "term": "シリコンバレー",
-          "explain_ja": "カリフォルニア州にあるテクノロジー企業の集積地。"
+          "term": "競争力",
+          "explain_ja": "市場での競争において有利な地位を持つ能力。"
         }
       ],
       "personal_actions": [
-        "自社のAIデータセンターのリスク評価を行う",
-        "政治的な影響を考慮した戦略を見直す",
-        "業界動向に関する情報を収集する"
+        "地域のデータセンターの最新の能力と進展を調査する",
+        "台湾におけるデータセンター投資の動向を追跡する",
+        "AI関連のプロジェクトに対する支援を検討する"
       ],
       "tags": [
         "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://developer.nvidia.com/blog/maximizing-ai-factory-performance-per-watt-with-nvidia-dsx-maxlps/",
+      "source": "Nvidia.com",
+      "publishedAt": "2026-08-20T19:44:38Z",
+      "title": "Maximizing AI Factory Performance per Watt with NVIDIA DSX MaxLPS",
+      "title_ja": "NVIDIA DSX MaxLPSによるAI工場のワットあたりパフォーマンス最大化",
+      "summary_ja": "NVIDIAのDSX MaxLPSは、AI工場のパフォーマンスを効率的に最大化するためのソリューションです。これにより、データセンター内で利用できる電力を最大限に活用し、AI出力を向上させることが可能になります。この技術は、特にエネルギー制約のある環境でのパフォーマンス向上に寄与します。",
+      "key_points": [
+        "NVIDIA DSX MaxLPSは、AI工場に特化したソリューションです。",
+        "電力の制約の中でパフォーマンスを最大化することが目的です。",
+        "AI出力を向上させるために、 GPUの運用効率を重視しています。"
+      ],
+      "glossary": [
+        {
+          "term": "AI Factory",
+          "explain_ja": "AIの生産や処理を行う工場型システム。"
+        },
+        {
+          "term": "NVIDIA DSX MaxLPS",
+          "explain_ja": "NVIDIAが開発したAI工場向けのパフォーマンス最適化ソリューション。"
+        }
+      ],
+      "personal_actions": [
+        "自社のAI工場の電力使用状況を確認する。",
+        "効率的なGPU運用を行う方法を検討する。"
+      ],
+      "tags": [
         "AI"
       ]
     }
