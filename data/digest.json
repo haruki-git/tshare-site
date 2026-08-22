@@ -1,108 +1,116 @@
 {
-  "date": "2026-08-22",
-  "generatedAtJST": "2026-08-22T07:15:24.920+09:00",
+  "date": "2026-08-23",
+  "generatedAtJST": "2026-08-23T07:15:28.618+09:00",
   "items": [
     {
-      "url": "https://www.digitimes.com/news/a20260820PD226/nitto-denko-hdd-demand-capacity-data-center.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-08-20T22:14:36Z",
-      "title": "Nitto Denko to expand HDD baseboard capacity for AI data center demand",
-      "title_ja": "日東電工、AIデータセンター需要に対応するためHDD基板の容量を拡大",
-      "summary_ja": "日東電工がAIデータセンター向けの需要に応えるため、HDD基板の生産能力を拡大する計画を発表しました。デジタルトランスフォーメーションの進展に伴い、ストレージ機器に対する需要が急増しています。この取り組みにより、同社は市場での競争力を高めることを目指しています。",
+      "url": "https://cryptobriefing.com/covolt-power-ipo-data-center-energy/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-08-21T21:59:38Z",
+      "title": "CoVolt Power files for US IPO to capitalize on data center energy boom",
+      "title_ja": "CoVolt Powerが米国IPOを申請しデータセンターエネルギー需要に対応",
+      "summary_ja": "CoVolt Powerが米国でのIPOを申請しました。これは、増加するデータセンターのエネルギー需要に応えるための再生可能エネルギーインフラの促進を目指しています。この動きは、将来のエネルギー市場のダイナミクスにも影響を与える可能性があります。",
       "key_points": [
-        "日東電工がHDD基板の容量拡大へ",
-        "AIデータセンターの需要が急増",
-        "デジタルトランスフォーメーションが影響を及ぼす",
-        "市場競争力の強化を目指す"
+        "CoVolt Powerが米国でのIPOを申請",
+        "データセンターのエネルギー需要の増加に対応",
+        "再生可能エネルギーインフラの促進を目指す",
+        "将来のエネルギー市場に影響を与える可能性"
       ],
       "glossary": [
         {
-          "term": "HDD",
-          "explain_ja": "ハードディスクドライブの略。データを磁気によって記録・読み出しするストレージデバイス。"
+          "term": "IPO",
+          "explain_ja": "初めて株式を公開すること。企業が資金を調達する手段として行う。"
         },
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能（AI）向けの計算資源やストレージが最適化されたデータセンター。"
+          "term": "データセンター",
+          "explain_ja": "データ処理、保存、管理を行うための専門施設。"
         },
         {
-          "term": "デジタルトランスフォーメーション",
-          "explain_ja": "企業や組織がデジタル技術を活用して業務を変革するプロセス。"
+          "term": "再生可能エネルギー",
+          "explain_ja": "自然からの補充が可能なエネルギー源。"
         }
       ],
       "personal_actions": [
-        "HDDやストレージ機器のアップグレード計画を検討する",
-        "AI技術やデータセンターの最新情報をフォローする",
-        "データ保護やバックアップ戦略の見直しを行う"
+        "再生可能エネルギーへの移行計画を検討する",
+        "データセンターのエネルギー効率を評価する",
+        "今後のエネルギー市場動向に注目する"
       ],
       "tags": [
-        "DC",
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.digitaljournal.com/article/ai-infrastructure-boom-reshapes-industrial-materials-procurement/",
+      "source": "Digital Journal",
+      "publishedAt": "2026-08-21T21:23:53Z",
+      "title": "AI infrastructure boom reshapes industrial materials procurement",
+      "title_ja": "AIインフラの急成長が産業用資材調達を再構築",
+      "summary_ja": "AIのインフラ拡大に伴い、計算能力を支える物理インフラへの注目が高まっています。国際エネルギー機関は、2030年までに世界のデータセンターの電力需要が倍増するとの予測を示しています。この需要増加は、材料調達や供給管理の重要性を再認識させており、多様な供給源の確保が求められています。",
+      "key_points": [
+        "データセンターの電力需要が2030年までに約945テラワット時に達する見込み。",
+        "AI最適化されたデータセンターの電力需要は、同期間中に4倍に増加すると予測。",
+        "主要な資源の市場集中度が2020年の82%から2024年には86%に上昇。",
+        "産業材料の調達プロセスは、技術の導入が進んでいるが実装には不均衡がある。",
+        "調達モデルの技術化により、価格や供給状況の整理が進む。",
+        "産業用調達は人間の判断や関係性にも依存しているが、テクノロジーでサポート可能。"
+      ],
+      "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能。データ分析や自動化を通じて効率を向上させる技術。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データを保存、処理、配信するための施設。AI関連の需要が高まっている。"
+        },
+        {
+          "term": "供給チェーンマネジメント",
+          "explain_ja": "製品の供給経路を管理し、効率的な流通を実現するプロセス。"
+        },
+        {
+          "term": "産業材料",
+          "explain_ja": "製造や建設に用いられる原材料や部品。"
+        }
+      ],
+      "personal_actions": [
+        "現在の供給元や材料の情報を見直し、代替供給元を考慮する。",
+        "調達プロセスの中でのデータ管理方法を見直し、効率化を図る。",
+        "新しい技術や自動化の導入可能性を評価し、供給チェーンの透明性を向上させる。"
+      ],
+      "tags": [
         "AI"
       ]
     },
     {
-      "url": "https://www.digitimes.com/news/a20260820PD233/taiwan-economy-capacity-digitimes-data-center.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-08-20T22:10:38Z",
-      "title": "DIGITIMES's Colley Hwang warns Taiwan AI data center capacity lags South Korea",
-      "title_ja": "台湾のAIデータセンター容量、韓国に遅れをとるとDIGITIMESのColley Hwangが警告",
-      "summary_ja": "DIGITIMESのColley Hwangは、台湾のAIデータセンターの容量が韓国に対して遅れをとっていると指摘しています。この背景には、台湾のデータセンター投資の課題が存在し、急速に成長するAI市場において競争力を維持する必要があることがあります。これにより、台湾のテクノロジー産業は今後の成長機会を逃す可能性があると言えます。",
+      "url": "https://cryptobriefing.com/applied-atomics-mpower-smr-data-centers/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-08-21T21:06:45Z",
+      "title": "Former SpaceX engineers revive shelved nuclear reactor design to power AI data centers",
+      "title_ja": "元SpaceXエンジニアがAIデータセンター向けの原子炉設計を復活",
+      "summary_ja": "mPower原子炉設計の復活により、AIデータセンターの成長が加速する可能性があるものの、コスト、規制、核廃棄物管理といった課題に直面している。元SpaceXのエンジニアたちは、革新的なエネルギー供給の手段としてこのプロジェクトを推進。成功すれば、データセンター業界に大きな影響を与えるだろう。",
       "key_points": [
-        "台湾のAIデータセンターの容量が韓国よりも劣る",
-        "データセンターへの投資の課題が指摘される",
-        "急成長するAI市場での競争力維持が求められる",
-        "台湾のテクノロジー産業への影響が懸念される"
+        "mPower原子炉設計は、AIデータセンターの成長を加速する可能性がある。",
+        "復活にはコストと規制の課題が存在する。",
+        "核廃棄物管理が新たな課題として浮上。",
+        "元SpaceXエンジニアがプロジェクトに関与。",
+        "成功すればデータセンター業界に革新をもたらす可能性がある。"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能(AI)関連の処理を行うために特化されたデータセンター。"
+          "term": "mPower",
+          "explain_ja": "特定の原子炉設計であり、AIデータセンターへのエネルギー供給を目的としている。"
         },
         {
-          "term": "投資",
-          "explain_ja": "資産や資金を特定のプロジェクトや事業に使うこと。"
-        },
-        {
-          "term": "競争力",
-          "explain_ja": "市場での競争において有利な地位を持つ能力。"
+          "term": "核廃棄物管理",
+          "explain_ja": "発電所などから発生する放射性廃棄物を適切に処理・保管するためのプロセス。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンターの最新の能力と進展を調査する",
-        "台湾におけるデータセンター投資の動向を追跡する",
-        "AI関連のプロジェクトに対する支援を検討する"
+        "AIデータセンター向けの新しいエネルギーソリューションについて情報を収集する。",
+        "核エネルギーに関連する安全基準について学ぶ。",
+        "業界の最新情報をフォローして技術動向を把握する。"
       ],
       "tags": [
         "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://developer.nvidia.com/blog/maximizing-ai-factory-performance-per-watt-with-nvidia-dsx-maxlps/",
-      "source": "Nvidia.com",
-      "publishedAt": "2026-08-20T19:44:38Z",
-      "title": "Maximizing AI Factory Performance per Watt with NVIDIA DSX MaxLPS",
-      "title_ja": "NVIDIA DSX MaxLPSによるAI工場のワットあたりパフォーマンス最大化",
-      "summary_ja": "NVIDIAのDSX MaxLPSは、AI工場のパフォーマンスを効率的に最大化するためのソリューションです。これにより、データセンター内で利用できる電力を最大限に活用し、AI出力を向上させることが可能になります。この技術は、特にエネルギー制約のある環境でのパフォーマンス向上に寄与します。",
-      "key_points": [
-        "NVIDIA DSX MaxLPSは、AI工場に特化したソリューションです。",
-        "電力の制約の中でパフォーマンスを最大化することが目的です。",
-        "AI出力を向上させるために、 GPUの運用効率を重視しています。"
-      ],
-      "glossary": [
-        {
-          "term": "AI Factory",
-          "explain_ja": "AIの生産や処理を行う工場型システム。"
-        },
-        {
-          "term": "NVIDIA DSX MaxLPS",
-          "explain_ja": "NVIDIAが開発したAI工場向けのパフォーマンス最適化ソリューション。"
-        }
-      ],
-      "personal_actions": [
-        "自社のAI工場の電力使用状況を確認する。",
-        "効率的なGPU運用を行う方法を検討する。"
-      ],
-      "tags": [
         "AI"
       ]
     }
