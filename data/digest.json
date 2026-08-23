@@ -1,117 +1,115 @@
 {
-  "date": "2026-08-23",
-  "generatedAtJST": "2026-08-23T07:15:28.618+09:00",
+  "date": "2026-08-24",
+  "generatedAtJST": "2026-08-24T07:15:23.718+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/covolt-power-ipo-data-center-energy/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-08-21T21:59:38Z",
-      "title": "CoVolt Power files for US IPO to capitalize on data center energy boom",
-      "title_ja": "CoVolt Powerが米国IPOを申請しデータセンターエネルギー需要に対応",
-      "summary_ja": "CoVolt Powerが米国でのIPOを申請しました。これは、増加するデータセンターのエネルギー需要に応えるための再生可能エネルギーインフラの促進を目指しています。この動きは、将来のエネルギー市場のダイナミクスにも影響を与える可能性があります。",
+      "url": "https://oilprice.com/Energy/Energy-General/The-Gas-Turbine-Shortage-Just-Became-AIs-Biggest-Constraint.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-08-22T21:00:00Z",
+      "title": "The Gas Turbine Shortage Just Became AI’s Biggest Constraint",
+      "title_ja": "ガスタービンの不足がAIの最大の制約となった",
+      "summary_ja": "ガスタービンの供給不足が、AIデータセンターの運営に深刻な影響を与え始めている。GE Vernovaの実際の生産スケジュールでは、重-dutyガスタービンの注文が2031年まで納品されないことが確認された。この供給遅延は、AIインフラの成長に依存する企業にとって、動力供給計画に大きな課題をもたらす。",
       "key_points": [
-        "CoVolt Powerが米国でのIPOを申請",
-        "データセンターのエネルギー需要の増加に対応",
-        "再生可能エネルギーインフラの促進を目指す",
-        "将来のエネルギー市場に影響を与える可能性"
+        "GE Vernovaのガスタービンの納期は2031年まで遅延。",
+        "AIデータセンターの運営に供給不足が影響を及ぼす。",
+        "データセンター運営者は今後の電力計画を見直す必要がある。",
+        "業界全体でガスタービンの需要が増加傾向にある。",
+        "供給不足はAI関連企業の成長を阻害する可能性がある。"
       ],
       "glossary": [
         {
-          "term": "IPO",
-          "explain_ja": "初めて株式を公開すること。企業が資金を調達する手段として行う。"
+          "term": "ガスタービン",
+          "explain_ja": "ガスタービンは、燃焼ガスを使って動力を生み出す発電機の一種です。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データ処理、保存、管理を行うための専門施設。"
-        },
-        {
-          "term": "再生可能エネルギー",
-          "explain_ja": "自然からの補充が可能なエネルギー源。"
+          "term": "GE Vernova",
+          "explain_ja": "GE Vernovaは、ゼネラル・エレクトリックが展開するエネルギー関連事業のブランド名です。"
         }
       ],
       "personal_actions": [
-        "再生可能エネルギーへの移行計画を検討する",
-        "データセンターのエネルギー効率を評価する",
-        "今後のエネルギー市場動向に注目する"
+        "発電機関やデータセンターの稼働状況を再確認する。",
+        "今後のプロジェクトで必要な電力供給を見込む。",
+        "供給チェーンのリスクを評価し、代替案を検討する。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/news/international/business/anthropic-hires-google-chip-veteran-amir-salek-as-part-of-push-into-hardware/articleshow/133430553.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-08-22T19:30:17Z",
+      "title": "Anthropic hires Google chip veteran Amir Salek as part of push into hardware",
+      "title_ja": "Anthropic、Googleチップのベテランアミール・サレクをハードウェア推進の一環として採用",
+      "summary_ja": "AI企業Anthropicは、独自のAIチップ開発を目指してGoogleのチップ創設者アミール・サレクを新たに採用した。この動きは、Anthropicがハードウェア分野への本格的な進出を図っていることを示している。さらに、同社はデータセンターの容量をめぐる大規模な契約も進めている。",
+      "key_points": [
+        "AnthropicがAIチップ開発のための新しい半導体チームを設立",
+        "アミール・サレクを採用し、技術力を強化",
+        "競合のOpenAIも同様の方向性を追求中",
+        "大規模なデータセンター契約を確保している",
+        "カスタムAIチップの開発に向けた野心が見える"
+      ],
+      "glossary": [
+        {
+          "term": "Anthropic",
+          "explain_ja": "AI技術を開発する企業。"
+        },
+        {
+          "term": "OpenAI",
+          "explain_ja": "人工知能の研究および開発を行う企業。"
+        },
+        {
+          "term": "半導体",
+          "explain_ja": "電子機器の中で重要な役割を果たす材料。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データ処理や保存を行うための施設。"
+        },
+        {
+          "term": "AIチップ",
+          "explain_ja": "人工知能の処理を効率化するために設計された専用のチップ。"
+        }
+      ],
+      "personal_actions": [
+        "ハードウェア技術のトレンドをチェックする",
+        "AIチップ市場の動向を把握する",
+        "自社のデータセンターの利用状況を見直す"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://nypost.com/2026/08/22/opinion/fast-takes-aoc-is-a-real-threat-trumps-stump-struggles-on-iran-and-other-commentary/",
+      "source": "New York Post",
+      "publishedAt": "2026-08-22T10:16:00Z",
+      "title": "Fast Takes: AOC is a real threat, our dumb anti-data center fight and other commentary",
+      "title_ja": "ファストテイク：AOCは本当に脅威、無意味なデータセンター反対運動とその他の考察",
+      "summary_ja": "アレクサンドリア・オカシオ＝コルテスは、大統領選挙において成功するための3つの重要な要素を持っています。これには、全国的な知名度、巨額の資金調達能力、メディアの関心が含まれます。この状況は、彼女が政治に与える影響力を示しており、他の政治家や運動にとっても脅威となる可能性があります。",
+      "key_points": [
+        "AOCは全国的な知名度を有する。",
+        "彼女は数億ドルを調達する能力を持つ。",
+        "メディアの関心が非常に高い。",
+        "これらの要素が彼女を脅威にしている。"
+      ],
+      "glossary": [
+        {
+          "term": "AOC",
+          "explain_ja": "アレクサンドリア・オカシオ＝コルテスの略称。アメリカの政治家であり、民主党の下院議員。"
+        },
+        {
+          "term": "メディア",
+          "explain_ja": "情報を報道する機関や手段。政治家の評価に大きな影響を与える。"
+        }
+      ],
+      "personal_actions": [
+        "最新の政治動向を把握するためにニュースを定期的にチェックする。",
+        "地域の政治活動に参加し、意見を表明する。",
+        "投票に関する情報を確認し、次回の選挙への準備をする。"
       ],
       "tags": [
         "DC"
-      ]
-    },
-    {
-      "url": "https://www.digitaljournal.com/article/ai-infrastructure-boom-reshapes-industrial-materials-procurement/",
-      "source": "Digital Journal",
-      "publishedAt": "2026-08-21T21:23:53Z",
-      "title": "AI infrastructure boom reshapes industrial materials procurement",
-      "title_ja": "AIインフラの急成長が産業用資材調達を再構築",
-      "summary_ja": "AIのインフラ拡大に伴い、計算能力を支える物理インフラへの注目が高まっています。国際エネルギー機関は、2030年までに世界のデータセンターの電力需要が倍増するとの予測を示しています。この需要増加は、材料調達や供給管理の重要性を再認識させており、多様な供給源の確保が求められています。",
-      "key_points": [
-        "データセンターの電力需要が2030年までに約945テラワット時に達する見込み。",
-        "AI最適化されたデータセンターの電力需要は、同期間中に4倍に増加すると予測。",
-        "主要な資源の市場集中度が2020年の82%から2024年には86%に上昇。",
-        "産業材料の調達プロセスは、技術の導入が進んでいるが実装には不均衡がある。",
-        "調達モデルの技術化により、価格や供給状況の整理が進む。",
-        "産業用調達は人間の判断や関係性にも依存しているが、テクノロジーでサポート可能。"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能。データ分析や自動化を通じて効率を向上させる技術。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データを保存、処理、配信するための施設。AI関連の需要が高まっている。"
-        },
-        {
-          "term": "供給チェーンマネジメント",
-          "explain_ja": "製品の供給経路を管理し、効率的な流通を実現するプロセス。"
-        },
-        {
-          "term": "産業材料",
-          "explain_ja": "製造や建設に用いられる原材料や部品。"
-        }
-      ],
-      "personal_actions": [
-        "現在の供給元や材料の情報を見直し、代替供給元を考慮する。",
-        "調達プロセスの中でのデータ管理方法を見直し、効率化を図る。",
-        "新しい技術や自動化の導入可能性を評価し、供給チェーンの透明性を向上させる。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/applied-atomics-mpower-smr-data-centers/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-08-21T21:06:45Z",
-      "title": "Former SpaceX engineers revive shelved nuclear reactor design to power AI data centers",
-      "title_ja": "元SpaceXエンジニアがAIデータセンター向けの原子炉設計を復活",
-      "summary_ja": "mPower原子炉設計の復活により、AIデータセンターの成長が加速する可能性があるものの、コスト、規制、核廃棄物管理といった課題に直面している。元SpaceXのエンジニアたちは、革新的なエネルギー供給の手段としてこのプロジェクトを推進。成功すれば、データセンター業界に大きな影響を与えるだろう。",
-      "key_points": [
-        "mPower原子炉設計は、AIデータセンターの成長を加速する可能性がある。",
-        "復活にはコストと規制の課題が存在する。",
-        "核廃棄物管理が新たな課題として浮上。",
-        "元SpaceXエンジニアがプロジェクトに関与。",
-        "成功すればデータセンター業界に革新をもたらす可能性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "mPower",
-          "explain_ja": "特定の原子炉設計であり、AIデータセンターへのエネルギー供給を目的としている。"
-        },
-        {
-          "term": "核廃棄物管理",
-          "explain_ja": "発電所などから発生する放射性廃棄物を適切に処理・保管するためのプロセス。"
-        }
-      ],
-      "personal_actions": [
-        "AIデータセンター向けの新しいエネルギーソリューションについて情報を収集する。",
-        "核エネルギーに関連する安全基準について学ぶ。",
-        "業界の最新情報をフォローして技術動向を把握する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
       ]
     }
   ]
