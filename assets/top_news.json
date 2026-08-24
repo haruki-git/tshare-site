@@ -1,115 +1,116 @@
 {
-  "date": "2026-08-24",
-  "generatedAtJST": "2026-08-24T07:15:23.718+09:00",
+  "date": "2026-08-25",
+  "generatedAtJST": "2026-08-25T07:15:24.089+09:00",
   "items": [
     {
-      "url": "https://oilprice.com/Energy/Energy-General/The-Gas-Turbine-Shortage-Just-Became-AIs-Biggest-Constraint.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-08-22T21:00:00Z",
-      "title": "The Gas Turbine Shortage Just Became AI’s Biggest Constraint",
-      "title_ja": "ガスタービンの不足がAIの最大の制約となった",
-      "summary_ja": "ガスタービンの供給不足が、AIデータセンターの運営に深刻な影響を与え始めている。GE Vernovaの実際の生産スケジュールでは、重-dutyガスタービンの注文が2031年まで納品されないことが確認された。この供給遅延は、AIインフラの成長に依存する企業にとって、動力供給計画に大きな課題をもたらす。",
+      "url": "https://finance.yahoo.com/energy/articles/private-equity-circling-utilities-ai-180000273.html",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-08-23T18:00:00Z",
+      "title": "Private Equity Is Circling Utilities as AI Reshapes the Grid",
+      "title_ja": "プライベートエクイティがユーティリティを狙う：AIがグリッドを再形成",
+      "summary_ja": "データセンターの電力需要が米国のグリッドを圧迫しており、大手テクノロジー企業は自社で発電所を建設し、ユーティリティ資産の購入が急増しています。これは、プライベートエクイティがユーティリティ市場に注目する背景となっています。この動きはエネルギー業界に大きな影響を与えています。",
       "key_points": [
-        "GE Vernovaのガスタービンの納期は2031年まで遅延。",
-        "AIデータセンターの運営に供給不足が影響を及ぼす。",
-        "データセンター運営者は今後の電力計画を見直す必要がある。",
-        "業界全体でガスタービンの需要が増加傾向にある。",
-        "供給不足はAI関連企業の成長を阻害する可能性がある。"
+        "データセンターの電力需要が米国のグリッドに負担をかけている。",
+        "大手テクノロジー企業は独自の発電所を建設している。",
+        "プライベートエクイティがユーティリティ資産を買収する動きが活発化している。",
+        "AI技術がエネルギー管理において重要な役割を果たしている。",
+        "ユーティリティの市場構造が変化しつつある。"
       ],
       "glossary": [
         {
-          "term": "ガスタービン",
-          "explain_ja": "ガスタービンは、燃焼ガスを使って動力を生み出す発電機の一種です。"
-        },
-        {
-          "term": "GE Vernova",
-          "explain_ja": "GE Vernovaは、ゼネラル・エレクトリックが展開するエネルギー関連事業のブランド名です。"
-        }
-      ],
-      "personal_actions": [
-        "発電機関やデータセンターの稼働状況を再確認する。",
-        "今後のプロジェクトで必要な電力供給を見込む。",
-        "供給チェーンのリスクを評価し、代替案を検討する。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://economictimes.indiatimes.com/news/international/business/anthropic-hires-google-chip-veteran-amir-salek-as-part-of-push-into-hardware/articleshow/133430553.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-08-22T19:30:17Z",
-      "title": "Anthropic hires Google chip veteran Amir Salek as part of push into hardware",
-      "title_ja": "Anthropic、Googleチップのベテランアミール・サレクをハードウェア推進の一環として採用",
-      "summary_ja": "AI企業Anthropicは、独自のAIチップ開発を目指してGoogleのチップ創設者アミール・サレクを新たに採用した。この動きは、Anthropicがハードウェア分野への本格的な進出を図っていることを示している。さらに、同社はデータセンターの容量をめぐる大規模な契約も進めている。",
-      "key_points": [
-        "AnthropicがAIチップ開発のための新しい半導体チームを設立",
-        "アミール・サレクを採用し、技術力を強化",
-        "競合のOpenAIも同様の方向性を追求中",
-        "大規模なデータセンター契約を確保している",
-        "カスタムAIチップの開発に向けた野心が見える"
-      ],
-      "glossary": [
-        {
-          "term": "Anthropic",
-          "explain_ja": "AI技術を開発する企業。"
-        },
-        {
-          "term": "OpenAI",
-          "explain_ja": "人工知能の研究および開発を行う企業。"
-        },
-        {
-          "term": "半導体",
-          "explain_ja": "電子機器の中で重要な役割を果たす材料。"
+          "term": "プライベートエクイティ",
+          "explain_ja": "未上場企業や資産に投資するファンドのこと。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データ処理や保存を行うための施設。"
+          "explain_ja": "データを管理・保存・処理するための施設。"
         },
         {
-          "term": "AIチップ",
-          "explain_ja": "人工知能の処理を効率化するために設計された専用のチップ。"
+          "term": "グリッド",
+          "explain_ja": "電力を供給するための送電網。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能のことで、特にデータ分析や自動制御に使用される技術。"
         }
       ],
       "personal_actions": [
-        "ハードウェア技術のトレンドをチェックする",
-        "AIチップ市場の動向を把握する",
-        "自社のデータセンターの利用状況を見直す"
+        "現在の電力供給状況を確認し、リスク管理を強化する。",
+        "発電のオプションについての情報を収集する。",
+        "AI技術を活用したエネルギー管理の導入を検討する。"
       ],
       "tags": [
         "AI"
       ]
     },
     {
-      "url": "https://nypost.com/2026/08/22/opinion/fast-takes-aoc-is-a-real-threat-trumps-stump-struggles-on-iran-and-other-commentary/",
-      "source": "New York Post",
-      "publishedAt": "2026-08-22T10:16:00Z",
-      "title": "Fast Takes: AOC is a real threat, our dumb anti-data center fight and other commentary",
-      "title_ja": "ファストテイク：AOCは本当に脅威、無意味なデータセンター反対運動とその他の考察",
-      "summary_ja": "アレクサンドリア・オカシオ＝コルテスは、大統領選挙において成功するための3つの重要な要素を持っています。これには、全国的な知名度、巨額の資金調達能力、メディアの関心が含まれます。この状況は、彼女が政治に与える影響力を示しており、他の政治家や運動にとっても脅威となる可能性があります。",
+      "url": "https://crooksandliars.com/2026/08/sen-bernie-sanders-tells-trump-put-his",
+      "source": "Crooksandliars.com",
+      "publishedAt": "2026-08-23T16:56:07Z",
+      "title": "Sen. Bernie Sanders Tells Trump To Put His Money Where His Mouth Is",
+      "title_ja": "バーニー・サンダース議員、トランプに自分の言葉に責任を持てと挑戦",
+      "summary_ja": "バーニー・サンダース議員は、トランプの大規模データセンター建設への発言に反発。データセンターの問題は党派を超えて重要視されており、住民のUtility料金の上昇や水使用、騒音問題が批判の対象となっている。多くのアメリカ人がデータセンター建設に反対している中、トランプは地元への設置を促したが、その発言は議論を呼んでいる。",
       "key_points": [
-        "AOCは全国的な知名度を有する。",
-        "彼女は数億ドルを調達する能力を持つ。",
-        "メディアの関心が非常に高い。",
-        "これらの要素が彼女を脅威にしている。"
+        "トランプのデータセンター建設に関する発言は批判を受けている。",
+        "データセンターは住宅料金、過剰な水使用、騒音問題を引き起こしている。",
+        "NRSCの内部メモによると、データセンターへの反対は政治的な影響を及ぼしている。",
+        "サンダース議員はAIの影響についての議論を提唱している。",
+        "世論調査によれば、アメリカ人の75%が地元への大規模データセンター建設に反対している。"
       ],
       "glossary": [
         {
-          "term": "AOC",
-          "explain_ja": "アレクサンドリア・オカシオ＝コルテスの略称。アメリカの政治家であり、民主党の下院議員。"
+          "term": "データセンター",
+          "explain_ja": "データの保存や管理を行う施設で、特に大規模なものはハイパースケールデータセンターと呼ばれます。"
         },
         {
-          "term": "メディア",
-          "explain_ja": "情報を報道する機関や手段。政治家の評価に大きな影響を与える。"
+          "term": "人工知能（AI）",
+          "explain_ja": "人間の知的行動を模倣するコンピュータシステムやソフトウェアの技術を指します。"
         }
       ],
       "personal_actions": [
-        "最新の政治動向を把握するためにニュースを定期的にチェックする。",
-        "地域の政治活動に参加し、意見を表明する。",
-        "投票に関する情報を確認し、次回の選挙への準備をする。"
+        "地元のデータセンター建設に関する住民意見を集め、関心を持つ。",
+        "データセンターの影響に関する議論や情報を地元の議員に伝える。",
+        "地域社会の環境や経済に関する問題を周知するための活動に参加する。"
       ],
       "tags": [
-        "DC"
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.forbes.com/sites/rrapier/2026/08/23/the-us-now-uses-nearly-40-of-the-worlds-data-center-electricity/",
+      "source": "Forbes",
+      "publishedAt": "2026-08-23T15:00:09Z",
+      "title": "The U.S. Now Uses Nearly 40% Of The World’s Data Center Electricity",
+      "title_ja": "アメリカが世界のデータセンター電力の約40%を消費",
+      "summary_ja": "アメリカのデータセンターは、世界のデータセンター電力の約40%を使用しており、これはAIによる電力需要の歴史的な急増が背景にあります。この電力需要の増加は、電力網の負荷を高め、新たなインフラ投資を促しています。今後、このトレンドがどのように進展するかが注目されます。",
+      "key_points": [
+        "アメリカのデータセンターが世界の40%の電力を使用。",
+        "AIが電力需要の急増を引き起こしている。",
+        "電力網にかかる負担が増加。",
+        "新たなインフラ投資が進行中。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保存、管理、処理を行う施設。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能の略称。機械が人間の知能を模倣する技術。"
+        },
+        {
+          "term": "インフラ投資",
+          "explain_ja": "公共のために必要な施設や設備に対して行われる投資。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの電力使用状況を定期的に評価する。",
+        "エネルギー効率を向上させるための対策を検討する。",
+        "AI技術の導入による影響を把握し、備える。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
