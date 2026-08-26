@@ -1,112 +1,110 @@
 {
-  "date": "2026-08-26",
-  "generatedAtJST": "2026-08-26T07:15:25.475+09:00",
+  "date": "2026-08-27",
+  "generatedAtJST": "2026-08-27T07:15:27.598+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/nvent-acquires-maverick-power-data-centers/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-08-24T21:07:58Z",
-      "title": "NVent to acquire Maverick Power for up to $2.3B to deepen its AI data center footprint",
-      "title_ja": "NVent、Maverick Powerを約23億ドルで買収しAIデータセンターの拡充へ",
-      "summary_ja": "NVentがMaverick Powerを約23億ドルで買収することが決まり、AIインフラの戦略的拡張を目指します。この買収はデータセンターの景観を再形成する可能性を秘めています。AI関連の市場ニーズに応える体制を強化し、競争力を高める狙いがあります。",
+      "url": "https://www.rawstory.com/trump-data-centers-2677777114/",
+      "source": "Raw Story",
+      "publishedAt": "2026-08-25T21:48:44Z",
+      "title": "Fury after Trump admin moves to crush public input on data centers: 'They want to lose'",
+      "title_ja": "トランプ政権、データセンターに関する公的意見を抑圧",
+      "summary_ja": "トランプ政権はデータセンターの建設前に市民が意見を述べる権利を剥奪し、全国でAIを活用した巨大施設に対する bipartisanな反発が高まっている。これにより、公衆の関与が制限されることが懸念されている。政策変更は、環境保護の観点からも問題視されている。",
       "key_points": [
-        "NVentがMaverick Powerを約23億ドルで買収する計画。",
-        "この買収はAIインフラの戦略的拡張を意味する。",
-        "データセンターの景観を再形成する可能性がある。",
-        "企業はAI関連市場の需要に応える体制を強化する。",
-        "競争力を高める目的がある。"
-      ],
-      "glossary": [
-        {
-          "term": "NVent",
-          "explain_ja": "データセンターのインフラソリューションを提供する企業。"
-        },
-        {
-          "term": "Maverick Power",
-          "explain_ja": "エネルギー分野におけるデータセンター運営会社。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能の略称。データ処理や分析において使われる技術。"
-        }
-      ],
-      "personal_actions": [
-        "自社のデータセンターインフラストラクチャーを見直しAI対応の準備ができているか確認する。",
-        "AI関連市場の動向を把握し、将来の投資戦略を検討する。",
-        "競合他社の動きを注視し、適切な対策を立てる。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.nextbigfuture.com/2026/08/ai-data-centers-can-subsidize-electricity-for-host-cities.html",
-      "source": "Next Big Future",
-      "publishedAt": "2026-08-24T16:27:35Z",
-      "title": "AI Data Centers Can Subsidize Electricity for Host Cities – NextBigFuture.com",
-      "title_ja": "AIデータセンターがホスト都市の電力料金を補助する可能性",
-      "summary_ja": "AIデータセンターは大量の電力を必要とし、過剰電力を周囲の都市に安価で販売することが可能です。これにより、住民の電気料金が減少し、開発者はプロジェクトの拡張ができるという相互利益が生まれます。さらに、データセンターの高い利用率が地域の電力コストを引き下げることが確認されています。",
-      "key_points": [
-        "AIデータセンターは大量の電力を消費するが、過剰電力を周囲に販売可能。",
-        "大規模なデータセンターによって電力コストが低下することがある。",
-        "過剰発電を行うことで地域住民の電力料金を補助できる。",
-        "直接補助金や家庭のエネルギー効率を改善するための資金提供が考慮されている。",
-        "テスラのVPP（仮想発電所）など、柔軟な電力供給メカニズムが導入されている。"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能関連のデータ処理を行うために設計されたデータセンター。"
-        },
-        {
-          "term": "EPRI",
-          "explain_ja": "電力業界の研究機関で、電力と技術に関する調査を行っている。"
-        },
-        {
-          "term": "VPP（仮想発電所）",
-          "explain_ja": "分散したエネルギー資源を集約して、一体化した電力供給を行う仕組み。"
-        }
-      ],
-      "personal_actions": [
-        "自社のエネルギー消費を見直し、効率化を図る。",
-        "地域の電力会社との連携を強化し、補助金プログラムの利用可能性を確認する。",
-        "現場のデータセンターの動向を調査し、地域経済への影響を評価する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/australia-data-center-power-demand-surge/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-08-24T14:35:24Z",
-      "title": "Australia data-center power demand projected to surge 7x by 2036",
-      "title_ja": "オーストラリアのデータセンター電力需要、2036年までに7倍増加予測",
-      "summary_ja": "オーストラリアのデータセンターにおける電力需要が2036年までに7倍に達すると予測されています。この急増は、オーストラリアのエネルギーの風景を大きく変える可能性があります。そのため、迅速なインフラの適応が求められるでしょう。",
-      "key_points": [
-        "オーストラリアのデータセンター電力需要が2036年に7倍増加する予測",
-        "電力需要の急増がエネルギー景観に重大な影響を与える",
-        "インフラの迅速な適応が必要とされる"
+        "トランプ政権がデータセンターに対する公的意見を排除する方針を示した",
+        "バイパーティザンの反発が全国的に広がっている",
+        "AIを活用したデータセンターが環境に与える影響が懸念されている",
+        "市民の意見が建設プロセスから排除されるリスクがある"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データの保存や処理を行うための施設。"
+          "explain_ja": "データの保存、管理、処理を行う施設。"
         },
         {
-          "term": "電力需要",
-          "explain_ja": "特定の地域や施設が必要とする電力の量。"
+          "term": "バイパーティザン",
+          "explain_ja": "政党を超えた合意や協力のこと。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能の略称で、人間の知能を模倣する技術。"
+        },
+        {
+          "term": "環境保護",
+          "explain_ja": "自然環境を守るための活動や政策。"
         }
       ],
       "personal_actions": [
-        "地域の電力供給計画に関する最新情報を確認する",
-        "データセンターの電力管理戦略を見直す",
-        "エネルギー効率を向上させるための新しい技術の導入を検討する"
+        "データセンター計画に関する公聴会情報をチェックする",
+        "地元の環境保護団体に意見を伝える",
+        "データセンターの影響に関する情報を収集する"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.dailysignal.com/2026/08/25/paxton-texas-first-data-center-plan/",
+      "source": "Daily Signal",
+      "publishedAt": "2026-08-25T19:25:00Z",
+      "title": "Ken Paxton Unveils ‘Texas First’ Data Center Plan to Protect Grid, Communities",
+      "title_ja": "ケン・パクストンが発表した「テキサスファースト」データセンター計画",
+      "summary_ja": "ケン・パクストン氏がテキサス州の電力網とコミュニティをデータセンターの問題から守るための計画を発表した。この計画は、アメリカが中国に対して人工知能の競争で勝つことも目指している。これにより、地域の安全性が強化され、テキサスのインフラが向上することが期待される。",
+      "key_points": [
+        "ケン・パクストン氏がデータセンター計画を発表",
+        "電力網とコミュニティの保護が目的",
+        "アメリカの人工知能競争での優位性を強化",
+        "テキサス州のインフラ整備に貢献する見込み",
+        "地域住民の安全性を確保"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データを集中管理し、安全に保管・処理する施設。"
+        },
+        {
+          "term": "人工知能 (AI)",
+          "explain_ja": "人間の知能を模倣したシステムやプログラム。"
+        }
+      ],
+      "personal_actions": [
+        "テキサス州のデータセンター計画に関する最新情報を確認する",
+        "地域の電力網の安定性について問題点を把握する"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://siliconangle.com/2026/08/25/democratizing-the-ai-data-center-how-cisco-and-nvidia-are-bringing-rack-scale-power-to-the-enterprise/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-08-25T18:38:37Z",
+      "title": "Democratizing the AI data center: How Cisco and Nvidia are bringing rack-scale power to the enterprise",
+      "title_ja": "AIデータセンターの民主化：CiscoとNvidiaが企業向けにラックスケールパワーを提供",
+      "summary_ja": "最近、AIインフラの進化が急速に進んでおり、CiscoとNvidiaはその中心で重要な役割を果たしています。彼らの提携により、企業は高密度の液冷ラックアーキテクチャを通じて、AIの大規模な計算能力へのアクセスが可能となっています。この新しいインフラは、データ主権を守りながら、効率的なAIワークロードの運用を促進します。",
+      "key_points": [
+        "CiscoとNvidiaが提携し、企業向けに液冷ラックアーキテクチャを導入。",
+        "従来のハイパースケーラに依存しない新しいAIインフラの構築が進行中。",
+        "AI podsの展開により、企業が効率的なAIトレーニングを実施可能。"
+      ],
+      "glossary": [
+        {
+          "term": "NCPRA",
+          "explain_ja": "Nvidia Certified Partner Reference Architectureの略で、企業向けのAIインフラの標準アーキテクチャを指します。"
+        },
+        {
+          "term": "ラックスケール",
+          "explain_ja": "大型データセンターにおける計算資源の効率的な管理と拡張性を可能にするインフラストラクチャの形式です。"
+        }
+      ],
+      "personal_actions": [
+        "自社のAIインフラにおける専用のスキルとリソースを評価し、必要に応じてスキルアップを図る。",
+        "新しいラックスケールアーキテクチャが提供する機会をチーム内で共有し、計画的に実装を進める。",
+        "CiscoとNvidiaの新しいソリューションの導入を検討し、自社のニーズに合ったアプローチを計画する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
