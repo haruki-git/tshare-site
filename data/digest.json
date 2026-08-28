@@ -1,108 +1,111 @@
 {
-  "date": "2026-08-28",
-  "generatedAtJST": "2026-08-28T07:15:36.753+09:00",
+  "date": "2026-08-29",
+  "generatedAtJST": "2026-08-29T07:15:31.994+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/nvidia-non-hyperscale-data-center-growth/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-08-26T21:24:56Z",
-      "title": "Nvidia CFO says non-hyperscale cloud already accounts for roughly half of data-center revenue",
-      "title_ja": "Nvidia CFO、非ハイパースケールクラウドがデータセンター収益の約半分を占めると発表",
-      "summary_ja": "Nvidiaは、非ハイパースケールクラウド市場への進出が収益の持続的成長を促進する可能性があると報告しています。この動きは、ハイパースケーラーの交渉力に対する耐性を高めることにも寄与します。非ハイパースケールクラウドは重要な収益源として浮上しています。",
+      "url": "https://www.ajc.com/business/2026/08/georgia-power-deal-to-power-openai-data-center-near-savannah-is-approved/",
+      "source": "Atlanta Journal Constitution",
+      "publishedAt": "2026-08-27T21:10:28Z",
+      "title": "Georgia Power deal to power OpenAI data center near Savannah is approved",
+      "title_ja": "ジョージアパワーがサバンナ近郊のOpenAIデータセンターへの電力供給契約を承認",
+      "summary_ja": "ジョージア州の主要な公益事業規制機関が、OpenAIの200億ドルのデータセンターに電力を供給するジョージアパワーの契約を承認しました。この契約には新たな料金支払者保護策が盛り込まれています。これにより、より大規模なデータセンターが地域経済に与える影響が期待されます。",
       "key_points": [
-        "NvidiaのCFOが非ハイパースケールクラウドの収益が約50%を占めると発表",
-        "非ハイパースケール市場への多様化が進行中",
-        "ハイパースケーラーの影響力を軽減する可能性がある",
-        "持続可能な成長を目指す戦略が評価されている"
+        "ジョージアパワーがOpenAIデータセンターへの電力供給契約を承認",
+        "契約は200億ドルの規模",
+        "新たな料金支払者保護策が導入される",
+        "地域経済への影響が見込まれる"
       ],
       "glossary": [
         {
-          "term": "非ハイパースケールクラウド",
-          "explain_ja": "大規模なクラウドサービスプロバイダーでない、一般企業向けのクラウドサービス。"
+          "term": "Georgia Power",
+          "explain_ja": "アメリカ・ジョージア州の主要な電力会社で、州内の電力供給を担っている。"
         },
         {
-          "term": "ハイパースケーラー",
-          "explain_ja": "大規模なデータセンターを運営し、大量のリソースを管理するクラウドプロバイダー。"
+          "term": "OpenAI",
+          "explain_ja": "人工知能の研究と開発を行う企業で、先進的なAI技術を提供している。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "情報システムを集中的に管理し、運用する施設。"
         }
       ],
       "personal_actions": [
-        "非ハイパースケールサービスの市場動向をチェックする",
-        "Nvidiaの製品やサービスを見直し、適切な活用方法を検討する"
+        "地域の公的機関や公益事業に関する情報を定期的に確認する",
+        "新しい料金プランや保護策の情報を収集する",
+        "データセンターの影響を受けるエリアの改善活動に注目する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.cnbc.com/2026/08/26/anthropic-and-nscale-strike-45-billion-cloud-deal-sources-say.html",
-      "source": "CNBC",
-      "publishedAt": "2026-08-26T18:07:15Z",
-      "title": "Anthropic and Nscale strike $45 billion cloud deal, sources say",
-      "title_ja": "AnthropicとNscaleが450億ドルのクラウド契約を締結",
-      "summary_ja": "Anthropicは、Nscaleのデータセンター開発において約460メガワットの計算能力をレンタルする契約を結んだ。この契約は450億ドル相当と報じられている。この取引により、Anthropicはクラウドサービスの拡大を図ることが期待されている。",
+      "url": "https://www.storagereview.com/podcast/podcast-152-data-center-thermal-dynamics-and-cooling-architectures-with-tim-shedd",
+      "source": "Storagereview.com",
+      "publishedAt": "2026-08-27T19:07:27Z",
+      "title": "Podcast #152: Data Center Thermal Dynamics and Cooling Architectures With Tim Shedd",
+      "title_ja": "Podcast #152: データセンターの熱力学と冷却アーキテクチャ",
+      "summary_ja": "Podcastでは、熱管理の専門家であるTim Sheddが、液冷技術の歴史とその進化に焦点を当てています。初期のスーパーコンピュータから商業エンタープライズに至るまでの熱デザイン選択が、効率的な技術運営にどのように寄与しているかを理解できる内容となっています。この知見は、データセンターのパワー効率や冷却アーキテクチャの最適化に重要です。",
       "key_points": [
-        "AnthropicがNscaleと450億ドルの契約を締結した。",
-        "契約内容には460メガワットの計算能力のレンタルが含まれる。",
-        "データセンターはウェストバージニアに設置される。"
+        "液冷技術の歴史的進展からエンタープライズAIへの適用を解説。",
+        "高密度計算環境における熱管理の重要性が強調される。",
+        "多様な冷却技術間の比較と、それぞれの利点が議論される。",
+        "業界の標準化と多vendorの相互運用性の課題が取り上げられる。",
+        "新しい漏れ検知技術と流体化学がデータセンター運用に与える影響が述べられる。"
       ],
       "glossary": [
         {
-          "term": "Anthropic",
-          "explain_ja": "AIを開発する企業で、主に人工知能の研究に注力している。"
+          "term": "液冷 (Liquid Cooling)",
+          "explain_ja": "液体を使って熱を効果的に排出する冷却技術。"
         },
         {
-          "term": "Nscale",
-          "explain_ja": "データセンターの開発を行う企業で、クラウドコンピューティングサービスを提供している。"
+          "term": "高密度コンピューティング (High-Density Computing)",
+          "explain_ja": "小さなスペースに多くの計算資源を詰め込むことを指す。"
         },
         {
-          "term": "メガワット",
-          "explain_ja": "電力の単位。1メガワットは1,000キロワットであり、大規模なデータセンターの消費電力を示す。"
+          "term": "二相冷却 (Two-Phase Cooling)",
+          "explain_ja": "液体が蒸発することで熱を移動させる冷却方式。"
         }
       ],
       "personal_actions": [
-        "現在のデータセンターの電力消費状況を確認する。",
-        "データセンターの契約内容やアップデートに注意を払う。"
+        "多vendorの冷却設備の相互運用性について、現状の確認と調整を行う。",
+        "データセンター内の冷却システムのブレークポイントを評価し、必要に応じてテストを実施する。",
+        "新しい漏れ検知システムの導入を検討し、効率性向上を図る。"
       ],
       "tags": [
-        "その他"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.channelnewsasia.com/business/anthropic-pay-nscale-45-billion-rent-ai-computing-power-bloomberg-news-reports-6343361",
-      "source": "CNA",
-      "publishedAt": "2026-08-26T17:21:49Z",
-      "title": "Anthropic to pay Nscale $45 billion to rent AI computing power, Bloomberg News reports",
-      "title_ja": "Anthropic、Nscaleに450億ドルでAIコンピューティングパワーを賃借へ",
-      "summary_ja": "Anthropicは、Nscaleが運営するウエストバージニアのデータセンターからAIコンピューティングパワーを賃借するために450億ドルを支払う合意を結びました。この決定は、AIスタートアップが将来の需要に対応するための能力を確保するためのものです。この投資は、Anthropicの成長戦略の一環と考えられ、AI技術の発展に大きな影響を与える可能性があります。",
+      "url": "https://www.foxnews.com/politics/out-of-this-world-fix-data-center-backlash-nasa-horizon",
+      "source": "Fox News",
+      "publishedAt": "2026-08-27T18:58:47Z",
+      "title": "Out-of-this-world fix for data center backlash could be on NASA's horizon",
+      "title_ja": "NASAの地球軌道における太陽光発電AIデータセンター計画",
+      "summary_ja": "NASAは、地球軌道に設置される太陽光発電のAIデータセンターが、アメリカ国内の土地、水、電力容量を巡る対立を解決できる可能性があると発表しました。これは、持続可能なソリューションとして期待されています。今後の技術開発が注目される中、この取り組みがどのような影響を与えるかが鍵です。",
       "key_points": [
-        "AnthropicがNscaleに450億ドルを支払う合意を発表",
-        "契約の目的は、AIコンピューティングパワーをレンタルすること",
-        "ウエストバージニアにあるNscaleのデータセンターが使用される",
-        "この合意はAIスタートアップの成長に寄与する見込み",
-        "今後のAI市場での競争力を高める狙い"
+        "NASAによる新たなデータセンター戦略",
+        "太陽光発電を利用したエコロジーへの配慮",
+        "地球上のリソース争奪戦の解決提案"
       ],
       "glossary": [
         {
-          "term": "Anthropic",
-          "explain_ja": "AI技術を開発しているスタートアップ企業です。"
-        },
-        {
-          "term": "Nscale",
-          "explain_ja": "データセンターを運営する企業で、クラウドコンピューティングパワーを提供しています。"
+          "term": "NASA",
+          "explain_ja": "アメリカ合衆国の国家航空宇宙局。"
         },
         {
           "term": "AI",
-          "explain_ja": "人工知能の略で、コンピュータが知的な行動を行う技術を指します。"
+          "explain_ja": "人工知能の略称。計算機が人間の知的行動を模倣する技術。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "コンピュータシステムと関連機器を収容する専門の施設です。"
+          "explain_ja": "データを管理・保存するための施設。"
         }
       ],
       "personal_actions": [
-        "自社のクラウドコンピューティング戦略を再評価する",
-        "データセンターのセキュリティ対策を確認する",
-        "AI関連の技術動向をフォローする"
+        "AI技術に関する最新のニュースをチェックする",
+        "持続可能なエネルギー利用について学ぶ",
+        "地元の土地利用状況を確認し、リソースの効率的な使い方を考える"
       ],
       "tags": [
         "DC",
