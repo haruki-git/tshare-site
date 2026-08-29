@@ -1,75 +1,72 @@
 {
-  "date": "2026-08-29",
-  "generatedAtJST": "2026-08-29T07:15:31.994+09:00",
+  "date": "2026-08-30",
+  "generatedAtJST": "2026-08-30T07:15:24.633+09:00",
   "items": [
     {
-      "url": "https://www.ajc.com/business/2026/08/georgia-power-deal-to-power-openai-data-center-near-savannah-is-approved/",
-      "source": "Atlanta Journal Constitution",
-      "publishedAt": "2026-08-27T21:10:28Z",
-      "title": "Georgia Power deal to power OpenAI data center near Savannah is approved",
-      "title_ja": "ジョージアパワーがサバンナ近郊のOpenAIデータセンターへの電力供給契約を承認",
-      "summary_ja": "ジョージア州の主要な公益事業規制機関が、OpenAIの200億ドルのデータセンターに電力を供給するジョージアパワーの契約を承認しました。この契約には新たな料金支払者保護策が盛り込まれています。これにより、より大規模なデータセンターが地域経済に与える影響が期待されます。",
+      "url": "https://observer.com/2026/08/how-america-should-build-data-centers/",
+      "source": "Observer",
+      "publishedAt": "2026-08-28T20:00:26Z",
+      "title": "As Data Center Opposition Grows, America Needs a Better Blueprint",
+      "title_ja": "データセンターへの反対が高まる中、アメリカはより良い計画が必要",
+      "summary_ja": "データセンターの開発は、地域社会からの反対や電力、水、インフラに関する制限に直面しており、慎重な計画が求められています。最近の調査によると、米国民の約70％が自宅近くにデータセンターが建設されることに反対しており、その動きは全国的に広がっています。このため、データセンターの建設方法、立地、条件が議論されています。",
       "key_points": [
-        "ジョージアパワーがOpenAIデータセンターへの電力供給契約を承認",
-        "契約は200億ドルの規模",
-        "新たな料金支払者保護策が導入される",
-        "地域経済への影響が見込まれる"
+        "データセンターは膨大な電力を消費し、地域コミュニティに影響を与える可能性がある。",
+        "多くの州でデータセンターの建設に対するモラトリアムが導入されている。",
+        "データセンターの需要が高まり、電力不足が懸念されている。",
+        "電力供給の制約はデータセンター開発のボトルネックとなっている。",
+        "透明性を重視したコミュニティとの対話が必要である。"
       ],
       "glossary": [
         {
-          "term": "Georgia Power",
-          "explain_ja": "アメリカ・ジョージア州の主要な電力会社で、州内の電力供給を担っている。"
+          "term": "NIMBY",
+          "explain_ja": "「Not In My BackYard」の略で、特定のプロジェクトに対して地元住民が反対する現象を指します。"
         },
         {
-          "term": "OpenAI",
-          "explain_ja": "人工知能の研究と開発を行う企業で、先進的なAI技術を提供している。"
+          "term": "A.I.",
+          "explain_ja": "人工知能のことで、多くのデータセンターの成長を促している技術です。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "情報システムを集中的に管理し、運用する施設。"
+          "term": "モラトリアム",
+          "explain_ja": "一時的な禁止や休止を意味し、特定の活動を一時的に停止することを指します。"
         }
       ],
       "personal_actions": [
-        "地域の公的機関や公益事業に関する情報を定期的に確認する",
-        "新しい料金プランや保護策の情報を収集する",
-        "データセンターの影響を受けるエリアの改善活動に注目する"
+        "地域のデータセンターに関する新しい開発計画を確認する。",
+        "電力使用量や水資源への影響を考慮したワークショップに参加する。",
+        "コミュニティ内での対話を通じて意見を交わす。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.storagereview.com/podcast/podcast-152-data-center-thermal-dynamics-and-cooling-architectures-with-tim-shedd",
-      "source": "Storagereview.com",
-      "publishedAt": "2026-08-27T19:07:27Z",
-      "title": "Podcast #152: Data Center Thermal Dynamics and Cooling Architectures With Tim Shedd",
-      "title_ja": "Podcast #152: データセンターの熱力学と冷却アーキテクチャ",
-      "summary_ja": "Podcastでは、熱管理の専門家であるTim Sheddが、液冷技術の歴史とその進化に焦点を当てています。初期のスーパーコンピュータから商業エンタープライズに至るまでの熱デザイン選択が、効率的な技術運営にどのように寄与しているかを理解できる内容となっています。この知見は、データセンターのパワー効率や冷却アーキテクチャの最適化に重要です。",
+      "url": "https://oilprice.com/Energy/Energy-General/The-AI-Boom-Could-Triple-Data-Center-Water-Use-by-2030.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-08-28T19:00:00Z",
+      "title": "The AI Boom Could Triple Data Center Water Use by 2030",
+      "title_ja": "AIブームが2030年までにデータセンターの水利用を三倍にする可能性",
+      "summary_ja": "データセンターの運用に必要な水の量が急増する見込みです。Rystad Energyの推計によると、節水対策が講じられない場合、2030年までにデータセンターによる全球の水消費量は三倍に達する可能性があります。この状況は、持続可能な水資源管理の重要性を浮き彫りにしています。",
       "key_points": [
-        "液冷技術の歴史的進展からエンタープライズAIへの適用を解説。",
-        "高密度計算環境における熱管理の重要性が強調される。",
-        "多様な冷却技術間の比較と、それぞれの利点が議論される。",
-        "業界の標準化と多vendorの相互運用性の課題が取り上げられる。",
-        "新しい漏れ検知技術と流体化学がデータセンター運用に与える影響が述べられる。"
+        "データセンターの水利用が増加する見込み",
+        "2030年までに水消費量が三倍になる可能性",
+        "Rystad Energyの推計に基づく",
+        "節水対策の必要性が強調される",
+        "AIブームが水の需要を押し上げる要因として作用"
       ],
       "glossary": [
         {
-          "term": "液冷 (Liquid Cooling)",
-          "explain_ja": "液体を使って熱を効果的に排出する冷却技術。"
+          "term": "Rystad Energy",
+          "explain_ja": "エネルギー市場に関するデータと分析を提供する企業。"
         },
         {
-          "term": "高密度コンピューティング (High-Density Computing)",
-          "explain_ja": "小さなスペースに多くの計算資源を詰め込むことを指す。"
-        },
-        {
-          "term": "二相冷却 (Two-Phase Cooling)",
-          "explain_ja": "液体が蒸発することで熱を移動させる冷却方式。"
+          "term": "データセンター",
+          "explain_ja": "データの保存、処理及び管理を行う施設。"
         }
       ],
       "personal_actions": [
-        "多vendorの冷却設備の相互運用性について、現状の確認と調整を行う。",
-        "データセンター内の冷却システムのブレークポイントを評価し、必要に応じてテストを実施する。",
-        "新しい漏れ検知システムの導入を検討し、効率性向上を図る。"
+        "水資源管理の方針を確認・見直す",
+        "データセンターの節水対策について情報収集する",
+        "適切な水利用のベストプラクティスを導入する"
       ],
       "tags": [
         "DC",
@@ -77,38 +74,39 @@
       ]
     },
     {
-      "url": "https://www.foxnews.com/politics/out-of-this-world-fix-data-center-backlash-nasa-horizon",
-      "source": "Fox News",
-      "publishedAt": "2026-08-27T18:58:47Z",
-      "title": "Out-of-this-world fix for data center backlash could be on NASA's horizon",
-      "title_ja": "NASAの地球軌道における太陽光発電AIデータセンター計画",
-      "summary_ja": "NASAは、地球軌道に設置される太陽光発電のAIデータセンターが、アメリカ国内の土地、水、電力容量を巡る対立を解決できる可能性があると発表しました。これは、持続可能なソリューションとして期待されています。今後の技術開発が注目される中、この取り組みがどのような影響を与えるかが鍵です。",
+      "url": "https://www.eschatonblog.com/2026/08/bad-neighbors.html",
+      "source": "Eschatonblog.com",
+      "publishedAt": "2026-08-28T14:30:00Z",
+      "title": "Bad Neighbors",
+      "title_ja": "悪い隣人たち",
+      "summary_ja": "データセンターに対する反対の一因は、大手テクノロジー企業が法を無視しているケースが目立つことにある。ニュージャージー州のAIデータセンター「DataOne」は、未許可のガス発電機を多数稼働させているとして連邦法違反を指摘されている。このセンターは学校の近くに位置し、周辺住民からの騒音や健康被害の懸念が高まっている。問題が放置されると、地域社会に深刻な影響を及ぼす可能性がある。",
       "key_points": [
-        "NASAによる新たなデータセンター戦略",
-        "太陽光発電を利用したエコロジーへの配慮",
-        "地球上のリソース争奪戦の解決提案"
+        "DataOneはニュージャージー州で計画中のAIデータセンター。",
+        "同施設は、未許可のガス発電機を45基稼働させている疑いがある。",
+        "騒音や健康問題を引き起こすことで、地域住民からの反発を招いている。",
+        "Microsoftとの170億ドル契約でAIコンピューティング能力を提供予定。",
+        "周囲には学校があり、発電機からは健康を害する汚染物質が排出されている。"
       ],
       "glossary": [
         {
-          "term": "NASA",
-          "explain_ja": "アメリカ合衆国の国家航空宇宙局。"
+          "term": "DataOne",
+          "explain_ja": "ニュージャージー州に建設中のAIデータセンターで、Microsoft向けのサービスを提供する予定。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略称。計算機が人間の知的行動を模倣する技術。"
+          "term": "ガス発電機",
+          "explain_ja": "天然ガスを燃料とする発電機で、騒音や大気汚染を引き起こすことがある。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを管理・保存するための施設。"
+          "term": "未許可",
+          "explain_ja": "法律や規制に基づく許可が取得されていない状態。"
         }
       ],
       "personal_actions": [
-        "AI技術に関する最新のニュースをチェックする",
-        "持続可能なエネルギー利用について学ぶ",
-        "地元の土地利用状況を確認し、リソースの効率的な使い方を考える"
+        "地域のデータセンターの運営状況を確認し、必要な情報を収集する。",
+        "周辺の環境や健康に影響があるかどうかを調査する。",
+        "地元コミュニティに参加し、声を上げる活動に参加する。"
       ],
       "tags": [
-        "DC",
         "AI"
       ]
     }
