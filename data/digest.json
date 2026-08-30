@@ -1,110 +1,104 @@
 {
-  "date": "2026-08-30",
-  "generatedAtJST": "2026-08-30T07:15:24.633+09:00",
+  "date": "2026-08-31",
+  "generatedAtJST": "2026-08-31T07:15:20.155+09:00",
   "items": [
     {
-      "url": "https://observer.com/2026/08/how-america-should-build-data-centers/",
-      "source": "Observer",
-      "publishedAt": "2026-08-28T20:00:26Z",
-      "title": "As Data Center Opposition Grows, America Needs a Better Blueprint",
-      "title_ja": "データセンターへの反対が高まる中、アメリカはより良い計画が必要",
-      "summary_ja": "データセンターの開発は、地域社会からの反対や電力、水、インフラに関する制限に直面しており、慎重な計画が求められています。最近の調査によると、米国民の約70％が自宅近くにデータセンターが建設されることに反対しており、その動きは全国的に広がっています。このため、データセンターの建設方法、立地、条件が議論されています。",
+      "url": "https://oilprice.com/Energy/Energy-General/Americas-Electricity-Boom-Is-Outrunning-Its-Power-Grid.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-08-29T17:00:00Z",
+      "title": "America’s Electricity Boom Is Outrunning Its Power Grid",
+      "title_ja": "アメリカの電力ブームが電力網を超速で追い越している",
+      "summary_ja": "アメリカのエネルギーグリッドは、急速な電化とエネルギー需要の増加により極度の負荷を受けています。この急増は特に人工知能の普及によるもので、エネルギー需給のバランスが崩れつつあります。これにより、今後のインフラ整備や政策対応が求められる状況です。",
       "key_points": [
-        "データセンターは膨大な電力を消費し、地域コミュニティに影響を与える可能性がある。",
-        "多くの州でデータセンターの建設に対するモラトリアムが導入されている。",
-        "データセンターの需要が高まり、電力不足が懸念されている。",
-        "電力供給の制約はデータセンター開発のボトルネックとなっている。",
-        "透明性を重視したコミュニティとの対話が必要である。"
+        "アメリカの電力網は急速な電化に直面している。",
+        "エネルギー需要が過去に例のないレベルに達している。",
+        "人工知能の普及がエネルギー需要をさらに押し上げている。",
+        "電力網のインフラ整備が急務となっている。"
       ],
       "glossary": [
         {
-          "term": "NIMBY",
-          "explain_ja": "「Not In My BackYard」の略で、特定のプロジェクトに対して地元住民が反対する現象を指します。"
+          "term": "電力網",
+          "explain_ja": "エネルギー供給のための電気配電システム。"
         },
         {
-          "term": "A.I.",
-          "explain_ja": "人工知能のことで、多くのデータセンターの成長を促している技術です。"
-        },
-        {
-          "term": "モラトリアム",
-          "explain_ja": "一時的な禁止や休止を意味し、特定の活動を一時的に停止することを指します。"
+          "term": "エネルギー需要",
+          "explain_ja": "特定の時間帯に必要とされる電力の量。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンターに関する新しい開発計画を確認する。",
-        "電力使用量や水資源への影響を考慮したワークショップに参加する。",
-        "コミュニティ内での対話を通じて意見を交わす。"
+        "現在の電力供給能力やインフラの状況を確認する。",
+        "省エネ対策を見直し自宅での電力消費を抑える。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://oilprice.com/Energy/Energy-General/The-AI-Boom-Could-Triple-Data-Center-Water-Use-by-2030.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-08-28T19:00:00Z",
-      "title": "The AI Boom Could Triple Data Center Water Use by 2030",
-      "title_ja": "AIブームが2030年までにデータセンターの水利用を三倍にする可能性",
-      "summary_ja": "データセンターの運用に必要な水の量が急増する見込みです。Rystad Energyの推計によると、節水対策が講じられない場合、2030年までにデータセンターによる全球の水消費量は三倍に達する可能性があります。この状況は、持続可能な水資源管理の重要性を浮き彫りにしています。",
+      "url": "https://decrypt.co/376864/bitgo-buys-nydig-institutional-trading-arm",
+      "source": "Decrypt",
+      "publishedAt": "2026-08-29T13:31:04Z",
+      "title": "BitGo Buys NYDIG's Institutional Trading Arm to Beef Up Derivatives and Financing",
+      "title_ja": "BitGo、NYDIGの機関投資家向け取引部門を買収",
+      "summary_ja": "BitGoは約4250万ドルの現金と株式の取引でNYDIGの機関投資家向け取引部門を買収しました。この取引により、BitGoはデリバティブ、構造化製品、資本市場の能力を強化します。一方で、NYDIGは電力とデータセンター事業に集中できるようになります。",
       "key_points": [
-        "データセンターの水利用が増加する見込み",
-        "2030年までに水消費量が三倍になる可能性",
-        "Rystad Energyの推計に基づく",
-        "節水対策の必要性が強調される",
-        "AIブームが水の需要を押し上げる要因として作用"
+        "BitGoがNYDIGの機関投資家向け取引部門を買収した。",
+        "買収額は約4250万ドル。",
+        "この取引により、BitGoはデリバティブや資本市場の能力を強化。",
+        "NYDIGは、電力とデータセンター事業に集中する。"
       ],
       "glossary": [
         {
-          "term": "Rystad Energy",
-          "explain_ja": "エネルギー市場に関するデータと分析を提供する企業。"
+          "term": "BitGo",
+          "explain_ja": "暗号資産の保管・管理を提供する企業。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、処理及び管理を行う施設。"
+          "term": "NYDIG",
+          "explain_ja": "暗号資産に関する金融サービスを提供する企業。"
+        },
+        {
+          "term": "デリバティブ",
+          "explain_ja": "原資産の価値に基づく金融契約。"
+        },
+        {
+          "term": "構造化製品",
+          "explain_ja": "複数の金融商品を組み合わせた金融商品。"
         }
       ],
       "personal_actions": [
-        "水資源管理の方針を確認・見直す",
-        "データセンターの節水対策について情報収集する",
-        "適切な水利用のベストプラクティスを導入する"
+        "自社のデリバティブ取引の関連法規を再確認する。",
+        "最新の市場動向をチェックし、BitGoの対応を考慮する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "その他"
       ]
     },
     {
-      "url": "https://www.eschatonblog.com/2026/08/bad-neighbors.html",
-      "source": "Eschatonblog.com",
-      "publishedAt": "2026-08-28T14:30:00Z",
-      "title": "Bad Neighbors",
-      "title_ja": "悪い隣人たち",
-      "summary_ja": "データセンターに対する反対の一因は、大手テクノロジー企業が法を無視しているケースが目立つことにある。ニュージャージー州のAIデータセンター「DataOne」は、未許可のガス発電機を多数稼働させているとして連邦法違反を指摘されている。このセンターは学校の近くに位置し、周辺住民からの騒音や健康被害の懸念が高まっている。問題が放置されると、地域社会に深刻な影響を及ぼす可能性がある。",
+      "url": "https://cryptobriefing.com/nvidia-spectrum-x-ethernet-ai-networking/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-08-29T13:04:52Z",
+      "title": "Nvidia advances AI architecture with smarter traffic control",
+      "title_ja": "Nvidia、よりスマートなトラフィック制御でAIアーキテクチャを前進",
+      "summary_ja": "NvidiaのSpectrum-XがAIデータセンターの効率を再定義し、ネットワーク性能とスケーラビリティの新標準を設定する可能性があります。この技術革新により、AI関連のアプリケーションやサービスの実行がよりスムーズになることが期待されます。ネットワークの最適化は、データセンターの運用コスト削減にも寄与するでしょう。",
       "key_points": [
-        "DataOneはニュージャージー州で計画中のAIデータセンター。",
-        "同施設は、未許可のガス発電機を45基稼働させている疑いがある。",
-        "騒音や健康問題を引き起こすことで、地域住民からの反発を招いている。",
-        "Microsoftとの170億ドル契約でAIコンピューティング能力を提供予定。",
-        "周囲には学校があり、発電機からは健康を害する汚染物質が排出されている。"
+        "NvidiaのSpectrum-XはAIデータセンターの効率を向上させる可能性がある",
+        "新しいネットワーク性能の標準を設定することが期待されている",
+        "スマートなトラフィック制御により、AIアプリケーションのパフォーマンスが向上する",
+        "データセンター運用コストの削減を助ける可能性がある"
       ],
       "glossary": [
         {
-          "term": "DataOne",
-          "explain_ja": "ニュージャージー州に建設中のAIデータセンターで、Microsoft向けのサービスを提供する予定。"
+          "term": "Spectrum-X",
+          "explain_ja": "Nvidiaが開発した新しいネットワーク技術で、AIデータセンターの効率を向上させることを目的としている。"
         },
         {
-          "term": "ガス発電機",
-          "explain_ja": "天然ガスを燃料とする発電機で、騒音や大気汚染を引き起こすことがある。"
-        },
-        {
-          "term": "未許可",
-          "explain_ja": "法律や規制に基づく許可が取得されていない状態。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能関連の処理を行うために設計されたデータセンター。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンターの運営状況を確認し、必要な情報を収集する。",
-        "周辺の環境や健康に影響があるかどうかを調査する。",
-        "地元コミュニティに参加し、声を上げる活動に参加する。"
+        "Nvidiaの新技術が自社のネットワークに与える影響を評価する",
+        "今後の技術動向について情報収集を行う",
+        "新しいネットワーク技術導入の準備を進める"
       ],
       "tags": [
         "AI"
