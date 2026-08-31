@@ -1,107 +1,122 @@
 {
-  "date": "2026-08-31",
-  "generatedAtJST": "2026-08-31T07:15:20.155+09:00",
+  "date": "2026-09-01",
+  "generatedAtJST": "2026-09-01T07:15:58.953+09:00",
   "items": [
     {
-      "url": "https://oilprice.com/Energy/Energy-General/Americas-Electricity-Boom-Is-Outrunning-Its-Power-Grid.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-08-29T17:00:00Z",
-      "title": "America’s Electricity Boom Is Outrunning Its Power Grid",
-      "title_ja": "アメリカの電力ブームが電力網を超速で追い越している",
-      "summary_ja": "アメリカのエネルギーグリッドは、急速な電化とエネルギー需要の増加により極度の負荷を受けています。この急増は特に人工知能の普及によるもので、エネルギー需給のバランスが崩れつつあります。これにより、今後のインフラ整備や政策対応が求められる状況です。",
+      "url": "https://www.techradar.com/pro/amazon-is-buying-2-million-nvidia-gpus-for-aws-data-center-expansion",
+      "source": "TechRadar",
+      "publishedAt": "2026-08-30T22:10:00Z",
+      "title": "Amazon is buying 2 million Nvidia GPUs for AWS data center expansion",
+      "title_ja": "AmazonがAWSデータセンター拡張のために200万台のNvidia GPUを購入",
+      "summary_ja": "Amazonは、2028年までにAWSのデータセンターに200万台のNvidia GPUを導入する計画を発表しました。これにより、AIインフラストラクチャがクラウド、政府、分析、ロボティクスなどのワークロードで拡張されます。この大規模なGPU導入は、様々な業界でのAI技術の進展を助けると期待されています。",
       "key_points": [
-        "アメリカの電力網は急速な電化に直面している。",
-        "エネルギー需要が過去に例のないレベルに達している。",
-        "人工知能の普及がエネルギー需要をさらに押し上げている。",
-        "電力網のインフラ整備が急務となっている。"
+        "AWSは2028年までに200万台のNvidia GPUを追加導入する計画",
+        "AIインフラストラクチャをクラウド、政府、分析、ロボティクスに拡張",
+        "この投資はAI技術の発展を支援することを目的としている"
       ],
       "glossary": [
         {
-          "term": "電力網",
-          "explain_ja": "エネルギー供給のための電気配電システム。"
+          "term": "AWS",
+          "explain_ja": "Amazon Web Servicesの略で、Amazonが提供するクラウドコンピューティングサービスの総称。"
         },
         {
-          "term": "エネルギー需要",
-          "explain_ja": "特定の時間帯に必要とされる電力の量。"
+          "term": "GPU",
+          "explain_ja": "Graphics Processing Unitの略で、主に画像処理を行うプロセッサですが、AI計算にも利用される。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能の略で、人間の知能を模倣するコンピュータシステムを指す。"
         }
       ],
       "personal_actions": [
-        "現在の電力供給能力やインフラの状況を確認する。",
-        "省エネ対策を見直し自宅での電力消費を抑える。"
+        "自社のAIインフラストラクチャの必要性を見直し、GPUの導入計画を検討する",
+        "Nvidiaの最新技術情報を確認し、適切なGPUを選定する",
+        "AI関連のトレンドをフォローし、技術の進展に対応する"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.storagereview.com/news/ashrae-tc-9-9-flags-four-ways-direct-to-chip-cooling-loops-go-wrong",
+      "source": "Storagereview.com",
+      "publishedAt": "2026-08-30T17:56:00Z",
+      "title": "ASHRAE TC 9.9 Flags Four Ways Direct-to-Chip Cooling Loops Go Wrong",
+      "title_ja": "ASHRAE TC 9.9が警告するダイレクトチップ冷却システムの4つの失敗ポイント",
+      "summary_ja": "ASHRAE TC 9.9が発表した技術文書は、ダイレクトチップ冷却システムが設計仕様から逸脱する可能性に警鐘を鳴らしています。この文書では、冷却剤の組成、空気管理、ステンレス鋼のパッシベーション、システム圧力の評価の4つの失敗パスを詳述しています。これにより、データセンターにおける冷却システムの信頼性向上が期待されています。",
+      "key_points": [
+        "冷却剤の組成が設計から逸脱すると、熱伝導率が影響を受ける。",
+        "空気管理の不備が冷却効果を低下させ、故障を引き起こす可能性がある。",
+        "ステンレス鋼のパッシベーションが不十分だと、腐食のリスクが増す。",
+        "システム圧力の適切な評価が重要で、過圧力はIT機器に厳しい影響を及ぼす。"
+      ],
+      "glossary": [
+        {
+          "term": "TCS",
+          "explain_ja": "技術冷却システム（Thermal Cooling System）の略で、データセンターでの熱管理のためのシステム。"
+        },
+        {
+          "term": "ASTM A380/A967",
+          "explain_ja": "ステンレス鋼の清浄およびパッシベーションに関する国際基準。"
+        },
+        {
+          "term": "PG25",
+          "explain_ja": "25%プロピレングリコール混合冷却剤のこと。"
+        },
+        {
+          "term": "IEC 62368-1",
+          "explain_ja": "ITおよびオーディオビジュアル機器に関する安全規格。"
+        }
+      ],
+      "personal_actions": [
+        "冷却剤の組成や濃度を確認し、設計仕様に一致しているか確認する。",
+        "空気管理の対策として、システム内のエアベントを確認する。",
+        "システム圧力のテストを行い、設計通りの圧力が保たれているかチェックする。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://decrypt.co/376864/bitgo-buys-nydig-institutional-trading-arm",
-      "source": "Decrypt",
-      "publishedAt": "2026-08-29T13:31:04Z",
-      "title": "BitGo Buys NYDIG's Institutional Trading Arm to Beef Up Derivatives and Financing",
-      "title_ja": "BitGo、NYDIGの機関投資家向け取引部門を買収",
-      "summary_ja": "BitGoは約4250万ドルの現金と株式の取引でNYDIGの機関投資家向け取引部門を買収しました。この取引により、BitGoはデリバティブ、構造化製品、資本市場の能力を強化します。一方で、NYDIGは電力とデータセンター事業に集中できるようになります。",
+      "url": "https://oilprice.com/Energy/Energy-General/Data-Centers-Are-Driving-a-New-US-Natural-Gas-Buildout.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-08-30T17:00:00Z",
+      "title": "Data Centers Are Driving a New U.S. Natural Gas Buildout",
+      "title_ja": "データセンターが促進する新たな米国天然ガスの拡張",
+      "summary_ja": "データセンターの拡大が米国での天然ガスの復活を引き起こしています。特に、人工知能のブームに伴い、データセンターに関連するガス火力発電の計画容量が2026年の前半にほぼ倍増しました。この傾向はビッグテック企業の需要に応じて、さらなるエネルギー投資を刺激しています。",
       "key_points": [
-        "BitGoがNYDIGの機関投資家向け取引部門を買収した。",
-        "買収額は約4250万ドル。",
-        "この取引により、BitGoはデリバティブや資本市場の能力を強化。",
-        "NYDIGは、電力とデータセンター事業に集中する。"
+        "データセンターの拡大が天然ガス需要を増加させている",
+        "2026年上半期において、計画されたガス火力発電容量がほぼ倍増した",
+        "人工知能の重要性が新たなエネルギー開発を促進している",
+        "ビッグテック企業がガス火力を活用している",
+        "今後の天然ガスの需要が増える見込みがある"
       ],
       "glossary": [
         {
-          "term": "BitGo",
-          "explain_ja": "暗号資産の保管・管理を提供する企業。"
+          "term": "データセンター",
+          "explain_ja": "データを保存・管理・処理するための施設で、コンピュータ機器や通信機器が集約されている。"
         },
         {
-          "term": "NYDIG",
-          "explain_ja": "暗号資産に関する金融サービスを提供する企業。"
+          "term": "天然ガス",
+          "explain_ja": "化石燃料の一種で、主にメタンを含む。エネルギー源として広く使用されている。"
         },
         {
-          "term": "デリバティブ",
-          "explain_ja": "原資産の価値に基づく金融契約。"
+          "term": "ガス火力発電",
+          "explain_ja": "天然ガスを燃料として発電する方式で、比較的クリーンなエネルギー源とされる。"
         },
         {
-          "term": "構造化製品",
-          "explain_ja": "複数の金融商品を組み合わせた金融商品。"
+          "term": "ビッグテック",
+          "explain_ja": "Amazon、Google、Facebookなど、大規模なテクノロジー企業を指す。"
         }
       ],
       "personal_actions": [
-        "自社のデリバティブ取引の関連法規を再確認する。",
-        "最新の市場動向をチェックし、BitGoの対応を考慮する。"
+        "データセンターのエネルギー需要が増加することを踏まえ、エネルギー供給の安定性を確認する",
+        "新たなガス発電所の建設情報を追跡し、地域の影響を評価する",
+        "AI技術を活用したシステムの導入を検討する"
       ],
       "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/nvidia-spectrum-x-ethernet-ai-networking/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-08-29T13:04:52Z",
-      "title": "Nvidia advances AI architecture with smarter traffic control",
-      "title_ja": "Nvidia、よりスマートなトラフィック制御でAIアーキテクチャを前進",
-      "summary_ja": "NvidiaのSpectrum-XがAIデータセンターの効率を再定義し、ネットワーク性能とスケーラビリティの新標準を設定する可能性があります。この技術革新により、AI関連のアプリケーションやサービスの実行がよりスムーズになることが期待されます。ネットワークの最適化は、データセンターの運用コスト削減にも寄与するでしょう。",
-      "key_points": [
-        "NvidiaのSpectrum-XはAIデータセンターの効率を向上させる可能性がある",
-        "新しいネットワーク性能の標準を設定することが期待されている",
-        "スマートなトラフィック制御により、AIアプリケーションのパフォーマンスが向上する",
-        "データセンター運用コストの削減を助ける可能性がある"
-      ],
-      "glossary": [
-        {
-          "term": "Spectrum-X",
-          "explain_ja": "Nvidiaが開発した新しいネットワーク技術で、AIデータセンターの効率を向上させることを目的としている。"
-        },
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能関連の処理を行うために設計されたデータセンター。"
-        }
-      ],
-      "personal_actions": [
-        "Nvidiaの新技術が自社のネットワークに与える影響を評価する",
-        "今後の技術動向について情報収集を行う",
-        "新しいネットワーク技術導入の準備を進める"
-      ],
-      "tags": [
-        "AI"
+        "DC"
       ]
     }
   ]
