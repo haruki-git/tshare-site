@@ -1,37 +1,70 @@
 {
-  "date": "2026-09-01",
-  "generatedAtJST": "2026-09-01T07:15:58.953+09:00",
+  "date": "2026-09-02",
+  "generatedAtJST": "2026-09-02T07:15:25.366+09:00",
   "items": [
     {
-      "url": "https://www.techradar.com/pro/amazon-is-buying-2-million-nvidia-gpus-for-aws-data-center-expansion",
-      "source": "TechRadar",
-      "publishedAt": "2026-08-30T22:10:00Z",
-      "title": "Amazon is buying 2 million Nvidia GPUs for AWS data center expansion",
-      "title_ja": "AmazonがAWSデータセンター拡張のために200万台のNvidia GPUを購入",
-      "summary_ja": "Amazonは、2028年までにAWSのデータセンターに200万台のNvidia GPUを導入する計画を発表しました。これにより、AIインフラストラクチャがクラウド、政府、分析、ロボティクスなどのワークロードで拡張されます。この大規模なGPU導入は、様々な業界でのAI技術の進展を助けると期待されています。",
+      "url": "https://cryptobriefing.com/us-data-center-projects-150b-stalled-cancelled/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-08-31T18:21:30Z",
+      "title": "Dozens of US data center projects worth over $150B stalled or cancelled amid local opposition",
+      "title_ja": "米国のデータセンター計画、$150B超が地元の反対で停止または中止",
+      "summary_ja": "米国におけるデータセンターの計画が、約1500億ドル相当のプロジェクトが地元住民の反対により停止または中止された。これは、テクノロジーの拡張と地域住民のリソースに関する緊張の高まりを反映している。今後のインフラ計画に対しても影響を及ぼす問題である。",
       "key_points": [
-        "AWSは2028年までに200万台のNvidia GPUを追加導入する計画",
-        "AIインフラストラクチャをクラウド、政府、分析、ロボティクスに拡張",
-        "この投資はAI技術の発展を支援することを目的としている"
+        "150Bドル以上のデータセンター計画が地元の反対で停止または中止された。",
+        "地域住民とテクノロジー企業間の緊張が高まっている。",
+        "今後のインフラ投資計画が複雑化する可能性がある。"
       ],
       "glossary": [
         {
-          "term": "AWS",
-          "explain_ja": "Amazon Web Servicesの略で、Amazonが提供するクラウドコンピューティングサービスの総称。"
+          "term": "データセンター",
+          "explain_ja": "データ処理やストレージのための集中管理された施設です。"
         },
         {
-          "term": "GPU",
-          "explain_ja": "Graphics Processing Unitの略で、主に画像処理を行うプロセッサですが、AI計算にも利用される。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能の略で、人間の知能を模倣するコンピュータシステムを指す。"
+          "term": "インフラ",
+          "explain_ja": "経済活動を支える基盤や設備のこと。"
         }
       ],
       "personal_actions": [
-        "自社のAIインフラストラクチャの必要性を見直し、GPUの導入計画を検討する",
-        "Nvidiaの最新技術情報を確認し、適切なGPUを選定する",
-        "AI関連のトレンドをフォローし、技術の進展に対応する"
+        "地元のデータセンター関連の議論や動向を確認する。",
+        "地域社会におけるテクノロジーの影響について理解を深める。",
+        "自社のインフラ計画に対する地域住民の意見を収集する。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/SLB-Makes-34-Billion-Bet-on-AI-Data-Center-Boom.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-08-31T17:30:00Z",
+      "title": "SLB Makes $3.4 Billion Bet on AI Data Center Boom",
+      "title_ja": "SLB、AIデータセンターのブームに34億ドルを投資",
+      "summary_ja": "SLBは、AIの成長を支えるインフラへの拡大のため、34億ドルを投資すると発表しました。ドイツの冷却機器メーカーKelvionを買収し、データセンターの収益機会を大幅に増加させます。2026年までにデータセンター関連で20億ドルを超える収益を見込んでいます。",
+      "key_points": [
+        "SLBが34億ドルでKelvionを買収する計画を発表",
+        "Kelvionのデータセンター関連収益は12億ドルから13億ドルの見込み",
+        "SLBは2024年から2026年までに90%以上の成長を予測",
+        "2026年にはデータセンター事業が300百万ドルの調整EBITDAを生成する計画",
+        "2028年までにデータセンター事業から総収益40億ドルを目指す"
+      ],
+      "glossary": [
+        {
+          "term": "EBITDA",
+          "explain_ja": "利息・税金・償却前利益を示し、企業の財務パフォーマンスを評価する指標。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保存、管理、配信を行うための専用施設。"
+        },
+        {
+          "term": "冷却機器",
+          "explain_ja": "サーバーなどのIT機器を適正温度に保つための機器。"
+        }
+      ],
+      "personal_actions": [
+        "データセンター関連の最新動向を確認するため、業界ニュースを定期的にチェックする。",
+        "自社のデータセンターの冷却システムの効果性を評価し、必要に応じて改善計画を立てる。",
+        "AI技術に関連するインフラの投資戦略を見直し、必要なリソースを確保する。"
       ],
       "tags": [
         "DC",
@@ -39,84 +72,41 @@
       ]
     },
     {
-      "url": "https://www.storagereview.com/news/ashrae-tc-9-9-flags-four-ways-direct-to-chip-cooling-loops-go-wrong",
-      "source": "Storagereview.com",
-      "publishedAt": "2026-08-30T17:56:00Z",
-      "title": "ASHRAE TC 9.9 Flags Four Ways Direct-to-Chip Cooling Loops Go Wrong",
-      "title_ja": "ASHRAE TC 9.9が警告するダイレクトチップ冷却システムの4つの失敗ポイント",
-      "summary_ja": "ASHRAE TC 9.9が発表した技術文書は、ダイレクトチップ冷却システムが設計仕様から逸脱する可能性に警鐘を鳴らしています。この文書では、冷却剤の組成、空気管理、ステンレス鋼のパッシベーション、システム圧力の評価の4つの失敗パスを詳述しています。これにより、データセンターにおける冷却システムの信頼性向上が期待されています。",
+      "url": "https://financialpost.com/globe-newswire/a-single-ai-data-center-lease-just-locked-in-up-to-3-2-billion-and-a-tiny-public-company-is-about-to-inherit-it",
+      "source": "Financial Post",
+      "publishedAt": "2026-08-31T17:07:33Z",
+      "title": "A Single AI Data Center Lease Just Locked In Up to $3.2 Billion, and a Tiny Public Company Is About to Inherit It",
+      "title_ja": "AIデータセンターのリースによって最大32億ドルが確保され、ある小規模公開企業がその権利を引き継ぐ",
+      "summary_ja": "最近、AIデータセンターのリース契約により最大32億ドルが確保された。また、この契約は特定の小規模公開企業に引き継がれる見込みだ。これは、人工知能分野におけるエネルギー資源の重要性を浮き彫りにしており、今後の影響が期待される。",
       "key_points": [
-        "冷却剤の組成が設計から逸脱すると、熱伝導率が影響を受ける。",
-        "空気管理の不備が冷却効果を低下させ、故障を引き起こす可能性がある。",
-        "ステンレス鋼のパッシベーションが不十分だと、腐食のリスクが増す。",
-        "システム圧力の適切な評価が重要で、過圧力はIT機器に厳しい影響を及ぼす。"
+        "AIデータセンターのリース契約が最大32億ドルに達する。",
+        "特定の小規模公開企業がこの契約を引き継ぐ予定。",
+        "現在のAI分野で最も不足しているのはエネルギーである。",
+        "この動きが企業や業界に与える影響が注目されている。",
+        "エネルギーコストがAI関連事業にどのように影響するかが焦点となる。"
       ],
       "glossary": [
         {
-          "term": "TCS",
-          "explain_ja": "技術冷却システム（Thermal Cooling System）の略で、データセンターでの熱管理のためのシステム。"
+          "term": "AI",
+          "explain_ja": "人工知能のこと。機械が人間の知能を模倣する技術。"
         },
-        {
-          "term": "ASTM A380/A967",
-          "explain_ja": "ステンレス鋼の清浄およびパッシベーションに関する国際基準。"
-        },
-        {
-          "term": "PG25",
-          "explain_ja": "25%プロピレングリコール混合冷却剤のこと。"
-        },
-        {
-          "term": "IEC 62368-1",
-          "explain_ja": "ITおよびオーディオビジュアル機器に関する安全規格。"
-        }
-      ],
-      "personal_actions": [
-        "冷却剤の組成や濃度を確認し、設計仕様に一致しているか確認する。",
-        "空気管理の対策として、システム内のエアベントを確認する。",
-        "システム圧力のテストを行い、設計通りの圧力が保たれているかチェックする。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://oilprice.com/Energy/Energy-General/Data-Centers-Are-Driving-a-New-US-Natural-Gas-Buildout.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-08-30T17:00:00Z",
-      "title": "Data Centers Are Driving a New U.S. Natural Gas Buildout",
-      "title_ja": "データセンターが促進する新たな米国天然ガスの拡張",
-      "summary_ja": "データセンターの拡大が米国での天然ガスの復活を引き起こしています。特に、人工知能のブームに伴い、データセンターに関連するガス火力発電の計画容量が2026年の前半にほぼ倍増しました。この傾向はビッグテック企業の需要に応じて、さらなるエネルギー投資を刺激しています。",
-      "key_points": [
-        "データセンターの拡大が天然ガス需要を増加させている",
-        "2026年上半期において、計画されたガス火力発電容量がほぼ倍増した",
-        "人工知能の重要性が新たなエネルギー開発を促進している",
-        "ビッグテック企業がガス火力を活用している",
-        "今後の天然ガスの需要が増える見込みがある"
-      ],
-      "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを保存・管理・処理するための施設で、コンピュータ機器や通信機器が集約されている。"
+          "explain_ja": "データを保存・管理・処理するための施設。"
         },
         {
-          "term": "天然ガス",
-          "explain_ja": "化石燃料の一種で、主にメタンを含む。エネルギー源として広く使用されている。"
-        },
-        {
-          "term": "ガス火力発電",
-          "explain_ja": "天然ガスを燃料として発電する方式で、比較的クリーンなエネルギー源とされる。"
-        },
-        {
-          "term": "ビッグテック",
-          "explain_ja": "Amazon、Google、Facebookなど、大規模なテクノロジー企業を指す。"
+          "term": "リース",
+          "explain_ja": "賃貸契約のこと。特定の資産を一定期間借りる契約。"
         }
       ],
       "personal_actions": [
-        "データセンターのエネルギー需要が増加することを踏まえ、エネルギー供給の安定性を確認する",
-        "新たなガス発電所の建設情報を追跡し、地域の影響を評価する",
-        "AI技術を活用したシステムの導入を検討する"
+        "最新のエネルギー管理技術やサービスを調査する。",
+        "データセンターのエネルギー効率を向上させる方法を考える。",
+        "AI技術の進展に対応するための計画を見直す。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
