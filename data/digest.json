@@ -1,108 +1,110 @@
 {
-  "date": "2026-09-02",
-  "generatedAtJST": "2026-09-02T07:15:25.366+09:00",
+  "date": "2026-09-03",
+  "generatedAtJST": "2026-09-03T07:15:38.493+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/us-data-center-projects-150b-stalled-cancelled/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-08-31T18:21:30Z",
-      "title": "Dozens of US data center projects worth over $150B stalled or cancelled amid local opposition",
-      "title_ja": "米国のデータセンター計画、$150B超が地元の反対で停止または中止",
-      "summary_ja": "米国におけるデータセンターの計画が、約1500億ドル相当のプロジェクトが地元住民の反対により停止または中止された。これは、テクノロジーの拡張と地域住民のリソースに関する緊張の高まりを反映している。今後のインフラ計画に対しても影響を及ぼす問題である。",
+      "url": "https://dailycaller.com/2026/09/01/google-geothermal-energy-utah-deal",
+      "source": "The Daily Caller",
+      "publishedAt": "2026-09-01T20:19:35Z",
+      "title": "Tech Giant Wants To Power Massive Data Center With Geothermal Energy",
+      "title_ja": "グーグル、大規模データセンターに地熱エネルギーを活用へ",
+      "summary_ja": "グーグルが大規模なデータセンターの電力源として地熱エネルギーを活用することに注力しています。これは、持続可能なエネルギーソリューションを見つけるための戦略の一環です。地熱エネルギーは、経済的かつ環境に優しい選択肢として期待されています。",
       "key_points": [
-        "150Bドル以上のデータセンター計画が地元の反対で停止または中止された。",
-        "地域住民とテクノロジー企業間の緊張が高まっている。",
-        "今後のインフラ投資計画が複雑化する可能性がある。"
+        "グーグルはデータセンターの電力供給として地熱エネルギーを選定。",
+        "持続可能なエネルギーの導入は企業の責任として重要視されている。",
+        "地熱エネルギーは安定したエネルギー供給が可能と評価されている。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データ処理やストレージのための集中管理された施設です。"
+          "term": "Geothermal Energy",
+          "explain_ja": "地熱エネルギーは、地球内部の熱を利用した再生可能なエネルギー源です。"
         },
         {
-          "term": "インフラ",
-          "explain_ja": "経済活動を支える基盤や設備のこと。"
+          "term": "Data Center",
+          "explain_ja": "データセンターは、データの保存、管理、処理を行うための専用施設です。"
         }
       ],
       "personal_actions": [
-        "地元のデータセンター関連の議論や動向を確認する。",
-        "地域社会におけるテクノロジーの影響について理解を深める。",
-        "自社のインフラ計画に対する地域住民の意見を収集する。"
+        "地熱エネルギーの導入が進む背景を調査してみる。",
+        "自社のエネルギー政策を再確認し、持続可能な選択肢を考える。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/SLB-Makes-34-Billion-Bet-on-AI-Data-Center-Boom.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-08-31T17:30:00Z",
-      "title": "SLB Makes $3.4 Billion Bet on AI Data Center Boom",
-      "title_ja": "SLB、AIデータセンターのブームに34億ドルを投資",
-      "summary_ja": "SLBは、AIの成長を支えるインフラへの拡大のため、34億ドルを投資すると発表しました。ドイツの冷却機器メーカーKelvionを買収し、データセンターの収益機会を大幅に増加させます。2026年までにデータセンター関連で20億ドルを超える収益を見込んでいます。",
+      "url": "https://www.dailysignal.com/2026/09/01/georgia-data-center-debate/",
+      "source": "Daily Signal",
+      "publishedAt": "2026-09-01T18:46:36Z",
+      "title": "Data Center Debate Draws Contrast Between Democrats and GOP in Georgia",
+      "title_ja": "ジョージア州におけるデータセンターの論争：民主党と共和党の対立",
+      "summary_ja": "ジョージア州ではデータセンターが政治や選挙に影響を及ぼしており、特に知事選と上院選が重要な局面を迎えています。民主党と共和党は、データセンターの運営や規制に関して対立しています。この議論は、州内や全国の政治的な力関係にも影響を与える可能性があります。",
       "key_points": [
-        "SLBが34億ドルでKelvionを買収する計画を発表",
-        "Kelvionのデータセンター関連収益は12億ドルから13億ドルの見込み",
-        "SLBは2024年から2026年までに90%以上の成長を予測",
-        "2026年にはデータセンター事業が300百万ドルの調整EBITDAを生成する計画",
-        "2028年までにデータセンター事業から総収益40億ドルを目指す"
+        "データセンターはジョージア州の政治に重要な影響を持つ",
+        "知事選と上院選が特に重要な局面を迎えている",
+        "民主党と共和党はデータセンターの規制について対立している",
+        "データセンターの運営が選挙に影響を与える可能性がある",
+        "州と国の政治的な力関係を左右する重要な要素になる"
       ],
       "glossary": [
         {
-          "term": "EBITDA",
-          "explain_ja": "利息・税金・償却前利益を示し、企業の財務パフォーマンスを評価する指標。"
-        },
-        {
           "term": "データセンター",
-          "explain_ja": "データの保存、管理、配信を行うための専用施設。"
+          "explain_ja": "デジタルデータを保存、管理、配信するための施設。"
         },
         {
-          "term": "冷却機器",
-          "explain_ja": "サーバーなどのIT機器を適正温度に保つための機器。"
+          "term": "選挙",
+          "explain_ja": "公職を選ぶための投票行為。"
+        },
+        {
+          "term": "民主党",
+          "explain_ja": "アメリカにおける主要な政党の一つ。"
+        },
+        {
+          "term": "共和党",
+          "explain_ja": "アメリカにおける主要な政党の一つ。"
         }
       ],
       "personal_actions": [
-        "データセンター関連の最新動向を確認するため、業界ニュースを定期的にチェックする。",
-        "自社のデータセンターの冷却システムの効果性を評価し、必要に応じて改善計画を立てる。",
-        "AI技術に関連するインフラの投資戦略を見直し、必要なリソースを確保する。"
+        "地元のデータセンターに関する政策や規制について調べる",
+        "次回の選挙に向けて候補者の立場を確認する",
+        "データセンターの影響について仲間と議論する"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://financialpost.com/globe-newswire/a-single-ai-data-center-lease-just-locked-in-up-to-3-2-billion-and-a-tiny-public-company-is-about-to-inherit-it",
-      "source": "Financial Post",
-      "publishedAt": "2026-08-31T17:07:33Z",
-      "title": "A Single AI Data Center Lease Just Locked In Up to $3.2 Billion, and a Tiny Public Company Is About to Inherit It",
-      "title_ja": "AIデータセンターのリースによって最大32億ドルが確保され、ある小規模公開企業がその権利を引き継ぐ",
-      "summary_ja": "最近、AIデータセンターのリース契約により最大32億ドルが確保された。また、この契約は特定の小規模公開企業に引き継がれる見込みだ。これは、人工知能分野におけるエネルギー資源の重要性を浮き彫りにしており、今後の影響が期待される。",
+      "url": "https://researchbuzz.me/2026/09/01/maga-data-center-pushback-gas-power-proposals-anthropic-more-researchbuzz-ai-update-september-1-2026/",
+      "source": "Researchbuzz.me",
+      "publishedAt": "2026-09-01T17:24:07Z",
+      "title": "MAGA Data Center Pushback, Gas Power Proposals, Anthropic, More: ResearchBuzz AI Update, September 1, 2026",
+      "title_ja": "MAGAデータセンターへの反発、ガス発電提案、Anthropic他：ResearchBuzz AIアップデート 2026年9月1日",
+      "summary_ja": "データセンター建設に対する反発が強まる中、トランプ元大統領が支持者からの厳しい批判を受けている。また、米国ではガス発電提案が急増し、データセンターの需要に対処するための取り組みが進められている。AIモデル評価中に発生したセキュリティ事件を受け、Anthropicは外部テストを再開した。",
       "key_points": [
-        "AIデータセンターのリース契約が最大32億ドルに達する。",
-        "特定の小規模公開企業がこの契約を引き継ぐ予定。",
-        "現在のAI分野で最も不足しているのはエネルギーである。",
-        "この動きが企業や業界に与える影響が注目されている。",
-        "エネルギーコストがAI関連事業にどのように影響するかが焦点となる。"
+        "トランプ元大統領がデータセンター批判者に対し厳しい言葉を投げかけた。",
+        "米国におけるガス発電提案が2026年上半期でほぼ倍増。",
+        "AnthropicがAIモデルの外部テストを再開し、新たなセキュリティ対策を導入。",
+        "ペンシルベニア州の知事がデータセンター開発者を「捕食者」と表現し、厳しい規制を宣言。",
+        "OpenAIが広告ビジネスで年間収益10億ドルに達したと報告。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能のこと。機械が人間の知能を模倣する技術。"
-        },
-        {
           "term": "データセンター",
-          "explain_ja": "データを保存・管理・処理するための施設。"
+          "explain_ja": "データの保存、処理、管理を行う施設で、特にITインフラの重要な要素。"
         },
         {
-          "term": "リース",
-          "explain_ja": "賃貸契約のこと。特定の資産を一定期間借りる契約。"
+          "term": "AIモデル",
+          "explain_ja": "人工知能の動作を支えるために訓練されるアルゴリズムやデータのセット。"
+        },
+        {
+          "term": "セキュリティ事件",
+          "explain_ja": "情報システムやデータに対する不正アクセスや攻撃などのセキュリティに関する問題。"
         }
       ],
       "personal_actions": [
-        "最新のエネルギー管理技術やサービスを調査する。",
-        "データセンターのエネルギー効率を向上させる方法を考える。",
-        "AI技術の進展に対応するための計画を見直す。"
+        "データセンターの関連プロジェクトについて地域の情勢を確認する。",
+        "AIセキュリティの最新のニュースに目を通し、対策を考慮する。",
+        "自社のAI利用に関するガイドラインやポリシーを見直す。"
       ],
       "tags": [
         "DC",
