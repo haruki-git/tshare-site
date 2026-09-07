@@ -1,120 +1,114 @@
 {
-  "date": "2026-09-07",
-  "generatedAtJST": "2026-09-07T07:15:24.989+09:00",
+  "date": "2026-09-08",
+  "generatedAtJST": "2026-09-08T07:15:25.461+09:00",
   "items": [
     {
-      "url": "https://www.credaily.com/briefs/data-center-demand-doubles-as-frontier-markets-surge/",
-      "source": "Credaily.com",
-      "publishedAt": "2026-09-05T17:41:07Z",
-      "title": "Data Center Demand Doubles as Frontier Markets Surge",
-      "title_ja": "フロンティア市場の急増によりデータセンターの需要が倍増",
-      "summary_ja": "データセンターの需要が前半半年で倍増しました。これは、パワーが豊富な北米のフロンティア市場に向けた66 GWの建設パイプラインのシフトによるものです。この動きは、今後のデータセンターの立地と運営に影響を及ぼすと考えられます。",
+      "url": "https://www.techpowerup.com/352416/huawei-prepares-160-000-ascend-950dt-accelerators-for-deepseek-data-center",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-09-06T18:53:13Z",
+      "title": "Huawei Prepares 160,000 Ascend 950DT Accelerators for DeepSeek Data Center",
+      "title_ja": "Huawei、DeepSeekデータセンター向けに160,000台のAscend 950DTアクセラレーターを準備",
+      "summary_ja": "中国のAIラボは国内AIアクセラレーターの注文を増やしており、DeepSeekが160,000台のHuawei Ascend 950DTチップを発注した。Huaweiは昨年、国内AI市場の需要を満たすためのチップとラックスケールソリューションを準備していると発表した。このシステムは高い性能を持ち、大規模な推論処理が可能であり、同時に多数の顧客にサービスを提供できる体制が整う。",
       "key_points": [
-        "データセンターの需要が倍増",
-        "66 GWの建設パイプラインが存在",
-        "フロンティア市場にシフトしている",
-        "主に北米市場に焦点が当たっている"
+        "DeepSeekが160,000台のAscend 950DTチップを注文",
+        "Ascend 950DTは144 GBのメモリ容量を持つ",
+        "ピーク性能はFP8で160 ExaFLOPS、FP4で320 ExaFLOPS",
+        "23 PBのHBMメモリを搭載し、同時に多数の顧客に対応",
+        "Lingquインターコネクトプロトコルにより大規模な接続が可能"
       ],
       "glossary": [
         {
-          "term": "GW",
-          "explain_ja": "ギガワット。電力の単位で、1 GWは10億ワットに相当する。"
+          "term": "Ascend 950DT",
+          "explain_ja": "HuaweiのAIアクセラレーターで、144 GBのHBMメモリを備え、ピーク性能が高い。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの処理や保管のための施設で、サーバーを集中的に配置している。"
+          "term": "ExaFLOPS",
+          "explain_ja": "浮動小数点演算能力の単位で、1 ExaFLOPSは1秒間に10の18乗回の演算を意味する。"
+        },
+        {
+          "term": "Lingqu",
+          "explain_ja": "Huaweiによって設計されたインターコネクトプロトコルで、多数のアクセラレーターを接続するために使用される。"
         }
       ],
       "personal_actions": [
-        "地元のデータセンターの供給状況を確認する",
-        "パワーリッチ地域でのビジネス機会を調査する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://post.rlsbb.cc/vmware-workstation-pro-26h1u1-build-25688693-x64/",
-      "source": "Rlsbb.cc",
-      "publishedAt": "2026-09-05T16:21:12Z",
-      "title": "VMware Workstation Pro 26H1u1 Build 25688693 (x64) – ReleaseBB",
-      "title_ja": "VMware Workstation Pro 26H1u1 Build 25688693 (x64) のリリース",
-      "summary_ja": "VMware Workstation Pro 26H1u1は、単一のLinuxまたはWindows PC上で複数のオペレーティングシステムを実行するための標準ソフトウェアです。この新しいバージョンは、さまざまな機能を備えており、ITプロフェッショナルや開発者に最適です。特に、VMのクローン作成やスナップショットの機能が強化されており、迅速なデータセンター環境を構築可能です。",
-      "key_points": [
-        "vSphere、ESXiへの接続が可能で、複数のOSを一度に運用。",
-        "Linked ClonesやFull ClonesによるVMの迅速な複製が可能。",
-        "スナップショット機能でテスト環境の巻き戻しが容易。",
-        "高度な仮想ネットワーク構築が可能で、ネットワークシミュレーションも搭載。",
-        "高性能3Dグラフィックスのサポートにより、要求の厳しいアプリケーションが快適に実行可能。",
-        "4K UHDおよびQHD+ディスプレイに最適化されている。"
-      ],
-      "glossary": [
-        {
-          "term": "VMware",
-          "explain_ja": "仮想化ソフトウェアを提供する企業で、データセンターやクラウドコンピューティングの技術を持つ。"
-        },
-        {
-          "term": "vSphere",
-          "explain_ja": "VMwareが提供するサーバ仮想化プラットフォームで、仮想管理機能を統合している。"
-        },
-        {
-          "term": "Linked Clones",
-          "explain_ja": "親VMの設定を基にした新しいVMで、ディスクスペースを節約して複製を可能にする。"
-        },
-        {
-          "term": "スナップショット",
-          "explain_ja": "VMの状態を保存して、後でその状態に戻ることができる機能。"
-        },
-        {
-          "term": "3Dグラフィックス",
-          "explain_ja": "3次元の画像やアニメーションの表示に関する技術・性能を指す。"
-        }
-      ],
-      "personal_actions": [
-        "新しい機能に関するドキュメントやチュートリアルを確認する。",
-        "既存の仮想マシンのバックアップを取る。",
-        "自分の開発環境における必要な要件を確認し、バージョンアップを計画する。"
-      ],
-      "tags": [
-        "DC",
-        "インフラ"
-      ]
-    },
-    {
-      "url": "https://www.cnbc.com/2026/09/05/ai-data-centers-cost-economy.html",
-      "source": "CNBC",
-      "publishedAt": "2026-09-05T13:33:08Z",
-      "title": "Many truckers don't feel like the rest of America about AI data centers as business booms",
-      "title_ja": "トラクター運転手がAIデータセンターの需要増をどう捉えているか",
-      "summary_ja": "AIデータセンターのビジネスが好調ですが、多くのトラクター運転手はアメリカ全体の意見とは異なる見解を持っています。データセンターの構成要素は主にトラックで運ばれており、貿易戦争の影響を受けたビジネスにとっては追い風となっています。これにより、トラック運送業界にも新たなビジネスチャンスが生まれています。",
-      "key_points": [
-        "AIデータセンターの需要が急増している",
-        "トラック運送業者の意見はアメリカ全体と異なる",
-        "データセンター部品は主にトラックで輸送される",
-        "貿易戦争の影響で運送業界が打撃を受けた",
-        "新たなビジネスチャンスがトラック運送業界に生まれている"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能関連の処理を行うためのデータセンター。"
-        },
-        {
-          "term": "トラック運送業",
-          "explain_ja": "商品をトラックで輸送する業態。"
-        },
-        {
-          "term": "貿易戦争",
-          "explain_ja": "国間の貿易における対立や制裁を指す。"
-        }
-      ],
-      "personal_actions": [
-        "AIデータセンターに関連する運送業者とのコンタクトを強化する",
-        "トラック運送の効率を上げるための新しいルートを検討する"
+        "Huawei Ascendチップの最新情報を確認する",
+        "DeepSeekや類似のデータセンターのAI技術動向を追跡する",
+        "自社のAIインフラの最適化を検討する"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/white-hat-hacker-drains-liquid-network-btc/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-06T20:06:33Z",
+      "title": "White hat hacker drains ~4,200 BTC from Liquid Network, worth $320M",
+      "title_ja": "ホワイトハットハッカー、Liquid Networkから約4,200 BTCを引き出す",
+      "summary_ja": "ホワイトハットハッカーがLiquid Networkから約4,200 BTC（約3.2億ドル相当）を引き出しました。この事件は、連邦サイドチェーンモデルのセキュリティと信頼性に対する重大な懸念を引き起こし、緊急の調査が求められています。セキュリティに対する信頼の低下が懸念されています。",
+      "key_points": [
+        "約4,200 BTCがLiquid Networkから引き出された",
+        "引き出されたBTCの価値は約3.2億ドル",
+        "連邦サイドチェーンモデルのセキュリティに関する懸念が浮上",
+        "緊急の調査が求められる状況",
+        "ホワイトハットハッカーによる行動"
+      ],
+      "glossary": [
+        {
+          "term": "ホワイトハットハッカー",
+          "explain_ja": "善意のハッカーで、セキュリティ脆弱性を発見し、報告することを目的とした人物。"
+        },
+        {
+          "term": "Liquid Network",
+          "explain_ja": "Bitcoinのためのペイメントサイドチェーンで、速度とプライバシーを向上させる仕組み。"
+        }
+      ],
+      "personal_actions": [
+        "Liquid Networkのセキュリティに関する最新情報を確認する",
+        "ビットコインの保管方法を見直す",
+        "連邦サイドチェーンのリスクを理解する"
+      ],
+      "tags": [
+        "インフラ"
+      ]
+    },
+    {
+      "url": "https://www.prnewswire.co.uk/news-releases/coolfly-to-showcase-personal-flight-portfolio-and-na80-flight-control-technology-at-ifa-berlin-2026-302870767.html",
+      "source": "PR Newswire UK",
+      "publishedAt": "2026-09-06T03:53:00Z",
+      "title": "CoolFly to Showcase Personal Flight Portfolio and NA80 Flight-Control Technology at IFA Berlin 2026",
+      "title_ja": "CoolFly、IFAベルリン2026で個人用フライトポートフォリオとNA80飛行制御技術を展示",
+      "summary_ja": "CoolFlyはIFAベルリン2026で、個人用電動航空機Dream STとその高性能モデルDream Pro、フラッグシップモデルUrbanを紹介します。Dream STは軽量でシングルシートの設計を持ち、移動と保管が容易です。全ての機体に搭載されるNA80飛行制御システムは、高度な安全性とパフォーマンスを提供し、CoolFlyの国際的な拡張に寄与します。",
+      "key_points": [
+        "CoolFlyはIFAベルリン2026でDream STを紹介。",
+        "Dream STはシングルシートの軽量電動航空機で、簡便な輸送設計。",
+        "Dream Proは最大120 kgのペイロード、最高速度100 km/h、最大40分間の飛行時間を実現。",
+        "Urbanは立ち乗り構想と密閉式プロペラを特徴とするフラッグシップモデル。",
+        "NA80飛行制御システムは二重冗長構造を持ち、高度な故障検出能力を提供。",
+        "CoolFlyは世界中のディーラーや商業パートナーを募集している。"
+      ],
+      "glossary": [
+        {
+          "term": "eVTOL",
+          "explain_ja": "電動垂直離着陸機のこと。従来の飛行機と比較して短距離の移動を可能にする。"
+        },
+        {
+          "term": "NA80",
+          "explain_ja": "CoolFlyが独自に開発した飛行制御システムで、高度な安全性を確保する。"
+        },
+        {
+          "term": "CE/FCC認証",
+          "explain_ja": "製品が欧州連合およびアメリカの規制に適合していることを示す認証。"
+        }
+      ],
+      "personal_actions": [
+        "CoolFlyの展示ブースを訪れて新技術を確認する。",
+        "NA80飛行制御システムの詳細や利点について情報を収集する。",
+        "今年度の業界動向を把握し、今後のビジネス機会を考える。"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
