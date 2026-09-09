@@ -1,34 +1,71 @@
 {
-  "date": "2026-09-09",
-  "generatedAtJST": "2026-09-09T07:15:23.815+09:00",
+  "date": "2026-09-10",
+  "generatedAtJST": "2026-09-10T07:15:17.389+09:00",
   "items": [
     {
-      "url": "https://247wallst.com/investing/etf/2026/09/07/xlus-ai-power-story-crumbles-as-texas-freezes-data-center-demand/",
+      "url": "https://247wallst.com/investing/2026/09/08/enphase-energy-rises-5-as-solid-state-transformer-modules-enter-texas-production-solaredge-jumps-6/",
       "source": "24/7 Wall St.",
-      "publishedAt": "2026-09-07T14:22:05Z",
-      "title": "XLU’s AI Power Story Crumbles as Texas Freezes Data-Center Demand",
-      "title_ja": "テキサスがデータセンター需要を凍結、XLUのAIパワー物語が崩壊",
-      "summary_ja": "テキサスの規制当局がデータセンターの接続を凍結し、AEPオハイオの申請手数料が半減しました。この状況は、データセンター業界に深刻な影響を及ぼす可能性があります。特に、AIの需要を利用していた企業にとっては、大きな打撃となるでしょう。",
+      "publishedAt": "2026-09-08T16:49:23Z",
+      "title": "Enphase Energy Rises 5% as Solid-State Transformer Modules Enter Texas Production, SolarEdge Jumps 6%",
+      "title_ja": "エンフェーズエナジーが5%上昇、ソリッドステートトランスモジュールがテキサスで生産開始",
+      "summary_ja": "エンフェーズエナジーは、ソリッドステートトランスフォーマーモジュールの生産開始を受けて株価が5%上昇しました。テキサスの工場は、AIデータセンター向けの電力市場での有力な地位を確立する手助けとなります。一方、SolarEdgeも特に発表がないにもかかわらず、6%の株価上昇を記録しました。",
       "key_points": [
-        "テキサスの規制当局がデータセンターの新規接続を凍結",
-        "AEPオハイオの申請手数料が半減",
-        "データセンター業界に対する懸念が高まっている",
-        "AI関連の企業にとってマイナスの影響が予想される"
+        "エンフェーズエナジーの株価が5%上昇。",
+        "テキサスでのソリッドステートトランスフォーマーモジュールの生産開始が影響。",
+        "AIデータセンター市場への進出が期待される。",
+        "SolarEdgeは特に新情報がない中で6%上昇。"
+      ],
+      "glossary": [
+        {
+          "term": "Enphase Energy",
+          "explain_ja": "再生可能エネルギーソリューションを提供する企業。"
+        },
+        {
+          "term": "SolarEdge",
+          "explain_ja": "太陽光発電システムの最適化と監視技術を提供する企業。"
+        },
+        {
+          "term": "ソリッドステートトランスフォーマー",
+          "explain_ja": "従来のトランスフォーマーに代わる、より効率的な電力変換装置。"
+        }
+      ],
+      "personal_actions": [
+        "エンフェーズエナジーやSolarEdgeに関連する製品やサービスの最新情報を確認する。",
+        "テキサスでのエンフェーズの進展が自社に与える影響を考慮する。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/tiktok-finland-data-center-expansion/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-08T16:03:06Z",
+      "title": "TikTok expands data center capacity in Finland to support AI growth",
+      "title_ja": "TikTok、フィンランドのデータセンター容量を拡充しAI成長を支援",
+      "summary_ja": "TikTokはフィンランドにおいてデータセンターの容量を拡充しました。この拡張は、ヨーロッパにおけるコンプライアンスと競争優位性のためのローカルインフラの戦略的重要性を示しています。AIの成長をサポートすることが目的です。",
+      "key_points": [
+        "TikTokがフィンランドでのデータセンター拡張を発表",
+        "地域のインフラがヨーロッパでのコンプライアンスに重要",
+        "AI成長のサポートを目指す拡張計画"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "情報を保存、管理、配信するための施設。"
+          "explain_ja": "データを保管・管理するための施設。"
+        },
+        {
+          "term": "コンプライアンス",
+          "explain_ja": "法律や規則を遵守すること。"
         },
         {
           "term": "AI",
-          "explain_ja": "人工知能の略称。コンピュータが人間の知能を模倣する技術。"
+          "explain_ja": "人工知能のこと。"
         }
       ],
       "personal_actions": [
-        "現在のデータセンターの依存度を評価する",
-        "データセンター関連のプロジェクトのリスクを検討する",
-        "業界の最新情報を追跡し、対応策を準備する"
+        "フィンランドのデータセンターの拡張に関連する最新情報をチェックする",
+        "データセンターの運用におけるAIの活用方法を検討する"
       ],
       "tags": [
         "DC",
@@ -36,68 +73,35 @@
       ]
     },
     {
-      "url": "http://commercialobserver.com/2026/09/data-centers-digital-dirt/",
-      "source": "Commercial Observer",
-      "publishedAt": "2026-09-07T13:00:09Z",
-      "title": "Power Is No Longer an Input in Data Centers. It Is the Product.",
-      "title_ja": "データセンターにおける電力の重要性の変化",
-      "summary_ja": "データセンターの立地条件は変わり、電力はもはや入力ではなく、製品として扱われるようになった。開発者が求めるものは、電力不足によって変化している。電力供給が悪化する中、データセンターの発展には新たな戦略が必要とされている。",
+      "url": "https://www.cnbc.com/2026/09/08/tiktok-expand-data-center-capacity-finland.html",
+      "source": "CNBC",
+      "publishedAt": "2026-09-08T15:48:48Z",
+      "title": "TikTok to expand data center capacity in Finland amid boom in AI infrastructure deals",
+      "title_ja": "TikTok、フィンランドでデータセンターの容量を拡大",
+      "summary_ja": "TikTokはフィンランドで約150MWのデータセンター容量を拡大する計画を発表しました。この動きはAIブームに伴うデジタルインフラストラクチャーの取引増加を背景としています。この拡張により、TikTokは急増するデータ需要に応え、競争力を高めることを目指しています。",
       "key_points": [
-        "データセンターでは電力が主要な製品とみなされている。",
-        "土地や許可証があっても、電力が不足すれば価値が下がる。",
-        "電力供給の変化が開発戦略に影響を与えている。",
-        "電力不足がデータセンターの経済性に新たな課題をもたらしている。"
+        "TikTokがフィンランドで150MWのデータセンター容量を拡大予定",
+        "AIブームがデジタルインフラの取引を活性化",
+        "フィンランドにおけるデータセンターの需要増加が背景",
+        "TikTokはデータニーズの急増に対応する意図"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "情報を保存・管理・処理するための施設。"
+          "explain_ja": "データの保存、処理、管理を行うための施設"
         },
-        {
-          "term": "電力不足",
-          "explain_ja": "供給される電力が需要を満たさない状態。"
-        }
-      ],
-      "personal_actions": [
-        "現在の電力供給状況を評価し、リスクを理解する。",
-        "データセンターの選定において電力の安定性を重視する。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.rt.com/india/645214-tcs-hyperscaler-data-center/",
-      "source": "RT",
-      "publishedAt": "2026-09-07T12:47:36Z",
-      "title": "Indian IT firm to build $7.4 bn data center campus for AI training",
-      "title_ja": "インドのIT企業、AIトレーニングのための74億ドルのデータセンターキャンパスを建設",
-      "summary_ja": "インドのITコンサルタント会社TCSの子会社HyperVaultが、ハイデラバードに74億ドルのAIデータセンターキャンパスを建設する計画を発表しました。このキャンパスは最大1GWの容量を持ち、ハイパースケーラーやAI企業向けに設計されています。新たなデータセンターは、AI関連の処理能力を大幅に向上させる影響をもたらすと期待されています。",
-      "key_points": [
-        "TCSの子会社HyperVaultがデータセンターを計画",
-        "建設費用は74億ドルに達する予定",
-        "最大1GWの容量を持つデータセンター",
-        "ハイデラバードに位置する",
-        "AI企業向けの特化した設計"
-      ],
-      "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能の略で、システムが人間の知能を模倣する技術。"
+          "explain_ja": "人工知能の略称、コンピュータが人間の知能を模倣する技術"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを管理・保存する施設で、サーバーが多数設置されている。"
-        },
-        {
-          "term": "ハイパースケーラー",
-          "explain_ja": "大規模なデータ処理を行うためのインフラを持つ企業やサービス。"
+          "term": "MW",
+          "explain_ja": "メガワットの略、電力の単位で1MWは1000kWに相当"
         }
       ],
       "personal_actions": [
-        "最新のAI技術について調査する",
-        "データセンターの運用に関するセミナーに参加する",
-        "新しいハイパースケーラーサービスの動向を把握する"
+        "フィンランドにおけるデータセンターの動向を追う",
+        "データセンターのエネルギー効率向上に関する情報を収集する"
       ],
       "tags": [
         "DC",
