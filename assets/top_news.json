@@ -1,107 +1,111 @@
 {
-  "date": "2026-09-11",
-  "generatedAtJST": "2026-09-11T07:15:22.200+09:00",
+  "date": "2026-09-12",
+  "generatedAtJST": "2026-09-12T07:15:24.138+09:00",
   "items": [
     {
-      "url": "https://techcrunch.com/2026/09/09/massachusetts-hits-data-centers-with-new-clean-power-rules/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-09-09T21:45:49Z",
-      "title": "Massachusetts hits data centers with new clean power rules | TechCrunch",
-      "title_ja": "マサチューセッツ州、データセンターに新しいクリーンパワー規制を適用",
-      "summary_ja": "マサチューセッツ州はデータセンターの開発に新たな制限を課しました。他の州に続いて、クリーンパワーの使用を促進するための取り組みが強化されています。これにより、データセンター業界は持続可能性の面で重大な影響を受ける可能性があります。",
+      "url": "https://www.commondreams.org/news/data-center-health-risks",
+      "source": "Common Dreams",
+      "publishedAt": "2026-09-10T22:04:16Z",
+      "title": "Trump EPA Accused of Endangering Public as Study Highlights 'Hidden Health Costs' of Data Centers",
+      "title_ja": "トランプEPAがデータセンターの「隠れた健康コスト」を強調する研究を受けて公共の安全を脅かしていると非難",
+      "summary_ja": "トランプ大統領のEPAが、人工知能データセンターに反対するコミュニティを貧困や犯罪を喚起するものと批判する中、最新の報告がその行政が公害関連の規制を緩和しようとしていることを明らかにしました。この報告は、データセンターがもたらす隠れた健康コストについて詳細に分析しています。これにより、地域社会の健康リスクが高まる懸念が広がっています。",
       "key_points": [
-        "マサチューセッツ州がデータセンター開発に新規制を導入",
-        "クリーンパワー使用を促進する正式な措置",
-        "最近、他の州でも同様の規制が強化されている"
+        "トランプ大統領はAIデータセンターへの反対運動を批判している。",
+        "最新のレポートはEPAの政策変更の影響を指摘している。",
+        "データセンターは地域住民に隠れた健康コストをもたらす可能性がある。",
+        "公害規制の緩和が健康リスクを増大させる懸念がある。"
       ],
       "glossary": [
         {
-          "term": "クリーンパワー",
-          "explain_ja": "再生可能エネルギー源から供給される電力。"
+          "term": "EPA",
+          "explain_ja": "米国環境保護庁。環境保護に関する法令を実施する政府機関。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データの保存、管理、配信を行うための施設。"
+          "explain_ja": "データを保存、管理、配信するための施設。"
         }
       ],
       "personal_actions": [
-        "新しい規制に対応するための社内方針の見直し",
-        "クリーンパワー供給者との連携を検討",
-        "持続可能なエネルギー使用に向けた教育・研修の実施"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.techradar.com/pro/thailand-pauses-all-data-center-projects-as-it-looks-to-solve-water-and-electricity-issues-and-create-the-most-benefit",
-      "source": "TechRadar",
-      "publishedAt": "2026-09-09T21:10:00Z",
-      "title": "Thailand pauses all data center projects as it looks to solve water and electricity issues and 'create the most benefit'",
-      "title_ja": "タイ、全てのデータセンタープロジェクトを一時中止",
-      "summary_ja": "タイは、166件のデータセンタープロジェクトを一時中止しました。理由は、水と電力の問題を解決し、経済的利益を最大化するための規則を制定する必要があるためです。この中止は、インフラの持続可能性や資源管理に対する深刻な考慮を示しています。",
-      "key_points": [
-        "タイが166件のデータセンター計画を中止",
-        "水と電力の問題解決を目指す",
-        "安全対策や経済的利益を考慮した新しい規則の策定を目指す",
-        "持続可能なインフラの重要性が浮き彫りに",
-        "地域社会への影響を最小限に抑えたい意図を持つ"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データを保存、管理、処理するための施設"
-        },
-        {
-          "term": "インフラ",
-          "explain_ja": "社会の経済活動を支える基盤となる施設やサービス"
-        },
-        {
-          "term": "経済的利益",
-          "explain_ja": "企業や地域社会に対する経済的なプラス効果"
-        }
-      ],
-      "personal_actions": [
-        "現在進行中のデータセンター関連プロジェクトの状況を確認する",
-        "水と電力の供給状況についての情報を集める",
-        "新しい規則が発表された際に注意を払う"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.bgr.com/2254004/next-gen-data-center-elastocaloric-cooling-explained/",
-      "source": "BGR",
-      "publishedAt": "2026-09-09T18:17:00Z",
-      "title": "Next-Gen Data Center Cooling Could Be Powered By Its Own Heat - Here's How",
-      "title_ja": "次世代データセンターの冷却技術、自己発熱で動く可能性 - 方法はこれだ",
-      "summary_ja": "新しい冷却技術「エラストカロリック冷却」が、データセンターの温度管理に革新をもたらす可能性があります。このシステムは、形状記憶合金フィルムを使用し、電力なしで冷却を実現します。この技術により、データセンターのエネルギー消費を削減し、周囲環境への影響を軽減することが期待されています。",
-      "key_points": [
-        "エラストカロリック冷却は形状記憶合金フィルムを使用して温度を調整する。",
-        "この技術はデータセンターの冷却効率を向上させる可能性がある。",
-        "冷却プロセスは四つのステップで構成され、熱を効率的に排出する。",
-        "現段階では技術が新しく、冷却出力は2.09ミリワットにとどまっている。",
-        "将来的には、AIデータセンターだけでなく、個人用コンピュータにも応用できる可能性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "エラストカロリック冷却",
-          "explain_ja": "形状記憶合金フィルムを使用した冷却技術で、自ら熱を排出することにより冷却を実現する。"
-        },
-        {
-          "term": "形状記憶合金",
-          "explain_ja": "特定の温度で形状が変わる性質を持つ合金で、エラストカロリック冷却に利用される。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの冷却方法について最新の研究情報を確認する。",
-        "エラストカロリック冷却技術のベンチマークデータを活用して、自身のシステムでの冷却確認を行う。",
-        "他のエネルギー効率的な冷却技術と比較検討を行う。"
+        "データセンターの規制やその影響について最新情報を確認する。",
+        "地域でのデータセンターの建設計画に関心を持つ。"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/how-100-million-dollar-chief-financial-officers-are-setting-their-neocloud-budgets/",
+      "source": "pymnts.com",
+      "publishedAt": "2026-09-10T15:29:12Z",
+      "title": "How $100 Million CFOs Are Setting Their Neocloud Budgets",
+      "title_ja": "1億ドルのCFOがネオクラウド予算を設定する方法",
+      "summary_ja": "人工知能の需要が高まる中、ネオクラウドが企業技術の新しい流行となっています。これにより、CFOは技術ベンダーを選択する際に、価格やパフォーマンスだけでなく、ファイナンス構造やハードウェアの減価償却も考慮する必要があります。契約がインフラ構築の財務構造の一部となるため、企業は新たなリスクや機会に直面しています。",
+      "key_points": [
+        "ネオクラウドは、AWSやMicrosoft Azureに代わる新しいインフラプロバイダーの登場を意味する。",
+        "CFOは、AIインフラ契約を単なる価格比較からファイナンス評価にシフトさせる必要がある。",
+        "大規模なAIインフラには莫大な初期投資が必要で、複雑なファイナンス構造が期待される。",
+        "顧客契約が資金調達に役立つ新しいビジネスモデルが進化している。",
+        "企業は、提供されるGPUの状況やデータセンターの所有権を正確に把握する必要がある。"
+      ],
+      "glossary": [
+        {
+          "term": "ネオクラウド",
+          "explain_ja": "新たに登場したクラウドサービスの一形態で、AIニーズに応じた専用のインフラプロバイダーを指す。"
+        },
+        {
+          "term": "CFO",
+          "explain_ja": "最高財務責任者の略で、企業の財務戦略や資金管理を担当する役職。"
+        },
+        {
+          "term": "GPU",
+          "explain_ja": "グラフィックスプロセッサユニットの略で、特に計算集約型のタスクに利用される。"
+        }
+      ],
+      "personal_actions": [
+        "契約やサプライヤーの背景を詳細に確認し、リスクを把握する。",
+        "整備されているハードウェアや電力契約の状況を把握すること。",
+        "データセンターの所有権やファイナンスの構造について、内部チームで話し合う。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://oilprice.com/Energy/Energy-General/Permian-Gas-Has-Been-Worth-Less-Than-Nothing-for-118-Days-This-Year.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-09-10T15:00:00Z",
+      "title": "Permian Gas Has Been Worth Less Than Nothing for 118 Days This Year",
+      "title_ja": "ペルミアンガス、今年118日間マイナスの価値に",
+      "summary_ja": "ペルミアン盆地での天然ガスの需給バランスが崩れ、118日間も価値がマイナスになっている。テキサス州ペコスの外で、シェブロンが新たに発電所を建設する計画を進めている。これは、近隣では買い手がいない大量の天然ガスを利用するための取り組みだ。",
+      "key_points": [
+        "ペルミアン盆地は過剰な天然ガス生産に直面している。",
+        "シェブロンが発電所を建設する意向を示している。",
+        "118日間、天然ガスの価値がマイナスとなっている。",
+        "周辺地域での需給ギャップが問題。",
+        "エネルギー関連の解決策が求められている。"
+      ],
+      "glossary": [
+        {
+          "term": "ペルミアン盆地",
+          "explain_ja": "テキサス州とニューメキシコ州に広がる石油と天然ガスの重要な産出地。"
+        },
+        {
+          "term": "シェブロン",
+          "explain_ja": "アメリカの大手石油会社で、エネルギー事業を展開している。"
+        },
+        {
+          "term": "発電所",
+          "explain_ja": "電気を生産するための施設。"
+        }
+      ],
+      "personal_actions": [
+        "地域のエネルギー市場の動向を確認する。",
+        "シェブロンの発展計画に関する情報を収集する。",
+        "天然ガスの価格動向に注意を払う。"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
