@@ -1,33 +1,38 @@
 {
-  "date": "2026-09-12",
-  "generatedAtJST": "2026-09-12T07:15:24.138+09:00",
+  "date": "2026-09-13",
+  "generatedAtJST": "2026-09-13T07:15:16.675+09:00",
   "items": [
     {
-      "url": "https://www.commondreams.org/news/data-center-health-risks",
+      "url": "https://www.commondreams.org/news/data-centers-public-lands",
       "source": "Common Dreams",
-      "publishedAt": "2026-09-10T22:04:16Z",
-      "title": "Trump EPA Accused of Endangering Public as Study Highlights 'Hidden Health Costs' of Data Centers",
-      "title_ja": "トランプEPAがデータセンターの「隠れた健康コスト」を強調する研究を受けて公共の安全を脅かしていると非難",
-      "summary_ja": "トランプ大統領のEPAが、人工知能データセンターに反対するコミュニティを貧困や犯罪を喚起するものと批判する中、最新の報告がその行政が公害関連の規制を緩和しようとしていることを明らかにしました。この報告は、データセンターがもたらす隠れた健康コストについて詳細に分析しています。これにより、地域社会の健康リスクが高まる懸念が広がっています。",
+      "publishedAt": "2026-09-11T19:20:12Z",
+      "title": "Trump Administration Making Aggressive Push to Use Public Lands for AI Data Centers",
+      "title_ja": "トランプ政権、公共土地をAIデータセンターの建設に利用する計画を推進",
+      "summary_ja": "トランプ政権は、公共土地を人工知能（AI）データセンターの建設に利用するための攻撃的な取り組みを進めている。最近の報道によると、アメリカ合衆国内務省がこの計画を指導している。これにより、公共資源の利用が企業主導で進む可能性があり、環境への影響や地域社会への影響が懸念されている。",
       "key_points": [
-        "トランプ大統領はAIデータセンターへの反対運動を批判している。",
-        "最新のレポートはEPAの政策変更の影響を指摘している。",
-        "データセンターは地域住民に隠れた健康コストをもたらす可能性がある。",
-        "公害規制の緩和が健康リスクを増大させる懸念がある。"
+        "トランプ政権が公共土地をAIデータセンター用に探している",
+        "アメリカ合衆国内務省がこの取り組みを主導",
+        "公共資源の企業利用が進む可能性",
+        "環境や地域社会への影響が懸念される"
       ],
       "glossary": [
         {
-          "term": "EPA",
-          "explain_ja": "米国環境保護庁。環境保護に関する法令を実施する政府機関。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能のためのデータ処理を専門にする施設。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存、管理、配信するための施設。"
+          "term": "公共土地",
+          "explain_ja": "公共の利用のために管理される土地。"
+        },
+        {
+          "term": "トランプ政権",
+          "explain_ja": "ドナルド・トランプが大統領であった時期のアメリカの政府。"
         }
       ],
       "personal_actions": [
-        "データセンターの規制やその影響について最新情報を確認する。",
-        "地域でのデータセンターの建設計画に関心を持つ。"
+        "公共土地利用の計画を確認する",
+        "地域の環境影響評価を調べる",
+        "AIデータセンターに関する地域の意見を把握する"
       ],
       "tags": [
         "DC",
@@ -35,77 +40,71 @@
       ]
     },
     {
-      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/how-100-million-dollar-chief-financial-officers-are-setting-their-neocloud-budgets/",
-      "source": "pymnts.com",
-      "publishedAt": "2026-09-10T15:29:12Z",
-      "title": "How $100 Million CFOs Are Setting Their Neocloud Budgets",
-      "title_ja": "1億ドルのCFOがネオクラウド予算を設定する方法",
-      "summary_ja": "人工知能の需要が高まる中、ネオクラウドが企業技術の新しい流行となっています。これにより、CFOは技術ベンダーを選択する際に、価格やパフォーマンスだけでなく、ファイナンス構造やハードウェアの減価償却も考慮する必要があります。契約がインフラ構築の財務構造の一部となるため、企業は新たなリスクや機会に直面しています。",
+      "url": "https://cryptobriefing.com/oracle-renewables-stargate-data-center/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-11T18:25:46Z",
+      "title": "Oracle proposes 2 GW of renewables for Stargate data center emissions",
+      "title_ja": "オラクル、スターレートデータセンターの排出量削減のために2GWの再生可能エネルギーを提案",
+      "summary_ja": "オラクルはスターレートデータセンターのために2GWの再生可能エネルギーの導入を提案しました。この取り組みは、テクノロジー企業がAIインフラの拡張と持続可能性の目標を両立させるプレッシャーが高まっていることを示しています。オラクルの提案は、環境への影響を軽減する方向性の一環となるでしょう。",
       "key_points": [
-        "ネオクラウドは、AWSやMicrosoft Azureに代わる新しいインフラプロバイダーの登場を意味する。",
-        "CFOは、AIインフラ契約を単なる価格比較からファイナンス評価にシフトさせる必要がある。",
-        "大規模なAIインフラには莫大な初期投資が必要で、複雑なファイナンス構造が期待される。",
-        "顧客契約が資金調達に役立つ新しいビジネスモデルが進化している。",
-        "企業は、提供されるGPUの状況やデータセンターの所有権を正確に把握する必要がある。"
+        "オラクルがスターレートデータセンターでの2GWの再生可能エネルギー提案",
+        "テクノロジー企業への環境持続可能性の圧力が高まる中での対応",
+        "AIインフラの拡張と環境保護の両立を目指す動き"
       ],
       "glossary": [
         {
-          "term": "ネオクラウド",
-          "explain_ja": "新たに登場したクラウドサービスの一形態で、AIニーズに応じた専用のインフラプロバイダーを指す。"
+          "term": "再生可能エネルギー",
+          "explain_ja": "自然界のエネルギー源から生成され、持続的に利用できるエネルギー。"
         },
         {
-          "term": "CFO",
-          "explain_ja": "最高財務責任者の略で、企業の財務戦略や資金管理を担当する役職。"
-        },
-        {
-          "term": "GPU",
-          "explain_ja": "グラフィックスプロセッサユニットの略で、特に計算集約型のタスクに利用される。"
+          "term": "AIインフラ",
+          "explain_ja": "人工知能の運用に必要なハードウェアやソフトウェアの基盤。"
         }
       ],
       "personal_actions": [
-        "契約やサプライヤーの背景を詳細に確認し、リスクを把握する。",
-        "整備されているハードウェアや電力契約の状況を把握すること。",
-        "データセンターの所有権やファイナンスの構造について、内部チームで話し合う。"
+        "データセンターの再生可能エネルギーの利用状況を確認する",
+        "環境持続可能性に関する社内の取り組みを把握する"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://oilprice.com/Energy/Energy-General/Permian-Gas-Has-Been-Worth-Less-Than-Nothing-for-118-Days-This-Year.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-09-10T15:00:00Z",
-      "title": "Permian Gas Has Been Worth Less Than Nothing for 118 Days This Year",
-      "title_ja": "ペルミアンガス、今年118日間マイナスの価値に",
-      "summary_ja": "ペルミアン盆地での天然ガスの需給バランスが崩れ、118日間も価値がマイナスになっている。テキサス州ペコスの外で、シェブロンが新たに発電所を建設する計画を進めている。これは、近隣では買い手がいない大量の天然ガスを利用するための取り組みだ。",
+      "url": "https://cryptobriefing.com/oracle-ai-data-center-expansion-billions/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-11T16:05:52Z",
+      "title": "Oracle secures billions from AI customers for data center expansion",
+      "title_ja": "Oracle、AI顧客からの数十億円をデータセンター拡張に確保",
+      "summary_ja": "Oracleは、AI顧客から数十億の資金を調達し、データセンターの拡張を行うことを確認しました。これにより、顧客前払い方式によるインフラ成長のシフトが見られます。この戦略は、Customer-funded（顧客資金）モデルへの転換を示唆しています。",
       "key_points": [
-        "ペルミアン盆地は過剰な天然ガス生産に直面している。",
-        "シェブロンが発電所を建設する意向を示している。",
-        "118日間、天然ガスの価値がマイナスとなっている。",
-        "周辺地域での需給ギャップが問題。",
-        "エネルギー関連の解決策が求められている。"
+        "OracleがAI顧客から数十億の資金を獲得。",
+        "顧客前払いモデルを活用したデータセンターの拡張。",
+        "顧客資金によるインフラ成長へのシフトが明確に。",
+        "この戦略はオラクルの成長戦略の一環。"
       ],
       "glossary": [
         {
-          "term": "ペルミアン盆地",
-          "explain_ja": "テキサス州とニューメキシコ州に広がる石油と天然ガスの重要な産出地。"
+          "term": "データセンター",
+          "explain_ja": "データのストレージ、管理、配信を行うための施設。"
         },
         {
-          "term": "シェブロン",
-          "explain_ja": "アメリカの大手石油会社で、エネルギー事業を展開している。"
+          "term": "AI",
+          "explain_ja": "人工知能の略で、人間の知能を模倣するコンピュータシステム。"
         },
         {
-          "term": "発電所",
-          "explain_ja": "電気を生産するための施設。"
+          "term": "顧客前払いモデル",
+          "explain_ja": "顧客が提供する資金を元にインフラを構築する方式。"
         }
       ],
       "personal_actions": [
-        "地域のエネルギー市場の動向を確認する。",
-        "シェブロンの発展計画に関する情報を収集する。",
-        "天然ガスの価格動向に注意を払う。"
+        "現在のデータセンターの利用状況を評価する。",
+        "AIに関連する顧客ニーズを確認する。",
+        "顧客からのフィードバックを収集し、サービス向上に活かす。"
       ],
       "tags": [
-        "その他"
+        "DC",
+        "AI"
       ]
     }
   ]
