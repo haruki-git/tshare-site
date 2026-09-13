@@ -1,110 +1,103 @@
 {
-  "date": "2026-09-13",
-  "generatedAtJST": "2026-09-13T07:15:16.675+09:00",
+  "date": "2026-09-14",
+  "generatedAtJST": "2026-09-14T07:15:22.487+09:00",
   "items": [
     {
-      "url": "https://www.commondreams.org/news/data-centers-public-lands",
-      "source": "Common Dreams",
-      "publishedAt": "2026-09-11T19:20:12Z",
-      "title": "Trump Administration Making Aggressive Push to Use Public Lands for AI Data Centers",
-      "title_ja": "トランプ政権、公共土地をAIデータセンターの建設に利用する計画を推進",
-      "summary_ja": "トランプ政権は、公共土地を人工知能（AI）データセンターの建設に利用するための攻撃的な取り組みを進めている。最近の報道によると、アメリカ合衆国内務省がこの計画を指導している。これにより、公共資源の利用が企業主導で進む可能性があり、環境への影響や地域社会への影響が懸念されている。",
+      "url": "https://www.techradar.com/pro/finally-some-good-usage-this-danish-data-center-is-providing-heat-to-power-thousands-of-household-radiators",
+      "source": "TechRadar",
+      "publishedAt": "2026-09-12T18:25:00Z",
+      "title": "Finally, some good usage — this Danish data center is providing heat to power thousands of household radiators",
+      "title_ja": "デンマークのデータセンターが家庭用ラジエーターへの熱供給に貢献",
+      "summary_ja": "デンマークのMetaデータセンターがサーバーの熱を回収し、既存の地域暖房ネットワークを通じて数千の家庭に供給しています。この取り組みは、データセンターの廃熱を有効活用する新しい例です。結果として、環境への影響を軽減するとともに、地域社会にも恩恵をもたらしています。",
       "key_points": [
-        "トランプ政権が公共土地をAIデータセンター用に探している",
-        "アメリカ合衆国内務省がこの取り組みを主導",
-        "公共資源の企業利用が進む可能性",
-        "環境や地域社会への影響が懸念される"
+        "デンマークのMetaデータセンターが廃熱を利用",
+        "サーバー熱を地域暖房ネットワークに供給",
+        "数千の家庭が暖房に恩恵を受ける",
+        "データセンターのエネルギー効率向上"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能のためのデータ処理を専門にする施設。"
+          "term": "Meta",
+          "explain_ja": "Metaは、Facebookなどのプラットフォームを運営する企業です。"
         },
         {
-          "term": "公共土地",
-          "explain_ja": "公共の利用のために管理される土地。"
-        },
-        {
-          "term": "トランプ政権",
-          "explain_ja": "ドナルド・トランプが大統領であった時期のアメリカの政府。"
+          "term": "地域暖房ネットワーク",
+          "explain_ja": "地域全体に熱源を供給して暖房を行うシステムです。"
         }
       ],
       "personal_actions": [
-        "公共土地利用の計画を確認する",
-        "地域の環境影響評価を調べる",
-        "AIデータセンターに関する地域の意見を把握する"
+        "データセンターの廃熱利用に関する地域の取り組みを調査する",
+        "エネルギー効率の高い暖房方法について学ぶ"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://cryptobriefing.com/oracle-renewables-stargate-data-center/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-09-11T18:25:46Z",
-      "title": "Oracle proposes 2 GW of renewables for Stargate data center emissions",
-      "title_ja": "オラクル、スターレートデータセンターの排出量削減のために2GWの再生可能エネルギーを提案",
-      "summary_ja": "オラクルはスターレートデータセンターのために2GWの再生可能エネルギーの導入を提案しました。この取り組みは、テクノロジー企業がAIインフラの拡張と持続可能性の目標を両立させるプレッシャーが高まっていることを示しています。オラクルの提案は、環境への影響を軽減する方向性の一環となるでしょう。",
+      "url": "https://timesofindia.indiatimes.com/world/us/in-2018-microsoft-sank-864-servers-117-feet-beneath-the-north-sea-to-cool-them-naturally-two-years-later-their-failure-rate-was-one-eighth-that-of-land-based-machines/articleshow/134064914.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-09-12T08:00:44Z",
+      "title": "In 2018, Microsoft sank 864 servers 117 feet beneath the North Sea to cool them naturally; two years later, their failure rate was one-eighth that of land-based machines",
+      "title_ja": "2018年、マイクロソフトが北海深117フィートに864台のサーバーを沈め、自然冷却を試みる",
+      "summary_ja": "マイクロソフトは2018年に864台のサーバーを北海の117フィート下に埋設し、自然冷却の効果を調査しました。その結果、2年後の故障率は従来の陸上サーバーと比べてわずか1/8でした。これは、データセンターの効率的な運用方法として注目されています。",
       "key_points": [
-        "オラクルがスターレートデータセンターでの2GWの再生可能エネルギー提案",
-        "テクノロジー企業への環境持続可能性の圧力が高まる中での対応",
-        "AIインフラの拡張と環境保護の両立を目指す動き"
+        "2018年にマイクロソフトが864台のサーバーを北海に埋設した。",
+        "自然冷却の効果を実現し、故障率を1/8に低下させた。",
+        "この実験はデータセンターの信頼性と効率の向上を目指している。"
       ],
       "glossary": [
         {
-          "term": "再生可能エネルギー",
-          "explain_ja": "自然界のエネルギー源から生成され、持続的に利用できるエネルギー。"
+          "term": "サーバー",
+          "explain_ja": "データを処理・保存するコンピュータの一種。"
         },
         {
-          "term": "AIインフラ",
-          "explain_ja": "人工知能の運用に必要なハードウェアやソフトウェアの基盤。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを管理・処理するための施設。"
         }
       ],
       "personal_actions": [
-        "データセンターの再生可能エネルギーの利用状況を確認する",
-        "環境持続可能性に関する社内の取り組みを把握する"
+        "自社のサーバー冷却効率を再評価する。",
+        "最新の冷却技術について情報収集を行う。",
+        "故障予防策の導入を検討する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "その他"
       ]
     },
     {
-      "url": "https://cryptobriefing.com/oracle-ai-data-center-expansion-billions/",
+      "url": "https://cryptobriefing.com/morgan-stanley-data-center-october-deadline-2027/",
       "source": "Crypto Briefing",
-      "publishedAt": "2026-09-11T16:05:52Z",
-      "title": "Oracle secures billions from AI customers for data center expansion",
-      "title_ja": "Oracle、AI顧客からの数十億円をデータセンター拡張に確保",
-      "summary_ja": "Oracleは、AI顧客から数十億の資金を調達し、データセンターの拡張を行うことを確認しました。これにより、顧客前払い方式によるインフラ成長のシフトが見られます。この戦略は、Customer-funded（顧客資金）モデルへの転換を示唆しています。",
+      "publishedAt": "2026-09-12T03:03:33Z",
+      "title": "Morgan Stanley: data centers must break ground by October to open before end of 2027",
+      "title_ja": "モルガン・スタンレー：データセンターは2027年末までに開設するために10月までに着工が必要",
+      "summary_ja": "データセンターのプロジェクトを進めるためには、10月までに着工する必要があるとモルガン・スタンレーが示しています。この期限は、インフラや電力の制約を克服するための戦略的計画の重要性を強調しています。これにより、2027年末までの開設が可能になります。",
       "key_points": [
-        "OracleがAI顧客から数十億の資金を獲得。",
-        "顧客前払いモデルを活用したデータセンターの拡張。",
-        "顧客資金によるインフラ成長へのシフトが明確に。",
-        "この戦略はオラクルの成長戦略の一環。"
+        "データセンターの着工期限は10月",
+        "2027年末までのオープンを目指す",
+        "インフラや電力の制約への対処が必要",
+        "戦略的計画の重要性が浮き彫りになった"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データのストレージ、管理、配信を行うための施設。"
+          "explain_ja": "データを蓄積・管理・処理するための施設。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略で、人間の知能を模倣するコンピュータシステム。"
+          "term": "インフラ",
+          "explain_ja": "公共サービスや経済活動を支える基盤となる設備やシステム。"
         },
         {
-          "term": "顧客前払いモデル",
-          "explain_ja": "顧客が提供する資金を元にインフラを構築する方式。"
+          "term": "電力制約",
+          "explain_ja": "データセンター運営に必要な電力が供給不足になる状況。"
         }
       ],
       "personal_actions": [
-        "現在のデータセンターの利用状況を評価する。",
-        "AIに関連する顧客ニーズを確認する。",
-        "顧客からのフィードバックを収集し、サービス向上に活かす。"
+        "プロジェクトの進行状況を確認する",
+        "インフラや電力の状況を把握する",
+        "着工スケジュールの見直しを行う"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     }
   ]
