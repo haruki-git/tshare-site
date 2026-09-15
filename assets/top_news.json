@@ -1,33 +1,34 @@
 {
-  "date": "2026-09-15",
-  "generatedAtJST": "2026-09-15T07:15:23.548+09:00",
+  "date": "2026-09-16",
+  "generatedAtJST": "2026-09-16T07:15:32.937+09:00",
   "items": [
     {
-      "url": "https://www.marketbeat.com/instant-alerts/event-solaredge-targets-24b-by-2029-bets-on-ai-data-center-power-growth-2026-09-13/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
-      "source": "MarketBeat",
-      "publishedAt": "2026-09-13T12:01:59Z",
-      "title": "SolarEdge Targets $2.4B by 2029, Bets on AI Data Center Power Growth",
-      "title_ja": "SolarEdge、2029年までに24億ドルを目指しAIデータセンター向けパワー成長に期待",
-      "summary_ja": "SolarEdge Technologiesは、2029年までに24億ドルの収益を目指す計画を発表しました。これにより、同社は住宅および商業用の太陽光発電事業を拡大し、新しい電力変換の機会を追求しています。AIデータセンターの成長を通じて、持続可能なエネルギーソリューションを提供することが期待されています。",
+      "url": "https://www.medicaldaily.com/former-epa-staff-ai-data-center-pollution-asthma-health-report-478631",
+      "source": "Medical Daily",
+      "publishedAt": "2026-09-14T19:01:13Z",
+      "title": "Report from 800 Former EPA Staff Links AI Data Center Power Demand to Asthma and Early Deaths",
+      "title_ja": "元EPA職員800人の報告がAIデータセンターの電力需要と喘息・早死にを関連付ける",
+      "summary_ja": "元EPA職員800人が、AIデータセンターの電力需要が生じる汚染が、2028年までに117億ドルから209億ドルの健康被害を引き起こす可能性があると警告しています。これにより喘息や早死にのリスクが増加する恐れがあります。今後、AIの需要拡大に伴い、さらなる健康への影響が懸念されます。",
       "key_points": [
-        "SolarEdge Technologiesは2029年までに24億ドルを目指す計画を発表。",
-        "住宅および商業用の太陽光発電事業の拡大を計画。",
-        "AIデータセンター向けの新しい電力変換機会に焦点を合わせる。",
-        "持続可能なエネルギーソリューションの提供を目指す。"
+        "800人の元EPA職員がAIデータセンターの影響を報告",
+        "汚染により毎年117億ドルから209億ドルの健康被害が予想される",
+        "喘息や早死にのリスクが増加する可能性",
+        "データセンターの電力需要が健康に与える影響に対する注意喚起"
       ],
       "glossary": [
         {
-          "term": "SolarEdge Technologies",
-          "explain_ja": "太陽光発電ソリューションを提供する企業で、エネルギー変換技術に注力している。"
+          "term": "EPA",
+          "explain_ja": "米国環境保護庁。環境規制を担当する政府機関。"
         },
         {
           "term": "AIデータセンター",
-          "explain_ja": "人工知能を活用するデータセンターで、電力効率が重要な課題。"
+          "explain_ja": "人工知能（AI）関連の計算処理を行うサーバーの集まり。"
         }
       ],
       "personal_actions": [
-        "自社の電力消費の見直しを行う。",
-        "持続可能なエネルギーソリューションについて社内で情報共有する。"
+        "データセンターの近隣にお住まいであれば、地域の空気質を確認する",
+        "データセンターの電力使途について地域団体に意見を伝える",
+        "AI技術に関する最新の研究や報告をフォローする"
       ],
       "tags": [
         "DC",
@@ -35,77 +36,65 @@
       ]
     },
     {
-      "url": "https://www.commondreams.org/opinion/data-centers-2028-election",
-      "source": "Common Dreams",
-      "publishedAt": "2026-09-13T11:03:03Z",
-      "title": "Elevating Data Center Activism for the 2028 Election",
-      "title_ja": "2028年選挙に向けたデータセンター活動の推進",
-      "summary_ja": "データセンターが全国に急増する中、それに対抗する新たな運動が生まれています。これらの施設の急速な拡大は、環境、健康、経済、政治に関する重要な問題を提起し、健康や気候、社会的公平性が焦点となっています。この動きは、2028年の選挙に向けて影響力を持つ可能性があります。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185650186",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-09-14T18:52:38Z",
+      "title": "Teravolt looks to cannibalize older industries to meet AI power demand - Slashdot",
+      "title_ja": "Teravolt、AI需要に応えるため既存産業を再利用",
+      "summary_ja": "Teravoltは、古いインフラをデータセンターとして再利用することで、AIに対する電力需要に応えようとしています。具体的には、ビットコイン採掘場やアルミニウム精錬所などの施設を再活用する計画です。このアプローチにより、エネルギーコストの削減や効率的な資源利用が期待されます。",
       "key_points": [
-        "データセンターの急増に対する活動家の新たな運動が発生",
-        "環境、健康、経済、政治に関する重要な問題提起",
-        "健康や気候の影響が特に強調されている",
-        "社会的公平性が議論の中心にある",
-        "2028年選挙に向けた影響力が期待される"
+        "Teravoltは、AI需要の高まりに応じて古い産業を再利用する計画を進めている。",
+        "ビットコイン採掘場やアルミニウム精錬所がデータセンターとして再活用される。",
+        "この方法は、既存のインフラを利用することでコストを削減できる。"
       ],
       "glossary": [
         {
+          "term": "Teravolt",
+          "explain_ja": "AIによる電力需要に応えるためのデータセンターを設立している企業。"
+        },
+        {
           "term": "データセンター",
-          "explain_ja": "サーバーやストレージ、ネットワーク機器を集中させ、データを管理・処理する施設。"
-        },
-        {
-          "term": "活動家",
-          "explain_ja": "特定の問題や課題に対して改善を目指す人々。"
-        },
-        {
-          "term": "気候変動",
-          "explain_ja": "地球の気候が変化する現象で、主に人間の活動に起因する。"
+          "explain_ja": "デジタルデータを管理・保存・処理するための設備。"
         }
       ],
       "personal_actions": [
-        "地元のデータセンターに関する情報を調査し、意見をまとめる",
-        "環境政策に関するコミュニティの会合に参加する",
-        "データセンターの影響について知識を深め、周囲に情報を共有する"
+        "周辺の古いインフラ施設に関する情報を確認する。",
+        "データセンターとしての転用計画がある施設についての調査を行う。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.infoq.com/news/2026/09/cloudflare-cache-transcoding/",
-      "source": "InfoQ.com",
-      "publishedAt": "2026-09-13T10:35:00Z",
-      "title": "Cloudflare Tests Cache Transcoding to Reduce Storage Requirements",
-      "title_ja": "Cloudflare、ストレージ要件を削減するキャッシュトランスコーディングをテスト",
-      "summary_ja": "Cloudflareは、キャッシュに保存する前にZstandardを用いて未圧縮のテキストコンテンツを圧縮するプロトタイプ、キャッシュトランスコーディングを紹介しました。このアプローチにより、ペタバイト単位の追加キャッシュ容量が見込まれていますが、さらなるテストが必要です。圧縮によりデータセンター間のデータ転送量が減少し、ストレージの効率も向上します。",
+      "url": "https://www.golem.de/sonstiges/zustimmung/auswahl.html?from=https%3A%2F%2Fwww.golem.de%2Fnews%2Fenergy-india-s-data-center-boom-creates-new-engine-for-renewable-energy-2609-212994.html&referer=https%3A%2F%2Ft.co%2Ffc7bc4802a",
+      "source": "Golem.de",
+      "publishedAt": "2026-09-14T16:00:02Z",
+      "title": "(g+) Energy: India's data center boom creates new engine for renewable energy",
+      "title_ja": "インドのデータセンターの急増が再生可能エネルギーの新たなエンジンを生む",
+      "summary_ja": "インドにおけるデータセンターの急増が、再生可能エネルギー産業に新たな可能性をもたらしています。大規模な電力需要が、バッテリー支援型の太陽光や風力プロジェクトによる金融的な妥当性を高めています。この流れは、再生可能エネルギーの導入を加速させるでしょう。",
       "key_points": [
-        "Cloudflareは未圧縮のHTML、JSON、CSS、JavaScriptなどのテキストコンテンツをZstandardで圧縮する。",
-        "圧縮により、対象のコンテンツサイズが約2.8倍減少し、より多くのデータを保存できる。",
-        "トランスコーディングは、成功裏に返された圧縮可能なレスポンスに適用される。",
-        "画像や動画などは既に圧縮されているため再圧縮の必要はない。",
-        "プロトタイプは開発中で、さらなるテストが行われる予定。"
+        "インドのデータセンター需要が急増している。",
+        "高い電力需要が再生可能エネルギーの投資を促進。",
+        "バッテリー支援型プロジェクトの金融的魅力が向上。",
+        "データセンターと再生可能エネルギーが互いに利益を得る関係に。"
       ],
       "glossary": [
         {
-          "term": "トランスコーディング",
-          "explain_ja": "データをある形式から別の形式に変換するプロセス。ここでは、圧縮と解凍を指す。"
+          "term": "再生可能エネルギー",
+          "explain_ja": "太陽光や風力など、自然から得られるエネルギー源で、持続可能な方法で利用される。"
         },
         {
-          "term": "Zstandard",
-          "explain_ja": "Facebookが開発したロスレス圧縮アルゴリズムで、リアルタイムでの使用を想定している。"
-        },
-        {
-          "term": "キャッシュ",
-          "explain_ja": "データを一時的に保存するストレージ豪で、アクセス速度を向上させる役割を持つ。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを管理・保存・処理するための施設。"
         }
       ],
       "personal_actions": [
-        "圧縮可能なテキストコンテンツの使用状況を確認し、適切な圧縮手法を選択する。",
-        "データ転送の効率を高めるために、キャッシュの構成を見直す。",
-        "新しいキャッシュトランスコーディング技術が導入された際に、その影響を評価する。"
+        "地域のデータセンターの動向を調査し、再生可能エネルギー源の利用状況を確認する。",
+        "データセンターが電力消費に与える影響を理解し、関連するプロジェクトに参加する。"
       ],
       "tags": [
-        "その他"
+        "DC"
       ]
     }
   ]
