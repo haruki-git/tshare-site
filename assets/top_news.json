@@ -1,100 +1,105 @@
 {
-  "date": "2026-09-16",
-  "generatedAtJST": "2026-09-16T07:15:32.937+09:00",
+  "date": "2026-09-17",
+  "generatedAtJST": "2026-09-17T07:15:47.341+09:00",
   "items": [
     {
-      "url": "https://www.medicaldaily.com/former-epa-staff-ai-data-center-pollution-asthma-health-report-478631",
-      "source": "Medical Daily",
-      "publishedAt": "2026-09-14T19:01:13Z",
-      "title": "Report from 800 Former EPA Staff Links AI Data Center Power Demand to Asthma and Early Deaths",
-      "title_ja": "元EPA職員800人の報告がAIデータセンターの電力需要と喘息・早死にを関連付ける",
-      "summary_ja": "元EPA職員800人が、AIデータセンターの電力需要が生じる汚染が、2028年までに117億ドルから209億ドルの健康被害を引き起こす可能性があると警告しています。これにより喘息や早死にのリスクが増加する恐れがあります。今後、AIの需要拡大に伴い、さらなる健康への影響が懸念されます。",
+      "url": "https://freerepublic.com/focus/f-chat/4395661/posts",
+      "source": "Freerepublic.com",
+      "publishedAt": "2026-09-15T21:47:01Z",
+      "title": "The theory taking the rich by storm: China funds data center haters",
+      "title_ja": "富裕層を驚かせる理論：中国がデータセンター反対派を資金援助",
+      "summary_ja": "米国内でのデータセンターへの反対が高まる中、内務長官ダグ・バーガムは、その背後に中国からの資金があるとの懸念を表明した。この発言は、テクノロジー界の著名人たちが集まるポッドキャストでも取り上げられ、外部の影響が疑問視されている。こうした意見が広がることで、今後のデータセンターの立地計画や企業と海外との関係に影響を及ぼす可能性がある。",
       "key_points": [
-        "800人の元EPA職員がAIデータセンターの影響を報告",
-        "汚染により毎年117億ドルから209億ドルの健康被害が予想される",
-        "喘息や早死にのリスクが増加する可能性",
-        "データセンターの電力需要が健康に与える影響に対する注意喚起"
+        "内務長官がデータセンターへの反対運動の裏に中国の資金があると発言。",
+        "ポッドキャストでも外国からの影響について議論。",
+        "米国内でのデータセンター反対が新たな波となっている。",
+        "データセンター建設に対する地域住民の不安が高まっている。",
+        "中国のデータセンター建設規模が米国を上回る可能性がある。"
       ],
       "glossary": [
-        {
-          "term": "EPA",
-          "explain_ja": "米国環境保護庁。環境規制を担当する政府機関。"
-        },
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能（AI）関連の計算処理を行うサーバーの集まり。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの近隣にお住まいであれば、地域の空気質を確認する",
-        "データセンターの電力使途について地域団体に意見を伝える",
-        "AI技術に関する最新の研究や報告をフォローする"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185650186",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-09-14T18:52:38Z",
-      "title": "Teravolt looks to cannibalize older industries to meet AI power demand - Slashdot",
-      "title_ja": "Teravolt、AI需要に応えるため既存産業を再利用",
-      "summary_ja": "Teravoltは、古いインフラをデータセンターとして再利用することで、AIに対する電力需要に応えようとしています。具体的には、ビットコイン採掘場やアルミニウム精錬所などの施設を再活用する計画です。このアプローチにより、エネルギーコストの削減や効率的な資源利用が期待されます。",
-      "key_points": [
-        "Teravoltは、AI需要の高まりに応じて古い産業を再利用する計画を進めている。",
-        "ビットコイン採掘場やアルミニウム精錬所がデータセンターとして再活用される。",
-        "この方法は、既存のインフラを利用することでコストを削減できる。"
-      ],
-      "glossary": [
-        {
-          "term": "Teravolt",
-          "explain_ja": "AIによる電力需要に応えるためのデータセンターを設立している企業。"
-        },
         {
           "term": "データセンター",
-          "explain_ja": "デジタルデータを管理・保存・処理するための設備。"
-        }
-      ],
-      "personal_actions": [
-        "周辺の古いインフラ施設に関する情報を確認する。",
-        "データセンターとしての転用計画がある施設についての調査を行う。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.golem.de/sonstiges/zustimmung/auswahl.html?from=https%3A%2F%2Fwww.golem.de%2Fnews%2Fenergy-india-s-data-center-boom-creates-new-engine-for-renewable-energy-2609-212994.html&referer=https%3A%2F%2Ft.co%2Ffc7bc4802a",
-      "source": "Golem.de",
-      "publishedAt": "2026-09-14T16:00:02Z",
-      "title": "(g+) Energy: India's data center boom creates new engine for renewable energy",
-      "title_ja": "インドのデータセンターの急増が再生可能エネルギーの新たなエンジンを生む",
-      "summary_ja": "インドにおけるデータセンターの急増が、再生可能エネルギー産業に新たな可能性をもたらしています。大規模な電力需要が、バッテリー支援型の太陽光や風力プロジェクトによる金融的な妥当性を高めています。この流れは、再生可能エネルギーの導入を加速させるでしょう。",
-      "key_points": [
-        "インドのデータセンター需要が急増している。",
-        "高い電力需要が再生可能エネルギーの投資を促進。",
-        "バッテリー支援型プロジェクトの金融的魅力が向上。",
-        "データセンターと再生可能エネルギーが互いに利益を得る関係に。"
-      ],
-      "glossary": [
-        {
-          "term": "再生可能エネルギー",
-          "explain_ja": "太陽光や風力など、自然から得られるエネルギー源で、持続可能な方法で利用される。"
+          "explain_ja": "データセンターは、大量のデータを保存・管理・処理するための施設です。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを管理・保存・処理するための施設。"
+          "term": "暗黒資金",
+          "explain_ja": "政治活動や組織の資金調達において、出所が不明または非公表の資金を指します。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンターの動向を調査し、再生可能エネルギー源の利用状況を確認する。",
-        "データセンターが電力消費に与える影響を理解し、関連するプロジェクトに参加する。"
+        "地域のデータセンター計画に対する公聴会や説明会への参加を検討する。",
+        "データセンターの環境的影響について情報を集め、地域の意見を共有する。",
+        "データセンター問題に関するトレンドや動きについて定期的にニュースをチェックする。"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://uk.pcmag.com/ai/167342/data-center-spills-thousands-of-gallons-of-diesel-into-nj-creek-after-computer-glitch",
+      "source": "PCMag.com",
+      "publishedAt": "2026-09-15T21:14:45Z",
+      "title": "Data Center Spills Thousands of Gallons of Diesel Into NJ Creek After Computer Glitch",
+      "title_ja": "データセンター、コンピュータ障害によりニュージャージーの小川に数千ガロンのディーゼルを流出",
+      "summary_ja": "ニュージャージー州セカカスにあるEquinixのデータセンターで、金曜日の夜、約5,000ガロンのディーゼルが小川に流出しました。原因は、コンピュータのグリッチとされ、ニュージャージー環境保護局（DEP）が確認しています。この事故は、Hackensack川に大きな影響を与える可能性があると警告されていますが、DEPは影響はないとの立場です。",
+      "key_points": [
+        "EquinixのNY2施設で約5,000ガロンのディーゼルが流出。",
+        "流出はセカカスの小川、Anderson Creekに発生。",
+        "原因は「コンピュータ障害」とされている。",
+        "流出はHackensack川に直接影響を及ぼさなかったとされているが疑惑も。",
+        "ニュージャージー州ではデータセンターへの禁止措置が増えつつある。"
+      ],
+      "glossary": [
+        {
+          "term": "Equinix",
+          "explain_ja": "データセンターとコロケーションサービスを提供する企業。"
+        },
+        {
+          "term": "Hackensack川",
+          "explain_ja": "ニュージャージー州を流れる川で、メドウランズを通りニューヨーク湾に至る。"
+        },
+        {
+          "term": "ニュージャージー環境保護局（DEP）",
+          "explain_ja": "ニュージャージー州の環境保護を担当する政府機関。"
+        }
+      ],
+      "personal_actions": [
+        "流出事故についての地域内の環境情報を確認する。",
+        "データセンター周辺の環境影響に関するニュースを追う。",
+        "定期的な設備点検を実施し、事故を未然に防ぐ体制を整える。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://finance.yahoo.com/technology/ai/articles/elon-musk-world-richest-man-190826091.html",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-09-15T19:08:26Z",
+      "title": "Elon Musk, the world’s richest man, says he’s living in an Airstream trailer to oversee xAI’s biggest expansion yet",
+      "title_ja": "世界一の富豪イーロン・マスク、xAIの大規模拡張を見守るためAirstreamトレーラーに住む",
+      "summary_ja": "イーロン・マスクは、xAIの最大規模の拡張を監督するため、メンフィスのデータセンターサイトにAirstreamトレーラーで生活していると述べた。これは彼が常に仕事の場で寝泊まりする習慣の一環である。彼の居住スタイルは大胆で、プロジェクトに対する彼のコミットメントを示している。",
+      "key_points": [
+        "イーロン・マスクがメンフィスのデータセンターで生活している。",
+        "xAIの最大規模の拡張計画に関与している。",
+        "彼は仕事の場で寝泊まりする習慣がある。"
+      ],
+      "glossary": [
+        {
+          "term": "xAI",
+          "explain_ja": "イーロン・マスクが設立した人工知能に関する企業。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データを集中管理し、処理するための施設。"
+        }
+      ],
+      "personal_actions": [
+        "xAIやそのプロジェクトに関する最新情報を追う",
+        "メンフィスの技術産業の進展を観察する"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
