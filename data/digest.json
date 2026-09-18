@@ -1,64 +1,39 @@
 {
-  "date": "2026-09-18",
-  "generatedAtJST": "2026-09-18T07:15:19.760+09:00",
+  "date": "2026-09-19",
+  "generatedAtJST": "2026-09-19T07:15:34.550+09:00",
   "items": [
     {
-      "url": "https://financialpost.com/pmn/business-wire-news-releases-pmn/scf-partners-invests-in-american-piping-products-to-fuel-next-phase-of-growth",
-      "source": "Financial Post",
-      "publishedAt": "2026-09-16T21:30:16Z",
-      "title": "SCF Partners Invests in American Piping Products to Fuel Next Phase of Growth",
-      "title_ja": "SCFパートナーズ、アメリカンパイピングプロダクツに投資し成長の次の段階を支援",
-      "summary_ja": "SCFパートナーズは、ミッションクリティカルな管製品を提供するアメリカンパイピングプロダクツの買収を発表しました。この投資は、同社の成長を加速させることを目的としています。アメリカンパイピングプロダクツは多様な産業やエネルギー部門に重要な製品を供給しています。",
+      "url": "https://siliconangle.com/2026/09/17/nvidia-google-and-emerald-ai-launch-flexible-data-center-consortium/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-09-17T20:37:36Z",
+      "title": "Nvidia, Google and Emerald AI launch flexible data center consortium",
+      "title_ja": "Nvidia、Google、Emerald AIが柔軟なデータセンターコンソーシアムを設立",
+      "summary_ja": "Nvidia、Google、Emerald AIが共同で柔軟なデータセンターの推進を目的とした業界コンソーシアム「AI Energy Management Alliance（AEMA）」を設立しました。この柔軟なデータセンターは、電力供給が逼迫する際に電力消費を削減し、グリッドに負荷をかけない運営を特徴とします。AEMAは、ベストプラクティスの策定を通じて、新しいデータセンターの設計に影響を与えることを目指しています。",
       "key_points": [
-        "SCFパートナーズがアメリカンパイピングプロダクツを買収",
-        "アメリカンパイピングプロダクツは重要な管製品のディストリビューター",
-        "投資の目的は企業の成長を加速させること"
+        "Nvidia、Google、Emerald AIがAEMAを設立した。",
+        "柔軟なデータセンターは電力供給の逼迫時にパワードローを削減する。",
+        "Googleは需要応答技術を開発し、1ギガワットを超える能力を持つ。",
+        "Emerald AIはエネルギー消費を抑えるソフトウェアを提供している。",
+        "AEMAはベストプラクティスとパワー最適化を評価するための基準を策定する。"
       ],
       "glossary": [
         {
-          "term": "SCF Partners",
-          "explain_ja": "投資会社で、主にエネルギー関連産業に特化した投資を行う。"
+          "term": "AEMA",
+          "explain_ja": "AI Energy Management Allianceの略称。柔軟なデータセンターの導入を目指すコンソーシアム。"
         },
         {
-          "term": "American Piping Products",
-          "explain_ja": "様々な産業向けに管製品を提供する企業。"
+          "term": "需要応答技術",
+          "explain_ja": "電力需要が高まる際に、データセンターがエネルギー使用を調整する管理技術。"
+        },
+        {
+          "term": "Emerald Conductor",
+          "explain_ja": "Emerald AIが提供するソフトウェアプラットフォーム。グリッドがストレスを受けている際にエネルギー消費を抑える。"
         }
       ],
       "personal_actions": [
-        "業界の最新情報や動向を確認する",
-        "企業の成長戦略を検討する"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://dailycaller.com/2026/09/16/data-centers-blackouts-pennsylvania-public-utility-commission",
-      "source": "The Daily Caller",
-      "publishedAt": "2026-09-16T18:40:16Z",
-      "title": "Data Center Boom Could Supercharge Blackouts Nationwide By 2030, Pennsylvania Regulators Warn",
-      "title_ja": "データセンターの急増が2030年までに全国的な停電を引き起こす可能性、ペンシルベニア州の規制当局が警告",
-      "summary_ja": "ペンシルベニア州の規制当局は、アメリカのAIブームが全国最大の電力網に停電を引き起こすと警告しています。特にデータセンターの急増がその原因とされています。この事態は全国的な電力供給に深刻な影響を及ぼす可能性があります。",
-      "key_points": [
-        "ペンシルベニア州の規制当局が警告を発表。",
-        "アメリカのAIブームがデータセンターの急増を引き起こしている。",
-        "データセンターの増加が全国的な停電の原因になる可能性。",
-        "電力供給に対する影響が懸念されている。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター (Data Center)",
-          "explain_ja": "データを蓄積・管理するための施設で、コンピュータやストレージ機器が集中的に設置されている。"
-        },
-        {
-          "term": "停電 (Blackout)",
-          "explain_ja": "電力供給が停止すること。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの稼働状況や電力供給の状況を確認する。",
-        "エネルギー効率の高い機器の導入を検討する。",
-        "非常時に備えた電力供給のバックアッププランを策定する。"
+        "自施設のエネルギー管理プロセスを見直し、効率化の可能性を検討する。",
+        "AEMAが提唱するベストプラクティスの内容を確認し、今後の運営に役立てる。",
+        "他企業との連携やデータ共有の可能性を探る。"
       ],
       "tags": [
         "DC",
@@ -66,37 +41,71 @@
       ]
     },
     {
-      "url": "https://financialpost.com/globe-newswire/onsemi-introduces-the-embedded-power-platform-a-breakthrough-architecture-for-the-ai-era",
-      "source": "Financial Post",
-      "publishedAt": "2026-09-16T18:35:57Z",
-      "title": "onsemi Introduces the Embedded Power Platform, a Breakthrough Architecture for the AI Era",
-      "title_ja": "onsemi、AI時代の革新的なアーキテクチャ「埋め込みパワープラットフォーム」を発表",
-      "summary_ja": "onsemiは、埋め込みパワープラットフォーム（EPP）を発表し、システムデザインを再定義しました。このプラットフォームは、シリコンウェハ自体をパッケージとして利用し、自動車、産業、AIデータセンター市場向けに高度に統合されたアプローチを提供します。これにより、効率的なパワーシステム設計が実現されると期待されています。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185683692",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-09-17T19:33:23Z",
+      "title": "Bill to curb AI data center utility costs hits snag in Senate - CNBC - Slashdot",
+      "title_ja": "AIデータセンターの電力コスト抑制法案、上院で行き詰まる",
+      "summary_ja": "AIデータセンターの電力コストを軽減する法案が上院で行き詰まりました。上院の民主党員が、下院で可決された法案の阻止を提案し、代替措置を提案しています。この進展は、データセンターのエネルギーコストに影響を与える可能性があります。",
       "key_points": [
-        "埋め込みパワープラットフォーム（EPP）が発表された。",
-        "シリコンウェハをパッケージとして使用する新しいデザインアプローチ。",
-        "自動車、産業、AIデータセンター向けのソリューション。",
-        "効率的なパワーシステム設計を実現することが期待されている。",
-        "新技術によって市場に革新をもたらす。"
+        "AIデータセンターの電力コスト抑制に関する法案が上院で行き詰まる。",
+        "上院民主党員が下院での可決を阻止。",
+        "代替措置が提案されている。",
+        "電力コストへの影響が懸念される。"
       ],
       "glossary": [
         {
-          "term": "Embedded Power Platform (EPP)",
-          "explain_ja": "onsemiが発表した、シリコンウェハを利用した革新的なパワーシステム設計プラットフォーム。"
+          "term": "法案",
+          "explain_ja": "法律の制定を目的とした提案。"
         },
         {
-          "term": "シリコンウェハ",
-          "explain_ja": "半導体デバイスを製造するための基盤となる材料。"
+          "term": "上院",
+          "explain_ja": "アメリカの連邦政府における二院制の一つ。"
+        },
+        {
+          "term": "下院",
+          "explain_ja": "アメリカの連邦政府におけるもう一つの院。"
         }
       ],
       "personal_actions": [
-        "新技術に関する情報をフォローし、業界動向を把握する。",
-        "既存のパワーシステムを見直し、EPP導入の可能性を検討する。",
-        "関連する技術のトレーニングを受ける。"
+        "地域のデータセンターの電力使用状況を確認する。",
+        "AI関連のプロジェクトにおける電力コストの影響を評価する。",
+        "法案の進行状況を定期的にチェックする。"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185683256",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-09-17T18:32:58Z",
+      "title": "Husted will try to clear House-passed data center ratepayer bill - Politico - Slashdot",
+      "title_ja": "ハスティッド氏、下院通過のデータセンター料金請求法案のクリアを試みる",
+      "summary_ja": "ハスティッド氏は下院で通過したデータセンターの料金請求法案を推進する意向を示しています。この法案の通過は、データセンター業界における運営コストに影響を与える可能性があります。民主党が迅速な通過を阻止しているため、法案の行方が注目されています。",
+      "key_points": [
+        "ハスティッド氏がデータセンター料金請求法案の推進を試みる。",
+        "下院での通過はすでに実現しているが、民主党のブロックが存在する。",
+        "法案が通過すれば、データセンターの運営コストに影響を与える可能性がある。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データセンターは、データの管理、保存、処理を行うための施設です。"
+        },
+        {
+          "term": "料金請求法案",
+          "explain_ja": "料金請求法案は、特定のサービスに対する料金の規定や請求方法を定める法律です。"
+        }
+      ],
+      "personal_actions": [
+        "進行中の法案に関する最新情報を確認する。",
+        "自社の運営コストへの影響をシミュレーションする。",
+        "法案への意見を地元議員に送ることを検討する。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
