@@ -1,108 +1,102 @@
 {
-  "date": "2026-09-19",
-  "generatedAtJST": "2026-09-19T07:15:34.550+09:00",
+  "date": "2026-09-20",
+  "generatedAtJST": "2026-09-20T07:15:20.676+09:00",
   "items": [
     {
-      "url": "https://siliconangle.com/2026/09/17/nvidia-google-and-emerald-ai-launch-flexible-data-center-consortium/",
-      "source": "SiliconANGLE News",
-      "publishedAt": "2026-09-17T20:37:36Z",
-      "title": "Nvidia, Google and Emerald AI launch flexible data center consortium",
-      "title_ja": "Nvidia、Google、Emerald AIが柔軟なデータセンターコンソーシアムを設立",
-      "summary_ja": "Nvidia、Google、Emerald AIが共同で柔軟なデータセンターの推進を目的とした業界コンソーシアム「AI Energy Management Alliance（AEMA）」を設立しました。この柔軟なデータセンターは、電力供給が逼迫する際に電力消費を削減し、グリッドに負荷をかけない運営を特徴とします。AEMAは、ベストプラクティスの策定を通じて、新しいデータセンターの設計に影響を与えることを目指しています。",
+      "url": "https://www.channelnewsasia.com/business/trump-talking-senates-thune-about-bill-cut-data-center-electricity-costs-6395891",
+      "source": "CNA",
+      "publishedAt": "2026-09-18T21:23:23Z",
+      "title": "Trump is talking with Senate's Thune about bill to cut data-center electricity costs",
+      "title_ja": "トランプ大統領、データセンターの電力コスト削減法案についてサウスダコタ州のスーン上院院内総務と協議中",
+      "summary_ja": "トランプ大統領は、データセンターの電力コスト上昇から家庭を守る法案について、共和党の上院院内総務ジョン・スーン氏と協議しています。この法案は、データセンターの拡張に伴う電力コストの上昇に対応することを目的としています。トランプ氏の関与は、トランプ政権の電力政策に影響を与える可能性があります。",
       "key_points": [
-        "Nvidia、Google、Emerald AIがAEMAを設立した。",
-        "柔軟なデータセンターは電力供給の逼迫時にパワードローを削減する。",
-        "Googleは需要応答技術を開発し、1ギガワットを超える能力を持つ。",
-        "Emerald AIはエネルギー消費を抑えるソフトウェアを提供している。",
-        "AEMAはベストプラクティスとパワー最適化を評価するための基準を策定する。"
-      ],
-      "glossary": [
-        {
-          "term": "AEMA",
-          "explain_ja": "AI Energy Management Allianceの略称。柔軟なデータセンターの導入を目指すコンソーシアム。"
-        },
-        {
-          "term": "需要応答技術",
-          "explain_ja": "電力需要が高まる際に、データセンターがエネルギー使用を調整する管理技術。"
-        },
-        {
-          "term": "Emerald Conductor",
-          "explain_ja": "Emerald AIが提供するソフトウェアプラットフォーム。グリッドがストレスを受けている際にエネルギー消費を抑える。"
-        }
-      ],
-      "personal_actions": [
-        "自施設のエネルギー管理プロセスを見直し、効率化の可能性を検討する。",
-        "AEMAが提唱するベストプラクティスの内容を確認し、今後の運営に役立てる。",
-        "他企業との連携やデータ共有の可能性を探る。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185683692",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-09-17T19:33:23Z",
-      "title": "Bill to curb AI data center utility costs hits snag in Senate - CNBC - Slashdot",
-      "title_ja": "AIデータセンターの電力コスト抑制法案、上院で行き詰まる",
-      "summary_ja": "AIデータセンターの電力コストを軽減する法案が上院で行き詰まりました。上院の民主党員が、下院で可決された法案の阻止を提案し、代替措置を提案しています。この進展は、データセンターのエネルギーコストに影響を与える可能性があります。",
-      "key_points": [
-        "AIデータセンターの電力コスト抑制に関する法案が上院で行き詰まる。",
-        "上院民主党員が下院での可決を阻止。",
-        "代替措置が提案されている。",
-        "電力コストへの影響が懸念される。"
-      ],
-      "glossary": [
-        {
-          "term": "法案",
-          "explain_ja": "法律の制定を目的とした提案。"
-        },
-        {
-          "term": "上院",
-          "explain_ja": "アメリカの連邦政府における二院制の一つ。"
-        },
-        {
-          "term": "下院",
-          "explain_ja": "アメリカの連邦政府におけるもう一つの院。"
-        }
-      ],
-      "personal_actions": [
-        "地域のデータセンターの電力使用状況を確認する。",
-        "AI関連のプロジェクトにおける電力コストの影響を評価する。",
-        "法案の進行状況を定期的にチェックする。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185683256",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-09-17T18:32:58Z",
-      "title": "Husted will try to clear House-passed data center ratepayer bill - Politico - Slashdot",
-      "title_ja": "ハスティッド氏、下院通過のデータセンター料金請求法案のクリアを試みる",
-      "summary_ja": "ハスティッド氏は下院で通過したデータセンターの料金請求法案を推進する意向を示しています。この法案の通過は、データセンター業界における運営コストに影響を与える可能性があります。民主党が迅速な通過を阻止しているため、法案の行方が注目されています。",
-      "key_points": [
-        "ハスティッド氏がデータセンター料金請求法案の推進を試みる。",
-        "下院での通過はすでに実現しているが、民主党のブロックが存在する。",
-        "法案が通過すれば、データセンターの運営コストに影響を与える可能性がある。"
+        "トランプ大統領がスーン上院院内総務と会談。",
+        "法案は家庭の電力コスト上昇を防ぐことが目的。",
+        "データセンターの拡張に伴う影響に対処する内容。",
+        "共和党の支持を得ることを目指している。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データセンターは、データの管理、保存、処理を行うための施設です。"
+          "explain_ja": "サーバーや関連設備を集中的に配置した施設で、データの保存や処理を行う。"
         },
         {
-          "term": "料金請求法案",
-          "explain_ja": "料金請求法案は、特定のサービスに対する料金の規定や請求方法を定める法律です。"
+          "term": "電力コスト",
+          "explain_ja": "電気の使用にかかる費用で、家庭や企業の経済負担に影響を与える。"
         }
       ],
       "personal_actions": [
-        "進行中の法案に関する最新情報を確認する。",
-        "自社の運営コストへの影響をシミュレーションする。",
-        "法案への意見を地元議員に送ることを検討する。"
+        "データセンターに関する最新の法案動向を確認する。",
+        "地域の電力料金の変動を把握しておく。",
+        "業界ニュースに目を光らせ、影響を理解する。"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/oracle-18b-data-centre-debt-strain-pushback/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-18T21:07:14Z",
+      "title": "Oracle faces $18B data centre debt strain amid local pushback",
+      "title_ja": "オラクル、180億ドルのデータセンター負債の圧力に直面",
+      "summary_ja": "オラクルは、180億ドルのデータセンター負債の圧力と地域の反対に直面しており、これがAIデータセンターの拡張に悪影響を及ぼす可能性がある。これにより、オラクルの競争力と市場の安定性にも悪影響が及ぶ可能性がある。地域住民の反対が、同社のビジネス戦略に影響を与える重要な要因となっている。",
+      "key_points": [
+        "オラクルは180億ドルのデータセンター負債を抱えている。",
+        "地域住民の反対がAIデータセンターの拡張に影響を与えている。",
+        "これによりオラクルの競争力が脅かされる可能性がある。",
+        "市場の安定性にも影響が及ぶと予想される。"
+      ],
+      "glossary": [
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能を処理するためのデータセンター。"
+        },
+        {
+          "term": "負債",
+          "explain_ja": "企業が借り入れた資金の総額。"
+        },
+        {
+          "term": "競争力",
+          "explain_ja": "市場における企業の優位性や能力。"
+        }
+      ],
+      "personal_actions": [
+        "オラクルの最新の経済情報を確認する。",
+        "地域の意見や動向についてリサーチする。",
+        "データセンター関連の業界ニュースを定期的にチェックする。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://oilprice.com/Alternative-Energy/Solar-Energy/Space-Based-Solar-Power-Could-Reach-the-Grid-by-2028.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-09-18T21:00:00Z",
+      "title": "Space-Based Solar Power Could Reach the Grid by 2028",
+      "title_ja": "宇宙ベースの太陽光発電、2028年までに電力網に接続可能か",
+      "summary_ja": "宇宙ベースの太陽光発電が2028年までに電力網に接続される可能性が示唆されています。これにより、急増するデータセンターのエネルギー需要に応えるための新たなエネルギー供給源が確保されることが期待されます。この技術の進展は、持続可能なエネルギーの未来に大きな影響を与えるでしょう。",
+      "key_points": [
+        "宇宙ベースの太陽光発電技術の進展",
+        "2028年までに電力網への接続が予測されている",
+        "データセンターの需要増加に対応する必要性",
+        "人工知能によるエネルギー危機が背景にある",
+        "持続可能なエネルギー供給の向上が期待される"
+      ],
+      "glossary": [
+        {
+          "term": "Space-Based Solar Power",
+          "explain_ja": "地球外空間に設置された太陽光発電システムで、発電した電力を地上に送る技術。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能を指し、エネルギー需給の予測や管理に利用されることがある。"
+        }
+      ],
+      "personal_actions": [
+        "最新のエネルギー技術に関する情報を定期的に確認する",
+        "宇宙ベースのエネルギー技術に関心を持つコミュニティに参加する"
       ],
       "tags": [
         "DC"
