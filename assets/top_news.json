@@ -1,105 +1,104 @@
 {
-  "date": "2026-09-20",
-  "generatedAtJST": "2026-09-20T07:15:20.676+09:00",
+  "date": "2026-09-21",
+  "generatedAtJST": "2026-09-21T07:15:21.102+09:00",
   "items": [
     {
-      "url": "https://www.channelnewsasia.com/business/trump-talking-senates-thune-about-bill-cut-data-center-electricity-costs-6395891",
-      "source": "CNA",
-      "publishedAt": "2026-09-18T21:23:23Z",
-      "title": "Trump is talking with Senate's Thune about bill to cut data-center electricity costs",
-      "title_ja": "トランプ大統領、データセンターの電力コスト削減法案についてサウスダコタ州のスーン上院院内総務と協議中",
-      "summary_ja": "トランプ大統領は、データセンターの電力コスト上昇から家庭を守る法案について、共和党の上院院内総務ジョン・スーン氏と協議しています。この法案は、データセンターの拡張に伴う電力コストの上昇に対応することを目的としています。トランプ氏の関与は、トランプ政権の電力政策に影響を与える可能性があります。",
+      "url": "https://www.marketbeat.com/instant-alerts/event-equinix-sees-ai-driving-data-center-demand-interconnection-growth-2026-09-19/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
+      "source": "MarketBeat",
+      "publishedAt": "2026-09-19T20:02:14Z",
+      "title": "Equinix Sees AI Driving Data Center Demand, Interconnection Growth",
+      "title_ja": "Equinix、AIによるデータセンター需要と相互接続の成長を見込む",
+      "summary_ja": "Equinixは、人工知能の企業導入がデータセンターの高密度キャパシティに対する需要を加速させていると報告した。この動きは、相互接続サービスの成長にも影響を与えると期待されている。市場全体でAI技術の普及が進むことで、データセンター業界に新たな機会が創出されるとみられる。",
       "key_points": [
-        "トランプ大統領がスーン上院院内総務と会談。",
-        "法案は家庭の電力コスト上昇を防ぐことが目的。",
-        "データセンターの拡張に伴う影響に対処する内容。",
-        "共和党の支持を得ることを目指している。"
+        "EquinixはAIの企業導入がデータセンター需要を高めていると指摘",
+        "高密度データセンターキャパシティへの需要が加速中",
+        "相互接続サービスの成長が予想される",
+        "AI技術の普及により市場全体に新たな機会が生まれる",
+        "データセンター業界におけるAIの重要性が高まっている"
       ],
       "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略称で、機械が人間の知能を模倣するための技術。"
+        },
         {
           "term": "データセンター",
-          "explain_ja": "サーバーや関連設備を集中的に配置した施設で、データの保存や処理を行う。"
-        },
-        {
-          "term": "電力コスト",
-          "explain_ja": "電気の使用にかかる費用で、家庭や企業の経済負担に影響を与える。"
+          "explain_ja": "データを管理・保存・処理するための施設で、サーバーやストレージが設置されている。"
         }
       ],
       "personal_actions": [
-        "データセンターに関する最新の法案動向を確認する。",
-        "地域の電力料金の変動を把握しておく。",
-        "業界ニュースに目を光らせ、影響を理解する。"
+        "企業でのAI技術導入に関する計画を確認する",
+        "データセンターのインフラを評価し、需要の増加に備える"
       ],
       "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/oracle-18b-data-centre-debt-strain-pushback/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-09-18T21:07:14Z",
-      "title": "Oracle faces $18B data centre debt strain amid local pushback",
-      "title_ja": "オラクル、180億ドルのデータセンター負債の圧力に直面",
-      "summary_ja": "オラクルは、180億ドルのデータセンター負債の圧力と地域の反対に直面しており、これがAIデータセンターの拡張に悪影響を及ぼす可能性がある。これにより、オラクルの競争力と市場の安定性にも悪影響が及ぶ可能性がある。地域住民の反対が、同社のビジネス戦略に影響を与える重要な要因となっている。",
-      "key_points": [
-        "オラクルは180億ドルのデータセンター負債を抱えている。",
-        "地域住民の反対がAIデータセンターの拡張に影響を与えている。",
-        "これによりオラクルの競争力が脅かされる可能性がある。",
-        "市場の安定性にも影響が及ぶと予想される。"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能を処理するためのデータセンター。"
-        },
-        {
-          "term": "負債",
-          "explain_ja": "企業が借り入れた資金の総額。"
-        },
-        {
-          "term": "競争力",
-          "explain_ja": "市場における企業の優位性や能力。"
-        }
-      ],
-      "personal_actions": [
-        "オラクルの最新の経済情報を確認する。",
-        "地域の意見や動向についてリサーチする。",
-        "データセンター関連の業界ニュースを定期的にチェックする。"
-      ],
-      "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://oilprice.com/Alternative-Energy/Solar-Energy/Space-Based-Solar-Power-Could-Reach-the-Grid-by-2028.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-09-18T21:00:00Z",
-      "title": "Space-Based Solar Power Could Reach the Grid by 2028",
-      "title_ja": "宇宙ベースの太陽光発電、2028年までに電力網に接続可能か",
-      "summary_ja": "宇宙ベースの太陽光発電が2028年までに電力網に接続される可能性が示唆されています。これにより、急増するデータセンターのエネルギー需要に応えるための新たなエネルギー供給源が確保されることが期待されます。この技術の進展は、持続可能なエネルギーの未来に大きな影響を与えるでしょう。",
+      "url": "https://cryptobriefing.com/us-data-centers-sevenfold-power-capacity-increase/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-19T10:07:09Z",
+      "title": "Cleanview reports US data centers to increase power capacity sevenfold",
+      "title_ja": "クリーンビュー、アメリカのデータセンターが電力能力を7倍に増加すると報告",
+      "summary_ja": "アメリカのデータセンターが電力能力を大幅に増加させることが報告されました。この増加は自己完結型エネルギーソリューションへの移行を示しており、エネルギーインフラに大きな影響を与える可能性があります。データセンターの運営効率向上が期待されます。",
       "key_points": [
-        "宇宙ベースの太陽光発電技術の進展",
-        "2028年までに電力網への接続が予測されている",
-        "データセンターの需要増加に対応する必要性",
-        "人工知能によるエネルギー危機が背景にある",
-        "持続可能なエネルギー供給の向上が期待される"
+        "アメリカのデータセンターが電力能力を7倍に増加予定",
+        "エネルギーインフラの変革が進行中",
+        "自己完結型のエネルギーソリューションにシフト"
       ],
       "glossary": [
         {
-          "term": "Space-Based Solar Power",
-          "explain_ja": "地球外空間に設置された太陽光発電システムで、発電した電力を地上に送る技術。"
+          "term": "データセンター",
+          "explain_ja": "情報を収集、保存、管理するための施設。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能を指し、エネルギー需給の予測や管理に利用されることがある。"
+          "term": "電力能力",
+          "explain_ja": "データセンターが消費できる電力量の上限。"
+        },
+        {
+          "term": "自己完結型エネルギーソリューション",
+          "explain_ja": "外部からの電力供給に依存せず、内部でエネルギーを生成・管理するシステム。"
         }
       ],
       "personal_actions": [
-        "最新のエネルギー技術に関する情報を定期的に確認する",
-        "宇宙ベースのエネルギー技術に関心を持つコミュニティに参加する"
+        "データセンターの電力供給計画の更新を確認する",
+        "エネルギー効率を高める対策を検討する",
+        "新たなエネルギーソリューションの導入に備える"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/tech/technology/trump-is-talking-with-senates-thune-about-bill-to-cut-data-center-electricity-costs/articleshow/134346796.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-09-19T02:44:18Z",
+      "title": "Trump is talking with Senate's Thune about bill to cut data-center electricity costs",
+      "title_ja": "トランプ氏、データセンターの電力コスト削減法案についてサネートのサーンと協議中",
+      "summary_ja": "トランプ氏は、データセンターの電力コストを削減する法案についてサネートのサーン氏と協議を行っています。今週、共和党が多数を占める下院では、データセンターを含む大規模な電力使用者に関する考慮を求める『Ratepayer Protection Act』が賛成417票、反対3票で可決されました。これにより、データセンターの電力コストが軽減される可能性があります。",
+      "key_points": [
+        "トランプ氏がデータセンターの電力コスト削減法案について協議。",
+        "下院は『Ratepayer Protection Act』を417対3で可決。",
+        "法案は州の電力規制当局に大規模ユーザーの考慮を求める内容。",
+        "データセンターなどに電力コストの負担軽減が期待される。"
+      ],
+      "glossary": [
+        {
+          "term": "Ratepayer Protection Act",
+          "explain_ja": "大規模な電力使用者に対する電力コストの考慮を求める法案。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "大量のデータを保存・管理するための施設。"
+        }
+      ],
+      "personal_actions": [
+        "データセンター運営における電力コスト管理を見直す。",
+        "最新の法案情報や進捗状況を確認する。"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
