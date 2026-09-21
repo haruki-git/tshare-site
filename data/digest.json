@@ -1,34 +1,38 @@
 {
-  "date": "2026-09-21",
-  "generatedAtJST": "2026-09-21T07:15:21.102+09:00",
+  "date": "2026-09-22",
+  "generatedAtJST": "2026-09-22T07:15:17.814+09:00",
   "items": [
     {
-      "url": "https://www.marketbeat.com/instant-alerts/event-equinix-sees-ai-driving-data-center-demand-interconnection-growth-2026-09-19/?utm_source=yahoofinance&amp;utm_medium=yahoofinance",
-      "source": "MarketBeat",
-      "publishedAt": "2026-09-19T20:02:14Z",
-      "title": "Equinix Sees AI Driving Data Center Demand, Interconnection Growth",
-      "title_ja": "Equinix、AIによるデータセンター需要と相互接続の成長を見込む",
-      "summary_ja": "Equinixは、人工知能の企業導入がデータセンターの高密度キャパシティに対する需要を加速させていると報告した。この動きは、相互接続サービスの成長にも影響を与えると期待されている。市場全体でAI技術の普及が進むことで、データセンター業界に新たな機会が創出されるとみられる。",
+      "url": "https://cryptobriefing.com/iea-ai-data-center-power-demand-double-2030/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-20T18:19:37Z",
+      "title": "International Energy Agency projects AI data center power demand to double by 2030",
+      "title_ja": "国際エネルギー機関、AIデータセンターの電力需要が2030年までに倍増すると予測",
+      "summary_ja": "国際エネルギー機関は、AI駆動のデータセンターの電力需要が2030年までに倍増すると予測しています。この急成長は電力網に負担をかける可能性があり、インフラの迅速な開発が求められています。また、他のエネルギー集約型セクターにも影響を及ぼす可能性があります。",
       "key_points": [
-        "EquinixはAIの企業導入がデータセンター需要を高めていると指摘",
-        "高密度データセンターキャパシティへの需要が加速中",
-        "相互接続サービスの成長が予想される",
-        "AI技術の普及により市場全体に新たな機会が生まれる",
-        "データセンター業界におけるAIの重要性が高まっている"
+        "AIデータセンターの電力需要が2030年までに倍増すると予測",
+        "急成長が電力網に影響を与える可能性",
+        "インフラの迅速な開発が必要とされる",
+        "他のエネルギー集約型セクターへの波及効果"
       ],
       "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略称で、機械が人間の知能を模倣するための技術。"
+          "explain_ja": "人工知能の略称で、機械が人間の知能を模倣する技術。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データを管理・保存・処理するための施設で、サーバーやストレージが設置されている。"
+          "explain_ja": "データを集中管理・保管・処理するための施設。"
+        },
+        {
+          "term": "電力需要",
+          "explain_ja": "一定期間に必要とされる電力の量。"
         }
       ],
       "personal_actions": [
-        "企業でのAI技術導入に関する計画を確認する",
-        "データセンターのインフラを評価し、需要の増加に備える"
+        "データセンターの電力消費についての社内データを確認する。",
+        "インフラの拡張計画を見直し、必要な投資を計画する。",
+        "エネルギー効率の向上を目指した施策を検討する。"
       ],
       "tags": [
         "DC",
@@ -36,69 +40,36 @@
       ]
     },
     {
-      "url": "https://cryptobriefing.com/us-data-centers-sevenfold-power-capacity-increase/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-09-19T10:07:09Z",
-      "title": "Cleanview reports US data centers to increase power capacity sevenfold",
-      "title_ja": "クリーンビュー、アメリカのデータセンターが電力能力を7倍に増加すると報告",
-      "summary_ja": "アメリカのデータセンターが電力能力を大幅に増加させることが報告されました。この増加は自己完結型エネルギーソリューションへの移行を示しており、エネルギーインフラに大きな影響を与える可能性があります。データセンターの運営効率向上が期待されます。",
+      "url": "https://freerepublic.com/focus/f-news/4396210/posts",
+      "source": "Freerepublic.com",
+      "publishedAt": "2026-09-20T04:55:02Z",
+      "title": "Democrat’s Data Center Attack Backfires as Google Money Trail Surfaces",
+      "title_ja": "デモクラットのデータセンター攻撃が反発、グーグルの資金流出が明らかに",
+      "summary_ja": "オハイオ州でのデモクラットの攻撃広告が裏目に出て、シェロッド・ブラウンが同時に受け取ったグーグルからの寄付が浮上しました。ブラウンはデータセンターが電気料金を押し上げていると主張していますが、その一方で自身がグーグルから大金を受け取っている矛盾が指摘されています。この状況は、政治的信頼を損なう可能性が高いです。",
       "key_points": [
-        "アメリカのデータセンターが電力能力を7倍に増加予定",
-        "エネルギーインフラの変革が進行中",
-        "自己完結型のエネルギーソリューションにシフト"
+        "シェロッド・ブラウンは、データセンターが電気料金を押し上げていると批判する広告を出している。",
+        "しかし、ブラウンはグーグルのロビー活動から3万ドル以上の資金を受け取っている。",
+        "トランプ支持のジョン・ヒューステッド上院議員の法案はデータセンターに電力コストを負担させるもので、下院を通過したが上院でブロックされた。",
+        "ブラウンは以前、アマゾンのデータセンターを称賛していたが、現在は同業界を攻撃している。",
+        "ブラウンの広告キャンペーンは、政治的矛盾を明らかにしていると批判されている。"
       ],
       "glossary": [
         {
+          "term": "PAC",
+          "explain_ja": "Political Action Committeeの略。政治活動委員会で、政治的な資金を集めるための団体。"
+        },
+        {
           "term": "データセンター",
-          "explain_ja": "情報を収集、保存、管理するための施設。"
-        },
-        {
-          "term": "電力能力",
-          "explain_ja": "データセンターが消費できる電力量の上限。"
-        },
-        {
-          "term": "自己完結型エネルギーソリューション",
-          "explain_ja": "外部からの電力供給に依存せず、内部でエネルギーを生成・管理するシステム。"
+          "explain_ja": "データを管理、保存する施設で、大規模なサーバーとネットワーク機器を使用する。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力供給計画の更新を確認する",
-        "エネルギー効率を高める対策を検討する",
-        "新たなエネルギーソリューションの導入に備える"
+        "地域の電力使用状況を確認し、システム負荷に対する理解を深める。",
+        "データセンターに関する地域の政策や法案の進捗を追跡する。",
+        "政治家の寄付背景に注目し、透明性を求める。"
       ],
       "tags": [
         "DC"
-      ]
-    },
-    {
-      "url": "https://economictimes.indiatimes.com/tech/technology/trump-is-talking-with-senates-thune-about-bill-to-cut-data-center-electricity-costs/articleshow/134346796.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-09-19T02:44:18Z",
-      "title": "Trump is talking with Senate's Thune about bill to cut data-center electricity costs",
-      "title_ja": "トランプ氏、データセンターの電力コスト削減法案についてサネートのサーンと協議中",
-      "summary_ja": "トランプ氏は、データセンターの電力コストを削減する法案についてサネートのサーン氏と協議を行っています。今週、共和党が多数を占める下院では、データセンターを含む大規模な電力使用者に関する考慮を求める『Ratepayer Protection Act』が賛成417票、反対3票で可決されました。これにより、データセンターの電力コストが軽減される可能性があります。",
-      "key_points": [
-        "トランプ氏がデータセンターの電力コスト削減法案について協議。",
-        "下院は『Ratepayer Protection Act』を417対3で可決。",
-        "法案は州の電力規制当局に大規模ユーザーの考慮を求める内容。",
-        "データセンターなどに電力コストの負担軽減が期待される。"
-      ],
-      "glossary": [
-        {
-          "term": "Ratepayer Protection Act",
-          "explain_ja": "大規模な電力使用者に対する電力コストの考慮を求める法案。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを保存・管理するための施設。"
-        }
-      ],
-      "personal_actions": [
-        "データセンター運営における電力コスト管理を見直す。",
-        "最新の法案情報や進捗状況を確認する。"
-      ],
-      "tags": [
-        "その他"
       ]
     }
   ]
