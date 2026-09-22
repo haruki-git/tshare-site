@@ -1,38 +1,32 @@
 {
-  "date": "2026-09-22",
-  "generatedAtJST": "2026-09-22T07:15:17.814+09:00",
+  "date": "2026-09-23",
+  "generatedAtJST": "2026-09-23T07:15:24.671+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/iea-ai-data-center-power-demand-double-2030/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-09-20T18:19:37Z",
-      "title": "International Energy Agency projects AI data center power demand to double by 2030",
-      "title_ja": "国際エネルギー機関、AIデータセンターの電力需要が2030年までに倍増すると予測",
-      "summary_ja": "国際エネルギー機関は、AI駆動のデータセンターの電力需要が2030年までに倍増すると予測しています。この急成長は電力網に負担をかける可能性があり、インフラの迅速な開発が求められています。また、他のエネルギー集約型セクターにも影響を及ぼす可能性があります。",
+      "url": "https://timesofindia.indiatimes.com/business/india-business/ms-expands-india-capacity-for-cloud-and-ai-services/articleshow/134397830.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-09-21T22:00:03Z",
+      "title": "MS expands India capacity for cloud and AI services",
+      "title_ja": "マイクロソフト、インドにおけるクラウドおよびAIサービスの拡充",
+      "summary_ja": "マイクロソフトがインドで新たなクラウド地域を開設しました。これは、同社にとってアジアでの最大規模のインフラ投資の一つです。この拡張により、インドでのクラウド及びAIサービスの提供能力が一段と向上します。",
       "key_points": [
-        "AIデータセンターの電力需要が2030年までに倍増すると予測",
-        "急成長が電力網に影響を与える可能性",
-        "インフラの迅速な開発が必要とされる",
-        "他のエネルギー集約型セクターへの波及効果"
+        "マイクロソフトがインドに新しいクラウド地域を設立",
+        "ハイデラバードはアジアでの主要なインフラ拡張地",
+        "クラウドおよびAIサービスの提供が強化される"
       ],
       "glossary": [
         {
+          "term": "クラウド",
+          "explain_ja": "オンラインでデータやサービスを提供するモデル。"
+        },
+        {
           "term": "AI",
-          "explain_ja": "人工知能の略称で、機械が人間の知能を模倣する技術。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データを集中管理・保管・処理するための施設。"
-        },
-        {
-          "term": "電力需要",
-          "explain_ja": "一定期間に必要とされる電力の量。"
+          "explain_ja": "人工知能。機械が知的な行動を模倣する技術。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力消費についての社内データを確認する。",
-        "インフラの拡張計画を見直し、必要な投資を計画する。",
-        "エネルギー効率の向上を目指した施策を検討する。"
+        "企業のクラウド・AI利用状況を再評価する",
+        "マイクロソフトのサービスアップデートを確認する"
       ],
       "tags": [
         "DC",
@@ -40,33 +34,64 @@
       ]
     },
     {
-      "url": "https://freerepublic.com/focus/f-news/4396210/posts",
-      "source": "Freerepublic.com",
-      "publishedAt": "2026-09-20T04:55:02Z",
-      "title": "Democrat’s Data Center Attack Backfires as Google Money Trail Surfaces",
-      "title_ja": "デモクラットのデータセンター攻撃が反発、グーグルの資金流出が明らかに",
-      "summary_ja": "オハイオ州でのデモクラットの攻撃広告が裏目に出て、シェロッド・ブラウンが同時に受け取ったグーグルからの寄付が浮上しました。ブラウンはデータセンターが電気料金を押し上げていると主張していますが、その一方で自身がグーグルから大金を受け取っている矛盾が指摘されています。この状況は、政治的信頼を損なう可能性が高いです。",
+      "url": "https://oilprice.com/Alternative-Energy/Solar-Energy/The-Energy-Transition-Has-a-Speed-Advantage-That-Cost-Models-Miss.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-09-21T21:00:00Z",
+      "title": "The Energy Transition Has a Speed Advantage That Cost Models Miss",
+      "title_ja": "エネルギー転換にはコストモデルが見落とすスピードの利点がある",
+      "summary_ja": "エネルギー転換が進む中、従来のコストモデルは電力の需要の加速を考慮していない。データセンター、電化、新工場、冷却などが需要を押し上げており、国際エネルギー機関（IEA）は今後の電力需要が急増すると予測している。この転換のスピードがどのように影響を与えるかが重要な焦点となっている。",
       "key_points": [
-        "シェロッド・ブラウンは、データセンターが電気料金を押し上げていると批判する広告を出している。",
-        "しかし、ブラウンはグーグルのロビー活動から3万ドル以上の資金を受け取っている。",
-        "トランプ支持のジョン・ヒューステッド上院議員の法案はデータセンターに電力コストを負担させるもので、下院を通過したが上院でブロックされた。",
-        "ブラウンは以前、アマゾンのデータセンターを称賛していたが、現在は同業界を攻撃している。",
-        "ブラウンの広告キャンペーンは、政治的矛盾を明らかにしていると批判されている。"
+        "従来のコストモデルは電力需要の加速を考慮していない",
+        "データセンターや新しい工場の電力需要が急増中",
+        "国際エネルギー機関（IEA）が電力需要の急増を予測している",
+        "エネルギー転換のスピードが市場のダイナミクスに影響を与える"
       ],
       "glossary": [
         {
-          "term": "PAC",
-          "explain_ja": "Political Action Committeeの略。政治活動委員会で、政治的な資金を集めるための団体。"
+          "term": "International Energy Agency (IEA)",
+          "explain_ja": "国際エネルギー機関で、エネルギー政策についてのデータや提言を行う国際的な機関。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを管理、保存する施設で、大規模なサーバーとネットワーク機器を使用する。"
+          "term": "電力需要",
+          "explain_ja": "特定の期間に必要とされる電力の量を指し、通常はエネルギーの消費や生産の変動を伴う。"
         }
       ],
       "personal_actions": [
-        "地域の電力使用状況を確認し、システム負荷に対する理解を深める。",
-        "データセンターに関する地域の政策や法案の進捗を追跡する。",
-        "政治家の寄付背景に注目し、透明性を求める。"
+        "現在の電力需要に対する自社の依存度を評価する",
+        "エネルギー転換に関連する新技術の導入を検討する",
+        "需給バランスを保つための戦略を見直す"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "http://commercialobserver.com/2026/09/hochul-data-center-restriction-raise-act-new-york/",
+      "source": "Commercial Observer",
+      "publishedAt": "2026-09-21T17:03:19Z",
+      "title": "Hochul Adds New Restrictions to Data Center Development in New York",
+      "title_ja": "ホチュル知事、ニューヨークのデータセンター開発に新たな制限を追加",
+      "summary_ja": "ニューヨーク州知事キャシー・ホチュルは、データセンターの成長を抑制する新たな取り組みを発表した。今回はデータセンターの開発者や運営者に対し、透明性や安全性、インシデント報告の要件を強化する。この新規則は2024年1月1日から施行される。これにより、データセンターの安全管理が強化されることが期待されている。",
+      "key_points": [
+        "新たな透明性と安全性の要件がデータセンターに適用される。",
+        "インシデントは72時間以内に報告する必要がある。",
+        "四半期ごとのリスク報告書と2年ごとの開示声明が求められる。",
+        "50メガワット以上の新しいデータセンターの建設は2027年7月まで禁止される。"
+      ],
+      "glossary": [
+        {
+          "term": "RAISE Act",
+          "explain_ja": "Responsible AI Safety and Education法。AIの安全性と教育に関する法律。"
+        },
+        {
+          "term": "DIGIT",
+          "explain_ja": "Digital Innovation, Governance, Integrity and Trustの略称。ニューヨーク州で新設されたオフィス。"
+        }
+      ],
+      "personal_actions": [
+        "データセンター関連の最新情報をフォローする。",
+        "新しい規制に対する意見や必要な準備を検討する。",
+        "安全性の確保に向けた社内方針の見直しを行う。"
       ],
       "tags": [
         "DC"
