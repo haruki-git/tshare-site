@@ -1,113 +1,100 @@
 {
-  "date": "2026-09-24",
-  "generatedAtJST": "2026-09-24T07:15:29.272+09:00",
+  "date": "2026-09-25",
+  "generatedAtJST": "2026-09-25T07:15:24.264+09:00",
   "items": [
     {
-      "url": "https://www.insurancejournal.com/news/southeast/2026/09/22/886435.htm",
-      "source": "Insurance Journal",
-      "publishedAt": "2026-09-22T16:05:09Z",
-      "title": "Google to Fund Power-Capacity Increases at Two Georgia Nuclear Plants",
-      "title_ja": "Googleがジョージア州の2つの原子力発電所の容量増強を資金提供",
-      "summary_ja": "Googleは、データセンターによる電力需要の増加に対応するため、ジョージア州の2つの原子力発電所の容量増強を資金提供することを発表しました。この増強により、約96メガワットの新たな電力量が追加される見込みです。これは、住民や産業顧客に対するコストの負担を軽減する目的があります。",
+      "url": "https://cryptobriefing.com/microsoft-alphabet-data-center-climate-week/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-23T18:39:51Z",
+      "title": "Microsoft, Alphabet executives defend data center expansion at climate meetings as emissions surge",
+      "title_ja": "MicrosoftとAlphabetの幹部、気候会議でデータセンター拡張を擁護",
+      "summary_ja": "MicrosoftとAlphabetはデータセンターの拡張について気候会議で説明を行った。彼らは技術の成長と持続可能な環境 practices の間にある緊張関係に直面している。データセンターの拡張が環境への影響を与える一方で、テクノロジーの進化が持つ可能性を強調している。",
       "key_points": [
-        "GoogleはVogtleおよびHatchの2つの核施設の容量増強を資金提供する。",
-        "新たに追加される電力量は約96メガワット。",
-        "この契約は規制当局の承認が必要。",
-        "電力需要の急増により、原子力発電の重要性が高まっている。",
-        "過去にも同様の契約が他企業との間で行われている。"
+        "MicrosoftとAlphabetの幹部が気候会議に出席",
+        "データセンター拡張の必要性を説明",
+        "テクノロジー成長と環境保護のバランスが課題",
+        "データセンターの環境への影響が懸念される",
+        "幹部は技術革新の重要性を強調"
       ],
       "glossary": [
         {
-          "term": "uprate",
-          "explain_ja": "原子炉の出力を増強するために、機械部品の交換などを行うこと。"
+          "term": "データセンター",
+          "explain_ja": "データストレージや処理を行う設備のこと。"
         },
         {
-          "term": "Southern Nuclear",
-          "explain_ja": "Southern Co.の子会社で、ジョージア州の原子力発電所を運営している。"
+          "term": "持続可能な環境",
+          "explain_ja": "未来の世代のニーズを満たしつつ、現在のニーズを満たす環境保護の考え方。"
         }
       ],
       "personal_actions": [
-        "地域の電力需要のトレンドを把握し、将来のエネルギー使用計画を見直す。",
-        "原子力発電の環境影響についての情報を確認し、理解を深める。"
+        "データセンターのエネルギー効率の向上について現場で確認する",
+        "環境へ配慮したテクノロジーの導入を推進する"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.techpowerup.com/352940/amd-adds-gddr7-support-in-gpu-driver-preparing-for-rdna-5-launch",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-09-22T15:25:20Z",
-      "title": "AMD Adds GDDR7 Support in GPU Driver, Preparing for RDNA 5 Launch",
-      "title_ja": "AMD、RDNA 5発表に向けてGPUドライバーにGDDR7サポートを追加",
-      "summary_ja": "AMDは、次世代RDNA 5 GPUに向けた準備として、Linux用オープンソースグラフィックドライバーにGDDR7メモリのサポートを追加しました。これにより、メモリ速度の大幅な向上や容量増加が期待され、省エネ効率も改善される見込みです。GDDR7の導入により、AMDのゲームおよびワークステーショングラフィックカードの性能が向上する可能性があります。",
+      "url": "https://www.insurancejournal.com/news/east/2026/09/23/886543.htm",
+      "source": "Insurance Journal",
+      "publishedAt": "2026-09-23T15:17:28Z",
+      "title": "New Jersey Fines Data Center $1 Million Over Generators It Says Were Not Permitted",
+      "title_ja": "ニュージャージー州、データセンターに100万ドルの罰金を科す",
+      "summary_ja": "ニュージャージー州の環境保護局が、データワンデータセンターに対して1,070,000ドルの罰金を命じました。これは、62台の天然ガス発電機を必要な州の許可なしに設置・運用していたことに起因しています。この処分は、同州の大気汚染防止法に違反しているとされ、データセンターに対する強い警告となっています。",
       "key_points": [
-        "AMDはGDDR7メモリのサポートをオープンソースGPUドライバーに追加した。",
-        "RDNA 5 GPUの予定されている性能向上が期待される。",
-        "GDDR6の最高速度は20 Gb/sであるが、GDDR7は36 Gb/sおよび将来的には48 Gb/sに達する可能性がある。",
-        "新しいDisplay Core Next (DCN) 6 が導入され、高解像度・高リフレッシュレートをサポート。",
-        "AMDはデータセンター向けGPUにはHBMを使用し、消費者向けカードにはGDDRを使用している。"
+        "データワンデータセンターが62台の発電機を許可なしに設置・運用していた",
+        "ニュージャージー州環境保護局（DEP）が1,070,000ドルの罰金を科す",
+        "この罰金は州内のデータセンターに対する最大のものとされる",
+        "データワンは必要な承認があると主張しているが、罰金に対する上訴は不明",
+        "新しい法案により、データセンターは自己のクリーンエネルギーの導入が求められる"
       ],
       "glossary": [
         {
-          "term": "GDDR7",
-          "explain_ja": "次世代のグラフィックメモリで、高速なデータ転送が可能。"
+          "term": "DEP",
+          "explain_ja": "ニュージャージー州の環境保護局。州内の環境規制を監督する機関。"
         },
         {
-          "term": "RDNA 5",
-          "explain_ja": "AMDの次世代グラフィックアーキテクチャ。"
-        },
-        {
-          "term": "DCN 6",
-          "explain_ja": "AMDの新しいディスプレイ出力エンジンで、様々な表示機能を提供。"
-        },
-        {
-          "term": "HBM",
-          "explain_ja": "High Bandwidth Memoryの略で、高速メモリ技術。"
+          "term": "Air Pollution Control Act",
+          "explain_ja": "ニュージャージー州の大気汚染防止法。大気の質を保護するための法律。"
         }
       ],
       "personal_actions": [
-        "AMDの新しいGPUに関する情報を定期的にチェックする。",
-        "既存のAMDハードウェアの最新ドライバーを確認し、更新する。",
-        "次世代メモリの特性を考慮し、将来的なアップグレード計画を検討する。"
+        "データセンターの発電機に関する州の規制を確認する",
+        "自社のエネルギー使用状況と許可状況を確認する",
+        "適切な許可が取得されているか定期的に見直す"
       ],
       "tags": [
-        "インフラ",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://www.insurancejournal.com/news/southcentral/2026/09/22/886377.htm",
-      "source": "Insurance Journal",
-      "publishedAt": "2026-09-22T12:15:33Z",
-      "title": "Texas Orders Halt to New Data Center Permits Pending Audit",
-      "title_ja": "テキサス州、新しいデータセンターの許可を監査まで停止",
-      "summary_ja": "テキサス州のグレッグ・アボット知事は、電力網へのリスク評価が完了するまで新しいデータセンターの許可を保留するよう命じました。この決定は、州の電力網や水資源に対する懸念から来ており、特にAIハブの拡大に対する効果的な一時停止を意味します。この問題は11月の中間選挙の重要な焦点となる可能性があります。",
+      "url": "https://politicalwire.com/2026/09/23/environmental-group-bet-on-data-center-backlash/",
+      "source": "Politicalwire.com",
+      "publishedAt": "2026-09-23T14:18:00Z",
+      "title": "Environmental Groups Bet on Data Center Backlash",
+      "title_ja": "環境団体がデータセンターの反発に賭ける",
+      "summary_ja": "環境団体がデータセンターに対する反発を活用しようとしています。背景には、データセンターの環境への影響に対する懸念があります。この動きは、業界への影響を及ぼす可能性があるため注目されています。",
       "key_points": [
-        "データセンターの新規許可は、リスク評価が完了するまで保留される。",
-        "データセンターは電力インフラコストを自己負担し、地域社会の水資源を使用しないことを証明する必要がある。",
-        "テキサス州では45のデータセンタープロジェクトが地域の反対により停止または遅延。",
-        "アボット知事は、データセンターに対する財政的インセンティブの廃止を目指す。",
-        "エネルギー強国テキサスは、AIブームの中心にいるが、データセンターの電力網接続に苦慮している。"
+        "環境団体がデータセンターへの反発を促進している",
+        "データセンターの環境への影響が懸念されている",
+        "この動きは業界に影響を与える可能性がある"
       ],
       "glossary": [
         {
-          "term": "Ercot",
-          "explain_ja": "電力信頼性協議会で、テキサス州の電力グリッドを管理・監視する機関。"
+          "term": "データセンター",
+          "explain_ja": "データを集め、保管、処理するための施設。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存、処理、管理するための施設で、近年AI技術の発展に伴い増加している。"
+          "term": "環境団体",
+          "explain_ja": "自然環境の保護を目的とした非営利団体。"
         }
       ],
       "personal_actions": [
-        "新しいデータセンター許可の影響を地域で確認する。",
-        "電力インフラや水資源の使用状況についての地域の議論に参加する。",
-        "データセンターの環境への影響について情報を収集し、自身の意見を形成する。"
+        "データセンターの運用における環境対策を確認する",
+        "地域の環境団体の活動をフォローする"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     }
   ]
