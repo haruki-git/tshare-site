@@ -1,100 +1,117 @@
 {
-  "date": "2026-09-25",
-  "generatedAtJST": "2026-09-25T07:15:24.264+09:00",
+  "date": "2026-09-26",
+  "generatedAtJST": "2026-09-26T07:15:23.732+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/microsoft-alphabet-data-center-climate-week/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-09-23T18:39:51Z",
-      "title": "Microsoft, Alphabet executives defend data center expansion at climate meetings as emissions surge",
-      "title_ja": "MicrosoftとAlphabetの幹部、気候会議でデータセンター拡張を擁護",
-      "summary_ja": "MicrosoftとAlphabetはデータセンターの拡張について気候会議で説明を行った。彼らは技術の成長と持続可能な環境 practices の間にある緊張関係に直面している。データセンターの拡張が環境への影響を与える一方で、テクノロジーの進化が持つ可能性を強調している。",
+      "url": "https://www.storagereview.com/review/solidigm-d5-p5430-30-72tb-review",
+      "source": "Storagereview.com",
+      "publishedAt": "2026-09-24T18:10:51Z",
+      "title": "Solidigm D5-P5430 30.72TB E3.S Review: Gen4 QLC for Mixed Workloads",
+      "title_ja": "Solidigm D5-P5430 30.72TB E3.Sレビュー：混在ワークロード向けのGen4 QLC",
+      "summary_ja": "Solidigm D5-P5430は、SolidigmのQLCデータセンターラインのメインストリームTierです。このドライブは、容量最大化を図るD5-P5336の下に位置し、混在ワークロードに対して小さなインダイレクションユニットを備えています。これにより、小規模なブロックワークロードでのパフォーマンスが影響を受けます。データセンター向けの新たな選択肢となるでしょう。",
       "key_points": [
-        "MicrosoftとAlphabetの幹部が気候会議に出席",
-        "データセンター拡張の必要性を説明",
-        "テクノロジー成長と環境保護のバランスが課題",
-        "データセンターの環境への影響が懸念される",
-        "幹部は技術革新の重要性を強調"
+        "Solidigm D5-P5430は30.72TBのE3.Sドライブ。",
+        "QLC技術を採用しており、データセンター向けにデザインされている。",
+        "混在ワークロードに適した性能は高いが、小規模な書き込みには課題がある。",
+        "容量最大化を狙うD5-P5336とは異なる特徴を持つ。",
+        "インダイレクションユニットが16KBであることが影響を及ぼす。"
+      ],
+      "glossary": [
+        {
+          "term": "QLC",
+          "explain_ja": "Quad-Level Cellの略で、1つのメモリセルに4ビットのデータを格納する技術。"
+        },
+        {
+          "term": "E3.S",
+          "explain_ja": "データセンター向けの新しい形状のSSDインターフェース。"
+        }
+      ],
+      "personal_actions": [
+        "ドライブの性能を理解し、テストの結果を確認する。",
+        "同世代の他製品と比較して、自社のニーズに最も適したストレージを選定する。"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://assetstore.unity.com/packages/3d/props/sci-fi-props-pack-410158",
+      "source": "Unity.com",
+      "publishedAt": "2026-09-24T17:32:10Z",
+      "title": "Sci-Fi Props Pack by Animaster Studio",
+      "title_ja": "アニマスタースタジオのSFプロップパック",
+      "summary_ja": "アニマスタースタジオが提供する「Sci-Fi Props Pack」は、ユニバーサルレンダーパイプライン（URP）用の10種類のSF環境プロップを含んでいます。具体的には、エアロック、サーバーラック、シールドジェネレーター、ホロテーブルなどが含まれ、いずれも4K PBRおよびエミッシブライティングに対応しています。このパックはUnityのバージョン6000.3.23f1でテストされています。",
+      "key_points": [
+        "10種類のSF環境プロップを提供",
+        "ユニバーサルレンダーパイプライン（URP）専用",
+        "4K PBRおよびエミッシブライティング対応",
+        "テストされたUnityバージョンは6000.3.23f1",
+        "主なプロップにはエアロックやサーバーラックが含まれる"
+      ],
+      "glossary": [
+        {
+          "term": "URP",
+          "explain_ja": "ユニバーサルレンダーパイプライン、Unityのレンダリングの手法の一つ。"
+        },
+        {
+          "term": "PBR",
+          "explain_ja": "物理ベースのレンダリング、現実世界の材料の特性をシミュレーションする技術。"
+        },
+        {
+          "term": "エミッシブライティング",
+          "explain_ja": "物体が光を放つように見える効果。"
+        },
+        {
+          "term": "プロップ",
+          "explain_ja": "ゲームや映画に使用される小道具や背景要素。"
+        }
+      ],
+      "personal_actions": [
+        "ユニティの最新バージョンを確認し、プロジェクトに適したバージョンを使用する",
+        "パックの内容を実際のプロジェクトでテストしてみる",
+        "エミッシブライティングやPBR効果を試し、表現力を向上させる"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://www.thehindubusinessline.com/info-tech/telangana-targets-5-gw-hyperscale-data-centre-capacity-by-2029/article71502737.ece",
+      "source": "BusinessLine",
+      "publishedAt": "2026-09-24T08:07:04Z",
+      "title": "Telangana targets 5 GW Hyperscale data centre capacity by 2029",
+      "title_ja": "テランガナ州、2029年までに5GWのハイパースケールデータセンター容量を目指す",
+      "summary_ja": "テランガナ州は2029年までに5GWのデータセンター容量を建設することを目指し、約300億ドルの投資を見込んでいます。この計画には、AI規模での計算や高密度GPU、ハイパースケールクラウドを基にした新しいプロジェクトが含まれています。また、現在運用されているデータセンターは2.5GWを超え、主要なグローバル企業が参加しています。これにより、地域の経済や技術発展に大きな影響を与えることが期待されています。",
+      "key_points": [
+        "テランガナ州は2029年までに5GWのデータセンター容量を目指す。",
+        "約300億ドルの投資が見込まれている。",
+        "新プロジェクトはAI、GPU、ハイパースケールクラウドに特化している。",
+        "現在、テランガナ州には2.5GWのデータセンター容量がある。",
+        "マイクロソフトはインフラを支えるため、持続可能な成長に向けた取り組みを行っている。",
+        "地域のスキル開発プログラムが進行中。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データストレージや処理を行う設備のこと。"
+          "explain_ja": "大量のデータを保存、管理、処理するための施設。"
         },
         {
-          "term": "持続可能な環境",
-          "explain_ja": "未来の世代のニーズを満たしつつ、現在のニーズを満たす環境保護の考え方。"
+          "term": "ハイパースケール",
+          "explain_ja": "大規模なデータ処理が可能なクラウドインフラストラクチャのこと。"
+        },
+        {
+          "term": "AIスケール計算",
+          "explain_ja": "人工知能（AI）アプリケーションのために最適化されたコンピューティング能力。"
         }
       ],
       "personal_actions": [
-        "データセンターのエネルギー効率の向上について現場で確認する",
-        "環境へ配慮したテクノロジーの導入を推進する"
+        "地域のデータセンターに関する運用やインフラに関与するプロジェクトに参加する。",
+        "新しい技術やスキルに関する研修プログラムに参加し、知識を深める。",
+        "持続可能なインフラに関連するイニシアチブを支援するための地元パートナーと協力する。"
       ],
       "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.insurancejournal.com/news/east/2026/09/23/886543.htm",
-      "source": "Insurance Journal",
-      "publishedAt": "2026-09-23T15:17:28Z",
-      "title": "New Jersey Fines Data Center $1 Million Over Generators It Says Were Not Permitted",
-      "title_ja": "ニュージャージー州、データセンターに100万ドルの罰金を科す",
-      "summary_ja": "ニュージャージー州の環境保護局が、データワンデータセンターに対して1,070,000ドルの罰金を命じました。これは、62台の天然ガス発電機を必要な州の許可なしに設置・運用していたことに起因しています。この処分は、同州の大気汚染防止法に違反しているとされ、データセンターに対する強い警告となっています。",
-      "key_points": [
-        "データワンデータセンターが62台の発電機を許可なしに設置・運用していた",
-        "ニュージャージー州環境保護局（DEP）が1,070,000ドルの罰金を科す",
-        "この罰金は州内のデータセンターに対する最大のものとされる",
-        "データワンは必要な承認があると主張しているが、罰金に対する上訴は不明",
-        "新しい法案により、データセンターは自己のクリーンエネルギーの導入が求められる"
-      ],
-      "glossary": [
-        {
-          "term": "DEP",
-          "explain_ja": "ニュージャージー州の環境保護局。州内の環境規制を監督する機関。"
-        },
-        {
-          "term": "Air Pollution Control Act",
-          "explain_ja": "ニュージャージー州の大気汚染防止法。大気の質を保護するための法律。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの発電機に関する州の規制を確認する",
-        "自社のエネルギー使用状況と許可状況を確認する",
-        "適切な許可が取得されているか定期的に見直す"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://politicalwire.com/2026/09/23/environmental-group-bet-on-data-center-backlash/",
-      "source": "Politicalwire.com",
-      "publishedAt": "2026-09-23T14:18:00Z",
-      "title": "Environmental Groups Bet on Data Center Backlash",
-      "title_ja": "環境団体がデータセンターの反発に賭ける",
-      "summary_ja": "環境団体がデータセンターに対する反発を活用しようとしています。背景には、データセンターの環境への影響に対する懸念があります。この動きは、業界への影響を及ぼす可能性があるため注目されています。",
-      "key_points": [
-        "環境団体がデータセンターへの反発を促進している",
-        "データセンターの環境への影響が懸念されている",
-        "この動きは業界に影響を与える可能性がある"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データを集め、保管、処理するための施設。"
-        },
-        {
-          "term": "環境団体",
-          "explain_ja": "自然環境の保護を目的とした非営利団体。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの運用における環境対策を確認する",
-        "地域の環境団体の活動をフォローする"
-      ],
-      "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
