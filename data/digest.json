@@ -1,113 +1,108 @@
 {
-  "date": "2026-09-26",
-  "generatedAtJST": "2026-09-26T07:15:23.732+09:00",
+  "date": "2026-09-27",
+  "generatedAtJST": "2026-09-27T07:15:20.435+09:00",
   "items": [
     {
-      "url": "https://www.storagereview.com/review/solidigm-d5-p5430-30-72tb-review",
-      "source": "Storagereview.com",
-      "publishedAt": "2026-09-24T18:10:51Z",
-      "title": "Solidigm D5-P5430 30.72TB E3.S Review: Gen4 QLC for Mixed Workloads",
-      "title_ja": "Solidigm D5-P5430 30.72TB E3.Sレビュー：混在ワークロード向けのGen4 QLC",
-      "summary_ja": "Solidigm D5-P5430は、SolidigmのQLCデータセンターラインのメインストリームTierです。このドライブは、容量最大化を図るD5-P5336の下に位置し、混在ワークロードに対して小さなインダイレクションユニットを備えています。これにより、小規模なブロックワークロードでのパフォーマンスが影響を受けます。データセンター向けの新たな選択肢となるでしょう。",
+      "url": "https://dailycaller.com/2026/09/25/oracle-project-jupiter-force-majeure-new-mexico-air-permit-stargate-chris-johnson",
+      "source": "The Daily Caller",
+      "publishedAt": "2026-09-25T21:50:31Z",
+      "title": "Oracle’s AI Data Center Waits On New Mexico To Approve The Power It Promised To Bring",
+      "title_ja": "オラクルのAIデータセンターがニューメキシコの電力承認待ち",
+      "summary_ja": "オラクルは、ニューメキシコにおけるAIデータセンターの運用に向けて、必要な電力供給の承認を州当局がまだ行っていないため、可能な遅延に備えています。これにより、計画されているプロジェクトの進行が影響を受ける可能性があります。新たな電力供給の承認が得られない限り、データセンターの稼働が難しくなるでしょう。",
       "key_points": [
-        "Solidigm D5-P5430は30.72TBのE3.Sドライブ。",
-        "QLC技術を採用しており、データセンター向けにデザインされている。",
-        "混在ワークロードに適した性能は高いが、小規模な書き込みには課題がある。",
-        "容量最大化を狙うD5-P5336とは異なる特徴を持つ。",
-        "インダイレクションユニットが16KBであることが影響を及ぼす。"
+        "オラクルはニューメキシコにAIデータセンターを建設中",
+        "州当局による電力供給の承認が未だされていない",
+        "承認待ちがプロジェクトの進行に遅延をもたらす可能性"
       ],
       "glossary": [
         {
-          "term": "QLC",
-          "explain_ja": "Quad-Level Cellの略で、1つのメモリセルに4ビットのデータを格納する技術。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能関連の処理を行うためのデータセンター。"
         },
         {
-          "term": "E3.S",
-          "explain_ja": "データセンター向けの新しい形状のSSDインターフェース。"
+          "term": "電力供給",
+          "explain_ja": "データセンターが必要とする電力を外部から供給すること。"
         }
       ],
       "personal_actions": [
-        "ドライブの性能を理解し、テストの結果を確認する。",
-        "同世代の他製品と比較して、自社のニーズに最も適したストレージを選定する。"
+        "プロジェクトの進行状況について定期的に情報をチェックする",
+        "電力供給関連の政府動向をフォローする",
+        "データセンターの運用計画を見直す"
       ],
       "tags": [
-        "その他"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://assetstore.unity.com/packages/3d/props/sci-fi-props-pack-410158",
-      "source": "Unity.com",
-      "publishedAt": "2026-09-24T17:32:10Z",
-      "title": "Sci-Fi Props Pack by Animaster Studio",
-      "title_ja": "アニマスタースタジオのSFプロップパック",
-      "summary_ja": "アニマスタースタジオが提供する「Sci-Fi Props Pack」は、ユニバーサルレンダーパイプライン（URP）用の10種類のSF環境プロップを含んでいます。具体的には、エアロック、サーバーラック、シールドジェネレーター、ホロテーブルなどが含まれ、いずれも4K PBRおよびエミッシブライティングに対応しています。このパックはUnityのバージョン6000.3.23f1でテストされています。",
+      "url": "https://cryptobriefing.com/supermicro-gigawatt-ai-data-center-spacexai/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-25T21:16:47Z",
+      "title": "Supermicro advances gigawatt-scale AI data center with SpaceXAI",
+      "title_ja": "Supermicro、SpaceXAIとの協力でギガワット規模のAIデータセンターを推進",
+      "summary_ja": "SupermicroがSpaceXAIと協力し、ギガワット規模のAIデータセンターを推進しています。この取り組みは、AIインフラを革命的に変える可能性を秘めており、既存の電力網に挑戦しながら、AIや宇宙技術の進展を加速させることが期待されています。今後の技術発展に大きな影響を与えるでしょう。",
       "key_points": [
-        "10種類のSF環境プロップを提供",
-        "ユニバーサルレンダーパイプライン（URP）専用",
-        "4K PBRおよびエミッシブライティング対応",
-        "テストされたUnityバージョンは6000.3.23f1",
-        "主なプロップにはエアロックやサーバーラックが含まれる"
+        "SupermicroとSpaceXAIが協力。",
+        "ギガワット規模のAIデータセンターを開発。",
+        "AIインフラの革命的な変化が期待される。",
+        "既存の電力網に対する挑戦。",
+        "AIおよび宇宙技術の進展を加速。"
       ],
       "glossary": [
         {
-          "term": "URP",
-          "explain_ja": "ユニバーサルレンダーパイプライン、Unityのレンダリングの手法の一つ。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）。機械が人間の知的な行動を模倣する技術。"
         },
         {
-          "term": "PBR",
-          "explain_ja": "物理ベースのレンダリング、現実世界の材料の特性をシミュレーションする技術。"
+          "term": "データセンター",
+          "explain_ja": "データの保存や処理を行うための施設。"
         },
         {
-          "term": "エミッシブライティング",
-          "explain_ja": "物体が光を放つように見える効果。"
-        },
-        {
-          "term": "プロップ",
-          "explain_ja": "ゲームや映画に使用される小道具や背景要素。"
+          "term": "ギガワット",
+          "explain_ja": "電力の単位。1ギガワットは10億ワットに相当する。"
         }
       ],
       "personal_actions": [
-        "ユニティの最新バージョンを確認し、プロジェクトに適したバージョンを使用する",
-        "パックの内容を実際のプロジェクトでテストしてみる",
-        "エミッシブライティングやPBR効果を試し、表現力を向上させる"
+        "データセンターの最新技術に関する情報を定期的にチェックする。",
+        "AIインフラに関するセミナーやワークショップに参加することで知識を深める。",
+        "エネルギー管理の最適化に向けた内部プロジェクトを検討する。"
       ],
       "tags": [
-        "その他"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.thehindubusinessline.com/info-tech/telangana-targets-5-gw-hyperscale-data-centre-capacity-by-2029/article71502737.ece",
-      "source": "BusinessLine",
-      "publishedAt": "2026-09-24T08:07:04Z",
-      "title": "Telangana targets 5 GW Hyperscale data centre capacity by 2029",
-      "title_ja": "テランガナ州、2029年までに5GWのハイパースケールデータセンター容量を目指す",
-      "summary_ja": "テランガナ州は2029年までに5GWのデータセンター容量を建設することを目指し、約300億ドルの投資を見込んでいます。この計画には、AI規模での計算や高密度GPU、ハイパースケールクラウドを基にした新しいプロジェクトが含まれています。また、現在運用されているデータセンターは2.5GWを超え、主要なグローバル企業が参加しています。これにより、地域の経済や技術発展に大きな影響を与えることが期待されています。",
+      "url": "https://www.techradar.com/pro/alibaba-wants-to-expand-data-center-capacity-past-20-gw-by-2032-says-its-new-v900-ai-chip-can-scale-to-500-000-card-clusters-but-will-chinas-most-powerful-ai-chip-be-enough-to-displace-nvidia-gpus",
+      "source": "TechRadar",
+      "publishedAt": "2026-09-25T19:10:00Z",
+      "title": "Alibaba wants to expand data center capacity past 20 GW by 2032, says its new V900 AI chip can scale to 500,000-card clusters, but will 'China's most powerful AI chip' be enough to displace Nvidia GPUs?",
+      "title_ja": "アリババ、2032年までにデータセンター容量を20GW超へ拡大計画",
+      "summary_ja": "アリババは2032年までにデータセンターの容量を20GW以上に拡大する意向を示しています。新しいV900 AIチップは、50万のカードクラスタにスケール可能と言いますが、この中国の最も強力なAIチップはNvidiaのGPUを置き換えられるのでしょうか。競争相手であるHuaweiに対抗するため、詳細は明らかにされていません。",
       "key_points": [
-        "テランガナ州は2029年までに5GWのデータセンター容量を目指す。",
-        "約300億ドルの投資が見込まれている。",
-        "新プロジェクトはAI、GPU、ハイパースケールクラウドに特化している。",
-        "現在、テランガナ州には2.5GWのデータセンター容量がある。",
-        "マイクロソフトはインフラを支えるため、持続可能な成長に向けた取り組みを行っている。",
-        "地域のスキル開発プログラムが進行中。"
+        "アリババ、2032年までにデータセンター容量を20GW以上予定",
+        "新しいV900 AIチップは500,000カードクラスタにスケール可能",
+        "中国国内市場でNvidiaチップに挑戦",
+        "Huaweiとの競争が鍵となる見込み"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "大量のデータを保存、管理、処理するための施設。"
+          "explain_ja": "データの保存、管理、処理を行う施設。"
         },
         {
-          "term": "ハイパースケール",
-          "explain_ja": "大規模なデータ処理が可能なクラウドインフラストラクチャのこと。"
+          "term": "AIチップ",
+          "explain_ja": "人工知能の処理を特化して行うための半導体チップ。"
         },
         {
-          "term": "AIスケール計算",
-          "explain_ja": "人工知能（AI）アプリケーションのために最適化されたコンピューティング能力。"
+          "term": "Nvidia",
+          "explain_ja": "グラフィックス処理ユニット（GPU）の設計・製造を行う企業。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンターに関する運用やインフラに関与するプロジェクトに参加する。",
-        "新しい技術やスキルに関する研修プログラムに参加し、知識を深める。",
-        "持続可能なインフラに関連するイニシアチブを支援するための地元パートナーと協力する。"
+        "新しい技術動向を定期的に確認し、競争相手の動きに注意する。",
+        "アリババのデータセンター関連ニュースをフォローする。",
+        "自社のインフラに対する影響を評価し、必要な対策を検討する。"
       ],
       "tags": [
         "DC",
