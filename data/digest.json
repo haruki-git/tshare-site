@@ -1,71 +1,71 @@
 {
-  "date": "2026-09-27",
-  "generatedAtJST": "2026-09-27T07:15:20.435+09:00",
+  "date": "2026-09-28",
+  "generatedAtJST": "2026-09-28T07:15:22.134+09:00",
   "items": [
     {
-      "url": "https://dailycaller.com/2026/09/25/oracle-project-jupiter-force-majeure-new-mexico-air-permit-stargate-chris-johnson",
-      "source": "The Daily Caller",
-      "publishedAt": "2026-09-25T21:50:31Z",
-      "title": "Oracle’s AI Data Center Waits On New Mexico To Approve The Power It Promised To Bring",
-      "title_ja": "オラクルのAIデータセンターがニューメキシコの電力承認待ち",
-      "summary_ja": "オラクルは、ニューメキシコにおけるAIデータセンターの運用に向けて、必要な電力供給の承認を州当局がまだ行っていないため、可能な遅延に備えています。これにより、計画されているプロジェクトの進行が影響を受ける可能性があります。新たな電力供給の承認が得られない限り、データセンターの稼働が難しくなるでしょう。",
+      "url": "https://cryptobriefing.com/data-center-power-demand-161gw-2026/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-26T20:29:17Z",
+      "title": "TrendForce forecasts global data center power demand to hit 161 GW in 2026",
+      "title_ja": "TrendForce、2026年までに世界のデータセンター電力需要が161GWに達すると予測",
+      "summary_ja": "TrendForceの予測によると、2026年までに世界のデータセンターの電力需要が161GWに達する見込です。この需要の増加は、世界の電力網に圧力をかけ、電気料金の上昇を招く可能性があります。これにより、広範なエネルギーインフラにも影響を与える可能性があります。",
       "key_points": [
-        "オラクルはニューメキシコにAIデータセンターを建設中",
-        "州当局による電力供給の承認が未だされていない",
-        "承認待ちがプロジェクトの進行に遅延をもたらす可能性"
+        "2026年までにデータセンターの電力需要が161GWに達する予測。",
+        "電力需給のひっ迫が世界的な電力網に影響を与える可能性。",
+        "電気料金の上昇が予想される。",
+        "広範なエネルギーインフラへの影響が懸念される。"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能関連の処理を行うためのデータセンター。"
+          "term": "データセンター",
+          "explain_ja": "データの保管や処理を行うための施設。"
         },
         {
-          "term": "電力供給",
-          "explain_ja": "データセンターが必要とする電力を外部から供給すること。"
+          "term": "GW",
+          "explain_ja": "ギガワット。電力の単位で、1GWは10億ワットに相当する。"
         }
       ],
       "personal_actions": [
-        "プロジェクトの進行状況について定期的に情報をチェックする",
-        "電力供給関連の政府動向をフォローする",
-        "データセンターの運用計画を見直す"
+        "電力需給状況を定期的に確認する。",
+        "エネルギー効率の良い設備導入を検討する。",
+        "電力使用量の管理を強化する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://cryptobriefing.com/supermicro-gigawatt-ai-data-center-spacexai/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-09-25T21:16:47Z",
-      "title": "Supermicro advances gigawatt-scale AI data center with SpaceXAI",
-      "title_ja": "Supermicro、SpaceXAIとの協力でギガワット規模のAIデータセンターを推進",
-      "summary_ja": "SupermicroがSpaceXAIと協力し、ギガワット規模のAIデータセンターを推進しています。この取り組みは、AIインフラを革命的に変える可能性を秘めており、既存の電力網に挑戦しながら、AIや宇宙技術の進展を加速させることが期待されています。今後の技術発展に大きな影響を与えるでしょう。",
+      "url": "https://www.cnbc.com/2026/09/26/blue-collar-jobs-ai-data-center-backlash.html",
+      "source": "CNBC",
+      "publishedAt": "2026-09-26T13:43:42Z",
+      "title": "The blue-collar AI job market is booming. Will data center backlash make it go bust?",
+      "title_ja": "ブルーカラーのAI職市場が急成長中、データセンターの反発がその発展を妨げるか？",
+      "summary_ja": "ブルーカラーのAI職市場は急成長していますが、データセンターに対する一般の反感が影響を及ぼす可能性があります。多くの州がデータセンターの開発を遅らせる中、HVACや配管、溶接、電気作業者にとっては仕事の盛況期となっています。この状況が長期的に持続するかどうかは不透明です。",
       "key_points": [
-        "SupermicroとSpaceXAIが協力。",
-        "ギガワット規模のAIデータセンターを開発。",
-        "AIインフラの革命的な変化が期待される。",
-        "既存の電力網に対する挑戦。",
-        "AIおよび宇宙技術の進展を加速。"
+        "ブルーカラー職市場が活況を呈している。",
+        "州政府はデータセンターの開発を遅らせている。",
+        "HVAC、配管、溶接、電気作業者にとって雇用機会が増加している。",
+        "データセンターへの反発が今後の雇用市場に影響を与える可能性がある。",
+        "AI関連の職業は引き続き需要が高い。"
       ],
       "glossary": [
+        {
+          "term": "HVAC",
+          "explain_ja": "Heating, Ventilation, and Air Conditioningの略。空調システムを指す。"
+        },
         {
           "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）。機械が人間の知的な行動を模倣する技術。"
+          "explain_ja": "Artificial Intelligenceの略。人工知能を指す。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存や処理を行うための施設。"
-        },
-        {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位。1ギガワットは10億ワットに相当する。"
+          "term": "ブルーカラー",
+          "explain_ja": "肉体労働を主な仕事とする労働者を指す。"
         }
       ],
       "personal_actions": [
-        "データセンターの最新技術に関する情報を定期的にチェックする。",
-        "AIインフラに関するセミナーやワークショップに参加することで知識を深める。",
-        "エネルギー管理の最適化に向けた内部プロジェクトを検討する。"
+        "地元の求人情報をチェックし、ブルーカラー職の需要を把握する。",
+        "データセンターのプロジェクトに関する地域の動向を確認する。",
+        "AI関連の技術スキルを向上させるためのトレーニングに参加する。"
       ],
       "tags": [
         "DC",
@@ -73,36 +73,37 @@
       ]
     },
     {
-      "url": "https://www.techradar.com/pro/alibaba-wants-to-expand-data-center-capacity-past-20-gw-by-2032-says-its-new-v900-ai-chip-can-scale-to-500-000-card-clusters-but-will-chinas-most-powerful-ai-chip-be-enough-to-displace-nvidia-gpus",
-      "source": "TechRadar",
-      "publishedAt": "2026-09-25T19:10:00Z",
-      "title": "Alibaba wants to expand data center capacity past 20 GW by 2032, says its new V900 AI chip can scale to 500,000-card clusters, but will 'China's most powerful AI chip' be enough to displace Nvidia GPUs?",
-      "title_ja": "アリババ、2032年までにデータセンター容量を20GW超へ拡大計画",
-      "summary_ja": "アリババは2032年までにデータセンターの容量を20GW以上に拡大する意向を示しています。新しいV900 AIチップは、50万のカードクラスタにスケール可能と言いますが、この中国の最も強力なAIチップはNvidiaのGPUを置き換えられるのでしょうか。競争相手であるHuaweiに対抗するため、詳細は明らかにされていません。",
+      "url": "https://www.turkiyetoday.com/business/oracles-data-center-delay-risks-blowing-up-ai-financing-morgan-stanley-warns-3228983",
+      "source": "Turkiyetoday.com",
+      "publishedAt": "2026-09-26T10:34:38Z",
+      "title": "Oracle’s data center delay risks blowing up AI financing, Morgan Stanley warns",
+      "title_ja": "オラクルのデータセンター遅延がAIファイナンスのリスクを拡大、モルガン・スタンレー警告",
+      "summary_ja": "オラクルはニューメキシコのデータセンターにおいて不可抗力を宣言し、これにより投資家はAIインフラの契約やファイナンス構造を見直す必要が生じている。モルガン・スタンレーは、この決定がAIインフラデット市場に新たな不確実性を加えると警告した。特に、弱い資産のテナントを抱えるプロジェクトはリスクにさらされる可能性が高いと分析している。",
       "key_points": [
-        "アリババ、2032年までにデータセンター容量を20GW以上予定",
-        "新しいV900 AIチップは500,000カードクラスタにスケール可能",
-        "中国国内市場でNvidiaチップに挑戦",
-        "Huaweiとの競争が鍵となる見込み"
+        "オラクルはデータセンター開発において不可抗力を宣言した。",
+        "この決定によりAIインフラの契約やファイナンス構造に影響が出る可能性がある。",
+        "データセンター関連の債券スプレッドが広がり、CDSコストが過去最高に達した。",
+        "プロジェクトの完成が遅れる場合、オラクルは賃料の支払いを遅らせることを求めている。",
+        "AIインフラの構築には高いコストと資源の確保が求められている。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、管理、処理を行う施設。"
+          "term": "force majeure",
+          "explain_ja": "不可抗力を指し、予見できない事象によって契約が履行できない場合に適用される法的概念。"
         },
         {
-          "term": "AIチップ",
-          "explain_ja": "人工知能の処理を特化して行うための半導体チップ。"
+          "term": "CDS (Credit Default Swap)",
+          "explain_ja": "債務不履行リスクをヘッジするための金融商品で、特定の債券に対する保険のようなもの。"
         },
         {
-          "term": "Nvidia",
-          "explain_ja": "グラフィックス処理ユニット（GPU）の設計・製造を行う企業。"
+          "term": "Project Jupiter",
+          "explain_ja": "オラクルが携わっているAIコンピューティング能力を提供するための大規模プロジェクト。"
         }
       ],
       "personal_actions": [
-        "新しい技術動向を定期的に確認し、競争相手の動きに注意する。",
-        "アリババのデータセンター関連ニュースをフォローする。",
-        "自社のインフラに対する影響を評価し、必要な対策を検討する。"
+        "データセンター向けの契約内容を見直し、リスクを評価する。",
+        "AIインフラ関連のトレンドをフォローし、市場の動向に注意を払う。",
+        "プロジェクトの進行状況を監視し、影響を受ける可能性のある投資を評価する。"
       ],
       "tags": [
         "DC",
