@@ -1,71 +1,66 @@
 {
-  "date": "2026-09-28",
-  "generatedAtJST": "2026-09-28T07:15:22.134+09:00",
+  "date": "2026-09-29",
+  "generatedAtJST": "2026-09-29T07:15:19.450+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/data-center-power-demand-161gw-2026/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-09-26T20:29:17Z",
-      "title": "TrendForce forecasts global data center power demand to hit 161 GW in 2026",
-      "title_ja": "TrendForce、2026年までに世界のデータセンター電力需要が161GWに達すると予測",
-      "summary_ja": "TrendForceの予測によると、2026年までに世界のデータセンターの電力需要が161GWに達する見込です。この需要の増加は、世界の電力網に圧力をかけ、電気料金の上昇を招く可能性があります。これにより、広範なエネルギーインフラにも影響を与える可能性があります。",
+      "url": "https://www.dailysignal.com/2026/09/27/virginias-energy-mix-may-include-fusion-but-will-require-natural-gas/",
+      "source": "Daily Signal",
+      "publishedAt": "2026-09-27T19:50:00Z",
+      "title": "Virginia’s Energy Mix May Include Fusion, But Will Require Natural Gas",
+      "title_ja": "バージニア州のエネルギーミックス：核融合と天然ガスの必要性",
+      "summary_ja": "バージニア州の経済的未来は、信頼性が高く手頃な価格のエネルギーへのアクセスに依存しています。州内にはすでに世界のハイパースケールデータセンターの3分の1以上が存在し、今後もその能力を増強する計画が進行中です。核融合エネルギーが将来的に含まれる可能性がありますが、天然ガスの利用が必要とされています。",
       "key_points": [
-        "2026年までにデータセンターの電力需要が161GWに達する予測。",
-        "電力需給のひっ迫が世界的な電力網に影響を与える可能性。",
-        "電気料金の上昇が予想される。",
-        "広範なエネルギーインフラへの影響が懸念される。"
+        "バージニア州は多くのハイパースケールデータセンターを抱えている。",
+        "経済成長には信頼性の高いエネルギー供給が不可欠。",
+        "核融合エネルギーの導入が期待されているが、天然ガスも必要。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保管や処理を行うための施設。"
+          "term": "ハイパースケールデータセンター",
+          "explain_ja": "大規模なクラウドコンピューティングサービスを提供するためのデータセンター。"
         },
         {
-          "term": "GW",
-          "explain_ja": "ギガワット。電力の単位で、1GWは10億ワットに相当する。"
+          "term": "核融合",
+          "explain_ja": "原子核の融合反応によって発生するエネルギー。"
+        },
+        {
+          "term": "天然ガス",
+          "explain_ja": "地中から採掘される燃料の一種で、エネルギー源として広く利用されている。"
         }
       ],
       "personal_actions": [
-        "電力需給状況を定期的に確認する。",
-        "エネルギー効率の良い設備導入を検討する。",
-        "電力使用量の管理を強化する。"
+        "バージニア州のエネルギー政策に関する最新情報を確認する。",
+        "データセンターのエネルギー効率向上のための技術を調査する。"
       ],
       "tags": [
-        "DC"
+        "その他"
       ]
     },
     {
-      "url": "https://www.cnbc.com/2026/09/26/blue-collar-jobs-ai-data-center-backlash.html",
-      "source": "CNBC",
-      "publishedAt": "2026-09-26T13:43:42Z",
-      "title": "The blue-collar AI job market is booming. Will data center backlash make it go bust?",
-      "title_ja": "ブルーカラーのAI職市場が急成長中、データセンターの反発がその発展を妨げるか？",
-      "summary_ja": "ブルーカラーのAI職市場は急成長していますが、データセンターに対する一般の反感が影響を及ぼす可能性があります。多くの州がデータセンターの開発を遅らせる中、HVACや配管、溶接、電気作業者にとっては仕事の盛況期となっています。この状況が長期的に持続するかどうかは不透明です。",
+      "url": "https://oilprice.com/Energy/Energy-General/The-AI-Data-Center-Boom-Faces-a-New-Reality-Check.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-09-27T17:00:00Z",
+      "title": "The AI Data Center Boom Faces a New Reality Check",
+      "title_ja": "AIデータセンターのブームが新たな現実チェックに直面",
+      "summary_ja": "AIデータセンターの成長に影響を及ぼす新たな現実が浮上しています。多くの提案されたデータセンターが実際には建設されない見込みで、電力会社は慎重になっています。この状況は、北米の電力供給にとって新たな課題をもたらす可能性があります。",
       "key_points": [
-        "ブルーカラー職市場が活況を呈している。",
-        "州政府はデータセンターの開発を遅らせている。",
-        "HVAC、配管、溶接、電気作業者にとって雇用機会が増加している。",
-        "データセンターへの反発が今後の雇用市場に影響を与える可能性がある。",
-        "AI関連の職業は引き続き需要が高い。"
+        "AIデータセンターの建設が急減する見込み。",
+        "電力会社の慎重な姿勢が浮き彫りに。",
+        "提案されたデータセンターの一部しか実現しない。"
       ],
       "glossary": [
         {
-          "term": "HVAC",
-          "explain_ja": "Heating, Ventilation, and Air Conditioningの略。空調システムを指す。"
+          "term": "AIデータセンター",
+          "explain_ja": "AI技術を活用したデータ処理やストレージを行う施設。"
         },
         {
-          "term": "AI",
-          "explain_ja": "Artificial Intelligenceの略。人工知能を指す。"
-        },
-        {
-          "term": "ブルーカラー",
-          "explain_ja": "肉体労働を主な仕事とする労働者を指す。"
+          "term": "電力会社",
+          "explain_ja": "電力を供給する企業。"
         }
       ],
       "personal_actions": [
-        "地元の求人情報をチェックし、ブルーカラー職の需要を把握する。",
-        "データセンターのプロジェクトに関する地域の動向を確認する。",
-        "AI関連の技術スキルを向上させるためのトレーニングに参加する。"
+        "計画中のデータセンターに対する電力供給状況を確認。",
+        "新たなデータセンターの建設計画に関するニュースを注視。"
       ],
       "tags": [
         "DC",
@@ -73,37 +68,36 @@
       ]
     },
     {
-      "url": "https://www.turkiyetoday.com/business/oracles-data-center-delay-risks-blowing-up-ai-financing-morgan-stanley-warns-3228983",
-      "source": "Turkiyetoday.com",
-      "publishedAt": "2026-09-26T10:34:38Z",
-      "title": "Oracle’s data center delay risks blowing up AI financing, Morgan Stanley warns",
-      "title_ja": "オラクルのデータセンター遅延がAIファイナンスのリスクを拡大、モルガン・スタンレー警告",
-      "summary_ja": "オラクルはニューメキシコのデータセンターにおいて不可抗力を宣言し、これにより投資家はAIインフラの契約やファイナンス構造を見直す必要が生じている。モルガン・スタンレーは、この決定がAIインフラデット市場に新たな不確実性を加えると警告した。特に、弱い資産のテナントを抱えるプロジェクトはリスクにさらされる可能性が高いと分析している。",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/hyperscaler-cloud-revenues-projected-to-top-usd-1-trillion-by-2030-amid-ai-digital-asset-convergence-report/articleshow/134519352.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-09-27T11:37:28Z",
+      "title": "Hyperscaler cloud revenues projected to top $1 trillion by 2030 amid AI, digital asset convergence: Report",
+      "title_ja": "ハイパースケーラーのクラウド収益、2030年までに1兆ドルを超える見通し",
+      "summary_ja": "AIとデジタル資産の融合に伴い、ハイパースケーラーのクラウド収益は2030年までに年間1兆ドルを超えると予測されている。これは、AIシステムのトレーニングと運用に必要なコンピューティングリソースへの需要拡大によるものだ。レポートによれば、コンピュート能力はさらに重要性を増す。",
       "key_points": [
-        "オラクルはデータセンター開発において不可抗力を宣言した。",
-        "この決定によりAIインフラの契約やファイナンス構造に影響が出る可能性がある。",
-        "データセンター関連の債券スプレッドが広がり、CDSコストが過去最高に達した。",
-        "プロジェクトの完成が遅れる場合、オラクルは賃料の支払いを遅らせることを求めている。",
-        "AIインフラの構築には高いコストと資源の確保が求められている。"
+        "ハイパースケーラーのクラウド収益、2030年までに1兆ドル以上に達する見込み。",
+        "AIシステムの需要増加が収益を押し上げる要因。",
+        "デジタル資産との融合が進行中。",
+        "コンピューティングリソースの必要性がさらに高まることが示唆されている。"
       ],
       "glossary": [
         {
-          "term": "force majeure",
-          "explain_ja": "不可抗力を指し、予見できない事象によって契約が履行できない場合に適用される法的概念。"
+          "term": "ハイパースケーラー",
+          "explain_ja": "大規模なクラウドサービスを提供する企業で、膨大なインフラを持つ。"
         },
         {
-          "term": "CDS (Credit Default Swap)",
-          "explain_ja": "債務不履行リスクをヘッジするための金融商品で、特定の債券に対する保険のようなもの。"
+          "term": "AI（人工知能）",
+          "explain_ja": "機械が学習し、推論を行う能力を指す。"
         },
         {
-          "term": "Project Jupiter",
-          "explain_ja": "オラクルが携わっているAIコンピューティング能力を提供するための大規模プロジェクト。"
+          "term": "デジタル資産",
+          "explain_ja": "デジタル形式で存在する所有権を持つ資産。"
         }
       ],
       "personal_actions": [
-        "データセンター向けの契約内容を見直し、リスクを評価する。",
-        "AIインフラ関連のトレンドをフォローし、市場の動向に注意を払う。",
-        "プロジェクトの進行状況を監視し、影響を受ける可能性のある投資を評価する。"
+        "クラウドサービスのトレンドをウォッチし、将来のリソース計画に役立てる。",
+        "AI関連のプロジェクトへの投資状況を確認する。",
+        "新しいデジタル資産技術について情報を集め、業務にどう影響するか考える。"
       ],
       "tags": [
         "DC",
