@@ -1,66 +1,72 @@
 {
-  "date": "2026-09-29",
-  "generatedAtJST": "2026-09-29T07:15:19.450+09:00",
+  "date": "2026-09-30",
+  "generatedAtJST": "2026-09-30T07:15:28.531+09:00",
   "items": [
     {
-      "url": "https://www.dailysignal.com/2026/09/27/virginias-energy-mix-may-include-fusion-but-will-require-natural-gas/",
-      "source": "Daily Signal",
-      "publishedAt": "2026-09-27T19:50:00Z",
-      "title": "Virginia’s Energy Mix May Include Fusion, But Will Require Natural Gas",
-      "title_ja": "バージニア州のエネルギーミックス：核融合と天然ガスの必要性",
-      "summary_ja": "バージニア州の経済的未来は、信頼性が高く手頃な価格のエネルギーへのアクセスに依存しています。州内にはすでに世界のハイパースケールデータセンターの3分の1以上が存在し、今後もその能力を増強する計画が進行中です。核融合エネルギーが将来的に含まれる可能性がありますが、天然ガスの利用が必要とされています。",
+      "url": "https://www.nextbigfuture.com/2026/09/spacex-ai-gameover-for-rivals-money-wise-minihard-crushes-even-money-from-millions-of-robotaxi.html",
+      "source": "Next Big Future",
+      "publishedAt": "2026-09-28T20:10:28Z",
+      "title": "SpaceX AI Gameover for Rivals -Money Wise Minihard Crushes Even Money From Millions of Robotaxi – NextBigFuture.com",
+      "title_ja": "SpaceXのAIが競争相手に勝利 - ミニハードがロボタクシーの収益を凌駕",
+      "summary_ja": "SpaceXは新たに月に1つのAIデータセンターを生産する計画を発表しました。これにより、AIの能力と収益の面で競合他社に大きな影響を与えると期待されています。特に、ミニハードはSpaceXにおいて最も重要な製品になり、収益化の可能性も高いとされています。",
       "key_points": [
-        "バージニア州は多くのハイパースケールデータセンターを抱えている。",
-        "経済成長には信頼性の高いエネルギー供給が不可欠。",
-        "核融合エネルギーの導入が期待されているが、天然ガスも必要。"
+        "SpaceXは月に1つのミニハードを生産する計画。",
+        "0.5GWのミニハードは年間250億ドルの収益ポテンシャルを持つ。",
+        "年間12ユニットを生産すれば、年間3000億ドルの収益見込み。",
+        "テスラの800万台のロボタクシーと同等の利益を見込める。",
+        "標準化により、コスト削減や早期収益化が可能。"
       ],
       "glossary": [
         {
-          "term": "ハイパースケールデータセンター",
-          "explain_ja": "大規模なクラウドコンピューティングサービスを提供するためのデータセンター。"
+          "term": "MiniHard",
+          "explain_ja": "SpaceXが開発中のAIデータセンターの名称。"
         },
         {
-          "term": "核融合",
-          "explain_ja": "原子核の融合反応によって発生するエネルギー。"
+          "term": "Gigawatt (GW)",
+          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する。"
         },
         {
-          "term": "天然ガス",
-          "explain_ja": "地中から採掘される燃料の一種で、エネルギー源として広く利用されている。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能関連のデータ処理を行う施設。"
         }
       ],
       "personal_actions": [
-        "バージニア州のエネルギー政策に関する最新情報を確認する。",
-        "データセンターのエネルギー効率向上のための技術を調査する。"
+        "ミニハードの進展と競合状況を定期的に確認する。",
+        "新たなAI技術の導入計画について情報収集する。",
+        "同業他社の動向を把握し、ビジネス戦略を見直す。"
       ],
       "tags": [
-        "その他"
+        "AI"
       ]
     },
     {
-      "url": "https://oilprice.com/Energy/Energy-General/The-AI-Data-Center-Boom-Faces-a-New-Reality-Check.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-09-27T17:00:00Z",
-      "title": "The AI Data Center Boom Faces a New Reality Check",
-      "title_ja": "AIデータセンターのブームが新たな現実チェックに直面",
-      "summary_ja": "AIデータセンターの成長に影響を及ぼす新たな現実が浮上しています。多くの提案されたデータセンターが実際には建設されない見込みで、電力会社は慎重になっています。この状況は、北米の電力供給にとって新たな課題をもたらす可能性があります。",
+      "url": "https://hothardware.com/news/ai-data-center-developer-promises-10k-checks-to-residents",
+      "source": "Hot Hardware",
+      "publishedAt": "2026-09-28T18:15:00Z",
+      "title": "AI Data Center Developer Promises $10K Checks To Residents, Locals Call It A Bribe",
+      "title_ja": "AIデータセンター開発者、住民に1万ドルの支払いを約束—地元住民は賄賂と見なす",
+      "summary_ja": "ペンシルベニア州ハズルタウンシップで、AIデータセンターの拡張に関する対立が予想以上の展開を見せています。NorthPoint Developmentは、15のデータセンターをホストする目的で1,300エーカーのプロジェクトを提案しましたが、強い反発に直面しています。この提案に対し、住民に1万ドルの支払いを約束することで合意を図ろうとしていますが、地元住民からは賄賂として非難されています。",
       "key_points": [
-        "AIデータセンターの建設が急減する見込み。",
-        "電力会社の慎重な姿勢が浮き彫りに。",
-        "提案されたデータセンターの一部しか実現しない。"
+        "AIデータセンターの拡張計画が提案された。",
+        "NorthPoint Developmentは1,300エーカーのプロジェクトを計画。",
+        "住民に1万ドルの支払いを約束した。",
+        "地元住民はこれを賄賂と批判。",
+        "この問題は地域社会に対する影響を及ぼしている。"
       ],
       "glossary": [
         {
           "term": "AIデータセンター",
-          "explain_ja": "AI技術を活用したデータ処理やストレージを行う施設。"
+          "explain_ja": "人工知能関連のデータを保存・処理するための施設。"
         },
         {
-          "term": "電力会社",
-          "explain_ja": "電力を供給する企業。"
+          "term": "NorthPoint Development",
+          "explain_ja": "データセンターの建設を行う企業。"
         }
       ],
       "personal_actions": [
-        "計画中のデータセンターに対する電力供給状況を確認。",
-        "新たなデータセンターの建設計画に関するニュースを注視。"
+        "地域の開発計画について最新情報を確認する。",
+        "住民の意見を集めてコミュニティの声を強める。",
+        "地元の行政に開発に関する懸念を伝える。"
       ],
       "tags": [
         "DC",
@@ -68,36 +74,45 @@
       ]
     },
     {
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/hyperscaler-cloud-revenues-projected-to-top-usd-1-trillion-by-2030-amid-ai-digital-asset-convergence-report/articleshow/134519352.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-09-27T11:37:28Z",
-      "title": "Hyperscaler cloud revenues projected to top $1 trillion by 2030 amid AI, digital asset convergence: Report",
-      "title_ja": "ハイパースケーラーのクラウド収益、2030年までに1兆ドルを超える見通し",
-      "summary_ja": "AIとデジタル資産の融合に伴い、ハイパースケーラーのクラウド収益は2030年までに年間1兆ドルを超えると予測されている。これは、AIシステムのトレーニングと運用に必要なコンピューティングリソースへの需要拡大によるものだ。レポートによれば、コンピュート能力はさらに重要性を増す。",
+      "url": "https://www.nakedcapitalism.com/2026/09/ai-credit-collapse-boosters-doomers-oracle-anthropic-openai-softbank.html",
+      "source": "Nakedcapitalism.com",
+      "publishedAt": "2026-09-28T18:00:49Z",
+      "title": "Coffee Break: AI Credit and Credibility Collapsing or Will the AI Booster/Doomers Power Through? | naked capitalism",
+      "title_ja": "AI関連信用の崩壊: ブースターとドゥーマーの対立は続くのか？",
+      "summary_ja": "現在、データセンターの拡大は過度な楽観主義に基づいて資金調達されており、未完成のプロジェクトや未使用のチップが増加しています。AIブースターの主張は極端化する一方で、その信頼性は低下しています。特にOracleのデータセンター計画は、規制の障害や経済的リスクの増大に直面しており、全体のAIインフラストラクチャーの未来に影響を及ぼす可能性があります。",
       "key_points": [
-        "ハイパースケーラーのクラウド収益、2030年までに1兆ドル以上に達する見込み。",
-        "AIシステムの需要増加が収益を押し上げる要因。",
-        "デジタル資産との融合が進行中。",
-        "コンピューティングリソースの必要性がさらに高まることが示唆されている。"
+        "データセンターの資金調達は楽観的な収益予測に基づいている",
+        "Oracleはプロジェクトの稼働遅延に備え、フォースマジュールを主張",
+        "AIインフラ投資のリスクがオフバランスシートで増大している",
+        "多くの企業が借入や株式売却を通じてAIの投資を行っている",
+        "システム的リスクについての懸念が高まっている"
       ],
       "glossary": [
         {
-          "term": "ハイパースケーラー",
-          "explain_ja": "大規模なクラウドサービスを提供する企業で、膨大なインフラを持つ。"
+          "term": "フォースマジュール",
+          "explain_ja": "外的要因によって契約履行が困難になる場合に適用される法的概念。"
         },
         {
-          "term": "AI（人工知能）",
-          "explain_ja": "機械が学習し、推論を行う能力を指す。"
+          "term": "データセンター",
+          "explain_ja": "データの保管と管理を行う施設。"
         },
         {
-          "term": "デジタル資産",
-          "explain_ja": "デジタル形式で存在する所有権を持つ資産。"
+          "term": "オフバランスシート",
+          "explain_ja": "バランスシートに記載されない方法で資産や負債を管理すること。"
+        },
+        {
+          "term": "AIブースター",
+          "explain_ja": "AI技術の促進を支持する人々または企業。"
+        },
+        {
+          "term": "AIドゥーマー",
+          "explain_ja": "AI技術の危険性を過大評価し、懸念する人々。"
         }
       ],
       "personal_actions": [
-        "クラウドサービスのトレンドをウォッチし、将来のリソース計画に役立てる。",
-        "AI関連のプロジェクトへの投資状況を確認する。",
-        "新しいデジタル資産技術について情報を集め、業務にどう影響するか考える。"
+        "現在のデータセンターのプロジェクト進捗状況を確認する",
+        "AIテクノロジーの関連リスクを理解し、違和感がある場合は情報を集める",
+        "フォースマジュールの法的影響についての知識を深める"
       ],
       "tags": [
         "DC",
