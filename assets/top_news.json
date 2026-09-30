@@ -1,122 +1,108 @@
 {
-  "date": "2026-09-30",
-  "generatedAtJST": "2026-09-30T07:15:28.531+09:00",
+  "date": "2026-10-01",
+  "generatedAtJST": "2026-10-01T07:15:22.635+09:00",
   "items": [
     {
-      "url": "https://www.nextbigfuture.com/2026/09/spacex-ai-gameover-for-rivals-money-wise-minihard-crushes-even-money-from-millions-of-robotaxi.html",
-      "source": "Next Big Future",
-      "publishedAt": "2026-09-28T20:10:28Z",
-      "title": "SpaceX AI Gameover for Rivals -Money Wise Minihard Crushes Even Money From Millions of Robotaxi – NextBigFuture.com",
-      "title_ja": "SpaceXのAIが競争相手に勝利 - ミニハードがロボタクシーの収益を凌駕",
-      "summary_ja": "SpaceXは新たに月に1つのAIデータセンターを生産する計画を発表しました。これにより、AIの能力と収益の面で競合他社に大きな影響を与えると期待されています。特に、ミニハードはSpaceXにおいて最も重要な製品になり、収益化の可能性も高いとされています。",
+      "url": "https://www.businessinsider.com/these-largest-planned-us-ai-data-centers-ranked-by-power-2026-9#article",
+      "source": "Business Insider",
+      "publishedAt": "2026-09-29T17:32:57Z",
+      "title": "AI is driving a data-center power boom. Here are some of the biggest US projects being built.",
+      "title_ja": "AIが促進するデータセンターの電力ブーム",
+      "summary_ja": "AIの需要が高まり、米国では巨大なデータセンターが多数建設されている。特に、テキサス州には17ギガワットの電力容量を目指す都市規模のキャンパスが計画されている。これにより、データセンター業界は急速に進化し、今後の影響が期待される。",
       "key_points": [
-        "SpaceXは月に1つのミニハードを生産する計画。",
-        "0.5GWのミニハードは年間250億ドルの収益ポテンシャルを持つ。",
-        "年間12ユニットを生産すれば、年間3000億ドルの収益見込み。",
-        "テスラの800万台のロボタクシーと同等の利益を見込める。",
-        "標準化により、コスト削減や早期収益化が可能。"
+        "AIの需要がデータセンターの建設を加速させている。",
+        "テキサス州には17ギガワットの電力を供給する計画がある。",
+        "大規模なデータセンターが全米で進行中。"
       ],
       "glossary": [
-        {
-          "term": "MiniHard",
-          "explain_ja": "SpaceXが開発中のAIデータセンターの名称。"
-        },
-        {
-          "term": "Gigawatt (GW)",
-          "explain_ja": "電力の単位で、1ギガワットは10億ワットに相当する。"
-        },
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能関連のデータ処理を行う施設。"
-        }
-      ],
-      "personal_actions": [
-        "ミニハードの進展と競合状況を定期的に確認する。",
-        "新たなAI技術の導入計画について情報収集する。",
-        "同業他社の動向を把握し、ビジネス戦略を見直す。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://hothardware.com/news/ai-data-center-developer-promises-10k-checks-to-residents",
-      "source": "Hot Hardware",
-      "publishedAt": "2026-09-28T18:15:00Z",
-      "title": "AI Data Center Developer Promises $10K Checks To Residents, Locals Call It A Bribe",
-      "title_ja": "AIデータセンター開発者、住民に1万ドルの支払いを約束—地元住民は賄賂と見なす",
-      "summary_ja": "ペンシルベニア州ハズルタウンシップで、AIデータセンターの拡張に関する対立が予想以上の展開を見せています。NorthPoint Developmentは、15のデータセンターをホストする目的で1,300エーカーのプロジェクトを提案しましたが、強い反発に直面しています。この提案に対し、住民に1万ドルの支払いを約束することで合意を図ろうとしていますが、地元住民からは賄賂として非難されています。",
-      "key_points": [
-        "AIデータセンターの拡張計画が提案された。",
-        "NorthPoint Developmentは1,300エーカーのプロジェクトを計画。",
-        "住民に1万ドルの支払いを約束した。",
-        "地元住民はこれを賄賂と批判。",
-        "この問題は地域社会に対する影響を及ぼしている。"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能関連のデータを保存・処理するための施設。"
-        },
-        {
-          "term": "NorthPoint Development",
-          "explain_ja": "データセンターの建設を行う企業。"
-        }
-      ],
-      "personal_actions": [
-        "地域の開発計画について最新情報を確認する。",
-        "住民の意見を集めてコミュニティの声を強める。",
-        "地元の行政に開発に関する懸念を伝える。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.nakedcapitalism.com/2026/09/ai-credit-collapse-boosters-doomers-oracle-anthropic-openai-softbank.html",
-      "source": "Nakedcapitalism.com",
-      "publishedAt": "2026-09-28T18:00:49Z",
-      "title": "Coffee Break: AI Credit and Credibility Collapsing or Will the AI Booster/Doomers Power Through? | naked capitalism",
-      "title_ja": "AI関連信用の崩壊: ブースターとドゥーマーの対立は続くのか？",
-      "summary_ja": "現在、データセンターの拡大は過度な楽観主義に基づいて資金調達されており、未完成のプロジェクトや未使用のチップが増加しています。AIブースターの主張は極端化する一方で、その信頼性は低下しています。特にOracleのデータセンター計画は、規制の障害や経済的リスクの増大に直面しており、全体のAIインフラストラクチャーの未来に影響を及ぼす可能性があります。",
-      "key_points": [
-        "データセンターの資金調達は楽観的な収益予測に基づいている",
-        "Oracleはプロジェクトの稼働遅延に備え、フォースマジュールを主張",
-        "AIインフラ投資のリスクがオフバランスシートで増大している",
-        "多くの企業が借入や株式売却を通じてAIの投資を行っている",
-        "システム的リスクについての懸念が高まっている"
-      ],
-      "glossary": [
-        {
-          "term": "フォースマジュール",
-          "explain_ja": "外的要因によって契約履行が困難になる場合に適用される法的概念。"
-        },
         {
           "term": "データセンター",
-          "explain_ja": "データの保管と管理を行う施設。"
+          "explain_ja": "データ処理や保存を行う施設。"
         },
         {
-          "term": "オフバランスシート",
-          "explain_ja": "バランスシートに記載されない方法で資産や負債を管理すること。"
-        },
-        {
-          "term": "AIブースター",
-          "explain_ja": "AI技術の促進を支持する人々または企業。"
-        },
-        {
-          "term": "AIドゥーマー",
-          "explain_ja": "AI技術の危険性を過大評価し、懸念する人々。"
+          "term": "ギガワット",
+          "explain_ja": "電力の単位。1ギガワットは10億ワットに相当。"
         }
       ],
       "personal_actions": [
-        "現在のデータセンターのプロジェクト進捗状況を確認する",
-        "AIテクノロジーの関連リスクを理解し、違和感がある場合は情報を集める",
-        "フォースマジュールの法的影響についての知識を深める"
+        "データセンターの建設計画を把握し、地域への影響を確認する。",
+        "AI関連プロジェクトに対する最新のトレンドをチェックする。"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://www.techpowerup.com/353208/asrock-industrial-expands-mainstream-edge-computing-with-intel-core-series-3-platforms",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-09-29T16:09:14Z",
+      "title": "ASRock Industrial Expands Mainstream Edge Computing With Intel Core Series 3 Platforms",
+      "title_ja": "ASRock Industrial、Intel Coreシリーズ3プラットフォームによる主流エッジコンピューティングの拡大",
+      "summary_ja": "ASRock Industrialは、Intel Coreシリーズ3プロセッサを搭載した新しい産業向けエッジコンピューティングプラットフォームを発表しました。これにより、効率的なコンピューティングと統合されたAI加速が実現され、主流の産業及び組み込みエッジアプリケーションに対応します。これらのプラットフォームは、64GB DDR5メモリや豊富なI/O接続をサポートしており、産業制御やデジタルサイネージなどの多様な用途に利用可能です。",
+      "key_points": [
+        "Intel Coreシリーズ3プロセッサ（Wildcat Lake-U）を搭載した新しいエッジコンピューティングプラットフォーム",
+        "最大40 TOPSの計算能力、64GB DDR5 6400 MHzメモリをサポート",
+        "NUC BOXやマザーボードでの多様な拡張と接続性",
+        "トリプルディスプレイ出力を4Kまでサポート",
+        "産業制御やスマートリテールなど、幅広い産業向けアプリケーションに適合"
+      ],
+      "glossary": [
+        {
+          "term": "フレキシブルマザーボード",
+          "explain_ja": "ASRockの新しいマザーボードは、さまざまな産業アプリケーションに対応する柔軟性を提供します。"
+        },
+        {
+          "term": "NUC",
+          "explain_ja": "Next Unit of Computingの略で、コンパクトなPC設計を指します。"
+        },
+        {
+          "term": "TOPS",
+          "explain_ja": "Tera Operations Per Secondの略で、計算能力を示す単位です。"
+        }
+      ],
+      "personal_actions": [
+        "新しいプラットフォームの導入を検討し、業務上のメリットを評価する",
+        "メモリやストレージのアップグレードを計画する",
+        "トリプルディスプレイ出力の必要性を確認し、適切なディスプレイ構成を準備する"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185898470",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-09-29T15:32:47Z",
+      "title": "Schneider gives datacenter switchgear the software-defined treatment - Slashdot",
+      "title_ja": "シュナイダー、データセンターの開閉器にソフトウェア定義のアプローチを採用",
+      "summary_ja": "シュナイダーはデータセンターの開閉器に新たにソフトウェア定義の技術を導入しました。この技術により、エクイニクスのパイロットプロジェクトではダウンタイムなしで迅速な展開と空中でのアップグレードが可能になります。この変革は、データセンターの運用効率を大幅に向上させると期待されます。",
+      "key_points": [
+        "シュナイダーがデータセンター用開閉器にソフトウェア定義の技術を導入",
+        "エクイニクスのパイロットによりダウンタイムなしの迅速な展開が実現",
+        "空中でのアップグレードが可能に",
+        "運用効率向上が期待される"
+      ],
+      "glossary": [
+        {
+          "term": "ソフトウェア定義",
+          "explain_ja": "ハードウェアに依存せず、ソフトウェアで制御する仕組み."
+        },
+        {
+          "term": "開閉器",
+          "explain_ja": "電気回路を接続または切断するための装置."
+        },
+        {
+          "term": "エクイニクス",
+          "explain_ja": "データセンターおよびコロケーションサービスを提供する企業."
+        }
+      ],
+      "personal_actions": [
+        "データセンターのシステムにおけるソフトウェアのアップグレード状況を確認する",
+        "シュナイダーの最新技術に関する情報を収集する"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
