@@ -1,105 +1,104 @@
 {
-  "date": "2026-10-01",
-  "generatedAtJST": "2026-10-01T07:15:22.635+09:00",
+  "date": "2026-10-02",
+  "generatedAtJST": "2026-10-02T07:15:21.322+09:00",
   "items": [
     {
-      "url": "https://www.businessinsider.com/these-largest-planned-us-ai-data-centers-ranked-by-power-2026-9#article",
-      "source": "Business Insider",
-      "publishedAt": "2026-09-29T17:32:57Z",
-      "title": "AI is driving a data-center power boom. Here are some of the biggest US projects being built.",
-      "title_ja": "AIが促進するデータセンターの電力ブーム",
-      "summary_ja": "AIの需要が高まり、米国では巨大なデータセンターが多数建設されている。特に、テキサス州には17ギガワットの電力容量を目指す都市規模のキャンパスが計画されている。これにより、データセンター業界は急速に進化し、今後の影響が期待される。",
+      "url": "https://cryptobriefing.com/pjm-halts-capacity-auction-plan-amid-ferc-review-delay-until-february-28/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-30T18:47:44Z",
+      "title": "PJM halts capacity auction plan amid FERC review, delay until February 28",
+      "title_ja": "PJM、FERCの審査延期によりキャパシティオークション計画を中止",
+      "summary_ja": "PJMはFERCによる審査の延期を受け、キャパシティオークション計画を中止した。この延期は規制の厳格化を浮き彫りにし、データセンターの成長に影響を与える可能性がある。エネルギー政策に対する認識にも変化をもたらすでしょう。",
       "key_points": [
-        "AIの需要がデータセンターの建設を加速させている。",
-        "テキサス州には17ギガワットの電力を供給する計画がある。",
-        "大規模なデータセンターが全米で進行中。"
+        "PJMがFERCの審査延期によりキャパシティオークションを中止",
+        "審査の遅延が規制に対するさらなる厳格化を示唆",
+        "データセンターの成長に対して悪影響を及ぼす可能性",
+        "エネルギー政策への影響が懸念される"
+      ],
+      "glossary": [
+        {
+          "term": "PJM",
+          "explain_ja": "アメリカ東部の電力市場を管理する機関。"
+        },
+        {
+          "term": "FERC",
+          "explain_ja": "連邦エネルギー規制委員会。電力市場の規制を行う政府機関。"
+        },
+        {
+          "term": "キャパシティオークション",
+          "explain_ja": "電力供給の確保を目的とした競売。"
+        }
+      ],
+      "personal_actions": [
+        "今後のFERCの動向を注視すること",
+        "PJMのキャパシティオークション計画に関する最新情報を確認する"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/pjm-suspends-new-data-center-power-auction-amid-regulatory-review/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-09-30T18:47:22Z",
+      "title": "PJM suspends new data center power auction amid regulatory review",
+      "title_ja": "PJM、新しいデータセンター用電力オークションを規制レビューのため中止",
+      "summary_ja": "PJMが新しいデータセンター用の電力オークションを中止しました。この決定は、規制の厳格な審査がデータセンターの成長を邪魔し、市場リスクを高め、特にテキサス州ではモラトリアムを招く可能性があることに起因しています。今後のエネルギー市場への影響が懸念されています。",
+      "key_points": [
+        "PJMが新しいデータセンター用電力オークションを停止した。",
+        "規制の見直しがデータセンターの成長を妨げる可能性がある。",
+        "テキサス州でのモラトリアムの可能性が指摘されている。",
+        "市場リスクが増大する懸念がある。"
+      ],
+      "glossary": [
+        {
+          "term": "PJM",
+          "explain_ja": "アメリカ合衆国の電力市場オペレーターで、地域間電力管理を行っている。"
+        },
+        {
+          "term": "モラトリアム",
+          "explain_ja": "特定の活動を一時的に停止すること。"
+        }
+      ],
+      "personal_actions": [
+        "地元のデータセンターの電力供給状況を確認する。",
+        "新たな規制や市場動向に注意を払う。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.rawstory.com/data-centers/",
+      "source": "Raw Story",
+      "publishedAt": "2026-09-30T18:45:43Z",
+      "title": "GOP data center bill goes down in flames as Dems rage against 'toothless' protections",
+      "title_ja": "共和党のデータセンター法案、民主党の反発で失敗",
+      "summary_ja": "共和党が主導するデータセンター法案が、水曜日に上院の民主党によって阻止された。この法案は、オハイオ州のジョン・ヒューステッド上院議員を支持するための空虚な政治劇として退けられた。サポーターからは、提案された保護策が「無力」であると批判されている。",
+      "key_points": [
+        "共和党によるデータセンター法案が上院で阻止された。",
+        "民主党は法案を「空虚な政治劇」と呼んでいる。",
+        "ヒューステッド上院議員の選挙を支援するための動きと見なされている。",
+        "提案された保護策が無効であるとの批判がある。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データ処理や保存を行う施設。"
+          "explain_ja": "データの保存や処理を行う施設。"
         },
         {
-          "term": "ギガワット",
-          "explain_ja": "電力の単位。1ギガワットは10億ワットに相当。"
+          "term": "上院",
+          "explain_ja": "アメリカ合衆国議会の二院制の1つ。"
+        },
+        {
+          "term": "政治劇",
+          "explain_ja": "実際の政策実現ではなく、政治的な目的のための行動。"
         }
       ],
       "personal_actions": [
-        "データセンターの建設計画を把握し、地域への影響を確認する。",
-        "AI関連プロジェクトに対する最新のトレンドをチェックする。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.techpowerup.com/353208/asrock-industrial-expands-mainstream-edge-computing-with-intel-core-series-3-platforms",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-09-29T16:09:14Z",
-      "title": "ASRock Industrial Expands Mainstream Edge Computing With Intel Core Series 3 Platforms",
-      "title_ja": "ASRock Industrial、Intel Coreシリーズ3プラットフォームによる主流エッジコンピューティングの拡大",
-      "summary_ja": "ASRock Industrialは、Intel Coreシリーズ3プロセッサを搭載した新しい産業向けエッジコンピューティングプラットフォームを発表しました。これにより、効率的なコンピューティングと統合されたAI加速が実現され、主流の産業及び組み込みエッジアプリケーションに対応します。これらのプラットフォームは、64GB DDR5メモリや豊富なI/O接続をサポートしており、産業制御やデジタルサイネージなどの多様な用途に利用可能です。",
-      "key_points": [
-        "Intel Coreシリーズ3プロセッサ（Wildcat Lake-U）を搭載した新しいエッジコンピューティングプラットフォーム",
-        "最大40 TOPSの計算能力、64GB DDR5 6400 MHzメモリをサポート",
-        "NUC BOXやマザーボードでの多様な拡張と接続性",
-        "トリプルディスプレイ出力を4Kまでサポート",
-        "産業制御やスマートリテールなど、幅広い産業向けアプリケーションに適合"
-      ],
-      "glossary": [
-        {
-          "term": "フレキシブルマザーボード",
-          "explain_ja": "ASRockの新しいマザーボードは、さまざまな産業アプリケーションに対応する柔軟性を提供します。"
-        },
-        {
-          "term": "NUC",
-          "explain_ja": "Next Unit of Computingの略で、コンパクトなPC設計を指します。"
-        },
-        {
-          "term": "TOPS",
-          "explain_ja": "Tera Operations Per Secondの略で、計算能力を示す単位です。"
-        }
-      ],
-      "personal_actions": [
-        "新しいプラットフォームの導入を検討し、業務上のメリットを評価する",
-        "メモリやストレージのアップグレードを計画する",
-        "トリプルディスプレイ出力の必要性を確認し、適切なディスプレイ構成を準備する"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185898470",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-09-29T15:32:47Z",
-      "title": "Schneider gives datacenter switchgear the software-defined treatment - Slashdot",
-      "title_ja": "シュナイダー、データセンターの開閉器にソフトウェア定義のアプローチを採用",
-      "summary_ja": "シュナイダーはデータセンターの開閉器に新たにソフトウェア定義の技術を導入しました。この技術により、エクイニクスのパイロットプロジェクトではダウンタイムなしで迅速な展開と空中でのアップグレードが可能になります。この変革は、データセンターの運用効率を大幅に向上させると期待されます。",
-      "key_points": [
-        "シュナイダーがデータセンター用開閉器にソフトウェア定義の技術を導入",
-        "エクイニクスのパイロットによりダウンタイムなしの迅速な展開が実現",
-        "空中でのアップグレードが可能に",
-        "運用効率向上が期待される"
-      ],
-      "glossary": [
-        {
-          "term": "ソフトウェア定義",
-          "explain_ja": "ハードウェアに依存せず、ソフトウェアで制御する仕組み."
-        },
-        {
-          "term": "開閉器",
-          "explain_ja": "電気回路を接続または切断するための装置."
-        },
-        {
-          "term": "エクイニクス",
-          "explain_ja": "データセンターおよびコロケーションサービスを提供する企業."
-        }
-      ],
-      "personal_actions": [
-        "データセンターのシステムにおけるソフトウェアのアップグレード状況を確認する",
-        "シュナイダーの最新技術に関する情報を収集する"
+        "関連する法案の進展を定期的に確認する。",
+        "上院議員の投票行動を監視する。",
+        "地域のデータセンターの稼働状況をチェックする。"
       ],
       "tags": [
         "DC"
