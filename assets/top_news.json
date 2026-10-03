@@ -1,80 +1,73 @@
 {
-  "date": "2026-10-03",
-  "generatedAtJST": "2026-10-03T07:15:25.256+09:00",
+  "date": "2026-10-04",
+  "generatedAtJST": "2026-10-04T07:15:25.578+09:00",
   "items": [
     {
-      "url": "https://siliconangle.com/2026/10/01/nvidia-links-ai-factory-economics-inference-efficiency-fullyconnected/",
-      "source": "SiliconANGLE News",
-      "publishedAt": "2026-10-01T16:09:39Z",
-      "title": "Nvidia ties AI factory economics to tokens and power efficiency",
-      "title_ja": "Nvidia、AIファクトリーの経済性をトークンと電力効率に結びつける",
-      "summary_ja": "Nvidiaは、AIファクトリーの経済性がハイパフォーマンスGPUへのアクセスだけでなく、インフラ全体の連携にも依存していると指摘しています。この変化により、データセンターでは、トークンの価値を最大化するために電力効率が重視されるようになります。特に、低遅延がもたらす新たな経済的価値や、ハードウェア世代ごとの性能向上が求められています。",
+      "url": "https://www.storagereview.com/news/schneider-electric-software-defined-medium-voltage-switchgear-yotta-2026-equinix-pilot",
+      "source": "Storagereview.com",
+      "publishedAt": "2026-10-02T16:05:44Z",
+      "title": "Schneider Electric Software-Defined Medium Voltage Switchgear Debuts at YOTTA 2026 in an Equinix Pilot, With 38 kV SF6-Free GIS and a Generator-to-Chip Delivery Model",
+      "title_ja": "シュナイダーエレクトリック、ソフトウェア定義の中電圧スイッチギアをYOTTA 2026で発表",
+      "summary_ja": "シュナイダーエレクトリックは、YOTTA 2026で世界初の完全にソフトウェア定義された中電圧スイッチギアを発表しました。これは、エクイニクスとのコロケーションパイロットで稼働中で、38 kVのSF₆フリーのAirSeTガス絶縁スイッチギアを含んでいます。この新技術により、配電設備の標準化とソフトウェアモジュールによるアップグレードが可能になり、効率が大幅に向上します。シュナイダーは2028年に広範な展開を目指しており、データセンターにおける電力供給の管理がより迅速かつ効果的になることが期待されています。",
       "key_points": [
-        "AIファクトリーは推論を基に商業的アウトプットを生成する。",
-        "トークンあたりの電力効率が経済性の中心的な指標となっている。",
-        "Nvidiaは、各GPU世代での効率を10倍以上向上させている。",
-        "低遅延推論により、リアルタイムの業務でのトークンの価値が増大している。",
-        "CoreWeaveが顧客に最適なサービスを提供し、選択肢を簡素化する。"
+        "世界初の完全ソフトウェア定義中電圧スイッチギアを発表",
+        "SF₆フリーの38 kV AirSeTガス絶縁スイッチギアを導入",
+        "制御ロジックをハードウェアから分離し、ソフトウェアモジュールで管理",
+        "従来型に比べて87%少ない制御配線を実現",
+        "2027年からパイロットプログラムを継続し、2028年に広範加盟を予定",
+        "Galaxy VXL UPSとGenerator-to-Chipモデルの発表も行われた"
       ],
       "glossary": [
         {
-          "term": "推論 (Inference)",
-          "explain_ja": "データモデルがリクエストを処理し、出力を生成するプロセス。"
+          "term": "エクイニクス (Equinix)",
+          "explain_ja": "データセンターの運営企業で、コロケーションサービスを提供している。"
         },
         {
-          "term": "トークン (Token)",
-          "explain_ja": "AIモデルから生成される価値のある単位。"
+          "term": "SF₆ (Sulfur Hexafluoride)",
+          "explain_ja": "高電圧機器で使用される一般的な絶縁ガスだが、温室効果ガスとしての影響がある。"
         },
         {
-          "term": "CUDA",
-          "explain_ja": "Nvidiaの並列計算プラットフォームで、GPUを利用して計算を加速する技術。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "IT設備やサーバーを集中的に設置している施設。"
+          "term": "AIエネルギーパーク (AI Energy Park)",
+          "explain_ja": "シュナイダーの新しいエネルギー供給モデルで、AIを活用した管理を行う。"
         }
       ],
       "personal_actions": [
-        "自社のAIモデルの推論プロセスを見直し、効率的なインフラストラクチャを探る。",
-        "トークンあたりの電力効率を計測し、次回のハードウェア選定に活かす。",
-        "リアルタイムで求められる業務のニーズに応じたインフラを構築する方法を調査する。"
+        "新しいソフトウェア定義スイッチギアの技術動向をフォローし、自社の設備とどのように適合するか検討する",
+        "現在利用中の中電圧スイッチギアの性能とアップグレード可能性を評価する",
+        "エクイニクスやシュナイダーのウェビナーや展示会に参加し、最新情報を収集する"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://cryptobriefing.com/google-project-suncatcher-ai-data-center-space-2/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-01T14:51:35Z",
-      "title": "Google is sending its first AI data center to space",
-      "title_ja": "Google、宇宙に初のAIデータセンターを送り出す",
-      "summary_ja": "Googleが初のAIデータセンターを宇宙に送る計画を発表した。このデータセンターは、豊富な太陽光エネルギーを活用し、AI処理のエネルギー効率とスケーラビリティを革命的に向上させる可能性がある。宇宙でのAIデータセンター運用は、新たな技術革新を促すと期待されている。",
+      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185968432",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-10-02T15:14:03Z",
+      "title": "Power approval set to delay Oracle's Wisconsin AI datacenter - Slashdot",
+      "title_ja": "オラクルのウィスコンシンAIデータセンター、電力承認が遅延の見込み",
+      "summary_ja": "オラクルのウィスコンシンにおけるAIデータセンターの計画は、電力接続の規制承認待ちで遅延のリスクを抱えています。この承認の遅れにより、2027年の顧客へのサービス提供が影響を受ける可能性があります。許可が得られない場合、プロジェクト全体の進行が見直される恐れもあります。",
       "key_points": [
-        "Googleが初のAIデータセンターを宇宙に送る計画を発表",
-        "豊富な太陽光エネルギーを利用",
-        "エネルギー効率とスケーラビリティの向上が期待される",
-        "宇宙での運用が新技術を促進する可能性",
-        "AI処理の革新が予想される"
+        "オラクルがウィスコンシン州にAIデータセンターを計画中",
+        "電力接続の規制承認が未だ得られていない",
+        "計画されている顧客へのサービス提供は2027年",
+        "承認の遅延がプロジェクトに深刻な影響を及ぼす可能性あり",
+        "電力インフラ整備の重要性が浮き彫りに"
       ],
       "glossary": [
         {
           "term": "AIデータセンター",
-          "explain_ja": "人工知能（AI）関連の処理を行うために特化されたデータセンターのこと。"
+          "explain_ja": "人工知能に関連する処理やデータストレージを行うためのデータセンター。"
         },
         {
-          "term": "エネルギー効率",
-          "explain_ja": "使用されるエネルギーに対する生産出力の比率。効率が良いほど、省エネになる。"
-        },
-        {
-          "term": "スケーラビリティ",
-          "explain_ja": "システムやアプリケーションが、負荷の増加に応じて拡張可能であること。"
+          "term": "電力承認",
+          "explain_ja": "データセンターが必要とする電力供給に関する正式な許可。"
         }
       ],
       "personal_actions": [
-        "AIデータセンターの最新技術動向をチェックする",
-        "エネルギー効率向上に向けた取り組みを検討する"
+        "プロジェクトの進行状況を定期的に確認する",
+        "関連する規制の変更に目を光らせる",
+        "電力インフラの整備状況を把握する"
       ],
       "tags": [
         "DC",
@@ -82,32 +75,33 @@
       ]
     },
     {
-      "url": "https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash",
+      "url": "https://www.theverge.com/tech/1003929/amazon-ai-data-center-blog-warning",
       "source": "The Verge",
-      "publishedAt": "2026-10-01T14:30:41Z",
-      "title": "Inside our months-long investigation into Kevin O’Leary’s Utah data center debacle",
-      "title_ja": "ケビン・オレアリーのユタ州データセンター問題に関する長期調査",
-      "summary_ja": "ケビン・オレアリーがユタ州に建設を計画していた大型データセンターに関する調査が行われました。プロジェクトは、40,000エーカーに及ぶAIキャンパスを含み、9ギガワットの電力供給が計画されていました。この計画が直面した諸問題と反発について探ります。",
+      "publishedAt": "2026-10-02T11:52:20Z",
+      "title": "Amazon writes scary blog warning communities not to block data centers",
+      "title_ja": "Amazonがデータセンター阻止への警告を発信",
+      "summary_ja": "AmazonがAIデータセンタープロジェクトを支持するよう呼びかけており、これを阻止すると米国経済と国家安全保障に取り返しのつかない損害を与えると警告しています。AWSのCEO、マット・ガーマン氏は3,000語を超えるブログを公開し、公共の懸念に対する反論を展開しました。データセンターの必要性を強調し、地域コミュニティへの影響を考慮するよう求めています。",
       "key_points": [
-        "ケビン・オレアリーのユタ州データセンター計画の詳細。",
-        "40,000エーカーのAIキャンパスと9ギガワットの電力供給。",
-        "プロジェクトに対する地域の反発と課題。",
-        "調査の経緯と現状に至るまでのプロセス。"
+        "AmazonはAIデータセンターの支持を求めている。",
+        "ブロガーは米国経済と国家安全保障に対する脅威を指摘。",
+        "AWSのCEOが3,000語の長文で警告を発信。",
+        "地域コミュニティに対する影響を考慮するよう呼びかけ。",
+        "公開されたブログは公共の懸念に反論している。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "サーバーやデータストレージを集中して管理する施設。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略。コンピュータが人間のように学習、推論、問題解決を行う技術のこと。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略語。コンピュータが自動的に学習・判断する技術。"
+          "term": "AWS",
+          "explain_ja": "Amazon Web Servicesの略。企業向けのクラウドコンピューティングサービスを提供している。"
         }
       ],
       "personal_actions": [
-        "現在のデータセンターに関するニュースを定期的に確認する。",
-        "地域のプロジェクトに関する住民説明会に参加する。",
-        "データセンター関連の環境影響について学ぶ。"
+        "地域のデータセンターに対する意見を明確にし、情報を集める。",
+        "AI技術の発展が地域経済に与える影響について調査を行う。",
+        "公共の場でのデータセンター計画に関する議論に参加する。"
       ],
       "tags": [
         "DC",
