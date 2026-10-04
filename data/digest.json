@@ -1,111 +1,109 @@
 {
-  "date": "2026-10-04",
-  "generatedAtJST": "2026-10-04T07:15:25.578+09:00",
+  "date": "2026-10-05",
+  "generatedAtJST": "2026-10-05T07:15:24.593+09:00",
   "items": [
     {
-      "url": "https://www.storagereview.com/news/schneider-electric-software-defined-medium-voltage-switchgear-yotta-2026-equinix-pilot",
-      "source": "Storagereview.com",
-      "publishedAt": "2026-10-02T16:05:44Z",
-      "title": "Schneider Electric Software-Defined Medium Voltage Switchgear Debuts at YOTTA 2026 in an Equinix Pilot, With 38 kV SF6-Free GIS and a Generator-to-Chip Delivery Model",
-      "title_ja": "シュナイダーエレクトリック、ソフトウェア定義の中電圧スイッチギアをYOTTA 2026で発表",
-      "summary_ja": "シュナイダーエレクトリックは、YOTTA 2026で世界初の完全にソフトウェア定義された中電圧スイッチギアを発表しました。これは、エクイニクスとのコロケーションパイロットで稼働中で、38 kVのSF₆フリーのAirSeTガス絶縁スイッチギアを含んでいます。この新技術により、配電設備の標準化とソフトウェアモジュールによるアップグレードが可能になり、効率が大幅に向上します。シュナイダーは2028年に広範な展開を目指しており、データセンターにおける電力供給の管理がより迅速かつ効果的になることが期待されています。",
+      "url": "https://www.techradar.com/pro/nvidia-backed-neocloud-nscale-faces-years-of-delay-because-uks-largest-ai-supercomputer-cant-get-enough-power-from-the-grid-to-feed-its-data-centers",
+      "source": "TechRadar",
+      "publishedAt": "2026-10-03T11:05:00Z",
+      "title": "Nvidia-backed Neocloud Nscale faces years of delay because UK's 'largest AI supercomputer' can't get enough power from the grid to feed its data centers",
+      "title_ja": "Nvidia支援のNeocloud Nscale、UK最大のAIスーパコンピュータの電力不足で数年の遅延",
+      "summary_ja": "UK最大のAIデータセンターであるNeocloud Nscaleの2027年の稼働開始が延期され、2030年までオンラインになる見込みは低い。電力供給の問題がその主な要因である。この遅延は、AI技術の発展における重要なステップを妨げる可能性がある。",
       "key_points": [
-        "世界初の完全ソフトウェア定義中電圧スイッチギアを発表",
-        "SF₆フリーの38 kV AirSeTガス絶縁スイッチギアを導入",
-        "制御ロジックをハードウェアから分離し、ソフトウェアモジュールで管理",
-        "従来型に比べて87%少ない制御配線を実現",
-        "2027年からパイロットプログラムを継続し、2028年に広範加盟を予定",
-        "Galaxy VXL UPSとGenerator-to-Chipモデルの発表も行われた"
-      ],
-      "glossary": [
-        {
-          "term": "エクイニクス (Equinix)",
-          "explain_ja": "データセンターの運営企業で、コロケーションサービスを提供している。"
-        },
-        {
-          "term": "SF₆ (Sulfur Hexafluoride)",
-          "explain_ja": "高電圧機器で使用される一般的な絶縁ガスだが、温室効果ガスとしての影響がある。"
-        },
-        {
-          "term": "AIエネルギーパーク (AI Energy Park)",
-          "explain_ja": "シュナイダーの新しいエネルギー供給モデルで、AIを活用した管理を行う。"
-        }
-      ],
-      "personal_actions": [
-        "新しいソフトウェア定義スイッチギアの技術動向をフォローし、自社の設備とどのように適合するか検討する",
-        "現在利用中の中電圧スイッチギアの性能とアップグレード可能性を評価する",
-        "エクイニクスやシュナイダーのウェビナーや展示会に参加し、最新情報を収集する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://slashdot.org/firehose.pl?op=view&amp;id=185968432",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-10-02T15:14:03Z",
-      "title": "Power approval set to delay Oracle's Wisconsin AI datacenter - Slashdot",
-      "title_ja": "オラクルのウィスコンシンAIデータセンター、電力承認が遅延の見込み",
-      "summary_ja": "オラクルのウィスコンシンにおけるAIデータセンターの計画は、電力接続の規制承認待ちで遅延のリスクを抱えています。この承認の遅れにより、2027年の顧客へのサービス提供が影響を受ける可能性があります。許可が得られない場合、プロジェクト全体の進行が見直される恐れもあります。",
-      "key_points": [
-        "オラクルがウィスコンシン州にAIデータセンターを計画中",
-        "電力接続の規制承認が未だ得られていない",
-        "計画されている顧客へのサービス提供は2027年",
-        "承認の遅延がプロジェクトに深刻な影響を及ぼす可能性あり",
-        "電力インフラ整備の重要性が浮き彫りに"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能に関連する処理やデータストレージを行うためのデータセンター。"
-        },
-        {
-          "term": "電力承認",
-          "explain_ja": "データセンターが必要とする電力供給に関する正式な許可。"
-        }
-      ],
-      "personal_actions": [
-        "プロジェクトの進行状況を定期的に確認する",
-        "関連する規制の変更に目を光らせる",
-        "電力インフラの整備状況を把握する"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.theverge.com/tech/1003929/amazon-ai-data-center-blog-warning",
-      "source": "The Verge",
-      "publishedAt": "2026-10-02T11:52:20Z",
-      "title": "Amazon writes scary blog warning communities not to block data centers",
-      "title_ja": "Amazonがデータセンター阻止への警告を発信",
-      "summary_ja": "AmazonがAIデータセンタープロジェクトを支持するよう呼びかけており、これを阻止すると米国経済と国家安全保障に取り返しのつかない損害を与えると警告しています。AWSのCEO、マット・ガーマン氏は3,000語を超えるブログを公開し、公共の懸念に対する反論を展開しました。データセンターの必要性を強調し、地域コミュニティへの影響を考慮するよう求めています。",
-      "key_points": [
-        "AmazonはAIデータセンターの支持を求めている。",
-        "ブロガーは米国経済と国家安全保障に対する脅威を指摘。",
-        "AWSのCEOが3,000語の長文で警告を発信。",
-        "地域コミュニティに対する影響を考慮するよう呼びかけ。",
-        "公開されたブログは公共の懸念に反論している。"
+        "Neocloud NscaleはUK最大のAIデータセンター。",
+        "2027年の開始予定が2030年以降に延遅。",
+        "電力供給の問題が影響を与えている。",
+        "AI技術の発展に影響を及ぼす可能性がある。"
       ],
       "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。コンピュータが人間のように学習、推論、問題解決を行う技術のこと。"
+          "explain_ja": "人工知能の略で、機械が人間の知能を模倣する技術。"
         },
         {
-          "term": "AWS",
-          "explain_ja": "Amazon Web Servicesの略。企業向けのクラウドコンピューティングサービスを提供している。"
+          "term": "スーパコンピュータ",
+          "explain_ja": "非常に高性能な計算能力を持つコンピュータ。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンターに対する意見を明確にし、情報を集める。",
-        "AI技術の発展が地域経済に与える影響について調査を行う。",
-        "公共の場でのデータセンター計画に関する議論に参加する。"
+        "最新の電力供給に関連するニュースを確認する。",
+        "データセンターの電力管理システムを見直す。",
+        "持続可能なエネルギーソリューションを検討する。"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://www.nextbigfuture.com/2026/10/canada-ai-data-center-projects-and-power-for-ai.html",
+      "source": "Next Big Future",
+      "publishedAt": "2026-10-03T07:40:35Z",
+      "title": "Canada AI Data Center Projects and Power for AI – NextBigFuture.com",
+      "title_ja": "カナダのAIデータセンター計画と電力供給",
+      "summary_ja": "アルバータ州はAIと高性能コンピューティングデータセンター向けの天然ガス発電の主要な焦点となっています。現在、多くの大規模プロジェクトは提案段階か許可申請中であり、最終的な投資決定を下したものは少数です。メタがアルバータ州に新たなデータセンターを建設中であり、同州はエネルギー供給が豊富で、規制環境も整っています。",
+      "key_points": [
+        "アルバータ州はAI専用天然ガス発電の中心地。",
+        "メタは1GWのデータセンターを約90億ドルで建設中。",
+        "予想される2027年までのプロジェクトは多くが提案段階。",
+        "アルバータ州の市場向けガス供給は2027年までに余剰。",
+        "大規模AIデータセンター計画は進行中だが、実行に移されるものは限られている。"
+      ],
+      "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能。機械が人間のような知能を持つ技術。"
+        },
+        {
+          "term": "C$",
+          "explain_ja": "カナダドル。カナダで使用される通貨の単位。"
+        },
+        {
+          "term": "GW",
+          "explain_ja": "ギガワット。電力の単位で、1GWは10億ワットに相当。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターのプロジェクトに関する地域ニュースを確認する。",
+        "新しいエネルギー供給計画について理解を深める。",
+        "各プロジェクトの進捗に注意を払い、情報を更新する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "http://status.digitalocean.com/incidents/6z6dt3t1bhb9",
+      "source": "Digitalocean.com",
+      "publishedAt": "2026-10-03T14:51:13Z",
+      "title": "A Network Disruption in BLR1 Region Impacted Multiple Products (Resolved)",
+      "title_ja": "BLR1リージョンでのネットワーク障害が複数製品に影響（解決済み）",
+      "summary_ja": "2026年10月3日、BLR1リージョンで発生したネットワーク障害により、複数の製品に影響が及びました。問題は11:59 UTCから13:02 UTCまで続き、ユーザーは接続性の低下や遅延、エラーを経験しました。エンジニアリングチームが迅速に対応し、正常な接続が回復されたことが報告されています。",
+      "key_points": [
+        "障害は2026年10月3日、11:59 UTCから13:02 UTCまで発生。",
+        "影響を受けた製品には、Monitoring、App Platform、Managed Databases、Load Balancersなどが含まれる。",
+        "アップストリームの接続プロバイダーでの複数のネットワーク経路が利用不可に。",
+        "代替経路にトラフィックが集中し、ネットワークの過負荷が発生。",
+        "全てのサービスは正常な運用に戻ったことが確認されている。"
+      ],
+      "glossary": [
+        {
+          "term": "BLR1",
+          "explain_ja": "デジタルオーシャンのインドにあるデータセンターリージョンの名称。"
+        },
+        {
+          "term": "Managed Databases",
+          "explain_ja": "デジタルオーシャンが提供するマネージド型データベースサービス。"
+        }
+      ],
+      "personal_actions": [
+        "該当リージョンの製品を利用している場合、影響を受けたサービスの正常性を確認する。",
+        "不具合を感じる場合は、サポートチケットを提出する。",
+        "今後の障害に備え、自社システムの冗長化を確認する。"
+      ],
+      "tags": [
+        "インフラ"
       ]
     }
   ]
