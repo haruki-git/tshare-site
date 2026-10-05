@@ -1,34 +1,35 @@
 {
-  "date": "2026-10-05",
-  "generatedAtJST": "2026-10-05T07:15:24.593+09:00",
+  "date": "2026-10-06",
+  "generatedAtJST": "2026-10-06T07:15:24.698+09:00",
   "items": [
     {
-      "url": "https://www.techradar.com/pro/nvidia-backed-neocloud-nscale-faces-years-of-delay-because-uks-largest-ai-supercomputer-cant-get-enough-power-from-the-grid-to-feed-its-data-centers",
+      "url": "https://www.techradar.com/pro/generate-usd6-trillion-in-annual-revenue-or-face-a-major-collapse-ai-data-center-costs-are-doubling-every-12-months",
       "source": "TechRadar",
-      "publishedAt": "2026-10-03T11:05:00Z",
-      "title": "Nvidia-backed Neocloud Nscale faces years of delay because UK's 'largest AI supercomputer' can't get enough power from the grid to feed its data centers",
-      "title_ja": "Nvidia支援のNeocloud Nscale、UK最大のAIスーパコンピュータの電力不足で数年の遅延",
-      "summary_ja": "UK最大のAIデータセンターであるNeocloud Nscaleの2027年の稼働開始が延期され、2030年までオンラインになる見込みは低い。電力供給の問題がその主な要因である。この遅延は、AI技術の発展における重要なステップを妨げる可能性がある。",
+      "publishedAt": "2026-10-04T18:05:00Z",
+      "title": "Generate $6 trillion in annual revenue or face a major collapse — AI data center costs are doubling every 12 months",
+      "title_ja": "年間6兆ドルの収益を生み出すか、大規模な崩壊に直面 — AIデータセンターのコストが毎年倍増",
+      "summary_ja": "AIデータセンターの運営において、コストが急速に増加している状況が示されている。特に、毎年コストが倍になるペースは、持続可能なモデルの達成を脅かしている。規制当局は、Oracleのウィスコンシン州AIキャンパスへの電力供給に関する承認を取り消したが、これは業界全体に影響を及ぼす可能性がある。",
       "key_points": [
-        "Neocloud NscaleはUK最大のAIデータセンター。",
-        "2027年の開始予定が2030年以降に延遅。",
-        "電力供給の問題が影響を与えている。",
-        "AI技術の発展に影響を及ぼす可能性がある。"
+        "AIデータセンターの運営コストが毎年倍増している",
+        "年6兆ドルの収益を上げないと崩壊の危機がある",
+        "規制当局がOracleへの電力供給承認を取り消した",
+        "564件の変更が影響を及ぼした",
+        "業界全体に深刻な影響を与える可能性がある"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略で、機械が人間の知能を模倣する技術。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能を活用するために特化したデータセンター。"
         },
         {
-          "term": "スーパコンピュータ",
-          "explain_ja": "非常に高性能な計算能力を持つコンピュータ。"
+          "term": "Oracle",
+          "explain_ja": "データベース管理ソフトウェアなどを提供するアメリカの企業。"
         }
       ],
       "personal_actions": [
-        "最新の電力供給に関連するニュースを確認する。",
-        "データセンターの電力管理システムを見直す。",
-        "持続可能なエネルギーソリューションを検討する。"
+        "データセンターの運営コストの見直しを行う",
+        "最新の規制情報を確認する",
+        "投資計画を再評価する"
       ],
       "tags": [
         "DC",
@@ -36,74 +37,82 @@
       ]
     },
     {
-      "url": "https://www.nextbigfuture.com/2026/10/canada-ai-data-center-projects-and-power-for-ai.html",
-      "source": "Next Big Future",
-      "publishedAt": "2026-10-03T07:40:35Z",
-      "title": "Canada AI Data Center Projects and Power for AI – NextBigFuture.com",
-      "title_ja": "カナダのAIデータセンター計画と電力供給",
-      "summary_ja": "アルバータ州はAIと高性能コンピューティングデータセンター向けの天然ガス発電の主要な焦点となっています。現在、多くの大規模プロジェクトは提案段階か許可申請中であり、最終的な投資決定を下したものは少数です。メタがアルバータ州に新たなデータセンターを建設中であり、同州はエネルギー供給が豊富で、規制環境も整っています。",
+      "url": "https://www.foxnews.com/politics/neighborhood-backlash-collides-americas-tech-arms-race-plan-fix-it",
+      "source": "Fox News",
+      "publishedAt": "2026-10-04T17:00:05Z",
+      "title": "Neighborhood backlash collides with America's tech arms race — but is this the plan to fix it?",
+      "title_ja": "地域の反発とアメリカの技術競争が衝突 — 解決策はこれか？",
+      "summary_ja": "バージニア州の地域社会がデータセンターの拡張に反発している中、スハス・スブラマニャン議員が提案した四部構成の連邦計画が注目を集めている。この計画は、データセンターの立地、エネルギーコスト、水使用に焦点を当てている。地域の懸念に応える形で、技術競争の中で持続可能な解決策を見つける必要がある。",
       "key_points": [
-        "アルバータ州はAI専用天然ガス発電の中心地。",
-        "メタは1GWのデータセンターを約90億ドルで建設中。",
-        "予想される2027年までのプロジェクトは多くが提案段階。",
-        "アルバータ州の市場向けガス供給は2027年までに余剰。",
-        "大規模AIデータセンター計画は進行中だが、実行に移されるものは限られている。"
+        "バージニア州でのデータセンター拡張に対する地域の反発。",
+        "スハス・スブラマニャン議員の四部構成連邦計画の提案。",
+        "計画はデータセンターの立地、エネルギーコスト、水使用に焦点を当てている。",
+        "地域社会の懸念に対して持続可能な解決策を模索する必要性。",
+        "アメリカの技術競争と地域のニーズのバランスを取る重要性。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データを保存、管理するための施設。エネルギー消費が大きいため、地域社会に影響を与えることがある。"
+        },
+        {
+          "term": "エネルギーコスト",
+          "explain_ja": "データセンターの運営にかかる電力料金。高騰することで地域経済に影響を与える可能性がある。"
+        },
+        {
+          "term": "水使用",
+          "explain_ja": "データセンターの冷却に必要な水の使用量。それが地域の水資源に与える影響が懸念されている。"
+        }
+      ],
+      "personal_actions": [
+        "地域のデータセンターに関する最新情報を確認する。",
+        "地域コミュニティの会議に参加し、意見を述べる。",
+        "データセンターの環境影響に関する資料を収集し、理解を深める。"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://forkast.news/oracles-nuclear-power-deal-signals-that-energy-is-the-new-compute-bottleneck/",
+      "source": "Forkast.news",
+      "publishedAt": "2026-10-04T05:26:39Z",
+      "title": "Oracle’s Nuclear Power Deal Signals That Energy Is the New Compute Bottleneck",
+      "title_ja": "オラクルの原子力発電契約が示す、エネルギーが新たな計算ボトルネックであるという事実",
+      "summary_ja": "オラクルはウィスコンシン州のポイントビーチ原子力発電所から出力の10-20%を購読する契約を結びました。これはAIデータセンター需要の急増によるエネルギー確保の新しい手法を表しています。エネルギーの需要は急激に増加しており、この契約は地域の電力料金に影響を及ぼす可能性があります。",
+      "key_points": [
+        "オラクルはポイントビーチ原子力発電所から125-250メガワットの電力を購読する契約を締結。",
+        "この電力は、AIデータセンターであるLighthouse Campusプロジェクトに供給される。",
+        "ウィスコンシン州の最新の電力料金引き上げ案に影響を与える契約。",
+        "ビッグテック企業は過去1年で米国において10ギガワット以上の新しい原子力容量を契約。",
+        "エネルギー供給の確保は、半導体の確保と同様に企業の優先事項となっている。"
       ],
       "glossary": [
         {
           "term": "AI",
-          "explain_ja": "人工知能。機械が人間のような知能を持つ技術。"
+          "explain_ja": "人工知能を指し、データを学習し、タスクを自動化する技術。"
         },
         {
-          "term": "C$",
-          "explain_ja": "カナダドル。カナダで使用される通貨の単位。"
+          "term": "データセンター",
+          "explain_ja": "データの保存や管理を行う施設で、多数のサーバーを有する。"
         },
         {
-          "term": "GW",
-          "explain_ja": "ギガワット。電力の単位で、1GWは10億ワットに相当。"
+          "term": "ポイントビーチ原子力発電所",
+          "explain_ja": "ウィスコンシン州にある唯一の稼働中の原子力発電所。"
+        },
+        {
+          "term": "ボトルネック",
+          "explain_ja": "プロセスの中で最も遅い部分で、全体の効率を制限する要因。"
         }
       ],
       "personal_actions": [
-        "データセンターのプロジェクトに関する地域ニュースを確認する。",
-        "新しいエネルギー供給計画について理解を深める。",
-        "各プロジェクトの進捗に注意を払い、情報を更新する。"
+        "地域の電力供給の動向を確認し、将来の供給不安に備える。",
+        "電力料金の変更に関する最新情報を追跡し、必要な対策を考える。",
+        "自社のエネルギー使用を見直し、効率化を検討する。"
       ],
       "tags": [
         "DC",
         "AI"
-      ]
-    },
-    {
-      "url": "http://status.digitalocean.com/incidents/6z6dt3t1bhb9",
-      "source": "Digitalocean.com",
-      "publishedAt": "2026-10-03T14:51:13Z",
-      "title": "A Network Disruption in BLR1 Region Impacted Multiple Products (Resolved)",
-      "title_ja": "BLR1リージョンでのネットワーク障害が複数製品に影響（解決済み）",
-      "summary_ja": "2026年10月3日、BLR1リージョンで発生したネットワーク障害により、複数の製品に影響が及びました。問題は11:59 UTCから13:02 UTCまで続き、ユーザーは接続性の低下や遅延、エラーを経験しました。エンジニアリングチームが迅速に対応し、正常な接続が回復されたことが報告されています。",
-      "key_points": [
-        "障害は2026年10月3日、11:59 UTCから13:02 UTCまで発生。",
-        "影響を受けた製品には、Monitoring、App Platform、Managed Databases、Load Balancersなどが含まれる。",
-        "アップストリームの接続プロバイダーでの複数のネットワーク経路が利用不可に。",
-        "代替経路にトラフィックが集中し、ネットワークの過負荷が発生。",
-        "全てのサービスは正常な運用に戻ったことが確認されている。"
-      ],
-      "glossary": [
-        {
-          "term": "BLR1",
-          "explain_ja": "デジタルオーシャンのインドにあるデータセンターリージョンの名称。"
-        },
-        {
-          "term": "Managed Databases",
-          "explain_ja": "デジタルオーシャンが提供するマネージド型データベースサービス。"
-        }
-      ],
-      "personal_actions": [
-        "該当リージョンの製品を利用している場合、影響を受けたサービスの正常性を確認する。",
-        "不具合を感じる場合は、サポートチケットを提出する。",
-        "今後の障害に備え、自社システムの冗長化を確認する。"
-      ],
-      "tags": [
-        "インフラ"
       ]
     }
   ]
