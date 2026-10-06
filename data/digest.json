@@ -1,114 +1,102 @@
 {
-  "date": "2026-10-06",
-  "generatedAtJST": "2026-10-06T07:15:24.698+09:00",
+  "date": "2026-10-07",
+  "generatedAtJST": "2026-10-07T07:15:18.449+09:00",
   "items": [
     {
-      "url": "https://www.techradar.com/pro/generate-usd6-trillion-in-annual-revenue-or-face-a-major-collapse-ai-data-center-costs-are-doubling-every-12-months",
-      "source": "TechRadar",
-      "publishedAt": "2026-10-04T18:05:00Z",
-      "title": "Generate $6 trillion in annual revenue or face a major collapse — AI data center costs are doubling every 12 months",
-      "title_ja": "年間6兆ドルの収益を生み出すか、大規模な崩壊に直面 — AIデータセンターのコストが毎年倍増",
-      "summary_ja": "AIデータセンターの運営において、コストが急速に増加している状況が示されている。特に、毎年コストが倍になるペースは、持続可能なモデルの達成を脅かしている。規制当局は、Oracleのウィスコンシン州AIキャンパスへの電力供給に関する承認を取り消したが、これは業界全体に影響を及ぼす可能性がある。",
+      "url": "https://lancasteronline.com/news/local/open-house-tuesday-for-ppl-upgrades-near-lancaster-city-data-center/article_1e713a88-2912-4a76-af0d-8305457468a0.html",
+      "source": "LancasterOnline",
+      "publishedAt": "2026-10-05T19:56:00Z",
+      "title": "Open House Tuesday for PPL upgrades near Lancaster city data center",
+      "title_ja": "ランカスター市データセンター近くのPPLアップグレードに関するオープンハウス",
+      "summary_ja": "ランカスター市近郊で新しい高電圧電力線の計画が進行中です。これにはデータセンターサイトに接続するセクションも含まれています。PPLはこの計画について、火曜日の夜にオープンハウスを開催し、詳細を説明します。",
       "key_points": [
-        "AIデータセンターの運営コストが毎年倍増している",
-        "年6兆ドルの収益を上げないと崩壊の危機がある",
-        "規制当局がOracleへの電力供給承認を取り消した",
-        "564件の変更が影響を及ぼした",
-        "業界全体に深刻な影響を与える可能性がある"
+        "PPLが高電圧電力線の計画を発表",
+        "計画はランカスター市南部および東部に関連",
+        "データセンターサイトへ接続するセクションが含まれる",
+        "オープンハウスは火曜日の夜に開催"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能を活用するために特化したデータセンター。"
+          "term": "PPL",
+          "explain_ja": "ペンシルベニア州を中心とした電力会社で、高電圧電力線の運営を行っている。"
         },
         {
-          "term": "Oracle",
-          "explain_ja": "データベース管理ソフトウェアなどを提供するアメリカの企業。"
+          "term": "高電圧電力線",
+          "explain_ja": "電力を長距離輸送するための高い電圧で運用される電力線。"
         }
       ],
       "personal_actions": [
-        "データセンターの運営コストの見直しを行う",
-        "最新の規制情報を確認する",
-        "投資計画を再評価する"
+        "オープンハウスの参加を検討し、計画についての意見を述べる",
+        "地域の電力供給に関する情報を確認する",
+        "データセンターの影響を評価するための資料を集める"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://www.foxnews.com/politics/neighborhood-backlash-collides-americas-tech-arms-race-plan-fix-it",
-      "source": "Fox News",
-      "publishedAt": "2026-10-04T17:00:05Z",
-      "title": "Neighborhood backlash collides with America's tech arms race — but is this the plan to fix it?",
-      "title_ja": "地域の反発とアメリカの技術競争が衝突 — 解決策はこれか？",
-      "summary_ja": "バージニア州の地域社会がデータセンターの拡張に反発している中、スハス・スブラマニャン議員が提案した四部構成の連邦計画が注目を集めている。この計画は、データセンターの立地、エネルギーコスト、水使用に焦点を当てている。地域の懸念に応える形で、技術競争の中で持続可能な解決策を見つける必要がある。",
+      "url": "https://economictimes.indiatimes.com/news/india/dorf-ketal-arm-plans-30000-crore-hyperscale-data-centre-park-in-maharashtra/articleshow/134716362.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-10-05T19:19:41Z",
+      "title": "Dorf Ketal arm plans ₹30,000 crore hyperscale data centre park in Maharashtra",
+      "title_ja": "Dorf Ketal子会社がマハラーシュトラ州に3兆円規模のハイパースケールデータセンターパークを計画",
+      "summary_ja": "Dorf Ketalの子会社Trentar Private Limitedは、マハラーシュトラ州に500MWのグリーンデータセンターパークに₹30,000クロールを投資予定です。現在、土地の選定を進めており、1ヶ月以内に評価を確定させることを目指しています。来月中に州政府との覚書（MoU）締結が見込まれています。",
       "key_points": [
-        "バージニア州でのデータセンター拡張に対する地域の反発。",
-        "スハス・スブラマニャン議員の四部構成連邦計画の提案。",
-        "計画はデータセンターの立地、エネルギーコスト、水使用に焦点を当てている。",
-        "地域社会の懸念に対して持続可能な解決策を模索する必要性。",
-        "アメリカの技術競争と地域のニーズのバランスを取る重要性。"
+        "Dorf Ketalの子会社による大規模投資計画",
+        "500MWのグリーンデータセンターを予定",
+        "マハラーシュトラ州での土地評価を進行中",
+        "1ヶ月以内に評価を確定予定",
+        "州政府とのMoU締結が予想される"
+      ],
+      "glossary": [
+        {
+          "term": "MoU",
+          "explain_ja": "Memorandum of Understandingの略で、合意書・覚書のこと。"
+        },
+        {
+          "term": "MW",
+          "explain_ja": "メガワットの略で、電力の出力の単位。"
+        },
+        {
+          "term": "ハイパースケールデータセンター",
+          "explain_ja": "大規模なデータ処理が可能なデータセンターのこと。"
+        }
+      ],
+      "personal_actions": [
+        "関連する土地評価の進捗状況を確認する",
+        "グリーンデータセンターへの影響を調査する",
+        "州政府の新しいプロジェクトへの政策を把握する"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-broadcom-shielded-as-ai-power-crunch-hits-chip-supply-chain-says-morgan-stanley/articleshow/134716053.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-10-05T19:00:28Z",
+      "title": "Nvidia, Broadcom shielded as AI power crunch hits chip supply chain, says Morgan Stanley",
+      "title_ja": "NvidiaとBroadcom、AIによる電力不足に対応",
+      "summary_ja": "モルガン・スタンレーによると、米国のデータセンター開発者は2028年までに34%の電力不足に直面すると推定されている。この不足は32GWに相当し、バックアップ電源や燃料電池などの対策を考慮に入れた結果である。NvidiaやBroadcomはこの状況に対して比較的強い立場にあるとされている。",
+      "key_points": [
+        "米国データセンターの34%の電力不足が予測されている。",
+        "不足は32GWに相当。",
+        "対策としてバックアップ電源や燃料電池が考慮されている。",
+        "NvidiaとBroadcomはこの現状から比較的守られていると評価されている。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを保存、管理するための施設。エネルギー消費が大きいため、地域社会に影響を与えることがある。"
+          "explain_ja": "大量のデータを保存・管理するための施設。サーバーなどが設置されている。"
         },
         {
-          "term": "エネルギーコスト",
-          "explain_ja": "データセンターの運営にかかる電力料金。高騰することで地域経済に影響を与える可能性がある。"
-        },
-        {
-          "term": "水使用",
-          "explain_ja": "データセンターの冷却に必要な水の使用量。それが地域の水資源に与える影響が懸念されている。"
+          "term": "バックアップ電源",
+          "explain_ja": "主電源が失われた場合に電力供給を継続するための電源。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンターに関する最新情報を確認する。",
-        "地域コミュニティの会議に参加し、意見を述べる。",
-        "データセンターの環境影響に関する資料を収集し、理解を深める。"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://forkast.news/oracles-nuclear-power-deal-signals-that-energy-is-the-new-compute-bottleneck/",
-      "source": "Forkast.news",
-      "publishedAt": "2026-10-04T05:26:39Z",
-      "title": "Oracle’s Nuclear Power Deal Signals That Energy Is the New Compute Bottleneck",
-      "title_ja": "オラクルの原子力発電契約が示す、エネルギーが新たな計算ボトルネックであるという事実",
-      "summary_ja": "オラクルはウィスコンシン州のポイントビーチ原子力発電所から出力の10-20%を購読する契約を結びました。これはAIデータセンター需要の急増によるエネルギー確保の新しい手法を表しています。エネルギーの需要は急激に増加しており、この契約は地域の電力料金に影響を及ぼす可能性があります。",
-      "key_points": [
-        "オラクルはポイントビーチ原子力発電所から125-250メガワットの電力を購読する契約を締結。",
-        "この電力は、AIデータセンターであるLighthouse Campusプロジェクトに供給される。",
-        "ウィスコンシン州の最新の電力料金引き上げ案に影響を与える契約。",
-        "ビッグテック企業は過去1年で米国において10ギガワット以上の新しい原子力容量を契約。",
-        "エネルギー供給の確保は、半導体の確保と同様に企業の優先事項となっている。"
-      ],
-      "glossary": [
-        {
-          "term": "AI",
-          "explain_ja": "人工知能を指し、データを学習し、タスクを自動化する技術。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "データの保存や管理を行う施設で、多数のサーバーを有する。"
-        },
-        {
-          "term": "ポイントビーチ原子力発電所",
-          "explain_ja": "ウィスコンシン州にある唯一の稼働中の原子力発電所。"
-        },
-        {
-          "term": "ボトルネック",
-          "explain_ja": "プロセスの中で最も遅い部分で、全体の効率を制限する要因。"
-        }
-      ],
-      "personal_actions": [
-        "地域の電力供給の動向を確認し、将来の供給不安に備える。",
-        "電力料金の変更に関する最新情報を追跡し、必要な対策を考える。",
-        "自社のエネルギー使用を見直し、効率化を検討する。"
+        "現在の電力供給状況を確認し、不足が懸念される場合の対策を検討する。",
+        "データセンターに関連するプロジェクトの電力需要を再評価する。"
       ],
       "tags": [
         "DC",
