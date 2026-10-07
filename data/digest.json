@@ -1,106 +1,107 @@
 {
-  "date": "2026-10-07",
-  "generatedAtJST": "2026-10-07T07:15:18.449+09:00",
+  "date": "2026-10-08",
+  "generatedAtJST": "2026-10-08T07:15:27.721+09:00",
   "items": [
     {
-      "url": "https://lancasteronline.com/news/local/open-house-tuesday-for-ppl-upgrades-near-lancaster-city-data-center/article_1e713a88-2912-4a76-af0d-8305457468a0.html",
-      "source": "LancasterOnline",
-      "publishedAt": "2026-10-05T19:56:00Z",
-      "title": "Open House Tuesday for PPL upgrades near Lancaster city data center",
-      "title_ja": "ランカスター市データセンター近くのPPLアップグレードに関するオープンハウス",
-      "summary_ja": "ランカスター市近郊で新しい高電圧電力線の計画が進行中です。これにはデータセンターサイトに接続するセクションも含まれています。PPLはこの計画について、火曜日の夜にオープンハウスを開催し、詳細を説明します。",
+      "url": "https://www.channelnewsasia.com/business/black-hills-plans-18-billion-investment-power-googles-data-center-6437671",
+      "source": "CNA",
+      "publishedAt": "2026-10-06T21:09:57Z",
+      "title": "Black Hills plans $1.8 billion investment to power Google's data center",
+      "title_ja": "ブラックヒルズ、グーグルのデータセンターのために18億ドルを投資予定",
+      "summary_ja": "ブラックヒルズ社は、ワイオミング州シャイアンに予定されているグーグルのデータセンターに電力を供給するための契約を締結しました。2027年から2029年にかけて、新たな発電能力に18億ドルを投資する計画です。この投資は、テクノロジー企業が電力確保に競争している中での重要なステップとされています。",
       "key_points": [
-        "PPLが高電圧電力線の計画を発表",
-        "計画はランカスター市南部および東部に関連",
-        "データセンターサイトへ接続するセクションが含まれる",
-        "オープンハウスは火曜日の夜に開催"
-      ],
-      "glossary": [
-        {
-          "term": "PPL",
-          "explain_ja": "ペンシルベニア州を中心とした電力会社で、高電圧電力線の運営を行っている。"
-        },
-        {
-          "term": "高電圧電力線",
-          "explain_ja": "電力を長距離輸送するための高い電圧で運用される電力線。"
-        }
-      ],
-      "personal_actions": [
-        "オープンハウスの参加を検討し、計画についての意見を述べる",
-        "地域の電力供給に関する情報を確認する",
-        "データセンターの影響を評価するための資料を集める"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://economictimes.indiatimes.com/news/india/dorf-ketal-arm-plans-30000-crore-hyperscale-data-centre-park-in-maharashtra/articleshow/134716362.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-10-05T19:19:41Z",
-      "title": "Dorf Ketal arm plans ₹30,000 crore hyperscale data centre park in Maharashtra",
-      "title_ja": "Dorf Ketal子会社がマハラーシュトラ州に3兆円規模のハイパースケールデータセンターパークを計画",
-      "summary_ja": "Dorf Ketalの子会社Trentar Private Limitedは、マハラーシュトラ州に500MWのグリーンデータセンターパークに₹30,000クロールを投資予定です。現在、土地の選定を進めており、1ヶ月以内に評価を確定させることを目指しています。来月中に州政府との覚書（MoU）締結が見込まれています。",
-      "key_points": [
-        "Dorf Ketalの子会社による大規模投資計画",
-        "500MWのグリーンデータセンターを予定",
-        "マハラーシュトラ州での土地評価を進行中",
-        "1ヶ月以内に評価を確定予定",
-        "州政府とのMoU締結が予想される"
-      ],
-      "glossary": [
-        {
-          "term": "MoU",
-          "explain_ja": "Memorandum of Understandingの略で、合意書・覚書のこと。"
-        },
-        {
-          "term": "MW",
-          "explain_ja": "メガワットの略で、電力の出力の単位。"
-        },
-        {
-          "term": "ハイパースケールデータセンター",
-          "explain_ja": "大規模なデータ処理が可能なデータセンターのこと。"
-        }
-      ],
-      "personal_actions": [
-        "関連する土地評価の進捗状況を確認する",
-        "グリーンデータセンターへの影響を調査する",
-        "州政府の新しいプロジェクトへの政策を把握する"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-broadcom-shielded-as-ai-power-crunch-hits-chip-supply-chain-says-morgan-stanley/articleshow/134716053.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-10-05T19:00:28Z",
-      "title": "Nvidia, Broadcom shielded as AI power crunch hits chip supply chain, says Morgan Stanley",
-      "title_ja": "NvidiaとBroadcom、AIによる電力不足に対応",
-      "summary_ja": "モルガン・スタンレーによると、米国のデータセンター開発者は2028年までに34%の電力不足に直面すると推定されている。この不足は32GWに相当し、バックアップ電源や燃料電池などの対策を考慮に入れた結果である。NvidiaやBroadcomはこの状況に対して比較的強い立場にあるとされている。",
-      "key_points": [
-        "米国データセンターの34%の電力不足が予測されている。",
-        "不足は32GWに相当。",
-        "対策としてバックアップ電源や燃料電池が考慮されている。",
-        "NvidiaとBroadcomはこの現状から比較的守られていると評価されている。"
+        "ブラックヒルズ社がワイオミング州に新しいデータセンターのための電力供給契約を締結。",
+        "2027年から2029年にかけて、18億ドルの投資を計画。",
+        "データセンターに必要な電力確保が企業の競争優位性に影響。",
+        "新たな発電能力が地域経済に与える影響が期待される。",
+        "テクノロジー業界の電力需要の高まりを背景にした動き。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "大量のデータを保存・管理するための施設。サーバーなどが設置されている。"
+          "explain_ja": "データを保存、管理、配信するための専用施設。"
         },
         {
-          "term": "バックアップ電源",
-          "explain_ja": "主電源が失われた場合に電力供給を継続するための電源。"
+          "term": "発電能力",
+          "explain_ja": "電力を生成するための能力や設備。"
         }
       ],
       "personal_actions": [
-        "現在の電力供給状況を確認し、不足が懸念される場合の対策を検討する。",
-        "データセンターに関連するプロジェクトの電力需要を再評価する。"
+        "データセンターや電力供給に関する最新のニュースを確認する。",
+        "電力供給契約に関連するプロジェクトについての情報を収集する。",
+        "発電能力の増強に伴う地域の電力インフラへの影響を考慮する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
+      ]
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/world/us/wisconsin-homeowner-vows-to-fight-proposed-data-center-power-line-after-utility-offered-81000-plus-50000-to-clear-a-1000-by-75-foot-corridor-and-remove-six-outbuildings/articleshow/134749793.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-10-06T20:00:02Z",
+      "title": "Wisconsin homeowner vows to fight proposed data-center power line after utility offered $81,000 plus $50,000 to clear a 1,000-by-75-foot corridor and remove six outbuildings",
+      "title_ja": "ウィスコンシン州の住宅所有者、データセンター用電力線に反対の意向を示す",
+      "summary_ja": "ウィスコンシン州の住宅所有者が、電力会社からの81,000ドルと5万ドルのオファーを受けて、データセンター用の電力線に反対する意向を示しています。このオファーは、1,000フィート×75フィートの通路をクリアし、6棟の建物を撤去するためのものです。地元住民は、この提案が地域と自分の財産に与える影響を憂慮しています。",
+      "key_points": [
+        "ウィスコンシン州の住宅所有者が電力会社の提案に反対。",
+        "電力会社は81,000ドルと5万ドルの補償を提示。",
+        "提案内容は1,000フィート×75フィートの通路のクリアと6棟の建物の撤去。",
+        "地元住民の懸念が高まる中、争いが予想される。",
+        "地域への影響を訴える声が多く上がっている。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データを集積・管理するための設備・施設。"
+        },
+        {
+          "term": "電力線",
+          "explain_ja": "電気を輸送するための線路またはケーブル。"
+        }
+      ],
+      "personal_actions": [
+        "地域の電力供給計画についての情報を確認する。",
+        "地元のコミュニティミーティングに参加し、意見を共有する。",
+        "データセンターの影響に関する意見を調査し、必要に応じてフィードバックを提供する。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.pehub.com/kohlberg-takes-majority-stake-in-black-bay-backed-advanced-industrial-devices/",
+      "source": "Pehub.com",
+      "publishedAt": "2026-10-06T12:31:37Z",
+      "title": "Kohlberg takes majority stake in Black Bay-backed Advanced Industrial Devices",
+      "title_ja": "コールバーグ、ブラックベイ支援のアドバンスド・インダストリアル・デバイセズの株式過半数を取得",
+      "summary_ja": "コールバーグは、ブラックベイがバックアップするアドバンスド・インダストリアル・デバイセズの過半数株式を取得しました。この企業は、データセンター、水道、電力インフラ向けに、モーター速度制御、電力配分、業務の自動化を行うシステムを製造しています。この取引により、コールバーグはインフラテクノロジー市場における影響力を強化することになります。",
+      "key_points": [
+        "コールバーグがアドバンスド・インダストリアル・デバイセズの過半数株式を取得。",
+        "同社はデータセンターおよびインフラ用システムを製造。",
+        "ブラックベイが支援する企業との連携強化。",
+        "この取引はコールバーグの市場影響力を増加させる可能性がある。"
+      ],
+      "glossary": [
+        {
+          "term": "アドバンスド・インダストリアル・デバイセズ",
+          "explain_ja": "モーター制御や電力配分のシステムを提供する企業。"
+        },
+        {
+          "term": "コールバーグ",
+          "explain_ja": "投資会社であり、さまざまな業界に対する株式投資を行っている。"
+        },
+        {
+          "term": "ブラックベイ",
+          "explain_ja": "企業投資のバックアップを行う投資ファンド。"
+        }
+      ],
+      "personal_actions": [
+        "社内のモーター制御や自動化システムの現状を確認すること。",
+        "新しい投資動向や市場の変化について情報収集を行うこと。",
+        "データセンター運用の効率性を向上させるための戦略を検討すること。"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
