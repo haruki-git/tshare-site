@@ -1,107 +1,113 @@
 {
-  "date": "2026-10-08",
-  "generatedAtJST": "2026-10-08T07:15:27.721+09:00",
+  "date": "2026-10-09",
+  "generatedAtJST": "2026-10-09T07:15:20.673+09:00",
   "items": [
     {
-      "url": "https://www.channelnewsasia.com/business/black-hills-plans-18-billion-investment-power-googles-data-center-6437671",
-      "source": "CNA",
-      "publishedAt": "2026-10-06T21:09:57Z",
-      "title": "Black Hills plans $1.8 billion investment to power Google's data center",
-      "title_ja": "ブラックヒルズ、グーグルのデータセンターのために18億ドルを投資予定",
-      "summary_ja": "ブラックヒルズ社は、ワイオミング州シャイアンに予定されているグーグルのデータセンターに電力を供給するための契約を締結しました。2027年から2029年にかけて、新たな発電能力に18億ドルを投資する計画です。この投資は、テクノロジー企業が電力確保に競争している中での重要なステップとされています。",
+      "url": "https://www.techradar.com/pro/moving-beyond-chips-and-screens-samsung-joins-nvidia-and-kkr-in-a-massive-usd1b-data-center-infrastructure-deal",
+      "source": "TechRadar",
+      "publishedAt": "2026-10-07T21:20:00Z",
+      "title": "Moving beyond chips and screens: Samsung joins Nvidia and KKR in a massive $1 billion data center infrastructure deal",
+      "title_ja": "チップとスクリーンを超えて：サムスン、NvidiaおよびKKRと10億ドルのデータセンターインフラ契約を締結",
+      "summary_ja": "サムスンとその5つの関連会社は、KKRのHelixに10億ドルを投資し、AIインフラのためのチップ、冷却、建設、コンピューティング、バッテリーを組み合わせます。この投資は、データセンターインフラへの重要な進展を示しています。また、コラボレーションがもたらすシナジー効果により、業界全体に影響を与えると期待されています。企業は競争力を高めるための新たな戦略を模索しています。",
       "key_points": [
-        "ブラックヒルズ社がワイオミング州に新しいデータセンターのための電力供給契約を締結。",
-        "2027年から2029年にかけて、18億ドルの投資を計画。",
-        "データセンターに必要な電力確保が企業の競争優位性に影響。",
-        "新たな発電能力が地域経済に与える影響が期待される。",
-        "テクノロジー業界の電力需要の高まりを背景にした動き。"
+        "サムスンがKKRのHelixに10億ドルを投資した。",
+        "投資にはチップ、冷却、建設、コンピューティング、バッテリーが含まれる。",
+        "この協力はAIインフラの強化を目的としている。",
+        "業界全体にシナジー効果をもたらす可能性がある。",
+        "競争力を高める新たな戦略の模索が見込まれる。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存、管理、配信するための専用施設。"
+          "term": "KKR",
+          "explain_ja": "アメリカの著名な投資会社で、プライベートエクイティや資産運用の分野で活躍している。"
         },
         {
-          "term": "発電能力",
-          "explain_ja": "電力を生成するための能力や設備。"
+          "term": "Helix",
+          "explain_ja": "KKRが手がけるデータセンターインフラプロジェクトで、最先端の技術を活用している。"
+        },
+        {
+          "term": "AIインフラ",
+          "explain_ja": "人工知能に特化したコンピュータシステムやデータ処理環境を指す。"
         }
       ],
       "personal_actions": [
-        "データセンターや電力供給に関する最新のニュースを確認する。",
-        "電力供給契約に関連するプロジェクトについての情報を収集する。",
-        "発電能力の増強に伴う地域の電力インフラへの影響を考慮する。"
+        "データセンターに関連する最新の技術動向を追う。",
+        "サムスンやKKRの動きに注目し、自社の戦略に反映させる。",
+        "投資先の選定においてコラボレーション要素を重視する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://oilprice.com/Energy/Energy-General/Google-Secures-890-MW-Of-Nuclear-Power-from-Constellation-Energy.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-10-07T19:00:00Z",
+      "title": "Google Secures 890 MW Of Nuclear Power from Constellation Energy",
+      "title_ja": "Google、コンステレーションエナジーから890MWの原子力発電を確保",
+      "summary_ja": "Googleは、コンステレーションエナジーと契約し、890MWの原子力発電を確保しました。これは、アメリカの最大の電力網であるPJMインターコネクション向けで、6700万人以上が利用する地域でのプロジェクトです。この契約は、持続可能なエネルギー利用を目指すGoogleの取り組みに寄与します。",
+      "key_points": [
+        "Googleは890MWの原子力発電を確保",
+        "契約はコンステレーションエナジーと締結",
+        "PJMインターコネクションは13州とワシントンD.C.をカバー",
+        "6700万人以上がその電力を利用",
+        "持続可能なエネルギーを目指すプロジェクトの一環"
+      ],
+      "glossary": [
+        {
+          "term": "PJM Interconnection",
+          "explain_ja": "アメリカの電力網で、13州とワシントンD.C.を含む地域に電力を供給する。"
+        },
+        {
+          "term": "megawatts (MW)",
+          "explain_ja": "電力の単位で、1メガワットは100万ワットを表す。"
+        },
+        {
+          "term": "Constellation Energy",
+          "explain_ja": "米国のエネルギー会社で、発電や電力供給を行っている。"
+        }
+      ],
+      "personal_actions": [
+        "電力供給契約に関するメリットや影響を確認する",
+        "持続可能なエネルギーの選択肢を検討する",
+        "原子力エネルギーの知識を深める"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://timesofindia.indiatimes.com/world/us/wisconsin-homeowner-vows-to-fight-proposed-data-center-power-line-after-utility-offered-81000-plus-50000-to-clear-a-1000-by-75-foot-corridor-and-remove-six-outbuildings/articleshow/134749793.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-10-06T20:00:02Z",
-      "title": "Wisconsin homeowner vows to fight proposed data-center power line after utility offered $81,000 plus $50,000 to clear a 1,000-by-75-foot corridor and remove six outbuildings",
-      "title_ja": "ウィスコンシン州の住宅所有者、データセンター用電力線に反対の意向を示す",
-      "summary_ja": "ウィスコンシン州の住宅所有者が、電力会社からの81,000ドルと5万ドルのオファーを受けて、データセンター用の電力線に反対する意向を示しています。このオファーは、1,000フィート×75フィートの通路をクリアし、6棟の建物を撤去するためのものです。地元住民は、この提案が地域と自分の財産に与える影響を憂慮しています。",
+      "url": "https://dailycaller.com/2026/10/07/google-constellation-nuclear-uprates-illinois-pennsylvania-new-jersey-data-centers-electric-bills",
+      "source": "The Daily Caller",
+      "publishedAt": "2026-10-07T17:45:10Z",
+      "title": "Google Vows To Cover Full Cost Of Boosting Three States’ Nuclear Plants To Power Its AI Growth",
+      "title_ja": "Google、AI成長のために三州の原発増強費用を全額負担",
+      "summary_ja": "Googleは、データセンターの需要増加に対応するため、三州の11基の原子炉のアップグレード費用を全額負担すると発表しました。この取り組みにより、新しい大型原発と同等の電力が追加される見込みです。原発の強化は、持続可能なエネルギー供給を実現し、AIの成長を支える重要なステップとなります。",
       "key_points": [
-        "ウィスコンシン州の住宅所有者が電力会社の提案に反対。",
-        "電力会社は81,000ドルと5万ドルの補償を提示。",
-        "提案内容は1,000フィート×75フィートの通路のクリアと6棟の建物の撤去。",
-        "地元住民の懸念が高まる中、争いが予想される。",
-        "地域への影響を訴える声が多く上がっている。"
+        "Googleは、イリノイ州、ペンシルベニア州、ニュージャージー州の11基の原発をアップグレードする。",
+        "アップグレードにより、データセンターの電力需要に対応するための電力が追加される。",
+        "新しい大型原発と同等の電力供給が期待される。",
+        "データセンターの成長に伴い、持続可能なエネルギー供給が重要視されている。",
+        "Googleの取り組みは、AI関連の成長を支える基盤となる。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを集積・管理するための設備・施設。"
+          "explain_ja": "情報を集約・管理するための施設で、サーバーやストレージが設置されている。"
         },
         {
-          "term": "電力線",
-          "explain_ja": "電気を輸送するための線路またはケーブル。"
+          "term": "原子炉",
+          "explain_ja": "原子力発電のために核分裂反応を利用する装置。"
         }
       ],
       "personal_actions": [
-        "地域の電力供給計画についての情報を確認する。",
-        "地元のコミュニティミーティングに参加し、意見を共有する。",
-        "データセンターの影響に関する意見を調査し、必要に応じてフィードバックを提供する。"
+        "自社データセンターのエネルギー効率を見直す。",
+        "再生可能エネルギーの利用を検討する。"
       ],
       "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.pehub.com/kohlberg-takes-majority-stake-in-black-bay-backed-advanced-industrial-devices/",
-      "source": "Pehub.com",
-      "publishedAt": "2026-10-06T12:31:37Z",
-      "title": "Kohlberg takes majority stake in Black Bay-backed Advanced Industrial Devices",
-      "title_ja": "コールバーグ、ブラックベイ支援のアドバンスド・インダストリアル・デバイセズの株式過半数を取得",
-      "summary_ja": "コールバーグは、ブラックベイがバックアップするアドバンスド・インダストリアル・デバイセズの過半数株式を取得しました。この企業は、データセンター、水道、電力インフラ向けに、モーター速度制御、電力配分、業務の自動化を行うシステムを製造しています。この取引により、コールバーグはインフラテクノロジー市場における影響力を強化することになります。",
-      "key_points": [
-        "コールバーグがアドバンスド・インダストリアル・デバイセズの過半数株式を取得。",
-        "同社はデータセンターおよびインフラ用システムを製造。",
-        "ブラックベイが支援する企業との連携強化。",
-        "この取引はコールバーグの市場影響力を増加させる可能性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "アドバンスド・インダストリアル・デバイセズ",
-          "explain_ja": "モーター制御や電力配分のシステムを提供する企業。"
-        },
-        {
-          "term": "コールバーグ",
-          "explain_ja": "投資会社であり、さまざまな業界に対する株式投資を行っている。"
-        },
-        {
-          "term": "ブラックベイ",
-          "explain_ja": "企業投資のバックアップを行う投資ファンド。"
-        }
-      ],
-      "personal_actions": [
-        "社内のモーター制御や自動化システムの現状を確認すること。",
-        "新しい投資動向や市場の変化について情報収集を行うこと。",
-        "データセンター運用の効率性を向上させるための戦略を検討すること。"
-      ],
-      "tags": [
-        "その他"
+        "DC",
+        "AI"
       ]
     }
   ]
