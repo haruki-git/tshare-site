@@ -1,109 +1,114 @@
 {
-  "date": "2026-10-09",
-  "generatedAtJST": "2026-10-09T07:15:20.673+09:00",
+  "date": "2026-10-10",
+  "generatedAtJST": "2026-10-10T07:15:23.342+09:00",
   "items": [
     {
-      "url": "https://www.techradar.com/pro/moving-beyond-chips-and-screens-samsung-joins-nvidia-and-kkr-in-a-massive-usd1b-data-center-infrastructure-deal",
-      "source": "TechRadar",
-      "publishedAt": "2026-10-07T21:20:00Z",
-      "title": "Moving beyond chips and screens: Samsung joins Nvidia and KKR in a massive $1 billion data center infrastructure deal",
-      "title_ja": "チップとスクリーンを超えて：サムスン、NvidiaおよびKKRと10億ドルのデータセンターインフラ契約を締結",
-      "summary_ja": "サムスンとその5つの関連会社は、KKRのHelixに10億ドルを投資し、AIインフラのためのチップ、冷却、建設、コンピューティング、バッテリーを組み合わせます。この投資は、データセンターインフラへの重要な進展を示しています。また、コラボレーションがもたらすシナジー効果により、業界全体に影響を与えると期待されています。企業は競争力を高めるための新たな戦略を模索しています。",
+      "url": "https://www.bleepingcomputer.com/news/security/ransomware-attack-disrupts-japans-idcf-cloud-used-by-govt-clients/",
+      "source": "BleepingComputer",
+      "publishedAt": "2026-10-08T20:09:45Z",
+      "title": "Ransomware attack disrupts Japan's IDCF Cloud used by govt clients",
+      "title_ja": "日本の政府クライアントが利用するIDCFクラウド、ランサムウェア攻撃を受け業務停止",
+      "summary_ja": "IDC Frontierが運営するIDCF Cloudがランサムウェア攻撃により業務を中断し、東日本地域のデータセンターが影響を受けました。攻撃は10月7日に開始され、495の企業や地方自治体が影響を受けています。現在、具体的な原因や影響範囲を調査中で、セキュリティの確認が進められています。",
       "key_points": [
-        "サムスンがKKRのHelixに10億ドルを投資した。",
-        "投資にはチップ、冷却、建設、コンピューティング、バッテリーが含まれる。",
-        "この協力はAIインフラの強化を目的としている。",
-        "業界全体にシナジー効果をもたらす可能性がある。",
-        "競争力を高める新たな戦略の模索が見込まれる。"
+        "10月7日午前3時40分にランサムウェア攻撃が発生。",
+        "影響を受けたのは495社の企業および地方自治体。",
+        "攻撃者は225のデータベースを暗号化し、3.6PBのデータにアクセス。",
+        "IDCF Cloudはすべての地域で管理コンソールへの顧客アクセスを一時的に無効化。",
+        "Nissui Logisticsも第三者データセンターの不正アクセスの疑いによりシステム障害を発生。",
+        "最近、日本ではサイバー攻撃が増加傾向にある。"
       ],
       "glossary": [
         {
-          "term": "KKR",
-          "explain_ja": "アメリカの著名な投資会社で、プライベートエクイティや資産運用の分野で活躍している。"
+          "term": "IDCF Cloud",
+          "explain_ja": "IDC Frontierが提供するインフラストラクチャ・アズ・ア・サービス（IaaS）プラットフォーム。"
         },
         {
-          "term": "Helix",
-          "explain_ja": "KKRが手がけるデータセンターインフラプロジェクトで、最先端の技術を活用している。"
+          "term": "ランサムウェア",
+          "explain_ja": "データを暗号化し、解読のために金銭を要求する悪意のあるソフトウェア。"
         },
         {
-          "term": "AIインフラ",
-          "explain_ja": "人工知能に特化したコンピュータシステムやデータ処理環境を指す。"
+          "term": "ダウンタイム",
+          "explain_ja": "システムが稼働していない時間帯。"
         }
       ],
       "personal_actions": [
-        "データセンターに関連する最新の技術動向を追う。",
-        "サムスンやKKRの動きに注目し、自社の戦略に反映させる。",
-        "投資先の選定においてコラボレーション要素を重視する。"
+        "クラウドサービスを使用している場合は、アクセス制限やセキュリティの確認を行う。",
+        "データのバックアップ状況を見直し、必要に応じて実施する。",
+        "サイバー攻撃防止のため、最新のパッチを適用し、不審なアクセスを監視する。"
       ],
       "tags": [
         "DC",
-        "AI"
+        "セキュリティ"
       ]
     },
     {
-      "url": "https://oilprice.com/Energy/Energy-General/Google-Secures-890-MW-Of-Nuclear-Power-from-Constellation-Energy.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-10-07T19:00:00Z",
-      "title": "Google Secures 890 MW Of Nuclear Power from Constellation Energy",
-      "title_ja": "Google、コンステレーションエナジーから890MWの原子力発電を確保",
-      "summary_ja": "Googleは、コンステレーションエナジーと契約し、890MWの原子力発電を確保しました。これは、アメリカの最大の電力網であるPJMインターコネクション向けで、6700万人以上が利用する地域でのプロジェクトです。この契約は、持続可能なエネルギー利用を目指すGoogleの取り組みに寄与します。",
+      "url": "https://www.commondreams.org/news/trump-maga-inc-donations",
+      "source": "Common Dreams",
+      "publishedAt": "2026-10-08T19:14:43Z",
+      "title": "Big Payback: Corporations That Enjoyed Enforcement Rollback Plowed $200 Million Into Pro-Trump Super PAC",
+      "title_ja": "企業がトランプ支持のスーパーパックに投入した2億ドルの背景",
+      "summary_ja": "トランプ政権下での規制緩和により、205の企業が不正行為での強制措置の取消しを享受した。これに関連し、これらの企業がトランプ支持のスーパーパックに2億ドルを投入したとの報告がある。企業のロビー活動が政治に与える影響が再び注目されている。",
       "key_points": [
-        "Googleは890MWの原子力発電を確保",
-        "契約はコンステレーションエナジーと締結",
-        "PJMインターコネクションは13州とワシントンD.C.をカバー",
-        "6700万人以上がその電力を利用",
-        "持続可能なエネルギーを目指すプロジェクトの一環"
+        "トランプ政権が205の企業に対する強制措置を取り消した。",
+        "これらの企業は規制緩和を享受し、その見返りにスーパーパックに巨額の寄付を行った。",
+        "政府の監視団体Public Citizenによる報告が発表された。",
+        "企業の政治的寄付が利益に直結しているとの指摘がある。",
+        "この状況はロビー活動と政治資金の関係を再考させるきっかけとなる。"
       ],
       "glossary": [
         {
-          "term": "PJM Interconnection",
-          "explain_ja": "アメリカの電力網で、13州とワシントンD.C.を含む地域に電力を供給する。"
+          "term": "スーパーパック",
+          "explain_ja": "特定の候補者を支援するための政治団体で、無制限に寄付を受けることができる。"
         },
         {
-          "term": "megawatts (MW)",
-          "explain_ja": "電力の単位で、1メガワットは100万ワットを表す。"
-        },
-        {
-          "term": "Constellation Energy",
-          "explain_ja": "米国のエネルギー会社で、発電や電力供給を行っている。"
+          "term": "ロビー活動",
+          "explain_ja": "特定の利益を持つ団体が政府や立法機関に影響を与えるための活動。"
         }
       ],
       "personal_actions": [
-        "電力供給契約に関するメリットや影響を確認する",
-        "持続可能なエネルギーの選択肢を検討する",
-        "原子力エネルギーの知識を深める"
+        "企業の政治寄付の透明性を確認する。",
+        "地元の規制緩和の影響を調査する。"
       ],
       "tags": [
-        "DC"
+        "その他"
       ]
     },
     {
-      "url": "https://dailycaller.com/2026/10/07/google-constellation-nuclear-uprates-illinois-pennsylvania-new-jersey-data-centers-electric-bills",
-      "source": "The Daily Caller",
-      "publishedAt": "2026-10-07T17:45:10Z",
-      "title": "Google Vows To Cover Full Cost Of Boosting Three States’ Nuclear Plants To Power Its AI Growth",
-      "title_ja": "Google、AI成長のために三州の原発増強費用を全額負担",
-      "summary_ja": "Googleは、データセンターの需要増加に対応するため、三州の11基の原子炉のアップグレード費用を全額負担すると発表しました。この取り組みにより、新しい大型原発と同等の電力が追加される見込みです。原発の強化は、持続可能なエネルギー供給を実現し、AIの成長を支える重要なステップとなります。",
+      "url": "https://www.techpowerup.com/353512/kioxia-announces-e1-l-qlc-based-ssd-designed-for-hyperscale-data-centers",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-10-08T15:26:11Z",
+      "title": "Kioxia Announces E1.L QLC-Based SSD Designed for Hyperscale Data Centers",
+      "title_ja": "キオクシア、ハイパースケールデータセンター向けE1.L QLCベースSSDを発表",
+      "summary_ja": "キオクシアが、E1.Lフォームファクターの初のSSDを発表しました。これは高密度1Uサーバーとリード集約型ストレージアプリケーション向けに設計されています。新しいLD4シリーズは、AIワークロードを支えるために高容量のQLCフラッシュを提供し、データセンターでのストレージ要件に応えます。",
       "key_points": [
-        "Googleは、イリノイ州、ペンシルベニア州、ニュージャージー州の11基の原発をアップグレードする。",
-        "アップグレードにより、データセンターの電力需要に対応するための電力が追加される。",
-        "新しい大型原発と同等の電力供給が期待される。",
-        "データセンターの成長に伴い、持続可能なエネルギー供給が重要視されている。",
-        "Googleの取り組みは、AI関連の成長を支える基盤となる。"
+        "Kioxia LD4シリーズは、E1.LフォームファクターのSSDで新しいQLCフラッシュを搭載。",
+        "リード集約型アプリケーション向けに高容量ストレージを実現。",
+        "PCIe 5.0およびNVMe 2.0e仕様に準拠。",
+        "現在、15.36TBと30.72TBの容量で提供可能で、最大122.88TBまで拡張可能。",
+        "2026 OCP Global Summitでの展示が予定されている。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "情報を集約・管理するための施設で、サーバーやストレージが設置されている。"
+          "term": "QLC",
+          "explain_ja": "Quad Level Cellの略で、1つのセルに4ビットを格納するNANDフラッシュメモリの形式。"
         },
         {
-          "term": "原子炉",
-          "explain_ja": "原子力発電のために核分裂反応を利用する装置。"
+          "term": "E1.L",
+          "explain_ja": "データセンター向けに設計された新しいSSDフォームファクター。"
+        },
+        {
+          "term": "PCIe 5.0",
+          "explain_ja": "次世代PCI Expressインターフェースのバージョンで、高速データ転送を可能にする。"
+        },
+        {
+          "term": "NVMe",
+          "explain_ja": "Non-Volatile Memory Expressの略で、高速なストレージデバイスのための通信プロトコル。"
         }
       ],
       "personal_actions": [
-        "自社データセンターのエネルギー効率を見直す。",
-        "再生可能エネルギーの利用を検討する。"
+        "現在のストレージニーズを評価し、高容量SSDの導入を検討する。",
+        "データセンターのストレージ設計を見直し、E1.Lフォームファクターへの対応を確認する。",
+        "最新のPCIeおよびNVMe技術についての情報を得て、今後のアップグレードに備える。"
       ],
       "tags": [
         "DC",
