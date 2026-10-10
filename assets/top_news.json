@@ -1,118 +1,119 @@
 {
-  "date": "2026-10-10",
-  "generatedAtJST": "2026-10-10T07:15:23.342+09:00",
+  "date": "2026-10-11",
+  "generatedAtJST": "2026-10-11T07:15:22.858+09:00",
   "items": [
     {
-      "url": "https://www.bleepingcomputer.com/news/security/ransomware-attack-disrupts-japans-idcf-cloud-used-by-govt-clients/",
-      "source": "BleepingComputer",
-      "publishedAt": "2026-10-08T20:09:45Z",
-      "title": "Ransomware attack disrupts Japan's IDCF Cloud used by govt clients",
-      "title_ja": "日本の政府クライアントが利用するIDCFクラウド、ランサムウェア攻撃を受け業務停止",
-      "summary_ja": "IDC Frontierが運営するIDCF Cloudがランサムウェア攻撃により業務を中断し、東日本地域のデータセンターが影響を受けました。攻撃は10月7日に開始され、495の企業や地方自治体が影響を受けています。現在、具体的な原因や影響範囲を調査中で、セキュリティの確認が進められています。",
+      "url": "http://blog.livedoor.jp/kinisoku/archives/5712966.html",
+      "source": "Livedoor.jp",
+      "publishedAt": "2026-10-09T20:00:26Z",
+      "title": "【悲報】ロシア最大級のデータセンター、大炎上wwwww : キニ速",
+      "title_ja": "ロシア最大級のデータセンターが攻撃を受け炎上",
+      "summary_ja": "ウクライナの攻撃ドローンがロシアのヤンデックス・サソボデータセンターを襲撃し、火事を引き起こしました。このデータセンターは、2021年時点で約2,700台のNvidia A100 GPUを保有していました。ロシアの攻撃に対する報復として、ウクライナはデータセンターをターゲットにすることを明言しており、この事態は今後の戦争の展開に影響を与える可能性があります。",
       "key_points": [
-        "10月7日午前3時40分にランサムウェア攻撃が発生。",
-        "影響を受けたのは495社の企業および地方自治体。",
-        "攻撃者は225のデータベースを暗号化し、3.6PBのデータにアクセス。",
-        "IDCF Cloudはすべての地域で管理コンソールへの顧客アクセスを一時的に無効化。",
-        "Nissui Logisticsも第三者データセンターの不正アクセスの疑いによりシステム障害を発生。",
-        "最近、日本ではサイバー攻撃が増加傾向にある。"
+        "ウクライナのドローンがロシアのデータセンターを初めて攻撃した。",
+        "ヤンデックスのデータセンターは、2021年に約2,700台のNvidia A100 GPUを保有。",
+        "ロシアがウクライナのデータセンターを攻撃した直後の出来事。",
+        "ウクライナは攻撃に対する報復を行う意向を示している。",
+        "データセンターの破壊は、ロシアの技術力に対する打撃となる可能性がある。"
       ],
       "glossary": [
         {
-          "term": "IDCF Cloud",
-          "explain_ja": "IDC Frontierが提供するインフラストラクチャ・アズ・ア・サービス（IaaS）プラットフォーム。"
+          "term": "GPU",
+          "explain_ja": "Graphics Processing Unitの略で、画像処理を行うためのプロセッサです。"
         },
         {
-          "term": "ランサムウェア",
-          "explain_ja": "データを暗号化し、解読のために金銭を要求する悪意のあるソフトウェア。"
+          "term": "ドローン",
+          "explain_ja": "無人航空機で、様々な用途に使用される。"
         },
         {
-          "term": "ダウンタイム",
-          "explain_ja": "システムが稼働していない時間帯。"
+          "term": "ヤンデックス",
+          "explain_ja": "ロシアの検索エンジンとインターネット関連サービスを提供する企業です。"
         }
       ],
       "personal_actions": [
-        "クラウドサービスを使用している場合は、アクセス制限やセキュリティの確認を行う。",
-        "データのバックアップ状況を見直し、必要に応じて実施する。",
-        "サイバー攻撃防止のため、最新のパッチを適用し、不審なアクセスを監視する。"
+        "データセンターやクラウドサービスの利用状況を確認し、バックアップ体制を整える。",
+        "攻撃対象となり得るシステムやデータのセキュリティ強化を図る。",
+        "最近の攻撃動向について情報収集を行い、リスクを把握する。"
       ],
       "tags": [
-        "DC",
-        "セキュリティ"
+        "AI"
       ]
     },
     {
-      "url": "https://www.commondreams.org/news/trump-maga-inc-donations",
-      "source": "Common Dreams",
-      "publishedAt": "2026-10-08T19:14:43Z",
-      "title": "Big Payback: Corporations That Enjoyed Enforcement Rollback Plowed $200 Million Into Pro-Trump Super PAC",
-      "title_ja": "企業がトランプ支持のスーパーパックに投入した2億ドルの背景",
-      "summary_ja": "トランプ政権下での規制緩和により、205の企業が不正行為での強制措置の取消しを享受した。これに関連し、これらの企業がトランプ支持のスーパーパックに2億ドルを投入したとの報告がある。企業のロビー活動が政治に与える影響が再び注目されている。",
+      "url": "https://www.bgr.com/2277253/new-liquid-cooled-ssd-future-data-center/",
+      "source": "BGR",
+      "publishedAt": "2026-10-09T17:17:00Z",
+      "title": "These New Liquid Cooled SSDs Might Be The Future Of Data Center Computing",
+      "title_ja": "液体冷却SSDはデータセンターの未来を変えるか",
+      "summary_ja": "Kioxiaが新たに発表したNX1液体冷却SSDは、AIデータセンターやハイパースケール環境向けに設計されています。これにより高帯域幅での記憶装置が実現され、熱管理の課題が解決される可能性があります。しかし、冷却システムの導入にはコストや水使用量の問題も伴います。データセンターの運用効率を高める一方で、経済的な負担は無視できません。",
       "key_points": [
-        "トランプ政権が205の企業に対する強制措置を取り消した。",
-        "これらの企業は規制緩和を享受し、その見返りにスーパーパックに巨額の寄付を行った。",
-        "政府の監視団体Public Citizenによる報告が発表された。",
-        "企業の政治的寄付が利益に直結しているとの指摘がある。",
-        "この状況はロビー活動と政治資金の関係を再考させるきっかけとなる。"
+        "KioxiaのNX1は液体冷却に特化したSSDである。",
+        "PCIe 5.0およびNVMe 2.0をサポートし、高速なデータ転送を実現。",
+        "容量は1.92TBから15.36TBで、日常的な書き込みが可能。",
+        "冷却性能向上により、パフォーマンスの向上が期待される。",
+        "液体冷却は導入コストや水消費が問題視されている。"
       ],
       "glossary": [
         {
-          "term": "スーパーパック",
-          "explain_ja": "特定の候補者を支援するための政治団体で、無制限に寄付を受けることができる。"
+          "term": "液体冷却",
+          "explain_ja": "冷却液を用いてハードウェアを冷やす手法で、熱を効率的に排除できる。"
         },
         {
-          "term": "ロビー活動",
-          "explain_ja": "特定の利益を持つ団体が政府や立法機関に影響を与えるための活動。"
-        }
-      ],
-      "personal_actions": [
-        "企業の政治寄付の透明性を確認する。",
-        "地元の規制緩和の影響を調査する。"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://www.techpowerup.com/353512/kioxia-announces-e1-l-qlc-based-ssd-designed-for-hyperscale-data-centers",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-10-08T15:26:11Z",
-      "title": "Kioxia Announces E1.L QLC-Based SSD Designed for Hyperscale Data Centers",
-      "title_ja": "キオクシア、ハイパースケールデータセンター向けE1.L QLCベースSSDを発表",
-      "summary_ja": "キオクシアが、E1.Lフォームファクターの初のSSDを発表しました。これは高密度1Uサーバーとリード集約型ストレージアプリケーション向けに設計されています。新しいLD4シリーズは、AIワークロードを支えるために高容量のQLCフラッシュを提供し、データセンターでのストレージ要件に応えます。",
-      "key_points": [
-        "Kioxia LD4シリーズは、E1.LフォームファクターのSSDで新しいQLCフラッシュを搭載。",
-        "リード集約型アプリケーション向けに高容量ストレージを実現。",
-        "PCIe 5.0およびNVMe 2.0e仕様に準拠。",
-        "現在、15.36TBと30.72TBの容量で提供可能で、最大122.88TBまで拡張可能。",
-        "2026 OCP Global Summitでの展示が予定されている。"
-      ],
-      "glossary": [
-        {
-          "term": "QLC",
-          "explain_ja": "Quad Level Cellの略で、1つのセルに4ビットを格納するNANDフラッシュメモリの形式。"
-        },
-        {
-          "term": "E1.L",
-          "explain_ja": "データセンター向けに設計された新しいSSDフォームファクター。"
+          "term": "SSD",
+          "explain_ja": "ソリッドステートドライブの略で、データを保存するための記憶装置。"
         },
         {
           "term": "PCIe 5.0",
-          "explain_ja": "次世代PCI Expressインターフェースのバージョンで、高速データ転送を可能にする。"
+          "explain_ja": "第5世代のPCI Expressインターフェース規格で、高速データ転送を可能にする。"
         },
         {
-          "term": "NVMe",
-          "explain_ja": "Non-Volatile Memory Expressの略で、高速なストレージデバイスのための通信プロトコル。"
+          "term": "NVMe 2.0",
+          "explain_ja": "Non-Volatile Memory Expressの第2世代規格で、高速なストレージアクセスを実現するためのインターフェース。"
+        },
+        {
+          "term": "DWPD",
+          "explain_ja": "Drive Writes Per Dayの略で、SSDの耐久性を示す指標。"
         }
       ],
       "personal_actions": [
-        "現在のストレージニーズを評価し、高容量SSDの導入を検討する。",
-        "データセンターのストレージ設計を見直し、E1.Lフォームファクターへの対応を確認する。",
-        "最新のPCIeおよびNVMe技術についての情報を得て、今後のアップグレードに備える。"
+        "NX1 SSDの導入を検討する際のコスト評価を行う。",
+        "既存の冷却システムとの互換性を確認する。",
+        "ノード間の温度管理と性能影響を「サーマルスロットリング」について調査し理解を深める。"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://www.archdaily.com/1186404/data-center-eth-zurich-penzel-valier",
+      "source": "ArchDaily",
+      "publishedAt": "2026-10-09T10:00:00Z",
+      "title": "Data Center ETH Zurich / Penzel Valier",
+      "title_ja": "ETHチューリッヒのデータセンター / ペンツェル・ヴァリエル",
+      "summary_ja": "ETHチューリッヒのホンゲルベルクデータセンターは、ペンツェル・ヴァリエルによって設計され、デジタルインフラのための統合的な建物が構築されました。構造、建物サービス、デザインが最初から一緒に考慮されています。このデータセンターは、サーバー、ストレージ、通信システムを収容しています。",
+      "key_points": [
+        "ホンゲルベルクデータセンターはETHチューリッヒ向けに設計された。",
+        "構造、サービス、デザインが統合されたアプローチ。",
+        "サーバーやストレージを効率的に収容。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保存、管理、配信を行う専門の施設。"
+        },
+        {
+          "term": "ETHチューリッヒ",
+          "explain_ja": "スイスのチューリッヒにあるスイス連邦工科大学。"
+        }
+      ],
+      "personal_actions": [
+        "現行のデータセンターの設計や管理方法を確認する。",
+        "新しいインフラ設計手法に関する情報を収集する。",
+        "統合的なアプローチを導入する可能性を検討する。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
