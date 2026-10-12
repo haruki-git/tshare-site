@@ -1,39 +1,39 @@
 {
-  "date": "2026-10-12",
-  "generatedAtJST": "2026-10-12T07:15:23.539+09:00",
+  "date": "2026-10-13",
+  "generatedAtJST": "2026-10-13T07:15:36.745+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/pat-gelsinger-us-energy-capacity-ai-growth/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-10T16:04:42Z",
-      "title": "Pat Gelsinger warns US energy constraints are limiting data center and AI growth",
-      "title_ja": "パット・ゲルシンガー氏が警告：米国のエネルギー制約がデータセンターとAIの成長を制限",
-      "summary_ja": "パット・ゲルシンガー氏は、米国におけるエネルギー制約がAIおよびデータセンターの拡張を阻害し、経済成長にもリスクをもたらす可能性があると警告しています。この問題は、緊急のインフラ改革を必要としていると指摘されています。適切な対策が講じられない場合、長期的な影響が懸念されます。",
+      "url": "https://futurism.com/future-society/ai-data-center-boom-smog-spewing-gas-power",
+      "source": "Futurism",
+      "publishedAt": "2026-10-11T17:01:00Z",
+      "title": "The AI Data Center Boom Is Causing a Gigantic Spike in Smog-Spewing Gas Power Plants",
+      "title_ja": "AIデータセンターの急増がスモッグを排出するガス発電所の大幅増加を引き起こしている",
+      "summary_ja": "AIインフラの拡大により、今後4年間でガス発電所の容量が44％も増加することが予測されています。これは、米国の電力供給において過去数世代にわたる努力の成果に逆行するものです。この急激な需要増加は、環境に優しいエネルギープロジェクトを削減し、温暖化の問題をさらに悪化させる可能性があります。",
       "key_points": [
-        "米国のエネルギー供給に制約がある",
-        "AIとデータセンターの成長が影響を受ける",
-        "経済成長のリスクが増加する",
-        "インフラ改革の必要性が喫緊の課題",
-        "持続可能なエネルギー政策が求められる"
+        "米国のガス発電所は1,000カ所近くで、他国と比較しても突出している。",
+        "AIの需要増により、ガス発電容量は2030年までに20ギガワット増加すると予測される。",
+        "新しいガス発電所の設置が進む一方で、風力発電プロジェクトが34％減少している。",
+        "データセンターの電力需要がクリーンエネルギー移行のリスクを高めている。",
+        "地域社会に悪影響を与える新しいガス発電所の設置が懸念されている。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略。情報処理における自動化を指す。"
+          "term": "ガス発電所",
+          "explain_ja": "天然ガスを燃料とする発電所で、主に電力を供給するために使用される。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを集中管理、保管、処理するための施設。"
+          "term": "AIインフラ",
+          "explain_ja": "人工知能（AI）を支えるための物理的および仮想的な設備やシステム。"
         },
         {
-          "term": "インフラ改革",
-          "explain_ja": "既存のインフラを改善または更新すること。"
+          "term": "再生可能エネルギー",
+          "explain_ja": "太陽光、風力など、自然の力を利用して生成されるエネルギー。"
         }
       ],
       "personal_actions": [
-        "組織内のエネルギー使用効率を見直す",
-        "AIプロジェクトのエネルギー要件を評価する",
-        "エネルギーの持続可能性に関する最新情報を収集する"
+        "データセンターの設置計画に関する地域の情報を確認する。",
+        "持続可能なエネルギーの利用を促進するための政策提言を行う。",
+        "地域社会での環境影響についての対話に参加する。"
       ],
       "tags": [
         "DC",
@@ -41,83 +41,78 @@
       ]
     },
     {
-      "url": "https://activistpost.com/report-links-ai-data-center-air-pollution-to-risks-for-childrens-developing-brains-and-lungs/",
-      "source": "Activistpost.com",
-      "publishedAt": "2026-10-10T10:00:00Z",
-      "title": "Muscle Health Plays Crucial Role in Diabetes Risk, Study Finds",
-      "title_ja": "AIデータセンターの大気汚染が子供の健康に及ぼすリスク",
-      "summary_ja": "Children’s Health Defenseの報告によれば、AIデータセンターからの大気汚染が子供の脳や肺の発達に影響を及ぼす可能性があります。データセンターは大量の電力を必要とし、特に有害な排出物を発生させます。市民の多くがデータセンターの建設に反対しており、健康への影響が懸念されています。",
+      "url": "https://timesofindia.indiatimes.com/world/europe/ukraine-steps-up-attacks-on-russian-tech-infrastructure-damages-third-data-center/articleshow/134873093.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-10-11T16:27:18Z",
+      "title": "Ukraine steps up attacks on Russian tech infrastructure, damages third data center",
+      "title_ja": "ウクライナ、ロシアの技術インフラへの攻撃を強化し、第3のデータセンターに損害",
+      "summary_ja": "ウクライナの最近のドローン攻撃により、ウラジミールにあるヤンデックスのデータセンターが損傷を受け、複数の都市でタクシーや銀行サービスに影響を与えた。この攻撃は、ヤンデックス施設への継続的な空中攻撃の一部であり、ロシアの技術インフラに対する圧力が高まっている。さらなる攻撃が予想され、地域間の通信とサービスの安定性に影響を及ぼす可能性がある。",
       "key_points": [
-        "AIデータセンターからの排出物が子供に与える健康リスクを指摘。",
-        "多数のアメリカ人が自宅近くのデータセンター建設に反対。",
-        "AIデータセンターは消費電力の増加で電力網に負担をかけている。",
-        "排出される有害物質が地域住民、特に子供に深刻な影響を及ぼす可能性あり。",
-        "現在の空気品質基準は子供を十分に守れていないとの指摘。",
-        "業界は排出の削減に取り組む必要があると認識。"
+        "ウクライナがヤンデックスのデータセンターを攻撃",
+        "この攻撃によりタクシーおよび銀行サービスに問題が発生",
+        "ウクライナの継続的な航空攻撃の一環",
+        "データセンターへの攻撃は3回目",
+        "ロシアの技術インフラへの圧力が増加",
+        "関係各国の対応が求められている"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "AIに必要な処理を行うためのコンピュータ施設で、大量の電力を消費する。"
+          "term": "Yandex",
+          "explain_ja": "ロシアの大手IT企業で、検索エンジンやオンラインサービスを提供している。"
         },
         {
-          "term": "微細粒子物質（PM）",
-          "explain_ja": "大気中の小さな粒子で、健康への影響が広く知られている。"
+          "term": "ドローン攻撃",
+          "explain_ja": "無人航空機を用いた攻撃手段。"
         },
         {
-          "term": "窒素酸化物（NOx）",
-          "explain_ja": "大気汚染の原因となるガスで、主に自動車や発電所から排出される。"
+          "term": "データセンター",
+          "explain_ja": "データの保存、管理、配信を行うための施設。"
         },
         {
-          "term": "PFAS",
-          "explain_ja": "永遠の化学物質として知られ、様々な産業で使用されている。"
-        },
-        {
-          "term": "EPA（環境保護庁）",
-          "explain_ja": "アメリカの連邦政府機関で、環境保護に関する規制と施策を担当。"
+          "term": "サービス障害",
+          "explain_ja": "特定のサービスが利用できなくなる事態。"
         }
       ],
       "personal_actions": [
-        "周囲のデータセンターの位置を確認し、影響を評価する。",
-        "地域の環境規制に関する最新情報を追跡する。",
-        "健康影響評価を求める声を地域の代表者に届ける。"
+        "攻撃対象に関する最新情報を確認する",
+        "サイバーセキュリティ対策を再評価する",
+        "関連するインフラへの影響をモニタリングする"
       ],
       "tags": [
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://economictimes.indiatimes.com/industry/cons-products/electronics/ai-can-enhance-5g-network-performance-by-30-ericsson/articleshow/134860148.cms",
+      "url": "https://economictimes.indiatimes.com/news/defence/ukraine-steps-up-strikes-on-russias-tech-infrastructure-damaging-third-data-center-in-4-days/articleshow/134867593.cms",
       "source": "The Times of India",
-      "publishedAt": "2026-10-10T18:36:04Z",
-      "title": "AI can enhance 5G network performance by 30%: Ericsson",
-      "title_ja": "エリクソン、AIが5Gネットワーク性能を30%向上可能と発表",
-      "summary_ja": "エリクソンによると、AI技術を活用することで、テレコム企業は5Gネットワークの性能を最大30%向上できる可能性がある。リライアンス・ジオやバーティ・エアテルなどの大手企業がこの技術を導入予定で、現行のハードウェアを用いたソフトウェアのアップグレードが計画されている。これにより、5Gサービスの品質が向上し、ユーザー体験に良い影響を与えると期待されている。",
+      "publishedAt": "2026-10-11T08:48:05Z",
+      "title": "Ukraine steps up strikes on Russia's tech infrastructure, damaging third data center in 4 days",
+      "title_ja": "ウクライナ、ロシアの技術インフラを攻撃強化—4日間で3つ目のデータセンターに被害",
+      "summary_ja": "ウクライナがロシアの技術インフラに対する攻撃を強化し、4日間で3つ目のデータセンターにダメージを与えました。最近の攻撃では、ウクライナのドローンがウラジミールにあるYandexのデータセンターを狙い、広範囲なサービス障害を引き起こしました。この影響で、ロシアの複数の都市や近隣国のユーザーが銀行サービスを含む様々なサービスにアクセスできなくなっています。",
       "key_points": [
-        "AIが5Gネットワークの性能を30%向上可能。",
-        "リライアンス・ジオやバーティ・エアテルなどが導入を予定。",
-        "現在のハードウェアを利用したソフトウェアアップグレード。",
-        "5Gサービスの品質向上が期待される。",
-        "ユーザー体験へのポジティブな影響が見込まれる。"
+        "ウクライナのドローン攻撃がYandexのデータセンターを標的にした",
+        "攻撃によって広範なサービス障害が発生",
+        "ロシア及び近隣国のユーザーが影響を受けた",
+        "4日間で3つ目のデータセンターが被害を受けた",
+        "金融サービスにアクセスできない事例が報告"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略称で、データを学習し、意思決定を自動化する技術。"
+          "term": "データセンター",
+          "explain_ja": "大量のデータを保存・管理・処理するための施設。"
         },
         {
-          "term": "5G",
-          "explain_ja": "第5世代移動通信システムの略で、高速・大容量通信が可能な無線通信技術。"
+          "term": "ウクライナ",
+          "explain_ja": "東ヨーロッパに位置する国。ロシアとの緊張が続いている。"
         }
       ],
       "personal_actions": [
-        "今後のソフトウェアアップグレードについて情報をチェックする。",
-        "自社の5GネットワークにおけるAI導入の影響を検討する。",
-        "業界トレンドを把握し、競争力を維持するための戦略を立てる。"
+        "サイバーセキュリティの状況を確認する",
+        "データバックアップを行う",
+        "重要なサービスの冗長性を考慮する"
       ],
       "tags": [
-        "インフラ",
-        "AI"
+        "DC"
       ]
     }
   ]
