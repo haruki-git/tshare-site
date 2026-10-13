@@ -1,39 +1,68 @@
 {
-  "date": "2026-10-13",
-  "generatedAtJST": "2026-10-13T07:15:36.745+09:00",
+  "date": "2026-10-14",
+  "generatedAtJST": "2026-10-14T07:15:24.521+09:00",
   "items": [
     {
-      "url": "https://futurism.com/future-society/ai-data-center-boom-smog-spewing-gas-power",
-      "source": "Futurism",
-      "publishedAt": "2026-10-11T17:01:00Z",
-      "title": "The AI Data Center Boom Is Causing a Gigantic Spike in Smog-Spewing Gas Power Plants",
-      "title_ja": "AIデータセンターの急増がスモッグを排出するガス発電所の大幅増加を引き起こしている",
-      "summary_ja": "AIインフラの拡大により、今後4年間でガス発電所の容量が44％も増加することが予測されています。これは、米国の電力供給において過去数世代にわたる努力の成果に逆行するものです。この急激な需要増加は、環境に優しいエネルギープロジェクトを削減し、温暖化の問題をさらに悪化させる可能性があります。",
+      "url": "https://tech.slashdot.org/story/26/10/12/1832205/russia-was-not-ready-for-the-data-center-war-it-started-with-ukraine",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-10-12T19:00:00Z",
+      "title": "Russia Was Not Ready For the Data Center War It Started With Ukraine",
+      "title_ja": "ロシアはウクライナとのデータセンター戦争に備えていなかった",
+      "summary_ja": "ロシアがウクライナのデータセンターと通信インフラに攻撃を開始した際、反撃への準備が不足していた。このため、ロシアのデジタルサービスは広範囲にわたる障害に直面している。ロシアの不備がウクライナ側にどのような影響を与えているかが浮き彫りになった。",
       "key_points": [
-        "米国のガス発電所は1,000カ所近くで、他国と比較しても突出している。",
-        "AIの需要増により、ガス発電容量は2030年までに20ギガワット増加すると予測される。",
-        "新しいガス発電所の設置が進む一方で、風力発電プロジェクトが34％減少している。",
-        "データセンターの電力需要がクリーンエネルギー移行のリスクを高めている。",
-        "地域社会に悪影響を与える新しいガス発電所の設置が懸念されている。"
+        "ロシアのウクライナに対するデータセンター攻撃が始まった。",
+        "準備不足のため、ロシア自身がデジタルサービスの障害に直面している。",
+        "ウクライナ側への反撃が効果を上げている可能性がある。"
       ],
       "glossary": [
         {
-          "term": "ガス発電所",
-          "explain_ja": "天然ガスを燃料とする発電所で、主に電力を供給するために使用される。"
+          "term": "データセンター",
+          "explain_ja": "データを集中して管理する施設。"
         },
         {
-          "term": "AIインフラ",
-          "explain_ja": "人工知能（AI）を支えるための物理的および仮想的な設備やシステム。"
-        },
-        {
-          "term": "再生可能エネルギー",
-          "explain_ja": "太陽光、風力など、自然の力を利用して生成されるエネルギー。"
+          "term": "通信インフラ",
+          "explain_ja": "通信サービスを支えるための基盤設備。"
         }
       ],
       "personal_actions": [
-        "データセンターの設置計画に関する地域の情報を確認する。",
-        "持続可能なエネルギーの利用を促進するための政策提言を行う。",
-        "地域社会での環境影響についての対話に参加する。"
+        "現在のデジタルインフラのセキュリティ対策を再確認する。",
+        "潜在的な障害に備えてバックアップシステムの整備を行う。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/nvidia-cisco-pluggable-optics-ai-data-centers/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-12T15:04:47Z",
+      "title": "Nvidia, Cisco and partners introduce new pluggable optics format for AI data centers",
+      "title_ja": "NvidiaとCiscoがAIデータセンター向けの新しいプラッガブル光学フォーマットを導入",
+      "summary_ja": "NvidiaとCiscoが新たにプラッガブル光学フォーマットを発表しました。この革新はデータセンターの電力消費を大幅に削減し、柔軟性を高める可能性があります。これにより、AIインフラストラクチャの効率が向上することが期待されています。",
+      "key_points": [
+        "NvidiaとCiscoが新しい光学フォーマットを発表",
+        "この技術はデータセンターの電力消費を大幅に削減する可能性がある",
+        "新たなプラッガブル光学フォーマットが柔軟性を向上させる",
+        "AIインフラストラクチャの効率向上が期待される"
+      ],
+      "glossary": [
+        {
+          "term": "プラッガブル光学",
+          "explain_ja": "コンポーネントを簡単に取り外し可能な光学技術。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データの処理や保存を行うための施設。"
+        },
+        {
+          "term": "AIインフラストラクチャ",
+          "explain_ja": "人工知能を実装するための基盤となるシステムや環境。"
+        }
+      ],
+      "personal_actions": [
+        "新しい光学フォーマットの導入に備えて、既存のインフラを確認する",
+        "電力消費の最適化を検討するためのデータを収集する",
+        "AIサービスの効率を向上させるための技術情報を最新版に更新する"
       ],
       "tags": [
         "DC",
@@ -41,75 +70,37 @@
       ]
     },
     {
-      "url": "https://timesofindia.indiatimes.com/world/europe/ukraine-steps-up-attacks-on-russian-tech-infrastructure-damages-third-data-center/articleshow/134873093.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-10-11T16:27:18Z",
-      "title": "Ukraine steps up attacks on Russian tech infrastructure, damages third data center",
-      "title_ja": "ウクライナ、ロシアの技術インフラへの攻撃を強化し、第3のデータセンターに損害",
-      "summary_ja": "ウクライナの最近のドローン攻撃により、ウラジミールにあるヤンデックスのデータセンターが損傷を受け、複数の都市でタクシーや銀行サービスに影響を与えた。この攻撃は、ヤンデックス施設への継続的な空中攻撃の一部であり、ロシアの技術インフラに対する圧力が高まっている。さらなる攻撃が予想され、地域間の通信とサービスの安定性に影響を及ぼす可能性がある。",
+      "url": "https://techpinions.com/senate-data-center-bill-google-nuclear-890-mw/",
+      "source": "Techpinions.com",
+      "publishedAt": "2026-10-12T15:00:00Z",
+      "title": "The Senate Couldn’t Agree on Who Pays for Data Center Power. Google Just Signed Up for 890 New Megawatts.",
+      "title_ja": "上院はデータセンターの電力費用の負担者について合意できず。Googleが890メガワットの契約を締結",
+      "summary_ja": "上院はデータセンターの新しい電力インフラの費用を家庭の電気料金から外すことを目的とした法案を阻止した。これにより、Alphabetは新たに890メガワットの原子力出力を獲得する契約を結んだ。全体として、この状況は、データセンターが自らの電力費用を負担する責任についての政策が滞っていることを示している。",
       "key_points": [
-        "ウクライナがヤンデックスのデータセンターを攻撃",
-        "この攻撃によりタクシーおよび銀行サービスに問題が発生",
-        "ウクライナの継続的な航空攻撃の一環",
-        "データセンターへの攻撃は3回目",
-        "ロシアの技術インフラへの圧力が増加",
-        "関係各国の対応が求められている"
+        "上院はデータセンターに新しいインフラの費用を負担させる法案を否決。",
+        "Googleは890メガワットの新しい原子力出力を契約し、具体的にはイリノイ、ペンシルベニア、ニュージャージーの既存の原子力発電所から供給。",
+        "データセンターの電力需要は現在急上昇中で、上院の法案はその対策が不十分とされる。",
+        "大企業による契約は市場所依存の競争ではなく、新たな電力を供給する可能性を示唆。",
+        "この契約が他の企業にも広がるかは今後の動向次第。"
       ],
       "glossary": [
         {
-          "term": "Yandex",
-          "explain_ja": "ロシアの大手IT企業で、検索エンジンやオンラインサービスを提供している。"
+          "term": "Ratepayer Protection Act",
+          "explain_ja": "データセンターの電力インフラ費用を家庭の電気料金に含めないよう求める法案。"
         },
         {
-          "term": "ドローン攻撃",
-          "explain_ja": "無人航空機を用いた攻撃手段。"
+          "term": "megawatt (MW)",
+          "explain_ja": "電力の単位で、1メガワットは100万ワットに相当。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、管理、配信を行うための施設。"
-        },
-        {
-          "term": "サービス障害",
-          "explain_ja": "特定のサービスが利用できなくなる事態。"
+          "term": "PJM",
+          "explain_ja": "アメリカの13州で電力の需給を調整する市場。"
         }
       ],
       "personal_actions": [
-        "攻撃対象に関する最新情報を確認する",
-        "サイバーセキュリティ対策を再評価する",
-        "関連するインフラへの影響をモニタリングする"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://economictimes.indiatimes.com/news/defence/ukraine-steps-up-strikes-on-russias-tech-infrastructure-damaging-third-data-center-in-4-days/articleshow/134867593.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-10-11T08:48:05Z",
-      "title": "Ukraine steps up strikes on Russia's tech infrastructure, damaging third data center in 4 days",
-      "title_ja": "ウクライナ、ロシアの技術インフラを攻撃強化—4日間で3つ目のデータセンターに被害",
-      "summary_ja": "ウクライナがロシアの技術インフラに対する攻撃を強化し、4日間で3つ目のデータセンターにダメージを与えました。最近の攻撃では、ウクライナのドローンがウラジミールにあるYandexのデータセンターを狙い、広範囲なサービス障害を引き起こしました。この影響で、ロシアの複数の都市や近隣国のユーザーが銀行サービスを含む様々なサービスにアクセスできなくなっています。",
-      "key_points": [
-        "ウクライナのドローン攻撃がYandexのデータセンターを標的にした",
-        "攻撃によって広範なサービス障害が発生",
-        "ロシア及び近隣国のユーザーが影響を受けた",
-        "4日間で3つ目のデータセンターが被害を受けた",
-        "金融サービスにアクセスできない事例が報告"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "大量のデータを保存・管理・処理するための施設。"
-        },
-        {
-          "term": "ウクライナ",
-          "explain_ja": "東ヨーロッパに位置する国。ロシアとの緊張が続いている。"
-        }
-      ],
-      "personal_actions": [
-        "サイバーセキュリティの状況を確認する",
-        "データバックアップを行う",
-        "重要なサービスの冗長性を考慮する"
+        "最新のエネルギー政策や法案の進捗を定期的に確認。",
+        "データセンターの電力契約の動向に注目し、自社にどのように影響があるか考慮。",
+        "エネルギー消費の効率化について社内で議論を促進。"
       ],
       "tags": [
         "DC"
