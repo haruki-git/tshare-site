@@ -1,68 +1,32 @@
 {
-  "date": "2026-10-14",
-  "generatedAtJST": "2026-10-14T07:15:24.521+09:00",
+  "date": "2026-10-15",
+  "generatedAtJST": "2026-10-15T07:15:24.462+09:00",
   "items": [
     {
-      "url": "https://tech.slashdot.org/story/26/10/12/1832205/russia-was-not-ready-for-the-data-center-war-it-started-with-ukraine",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-10-12T19:00:00Z",
-      "title": "Russia Was Not Ready For the Data Center War It Started With Ukraine",
-      "title_ja": "ロシアはウクライナとのデータセンター戦争に備えていなかった",
-      "summary_ja": "ロシアがウクライナのデータセンターと通信インフラに攻撃を開始した際、反撃への準備が不足していた。このため、ロシアのデジタルサービスは広範囲にわたる障害に直面している。ロシアの不備がウクライナ側にどのような影響を与えているかが浮き彫りになった。",
-      "key_points": [
-        "ロシアのウクライナに対するデータセンター攻撃が始まった。",
-        "準備不足のため、ロシア自身がデジタルサービスの障害に直面している。",
-        "ウクライナ側への反撃が効果を上げている可能性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データを集中して管理する施設。"
-        },
-        {
-          "term": "通信インフラ",
-          "explain_ja": "通信サービスを支えるための基盤設備。"
-        }
-      ],
-      "personal_actions": [
-        "現在のデジタルインフラのセキュリティ対策を再確認する。",
-        "潜在的な障害に備えてバックアップシステムの整備を行う。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/nvidia-cisco-pluggable-optics-ai-data-centers/",
+      "url": "https://cryptobriefing.com/flex-axiom-spinoff-ai-infrastructure-2027/",
       "source": "Crypto Briefing",
-      "publishedAt": "2026-10-12T15:04:47Z",
-      "title": "Nvidia, Cisco and partners introduce new pluggable optics format for AI data centers",
-      "title_ja": "NvidiaとCiscoがAIデータセンター向けの新しいプラッガブル光学フォーマットを導入",
-      "summary_ja": "NvidiaとCiscoが新たにプラッガブル光学フォーマットを発表しました。この革新はデータセンターの電力消費を大幅に削減し、柔軟性を高める可能性があります。これにより、AIインフラストラクチャの効率が向上することが期待されています。",
+      "publishedAt": "2026-10-13T18:42:43Z",
+      "title": "Flex plans Axiom spinoff to chase AI data center power demand in 2027",
+      "title_ja": "Flex、2027年にAIデータセンターの需要を狙うAxiomのスピンオフ計画",
+      "summary_ja": "Flexは、2027年にAIデータセンターの電力需要を追求するためにAxiomのスピンオフを計画しています。この動きは、AIデータセンターのダイナミクスを再構築し、テクノロジーインフラにおける投資戦略や競争環境に影響を与える可能性があります。今後の投資の流れを見守る必要があります。",
       "key_points": [
-        "NvidiaとCiscoが新しい光学フォーマットを発表",
-        "この技術はデータセンターの電力消費を大幅に削減する可能性がある",
-        "新たなプラッガブル光学フォーマットが柔軟性を向上させる",
-        "AIインフラストラクチャの効率向上が期待される"
+        "Flexが2027年にAxiomをスピンオフする計画を発表",
+        "AIデータセンターの電力需要に応じた戦略を展開予定",
+        "市場の競争環境が変化する可能性がある"
       ],
       "glossary": [
         {
-          "term": "プラッガブル光学",
-          "explain_ja": "コンポーネントを簡単に取り外し可能な光学技術。"
+          "term": "Axiom",
+          "explain_ja": "Flexが計画しているスピンオフプロジェクトの名称。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの処理や保存を行うための施設。"
-        },
-        {
-          "term": "AIインフラストラクチャ",
-          "explain_ja": "人工知能を実装するための基盤となるシステムや環境。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能（AI）処理のために特化されたデータセンター。"
         }
       ],
       "personal_actions": [
-        "新しい光学フォーマットの導入に備えて、既存のインフラを確認する",
-        "電力消費の最適化を検討するためのデータを収集する",
-        "AIサービスの効率を向上させるための技術情報を最新版に更新する"
+        "AIデータセンターに関連する投資動向をチェックする",
+        "Flexの動向に注目し、業界ニュースを追う"
       ],
       "tags": [
         "DC",
@@ -70,37 +34,72 @@
       ]
     },
     {
-      "url": "https://techpinions.com/senate-data-center-bill-google-nuclear-890-mw/",
-      "source": "Techpinions.com",
-      "publishedAt": "2026-10-12T15:00:00Z",
-      "title": "The Senate Couldn’t Agree on Who Pays for Data Center Power. Google Just Signed Up for 890 New Megawatts.",
-      "title_ja": "上院はデータセンターの電力費用の負担者について合意できず。Googleが890メガワットの契約を締結",
-      "summary_ja": "上院はデータセンターの新しい電力インフラの費用を家庭の電気料金から外すことを目的とした法案を阻止した。これにより、Alphabetは新たに890メガワットの原子力出力を獲得する契約を結んだ。全体として、この状況は、データセンターが自らの電力費用を負担する責任についての政策が滞っていることを示している。",
+      "url": "https://economictimes.indiatimes.com/news/company/corporate-trends/adani-enterprises-jabil-sign-pact-for-ai-data-centre-hardware-joint-venture/articleshow/134918160.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-10-13T12:37:02Z",
+      "title": "Adani Enterprises, Jabil sign pact for AI, data centre hardware joint venture",
+      "title_ja": "アダニ・エンタープライズとジャビルがAIデータセンター機器の共同事業契約を締結",
+      "summary_ja": "アダニ・エンタープライズとジャビルは、インドにおけるAIおよびデータセンター機器の製造を目的とした共同事業のための覚書を署名しました。このパートナーシップにより、AIラックやサーバー、冷却システムの生産が含まれます。今後の展開で、インドにおけるこれらの技術の生産能力が向上することが期待されます。",
       "key_points": [
-        "上院はデータセンターに新しいインフラの費用を負担させる法案を否決。",
-        "Googleは890メガワットの新しい原子力出力を契約し、具体的にはイリノイ、ペンシルベニア、ニュージャージーの既存の原子力発電所から供給。",
-        "データセンターの電力需要は現在急上昇中で、上院の法案はその対策が不十分とされる。",
-        "大企業による契約は市場所依存の競争ではなく、新たな電力を供給する可能性を示唆。",
-        "この契約が他の企業にも広がるかは今後の動向次第。"
+        "アダニ・エンタープライズとジャビルが共同事業契約を締結",
+        "インドでのAIおよびデータセンター機器の製造を目指す",
+        "生産される機器にはAIラック、サーバー、冷却システムが含まれる"
       ],
       "glossary": [
         {
-          "term": "Ratepayer Protection Act",
-          "explain_ja": "データセンターの電力インフラ費用を家庭の電気料金に含めないよう求める法案。"
+          "term": "AI",
+          "explain_ja": "人工知能の略称。コンピュータが人間の知能を模倣する技術。"
         },
         {
-          "term": "megawatt (MW)",
-          "explain_ja": "電力の単位で、1メガワットは100万ワットに相当。"
+          "term": "データセンター",
+          "explain_ja": "データの保存と管理を行うための施設。サーバーやネットワーク機器が設置されている。"
         },
         {
-          "term": "PJM",
-          "explain_ja": "アメリカの13州で電力の需給を調整する市場。"
+          "term": "共同事業",
+          "explain_ja": "複数の会社が協力して新たな事業を展開するための形態。"
         }
       ],
       "personal_actions": [
-        "最新のエネルギー政策や法案の進捗を定期的に確認。",
-        "データセンターの電力契約の動向に注目し、自社にどのように影響があるか考慮。",
-        "エネルギー消費の効率化について社内で議論を促進。"
+        "最新のデータセンター技術に関する情報を調査して理解を深める",
+        "AIやデータセンター関連のスキルアップのための勉強を始める",
+        "企業との新たなパートナーシップや共同事業に興味を持つ"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.kyivpost.com/post/86708",
+      "source": "Kyiv Post",
+      "publishedAt": "2026-10-13T05:47:01Z",
+      "title": "Drones Hit Yandex Data Center in Vladimir, Russia, Disrupting Over 80 Services",
+      "title_ja": "ウクライナのドローン攻撃がロシアのヤンデックスデータセンターを直撃、80以上のサービスが影響を受ける",
+      "summary_ja": "ウクライナのドローン攻撃がロシアのウラジミールにあるヤンデックスのデータセンターを襲い、運用を停止させました。この攻撃により、80を超えるデジタルサービスやクラウドインフラが広範に影響を受けました。連続する攻撃は、ロシアのデジタルネットワークやデータ処理ロジスティクスに対するキャンペーンの一環として位置づけられています。",
+      "key_points": [
+        "ウクライナのドローンがロシアのヤンデックスデータセンターに攻撃を実施。",
+        "運用停止により、ヤンデックスの音声アシスタントや音楽サービスなど、80以上のサービスが影響を受けた。",
+        "この攻撃は、ロシアのクラウドインフラへの連続した攻撃の一部である。",
+        "ウラジミール市の電力供給も一時的に中断された。",
+        "ヤンデックス株はモスクワ証券取引所で約4%減少した。"
+      ],
+      "glossary": [
+        {
+          "term": "Yandex",
+          "explain_ja": "ロシアのテクノロジー企業で、検索エンジンやクラウドサービスを提供している。"
+        },
+        {
+          "term": "ドローン攻撃",
+          "explain_ja": "無人航空機を用いて行われる攻撃手法。"
+        },
+        {
+          "term": "クラウドインフラ",
+          "explain_ja": "インターネット経由で提供されるコンピュータリソースやサービスのこと。"
+        }
+      ],
+      "personal_actions": [
+        "影響を受ける可能性のあるシステムやサービスのバックアップを確認する。",
+        "運用しているインフラのセキュリティ設定を見直す。",
+        "最新の攻撃情報を把握し、対策を検討する。"
       ],
       "tags": [
         "DC"
