@@ -1,32 +1,71 @@
 {
-  "date": "2026-10-15",
-  "generatedAtJST": "2026-10-15T07:15:24.462+09:00",
+  "date": "2026-10-16",
+  "generatedAtJST": "2026-10-16T07:15:23.165+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/flex-axiom-spinoff-ai-infrastructure-2027/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-13T18:42:43Z",
-      "title": "Flex plans Axiom spinoff to chase AI data center power demand in 2027",
-      "title_ja": "Flex、2027年にAIデータセンターの需要を狙うAxiomのスピンオフ計画",
-      "summary_ja": "Flexは、2027年にAIデータセンターの電力需要を追求するためにAxiomのスピンオフを計画しています。この動きは、AIデータセンターのダイナミクスを再構築し、テクノロジーインフラにおける投資戦略や競争環境に影響を与える可能性があります。今後の投資の流れを見守る必要があります。",
+      "url": "http://commercialobserver.com/2026/10/c-pace-financing-data-centers/",
+      "source": "Commercial Observer",
+      "publishedAt": "2026-10-14T20:10:31Z",
+      "title": "C-PACE Financing Can Be a Useful Part of a Data Center’s Capital Stack",
+      "title_ja": "C-PACEファイナンスはデータセンターの資本構成に役立つ",
+      "summary_ja": "近年のデータセンターの増加に伴い、資金調達の課題が浮上しています。国際エネルギー機関は、データセンターの電力消費が2030年までに倍増すると予測しています。この背景の中、商業用不動産評価クリーンエネルギー（C-PACE）ファイナンスは、データセンターのインフラ資金調達の新たな手段として注目されています。",
       "key_points": [
-        "Flexが2027年にAxiomをスピンオフする計画を発表",
-        "AIデータセンターの電力需要に応じた戦略を展開予定",
-        "市場の競争環境が変化する可能性がある"
+        "データセンターは冷却や電力供給に重要なインフラを追加で必要とするため、資金調達が困難。",
+        "C-PACEファイナンスは、設備やHVACなどのインフラ改善に資金を提供する。",
+        "C-PACEは、一般的なデータセンターすべての構成要素ではなく、特定の物理インフラの資金調達に適している。",
+        "長期的な資本として、プロジェクトの資本コストを軽減する可能性がある。",
+        "C-PACEは資金調達の初期段階で利用可能で、設計費用にも対応できる。"
       ],
       "glossary": [
         {
-          "term": "Axiom",
-          "explain_ja": "Flexが計画しているスピンオフプロジェクトの名称。"
+          "term": "C-PACE",
+          "explain_ja": "商業用不動産評価クリーンエネルギーは、エネルギー効率や再生可能エネルギー改善のための資金を不動産評価に基づいて融資する仕組み。"
         },
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能（AI）処理のために特化されたデータセンター。"
+          "term": "HVAC",
+          "explain_ja": "暖房、換気、空調システムを指し、データセンターの冷却に重要。"
+        },
+        {
+          "term": "LTV",
+          "explain_ja": "ローン・トゥ・バリュー比率は、融資額と担保価値の比率を示す指標。"
         }
       ],
       "personal_actions": [
-        "AIデータセンターに関連する投資動向をチェックする",
-        "Flexの動向に注目し、業界ニュースを追う"
+        "データセンターにおける冷却や電力供給のシステムがC-PACEの適用可能性に合致しているか確認する。",
+        "プロジェクトの資本構成を評価し、初期段階からC-PACEを考慮する。",
+        "モーゲージ貸し手と早めに連携を取っておく。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.techradar.com/pro/data-centers-use-as-little-as-60-percent-of-power-consumed-for-actual-ai-work-nvidia-claims-failures-and-restarts-consume-a-whopping-10-percent-of-every-watt-used",
+      "source": "TechRadar",
+      "publishedAt": "2026-10-14T18:20:00Z",
+      "title": "Data centers use as little as 60% of power consumed for actual AI work, Nvidia claims — failures and restarts 'consume' a whopping 10% of every watt used",
+      "title_ja": "データセンターの60%未満の電力がAI作業に使用、Nvidiaが主張 - 障害や再起動で消費される10%の電力",
+      "summary_ja": "Nvidiaの主張によると、データセンターで消費される電力のうち、実際のAI作業に使用されるのは60%未満であることが明らかになりました。障害や再起動が全体の10%に影響を与えているとされています。この問題を解決するため、NvidiaとVertivの新たなパートナーシップがデータセンターの効率化と持続可能な施設の構築を目指しています。",
+      "key_points": [
+        "データセンターの60%未満の電力が実際のAI作業に使用されている。",
+        "障害や再起動が10%の電力を消費している。",
+        "NvidiaとVertivがデータセンター効率の改善に向けて提携。",
+        "新しい施設の持続可能性を強化する取り組みが進行中。"
+      ],
+      "glossary": [
+        {
+          "term": "Nvidia",
+          "explain_ja": "米国のテクノロジー企業で、グラフィックスプロセッサユニット（GPU）の開発で知られる。"
+        },
+        {
+          "term": "Vertiv",
+          "explain_ja": "データセンターや通信ネットワーク向けのインフラソリューションを提供する企業。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの電力使用状況を確認し、効率化のための改善策を検討する。",
+        "障害や再起動が発生する原因を分析し、対策を講じる。",
+        "持続可能性に向けた新しい技術やパートナーシップを検討する。"
       ],
       "tags": [
         "DC",
@@ -34,72 +73,30 @@
       ]
     },
     {
-      "url": "https://economictimes.indiatimes.com/news/company/corporate-trends/adani-enterprises-jabil-sign-pact-for-ai-data-centre-hardware-joint-venture/articleshow/134918160.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-10-13T12:37:02Z",
-      "title": "Adani Enterprises, Jabil sign pact for AI, data centre hardware joint venture",
-      "title_ja": "アダニ・エンタープライズとジャビルがAIデータセンター機器の共同事業契約を締結",
-      "summary_ja": "アダニ・エンタープライズとジャビルは、インドにおけるAIおよびデータセンター機器の製造を目的とした共同事業のための覚書を署名しました。このパートナーシップにより、AIラックやサーバー、冷却システムの生産が含まれます。今後の展開で、インドにおけるこれらの技術の生産能力が向上することが期待されます。",
+      "url": "https://cryptobriefing.com/big-tech-resists-funding-us-power-grid-upgrades-amid-data-center-expansion/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-14T16:17:22Z",
+      "title": "Big Tech resists funding US power grid upgrades amid data center expansion",
+      "title_ja": "ビッグテック、データセンター拡張の中で米国電力網のアップグレード資金提供に抵抗",
+      "summary_ja": "ビッグテックは、米国の電力網のアップグレードに必要な資金提供に抵抗しており、この姿勢がインフラの更新を遅らせる可能性があります。その結果、テクノロジー分野におけるエネルギー政策や規制のダイナミクスに影響を及ぼすことが予想されます。",
       "key_points": [
-        "アダニ・エンタープライズとジャビルが共同事業契約を締結",
-        "インドでのAIおよびデータセンター機器の製造を目指す",
-        "生産される機器にはAIラック、サーバー、冷却システムが含まれる"
+        "ビッグテックは米国の電力網の資金提供に抵抗している。",
+        "この抵抗がインフラの更新を遅らせる可能性がある。",
+        "エネルギー政策や規制における影響が懸念されている。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略称。コンピュータが人間の知能を模倣する技術。"
+          "term": "米国電力網",
+          "explain_ja": "米国全体の電力供給システムを指し、電力の送配電を行う。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存と管理を行うための施設。サーバーやネットワーク機器が設置されている。"
-        },
-        {
-          "term": "共同事業",
-          "explain_ja": "複数の会社が協力して新たな事業を展開するための形態。"
+          "term": "ビッグテック",
+          "explain_ja": "主要なテクノロジー企業（Amazon, Google, Facebook など）を指す。"
         }
       ],
       "personal_actions": [
-        "最新のデータセンター技術に関する情報を調査して理解を深める",
-        "AIやデータセンター関連のスキルアップのための勉強を始める",
-        "企業との新たなパートナーシップや共同事業に興味を持つ"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.kyivpost.com/post/86708",
-      "source": "Kyiv Post",
-      "publishedAt": "2026-10-13T05:47:01Z",
-      "title": "Drones Hit Yandex Data Center in Vladimir, Russia, Disrupting Over 80 Services",
-      "title_ja": "ウクライナのドローン攻撃がロシアのヤンデックスデータセンターを直撃、80以上のサービスが影響を受ける",
-      "summary_ja": "ウクライナのドローン攻撃がロシアのウラジミールにあるヤンデックスのデータセンターを襲い、運用を停止させました。この攻撃により、80を超えるデジタルサービスやクラウドインフラが広範に影響を受けました。連続する攻撃は、ロシアのデジタルネットワークやデータ処理ロジスティクスに対するキャンペーンの一環として位置づけられています。",
-      "key_points": [
-        "ウクライナのドローンがロシアのヤンデックスデータセンターに攻撃を実施。",
-        "運用停止により、ヤンデックスの音声アシスタントや音楽サービスなど、80以上のサービスが影響を受けた。",
-        "この攻撃は、ロシアのクラウドインフラへの連続した攻撃の一部である。",
-        "ウラジミール市の電力供給も一時的に中断された。",
-        "ヤンデックス株はモスクワ証券取引所で約4%減少した。"
-      ],
-      "glossary": [
-        {
-          "term": "Yandex",
-          "explain_ja": "ロシアのテクノロジー企業で、検索エンジンやクラウドサービスを提供している。"
-        },
-        {
-          "term": "ドローン攻撃",
-          "explain_ja": "無人航空機を用いて行われる攻撃手法。"
-        },
-        {
-          "term": "クラウドインフラ",
-          "explain_ja": "インターネット経由で提供されるコンピュータリソースやサービスのこと。"
-        }
-      ],
-      "personal_actions": [
-        "影響を受ける可能性のあるシステムやサービスのバックアップを確認する。",
-        "運用しているインフラのセキュリティ設定を見直す。",
-        "最新の攻撃情報を把握し、対策を検討する。"
+        "最新のエネルギー政策に関する情報を確認する。",
+        "所属する組織としてのエネルギー使用を見直す。"
       ],
       "tags": [
         "DC"
