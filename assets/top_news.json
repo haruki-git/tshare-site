@@ -1,117 +1,117 @@
 {
-  "date": "2026-10-17",
-  "generatedAtJST": "2026-10-17T07:15:31.953+09:00",
+  "date": "2026-10-18",
+  "generatedAtJST": "2026-10-18T07:15:24.452+09:00",
   "items": [
     {
-      "url": "https://www.storagereview.com/news/sp-industrial-enterprise-ssd-gen5-e1s-u2-etlc",
-      "source": "Storagereview.com",
-      "publishedAt": "2026-10-15T20:42:37Z",
-      "title": "SP Industrial Enterprise SSD Lineup Adds PCIe Gen5 E1.S and U.2 Drives up to 15.3TB With eTLC and 3 DWPD Options",
-      "title_ja": "SPインダストリアル、PCIe Gen5 E1.SおよびU.2ドライブを追加し、15.3TBのeTLCを実装",
-      "summary_ja": "SPインダストリアルは、AIおよびデータセンター向けの新しいエンタープライズSSDラインを発表しました。このラインアップは、E1.S、U.2、M.2 2280、および2.5インチSATAの各フォームファクターをカバーしています。特に、通信と自動車用に設計されたこのSSDは、最大15.3TBの容量を持ち、耐久性も選択可能な3 DWPDを提供します。",
+      "url": "https://www.nextgov.com/policy/2026/10/tech-bills-week-cutting-federal-funding-flock-making-data-centers-shoulder-their-power-costs-and-more/416661/",
+      "source": "Nextgov",
+      "publishedAt": "2026-10-16T21:25:00Z",
+      "title": "Tech bills of the week: Cutting federal funding for Flock; Making data centers shoulder their power costs; and more",
+      "title_ja": "今週のテクノロジー法案：Flockに対する連邦資金の削減、データセンターに電力コストを負担させる法案など",
+      "summary_ja": "今回の法案は、AIによる監視システムの利用制限とデータセンターの電力コスト負担について議論しています。下院議員ラシーダ・トレイブが提案した法案は、連邦資金をAI監視カメラの購入や運用に使用禁止とするものです。また、データセンターに電力コスト全額負担を求める法案も提出されました。これにより、データセンターがもたらす電力需要の影響が地域社会に与える負担が軽減されることが期待されています。",
       "key_points": [
-        "新ラインアップには、E1.SおよびU.2のPCIe Gen5 SSDが含まれる。",
-        "SSDは、最大容量15.3TBと3D eTLCフラッシュを使用している。",
-        "E1.Sモデルは1Uデータセンターサーバー向けに最適化されている。",
-        "U.2モデルは、PCIe Gen5およびGen4対応の三つのバリエーションがある。",
-        "M.2 2280および2.5インチSATAのブートドライブも含まれている。",
-        "ドライブはDRAMと電力損失保護（PFP）を搭載している。"
+        "ラシーダ・トレイブ議員がFlockのAI監視カメラに連邦資金が使われることを禁止する法案を提出。",
+        "大規模なデータセンターがその電力使用にかかる全費用を負担する法案が提案。",
+        "データセンターへの税制優遇措置を禁止する法案が上院で紹介される。",
+        "政治広告におけるAI生成内容の開示を求める法案も再提出される。",
+        "高齢者向け詐欺対策として新たなオンラインプラットフォームとホットラインを設立する法案が提出。"
       ],
       "glossary": [
         {
-          "term": "eTLC",
-          "explain_ja": "3D NANDフラッシュの一種で、高密度かつ低コストでデータストレージを実現する技術。"
+          "term": "AI（人工知能）",
+          "explain_ja": "人間の知能を模倣したコンピュータープログラム。"
         },
         {
-          "term": "DWPD",
-          "explain_ja": "Drive Writes Per Dayの略で、SSDの耐久性を示す指標。"
+          "term": "データセンター",
+          "explain_ja": "大規模なデータを蓄積・管理するための専用施設。"
         },
         {
-          "term": "PFP",
-          "explain_ja": "Power Failure Protectionの略で、電力障害時のデータ保護機能。"
+          "term": "税制優遇措置",
+          "explain_ja": "特定の事業や施設に与えられる税金の軽減または免除。"
         }
       ],
       "personal_actions": [
-        "新しいSSDラインアップの特長を理解し、データセンターへの適用を検討する。",
-        "既存のストレージシステムとの互換性を評価するため、PCIeのインターフェースを確認する。",
-        "耐久性の要求に応じたSSDの選択基準を見直す。"
+        "自社のデータセンターの電力使用状況を確認し、効率化策を検討する。",
+        "最新の法案動向をフォローし、リスクに備えた対策を考える。",
+        "AIを活用した監視システムの影響について社内での議論を促進する。"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://www.storagereview.com/news/celestica-ds6005-102-4tbps-co-packaged-optics-1-5ou-liquid-cooled-orv3-switch",
-      "source": "Storagereview.com",
-      "publishedAt": "2026-10-15T16:50:02Z",
-      "title": "Celestica DS6005 Puts 102.4Tbps of Co-Packaged Optics and 64 1.6TbE Ports in a 1.5OU Liquid-Cooled ORv3 Switch",
-      "title_ja": "Celestica DS6005、102.4Tbpsのコパッケージドオプティクスと64ポートの1.6TbEを搭載した1.5OU液冷ORv3スイッチを発表",
-      "summary_ja": "Celesticaは、102.4Tbpsのスイッチング能力を持つDS6005を発表しました。このスイッチは、コパッケージドオプティクスを統合した設計で、64の1.6TbEポートを備えています。AIインフラストラクチャの需要に応えるために、冷却技術や管理機能を強化し、高効率なデータセンター環境を実現しています。",
+      "url": "https://cryptobriefing.com/everwind-fuels-nova-scotia-data-center-wind/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-16T18:52:52Z",
+      "title": "EverWind Fuels plans over C$10 billion for Nova Scotia AI data center and wind build",
+      "title_ja": "EverWind Fuels、ノバスコシアにおけるAIデータセンターと風力発電に100億カナダドル以上を投資計画",
+      "summary_ja": "EverWind Fuelsは、ノバスコシアにおいてAIデータセンターと風力発電のために100億カナダドル以上の投資を計画しています。この投資はノバスコシアの経済を変革し、GDPの向上、雇用の創出、税収の増加に寄与する可能性があります。また、再生可能エネルギーの能力も向上します。",
       "key_points": [
-        "DS6005は102.4Tbpsのスイッチング容量を持つ。",
-        "64の1.6TbEポートを搭載し、完全液冷設計で熱管理を最適化。",
-        "コパッケージドオプティクスにより、リンクレベルの消費電力とレイテンシを削減。",
-        "フィールドで交換可能な外部レーザーモジュールを使用。",
-        "AI/MLスケールアップおよびスケールアウトに特化した設計。"
+        "EverWind Fuelsがノバスコシアに100億カナダドル以上を投資する計画を発表",
+        "AIデータセンターと風力発電の開発が主な焦点",
+        "この投資はGDP、雇用、税収の増加を促進する可能性がある",
+        "再生可能エネルギーの能力を強化することが期待される"
       ],
       "glossary": [
         {
-          "term": "コパッケージドオプティクス",
-          "explain_ja": "オプティカルエンジンをスイッチのASICに統合した技術。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能の処理のために設計されたデータセンター。"
         },
         {
-          "term": "液冷",
-          "explain_ja": "液体を使用して機器の温度を管理する冷却方法。"
+          "term": "風力発電",
+          "explain_ja": "風の力を利用して電気を生成する再生可能エネルギー源。"
         },
         {
-          "term": "SONiC",
-          "explain_ja": "オープンソースのネットワークオペレーティングシステム。"
+          "term": "GDP",
+          "explain_ja": "国内総生産。国の経済活動を示す指標。"
         }
       ],
       "personal_actions": [
-        "DS6005の導入を検討している場合、液冷システムの要件を理解する。",
-        "コパッケージドオプティクスの利点についてチームで話し合う。",
-        "新しいスイッチのテスト環境を準備し、性能を評価する。"
+        "地域の雇用機会について情報を収集しておく",
+        "再生可能エネルギーに関する最新の政策をチェックする",
+        "地元の経済に対する影響を注視する"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://www.techpowerup.com/353758/sp-industrial-introduces-six-new-enterprise-ssd-solutions",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-10-15T16:04:27Z",
-      "title": "SP Industrial Introduces Six New Enterprise SSD Solutions",
-      "title_ja": "SPインダストリアル、6つの新しいエンタープライズSSDソリューションを発表",
-      "summary_ja": "SPインダストリアルはAIやデータセンター向けの新しいエンタープライズSSDソリューションを6種類発表しました。これらのSSDは、3D eTLCフラッシュ、先進的なコントローラー、DRAM、および電源障害保護機能を備えています。多様な形状のSSDは、高性能とデータ保護を提供し、要求の厳しい業務負荷に対応します。",
+      "url": "https://cryptobriefing.com/nscale-103-billion-data-center-contracts-ipo/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-16T15:35:00Z",
+      "title": "Nscale lists $103.4 billion in AI data center contracts as delays pile up",
+      "title_ja": "Nscale、契約額1034億ドルのAIデータセンター契約をリスト化、遅延が相次ぐ",
+      "summary_ja": "Nscaleは1034億ドルのAIデータセンター契約を発表したが、プロジェクトの遅延が続いている。これにより、投資家の信頼が損なわれる可能性があり、AIインフラ全体の拡大に影響を及ぼす恐れがある。遅延によるリスクは契約の集中にも起因している。",
       "key_points": [
-        "6つの新しいSSDソリューションが発表された",
-        "E1.S、U.2、M.2 2280、2.5\" SATA形式を含む",
-        "最大15.3TBのストレージ容量を提供",
-        "3D eTLCフラッシュ、DRAM、電源障害保護機能を装備",
-        "耐久性のオプションは1 DWPDおよび3 DWPD",
-        "AI時代に対応した高性能システムの構築を支援する"
+        "Nscaleは1034億ドルの契約を発表した。",
+        "プロジェクトの遅延が発生している。",
+        "遅延は投資家の信頼に影響を与える可能性がある。",
+        "契約の集中がリスクを増大させている。",
+        "AIインフラの拡大にも影響を及ぼす恐れがある。"
       ],
       "glossary": [
         {
-          "term": "SSD",
-          "explain_ja": "ソリッドステートドライブの略。データをフラッシュメモリに保存するストレージデバイス。"
+          "term": "Nscale",
+          "explain_ja": "AIデータセンター契約を管理する企業。"
         },
         {
-          "term": "eTLC",
-          "explain_ja": "エンタープライズ用の3D NANDフラッシュメモリ技術。"
+          "term": "契約",
+          "explain_ja": "法人または個人間の合意に基づく法的な取り決め。"
         },
         {
-          "term": "DWPD",
-          "explain_ja": "Drive Writes Per Dayの略。SSDが日々書き込むことができるデータ量を示す。"
+          "term": "AIインフラ",
+          "explain_ja": "人工知能のシステムを支えるハードウェアとソフトウェアの基盤。"
         }
       ],
       "personal_actions": [
-        "新型SSDの仕様を確認し、導入を検討する",
-        "既存のSSDと新型SSDの比較を行い、アップグレードの必要性を評価する",
-        "データセンターのストレージニーズにコストパフォーマンスを考慮する"
+        "Nscaleの最新のプロジェクト状況を確認する。",
+        "投資先企業の契約リスクを評価する。",
+        "関連するAIインフラストラクチャの動向を追う。"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     }
