@@ -1,114 +1,110 @@
 {
-  "date": "2026-10-18",
-  "generatedAtJST": "2026-10-18T07:15:24.452+09:00",
+  "date": "2026-10-19",
+  "generatedAtJST": "2026-10-19T07:15:20.634+09:00",
   "items": [
     {
-      "url": "https://www.nextgov.com/policy/2026/10/tech-bills-week-cutting-federal-funding-flock-making-data-centers-shoulder-their-power-costs-and-more/416661/",
-      "source": "Nextgov",
-      "publishedAt": "2026-10-16T21:25:00Z",
-      "title": "Tech bills of the week: Cutting federal funding for Flock; Making data centers shoulder their power costs; and more",
-      "title_ja": "今週のテクノロジー法案：Flockに対する連邦資金の削減、データセンターに電力コストを負担させる法案など",
-      "summary_ja": "今回の法案は、AIによる監視システムの利用制限とデータセンターの電力コスト負担について議論しています。下院議員ラシーダ・トレイブが提案した法案は、連邦資金をAI監視カメラの購入や運用に使用禁止とするものです。また、データセンターに電力コスト全額負担を求める法案も提出されました。これにより、データセンターがもたらす電力需要の影響が地域社会に与える負担が軽減されることが期待されています。",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/ai-race-may-depend-more-on-access-to-power-infrastructure-than-chip-supply-morgan-stanley/articleshow/135012540.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-10-17T11:02:52Z",
+      "title": "AI race may depend more on access to power, infrastructure than chip supply: Morgan Stanley",
+      "title_ja": "AI競争はチップ供給よりも電力インフラへのアクセスに依存する可能性：モルガン・スタンレー",
+      "summary_ja": "モルガン・スタンレーの最新の分析によると、急成長するAIインフラ市場は2028年までに深刻な電力不足に直面する可能性があります。この不足は、大企業に対抗しようとする小規模企業にとって深刻なリスクをもたらすでしょう。電力インフラの確保が、AI技術の進展において重要な要素になることが示唆されています。",
       "key_points": [
-        "ラシーダ・トレイブ議員がFlockのAI監視カメラに連邦資金が使われることを禁止する法案を提出。",
-        "大規模なデータセンターがその電力使用にかかる全費用を負担する法案が提案。",
-        "データセンターへの税制優遇措置を禁止する法案が上院で紹介される。",
-        "政治広告におけるAI生成内容の開示を求める法案も再提出される。",
-        "高齢者向け詐欺対策として新たなオンラインプラットフォームとホットラインを設立する法案が提出。"
+        "AIインフラ市場が急成長している",
+        "2028年までに電力不足の懸念がある",
+        "小規模企業は大企業に対抗するのが難しくなる",
+        "電力インフラのアクセスが競争の鍵となる",
+        "チップ供給以上に電力の重要性が増す見込み"
       ],
       "glossary": [
-        {
-          "term": "AI（人工知能）",
-          "explain_ja": "人間の知能を模倣したコンピュータープログラム。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "大規模なデータを蓄積・管理するための専用施設。"
-        },
-        {
-          "term": "税制優遇措置",
-          "explain_ja": "特定の事業や施設に与えられる税金の軽減または免除。"
-        }
-      ],
-      "personal_actions": [
-        "自社のデータセンターの電力使用状況を確認し、効率化策を検討する。",
-        "最新の法案動向をフォローし、リスクに備えた対策を考える。",
-        "AIを活用した監視システムの影響について社内での議論を促進する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/everwind-fuels-nova-scotia-data-center-wind/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-16T18:52:52Z",
-      "title": "EverWind Fuels plans over C$10 billion for Nova Scotia AI data center and wind build",
-      "title_ja": "EverWind Fuels、ノバスコシアにおけるAIデータセンターと風力発電に100億カナダドル以上を投資計画",
-      "summary_ja": "EverWind Fuelsは、ノバスコシアにおいてAIデータセンターと風力発電のために100億カナダドル以上の投資を計画しています。この投資はノバスコシアの経済を変革し、GDPの向上、雇用の創出、税収の増加に寄与する可能性があります。また、再生可能エネルギーの能力も向上します。",
-      "key_points": [
-        "EverWind Fuelsがノバスコシアに100億カナダドル以上を投資する計画を発表",
-        "AIデータセンターと風力発電の開発が主な焦点",
-        "この投資はGDP、雇用、税収の増加を促進する可能性がある",
-        "再生可能エネルギーの能力を強化することが期待される"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能の処理のために設計されたデータセンター。"
-        },
-        {
-          "term": "風力発電",
-          "explain_ja": "風の力を利用して電気を生成する再生可能エネルギー源。"
-        },
-        {
-          "term": "GDP",
-          "explain_ja": "国内総生産。国の経済活動を示す指標。"
-        }
-      ],
-      "personal_actions": [
-        "地域の雇用機会について情報を収集しておく",
-        "再生可能エネルギーに関する最新の政策をチェックする",
-        "地元の経済に対する影響を注視する"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/nscale-103-billion-data-center-contracts-ipo/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-16T15:35:00Z",
-      "title": "Nscale lists $103.4 billion in AI data center contracts as delays pile up",
-      "title_ja": "Nscale、契約額1034億ドルのAIデータセンター契約をリスト化、遅延が相次ぐ",
-      "summary_ja": "Nscaleは1034億ドルのAIデータセンター契約を発表したが、プロジェクトの遅延が続いている。これにより、投資家の信頼が損なわれる可能性があり、AIインフラ全体の拡大に影響を及ぼす恐れがある。遅延によるリスクは契約の集中にも起因している。",
-      "key_points": [
-        "Nscaleは1034億ドルの契約を発表した。",
-        "プロジェクトの遅延が発生している。",
-        "遅延は投資家の信頼に影響を与える可能性がある。",
-        "契約の集中がリスクを増大させている。",
-        "AIインフラの拡大にも影響を及ぼす恐れがある。"
-      ],
-      "glossary": [
-        {
-          "term": "Nscale",
-          "explain_ja": "AIデータセンター契約を管理する企業。"
-        },
-        {
-          "term": "契約",
-          "explain_ja": "法人または個人間の合意に基づく法的な取り決め。"
-        },
         {
           "term": "AIインフラ",
-          "explain_ja": "人工知能のシステムを支えるハードウェアとソフトウェアの基盤。"
+          "explain_ja": "AIモデルを支えるためのハードウェアやソフトウェアの構成。"
+        },
+        {
+          "term": "電力不足",
+          "explain_ja": "必要な電力が供給できない状態。特に急成長する分野では致命的な問題となる。"
+        },
+        {
+          "term": "モルガン・スタンレー",
+          "explain_ja": "アメリカの大手金融サービス企業で、投資銀行業務や資産管理を行っている。"
         }
       ],
       "personal_actions": [
-        "Nscaleの最新のプロジェクト状況を確認する。",
-        "投資先企業の契約リスクを評価する。",
-        "関連するAIインフラストラクチャの動向を追う。"
+        "現在の電力インフラの状況を確認する",
+        "電力供給計画を見直し、必要なバックアップシステムを検討する",
+        "AI関連設備の電力消費を評価し、効率化を図る"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/anthropic-first-canadian-data-center-everwind/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-17T01:25:02Z",
+      "title": "Anthropic signs lease for first Canadian data center with EverWind",
+      "title_ja": "Anthropic、EverWindとカナダ初のデータセンター契約を締結",
+      "summary_ja": "AnthropicがEverWindと契約し、初のカナダデータセンターの設立が決定した。この拡張により、地域経済とテクノロジーインフラが活性化する可能性があるが、実行のリスクやプロジェクトのタイムラインが重要な課題として残る。",
+      "key_points": [
+        "AnthropicがEverWindとカナダで初のデータセンターの賃貸契約を締結。",
+        "このプロジェクトは地域経済とインフラに好影響を及ぼす可能性がある。",
+        "実行リスクとプロジェクトタイムラインの課題が存在している。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保存や管理のための施設。"
+        },
+        {
+          "term": "EverWind",
+          "explain_ja": "データセンターの運営会社で、カナダに新たなデータセンターを展開。"
+        }
+      ],
+      "personal_actions": [
+        "プロジェクトの進捗を定期的に確認する。",
+        "地域経済への影響をウォッチする。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.digitimes.com/news/a20261015PD201/teco-data-center-ess-taiwan.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-10-17T00:06:33Z",
+      "title": "TECO targets AI data center growth with energy storage, transformers",
+      "title_ja": "TECO、エネルギー貯蔵と変圧器を活用したAIデータセンターの成長を目指す",
+      "summary_ja": "TECOは、AIデータセンターの成長に向けた新戦略を発表しました。特に、エネルギー貯蔵技術や変圧器の導入に焦点を当てています。この取り組みにより、持続可能なエネルギー供給と効率向上が期待されます。",
+      "key_points": [
+        "TECOはAIデータセンター成長を目指す。",
+        "エネルギー貯蔵技術の導入を推進。",
+        "変圧器の活用により効率的なエネルギー管理。",
+        "持続可能なエネルギー供給の重要性。",
+        "業界の競争力向上を目的とする。"
+      ],
+      "glossary": [
+        {
+          "term": "TECO",
+          "explain_ja": "台湾の電機関連企業、特にエネルギー技術を扱う。"
+        },
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能関連のデータを処理・保存するための施設。"
+        },
+        {
+          "term": "エネルギー貯蔵",
+          "explain_ja": "発電されたエネルギーを保存し、必要に応じて供給する技術。"
+        },
+        {
+          "term": "変圧器",
+          "explain_ja": "電圧を変換するための機器。"
+        }
+      ],
+      "personal_actions": [
+        "エネルギー管理技術の最新動向を確認する。",
+        "AIデータセンターにおけるエネルギー効率化の事例を調査する。"
       ],
       "tags": [
         "DC",
