@@ -1,39 +1,39 @@
 {
-  "date": "2026-10-19",
-  "generatedAtJST": "2026-10-19T07:15:20.634+09:00",
+  "date": "2026-10-20",
+  "generatedAtJST": "2026-10-20T07:15:31.491+09:00",
   "items": [
     {
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/ai-race-may-depend-more-on-access-to-power-infrastructure-than-chip-supply-morgan-stanley/articleshow/135012540.cms",
-      "source": "The Times of India",
-      "publishedAt": "2026-10-17T11:02:52Z",
-      "title": "AI race may depend more on access to power, infrastructure than chip supply: Morgan Stanley",
-      "title_ja": "AI競争はチップ供給よりも電力インフラへのアクセスに依存する可能性：モルガン・スタンレー",
-      "summary_ja": "モルガン・スタンレーの最新の分析によると、急成長するAIインフラ市場は2028年までに深刻な電力不足に直面する可能性があります。この不足は、大企業に対抗しようとする小規模企業にとって深刻なリスクをもたらすでしょう。電力インフラの確保が、AI技術の進展において重要な要素になることが示唆されています。",
+      "url": "https://news.slashdot.org/story/26/10/18/226212/planned-uk-data-center-delayed-until-2030s-over-power-grid-delays-microsoft-pulls-out",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-10-18T22:08:00Z",
+      "title": "Planned UK Data Center Delayed Until 2030s Over Power Grid Delays. Microsoft Pulls Out - Slashdot",
+      "title_ja": "イギリスのデータセンター計画、電力網の遅延で2030年代まで延期。マイクロソフトが撤退",
+      "summary_ja": "イギリスのエセックスで計画されていたNscaleのデータセンターが、電力供給の遅れにより2030年代まで延期されることが明らかになった。マイクロソフトはこのプロジェクトから撤退し、サイトは不明な状況に置かれている。競合他社の株価は低迷しており、AI投資に対するリスクが増している。",
       "key_points": [
-        "AIインフラ市場が急成長している",
-        "2028年までに電力不足の懸念がある",
-        "小規模企業は大企業に対抗するのが難しくなる",
-        "電力インフラのアクセスが競争の鍵となる",
-        "チップ供給以上に電力の重要性が増す見込み"
+        "Nscaleのデータセンターが電力供給の遅れで2030年代まで延期",
+        "マイクロソフトはこの計画から撤退した",
+        "イギリスのデータセンターは電力接続のために長い待機時間を抱えた",
+        "AIインフラ投資のROIが不透明で、大規模な資産減損のリスクがある",
+        "多くのAI専門のインフラプロバイダーが独立運営を続けられなくなる可能性がある"
       ],
       "glossary": [
         {
-          "term": "AIインフラ",
-          "explain_ja": "AIモデルを支えるためのハードウェアやソフトウェアの構成。"
+          "term": "IaaS",
+          "explain_ja": "インフラストラクチャとしてのサービス。クラウドコンピューティングモデルの一つで、ハードウェアを仮想化して提供する。"
         },
         {
-          "term": "電力不足",
-          "explain_ja": "必要な電力が供給できない状態。特に急成長する分野では致命的な問題となる。"
+          "term": "ROIC",
+          "explain_ja": "投資資本利益率。投資に対する利益を測定する指標。"
         },
         {
-          "term": "モルガン・スタンレー",
-          "explain_ja": "アメリカの大手金融サービス企業で、投資銀行業務や資産管理を行っている。"
+          "term": "AI",
+          "explain_ja": "人工知能。コンピュータが人間のように振る舞う能力。"
         }
       ],
       "personal_actions": [
-        "現在の電力インフラの状況を確認する",
-        "電力供給計画を見直し、必要なバックアップシステムを検討する",
-        "AI関連設備の電力消費を評価し、効率化を図る"
+        "現在のデータセンターの電力供給状況について確認する",
+        "データセンターの最新の市場動向を追跡する",
+        "AIインフラ投資に対する自社のリスク評価を行う"
       ],
       "tags": [
         "DC",
@@ -41,74 +41,73 @@
       ]
     },
     {
-      "url": "https://cryptobriefing.com/anthropic-first-canadian-data-center-everwind/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-17T01:25:02Z",
-      "title": "Anthropic signs lease for first Canadian data center with EverWind",
-      "title_ja": "Anthropic、EverWindとカナダ初のデータセンター契約を締結",
-      "summary_ja": "AnthropicがEverWindと契約し、初のカナダデータセンターの設立が決定した。この拡張により、地域経済とテクノロジーインフラが活性化する可能性があるが、実行のリスクやプロジェクトのタイムラインが重要な課題として残る。",
+      "url": "https://www.nextbigfuture.com/2026/10/daily-and-weekly-construction-500mw-power-and-220k-gpu-data-center.html",
+      "source": "Next Big Future",
+      "publishedAt": "2026-10-18T20:41:59Z",
+      "title": "Daily and Weekly Construction 500MW Power and 220K GPU Data Center – NextBigFuture.com",
+      "title_ja": "500MWの電力と22万GPUデータセンターの建設状況",
+      "summary_ja": "テキサス州ブラウンズビルにおいて、SpaceXは444エーカーの敷地で迅速な建設を進め、電力供給のための500MWのガスタービンが稼働しています。このサイトは、AIデータセンターを複数設置可能で、各建物の回収期間は約6ヶ月と見込まれています。AmazonのCEOは、AIデータセンターの需要が2028年まで高まると予測しています。",
       "key_points": [
-        "AnthropicがEverWindとカナダで初のデータセンターの賃貸契約を締結。",
-        "このプロジェクトは地域経済とインフラに好影響を及ぼす可能性がある。",
-        "実行リスクとプロジェクトタイムラインの課題が存在している。"
+        "SpaceXがテキサス州でデータセンターの建設を急速に進めている。",
+        "500MWのガスタービンが既に稼働中。",
+        "最大20のミニAIデータセンターを設置可能。",
+        "各データセンターの投資回収が約6ヶ月。",
+        "AmazonはAIデータセンターの需要が2028年まで続く見込みを示している。"
       ],
       "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データの保存や管理のための施設。"
-        },
-        {
-          "term": "EverWind",
-          "explain_ja": "データセンターの運営会社で、カナダに新たなデータセンターを展開。"
-        }
-      ],
-      "personal_actions": [
-        "プロジェクトの進捗を定期的に確認する。",
-        "地域経済への影響をウォッチする。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.digitimes.com/news/a20261015PD201/teco-data-center-ess-taiwan.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-10-17T00:06:33Z",
-      "title": "TECO targets AI data center growth with energy storage, transformers",
-      "title_ja": "TECO、エネルギー貯蔵と変圧器を活用したAIデータセンターの成長を目指す",
-      "summary_ja": "TECOは、AIデータセンターの成長に向けた新戦略を発表しました。特に、エネルギー貯蔵技術や変圧器の導入に焦点を当てています。この取り組みにより、持続可能なエネルギー供給と効率向上が期待されます。",
-      "key_points": [
-        "TECOはAIデータセンター成長を目指す。",
-        "エネルギー貯蔵技術の導入を推進。",
-        "変圧器の活用により効率的なエネルギー管理。",
-        "持続可能なエネルギー供給の重要性。",
-        "業界の競争力向上を目的とする。"
-      ],
-      "glossary": [
-        {
-          "term": "TECO",
-          "explain_ja": "台湾の電機関連企業、特にエネルギー技術を扱う。"
-        },
         {
           "term": "AIデータセンター",
-          "explain_ja": "人工知能関連のデータを処理・保存するための施設。"
+          "explain_ja": "人工知能の処理能力を提供するために特化したデータセンター。"
         },
         {
-          "term": "エネルギー貯蔵",
-          "explain_ja": "発電されたエネルギーを保存し、必要に応じて供給する技術。"
+          "term": "ガスタービン",
+          "explain_ja": "ガスを燃料として動作するタービンエンジンで、発電に使用される。"
         },
         {
-          "term": "変圧器",
-          "explain_ja": "電圧を変換するための機器。"
+          "term": "回収期間",
+          "explain_ja": "投資額がどのくらいの期間で回収できるかを示す指標。"
         }
       ],
       "personal_actions": [
-        "エネルギー管理技術の最新動向を確認する。",
-        "AIデータセンターにおけるエネルギー効率化の事例を調査する。"
+        "データセンターの設備の効率や稼働状況を定期的に確認する。",
+        "最新のAIデータセンターの技術動向を調査する。",
+        "エネルギーの供給源やコストを見直す計画を立てる。"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "http://www.newsbtc.com/crypto-news/fidelity-solana-resilience-research-concentration-risks/",
+      "source": "newsBTC",
+      "publishedAt": "2026-10-18T17:00:00Z",
+      "title": "Fidelity Sees A Stronger Solana Network, With Concentration Risks Still In View",
+      "title_ja": "フィデリティ、ソラナネットワークの強化を確認も集中リスクは依然として懸念",
+      "summary_ja": "フィデリティの技術研究チームは、ソラナが2年以上にわたり大きなメインネットの停止なしに運用されていると報告し、投票成功率は約99.7%に達しているとしています。しかし、バリデーターとインフラの集中が依然として重要な懸念材料であることも警告しています。これにより、ネットワークの分散化への取り組みが求められています。",
+      "key_points": [
+        "フィデリティの研究チームはソラナの安定性を評価した。",
+        "ソラナは2年以上にわたって大きなメインネット停止がない。",
+        "投票成功率は約99.7%に達している。",
+        "バリデーターとインフラの集中が懸念されている。",
+        "ネットワークの分散化が重要視されている。"
+      ],
+      "glossary": [
+        {
+          "term": "Solana",
+          "explain_ja": "高パフォーマンスのブロックチェーンプラットフォームで、スマートコントラクトの実行を目指す。"
+        },
+        {
+          "term": "バリデーター",
+          "explain_ja": "ブロックチェーンネットワークの取引を検証し、ブロックを生成するノード。"
+        }
+      ],
+      "personal_actions": [
+        "ソラナに関連するバリデーターの状態を確認する。",
+        "インフラの集中リスクについての情報を収集する。"
+      ],
+      "tags": [
+        "インフラ"
       ]
     }
   ]
