@@ -1,113 +1,119 @@
 {
-  "date": "2026-10-20",
-  "generatedAtJST": "2026-10-20T07:15:31.491+09:00",
+  "date": "2026-10-21",
+  "generatedAtJST": "2026-10-21T07:15:20.723+09:00",
   "items": [
     {
-      "url": "https://news.slashdot.org/story/26/10/18/226212/planned-uk-data-center-delayed-until-2030s-over-power-grid-delays-microsoft-pulls-out",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-10-18T22:08:00Z",
-      "title": "Planned UK Data Center Delayed Until 2030s Over Power Grid Delays. Microsoft Pulls Out - Slashdot",
-      "title_ja": "イギリスのデータセンター計画、電力網の遅延で2030年代まで延期。マイクロソフトが撤退",
-      "summary_ja": "イギリスのエセックスで計画されていたNscaleのデータセンターが、電力供給の遅れにより2030年代まで延期されることが明らかになった。マイクロソフトはこのプロジェクトから撤退し、サイトは不明な状況に置かれている。競合他社の株価は低迷しており、AI投資に対するリスクが増している。",
+      "url": "https://www.techradar.com/pro/security/kasperskys-vpn-and-password-manager-went-dark-for-days-worldwide-and-the-timing-has-raised-awkward-questions-about-russias-drone-hit-data-centers",
+      "source": "TechRadar",
+      "publishedAt": "2026-10-19T20:45:00Z",
+      "title": "Kaspersky's VPN and password manager went dark for days worldwide — and the timing has raised awkward questions about Russia's drone-hit data centers",
+      "title_ja": "カスペルスキーのVPNとパスワードマネージャーが数日間ダウン、ロシアのデータセンター攻撃との関係に疑問",
+      "summary_ja": "カスペルスキーのVPNとパスワードマネージャーが数日間にわたり世界的にダウンしました。この障害は、ウクライナのドローンが第三のヤンデックスデータセンターを無力化した数時間後に発生しましたが、関連性は確認されていません。この状況は、ロシアのデータセンターに対する新たな攻撃の影響に関する疑問を引き起こしています。",
       "key_points": [
-        "Nscaleのデータセンターが電力供給の遅れで2030年代まで延期",
-        "マイクロソフトはこの計画から撤退した",
-        "イギリスのデータセンターは電力接続のために長い待機時間を抱えた",
-        "AIインフラ投資のROIが不透明で、大規模な資産減損のリスクがある",
-        "多くのAI専門のインフラプロバイダーが独立運営を続けられなくなる可能性がある"
+        "カスペルスキーのサービスが数日間利用できなかった。",
+        "ダウンタイムはウクライナのドローン攻撃の数時間後に発生した。",
+        "関連性は公式には確認されていない。",
+        "この事象はロシアのデータセンター攻撃の影響を示唆している。"
       ],
       "glossary": [
         {
-          "term": "IaaS",
-          "explain_ja": "インフラストラクチャとしてのサービス。クラウドコンピューティングモデルの一つで、ハードウェアを仮想化して提供する。"
+          "term": "VPN",
+          "explain_ja": "インターネット上でのプライバシーとセキュリティを確保するための仮想プライベートネットワーク。"
         },
         {
-          "term": "ROIC",
-          "explain_ja": "投資資本利益率。投資に対する利益を測定する指標。"
+          "term": "Kaspersky",
+          "explain_ja": "ロシアのセキュリティソフトウェア企業で、アンチウイルスやVPNサービスを提供。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能。コンピュータが人間のように振る舞う能力。"
+          "term": "Yandex",
+          "explain_ja": "ロシアの大手IT企業で、検索エンジンやクラウドサービスなどを展開。"
         }
       ],
       "personal_actions": [
-        "現在のデータセンターの電力供給状況について確認する",
-        "データセンターの最新の市場動向を追跡する",
-        "AIインフラ投資に対する自社のリスク評価を行う"
+        "障害が発生したサービスの代替手段を検討する。",
+        "重要なデータのバックアップを確認する。",
+        "セキュリティサービスの状況を定期的に監視する。"
       ],
       "tags": [
-        "DC",
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.channelnewsasia.com/business/nvidia-backed-nscale-anthropic-in-talks-new-45-billion-ai-cloud-deal-source-says-6473376",
+      "source": "CNA",
+      "publishedAt": "2026-10-19T19:37:54Z",
+      "title": "Nvidia-backed Nscale, Anthropic in talks for new $45 billion AI cloud deal, source says",
+      "title_ja": "Nvidia支援のNscale、Anthropicとの450億ドルのAIクラウド契約の交渉中",
+      "summary_ja": "Nscaleは、AI計算能力を提供する新たな契約をAnthropicと交渉中であり、その契約額は約450億ドルと見積もられています。NscaleはAIに関連する大規模な取引を模索しており、Nvidiaの支援を受けています。今回の契約は、AI市場における両者の立場を強化する可能性があります。",
+      "key_points": [
+        "NscaleがAnthropicにAI計算能力を販売するための契約を交渉中。",
+        "契約額は約450億ドルと見積もられている。",
+        "NscaleはNvidiaの支援を受けている。",
+        "この契約により、AI市場での競争力が強化される可能性がある。"
+      ],
+      "glossary": [
+        {
+          "term": "Nscale",
+          "explain_ja": "AIクラウドサービスを提供するデータセンター開発会社。"
+        },
+        {
+          "term": "Anthropic",
+          "explain_ja": "AI開発を行う企業で、ClaudeというAIシステムを製造している。"
+        },
+        {
+          "term": "Nvidia",
+          "explain_ja": "AIやグラフィックス関連技術のリーダー企業。"
+        }
+      ],
+      "personal_actions": [
+        "AIの導入に向けて、ニーズや期待する機能を整理しておく。",
+        "データセンターの最新情報や市場動向を定期的にチェックする。",
+        "AI関連のパートナーシップや投資機会を検討する。"
+      ],
+      "tags": [
         "AI"
       ]
     },
     {
-      "url": "https://www.nextbigfuture.com/2026/10/daily-and-weekly-construction-500mw-power-and-220k-gpu-data-center.html",
-      "source": "Next Big Future",
-      "publishedAt": "2026-10-18T20:41:59Z",
-      "title": "Daily and Weekly Construction 500MW Power and 220K GPU Data Center – NextBigFuture.com",
-      "title_ja": "500MWの電力と22万GPUデータセンターの建設状況",
-      "summary_ja": "テキサス州ブラウンズビルにおいて、SpaceXは444エーカーの敷地で迅速な建設を進め、電力供給のための500MWのガスタービンが稼働しています。このサイトは、AIデータセンターを複数設置可能で、各建物の回収期間は約6ヶ月と見込まれています。AmazonのCEOは、AIデータセンターの需要が2028年まで高まると予測しています。",
+      "url": "https://www.channelnewsasia.com/business/anthropic-nscale-in-talks-new-45-billion-ai-cloud-computing-deal-bloomberg-news-reports-6473376",
+      "source": "CNA",
+      "publishedAt": "2026-10-19T19:37:54Z",
+      "title": "Anthropic, Nscale in talks for new $45 billion AI cloud computing deal, Bloomberg News reports",
+      "title_ja": "AnthropicとNscaleが新たな450億ドル規模のAIクラウドコンピューティング契約交渉中",
+      "summary_ja": "Anthropicは、Nscaleと約450億ドルのAIクラウドコンピューティング契約について交渉中である。報道によれば、NscaleはNvidiaの支援を受けており、Claudeを製造するAnthropicに計算能力を提供することを目指している。この取引が成立すると、両社にとって大きな影響を与える可能性がある。",
       "key_points": [
-        "SpaceXがテキサス州でデータセンターの建設を急速に進めている。",
-        "500MWのガスタービンが既に稼働中。",
-        "最大20のミニAIデータセンターを設置可能。",
-        "各データセンターの投資回収が約6ヶ月。",
-        "AmazonはAIデータセンターの需要が2028年まで続く見込みを示している。"
+        "AnthropicとNscaleが450億ドルの契約について交渉中",
+        "NscaleはNvidiaによって支援されている",
+        "契約の成立により、Computing Powerの提供が行われる見込み",
+        "Claudeの開発のための重要なステップ",
+        "Bloombergが報道した情報に基づく"
       ],
       "glossary": [
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能の処理能力を提供するために特化したデータセンター。"
+          "term": "Anthropic",
+          "explain_ja": "AIを専門とする企業で、ClaudeというAIモデルを開発している。"
         },
         {
-          "term": "ガスタービン",
-          "explain_ja": "ガスを燃料として動作するタービンエンジンで、発電に使用される。"
+          "term": "Nscale",
+          "explain_ja": "データセンター開発会社で、AI向けの計算能力を提供する。"
         },
         {
-          "term": "回収期間",
-          "explain_ja": "投資額がどのくらいの期間で回収できるかを示す指標。"
+          "term": "Nvidia",
+          "explain_ja": "GPU技術のリーダーであり、AI及びデータセンター市場において大きな影響力を持つ企業。"
+        },
+        {
+          "term": "AIクラウドコンピューティング",
+          "explain_ja": "AIの処理をクラウドで行うためのコンピュータリソースを提供する技術。"
         }
       ],
       "personal_actions": [
-        "データセンターの設備の効率や稼働状況を定期的に確認する。",
-        "最新のAIデータセンターの技術動向を調査する。",
-        "エネルギーの供給源やコストを見直す計画を立てる。"
+        "社内のAI関連プロジェクトの計画を見直す",
+        "NscaleやAnthropicの動向を定期的にチェックする",
+        "AI技術の最新動向についてセミナーに参加する"
       ],
       "tags": [
         "DC",
         "AI"
-      ]
-    },
-    {
-      "url": "http://www.newsbtc.com/crypto-news/fidelity-solana-resilience-research-concentration-risks/",
-      "source": "newsBTC",
-      "publishedAt": "2026-10-18T17:00:00Z",
-      "title": "Fidelity Sees A Stronger Solana Network, With Concentration Risks Still In View",
-      "title_ja": "フィデリティ、ソラナネットワークの強化を確認も集中リスクは依然として懸念",
-      "summary_ja": "フィデリティの技術研究チームは、ソラナが2年以上にわたり大きなメインネットの停止なしに運用されていると報告し、投票成功率は約99.7%に達しているとしています。しかし、バリデーターとインフラの集中が依然として重要な懸念材料であることも警告しています。これにより、ネットワークの分散化への取り組みが求められています。",
-      "key_points": [
-        "フィデリティの研究チームはソラナの安定性を評価した。",
-        "ソラナは2年以上にわたって大きなメインネット停止がない。",
-        "投票成功率は約99.7%に達している。",
-        "バリデーターとインフラの集中が懸念されている。",
-        "ネットワークの分散化が重要視されている。"
-      ],
-      "glossary": [
-        {
-          "term": "Solana",
-          "explain_ja": "高パフォーマンスのブロックチェーンプラットフォームで、スマートコントラクトの実行を目指す。"
-        },
-        {
-          "term": "バリデーター",
-          "explain_ja": "ブロックチェーンネットワークの取引を検証し、ブロックを生成するノード。"
-        }
-      ],
-      "personal_actions": [
-        "ソラナに関連するバリデーターの状態を確認する。",
-        "インフラの集中リスクについての情報を収集する。"
-      ],
-      "tags": [
-        "インフラ"
       ]
     }
   ]
