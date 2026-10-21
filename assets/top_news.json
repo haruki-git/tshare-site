@@ -1,115 +1,98 @@
 {
-  "date": "2026-10-21",
-  "generatedAtJST": "2026-10-21T07:15:20.723+09:00",
+  "date": "2026-10-22",
+  "generatedAtJST": "2026-10-22T07:15:20.730+09:00",
   "items": [
     {
-      "url": "https://www.techradar.com/pro/security/kasperskys-vpn-and-password-manager-went-dark-for-days-worldwide-and-the-timing-has-raised-awkward-questions-about-russias-drone-hit-data-centers",
-      "source": "TechRadar",
-      "publishedAt": "2026-10-19T20:45:00Z",
-      "title": "Kaspersky's VPN and password manager went dark for days worldwide — and the timing has raised awkward questions about Russia's drone-hit data centers",
-      "title_ja": "カスペルスキーのVPNとパスワードマネージャーが数日間ダウン、ロシアのデータセンター攻撃との関係に疑問",
-      "summary_ja": "カスペルスキーのVPNとパスワードマネージャーが数日間にわたり世界的にダウンしました。この障害は、ウクライナのドローンが第三のヤンデックスデータセンターを無力化した数時間後に発生しましたが、関連性は確認されていません。この状況は、ロシアのデータセンターに対する新たな攻撃の影響に関する疑問を引き起こしています。",
+      "url": "https://oilprice.com/Energy/Natural-Gas/Europes-Power-Demand-Returns-to-Growth.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-10-20T22:00:00Z",
+      "title": "Europe’s Power Demand Returns to Growth",
+      "title_ja": "欧州の電力需要が成長に戻る",
+      "summary_ja": "欧州では、産業活動の低下や高いエネルギーコストにもかかわらず、電力需要が成長を見せています。これは、電化率の上昇とデータセンターの急増が重要な要因となっています。この傾向は、今後のエネルギー消費に影響を与えると考えられています。",
       "key_points": [
-        "カスペルスキーのサービスが数日間利用できなかった。",
-        "ダウンタイムはウクライナのドローン攻撃の数時間後に発生した。",
-        "関連性は公式には確認されていない。",
-        "この事象はロシアのデータセンター攻撃の影響を示唆している。"
+        "欧州の電力需要が成長に転じた。",
+        "産業活動は弱まっているが、それに反して需要が増加。",
+        "電化率の上昇が主要な要因の一つ。",
+        "データセンターの急増が需要を押し上げている。",
+        "今後のエネルギー消費に大きな影響を与える可能性がある。"
       ],
       "glossary": [
         {
-          "term": "VPN",
-          "explain_ja": "インターネット上でのプライバシーとセキュリティを確保するための仮想プライベートネットワーク。"
+          "term": "電化率",
+          "explain_ja": "電化率は、電気が利用される割合を示す指標で、工業や家庭などでの電力使用を表します。"
         },
         {
-          "term": "Kaspersky",
-          "explain_ja": "ロシアのセキュリティソフトウェア企業で、アンチウイルスやVPNサービスを提供。"
-        },
-        {
-          "term": "Yandex",
-          "explain_ja": "ロシアの大手IT企業で、検索エンジンやクラウドサービスなどを展開。"
+          "term": "データセンター",
+          "explain_ja": "データセンターは、データを保管、処理する施設で、最近のIT需要の増加に伴い、その数が急増しています。"
         }
       ],
       "personal_actions": [
-        "障害が発生したサービスの代替手段を検討する。",
-        "重要なデータのバックアップを確認する。",
-        "セキュリティサービスの状況を定期的に監視する。"
+        "現在の電力消費パターンを見直し、効率を高める方法を考える。",
+        "新たな電力需要のトレンドに注意を払い、エネルギー管理戦略を検討する。",
+        "データセンター関連のプロジェクトやサービスに対する意識を高める。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.channelnewsasia.com/business/nvidia-backed-nscale-anthropic-in-talks-new-45-billion-ai-cloud-deal-source-says-6473376",
-      "source": "CNA",
-      "publishedAt": "2026-10-19T19:37:54Z",
-      "title": "Nvidia-backed Nscale, Anthropic in talks for new $45 billion AI cloud deal, source says",
-      "title_ja": "Nvidia支援のNscale、Anthropicとの450億ドルのAIクラウド契約の交渉中",
-      "summary_ja": "Nscaleは、AI計算能力を提供する新たな契約をAnthropicと交渉中であり、その契約額は約450億ドルと見積もられています。NscaleはAIに関連する大規模な取引を模索しており、Nvidiaの支援を受けています。今回の契約は、AI市場における両者の立場を強化する可能性があります。",
+      "url": "https://cryptobriefing.com/nvidia-may-backstop-oracle-data-centers/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-20T18:43:56Z",
+      "title": "Nvidia may backstop Oracle data centers, TD Cowen reports",
+      "title_ja": "NvidiaがOracleデータセンターを支援か、TD Cowenが報告",
+      "summary_ja": "TD Cowenの報告によると、NvidiaはOracleのデータセンターのリースを保証する可能性がある。これは、AIの成長に向けた建設資金の確保を助けるためのものである。この支援は、両社の戦略的関係を強化する可能性がある。",
       "key_points": [
-        "NscaleがAnthropicにAI計算能力を販売するための契約を交渉中。",
-        "契約額は約450億ドルと見積もられている。",
-        "NscaleはNvidiaの支援を受けている。",
-        "この契約により、AI市場での競争力が強化される可能性がある。"
+        "NvidiaがOracleのデータセンターリースを保証する可能性",
+        "AI成長に向けた建設資金確保を助ける",
+        "TD Cowenがこの情報を報告"
       ],
       "glossary": [
         {
-          "term": "Nscale",
-          "explain_ja": "AIクラウドサービスを提供するデータセンター開発会社。"
-        },
-        {
-          "term": "Anthropic",
-          "explain_ja": "AI開発を行う企業で、ClaudeというAIシステムを製造している。"
+          "term": "Oracle",
+          "explain_ja": "データベースおよびクラウドソリューションを提供するテクノロジー企業。"
         },
         {
           "term": "Nvidia",
-          "explain_ja": "AIやグラフィックス関連技術のリーダー企業。"
+          "explain_ja": "グラフィックス処理ユニット（GPU）を専門とするテクノロジー企業。"
         }
       ],
       "personal_actions": [
-        "AIの導入に向けて、ニーズや期待する機能を整理しておく。",
-        "データセンターの最新情報や市場動向を定期的にチェックする。",
-        "AI関連のパートナーシップや投資機会を検討する。"
+        "OracleやNvidiaに関する新しい発表を確認する",
+        "AI関連の建設プロジェクトの動向を追う",
+        "データセンターの市場動向を注視する"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://www.channelnewsasia.com/business/anthropic-nscale-in-talks-new-45-billion-ai-cloud-computing-deal-bloomberg-news-reports-6473376",
-      "source": "CNA",
-      "publishedAt": "2026-10-19T19:37:54Z",
-      "title": "Anthropic, Nscale in talks for new $45 billion AI cloud computing deal, Bloomberg News reports",
-      "title_ja": "AnthropicとNscaleが新たな450億ドル規模のAIクラウドコンピューティング契約交渉中",
-      "summary_ja": "Anthropicは、Nscaleと約450億ドルのAIクラウドコンピューティング契約について交渉中である。報道によれば、NscaleはNvidiaの支援を受けており、Claudeを製造するAnthropicに計算能力を提供することを目指している。この取引が成立すると、両社にとって大きな影響を与える可能性がある。",
+      "url": "https://www.windowscentral.com/microsoft/microsoft-is-no-longer-involved-in-a-planned-uk-ai-data-center-thats-still-waiting-for-power",
+      "source": "Windows Central",
+      "publishedAt": "2026-10-20T16:17:04Z",
+      "title": "Microsoft walks away from flagship UK AI data center project",
+      "title_ja": "マイクロソフト、イギリスのAIデータセンター計画から撤退",
+      "summary_ja": "マイクロソフトが予定していたイギリスのエセックスにあるAIデータセンター計画から撤退しました。この施設はUK最大級のAIデータセンターとなる予定でしたが、現在はマイクロソフトの関与が失われ、電力供給が2030年まで受けられない可能性があります。この撤退は、AI技術の発展に影響を与えるかもしれません。",
       "key_points": [
-        "AnthropicとNscaleが450億ドルの契約について交渉中",
-        "NscaleはNvidiaによって支援されている",
-        "契約の成立により、Computing Powerの提供が行われる見込み",
-        "Claudeの開発のための重要なステップ",
-        "Bloombergが報道した情報に基づく"
+        "マイクロソフトがエセックスのAIデータセンター計画から撤退。",
+        "この施設はUKで最大級のAIデータセンターになる予定だった。",
+        "電力供給の問題で、2030年まで電力が足りない可能性がある。"
       ],
       "glossary": [
         {
-          "term": "Anthropic",
-          "explain_ja": "AIを専門とする企業で、ClaudeというAIモデルを開発している。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能を支えるためのコンピュータ設備が集まる施設。"
         },
         {
-          "term": "Nscale",
-          "explain_ja": "データセンター開発会社で、AI向けの計算能力を提供する。"
-        },
-        {
-          "term": "Nvidia",
-          "explain_ja": "GPU技術のリーダーであり、AI及びデータセンター市場において大きな影響力を持つ企業。"
-        },
-        {
-          "term": "AIクラウドコンピューティング",
-          "explain_ja": "AIの処理をクラウドで行うためのコンピュータリソースを提供する技術。"
+          "term": "エセックス",
+          "explain_ja": "イギリスの地方名。"
         }
       ],
       "personal_actions": [
-        "社内のAI関連プロジェクトの計画を見直す",
-        "NscaleやAnthropicの動向を定期的にチェックする",
-        "AI技術の最新動向についてセミナーに参加する"
+        "新しいデータセンター計画の進捗を注視する。",
+        "電力供給に影響を与える要因を把握し、運用計画を見直す。",
+        "関連ニュースを常にチェックし、動向を追う。"
       ],
       "tags": [
         "DC",
