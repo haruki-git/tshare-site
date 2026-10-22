@@ -1,102 +1,107 @@
 {
-  "date": "2026-10-22",
-  "generatedAtJST": "2026-10-22T07:15:20.730+09:00",
+  "date": "2026-10-23",
+  "generatedAtJST": "2026-10-23T07:15:20.546+09:00",
   "items": [
     {
-      "url": "https://oilprice.com/Energy/Natural-Gas/Europes-Power-Demand-Returns-to-Growth.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-10-20T22:00:00Z",
-      "title": "Europe’s Power Demand Returns to Growth",
-      "title_ja": "欧州の電力需要が成長に戻る",
-      "summary_ja": "欧州では、産業活動の低下や高いエネルギーコストにもかかわらず、電力需要が成長を見せています。これは、電化率の上昇とデータセンターの急増が重要な要因となっています。この傾向は、今後のエネルギー消費に影響を与えると考えられています。",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-direct-connect-100g-manchester/",
+      "source": "Amazon.com",
+      "publishedAt": "2026-10-21T17:21:00Z",
+      "title": "AWS Direct Connect announces 100G expansion in Manchester, England",
+      "title_ja": "AWS Direct Connect、イギリス・マンチェスターでの100G拡張を発表",
+      "summary_ja": "AWSがイギリス・マンチェスターにあるEquinix MA3データセンターにおいて、10Gbpsおよび100Gbpsの専用接続の拡張を発表しました。この接続はMACsec暗号化機能を備えており、プライベートで直接的なネットワーク接続を実現します。この拡張により、ユーザーはより高速で安全なデータ転送を行えるようになります。",
       "key_points": [
-        "欧州の電力需要が成長に転じた。",
-        "産業活動は弱まっているが、それに反して需要が増加。",
-        "電化率の上昇が主要な要因の一つ。",
-        "データセンターの急増が需要を押し上げている。",
-        "今後のエネルギー消費に大きな影響を与える可能性がある。"
+        "AWS Direct Connectの拡張がマンチェスターで発表された",
+        "10Gbpsおよび100Gbpsの専用接続が利用可能",
+        "MACsec暗号化機能をサポート",
+        "Equinix MA3データセンターに新たな接続を提供",
+        "高速で安全なデータ転送を実現"
       ],
       "glossary": [
         {
-          "term": "電化率",
-          "explain_ja": "電化率は、電気が利用される割合を示す指標で、工業や家庭などでの電力使用を表します。"
+          "term": "AWS Direct Connect",
+          "explain_ja": "AWSのサービスで、オンプレミスのデータセンターとAWS間に専用のネットワーク接続を提供する。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データセンターは、データを保管、処理する施設で、最近のIT需要の増加に伴い、その数が急増しています。"
+          "term": "MACsec",
+          "explain_ja": "Media Access Control Securityの略で、データリンク層での通信のセキュリティを提供する技術。"
         }
       ],
       "personal_actions": [
-        "現在の電力消費パターンを見直し、効率を高める方法を考える。",
-        "新たな電力需要のトレンドに注意を払い、エネルギー管理戦略を検討する。",
-        "データセンター関連のプロジェクトやサービスに対する意識を高める。"
+        "既存のAWS Direct Connectの設定を見直し、100G接続の検討を行う。",
+        "MACsec暗号化機能の使用についてチームと議論する。",
+        "マンチェスターデータセンターの接続オプションを確認する。"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://tech.yahoo.com/general/article/there-was-little-fuss-about-data-centers-in-the-last-election-now-they-could-sway-the-midterms-165906288.html",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-10-21T16:59:06Z",
+      "title": "There was little fuss about data centers in the last election. Now they could sway the midterms.",
+      "title_ja": "前回の選挙では話題にならなかったデータセンターが中間選挙に影響を与える可能性",
+      "summary_ja": "データセンターに対する反対が、2024年の選挙で政治的な議論を呼んでいる。最近の調査によると、70%を超えるアメリカ人がAIデータセンターの地域内建設に反対している。これにより、政治的な支持基盤が広がりつつある。",
+      "key_points": [
+        "データセンターへの反対が広がっている。",
+        "2024年の選挙で政治色を問わず反対意見が増加している。",
+        "70%以上のアメリカ人が地域内のAIデータセンター建設に反対。",
+        "選挙におけるデータセンター問題が注目される可能性がある。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データを管理・保存・処理するための施設。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能の略で、人間の知能を模倣したシステムやソフトウェア。"
+        }
+      ],
+      "personal_actions": [
+        "地域のデータセンター関連の計画を確認する。",
+        "政治家や候補者にデータセンター問題について意見を伝える。",
+        "自分の意見をSNSなどで発信して議論を促す。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-aurora-rds-on-demand-capacity-reservations/",
+      "source": "Amazon.com",
+      "publishedAt": "2026-10-21T16:00:00Z",
+      "title": "Amazon Aurora and Amazon RDS now support On-Demand Capacity Reservation",
+      "title_ja": "Amazon AuroraとAmazon RDSがオンデマンドキャパシティ予約をサポート",
+      "summary_ja": "Amazon AuroraとAmazon RDSは、オンデマンドキャパシティ予約を新たにサポートします。これにより、ユーザーは必要に応じて、1つまたは複数のアベイラビリティーゾーンでコンピュート容量を予約することができます。この機能により、DBインスタンスの作成、復元、スケールコンピュート、起動が円滑に行えるようになります。",
+      "key_points": [
+        "Amazon AuroraとAmazon RDSがオンデマンドキャパシティ予約を開始",
+        "必要に応じて、1つまたは複数のアベイラビリティーゾーンで容量を予約可能",
+        "DBインスタンスの作成やスケールがスムーズに行える",
+        "リソースの効率的な管理が可能"
+      ],
+      "glossary": [
+        {
+          "term": "Amazon Aurora",
+          "explain_ja": "AWSが提供するリレーショナルデータベースサービスで、高いパフォーマンスと可用性を特徴とする。"
+        },
+        {
+          "term": "Amazon RDS",
+          "explain_ja": "リレーショナルデータベースサービスを簡単にセットアップ、運用、スケールできるAWSのサービス。"
+        },
+        {
+          "term": "オンデマンドキャパシティ予約",
+          "explain_ja": "必要なだけのコンピュート容量を事前に予約することで、リソースの効率を高めるサービス。"
+        }
+      ],
+      "personal_actions": [
+        "Amazon RDSやAuroraの使用を検討している場合、オンデマンドキャパシティ予約機能の詳細を確認すること。",
+        "既存のDBインスタンスのニーズに応じて、リソース予約の設定を見直すこと。",
+        "新機能の導入に向けて、既存のアーキテクチャとの互換性について評価すること。"
       ],
       "tags": [
         "DC"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/nvidia-may-backstop-oracle-data-centers/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-20T18:43:56Z",
-      "title": "Nvidia may backstop Oracle data centers, TD Cowen reports",
-      "title_ja": "NvidiaがOracleデータセンターを支援か、TD Cowenが報告",
-      "summary_ja": "TD Cowenの報告によると、NvidiaはOracleのデータセンターのリースを保証する可能性がある。これは、AIの成長に向けた建設資金の確保を助けるためのものである。この支援は、両社の戦略的関係を強化する可能性がある。",
-      "key_points": [
-        "NvidiaがOracleのデータセンターリースを保証する可能性",
-        "AI成長に向けた建設資金確保を助ける",
-        "TD Cowenがこの情報を報告"
-      ],
-      "glossary": [
-        {
-          "term": "Oracle",
-          "explain_ja": "データベースおよびクラウドソリューションを提供するテクノロジー企業。"
-        },
-        {
-          "term": "Nvidia",
-          "explain_ja": "グラフィックス処理ユニット（GPU）を専門とするテクノロジー企業。"
-        }
-      ],
-      "personal_actions": [
-        "OracleやNvidiaに関する新しい発表を確認する",
-        "AI関連の建設プロジェクトの動向を追う",
-        "データセンターの市場動向を注視する"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.windowscentral.com/microsoft/microsoft-is-no-longer-involved-in-a-planned-uk-ai-data-center-thats-still-waiting-for-power",
-      "source": "Windows Central",
-      "publishedAt": "2026-10-20T16:17:04Z",
-      "title": "Microsoft walks away from flagship UK AI data center project",
-      "title_ja": "マイクロソフト、イギリスのAIデータセンター計画から撤退",
-      "summary_ja": "マイクロソフトが予定していたイギリスのエセックスにあるAIデータセンター計画から撤退しました。この施設はUK最大級のAIデータセンターとなる予定でしたが、現在はマイクロソフトの関与が失われ、電力供給が2030年まで受けられない可能性があります。この撤退は、AI技術の発展に影響を与えるかもしれません。",
-      "key_points": [
-        "マイクロソフトがエセックスのAIデータセンター計画から撤退。",
-        "この施設はUKで最大級のAIデータセンターになる予定だった。",
-        "電力供給の問題で、2030年まで電力が足りない可能性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能を支えるためのコンピュータ設備が集まる施設。"
-        },
-        {
-          "term": "エセックス",
-          "explain_ja": "イギリスの地方名。"
-        }
-      ],
-      "personal_actions": [
-        "新しいデータセンター計画の進捗を注視する。",
-        "電力供給に影響を与える要因を把握し、運用計画を見直す。",
-        "関連ニュースを常にチェックし、動向を追う。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
       ]
     }
   ]
