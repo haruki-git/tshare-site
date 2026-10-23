@@ -1,67 +1,71 @@
 {
-  "date": "2026-10-23",
-  "generatedAtJST": "2026-10-23T07:15:20.546+09:00",
+  "date": "2026-10-24",
+  "generatedAtJST": "2026-10-24T07:15:22.333+09:00",
   "items": [
     {
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-direct-connect-100g-manchester/",
-      "source": "Amazon.com",
-      "publishedAt": "2026-10-21T17:21:00Z",
-      "title": "AWS Direct Connect announces 100G expansion in Manchester, England",
-      "title_ja": "AWS Direct Connect、イギリス・マンチェスターでの100G拡張を発表",
-      "summary_ja": "AWSがイギリス・マンチェスターにあるEquinix MA3データセンターにおいて、10Gbpsおよび100Gbpsの専用接続の拡張を発表しました。この接続はMACsec暗号化機能を備えており、プライベートで直接的なネットワーク接続を実現します。この拡張により、ユーザーはより高速で安全なデータ転送を行えるようになります。",
+      "url": "https://www.nextbigfuture.com/2026/10/elons-1-trillion-pace-what-has-to-go-right.html",
+      "source": "Next Big Future",
+      "publishedAt": "2026-10-22T21:00:21Z",
+      "title": "What Has to Go Right – NextBigFuture.com",
+      "title_ja": "エロン・マスクのトリリオン戦略に必要な要素",
+      "summary_ja": "エロン・マスクは2027年までに13〜23GWのデータセンターを構築し、約1兆ドルの収益を得ると自信を示しています。SpaceXはエネルギーとインフラにおいて優位性があり、他社が直面する課題を克服する意義があります。しかし、チップやメモリの供給が究極的な鍵となるため、スケジュールの確保が必要です。これが成功すれば、2027年後半には目標が達成される可能性が高いです。",
       "key_points": [
-        "AWS Direct Connectの拡張がマンチェスターで発表された",
-        "10Gbpsおよび100Gbpsの専用接続が利用可能",
-        "MACsec暗号化機能をサポート",
-        "Equinix MA3データセンターに新たな接続を提供",
-        "高速で安全なデータ転送を実現"
+        "エロン・マスクは2027年に1兆ドルの収益を見込む。",
+        "SpaceXはデータセンターのエネルギー、土地、インフラ確保に自信を持っている。",
+        "主な課題はチップとメモリの供給である。",
+        "エネルギー、冷却、資金調達の問題はほぼ解決済み。",
+        "成功すれば2027年末から2028年初頭に収益が得られる可能性が高い。"
       ],
       "glossary": [
         {
-          "term": "AWS Direct Connect",
-          "explain_ja": "AWSのサービスで、オンプレミスのデータセンターとAWS間に専用のネットワーク接続を提供する。"
+          "term": "GW",
+          "explain_ja": "ギガワット（GW）は電力の単位で、エネルギー量を示す。"
         },
         {
-          "term": "MACsec",
-          "explain_ja": "Media Access Control Securityの略で、データリンク層での通信のセキュリティを提供する技術。"
+          "term": "データセンター",
+          "explain_ja": "データを集中管理・保存・処理するための施設。"
+        },
+        {
+          "term": "GPU",
+          "explain_ja": "グラフィックスプロセッシングユニット。映像処理や計算処理に使用される。"
         }
       ],
       "personal_actions": [
-        "既存のAWS Direct Connectの設定を見直し、100G接続の検討を行う。",
-        "MACsec暗号化機能の使用についてチームと議論する。",
-        "マンチェスターデータセンターの接続オプションを確認する。"
+        "データセンターに関する最新の技術トレンドを把握する。",
+        "エネルギー供給の選択肢を検討し、持続可能な電力の利用を考える。",
+        "チップとメモリの供給状況についての情報収集を行う。"
       ],
       "tags": [
         "その他"
       ]
     },
     {
-      "url": "https://tech.yahoo.com/general/article/there-was-little-fuss-about-data-centers-in-the-last-election-now-they-could-sway-the-midterms-165906288.html",
-      "source": "Yahoo Entertainment",
-      "publishedAt": "2026-10-21T16:59:06Z",
-      "title": "There was little fuss about data centers in the last election. Now they could sway the midterms.",
-      "title_ja": "前回の選挙では話題にならなかったデータセンターが中間選挙に影響を与える可能性",
-      "summary_ja": "データセンターに対する反対が、2024年の選挙で政治的な議論を呼んでいる。最近の調査によると、70%を超えるアメリカ人がAIデータセンターの地域内建設に反対している。これにより、政治的な支持基盤が広がりつつある。",
+      "url": "https://oilprice.com/Energy/Energy-General/Electric-Giants-Say-They-Already-Have-the-Tools-to-Fix-the-AI-Power-Crunch.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-10-22T21:00:00Z",
+      "title": "Electric Giants Say They Already Have the Tools to Fix the AI Power Crunch",
+      "title_ja": "電力大手、AI時代の電力不足解消に必要なツールを既に備えていると発表",
+      "summary_ja": "AIの発展に伴うエネルギー需要の急増が、世界のエネルギーインフラに前例のない圧力をかけている。特にクリーンエネルギー生産能力は、急増する需要に対して不足している。電力企業は、この問題に対処するための手段を既に持っていると主張している。",
       "key_points": [
-        "データセンターへの反対が広がっている。",
-        "2024年の選挙で政治色を問わず反対意見が増加している。",
-        "70%以上のアメリカ人が地域内のAIデータセンター建設に反対。",
-        "選挙におけるデータセンター問題が注目される可能性がある。"
+        "AIの進展がエネルギー需要を急増させている。",
+        "世界のエネルギー生産能力が需要に追いついていない。",
+        "特にクリーンエネルギーの生産は著しく不足している。",
+        "電力企業は解決策を既に準備していると示唆している。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを管理・保存・処理するための施設。"
+          "term": "AI",
+          "explain_ja": "人工知能の略で、人間の知能を模倣するシステムやプログラムのこと。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略で、人間の知能を模倣したシステムやソフトウェア。"
+          "term": "クリーンエネルギー",
+          "explain_ja": "環境に優しい方法で生成されるエネルギー源のこと。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンター関連の計画を確認する。",
-        "政治家や候補者にデータセンター問題について意見を伝える。",
-        "自分の意見をSNSなどで発信して議論を促す。"
+        "エネルギー使用の効率化を図るため、稼働中の機器のエネルギー消費を見直す。",
+        "可再生エネルギーの導入を検討する。",
+        "最新のエネルギー管理システムについて情報収集する。"
       ],
       "tags": [
         "DC",
@@ -69,39 +73,36 @@
       ]
     },
     {
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-aurora-rds-on-demand-capacity-reservations/",
-      "source": "Amazon.com",
-      "publishedAt": "2026-10-21T16:00:00Z",
-      "title": "Amazon Aurora and Amazon RDS now support On-Demand Capacity Reservation",
-      "title_ja": "Amazon AuroraとAmazon RDSがオンデマンドキャパシティ予約をサポート",
-      "summary_ja": "Amazon AuroraとAmazon RDSは、オンデマンドキャパシティ予約を新たにサポートします。これにより、ユーザーは必要に応じて、1つまたは複数のアベイラビリティーゾーンでコンピュート容量を予約することができます。この機能により、DBインスタンスの作成、復元、スケールコンピュート、起動が円滑に行えるようになります。",
+      "url": "https://wccftech.com/intel-arizona-fab-62-targets-2028-ohio-hits-major-construction-milestone/",
+      "source": "Wccftech",
+      "publishedAt": "2026-10-22T20:14:22Z",
+      "title": "Intel’s Long-Delayed US Fab Expansion Gains Momentum As AI Demand Surges, Arizona Fab 62 Targets 2028 While Ohio One Hits Major Construction Milestone",
+      "title_ja": "インテルの米国ファブ拡張が進展、AI需要急増でアリゾナのFab 62は2028年を目指す",
+      "summary_ja": "インテルの米国における半導体製造拡張が新たな進展を見せています。アリゾナ州のFab 62では製造設備の設置が始まり、2028年末の稼働を予定しています。一方、オハイオ州のOhio Oneプロジェクトは、主要な建設マイルストーンに到達しました。これらの進展は、AI関連の需要増加に対する信頼感を示唆しています。",
       "key_points": [
-        "Amazon AuroraとAmazon RDSがオンデマンドキャパシティ予約を開始",
-        "必要に応じて、1つまたは複数のアベイラビリティーゾーンで容量を予約可能",
-        "DBインスタンスの作成やスケールがスムーズに行える",
-        "リソースの効率的な管理が可能"
+        "アリゾナ州のFab 62は2028年末に稼働予定。",
+        "オハイオ州のOhio Oneプロジェクトで大規模な構造トラスの設置が完了。",
+        "インテルは国内半導体生産能力の重要性を強調。",
+        "AIインフラの需要急増がインテルのサーバーCPUの需要を押し上げている。",
+        "製造設備の建設だけでなく、顧客獲得が課題となっている。"
       ],
       "glossary": [
         {
-          "term": "Amazon Aurora",
-          "explain_ja": "AWSが提供するリレーショナルデータベースサービスで、高いパフォーマンスと可用性を特徴とする。"
+          "term": "Fab",
+          "explain_ja": "半導体製造工場の略称で、ファウンドリまたはファブリケーションプラントとも呼ばれる。"
         },
         {
-          "term": "Amazon RDS",
-          "explain_ja": "リレーショナルデータベースサービスを簡単にセットアップ、運用、スケールできるAWSのサービス。"
-        },
-        {
-          "term": "オンデマンドキャパシティ予約",
-          "explain_ja": "必要なだけのコンピュート容量を事前に予約することで、リソースの効率を高めるサービス。"
+          "term": "AI",
+          "explain_ja": "人工知能のことで、機械が人間の知能を模倣する技術を指す。"
         }
       ],
       "personal_actions": [
-        "Amazon RDSやAuroraの使用を検討している場合、オンデマンドキャパシティ予約機能の詳細を確認すること。",
-        "既存のDBインスタンスのニーズに応じて、リソース予約の設定を見直すこと。",
-        "新機能の導入に向けて、既存のアーキテクチャとの互換性について評価すること。"
+        "インテルの新しい製造設備に影響を与える技術トレンドを追う。",
+        "自社の半導体調達計画を見直し、新しい供給元を考慮する。",
+        "業界の動向を定期的に確認し、競争力を保つための戦略を策定する。"
       ],
       "tags": [
-        "DC"
+        "AI"
       ]
     }
   ]
