@@ -1,71 +1,80 @@
 {
-  "date": "2026-10-24",
-  "generatedAtJST": "2026-10-24T07:15:22.333+09:00",
+  "date": "2026-10-25",
+  "generatedAtJST": "2026-10-25T07:15:25.812+09:00",
   "items": [
     {
-      "url": "https://www.nextbigfuture.com/2026/10/elons-1-trillion-pace-what-has-to-go-right.html",
-      "source": "Next Big Future",
-      "publishedAt": "2026-10-22T21:00:21Z",
-      "title": "What Has to Go Right – NextBigFuture.com",
-      "title_ja": "エロン・マスクのトリリオン戦略に必要な要素",
-      "summary_ja": "エロン・マスクは2027年までに13〜23GWのデータセンターを構築し、約1兆ドルの収益を得ると自信を示しています。SpaceXはエネルギーとインフラにおいて優位性があり、他社が直面する課題を克服する意義があります。しかし、チップやメモリの供給が究極的な鍵となるため、スケジュールの確保が必要です。これが成功すれば、2027年後半には目標が達成される可能性が高いです。",
+      "url": "https://tech.slashdot.org/story/26/10/23/0153232/ukraine-is-wiping-out-data-centers-across-the-border",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-10-23T16:00:00Z",
+      "title": "Ukraine Is Wiping Out Data Centers Across the Border",
+      "title_ja": "ウクライナが国境を越えてデータセンターを破壊",
+      "summary_ja": "ウクライナのドローン攻撃により、3つの主要なYandexデータセンターが損害を受けた。これにより、SberbankやVKontakteといったロシアの重要なデジタルサービスが混乱し、クラウドサービスや銀行、eコマース、乗車配車などにも影響が及んでいる。地域のデジタルインフラが大きく揺らいでいる状況で、事態の進展が注視される。",
       "key_points": [
-        "エロン・マスクは2027年に1兆ドルの収益を見込む。",
-        "SpaceXはデータセンターのエネルギー、土地、インフラ確保に自信を持っている。",
-        "主な課題はチップとメモリの供給である。",
-        "エネルギー、冷却、資金調達の問題はほぼ解決済み。",
-        "成功すれば2027年末から2028年初頭に収益が得られる可能性が高い。"
+        "ウクライナがドローン攻撃を実施",
+        "3つのYandexデータセンターが損害を受けた",
+        "SberbankやVKontakteのサービスが影響を受けている",
+        "クラウドサービスやeコマースに広範な混乱が発生",
+        "地域のデジタルインフラが脅かされている"
       ],
       "glossary": [
         {
-          "term": "GW",
-          "explain_ja": "ギガワット（GW）は電力の単位で、エネルギー量を示す。"
-        },
-        {
           "term": "データセンター",
-          "explain_ja": "データを集中管理・保存・処理するための施設。"
+          "explain_ja": "データの保存や管理を行う施設で、大規模なITサービスの基盤となる。"
         },
         {
-          "term": "GPU",
-          "explain_ja": "グラフィックスプロセッシングユニット。映像処理や計算処理に使用される。"
+          "term": "ドローン攻撃",
+          "explain_ja": "無人航空機を用いて実施される攻撃手法。"
+        },
+        {
+          "term": "Sberbank",
+          "explain_ja": "ロシアの大手銀行で、国営の金融機関。"
+        },
+        {
+          "term": "VKontakte",
+          "explain_ja": "ロシアの人気SNSで、Facebookに類似したサービスを提供している。"
         }
       ],
       "personal_actions": [
-        "データセンターに関する最新の技術トレンドを把握する。",
-        "エネルギー供給の選択肢を検討し、持続可能な電力の利用を考える。",
-        "チップとメモリの供給状況についての情報収集を行う。"
+        "使用しているクラウドサービスの可用性を確認する。",
+        "地域のデジタルサービスが及ぼす影響を把握する。",
+        "重要なデータのバックアップを定期的に行う。"
       ],
       "tags": [
-        "その他"
+        "DC"
       ]
     },
     {
-      "url": "https://oilprice.com/Energy/Energy-General/Electric-Giants-Say-They-Already-Have-the-Tools-to-Fix-the-AI-Power-Crunch.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-10-22T21:00:00Z",
-      "title": "Electric Giants Say They Already Have the Tools to Fix the AI Power Crunch",
-      "title_ja": "電力大手、AI時代の電力不足解消に必要なツールを既に備えていると発表",
-      "summary_ja": "AIの発展に伴うエネルギー需要の急増が、世界のエネルギーインフラに前例のない圧力をかけている。特にクリーンエネルギー生産能力は、急増する需要に対して不足している。電力企業は、この問題に対処するための手段を既に持っていると主張している。",
+      "url": "https://www.prnewswire.co.uk/news-releases/healthcare-data-center-market-to-reach-usd-37-11-billion-by-2035-as-ai-genomics-ehr-resilience-and-hosted-capacity-reshape-healthcare-infrastructure---dc-market-insights-302918129.html",
+      "source": "PR Newswire UK",
+      "publishedAt": "2026-10-23T14:00:00Z",
+      "title": "Healthcare Data Center Market to Reach USD 37.11 Billion by 2035 as AI Genomics, EHR Resilience and Hosted Capacity Reshape Healthcare Infrastructure - DC Market Insights",
+      "title_ja": "ヘルスケアデータセンター市場は2035年までに371.1億ドルに達する見込み - AI、ゲノム、EHRの強靭性とホスティング能力がヘルスケアインフラを再形成",
+      "summary_ja": "ヘルスケアデータセンター市場は、2025年に154.6億ドルから2035年には371.1億ドルに成長すると予測されています。この市場は9.15%のCAGRで成長する見込みで、AIゲノムと研究コンピューティングが特に急成長しています。北米が46.0%の市場シェアを持ち、主に病院や健康システムが市場の主要なエンドユーザーとなっています。",
       "key_points": [
-        "AIの進展がエネルギー需要を急増させている。",
-        "世界のエネルギー生産能力が需要に追いついていない。",
-        "特にクリーンエネルギーの生産は著しく不足している。",
-        "電力企業は解決策を既に準備していると示唆している。"
+        "市場規模は2025年の154.6億ドルから2035年には371.1億ドルに成長。",
+        "AIゲノムと研究コンピューティングは、16.71%のCAGRで最も急成長しているワークロード。",
+        "北米が46.0%のシェアを占め、病院および健康システムが最大のエンドユーザー。",
+        "オンプレミスの所有サイトは2025年の60.0%から2035年には45.0%に減少する見込み。",
+        "アジア太平洋地域が最も急成長する地域で、CAGRは11.72%。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略で、人間の知能を模倣するシステムやプログラムのこと。"
+          "term": "CAGR",
+          "explain_ja": "年平均成長率（Compound Annual Growth Rate）の略。特定期間における投資の年平均成長率を示します。"
         },
         {
-          "term": "クリーンエネルギー",
-          "explain_ja": "環境に優しい方法で生成されるエネルギー源のこと。"
+          "term": "EHR",
+          "explain_ja": "電子健康記録（Electronic Health Records）の略で、患者の医療情報をデジタルで管理するシステムです。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略。コンピュータが人間の知的なプロセスを模倣する技術です。"
         }
       ],
       "personal_actions": [
-        "エネルギー使用の効率化を図るため、稼働中の機器のエネルギー消費を見直す。",
-        "可再生エネルギーの導入を検討する。",
-        "最新のエネルギー管理システムについて情報収集する。"
+        "今後のデータセンターの需要について、社内でのITインフラ計画を見直す。",
+        "新しいAIベースのアプリケーションの導入を検討し、インフラの準備状況を確認する。",
+        "ホスティングやコロケーションのサービスプロバイダーとコンタクトを取り、今後のシフトに備える。"
       ],
       "tags": [
         "DC",
@@ -73,36 +82,40 @@
       ]
     },
     {
-      "url": "https://wccftech.com/intel-arizona-fab-62-targets-2028-ohio-hits-major-construction-milestone/",
-      "source": "Wccftech",
-      "publishedAt": "2026-10-22T20:14:22Z",
-      "title": "Intel’s Long-Delayed US Fab Expansion Gains Momentum As AI Demand Surges, Arizona Fab 62 Targets 2028 While Ohio One Hits Major Construction Milestone",
-      "title_ja": "インテルの米国ファブ拡張が進展、AI需要急増でアリゾナのFab 62は2028年を目指す",
-      "summary_ja": "インテルの米国における半導体製造拡張が新たな進展を見せています。アリゾナ州のFab 62では製造設備の設置が始まり、2028年末の稼働を予定しています。一方、オハイオ州のOhio Oneプロジェクトは、主要な建設マイルストーンに到達しました。これらの進展は、AI関連の需要増加に対する信頼感を示唆しています。",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Renewables-Boom-Pushes-Australias-Gas-Power-to-Quarter-Century-Low.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-10-23T11:30:00Z",
+      "title": "Renewables Boom Pushes Australia's Gas Power to Quarter-Century Low",
+      "title_ja": "再生可能エネルギーの急増がオーストラリアのガス発電を25年ぶりの低水準に押し下げる",
+      "summary_ja": "オーストラリアの再生可能エネルギーの発電量が記録的な水準に達し、ガス発電は2000年以来の第3四半期で最低となった。オーストラリアエネルギー市場運営者(AEMO)は、電力需要が1.3%上昇したと報告しているが、再生可能エネルギーの増加がそのパターンを変えつつある。これにより、電力料金も大幅に低下し、エネルギー供給の多様化が進むことが期待されている。",
       "key_points": [
-        "アリゾナ州のFab 62は2028年末に稼働予定。",
-        "オハイオ州のOhio Oneプロジェクトで大規模な構造トラスの設置が完了。",
-        "インテルは国内半導体生産能力の重要性を強調。",
-        "AIインフラの需要急増がインテルのサーバーCPUの需要を押し上げている。",
-        "製造設備の建設だけでなく、顧客獲得が課題となっている。"
+        "再生可能エネルギーが電力生成の44.3%を占める記録的な水準に達する。",
+        "ガス発電量は34%減少し、2000年以来の低水準に。",
+        "グリッド規模の電池容量が前年の3倍に増加。",
+        "電力供給の需要が高まる中でも、再生可能エネルギーの増加が電力市場を変化させている。",
+        "平均卸電力価格が前年同月比で27%減少、過去最安値を記録。"
       ],
       "glossary": [
         {
-          "term": "Fab",
-          "explain_ja": "半導体製造工場の略称で、ファウンドリまたはファブリケーションプラントとも呼ばれる。"
+          "term": "AEMO",
+          "explain_ja": "オーストラリアエネルギー市場運営者で、電力市場の運営を行う機関。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能のことで、機械が人間の知能を模倣する技術を指す。"
+          "term": "NEM",
+          "explain_ja": "ナショナルエレクトリシティマーケットの略で、オーストラリア全土の電力の流通を管理する市場。"
+        },
+        {
+          "term": "グリッド規模のバッテリー",
+          "explain_ja": "大規模に電力を蓄え、需要に応じて供給するための蓄電池。"
         }
       ],
       "personal_actions": [
-        "インテルの新しい製造設備に影響を与える技術トレンドを追う。",
-        "自社の半導体調達計画を見直し、新しい供給元を考慮する。",
-        "業界の動向を定期的に確認し、競争力を保つための戦略を策定する。"
+        "エネルギー効率の良い機器の導入を検討する。",
+        "グリッド規模のバッテリーや再生可能エネルギーの導入について学ぶ。",
+        "地元の電力市場動向を把握し、適切な契約を選ぶ。"
       ],
       "tags": [
-        "AI"
+        "DC"
       ]
     }
   ]
