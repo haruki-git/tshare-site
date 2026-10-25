@@ -1,80 +1,39 @@
 {
-  "date": "2026-10-25",
-  "generatedAtJST": "2026-10-25T07:15:25.812+09:00",
+  "date": "2026-10-26",
+  "generatedAtJST": "2026-10-26T07:15:23.884+09:00",
   "items": [
     {
-      "url": "https://tech.slashdot.org/story/26/10/23/0153232/ukraine-is-wiping-out-data-centers-across-the-border",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-10-23T16:00:00Z",
-      "title": "Ukraine Is Wiping Out Data Centers Across the Border",
-      "title_ja": "ウクライナが国境を越えてデータセンターを破壊",
-      "summary_ja": "ウクライナのドローン攻撃により、3つの主要なYandexデータセンターが損害を受けた。これにより、SberbankやVKontakteといったロシアの重要なデジタルサービスが混乱し、クラウドサービスや銀行、eコマース、乗車配車などにも影響が及んでいる。地域のデジタルインフラが大きく揺らいでいる状況で、事態の進展が注視される。",
+      "url": "https://cryptobriefing.com/nvidia-jensen-huang-optical-volume-ai-data-centers/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-24T21:23:06Z",
+      "title": "Nvidia and SPIL plan 15x expansion of co-packaged optics capacity by mid-2027",
+      "title_ja": "NvidiaとSPIL、2027年中にコパッケージ光学容量を15倍に拡大計画",
+      "summary_ja": "NvidiaのCEO、Jensen Huangは、最近のGTCベルリンイベントでAIデータセンターにおける光学コンポーネントの需要が15倍に増加する可能性を示唆しました。これは、現行のインターコネクト技術がAIワークロードの負荷に耐えられなくなってきていることを反映しています。この計画は、Nvidiaが短期間で光学エンジンの製造能力を大幅に拡大することを意図しています。",
       "key_points": [
-        "ウクライナがドローン攻撃を実施",
-        "3つのYandexデータセンターが損害を受けた",
-        "SberbankやVKontakteのサービスが影響を受けている",
-        "クラウドサービスやeコマースに広範な混乱が発生",
-        "地域のデジタルインフラが脅かされている"
+        "AIワークロードが増加し、光学インターコネクトの需要が急増する見込み。",
+        "Nvidiaは、SPILと協力して2027年中に光学容量を15倍に増加させる計画。",
+        "新しいSpectrum-6 CPOスイッチは、エネルギー効率と信号の整合性を向上させる。",
+        "光学エンジンをスイッチパッケージに直接統合するCPO技術の重要性について。",
+        "Nvidiaは、米国の半導体試験能力を進展させるために11億ドルの投資を発表。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存や管理を行う施設で、大規模なITサービスの基盤となる。"
+          "term": "CPO (Co-Packaged Optics)",
+          "explain_ja": "光学トランシーバをスイッチチップに直接統合した技術。"
         },
         {
-          "term": "ドローン攻撃",
-          "explain_ja": "無人航空機を用いて実施される攻撃手法。"
+          "term": "光学インターコネクト",
+          "explain_ja": "電気信号の代わりに光信号を使用する接続技術。"
         },
         {
-          "term": "Sberbank",
-          "explain_ja": "ロシアの大手銀行で、国営の金融機関。"
-        },
-        {
-          "term": "VKontakte",
-          "explain_ja": "ロシアの人気SNSで、Facebookに類似したサービスを提供している。"
+          "term": "Spectrum-6",
+          "explain_ja": "Nvidiaが提供する次世代のCPOスイッチ製品。"
         }
       ],
       "personal_actions": [
-        "使用しているクラウドサービスの可用性を確認する。",
-        "地域のデジタルサービスが及ぼす影響を把握する。",
-        "重要なデータのバックアップを定期的に行う。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.prnewswire.co.uk/news-releases/healthcare-data-center-market-to-reach-usd-37-11-billion-by-2035-as-ai-genomics-ehr-resilience-and-hosted-capacity-reshape-healthcare-infrastructure---dc-market-insights-302918129.html",
-      "source": "PR Newswire UK",
-      "publishedAt": "2026-10-23T14:00:00Z",
-      "title": "Healthcare Data Center Market to Reach USD 37.11 Billion by 2035 as AI Genomics, EHR Resilience and Hosted Capacity Reshape Healthcare Infrastructure - DC Market Insights",
-      "title_ja": "ヘルスケアデータセンター市場は2035年までに371.1億ドルに達する見込み - AI、ゲノム、EHRの強靭性とホスティング能力がヘルスケアインフラを再形成",
-      "summary_ja": "ヘルスケアデータセンター市場は、2025年に154.6億ドルから2035年には371.1億ドルに成長すると予測されています。この市場は9.15%のCAGRで成長する見込みで、AIゲノムと研究コンピューティングが特に急成長しています。北米が46.0%の市場シェアを持ち、主に病院や健康システムが市場の主要なエンドユーザーとなっています。",
-      "key_points": [
-        "市場規模は2025年の154.6億ドルから2035年には371.1億ドルに成長。",
-        "AIゲノムと研究コンピューティングは、16.71%のCAGRで最も急成長しているワークロード。",
-        "北米が46.0%のシェアを占め、病院および健康システムが最大のエンドユーザー。",
-        "オンプレミスの所有サイトは2025年の60.0%から2035年には45.0%に減少する見込み。",
-        "アジア太平洋地域が最も急成長する地域で、CAGRは11.72%。"
-      ],
-      "glossary": [
-        {
-          "term": "CAGR",
-          "explain_ja": "年平均成長率（Compound Annual Growth Rate）の略。特定期間における投資の年平均成長率を示します。"
-        },
-        {
-          "term": "EHR",
-          "explain_ja": "電子健康記録（Electronic Health Records）の略で、患者の医療情報をデジタルで管理するシステムです。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。コンピュータが人間の知的なプロセスを模倣する技術です。"
-        }
-      ],
-      "personal_actions": [
-        "今後のデータセンターの需要について、社内でのITインフラ計画を見直す。",
-        "新しいAIベースのアプリケーションの導入を検討し、インフラの準備状況を確認する。",
-        "ホスティングやコロケーションのサービスプロバイダーとコンタクトを取り、今後のシフトに備える。"
+        "データセンターの光学インターコネクトに関する最新情報を確認する。",
+        "自社のインフラ計画に光学技術の導入を検討する。",
+        "AIワークロードに対応するためのネットワークリソースを評価する。"
       ],
       "tags": [
         "DC",
@@ -82,40 +41,73 @@
       ]
     },
     {
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Renewables-Boom-Pushes-Australias-Gas-Power-to-Quarter-Century-Low.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-10-23T11:30:00Z",
-      "title": "Renewables Boom Pushes Australia's Gas Power to Quarter-Century Low",
-      "title_ja": "再生可能エネルギーの急増がオーストラリアのガス発電を25年ぶりの低水準に押し下げる",
-      "summary_ja": "オーストラリアの再生可能エネルギーの発電量が記録的な水準に達し、ガス発電は2000年以来の第3四半期で最低となった。オーストラリアエネルギー市場運営者(AEMO)は、電力需要が1.3%上昇したと報告しているが、再生可能エネルギーの増加がそのパターンを変えつつある。これにより、電力料金も大幅に低下し、エネルギー供給の多様化が進むことが期待されている。",
+      "url": "https://cryptobriefing.com/google-reportedly-cut-down-250000-trees-to-build-data-center/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-24T20:32:24Z",
+      "title": "Google reportedly cut down 250,000 trees to build data center",
+      "title_ja": "Googleがデータセンター建設のために25万本の木を伐採",
+      "summary_ja": "Googleがフィンランドでのデータセンター建設の一環として25万本の木を伐採したと報道されています。これにより環境への影響が懸念され、フィンランド当局は環境評価が行われるまでプロジェクトを中止しています。この出来事は、世界中のデータセンター建設における環境法遵守の重要性を浮き彫りにし、今後の規制強化への影響が予想されます。",
       "key_points": [
-        "再生可能エネルギーが電力生成の44.3%を占める記録的な水準に達する。",
-        "ガス発電量は34%減少し、2000年以来の低水準に。",
-        "グリッド規模の電池容量が前年の3倍に増加。",
-        "電力供給の需要が高まる中でも、再生可能エネルギーの増加が電力市場を変化させている。",
-        "平均卸電力価格が前年同月比で27%減少、過去最安値を記録。"
+        "Googleはフィンランドでのデータセンター建設のために25万本の木を伐採。",
+        "フィンランド当局は環境評価の結果を待つためプロジェクトを中止。",
+        "データセンター建設に対する環境への懸念が高まり、ルイジアナ州でのモラトリアムの可能性が増大。",
+        "大規模技術プロジェクトの環境慣行に関する懸念が市場に影響を与える。",
+        "他の地域でも類似の規制強化のきっかけとなる可能性がある。"
       ],
       "glossary": [
         {
-          "term": "AEMO",
-          "explain_ja": "オーストラリアエネルギー市場運営者で、電力市場の運営を行う機関。"
+          "term": "データセンター",
+          "explain_ja": "データを集中管理・保管する施設で、一般にコンピュータサーバーや通信機器を備えている。"
         },
         {
-          "term": "NEM",
-          "explain_ja": "ナショナルエレクトリシティマーケットの略で、オーストラリア全土の電力の流通を管理する市場。"
+          "term": "モラトリアム",
+          "explain_ja": "特定の活動を一時的に停止することを指し、しばしば環境影響評価のために適用される。"
         },
         {
-          "term": "グリッド規模のバッテリー",
-          "explain_ja": "大規模に電力を蓄え、需要に応じて供給するための蓄電池。"
+          "term": "環境評価",
+          "explain_ja": "プロジェクトに対して環境への影響を調査し、評価するプロセス。"
         }
       ],
       "personal_actions": [
-        "エネルギー効率の良い機器の導入を検討する。",
-        "グリッド規模のバッテリーや再生可能エネルギーの導入について学ぶ。",
-        "地元の電力市場動向を把握し、適切な契約を選ぶ。"
+        "地域のデータセンター建設に関する規制の最新情報を確認する。",
+        "環境への影響に関心を持ち、地域コミュニティでの議論に参加する。",
+        "大規模プロジェクトに関する環境慣行について情報を収集する。"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://www.notebookcheck.net/Can-power-consumption-reveal-whether-a-data-center-is-secretly-training-AI.1433004.0.html",
+      "source": "Notebookcheck.net",
+      "publishedAt": "2026-10-24T14:29:00Z",
+      "title": "Can power consumption reveal whether a data center is secretly training AI?",
+      "title_ja": "データセンターの電力消費からAIトレーニングを見抜けるか？",
+      "summary_ja": "データセンターの電力消費がAIモデルのトレーニングを示す特徴的なパターンを持つことが発見されました。この手法は、データセンター運営者の内部ログに依存せず、外部からトレーニング活動を監視できる可能性があります。この研究は、AI規制における透明性確保の重要性を示しています。",
+      "key_points": [
+        "AIトレーニング中の電力消費が特徴的なリズムを持つ。",
+        "外部のセンサーを使用してトレーニングを監視可能。",
+        "96％以上のトレーニングを検出する能力がある。",
+        "運営者が意図的に隠蔽を行う場合、高コストがかかる。",
+        "誤検知率は1％と低い。"
+      ],
+      "glossary": [
+        {
+          "term": "Viterbi tracker",
+          "explain_ja": "信号処理などで用いられる時間的パターンを検出する技術。"
+        },
+        {
+          "term": "AIトレーニング",
+          "explain_ja": "人工知能モデルを訓練して性能を向上させるプロセス。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターでの電力消費パターンの監視方法について調べる。",
+        "AIトレーニングの透明性を追求するための社内ポリシーに該当する項目を見直す。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
