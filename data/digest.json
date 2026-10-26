@@ -1,39 +1,34 @@
 {
-  "date": "2026-10-26",
-  "generatedAtJST": "2026-10-26T07:15:23.884+09:00",
+  "date": "2026-10-27",
+  "generatedAtJST": "2026-10-27T07:15:23.446+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/nvidia-jensen-huang-optical-volume-ai-data-centers/",
+      "url": "https://cryptobriefing.com/microsoft-cancels-uk-ai-data-center-power/",
       "source": "Crypto Briefing",
-      "publishedAt": "2026-10-24T21:23:06Z",
-      "title": "Nvidia and SPIL plan 15x expansion of co-packaged optics capacity by mid-2027",
-      "title_ja": "NvidiaとSPIL、2027年中にコパッケージ光学容量を15倍に拡大計画",
-      "summary_ja": "NvidiaのCEO、Jensen Huangは、最近のGTCベルリンイベントでAIデータセンターにおける光学コンポーネントの需要が15倍に増加する可能性を示唆しました。これは、現行のインターコネクト技術がAIワークロードの負荷に耐えられなくなってきていることを反映しています。この計画は、Nvidiaが短期間で光学エンジンの製造能力を大幅に拡大することを意図しています。",
+      "publishedAt": "2026-10-25T04:05:54Z",
+      "title": "Microsoft cancels UK AI data center project due to power delays",
+      "title_ja": "マイクロソフト、電力遅延によりイギリスのAIデータセンター計画を中止",
+      "summary_ja": "マイクロソフトは、イギリスで計画していたAIデータセンターの計画を中止しました。理由はチップ不足や資金不足ではなく、単に必要な電力供給が十分でないためです。このプロジェクト中止は、イギリスのAIリーダーシップを目指す政策に影響を与える可能性があります。",
       "key_points": [
-        "AIワークロードが増加し、光学インターコネクトの需要が急増する見込み。",
-        "Nvidiaは、SPILと協力して2027年中に光学容量を15倍に増加させる計画。",
-        "新しいSpectrum-6 CPOスイッチは、エネルギー効率と信号の整合性を向上させる。",
-        "光学エンジンをスイッチパッケージに直接統合するCPO技術の重要性について。",
-        "Nvidiaは、米国の半導体試験能力を進展させるために11億ドルの投資を発表。"
+        "マイクロソフトが計画していたイギリスのデータセンターは、必要な電力供給の遅れが原因で中止された。",
+        "このデータセンターは、2026年後半または2027年初頭に開設予定だった。",
+        "Nscaleは、ロンドン近郊のエセックスでプロジェクトを継続する意向を示している。",
+        "イギリスの電力網には重大な接続遅延があり、最大13年の待機期間が報告されている。",
+        "Nscaleの他のプロジェクトはマイクロソフトとの契約に影響されていない。"
       ],
       "glossary": [
         {
-          "term": "CPO (Co-Packaged Optics)",
-          "explain_ja": "光学トランシーバをスイッチチップに直接統合した技術。"
+          "term": "データセンター",
+          "explain_ja": "コンピュータシステムと関連するコンポーネントを管理する施設。"
         },
         {
-          "term": "光学インターコネクト",
-          "explain_ja": "電気信号の代わりに光信号を使用する接続技術。"
-        },
-        {
-          "term": "Spectrum-6",
-          "explain_ja": "Nvidiaが提供する次世代のCPOスイッチ製品。"
+          "term": "AIインフラ",
+          "explain_ja": "人工知能の運用に必要なハードウェアとソフトウェアの基盤。"
         }
       ],
       "personal_actions": [
-        "データセンターの光学インターコネクトに関する最新情報を確認する。",
-        "自社のインフラ計画に光学技術の導入を検討する。",
-        "AIワークロードに対応するためのネットワークリソースを評価する。"
+        "プロジェクトの進捗を確認し、他の施設への影響を調査する。",
+        "電力供給スケジュールの見直しについて関係者に確認する。"
       ],
       "tags": [
         "DC",
@@ -41,69 +36,73 @@
       ]
     },
     {
-      "url": "https://cryptobriefing.com/google-reportedly-cut-down-250000-trees-to-build-data-center/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-24T20:32:24Z",
-      "title": "Google reportedly cut down 250,000 trees to build data center",
-      "title_ja": "Googleがデータセンター建設のために25万本の木を伐採",
-      "summary_ja": "Googleがフィンランドでのデータセンター建設の一環として25万本の木を伐採したと報道されています。これにより環境への影響が懸念され、フィンランド当局は環境評価が行われるまでプロジェクトを中止しています。この出来事は、世界中のデータセンター建設における環境法遵守の重要性を浮き彫りにし、今後の規制強化への影響が予想されます。",
+      "url": "https://www.ubergizmo.com/2026/10/fix-2026-innovation-awards-9-best-innovation-technology-winners-in-robotics-ai-and-mobility/",
+      "source": "Ubergizmo",
+      "publishedAt": "2026-10-25T01:18:41Z",
+      "title": "FIX 2026 Innovation Awards: 9 Best Innovation Technology Winners in Robotics, AI, and Mobility",
+      "title_ja": "FIX 2026イノベーション賞: ロボティクス、AI、モビリティの技術革新賞受賞9社",
+      "summary_ja": "FIX 2026がロボティクス、自律車両、産業AI、サイバーセキュリティ、データセンター冷却の分野での技術革新に対し、9社を表彰しました。受賞企業は209の応募から選ばれ、さらなる技術の進化が期待されています。これにより、業界は人間に近い作業を行えるロボットの実用化が進むと見られます。",
       "key_points": [
-        "Googleはフィンランドでのデータセンター建設のために25万本の木を伐採。",
-        "フィンランド当局は環境評価の結果を待つためプロジェクトを中止。",
-        "データセンター建設に対する環境への懸念が高まり、ルイジアナ州でのモラトリアムの可能性が増大。",
-        "大規模技術プロジェクトの環境慣行に関する懸念が市場に影響を与える。",
-        "他の地域でも類似の規制強化のきっかけとなる可能性がある。"
+        "FIX 2026で9社が技術革新賞を受賞。",
+        "受賞作には人間に似た操作を行えるロボット手や二足歩行ロボットが含まれる。",
+        "OnepredictやSWMなど、未来のモビリティに関する技術革新が進行中。",
+        "AI/ICT分野では、サイバーセキュリティや冷却技術に関する革新が評価される。",
+        "IAIサーバー向けの精密冷却技術も紹介され、業界の効率化が期待される。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを集中管理・保管する施設で、一般にコンピュータサーバーや通信機器を備えている。"
+          "term": "ロボティクス",
+          "explain_ja": "ロボット技術に関する学問や技術の分野を指し、製造からサービス業まで幅広い用途で利用される。"
         },
         {
-          "term": "モラトリアム",
-          "explain_ja": "特定の活動を一時的に停止することを指し、しばしば環境影響評価のために適用される。"
+          "term": "自律車両",
+          "explain_ja": "人間の運転なしに自動的に走行できる車両を指し、主にセンサーとAI技術によって制御される。"
         },
         {
-          "term": "環境評価",
-          "explain_ja": "プロジェクトに対して環境への影響を調査し、評価するプロセス。"
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略で、人間の知能を模倣したシステムや技術を指す。"
+        },
+        {
+          "term": "サイバーセキュリティ",
+          "explain_ja": "ネットワークやデジタルデータの保護に関する技術や施策を指し、悪意のある攻撃からの防御が主な目的。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンター建設に関する規制の最新情報を確認する。",
-        "環境への影響に関心を持ち、地域コミュニティでの議論に参加する。",
-        "大規模プロジェクトに関する環境慣行について情報を収集する。"
+        "受賞した技術の最新情報を追って、業界動向を把握する。",
+        "自社の技術革新にどのように影響を受けるかを検討し、必要な対策を立てる。",
+        "最新のサイバーセキュリティ対策を導入し、脅威に備える。"
       ],
       "tags": [
-        "DC"
+        "AI"
       ]
     },
     {
-      "url": "https://www.notebookcheck.net/Can-power-consumption-reveal-whether-a-data-center-is-secretly-training-AI.1433004.0.html",
-      "source": "Notebookcheck.net",
-      "publishedAt": "2026-10-24T14:29:00Z",
-      "title": "Can power consumption reveal whether a data center is secretly training AI?",
-      "title_ja": "データセンターの電力消費からAIトレーニングを見抜けるか？",
-      "summary_ja": "データセンターの電力消費がAIモデルのトレーニングを示す特徴的なパターンを持つことが発見されました。この手法は、データセンター運営者の内部ログに依存せず、外部からトレーニング活動を監視できる可能性があります。この研究は、AI規制における透明性確保の重要性を示しています。",
+      "url": "https://www.digitimes.com/news/a20261023PD233/data-equipment-epc-demand-taiwan.html",
+      "source": "Digitimes",
+      "publishedAt": "2026-10-25T00:43:37Z",
+      "title": "AI data centers drive Taiwan's electrical firms into modular, EPC markets",
+      "title_ja": "AIデータセンターが台湾の電力企業をモジュール型EPC市場へ誘導",
+      "summary_ja": "台湾の電力企業は、AIデータセンターの需要を背景にモジュール型EPC市場に進出しています。これにより、従来の市場からの変革が求められ、新たなビジネス機会が創出されています。AI技術の発展によって、効率的かつ柔軟な電力供給が期待され、業界の競争が激化するでしょう。",
       "key_points": [
-        "AIトレーニング中の電力消費が特徴的なリズムを持つ。",
-        "外部のセンサーを使用してトレーニングを監視可能。",
-        "96％以上のトレーニングを検出する能力がある。",
-        "運営者が意図的に隠蔽を行う場合、高コストがかかる。",
-        "誤検知率は1％と低い。"
+        "AIデータセンターの需要が急増",
+        "台湾の電力企業がモジュール型EPC市場に参入",
+        "新しいビジネス機会が創出されている",
+        "効率的な電力供給を重視する動き",
+        "業界内での競争が激化する可能性"
       ],
       "glossary": [
         {
-          "term": "Viterbi tracker",
-          "explain_ja": "信号処理などで用いられる時間的パターンを検出する技術。"
+          "term": "EPC",
+          "explain_ja": "設計、調達、建設のプロセスを統合したプロジェクト管理手法のこと。"
         },
         {
-          "term": "AIトレーニング",
-          "explain_ja": "人工知能モデルを訓練して性能を向上させるプロセス。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能を活用して運用されるデータセンター。"
         }
       ],
       "personal_actions": [
-        "データセンターでの電力消費パターンの監視方法について調べる。",
-        "AIトレーニングの透明性を追求するための社内ポリシーに該当する項目を見直す。"
+        "最新の市場動向を確認する",
+        "モジュール型EPCの導入可能性を検討する"
       ],
       "tags": [
         "DC",
