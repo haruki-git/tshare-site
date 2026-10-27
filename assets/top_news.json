@@ -1,112 +1,114 @@
 {
-  "date": "2026-10-27",
-  "generatedAtJST": "2026-10-27T07:15:23.446+09:00",
+  "date": "2026-10-28",
+  "generatedAtJST": "2026-10-28T07:15:17.457+09:00",
   "items": [
     {
-      "url": "https://cryptobriefing.com/microsoft-cancels-uk-ai-data-center-power/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-25T04:05:54Z",
-      "title": "Microsoft cancels UK AI data center project due to power delays",
-      "title_ja": "マイクロソフト、電力遅延によりイギリスのAIデータセンター計画を中止",
-      "summary_ja": "マイクロソフトは、イギリスで計画していたAIデータセンターの計画を中止しました。理由はチップ不足や資金不足ではなく、単に必要な電力供給が十分でないためです。このプロジェクト中止は、イギリスのAIリーダーシップを目指す政策に影響を与える可能性があります。",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018994/anthropic-ipo-ai-data-center-energy-climate-risk",
+      "source": "The Verge",
+      "publishedAt": "2026-10-26T21:45:31Z",
+      "title": "Anthropic is burning gas to feed the AI boom",
+      "title_ja": "AnthropicはAIブームのためにガスを燃やしている",
+      "summary_ja": "Anthropicは上場準備を進めており、S-1提出書類では生成AIのメタン依存性が明らかになった。データセンターの立地選定や電源供給を巡る競争が激化していることが記されている。これは、気候変動への影響を考慮した上でのエネルギー供給の需給バランスに重要な示唆を与える。",
       "key_points": [
-        "マイクロソフトが計画していたイギリスのデータセンターは、必要な電力供給の遅れが原因で中止された。",
-        "このデータセンターは、2026年後半または2027年初頭に開設予定だった。",
-        "Nscaleは、ロンドン近郊のエセックスでプロジェクトを継続する意向を示している。",
-        "イギリスの電力網には重大な接続遅延があり、最大13年の待機期間が報告されている。",
-        "Nscaleの他のプロジェクトはマイクロソフトとの契約に影響されていない。"
+        "Anthropicが上場準備中であること",
+        "生成AIのメタン依存が記録された",
+        "データセンターの電力供給を巡る競争が激化している",
+        "エネルギー供給の需給バランスが重要",
+        "気候変動への影響が懸念される"
       ],
       "glossary": [
+        {
+          "term": "メタン依存",
+          "explain_ja": "AIシステムの運用においてメタンガスが利用されること。"
+        },
+        {
+          "term": "生成AI",
+          "explain_ja": "テキストや画像を生成する能力を持つ人工知能のこと。"
+        },
         {
           "term": "データセンター",
-          "explain_ja": "コンピュータシステムと関連するコンポーネントを管理する施設。"
+          "explain_ja": "データを集約し、処理・保存を行う施設。"
         },
         {
-          "term": "AIインフラ",
-          "explain_ja": "人工知能の運用に必要なハードウェアとソフトウェアの基盤。"
+          "term": "上場株式",
+          "explain_ja": "株式市場に上場する企業の株式。"
+        },
+        {
+          "term": "S-1提出書類",
+          "explain_ja": "米国証券取引委員会における上場申請に必要な文書。"
         }
       ],
       "personal_actions": [
-        "プロジェクトの進捗を確認し、他の施設への影響を調査する。",
-        "電力供給スケジュールの見直しについて関係者に確認する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.ubergizmo.com/2026/10/fix-2026-innovation-awards-9-best-innovation-technology-winners-in-robotics-ai-and-mobility/",
-      "source": "Ubergizmo",
-      "publishedAt": "2026-10-25T01:18:41Z",
-      "title": "FIX 2026 Innovation Awards: 9 Best Innovation Technology Winners in Robotics, AI, and Mobility",
-      "title_ja": "FIX 2026イノベーション賞: ロボティクス、AI、モビリティの技術革新賞受賞9社",
-      "summary_ja": "FIX 2026がロボティクス、自律車両、産業AI、サイバーセキュリティ、データセンター冷却の分野での技術革新に対し、9社を表彰しました。受賞企業は209の応募から選ばれ、さらなる技術の進化が期待されています。これにより、業界は人間に近い作業を行えるロボットの実用化が進むと見られます。",
-      "key_points": [
-        "FIX 2026で9社が技術革新賞を受賞。",
-        "受賞作には人間に似た操作を行えるロボット手や二足歩行ロボットが含まれる。",
-        "OnepredictやSWMなど、未来のモビリティに関する技術革新が進行中。",
-        "AI/ICT分野では、サイバーセキュリティや冷却技術に関する革新が評価される。",
-        "IAIサーバー向けの精密冷却技術も紹介され、業界の効率化が期待される。"
-      ],
-      "glossary": [
-        {
-          "term": "ロボティクス",
-          "explain_ja": "ロボット技術に関する学問や技術の分野を指し、製造からサービス業まで幅広い用途で利用される。"
-        },
-        {
-          "term": "自律車両",
-          "explain_ja": "人間の運転なしに自動的に走行できる車両を指し、主にセンサーとAI技術によって制御される。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略で、人間の知能を模倣したシステムや技術を指す。"
-        },
-        {
-          "term": "サイバーセキュリティ",
-          "explain_ja": "ネットワークやデジタルデータの保護に関する技術や施策を指し、悪意のある攻撃からの防御が主な目的。"
-        }
-      ],
-      "personal_actions": [
-        "受賞した技術の最新情報を追って、業界動向を把握する。",
-        "自社の技術革新にどのように影響を受けるかを検討し、必要な対策を立てる。",
-        "最新のサイバーセキュリティ対策を導入し、脅威に備える。"
+        "データセンターの立地や電力供給の現状を確認する。",
+        "環境影響を考慮したエネルギー供給の選択肢を再評価する。",
+        "企業の上場情報やエネルギー政策の変化に注目する。"
       ],
       "tags": [
         "AI"
       ]
     },
     {
-      "url": "https://www.digitimes.com/news/a20261023PD233/data-equipment-epc-demand-taiwan.html",
-      "source": "Digitimes",
-      "publishedAt": "2026-10-25T00:43:37Z",
-      "title": "AI data centers drive Taiwan's electrical firms into modular, EPC markets",
-      "title_ja": "AIデータセンターが台湾の電力企業をモジュール型EPC市場へ誘導",
-      "summary_ja": "台湾の電力企業は、AIデータセンターの需要を背景にモジュール型EPC市場に進出しています。これにより、従来の市場からの変革が求められ、新たなビジネス機会が創出されています。AI技術の発展によって、効率的かつ柔軟な電力供給が期待され、業界の競争が激化するでしょう。",
+      "url": "https://yro.slashdot.org/story/26/10/26/1759233/highway-thieves-are-spoofing-gps-to-steal-millions-in-data-center-bound-cargo",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-10-26T18:00:00Z",
+      "title": "Highway Thieves Are Spoofing GPS To Steal Millions In Data Center-Bound Cargo",
+      "title_ja": "ハイウェイ泥棒、GPSを偽装してデータセンター向け貨物を盗む",
+      "summary_ja": "ハイウェイ泥棒が、高度な手法を用いて6月以来100百万ドル以上のデータセンター機器を盗んでいる。偽のドライバーIDの作成やGPSの偽装が行われており、攻撃者は被害者を欺いている。これにより、物流やセキュリティの面での影響が懸念されている。",
       "key_points": [
-        "AIデータセンターの需要が急増",
-        "台湾の電力企業がモジュール型EPC市場に参入",
-        "新しいビジネス機会が創出されている",
-        "効率的な電力供給を重視する動き",
-        "業界内での競争が激化する可能性"
+        "ハイウェイ泥棒が100百万ドル以上のデータセンター機器を盗む",
+        "偽のドライバーIDやGPSの偽装が使用されている",
+        "盗難事件は6月以降に増加している",
+        "これに伴い、物流とセキュリティへの懸念が高まっている"
       ],
       "glossary": [
         {
-          "term": "EPC",
-          "explain_ja": "設計、調達、建設のプロセスを統合したプロジェクト管理手法のこと。"
+          "term": "GPS",
+          "explain_ja": "全地球測位システムの略。位置情報を特定するための衛星システム。"
         },
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能を活用して運用されるデータセンター。"
+          "term": "データセンター",
+          "explain_ja": "データの保管、処理、管理を行う施設。"
         }
       ],
       "personal_actions": [
-        "最新の市場動向を確認する",
-        "モジュール型EPCの導入可能性を検討する"
+        "輸送中の貨物の追跡手段を見直す",
+        "不審な動きがないかドライバーに確認する",
+        "高価な機器の輸送ルートを再評価する"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.commondreams.org/opinion/permitting-reform-data-centers",
+      "source": "Common Dreams",
+      "publishedAt": "2026-10-26T15:08:10Z",
+      "title": "‘Permitting Reform’ Is a Giveaway to Data Centers and Fossil Fuels",
+      "title_ja": "「許可改革」はデータセンターと化石燃料への配慮",
+      "summary_ja": "米国上院ではインフラプロジェクトの環境許可を緩和する法案が審議されている。この法案は、データセンターや化石燃料業界に有利に働き、これらの産業の拡大による影響を受ける地域社会の意見を抑え込むものと批判されている。環境への配慮が不十分な結果、地域住民に悪影響を及ぼす可能性がある。",
+      "key_points": [
+        "米国上院が環境許可緩和法案を審議中",
+        "法案はデータセンターと化石燃料業界に特権を与える",
+        "地域社会の声を無視する可能性がある",
+        "環境への影響が懸念される"
+      ],
+      "glossary": [
+        {
+          "term": "Permitting Reform",
+          "explain_ja": "インフラプロジェクトの環境許可を緩和するための法案。"
+        },
+        {
+          "term": "Data Centers",
+          "explain_ja": "デジタルデータを保管・管理する施設。"
+        }
+      ],
+      "personal_actions": [
+        "地域の環境影響に関する意見を確認する",
+        "法案の進捗をフォローする",
+        "地域社会との連携を強化する"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
