@@ -1,117 +1,116 @@
 {
-  "date": "2026-10-31",
-  "generatedAtJST": "2026-10-31T07:15:35.225+09:00",
+  "date": "2026-11-01",
+  "generatedAtJST": "2026-11-01T07:15:19.556+09:00",
   "items": [
     {
-      "url": "https://www.tomshardware.com/pc-components/cpus/intel-confirms-nova-lake-will-use-advanced-18a-p-node-more-details-at-ces-company-says-its-taking-panther-lake-capacity-offline-to-build-more-granite-rapids-data-center-cpus",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-10-29T21:55:48Z",
-      "title": "Intel confirms Nova Lake will use advanced 18A-P node, more details at CES — company says it's taking Panther Lake capacity offline to build more Granite Rapids data center CPUs",
-      "title_ja": "インテル、ノヴァレイクが先進の18A-Pノードを使用することを確認",
-      "summary_ja": "インテルは、ノヴァレイクデスクトッププロセッサが初めて18A-Pノードを使用することを発表しました。これは、CEOのリップ・ブー・タンが2026年第3四半期の決算発表で確認したものです。この結果、インテルはパンサー湖の生産能力をオフラインにし、より多くのグラニット・ラピッズデータセンター用CPUを生産する計画です。",
+      "url": "https://www.rawstory.com/rick-perry-2678175996/",
+      "source": "Raw Story",
+      "publishedAt": "2026-10-30T21:28:57Z",
+      "title": "Ex-Trump cabinet member dumped by his own shareholders as fortune craters",
+      "title_ja": "元トランプ内閣メンバー、株主に見放され財産が急落",
+      "summary_ja": "元テキサス州知事のリック・ペリーが共同設立した大規模な電力とデータセンター会社Fermiの取締役に再選されなかった。この決定は、金曜日に行われた年次総会の投票記録から明らかになった。彼の経済的な見通しは急激に悪化している。",
       "key_points": [
-        "ノヴァレイクは新しい18A-Pノードを使用する初のクライアント製品。",
-        "CEOのリップ・ブー・タンが確認した情報。",
-        "パンサー湖の生産をオフラインにする計画。",
-        "より多くのグラニット・ラピッズデータセンター用CPUを優先的に製造。"
+        "リック・ペリーがFermiの取締役に再選されなかった",
+        "年次総会での株主の投票が影響",
+        "Fermiは計画中の電力とデータセンター会社",
+        "ペリーの財産が急落していることが報告された"
       ],
       "glossary": [
         {
-          "term": "ノヴァレイク",
-          "explain_ja": "インテルの次世代デスクトッププロセッサシリーズ。"
+          "term": "Fermi",
+          "explain_ja": "リック・ペリーが共同設立した電力とデータセンター会社。"
         },
         {
-          "term": "18A-Pノード",
-          "explain_ja": "インテルの先進的なプロセス技術。"
+          "term": "テキサス州知事",
+          "explain_ja": "リック・ペリーが務めた州の最高責任者。"
         },
         {
-          "term": "パンサー湖",
-          "explain_ja": "インテルの製品ラインで、特定のプロセッサを指す。"
-        },
-        {
-          "term": "グラニット・ラピッズ",
-          "explain_ja": "データセンター向けのインテル製プロセッサシリーズ。"
+          "term": "株主",
+          "explain_ja": "会社の株式を保有している個人または法人。"
         }
       ],
       "personal_actions": [
-        "ノヴァレイクおよびグラニット・ラピッズに関連する最新情報を定期的にチェックする。",
-        "パンサー湖の生産オフラインの影響を評価するために、プロジェクト計画を見直す。",
-        "データセンターのCPUニーズを再評価し、将来の要件に備える。"
+        "取締役会の構成や方針が変わることで影響を受ける可能性があるため、関係株式を見直す。",
+        "Fermiに関連する最新のニュースを定期的にチェックする。",
+        "企業の財務状況を把握し、株主としての判断材料を増やす。"
+      ],
+      "tags": [
+        "その他"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/anthropic-talks-lease-data-center-edmonton/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-30T18:42:07Z",
+      "title": "Anthropic in talks to lease hyperscale data center campus near Edmonton",
+      "title_ja": "Anthropic、エドモントン近郊のハイパースケールデータセンター賃貸交渉中",
+      "summary_ja": "Anthropicがエドモントン北東にあるハイパースケールデータセンターキャンパスの賃貸交渉を行っています。この動きは、ノバスコシア州での最初のデータセンター賃貸契約の発表に続いています。もし契約が締結されれば、アルバータ州は同社の計算能力をホストする2番目のカナダの州となります。",
+      "key_points": [
+        "Anthropicはエドモントン近郊のデータセンター賃貸交渉中。",
+        "ノバスコシア州で初のデータセンター賃貸契約を締結済み（2026年10月16日発表）。",
+        "ノバスコシアの施設は2027年末に運用開始、初期能力は95MW。未来の拡張で最大420MWを目指す。",
+        "アルバータ州でも同様の大規模計算能力拡張の動向。",
+        "Anthropicのインフラ投資は過去1年間で73.3億ドルに増加。"
+      ],
+      "glossary": [
+        {
+          "term": "ハイパースケールデータセンター",
+          "explain_ja": "大規模なデータ処理能力を持つデータセンターで、大量のサーバーを運用するためのインフラを備えている。"
+        },
+        {
+          "term": "MW (メガワット)",
+          "explain_ja": "電力の単位で、1MWは1,000キロワットに相当する。"
+        },
+        {
+          "term": "IPO (新規株式公開)",
+          "explain_ja": "企業が初めて株式を公開市場で販売するプロセス。"
+        }
+      ],
+      "personal_actions": [
+        "新しいデータセンターの賃貸契約が結ばれるか動向を注視。",
+        "関連する地域での雇用機会を探るため、地域の求人人材をチェック。",
+        "同様のハイパースケールデータセンターに関する業界ニュースを定期的にフォロー。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.npr.org/2026/10/29/nx-s1-6022239/who-benefits-when-massive-ai-data-centers-come-to-town",
-      "source": "NPR",
-      "publishedAt": "2026-10-29T18:42:48Z",
-      "title": "Who benefits when massive AI data centers come to town?",
-      "title_ja": "大規模AIデータセンターが街に来ると、誰が利益を得るのか？",
-      "summary_ja": "中間選挙を迎え、バージニア州からカンザス州にかけてAIを支えるデータセンターの建設に対する争いが激化している。地域社会では、これらの大規模施設の制限または禁止を問う投票が行われている。政治的立場を超えたこの問題は、各地で重要な論点となっている。",
+      "url": "https://www.tomshardware.com/tech-industry/data-centers/criminal-investigation-launched-into-googles-ai-data-center-deforestation-in-finland-local-police-act-over-multiple-complaints-about-breaches-of-environmental-law",
+      "source": "Tom's Hardware UK",
+      "publishedAt": "2026-10-30T10:40:00Z",
+      "title": "Google hit with criminal probe over unapproved AI data center deforestation — 816 acres of forest destroyed in Finland as wolves flee into local villages, facility threatens 40% power bill hikes",
+      "title_ja": "GoogleがフィンランドでのAIデータセンターによる森林破壊で刑事捜査を受ける",
+      "summary_ja": "フィンランドにおけるGoogleの子会社による環境被害について、刑事捜査が開始された。816エーカーの森林が伐採され、地元の村にオオカミが出現する事態が発生している。この施設により、電気料金が最大40%上昇する可能性がある。",
       "key_points": [
-        "大規模AIデータセンターの建設が進んでいる。",
-        "地域住民が制限や禁止のための投票を行っている。",
-        "この問題は党派を超えた争いになっている。"
+        "Googleのフィンランド子会社による森林破壊が問題視されている。",
+        "816エーカーの森林が伐採された。",
+        "地域住民に対する影響としてオオカミが村に出没している。",
+        "データセンター建設に対する環境法違反の苦情が複数提出された。",
+        "将来的に電気料金が40%上昇する可能性がある。"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データの保存、処理、管理を行う施設。"
+          "term": "環境法",
+          "explain_ja": "環境を保護するための法律や規制。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略称で、機械が人間のように学習し、思考する能力を持つ技術。"
+          "term": "データセンター",
+          "explain_ja": "データを保存し管理するための施設。"
+        },
+        {
+          "term": "刑事捜査",
+          "explain_ja": "犯罪の調査を行うための法的手続き。"
         }
       ],
       "personal_actions": [
-        "自分の地域でのデータセンターの建設計画について調査する。",
-        "地域社会での公聴会や議論に参加して意見を表明する。"
+        "地元の環境保護団体に参加して、影響を受けた地域の状況を確認する。",
+        "最新の法律や規則に関する情報を収集し、遵守を促す。",
+        "データセンターの建設予定地周辺の環境影響を評価する。"
       ],
       "tags": [
         "DC",
         "AI"
-      ]
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/compute/unlocking-full-stack-observability-for-aws-outposts/",
-      "source": "Amazon.com",
-      "publishedAt": "2026-10-29T18:23:18Z",
-      "title": "Unlocking full-stack observability for AWS Outposts",
-      "title_ja": "AWS Outpostsにおけるフルスタックの可観測性の解放",
-      "summary_ja": "AWS Outpostsでのエンドツーエンドの可観測性を構築する方法が紹介されています。この記事では、ネットワーク、ストレージ、コンピュート、コンテナの4つの側面を通じて、AWS Systems Manager、Amazon CloudWatch、Amazon EventBridgeを使用した統一的な可視性と自動化されたインシデント対応について説明しています。これにより、システムの可観測性が向上し、運用管理が容易になります。",
-      "key_points": [
-        "AWS Outpostsでのエンドツーエンドの可観測性の構築方法",
-        "4つの主要な側面: ネットワーク、ストレージ、コンピュート、コンテナ",
-        "AWS Systems Manager、Amazon CloudWatch、Amazon EventBridgeの活用",
-        "統一的な可視性と自動化されたインシデント対応の実現",
-        "運用管理の効率化"
-      ],
-      "glossary": [
-        {
-          "term": "AWS Outposts",
-          "explain_ja": "AWSのクラウドサービスをオンプレミスに拡張するハードウェアソリューション。"
-        },
-        {
-          "term": "Amazon CloudWatch",
-          "explain_ja": "AWSリソースとアプリケーションの監視サービス。"
-        },
-        {
-          "term": "AWS Systems Manager",
-          "explain_ja": "AWSリソースの運用を自動化するための管理ツール。"
-        },
-        {
-          "term": "Amazon EventBridge",
-          "explain_ja": "アプリケーション間のイベント通信を管理するサービス。"
-        }
-      ],
-      "personal_actions": [
-        "AWSリソースの現在の可観測性の評価を行う",
-        "フルスタックの可観測性に必要なツールセットの導入を検討する",
-        "統一されたモニタリングシステムの設定を行う"
-      ],
-      "tags": [
-        "インフラ"
       ]
     }
   ]
