@@ -1,112 +1,108 @@
 {
-  "date": "2026-11-01",
-  "generatedAtJST": "2026-11-01T07:15:19.556+09:00",
+  "date": "2026-11-02",
+  "generatedAtJST": "2026-11-02T07:15:20.120+09:00",
   "items": [
     {
-      "url": "https://www.rawstory.com/rick-perry-2678175996/",
-      "source": "Raw Story",
-      "publishedAt": "2026-10-30T21:28:57Z",
-      "title": "Ex-Trump cabinet member dumped by his own shareholders as fortune craters",
-      "title_ja": "元トランプ内閣メンバー、株主に見放され財産が急落",
-      "summary_ja": "元テキサス州知事のリック・ペリーが共同設立した大規模な電力とデータセンター会社Fermiの取締役に再選されなかった。この決定は、金曜日に行われた年次総会の投票記録から明らかになった。彼の経済的な見通しは急激に悪化している。",
+      "url": "https://www.cnbc.com/2026/10/31/xai-naacp-clean-air-act-lawsuit-dismissal.html",
+      "source": "CNBC",
+      "publishedAt": "2026-10-31T18:56:37Z",
+      "title": "SpaceX loses bid to toss NAACP lawsuit over Memphis data center air pollution",
+      "title_ja": "SpaceX、メンフィスのデータセンターの大気汚染に関するNAACP訴訟の棄却を試みるも敗北",
+      "summary_ja": "SpaceXは、メンフィスにおけるデータセンターの大気汚染に関してNAACPによる訴訟を棄却する試みを失敗した。南ハバナ、ミシシッピ州に建設中のColossusデータセンターや発電所は、数年間にわたり地域社会からの反発に直面している。この訴訟は、地域住民の健康や環境に与える影響を巡る重要なものとして注目されている。",
       "key_points": [
-        "リック・ペリーがFermiの取締役に再選されなかった",
-        "年次総会での株主の投票が影響",
-        "Fermiは計画中の電力とデータセンター会社",
-        "ペリーの財産が急落していることが報告された"
+        "SpaceXはNAACPから訴訟を受けている。",
+        "訴訟の対象はメンフィスのデータセンターによる大気汚染。",
+        "Colossusデータセンターと発電所は南ハバナに建設中。",
+        "地域社会からの長年の反発に直面している。",
+        "訴訟は地域住民の健康への影響に関連している。"
       ],
       "glossary": [
         {
-          "term": "Fermi",
-          "explain_ja": "リック・ペリーが共同設立した電力とデータセンター会社。"
+          "term": "NAACP",
+          "explain_ja": "全米黒人地位向上協会で、人種差別との闘いを目指す組織。"
         },
         {
-          "term": "テキサス州知事",
-          "explain_ja": "リック・ペリーが務めた州の最高責任者。"
+          "term": "Colossusデータセンター",
+          "explain_ja": "SpaceXが建設中のデータセンターで、環境への影響が問題視されている。"
         },
         {
-          "term": "株主",
-          "explain_ja": "会社の株式を保有している個人または法人。"
+          "term": "大気汚染",
+          "explain_ja": "空気中に有害物質が存在する状態で、健康に悪影響を与える。"
         }
       ],
       "personal_actions": [
-        "取締役会の構成や方針が変わることで影響を受ける可能性があるため、関係株式を見直す。",
-        "Fermiに関連する最新のニュースを定期的にチェックする。",
-        "企業の財務状況を把握し、株主としての判断材料を増やす。"
-      ],
-      "tags": [
-        "その他"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/anthropic-talks-lease-data-center-edmonton/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-10-30T18:42:07Z",
-      "title": "Anthropic in talks to lease hyperscale data center campus near Edmonton",
-      "title_ja": "Anthropic、エドモントン近郊のハイパースケールデータセンター賃貸交渉中",
-      "summary_ja": "Anthropicがエドモントン北東にあるハイパースケールデータセンターキャンパスの賃貸交渉を行っています。この動きは、ノバスコシア州での最初のデータセンター賃貸契約の発表に続いています。もし契約が締結されれば、アルバータ州は同社の計算能力をホストする2番目のカナダの州となります。",
-      "key_points": [
-        "Anthropicはエドモントン近郊のデータセンター賃貸交渉中。",
-        "ノバスコシア州で初のデータセンター賃貸契約を締結済み（2026年10月16日発表）。",
-        "ノバスコシアの施設は2027年末に運用開始、初期能力は95MW。未来の拡張で最大420MWを目指す。",
-        "アルバータ州でも同様の大規模計算能力拡張の動向。",
-        "Anthropicのインフラ投資は過去1年間で73.3億ドルに増加。"
-      ],
-      "glossary": [
-        {
-          "term": "ハイパースケールデータセンター",
-          "explain_ja": "大規模なデータ処理能力を持つデータセンターで、大量のサーバーを運用するためのインフラを備えている。"
-        },
-        {
-          "term": "MW (メガワット)",
-          "explain_ja": "電力の単位で、1MWは1,000キロワットに相当する。"
-        },
-        {
-          "term": "IPO (新規株式公開)",
-          "explain_ja": "企業が初めて株式を公開市場で販売するプロセス。"
-        }
-      ],
-      "personal_actions": [
-        "新しいデータセンターの賃貸契約が結ばれるか動向を注視。",
-        "関連する地域での雇用機会を探るため、地域の求人人材をチェック。",
-        "同様のハイパースケールデータセンターに関する業界ニュースを定期的にフォロー。"
+        "周囲の環境への影響を確認するため、データセンターの運用状況を把握する。",
+        "大気汚染に関する地域のニュースや情報をチェックする。",
+        "地域での環境対策や住民の取り組みに参加する。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://www.tomshardware.com/tech-industry/data-centers/criminal-investigation-launched-into-googles-ai-data-center-deforestation-in-finland-local-police-act-over-multiple-complaints-about-breaches-of-environmental-law",
-      "source": "Tom's Hardware UK",
-      "publishedAt": "2026-10-30T10:40:00Z",
-      "title": "Google hit with criminal probe over unapproved AI data center deforestation — 816 acres of forest destroyed in Finland as wolves flee into local villages, facility threatens 40% power bill hikes",
-      "title_ja": "GoogleがフィンランドでのAIデータセンターによる森林破壊で刑事捜査を受ける",
-      "summary_ja": "フィンランドにおけるGoogleの子会社による環境被害について、刑事捜査が開始された。816エーカーの森林が伐採され、地元の村にオオカミが出現する事態が発生している。この施設により、電気料金が最大40%上昇する可能性がある。",
+      "url": "https://oilprice.com/Energy/Energy-General/DARPA-Backs-Project-to-Measure-AI-Energy-Use-at-Every-Stage-of-the-Workflow.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-10-31T17:00:00Z",
+      "title": "DARPA Backs Project to Measure AI Energy Use at Every Stage of the Workflow",
+      "title_ja": "DARPA、AIワークフローのエネルギー使用を測定するプロジェクトを支援",
+      "summary_ja": "DARPAがAIのエネルギー消費をワークフローの各段階で測定するプロジェクトを支援しています。AIの急成長がエネルギー消費の急増を招いており、特にデータセンターに対する圧力が高まっています。このプロジェクトにより、エネルギー効率の向上と持続可能な技術の開発が期待されています。",
       "key_points": [
-        "Googleのフィンランド子会社による森林破壊が問題視されている。",
-        "816エーカーの森林が伐採された。",
-        "地域住民に対する影響としてオオカミが村に出没している。",
-        "データセンター建設に対する環境法違反の苦情が複数提出された。",
-        "将来的に電気料金が40%上昇する可能性がある。"
+        "DARPAがAIのエネルギー使用の測定プロジェクトを支援",
+        "AIの急成長によるエネルギー消費の増加が問題視されている",
+        "データセンターのエネルギー効率向上につながることが期待される",
+        "プロジェクトはワークフローの各段階を対象としている",
+        "持続可能な技術開発の促進が目指されている"
       ],
       "glossary": [
         {
-          "term": "環境法",
-          "explain_ja": "環境を保護するための法律や規制。"
+          "term": "DARPA",
+          "explain_ja": "アメリカ国防高等研究計画局（DARPA）は、軍事技術の研究開発を行う機関。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存し管理するための施設。"
+          "term": "AI",
+          "explain_ja": "人工知能（AI）は、コンピュータが人間の知能を模倣する技術。"
         },
         {
-          "term": "刑事捜査",
-          "explain_ja": "犯罪の調査を行うための法的手続き。"
+          "term": "エネルギー効率",
+          "explain_ja": "エネルギーを使用する際の効率の良さを示す指標。"
         }
       ],
       "personal_actions": [
-        "地元の環境保護団体に参加して、影響を受けた地域の状況を確認する。",
-        "最新の法律や規則に関する情報を収集し、遵守を促す。",
-        "データセンターの建設予定地周辺の環境影響を評価する。"
+        "現在のAIシステムのエネルギー消費を評価する",
+        "データセンターのエネルギー管理手法を見直す",
+        "持続可能な技術の導入を検討する"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/google-explores-demand-response-programs-to-manage-ai-data-center-power-needs/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-10-31T13:32:01Z",
+      "title": "Google explores demand-response programs to manage AI data center power needs",
+      "title_ja": "Google、AIデータセンターの電力需要管理のための需給応答プログラムを検討",
+      "summary_ja": "Googleは、AIデータセンターの増加する電力需要を管理するために需給応答プログラムを検討しています。2025年には電力消費が37%増加し、新たな発電に依存せず、ピーク電力需要を扱う戦略に焦点を当てています。このアプローチでは、高需給時に機械学習の負荷を移動または削減することを含み、約1ギガワットの需給応答容量を確保したことも示唆されています。",
+      "key_points": [
+        "GoogleはAIデータセンターの電力ニーズ管理に向けた需給応答プログラムを検討中。",
+        "2025年の電力消費が37%増加しており、ピーク需要管理に焦点を当てている。",
+        "高需給時に機械学習の負荷を調整する戦略を採用。",
+        "約1ギガワットの需給応答容量を確保し、データセンター運営のエネルギー管理を適応的に進めている。",
+        "ルイジアナ州でのデータセンターのモラトリアム施行の可能性が減少するかもしれない。"
+      ],
+      "glossary": [
+        {
+          "term": "需給応答プログラム",
+          "explain_ja": "電力の需要と供給の調整を行うプログラムで、ピーク時の消費を抑えるために負荷のシフトを行う。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データを収集、保存、管理、処理するための施設で、ビジネスやサービスの基盤となる。"
+        }
+      ],
+      "personal_actions": [
+        "地元の電力会社が提供する需給応答プログラムについて確認する。",
+        "AIデータセンターがある地域の電力供給状況を把握する。"
       ],
       "tags": [
         "DC",
