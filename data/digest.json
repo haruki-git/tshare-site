@@ -1,37 +1,39 @@
 {
-  "date": "2026-11-05",
-  "generatedAtJST": "2026-11-05T07:15:26.152+09:00",
+  "date": "2026-11-06",
+  "generatedAtJST": "2026-11-06T07:15:25.108+09:00",
   "items": [
     {
-      "url": "https://dailycaller.com/2026/11/03/elon-musk-xai-jet-engines-proenergy-southaven-colossus-2-data-center-power-plant",
-      "source": "The Daily Caller",
-      "publishedAt": "2026-11-03T20:45:50Z",
-      "title": "Elon Musk’s AI Company Installs Converted Jet Engines To Help Power Its Memphis Data Center",
-      "title_ja": "エロン・マスクのAI企業、メンフィスのデータセンターに改造したジェットエンジンを導入",
-      "summary_ja": "エロン・マスクのAI企業xAIは、メンフィスのデータセンターに改造したジェットエンジンを使用することを決定しました。これは、テクノロジー企業が自らの電力供給を確保するために競争が激化している背景があります。この新たな取り組みは、データセンターの電力需要に対応する革新的な解決策とされています。",
+      "url": "https://www.techradar.com/pro/building-new-data-centers-across-the-us-could-wipe-out-the-last-15-years-of-greenhouse-gas-progress",
+      "source": "TechRadar",
+      "publishedAt": "2026-11-04T22:10:00Z",
+      "title": "Experts warn building new data centers across the US could wipe out the last 15 years of greenhouse gas progress",
+      "title_ja": "新しいデータセンターの建設がアメリカの温室効果ガス削減の成果を脅かす可能性",
+      "summary_ja": "専門家は、アメリカ全土での新しいデータセンターの建設が、過去15年間の温室効果ガス削減の成果を無に帰す可能性があると警告しています。AIデータセンターの拡張により、2030年までに排出されるCO2はメキシコ全体に相当すると予測されています。また、天然ガスタービンのバックログは2032年まで続くとされています。これにより、環境への影響が懸念されます。",
       "key_points": [
-        "xAIが改造したジェットエンジンをメンフィスデータセンターに設置",
-        "テクノロジー業界で自家発電が求められる状況",
-        "電力供給の問題に対する新しいアプローチ"
+        "新しいデータセンターの建設が温室効果ガス削減の成果を脅かす。",
+        "AIデータセンターの拡張で、2030年にはメキシコ並みのCO2排出が予想される。",
+        "天然ガスタービンの供給に対する需要が高く、バックログは2032年まで続く。",
+        "環境への懸念が高まる中でのデータセンター開発の進行。",
+        "持続可能なエネルギーソリューションの模索が求められる。"
       ],
       "glossary": [
         {
-          "term": "xAI",
-          "explain_ja": "エロン・マスクが設立した人工知能企業。"
+          "term": "CO2",
+          "explain_ja": "二酸化炭素。主に化石燃料の燃焼によって排出される温室効果ガスの一種。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データ処理と保管のための施設。"
+          "explain_ja": "サーバーが設置されている施設で、データの保存や処理を行う。"
         },
         {
-          "term": "ジェットエンジン",
-          "explain_ja": "航空機に使用される動力装置。"
+          "term": "天然ガスタービン",
+          "explain_ja": "天然ガスを燃料として発電するタービンのこと。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力供給についての最新情報を収集する",
-        "自身の施設での電力効率を見直す",
-        "技術革新がもたらす影響を把握する"
+        "データセンターの稼働状況と環境影響について、最新の情報を確認する。",
+        "持続可能なエネルギー使用に関する社内ポリシーを見直す。",
+        "新拠点開設時の環境影響評価を実施する。"
       ],
       "tags": [
         "DC",
@@ -39,41 +41,37 @@
       ]
     },
     {
-      "url": "https://research.nvidia.com/publication/2026-11_pare-power-and-area-efficient-memory-controller-high-bandwidth-dram",
-      "source": "Nvidia.com",
-      "publishedAt": "2026-11-03T20:00:46Z",
-      "title": "PARE: A Power and Area-Efficient Memory Controller for High-Bandwidth DRAM",
-      "title_ja": "PARE: 高帯域幅DRAM向けの省電力・省面積メモリコントローラ",
-      "summary_ja": "高スループットのプロセッサは、高帯域幅DRAMに依存しており、現代のGPUメモリコントローラはリクエストのソートを行うことでバンド幅の利用効率を最大化しています。しかし、MLやHPCワークロードの変化により、従来の深いソート設計の利点が薄れてきています。本研究では、PAREと呼ばれる新しいメモリコントローラを提案し、エネルギー効率を大幅に改善しつつ、性能を維持する方法を示しています。",
+      "url": "https://cryptobriefing.com/arm-holdings-hyperscaler-server-share/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-11-04T21:24:01Z",
+      "title": "Arm Holdings says its chips now power over half of hyperscaler servers",
+      "title_ja": "Arm Holdings、ハイパースケーラーサーバーの半数以上をパワーアップ",
+      "summary_ja": "Arm Holdingsは、同社のチップが世界の大手クラウドサービスプロバイダーのサーバーの半数以上を動かしていると報告しました。2024年には15%であったシェアが急増し、2026年末には60%を超えると見込まれています。この成長は主にAWS、Google Cloud、Microsoft Azureなどの大手クラウドインフラからの需要によるもので、AIや一般的な処理負荷に対応可能です。",
       "key_points": [
-        "PAREは、従来のソートメモリコントローラのROW-awareトランザクションソートを完全に排除しています。",
-        "MS-PAREは、狭いROW-hitチェックを維持し、バンド幅感度の高いカーネルの損失を回避します。",
-        "従来のソートコントローラと比較して、MS-PAREは面積を73.3%、エネルギーを55%削減しています。",
-        "PAREは、次世代GPUアーキテクチャで要求される極端なDRAM帯域幅をサポートしています。",
-        "高帯域幅スタック3D DRAMなどの新技術が従来のコントローラのオーバーヘッドを大きくしています。"
+        "Armのチップはハイパースケーラーサーバーの50%以上を占める。",
+        "シェアは2024年の15%から2026年末には60%を超える見込み。",
+        "AWSのGravitonプロセッサーは年々20倍の収益成長を記録。",
+        "Armのデータセンター関連のロイヤリティが前年同期比で倍増。",
+        "Armベースのサーバーはサーバー市場の収益の約45%を占める。"
       ],
       "glossary": [
         {
-          "term": "DRAM",
-          "explain_ja": "ダイナミックランダムアクセスメモリ。コンピュータメモリの一種。"
+          "term": "ハイパースケーラー",
+          "explain_ja": "大量のデータ処理を行う大手クラウドサービスプロバイダーを指す。"
         },
         {
-          "term": "GPU",
-          "explain_ja": "グラフィックスプロセッシングユニット。主に画像処理を行うプロセッサ。"
+          "term": "Armベースのチップ",
+          "explain_ja": "Armアーキテクチャに基づくプロセッサで、特に効率性に優れている。"
         },
         {
-          "term": "ML",
-          "explain_ja": "機械学習。データから学ぶアルゴリズムの一分野。"
-        },
-        {
-          "term": "HPC",
-          "explain_ja": "高性能計算。大量の計算を短時間で処理するための技術。"
+          "term": "Gravitonプロセッサー",
+          "explain_ja": "AWSが開発したArmベースのカスタムチップ。"
         }
       ],
       "personal_actions": [
-        "新しいメモリコントローラ技術に関する最新情報を追跡する。",
-        "GPUアーキテクチャの進化に合わせたテストを行う。",
-        "エネルギー効率向上のための既存システムの見直しを行う。"
+        "自社のサーバーインフラにおけるArmベースの技術導入を検討する。",
+        "AI処理負荷に対する最適なプロセッサ選定を見直す。",
+        "クラウドサービスプロバイダーの提供するArm技術の最新情報をチェックする。"
       ],
       "tags": [
         "DC",
@@ -81,40 +79,38 @@
       ]
     },
     {
-      "url": "https://hardware.slashdot.org/story/26/11/03/190206/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-11-03T19:01:00Z",
-      "title": "Fujifilm To Boost Tape Production 5x As AI Fuels Archiving Demand - Slashdot",
-      "title_ja": "富士フィルム、AI需要の急増に応じてテープ生産を5倍増加へ",
-      "summary_ja": "富士フィルムは、AIの普及によるアーカイブ需要の急増を受け、約10億円を投資してテープ生産能力を5倍に増加させると発表した。この投資は神奈川県の小田原工場にて行われ、2026年から2028年にかけて新しい「FUJIFILM LTO Ultrium10」テープの生産に注力する。また、クラウドサービスやデータセンターにおいては、コスト効率の高い大容量ストレージとして磁気テープの利用が増加している。",
+      "url": "https://fortune.com/2026/11/04/voters-pull-the-plug-on-big-techs-data-center-boom/",
+      "source": "Fortune",
+      "publishedAt": "2026-11-04T21:18:36Z",
+      "title": "After the midterms, Big Tech’s AI data center problem is only getting bigger",
+      "title_ja": "中間選挙後のビッグテックのAIデータセンター問題が深刻化",
+      "summary_ja": "中間選挙の結果、米国の民主党候補が圧倒的な勝利を収め、ワシントンやデータセンターの中心地であるテキサス州の権力構造が大きく変わることが予想される。この新たな政治的環境はビッグテック企業のデータセンター運営に影響を及ぼす可能性がある。特にAI関連のインフラ整備や規制の面で課題が残る。",
       "key_points": [
-        "富士フィルムがテープ生産能力を5倍増加させると発表。",
-        "投資額は約10億円（約6300万ドル）。",
-        "神奈川県の小田原工場が主な生産拠点。",
-        "2026年から2028年にかけてプロジェクトが実施される。",
-        "磁気テープは、サイバー攻撃からの防御手段として注目を集めている。",
-        "クラウドサービス業者やデータセンターでの利用が拡大。"
+        "中間選挙で民主党が圧勝した",
+        "テキサス州などのデータセンターに影響が出る可能性",
+        "ビッグテックのAI関連インフラに対する規制が強化される可能性"
       ],
       "glossary": [
         {
-          "term": "LTO",
-          "explain_ja": "Linear Tape-Openの略で、データストレージ用のテープカートリッジ規格。"
+          "term": "データセンター",
+          "explain_ja": "データを集積・管理するための施設。"
         },
         {
-          "term": "FUJIFILM LTO Ultrium10",
-          "explain_ja": "富士フィルムの最新世代の磁気テープ。"
+          "term": "AI",
+          "explain_ja": "人工知能。データを活用して自動的に学習し、判断を行う技術。"
         },
         {
-          "term": "air-gap",
-          "explain_ja": "データストレージのセキュリティ手法の一つで、オフラインでデータを保存すること。"
+          "term": "中間選挙",
+          "explain_ja": "アメリカ合衆国における、2年ごとの国政選挙。"
         }
       ],
       "personal_actions": [
-        "データバックアップ戦略を見直し、テープ利用を検討する。",
-        "最新のLTOテープ技術についての情報収集を行う。",
-        "サイバーセキュリティ対策を強化し、データ保護の方針を確認する。"
+        "今後の政治的な動向を注視する",
+        "データセンターの運営方針に変更がないか確認する",
+        "新たな規制に準拠できるよう社内の体制を見直す"
       ],
       "tags": [
+        "DC",
         "AI"
       ]
     }
