@@ -1,117 +1,113 @@
 {
-  "date": "2026-11-06",
-  "generatedAtJST": "2026-11-06T07:15:25.108+09:00",
+  "date": "2026-11-07",
+  "generatedAtJST": "2026-11-07T07:15:28.669+09:00",
   "items": [
     {
-      "url": "https://www.techradar.com/pro/building-new-data-centers-across-the-us-could-wipe-out-the-last-15-years-of-greenhouse-gas-progress",
-      "source": "TechRadar",
-      "publishedAt": "2026-11-04T22:10:00Z",
-      "title": "Experts warn building new data centers across the US could wipe out the last 15 years of greenhouse gas progress",
-      "title_ja": "新しいデータセンターの建設がアメリカの温室効果ガス削減の成果を脅かす可能性",
-      "summary_ja": "専門家は、アメリカ全土での新しいデータセンターの建設が、過去15年間の温室効果ガス削減の成果を無に帰す可能性があると警告しています。AIデータセンターの拡張により、2030年までに排出されるCO2はメキシコ全体に相当すると予測されています。また、天然ガスタービンのバックログは2032年まで続くとされています。これにより、環境への影響が懸念されます。",
+      "url": "https://siliconangle.com/2026/11/05/locaweb-adjusts-data-center-capacity-planning-demand-grows-aifactoriesdatacenters/",
+      "source": "SiliconANGLE News",
+      "publishedAt": "2026-11-05T21:04:29Z",
+      "title": "Rising demand puts Locaweb’s data center strategy to the test",
+      "title_ja": "需要増加がLocawebのデータセンター戦略を試す",
+      "summary_ja": "Locawebは、顧客の需要に応えるためデータセンターのキャパシティ計画を見直しています。ハードウェア不足と増加する需要が、より早期のインフラ要求の予測と代替案の模索を迫っています。この変化により、同社は技術パートナーと密接に協力し、供給の課題を管理しながらサービスの機能を維持する方法を模索しています。",
       "key_points": [
-        "新しいデータセンターの建設が温室効果ガス削減の成果を脅かす。",
-        "AIデータセンターの拡張で、2030年にはメキシコ並みのCO2排出が予想される。",
-        "天然ガスタービンの供給に対する需要が高く、バックログは2032年まで続く。",
-        "環境への懸念が高まる中でのデータセンター開発の進行。",
-        "持続可能なエネルギーソリューションの模索が求められる。"
-      ],
-      "glossary": [
-        {
-          "term": "CO2",
-          "explain_ja": "二酸化炭素。主に化石燃料の燃焼によって排出される温室効果ガスの一種。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "サーバーが設置されている施設で、データの保存や処理を行う。"
-        },
-        {
-          "term": "天然ガスタービン",
-          "explain_ja": "天然ガスを燃料として発電するタービンのこと。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの稼働状況と環境影響について、最新の情報を確認する。",
-        "持続可能なエネルギー使用に関する社内ポリシーを見直す。",
-        "新拠点開設時の環境影響評価を実施する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/arm-holdings-hyperscaler-server-share/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-11-04T21:24:01Z",
-      "title": "Arm Holdings says its chips now power over half of hyperscaler servers",
-      "title_ja": "Arm Holdings、ハイパースケーラーサーバーの半数以上をパワーアップ",
-      "summary_ja": "Arm Holdingsは、同社のチップが世界の大手クラウドサービスプロバイダーのサーバーの半数以上を動かしていると報告しました。2024年には15%であったシェアが急増し、2026年末には60%を超えると見込まれています。この成長は主にAWS、Google Cloud、Microsoft Azureなどの大手クラウドインフラからの需要によるもので、AIや一般的な処理負荷に対応可能です。",
-      "key_points": [
-        "Armのチップはハイパースケーラーサーバーの50%以上を占める。",
-        "シェアは2024年の15%から2026年末には60%を超える見込み。",
-        "AWSのGravitonプロセッサーは年々20倍の収益成長を記録。",
-        "Armのデータセンター関連のロイヤリティが前年同期比で倍増。",
-        "Armベースのサーバーはサーバー市場の収益の約45%を占める。"
-      ],
-      "glossary": [
-        {
-          "term": "ハイパースケーラー",
-          "explain_ja": "大量のデータ処理を行う大手クラウドサービスプロバイダーを指す。"
-        },
-        {
-          "term": "Armベースのチップ",
-          "explain_ja": "Armアーキテクチャに基づくプロセッサで、特に効率性に優れている。"
-        },
-        {
-          "term": "Gravitonプロセッサー",
-          "explain_ja": "AWSが開発したArmベースのカスタムチップ。"
-        }
-      ],
-      "personal_actions": [
-        "自社のサーバーインフラにおけるArmベースの技術導入を検討する。",
-        "AI処理負荷に対する最適なプロセッサ選定を見直す。",
-        "クラウドサービスプロバイダーの提供するArm技術の最新情報をチェックする。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://fortune.com/2026/11/04/voters-pull-the-plug-on-big-techs-data-center-boom/",
-      "source": "Fortune",
-      "publishedAt": "2026-11-04T21:18:36Z",
-      "title": "After the midterms, Big Tech’s AI data center problem is only getting bigger",
-      "title_ja": "中間選挙後のビッグテックのAIデータセンター問題が深刻化",
-      "summary_ja": "中間選挙の結果、米国の民主党候補が圧倒的な勝利を収め、ワシントンやデータセンターの中心地であるテキサス州の権力構造が大きく変わることが予想される。この新たな政治的環境はビッグテック企業のデータセンター運営に影響を及ぼす可能性がある。特にAI関連のインフラ整備や規制の面で課題が残る。",
-      "key_points": [
-        "中間選挙で民主党が圧勝した",
-        "テキサス州などのデータセンターに影響が出る可能性",
-        "ビッグテックのAI関連インフラに対する規制が強化される可能性"
+        "需要の増加がデータセンター戦略に影響を与えている。",
+        "Locawebは、Dellと協力してハードウェアの代替構成を考察中。",
+        "キャパシティ計画の開始時期を早める必要がある。",
+        "インフラ決定がビジネスニーズに密接に関連してきている。",
+        "AI機能の導入がインフラ整備に新たな重要性をもたらしている。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを集積・管理するための施設。"
+          "explain_ja": "データを収容し、管理するための施設で、サーバー、ストレージ、ネットワーク機器を含む。"
+        },
+        {
+          "term": "キャパシティ計画",
+          "explain_ja": "必要なリソースを予測し、最適なインフラを構築するためのプロセス。"
         },
         {
           "term": "AI",
-          "explain_ja": "人工知能。データを活用して自動的に学習し、判断を行う技術。"
-        },
-        {
-          "term": "中間選挙",
-          "explain_ja": "アメリカ合衆国における、2年ごとの国政選挙。"
+          "explain_ja": "人工知能の略で、機械が知性を持って学習や判断を行う技術を指す。"
         }
       ],
       "personal_actions": [
-        "今後の政治的な動向を注視する",
-        "データセンターの運営方針に変更がないか確認する",
-        "新たな規制に準拠できるよう社内の体制を見直す"
+        "データセンターのキャパシティ計画に関して、パートナー企業やエンジニアと情報を共有する。",
+        "供給業者との連携をさらに強化し、リソースの確保を図る。",
+        "インフラの要件を見直し、柔軟なサプライチェーン戦略を策定する。"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://www.channelnewsasia.com/business/google-plans-17-billion-wyoming-data-center-amid-rising-threats-curbs-6529006",
+      "source": "CNA",
+      "publishedAt": "2026-11-05T20:47:30Z",
+      "title": "Google plans $17 billion Wyoming data center amid rising threats of curbs",
+      "title_ja": "米国ワイオミング州における170億ドルのデータセンター建設を発表したGoogle",
+      "summary_ja": "Googleは、ワイオミング州に170億ドルを投資して初のデータセンターを建設する計画を発表した。これは、米国の中間選挙後にデータセンター拡張に対する政治的抵抗が高まる中での主なAIインフラ投資の一環である。今後、この投資が地域経済に与える影響や、AI技術の進展に寄与することが期待される。",
+      "key_points": [
+        "Googleがワイオミング州に170億ドルを投資してデータセンターを建設予定",
+        "これはGoogleの初のデータセンターである",
+        "建設計画は政治的抵抗の高まりの中で進行中",
+        "AIインフラへの重要な投資と位置付けられる",
+        "米国中間選挙後の政治的環境が影響している"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "デジタルデータを保存・管理するための施設。"
+        },
+        {
+          "term": "AI (人工知能)",
+          "explain_ja": "人間の知的活動を模倣する技術やシステム。"
+        },
+        {
+          "term": "アルファベット",
+          "explain_ja": "Googleの親会社。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターに関する地域の政策や計画を確認する",
+        "AI技術に関する最新動向をウォッチする",
+        "データインフラへの投資が地域に与える影響を考える"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.commondreams.org/news/schumer-data-center-protest",
+      "source": "Common Dreams",
+      "publishedAt": "2026-11-05T20:47:00Z",
+      "title": "'No Blank Checks for Big Tech': Schumer Faces Protest Over 'Dirty Data Center Deal'",
+      "title_ja": "シューマー上院議員が反対運動に直面：『ビッグテックに空白小切手は渡さない』",
+      "summary_ja": "ニューヨーク州のシューマー上院議員が提案されたデータセンター関連の法案を巡り抗議を受けています。抗議者たちはこの法案を「不正なデータセンターディール」と呼び、シューマーにブロックを求めています。この動きは、ビッグテックへの過剰な利益供与に対する懸念を反映しています。",
+      "key_points": [
+        "シューマー上院議員の自宅前で抗議が計画されている。",
+        "抗議者たちは法案を「dirty data center deal」と呼んでいる。",
+        "法案はバイパーティザンによるアメリカの手頃な生活費を目的としたもの。",
+        "ビッグテック企業への恩恵に対する不満が背景にある。",
+        "抗議活動は金曜日の朝に行われる予定。"
+      ],
+      "glossary": [
+        {
+          "term": "Bipartisan American Affordability",
+          "explain_ja": "両党に支持されているアメリカの生活費を安くするための法案。"
+        },
+        {
+          "term": "Dirty Data Center Deal",
+          "explain_ja": "抗議者たちが呼ぶ、環境や社会に悪影響のあるデータセンターに関連する法案。"
+        }
+      ],
+      "personal_actions": [
+        "地元の議員の立場や発言をチェックする。",
+        "データセンターに関する地域の計画を確認する。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
