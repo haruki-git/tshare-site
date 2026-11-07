@@ -1,113 +1,111 @@
 {
-  "date": "2026-11-07",
-  "generatedAtJST": "2026-11-07T07:15:28.669+09:00",
+  "date": "2026-11-08",
+  "generatedAtJST": "2026-11-08T07:15:36.650+09:00",
   "items": [
     {
-      "url": "https://siliconangle.com/2026/11/05/locaweb-adjusts-data-center-capacity-planning-demand-grows-aifactoriesdatacenters/",
-      "source": "SiliconANGLE News",
-      "publishedAt": "2026-11-05T21:04:29Z",
-      "title": "Rising demand puts Locaweb’s data center strategy to the test",
-      "title_ja": "需要増加がLocawebのデータセンター戦略を試す",
-      "summary_ja": "Locawebは、顧客の需要に応えるためデータセンターのキャパシティ計画を見直しています。ハードウェア不足と増加する需要が、より早期のインフラ要求の予測と代替案の模索を迫っています。この変化により、同社は技術パートナーと密接に協力し、供給の課題を管理しながらサービスの機能を維持する方法を模索しています。",
+      "url": "https://news.slashdot.org/story/26/11/06/211208/activists-breach-microsoft-data-center-construction-site-as-protests-spread-in-europe",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-11-06T22:00:00Z",
+      "title": "Activists Breach Microsoft Data Center Construction Site As Protests Spread In Europe - Slashdot",
+      "title_ja": "欧州での抗議活動が広がる中、アムステルダムのマイクロソフトデータセンター建設現場に活動家が侵入",
+      "summary_ja": "アムステルダムで100人以上の活動家がマイクロソフトのAIデータセンター建設現場に侵入し、AIインフラの急速な拡大に抗議した。抗議者たちは、これらのデータセンターが環境に与える影響を訴え、同様の抗議活動が16か国で計画されている。データセンターのオーナーは、地域の関係者との対話を求めているが、抗議団体は大規模な建設の中止を求めている。",
       "key_points": [
-        "需要の増加がデータセンター戦略に影響を与えている。",
-        "Locawebは、Dellと協力してハードウェアの代替構成を考察中。",
-        "キャパシティ計画の開始時期を早める必要がある。",
-        "インフラ決定がビジネスニーズに密接に関連してきている。",
-        "AI機能の導入がインフラ整備に新たな重要性をもたらしている。"
+        "100人以上の活動家がアムステルダムのマイクロソフトデータセンター建設現場に侵入",
+        "抗議団体は環境保護やデジタル権利を訴え、16か国で行動を計画中",
+        "データセンターのオーナーは地域との対話を求めている",
+        "抗議者たちは「データセンターをやめろ」というメッセージを掲示し、現場でパフォーマンスを実施",
+        "団体は政府に対し、明確なルールを策定するよう求めている"
+      ],
+      "glossary": [
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能を支えるために設計されたデータセンターで、膨大な計算リソースを必要とする。"
+        },
+        {
+          "term": "Stop Dirty Data Centers",
+          "explain_ja": "データセンターの環境への影響に反対する活動家団体で、抗議活動を通じて意見を訴えている。"
+        }
+      ],
+      "personal_actions": [
+        "地域のデータセンター建設計画に関する情報を確認する",
+        "環境保護団体の活動に参加する",
+        "自社内でデータセンター利用の効率化について話し合う"
+      ],
+      "tags": [
+        "DC",
+        "セキュリティ"
+      ]
+    },
+    {
+      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
+      "source": "Crusoe.ai",
+      "publishedAt": "2026-11-06T20:09:14Z",
+      "title": "Google has acquired Crusoe's data center site in southeast Wyoming",
+      "title_ja": "グーグルがクルソーのデータセンター用地を取得",
+      "summary_ja": "グーグルは、クルソーが選定したワイオミング州南東部のデータセンター用地を取得しました。クルソーは、このキャンパスの選定、承認、電力戦略を完了した後に今回の取引が行われました。この買収によって、グーグルのデータセンターの拡大が期待されています。",
+      "key_points": [
+        "グーグルがクルソーのデータセンター用地を取得。",
+        "クルソーはすでにサイト選定や承認を完了。",
+        "電力戦略も整備済み。",
+        "購入したサイトはワイオミング州南東部に位置。",
+        "データセンターの拡大が進む可能性がある。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データを収容し、管理するための施設で、サーバー、ストレージ、ネットワーク機器を含む。"
+          "explain_ja": "データの保存・管理・配信を行う施設。"
         },
         {
-          "term": "キャパシティ計画",
-          "explain_ja": "必要なリソースを予測し、最適なインフラを構築するためのプロセス。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能の略で、機械が知性を持って学習や判断を行う技術を指す。"
+          "term": "クルソー",
+          "explain_ja": "データセンターの運営・管理を行う企業。"
         }
       ],
       "personal_actions": [
-        "データセンターのキャパシティ計画に関して、パートナー企業やエンジニアと情報を共有する。",
-        "供給業者との連携をさらに強化し、リソースの確保を図る。",
-        "インフラの要件を見直し、柔軟なサプライチェーン戦略を策定する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.channelnewsasia.com/business/google-plans-17-billion-wyoming-data-center-amid-rising-threats-curbs-6529006",
-      "source": "CNA",
-      "publishedAt": "2026-11-05T20:47:30Z",
-      "title": "Google plans $17 billion Wyoming data center amid rising threats of curbs",
-      "title_ja": "米国ワイオミング州における170億ドルのデータセンター建設を発表したGoogle",
-      "summary_ja": "Googleは、ワイオミング州に170億ドルを投資して初のデータセンターを建設する計画を発表した。これは、米国の中間選挙後にデータセンター拡張に対する政治的抵抗が高まる中での主なAIインフラ投資の一環である。今後、この投資が地域経済に与える影響や、AI技術の進展に寄与することが期待される。",
-      "key_points": [
-        "Googleがワイオミング州に170億ドルを投資してデータセンターを建設予定",
-        "これはGoogleの初のデータセンターである",
-        "建設計画は政治的抵抗の高まりの中で進行中",
-        "AIインフラへの重要な投資と位置付けられる",
-        "米国中間選挙後の政治的環境が影響している"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "デジタルデータを保存・管理するための施設。"
-        },
-        {
-          "term": "AI (人工知能)",
-          "explain_ja": "人間の知的活動を模倣する技術やシステム。"
-        },
-        {
-          "term": "アルファベット",
-          "explain_ja": "Googleの親会社。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターに関する地域の政策や計画を確認する",
-        "AI技術に関する最新動向をウォッチする",
-        "データインフラへの投資が地域に与える影響を考える"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.commondreams.org/news/schumer-data-center-protest",
-      "source": "Common Dreams",
-      "publishedAt": "2026-11-05T20:47:00Z",
-      "title": "'No Blank Checks for Big Tech': Schumer Faces Protest Over 'Dirty Data Center Deal'",
-      "title_ja": "シューマー上院議員が反対運動に直面：『ビッグテックに空白小切手は渡さない』",
-      "summary_ja": "ニューヨーク州のシューマー上院議員が提案されたデータセンター関連の法案を巡り抗議を受けています。抗議者たちはこの法案を「不正なデータセンターディール」と呼び、シューマーにブロックを求めています。この動きは、ビッグテックへの過剰な利益供与に対する懸念を反映しています。",
-      "key_points": [
-        "シューマー上院議員の自宅前で抗議が計画されている。",
-        "抗議者たちは法案を「dirty data center deal」と呼んでいる。",
-        "法案はバイパーティザンによるアメリカの手頃な生活費を目的としたもの。",
-        "ビッグテック企業への恩恵に対する不満が背景にある。",
-        "抗議活動は金曜日の朝に行われる予定。"
-      ],
-      "glossary": [
-        {
-          "term": "Bipartisan American Affordability",
-          "explain_ja": "両党に支持されているアメリカの生活費を安くするための法案。"
-        },
-        {
-          "term": "Dirty Data Center Deal",
-          "explain_ja": "抗議者たちが呼ぶ、環境や社会に悪影響のあるデータセンターに関連する法案。"
-        }
-      ],
-      "personal_actions": [
-        "地元の議員の立場や発言をチェックする。",
-        "データセンターに関する地域の計画を確認する。"
+        "自社のデータセンターの効率を見直し、パートナーシップを検討する。",
+        "データセンター用地の選定基準を再評価する。",
+        "電力戦略や再生可能エネルギーの利用について検討する。"
       ],
       "tags": [
         "DC"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/huawei-horinger-colossus-2-ai-capacity/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-11-06T20:02:16Z",
+      "title": "Huawei’s Horinger AI data center has about 7% of Colossus 2’s capacity",
+      "title_ja": "ファーウェイのホリガーAIデータセンターはコロッサス2の約7%の能力を持つ",
+      "summary_ja": "ファーウェイのホリガーデータセンターは、中国のAI施設として注目されていますが、xAIのコロッサス2キャンパスの約7%の計算能力しか持たないとされています。この差は主にハードウェアの選択とコストに起因しています。将来的には両施設とも成長が見込まれますが、相対的な能力差はほとんど変わらない見通しです。",
+      "key_points": [
+        "ホリガーは約81,000のH100eユニットを持ち、170MWのIT電力を消費している。",
+        "コロッサス2は約1,112,000のH100eユニットを持ち、946MWのIT電力を使用している。",
+        "ホリガーの資本コストは64億ドルで、コロッサス2は358億ドルとされる。",
+        "ホリガーは主にファーウェイのAscend 910Bおよび910Cを使用している。",
+        "両施設は成長を続けており、将来的にホリガーは約141,000 H100eに達する見込み。",
+        "コロッサス2の目標は2026年末までに120万ユニットを超えること。"
+      ],
+      "glossary": [
+        {
+          "term": "H100e",
+          "explain_ja": "NvidiaのH100アクセラレーター性能を基準にした計算能力の尺度。"
+        },
+        {
+          "term": "Ascend 910B/910C",
+          "explain_ja": "ファーウェイが製造するAI専用のハードウェアアクセラレーター。"
+        },
+        {
+          "term": "Colossus 2",
+          "explain_ja": "xAIが運営するAIデータセンターで、多くの計算能力を提供している。"
+        }
+      ],
+      "personal_actions": [
+        "ホリガーとコロッサス2の最新の成長データを定期的にチェックする。",
+        "AI計算能力に関連する市場動向をフォローする。",
+        "競合データセンターの技術的な違いについて理解を深める。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
       ]
     }
   ]
