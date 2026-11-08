@@ -1,111 +1,113 @@
 {
-  "date": "2026-11-08",
-  "generatedAtJST": "2026-11-08T07:15:36.650+09:00",
+  "date": "2026-11-09",
+  "generatedAtJST": "2026-11-09T07:15:29.066+09:00",
   "items": [
     {
-      "url": "https://news.slashdot.org/story/26/11/06/211208/activists-breach-microsoft-data-center-construction-site-as-protests-spread-in-europe",
+      "url": "https://hardware.slashdot.org/story/26/11/07/2153213/data-centers-are-being-powered-by-giant-gas-plants-possibly-increasing-carbon-pollution-for-decades",
       "source": "Slashdot.org",
-      "publishedAt": "2026-11-06T22:00:00Z",
-      "title": "Activists Breach Microsoft Data Center Construction Site As Protests Spread In Europe - Slashdot",
-      "title_ja": "欧州での抗議活動が広がる中、アムステルダムのマイクロソフトデータセンター建設現場に活動家が侵入",
-      "summary_ja": "アムステルダムで100人以上の活動家がマイクロソフトのAIデータセンター建設現場に侵入し、AIインフラの急速な拡大に抗議した。抗議者たちは、これらのデータセンターが環境に与える影響を訴え、同様の抗議活動が16か国で計画されている。データセンターのオーナーは、地域の関係者との対話を求めているが、抗議団体は大規模な建設の中止を求めている。",
+      "publishedAt": "2026-11-07T22:15:00Z",
+      "title": "Data Centers are Being Powered By Giant Gas Plants, Possibly Increasing Carbon Pollution for Decades",
+      "title_ja": "データセンターが巨大なガス発電所によって運営され、数十年にわたる炭素汚染の増加の可能性",
+      "summary_ja": "Amazonやその他のAI/クラウドコンピューティング企業は、ネットゼロ目標に向かうのではなく、逆に排出量を急増させていると報じられている。データセンターを支えるため、これらの企業は新しい大規模ガス発電所の建設を推進している。その結果、炭素汚染の悪化が懸念されており、長期的な環境影響が指摘されている。",
       "key_points": [
-        "100人以上の活動家がアムステルダムのマイクロソフトデータセンター建設現場に侵入",
-        "抗議団体は環境保護やデジタル権利を訴え、16か国で行動を計画中",
-        "データセンターのオーナーは地域との対話を求めている",
-        "抗議者たちは「データセンターをやめろ」というメッセージを掲示し、現場でパフォーマンスを実施",
-        "団体は政府に対し、明確なルールを策定するよう求めている"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能を支えるために設計されたデータセンターで、膨大な計算リソースを必要とする。"
-        },
-        {
-          "term": "Stop Dirty Data Centers",
-          "explain_ja": "データセンターの環境への影響に反対する活動家団体で、抗議活動を通じて意見を訴えている。"
-        }
-      ],
-      "personal_actions": [
-        "地域のデータセンター建設計画に関する情報を確認する",
-        "環境保護団体の活動に参加する",
-        "自社内でデータセンター利用の効率化について話し合う"
-      ],
-      "tags": [
-        "DC",
-        "セキュリティ"
-      ]
-    },
-    {
-      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
-      "source": "Crusoe.ai",
-      "publishedAt": "2026-11-06T20:09:14Z",
-      "title": "Google has acquired Crusoe's data center site in southeast Wyoming",
-      "title_ja": "グーグルがクルソーのデータセンター用地を取得",
-      "summary_ja": "グーグルは、クルソーが選定したワイオミング州南東部のデータセンター用地を取得しました。クルソーは、このキャンパスの選定、承認、電力戦略を完了した後に今回の取引が行われました。この買収によって、グーグルのデータセンターの拡大が期待されています。",
-      "key_points": [
-        "グーグルがクルソーのデータセンター用地を取得。",
-        "クルソーはすでにサイト選定や承認を完了。",
-        "電力戦略も整備済み。",
-        "購入したサイトはワイオミング州南東部に位置。",
-        "データセンターの拡大が進む可能性がある。"
+        "データセンターの運営にガス発電所が利用されている",
+        "Amazonなどの企業が排出量を増加させている",
+        "新しいガス発電所の建設が進んでいる",
+        "長期的な炭素汚染の増加が懸念されている"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データの保存・管理・配信を行う施設。"
+          "explain_ja": "データの保存、処理、配信を行う施設。"
         },
         {
-          "term": "クルソー",
-          "explain_ja": "データセンターの運営・管理を行う企業。"
+          "term": "ネットゼロ",
+          "explain_ja": "温室効果ガスの排出と吸収が等しくなる状態。"
+        },
+        {
+          "term": "炭素汚染",
+          "explain_ja": "二酸化炭素を含む温室効果ガスの排出による環境への悪影響。"
         }
       ],
       "personal_actions": [
-        "自社のデータセンターの効率を見直し、パートナーシップを検討する。",
-        "データセンター用地の選定基準を再評価する。",
-        "電力戦略や再生可能エネルギーの利用について検討する。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/huawei-horinger-colossus-2-ai-capacity/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-11-06T20:02:16Z",
-      "title": "Huawei’s Horinger AI data center has about 7% of Colossus 2’s capacity",
-      "title_ja": "ファーウェイのホリガーAIデータセンターはコロッサス2の約7%の能力を持つ",
-      "summary_ja": "ファーウェイのホリガーデータセンターは、中国のAI施設として注目されていますが、xAIのコロッサス2キャンパスの約7%の計算能力しか持たないとされています。この差は主にハードウェアの選択とコストに起因しています。将来的には両施設とも成長が見込まれますが、相対的な能力差はほとんど変わらない見通しです。",
-      "key_points": [
-        "ホリガーは約81,000のH100eユニットを持ち、170MWのIT電力を消費している。",
-        "コロッサス2は約1,112,000のH100eユニットを持ち、946MWのIT電力を使用している。",
-        "ホリガーの資本コストは64億ドルで、コロッサス2は358億ドルとされる。",
-        "ホリガーは主にファーウェイのAscend 910Bおよび910Cを使用している。",
-        "両施設は成長を続けており、将来的にホリガーは約141,000 H100eに達する見込み。",
-        "コロッサス2の目標は2026年末までに120万ユニットを超えること。"
-      ],
-      "glossary": [
-        {
-          "term": "H100e",
-          "explain_ja": "NvidiaのH100アクセラレーター性能を基準にした計算能力の尺度。"
-        },
-        {
-          "term": "Ascend 910B/910C",
-          "explain_ja": "ファーウェイが製造するAI専用のハードウェアアクセラレーター。"
-        },
-        {
-          "term": "Colossus 2",
-          "explain_ja": "xAIが運営するAIデータセンターで、多くの計算能力を提供している。"
-        }
-      ],
-      "personal_actions": [
-        "ホリガーとコロッサス2の最新の成長データを定期的にチェックする。",
-        "AI計算能力に関連する市場動向をフォローする。",
-        "競合データセンターの技術的な違いについて理解を深める。"
+        "データセンターの電源供給源について確認する",
+        "自社の持続可能性の取り組みを見直す",
+        "新たなガス発電所の進展に関する情報を収集する"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/envision-galaxy-ai-datacenter-inner-mongolia/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-11-07T19:37:08Z",
+      "title": "Envision’s Galaxy datacenter shows how fast China is building AI infrastructure",
+      "title_ja": "EnvisionのGalaxyデータセンターが示す中国のAIインフラ構築の速さ",
+      "summary_ja": "中国の内モンゴルにあるギガワット規模のGalaxy AIデータセンターは、主に風力と太陽光エネルギーで運営されており、アメリカのStargate Abileneに対抗する仕組みです。Envision Groupはこの施設を2026年8月に商業運営開始し、2028年末までに3GWの容量を目指しています。80%以上の電力は再生可能エネルギーから供給され、世界初の商業統合800V DC電源システムを使用しています。",
+      "key_points": [
+        "Galaxyデータセンターのメインサイトは120,000平方メートル。",
+        "最大1百万台のAIアクセラレーターを収容可能。",
+        "計算能力は1百万PFLOPSを予定。",
+        "120MWの初期段階がすでに運用を開始。",
+        "2026年末には200MWの追加段階が引き渡される予定。",
+        "2029年までの供給契約を確保済み。"
+      ],
+      "glossary": [
+        {
+          "term": "Galaxy AIデータセンター",
+          "explain_ja": "Envision Groupが運営する、中国内モンゴルにある大規模なAI専用データセンター。"
+        },
+        {
+          "term": "PFLOPS",
+          "explain_ja": "1PFLOPSは1秒間に1兆回の計算を意味し、大規模な計算能力を示す単位。"
+        },
+        {
+          "term": "Mission Gobi",
+          "explain_ja": "Envisionが推進するプログラムで、2030年までに5GWのグリーンAIデータセンターを構築することを目指している。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターやAIプロジェクトの新技術に関する最新情報をチェックする。",
+        "再生可能エネルギーの利用について社内で議論する機会を設ける。",
+        "関連する業界イベントやセミナーに参加し、ネットワークを広げる。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.yahoo.com/news/us/articles/trump-administration-wants-underwater-datacenters-140014506.html",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-11-07T14:00:14Z",
+      "title": "The Trump admin wants underwater data centers. 1 non-profit is already preparing.",
+      "title_ja": "トランプ政権、海底データセンターを計画中 1つの非営利団体が準備を進める",
+      "summary_ja": "トランプ政権は、海底データセンターの設置を検討中である。これは、新しい地理的概念として広く普及する可能性がある。特に、エロン・マスクが宇宙でのデータセンターの設置を提唱していることから、海底という新たな選択肢が注目を集めている。",
+      "key_points": [
+        "トランプ政権が海底データセンターに関心を持っている。",
+        "宇宙でのデータセンター設置を提案しているのはエロン・マスク。",
+        "海底データセンターは環境への影響を考慮した新たな選択肢とされている。",
+        "1つの非営利団体がこのプロジェクトに対して準備を進めている。",
+        "海底にデータセンターを設置することが一般化する可能性がある。"
+      ],
+      "glossary": [
+        {
+          "term": "海底データセンター",
+          "explain_ja": "海の底に設置されるデータセンターで、冷却効率やエネルギー効率が改善される可能性がある。"
+        },
+        {
+          "term": "トランプ政権",
+          "explain_ja": "アメリカ合衆国の第45代大統領ドナルド・トランプによる政権。"
+        }
+      ],
+      "personal_actions": [
+        "海底データセンターに関連する最新情報をフォローする。",
+        "自社のデータセンターの環境対策について再評価する。"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
