@@ -1,110 +1,105 @@
 {
-  "date": "2026-11-09",
-  "generatedAtJST": "2026-11-09T07:15:29.066+09:00",
+  "date": "2026-11-10",
+  "generatedAtJST": "2026-11-10T07:15:27.870+09:00",
   "items": [
     {
-      "url": "https://hardware.slashdot.org/story/26/11/07/2153213/data-centers-are-being-powered-by-giant-gas-plants-possibly-increasing-carbon-pollution-for-decades",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-11-07T22:15:00Z",
-      "title": "Data Centers are Being Powered By Giant Gas Plants, Possibly Increasing Carbon Pollution for Decades",
-      "title_ja": "データセンターが巨大なガス発電所によって運営され、数十年にわたる炭素汚染の増加の可能性",
-      "summary_ja": "Amazonやその他のAI/クラウドコンピューティング企業は、ネットゼロ目標に向かうのではなく、逆に排出量を急増させていると報じられている。データセンターを支えるため、これらの企業は新しい大規模ガス発電所の建設を推進している。その結果、炭素汚染の悪化が懸念されており、長期的な環境影響が指摘されている。",
+      "url": "https://oilprice.com/Energy/Energy-General/How-Big-Oil-Became-the-AI-Industrys-Favorite-Customer.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-11-08T18:00:00Z",
+      "title": "How Big Oil Became the AI Industry's Favorite Customer",
+      "title_ja": "大手石油会社がAI業界の好まれる顧客となった理由",
+      "summary_ja": "大手石油会社がAI業界との関係を深めており、テクノロジー分野の主要企業がエネルギー企業と大規模な契約を結んでいる。これにより、データセンターのエネルギー需要を満たすとともに、機械学習を組み込む動きが加速している。この結びつきは、エネルギー産業がAIの目に見える影響を受けることを示唆している。",
       "key_points": [
-        "データセンターの運営にガス発電所が利用されている",
-        "Amazonなどの企業が排出量を増加させている",
-        "新しいガス発電所の建設が進んでいる",
-        "長期的な炭素汚染の増加が懸念されている"
+        "大手石油会社がAI企業と深い関係を築いている",
+        "エネルギー企業との契約が増加している",
+        "データセンターのエネルギー需要を支える役割を果たしている",
+        "機械学習の導入が進んでいる",
+        "AI業界における石油産業の重要性が増している"
+      ],
+      "glossary": [
+        {
+          "term": "AI",
+          "explain_ja": "人工知能の略称で、機械が知能的な行動を模倣する技術。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "多くのサーバーを設置した施設で、データの保管、処理を行う。"
+        }
+      ],
+      "personal_actions": [
+        "現在のデータセンターのエネルギー効率を確認する",
+        "新たな技術導入に向けての準備を進める",
+        "AI技術の最新動向についての情報を収集する"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://hardware.slashdot.org/story/26/11/07/0412226/do-data-centers-have-a-smaller-effect-on-electricity-prices-than-we-think",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-11-08T17:34:00Z",
+      "title": "Do Data Centers Have a Smaller Effect on Electricity Prices Than We Think? - Slashdot",
+      "title_ja": "データセンターは電気料金に与える影響が小さいのか？",
+      "summary_ja": "ハーバード大学とペンシルベニア大学の新しい研究によれば、データセンターは住宅用電気料金に対して小さな影響しか及ぼしていないとされています。最近の研究では、データセンターの稼働が過去5年間の料金上昇に寄与した割合はわずか4%とのことです。しかし、需要が急増している地域では、住民へのコスト転嫁は見られています。将来的にはデータセンターの需要増加が住宅料金に影響する可能性がありますが、現時点では実証的な証拠は乏しいです。",
+      "key_points": [
+        "データセンターは住宅用電気料金に4%の影響を及ぼしているとの研究結果。",
+        "工業用電気料金には15%の影響を及ぼしている。",
+        "次の数年でデータセンターの電力需要が急増する見込み。",
+        "多くの住民はデータセンターの環境影響や騒音を懸念している。",
+        "データセンターによる影響は、従来の要因（ガス料金の上昇、電力網の老朽化など）が主因とされている。"
       ],
       "glossary": [
         {
           "term": "データセンター",
-          "explain_ja": "データの保存、処理、配信を行う施設。"
+          "explain_ja": "データの保存、処理及び配信を行うための施設。"
         },
         {
-          "term": "ネットゼロ",
-          "explain_ja": "温室効果ガスの排出と吸収が等しくなる状態。"
+          "term": "電気料金",
+          "explain_ja": "電力会社が住宅や企業に対して課す電力使用料。"
         },
         {
-          "term": "炭素汚染",
-          "explain_ja": "二酸化炭素を含む温室効果ガスの排出による環境への悪影響。"
+          "term": "電力網",
+          "explain_ja": "電力の生成から消費までをつなぐインフラストラクチャー。"
         }
       ],
       "personal_actions": [
-        "データセンターの電源供給源について確認する",
-        "自社の持続可能性の取り組みを見直す",
-        "新たなガス発電所の進展に関する情報を収集する"
+        "自社のデータセンターがどのように電力を使用しているかを見直す。",
+        "地域の電気料金の動向を継続してチェックする。",
+        "新たなデータセンター建設に伴う地域社会への影響を考慮する。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://cryptobriefing.com/envision-galaxy-ai-datacenter-inner-mongolia/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-11-07T19:37:08Z",
-      "title": "Envision’s Galaxy datacenter shows how fast China is building AI infrastructure",
-      "title_ja": "EnvisionのGalaxyデータセンターが示す中国のAIインフラ構築の速さ",
-      "summary_ja": "中国の内モンゴルにあるギガワット規模のGalaxy AIデータセンターは、主に風力と太陽光エネルギーで運営されており、アメリカのStargate Abileneに対抗する仕組みです。Envision Groupはこの施設を2026年8月に商業運営開始し、2028年末までに3GWの容量を目指しています。80%以上の電力は再生可能エネルギーから供給され、世界初の商業統合800V DC電源システムを使用しています。",
-      "key_points": [
-        "Galaxyデータセンターのメインサイトは120,000平方メートル。",
-        "最大1百万台のAIアクセラレーターを収容可能。",
-        "計算能力は1百万PFLOPSを予定。",
-        "120MWの初期段階がすでに運用を開始。",
-        "2026年末には200MWの追加段階が引き渡される予定。",
-        "2029年までの供給契約を確保済み。"
-      ],
-      "glossary": [
-        {
-          "term": "Galaxy AIデータセンター",
-          "explain_ja": "Envision Groupが運営する、中国内モンゴルにある大規模なAI専用データセンター。"
-        },
-        {
-          "term": "PFLOPS",
-          "explain_ja": "1PFLOPSは1秒間に1兆回の計算を意味し、大規模な計算能力を示す単位。"
-        },
-        {
-          "term": "Mission Gobi",
-          "explain_ja": "Envisionが推進するプログラムで、2030年までに5GWのグリーンAIデータセンターを構築することを目指している。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターやAIプロジェクトの新技術に関する最新情報をチェックする。",
-        "再生可能エネルギーの利用について社内で議論する機会を設ける。",
-        "関連する業界イベントやセミナーに参加し、ネットワークを広げる。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.yahoo.com/news/us/articles/trump-administration-wants-underwater-datacenters-140014506.html",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_81c95349-ca32-403e-a1f1-608d2a2ba37a",
       "source": "Yahoo Entertainment",
-      "publishedAt": "2026-11-07T14:00:14Z",
-      "title": "The Trump admin wants underwater data centers. 1 non-profit is already preparing.",
-      "title_ja": "トランプ政権、海底データセンターを計画中 1つの非営利団体が準備を進める",
-      "summary_ja": "トランプ政権は、海底データセンターの設置を検討中である。これは、新しい地理的概念として広く普及する可能性がある。特に、エロン・マスクが宇宙でのデータセンターの設置を提唱していることから、海底という新たな選択肢が注目を集めている。",
+      "publishedAt": "2026-11-08T15:26:46Z",
+      "title": "The only town in the U.S. that said yes to data centers",
+      "title_ja": "データセンターに賛成した唯一の町、ハーウッド",
+      "summary_ja": "ノースダコタ州ハーウッドは、アメリカで唯一データセンターに賛成票を投じた町です。この町は845人の人口を抱え、外周部に30億ドル、180万平方フィートの施設が建設される見込みです。この決定は地域経済に大きな影響を与える可能性があります。",
       "key_points": [
-        "トランプ政権が海底データセンターに関心を持っている。",
-        "宇宙でのデータセンター設置を提案しているのはエロン・マスク。",
-        "海底データセンターは環境への影響を考慮した新たな選択肢とされている。",
-        "1つの非営利団体がこのプロジェクトに対して準備を進めている。",
-        "海底にデータセンターを設置することが一般化する可能性がある。"
+        "ハーウッドはアメリカで唯一データセンターに賛成票を投じた町。",
+        "人口は845人で、経済発展が期待されている。",
+        "提案されている施設は30億ドルのプロジェクト。",
+        "建設面積は180万平方フィート。",
+        "地域におけるデータセンターの重要性が示された。"
       ],
       "glossary": [
         {
-          "term": "海底データセンター",
-          "explain_ja": "海の底に設置されるデータセンターで、冷却効率やエネルギー効率が改善される可能性がある。"
+          "term": "データセンター",
+          "explain_ja": "データを保管、管理、処理するための施設。"
         },
         {
-          "term": "トランプ政権",
-          "explain_ja": "アメリカ合衆国の第45代大統領ドナルド・トランプによる政権。"
+          "term": "ノースダコタ州",
+          "explain_ja": "アメリカ合衆国の州で、土地面積が広いが人口は少ない。"
         }
       ],
       "personal_actions": [
-        "海底データセンターに関連する最新情報をフォローする。",
-        "自社のデータセンターの環境対策について再評価する。"
+        "地域のデータセンターに関連する議論に耳を傾け、意見を表明する。",
+        "自分の地域におけるデータセンターの必要性を考える。",
+        "データセンターの運営に伴う環境影響を調査する。"
       ],
       "tags": [
         "DC"
