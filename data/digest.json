@@ -1,110 +1,122 @@
 {
-  "date": "2026-11-11",
-  "generatedAtJST": "2026-11-11T07:15:34.891+09:00",
+  "date": "2026-11-12",
+  "generatedAtJST": "2026-11-12T07:15:37.307+09:00",
   "items": [
     {
-      "url": "https://www.channelnewsasia.com/business/spacex-plans-24-billion-gas-power-plant-data-center-project-in-texas-6536941",
-      "source": "CNA",
-      "publishedAt": "2026-11-09T19:58:13Z",
-      "title": "SpaceX plans $24 billion gas power plant, data center project in Texas",
-      "title_ja": "SpaceX、テキサスに240億ドルのガス発電所とデータセンター計画を発表",
-      "summary_ja": "SpaceXは、テキサスのスター基地に約240億ドルのガス火力発電所とスーパコンピューティング施設を計画しています。この計画は、データセンターへの反対が強まる中での提案です。これにより、地域経済への影響やエネルギー供給の多様化が期待されます。",
+      "url": "https://www.techpowerup.com/354657/amd-showcases-6th-gen-epyc-server-sp7-processors-based-on-the-new-zen-6-architecture",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-11-10T17:56:44Z",
+      "title": "AMD Showcases 6th Gen EPYC Server SP7 Processors Based on the New Zen 6 Architecture",
+      "title_ja": "AMD、最新のZen 6アーキテクチャに基づく6世代EPYCサーバーSP7プロセッサを発表",
+      "summary_ja": "AMDは、AIの新たな需要に応える6世代AMD EPYCサーバーSP7プロセッサを発表しました。この新しいプロセッサは、最新のZen 6アーキテクチャに基づいており、サーバーCPU性能のリーダーシップを拡大します。新しいEPYCプロセッサは、多様なアプリケーションに対して最適化されたスタックを提供し、データセンターの効率を高めます。",
       "key_points": [
-        "SpaceXは約240億ドルのプロジェクトを計画中",
-        "データセンターに対する反対意見が高まっている",
-        "地域経済への影響が懸念されている",
-        "発電所はガス火力ベースになる",
-        "スーパコンピューティング施設が併設される予定"
+        "6世代EPYCプロセッサは、AIエージェントの運用やクリティカルなエンタープライズアプリケーションに最適化されている。",
+        "新しいプロセッサは、Intel XeonやNVIDIA Veraに比べてパフォーマンスや経済性で優れている。",
+        "AMD HelionエージェントAIラックなど、さまざまなデプロイメントオプションを提供。",
+        "メタやマイクロソフトAzureが6世代EPYCプロセッサを採用し、スケールでの展開を準備中。",
+        "システムは主要なサーバーベンダーから出荷され、AIインフラ全体に対応している。"
       ],
       "glossary": [
         {
-          "term": "SpaceX",
-          "explain_ja": "アメリカの宇宙輸送企業で、ロケットやAI技術を扱う。"
+          "term": "EPYC",
+          "explain_ja": "AMDが提供するサーバー向けの高性能CPUシリーズ。"
         },
         {
-          "term": "ガス火力発電所",
-          "explain_ja": "天然ガスを燃料として利用する発電所。"
+          "term": "AI",
+          "explain_ja": "人工知能の略。データセンターでの役割が増大している。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "サーバーやネットワーク機器などを設置し、情報を管理・保管・処理する施設。"
+          "term": "x86",
+          "explain_ja": "Intelが開発したCPUアーキテクチャで、一般的なサーバーやPCの標準となっている。"
+        },
+        {
+          "term": "Azure",
+          "explain_ja": "マイクロソフトが提供するクラウドコンピューティングサービス。"
         }
       ],
       "personal_actions": [
-        "地域のデータセンター計画に関する情報を収集する",
-        "プロジェクトの環境影響について公開予約を確認する",
-        "地域経済への影響を考慮し、意見を述べる機会を探る"
+        "6世代EPYCプロセッサの導入計画があるか、チームで確認する。",
+        "新しいサーバーの性能評価や導入メリットについて情報収集をする。",
+        "AIやデータセンターのニーズに対する現行インフラの適合性を評価する。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.insurancejournal.com/news/southcentral/2026/11/10/892283.htm",
+      "source": "Insurance Journal",
+      "publishedAt": "2026-11-10T17:36:29Z",
+      "title": "SpaceX Plans $24 Billion Data Center and Gas Plant in Texas",
+      "title_ja": "スペースX、テキサス州に240億ドルのデータセンターとガス発電所を計画",
+      "summary_ja": "スペースXはテキサス州スター基地にガス燃焼発電所とスーパーコンピュータ施設を建設する計画を発表しました。初期投資額は240億ドルと推定されており、税の減免と開発契約の承認が12月9日に議論される予定です。データセンターと新工場の急増する電力需要を背景に、マスク氏は垂直統合の方針を進めています。",
+      "key_points": [
+        "スペースXがテキサス州スター基地にガス発電所とスーパーコンピュータ施設を建設予定。",
+        "初期投資額は240億ドルと推定されている。",
+        "データセンターの電力需要が高まり、ガスプラントの需要が急増している。",
+        "マスク氏は自社の燃料供給を強化するため、ガス取引業者を雇用している。",
+        "テキサス州知事の選出に伴い、建設に対する規制の可能性がある。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データを保存、管理、配信するための施設。"
+        },
+        {
+          "term": "ガス発電所",
+          "explain_ja": "ガスを燃料とする発電施設。"
+        },
+        {
+          "term": "垂直統合",
+          "explain_ja": "製品の生産過程を全て自社で行う戦略。"
+        }
+      ],
+      "personal_actions": [
+        "新たなガス発電所やデータセンターに関する地域の公共の議論に参加。",
+        "エネルギー効率を向上させるための社内の取り組みを確認する。",
+        "環境への影響の評価について社内で話し合う。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://oilprice.com/Energy/Energy-General/The-AI-Power-Grab-That-Could-Upend-Americas-Electricity-Industry.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-11-09T18:00:00Z",
-      "title": "The AI Power Grab That Could Upend America's Electricity Industry",
-      "title_ja": "AIによるアメリカ電力業界への影響",
-      "summary_ja": "AIの進化がアメリカの電力業界に大きな変革をもたらす可能性があります。特に、AIがエネルギー管理や供給の最適化に寄与することで、従来のビジネスモデルが揺らぐことが予想されます。この変化は、業界の競争に影響を与え、消費者にも新たな選択肢をもたらすでしょう。",
+      "url": "https://uk.pcmag.com/processors/168326/amds-zen-6-architecture-detailed-epyc-data-center-chips-get-dibs-but-ryzens-might-benefit-too",
+      "source": "PCMag.com",
+      "publishedAt": "2026-11-10T17:36:02Z",
+      "title": "AMD's 'Zen 6' Architecture Detailed: EPYC Data Center Chips Get Dibs, But Ryzens Might Benefit, Too",
+      "title_ja": "AMDの『Zen 6』アーキテクチャの詳細：EPYCデータセンターチップが先行、Ryzensも恩恵を受けるか",
+      "summary_ja": "AMDが次世代EPYCプロセッサ用にZenマイクロアーキテクチャを進化させ、『Zen 6』を発表しました。このアーキテクチャは最新の2nm製造プロセスに移行し、性能と帯域幅を向上させる設計改善が含まれています。特にいいニュースは、12コアを配置できる新しい設計により、EPYCからRyzensにかけて高コア数のプロセッサが期待できる点です。",
       "key_points": [
-        "AI技術がエネルギーの効率化に寄与。",
-        "従来の電力供給モデルの変革が予想される。",
-        "業界競争が激化し、消費者に新しい選択肢を提供。",
-        "AI導入によりコスト削減が期待される。",
-        "安全性や信頼性への新たな課題が生じる可能性。"
+        "Zen 6は2nm製造プロセスを採用し、性能と帯域幅を向上。",
+        "各チップレットに12コアを搭載可能で、EPYCプロセッサは256コアにスケール可能。",
+        "新しいZen 6cコアは、従来のコアを縮小したバージョンで、同じL3キャッシュを持つ。",
+        "PCIe 6.0をサポートし、高帯域幅の接続が可能。",
+        "新技術MEXTがAIを活用し、データ管理を最適化する。",
+        "将来的に消費者向けRyzenプロセッサにもZen 6が採用される見込み。"
       ],
       "glossary": [
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略。機械が人間の知的作業を模倣する技術。"
+          "term": "Zen 6",
+          "explain_ja": "AMDの新しいマイクロアーキテクチャで、次世代EPYCプロセッサに使用される。"
         },
         {
-          "term": "エネルギー管理",
-          "explain_ja": "電力の生成、供給、消費を最適化するための手法や技術。"
+          "term": "EPYC",
+          "explain_ja": "AMDのサーバー向けプロセッサシリーズで、大規模なデータセンター向けに設計されている。"
+        },
+        {
+          "term": "PCIe 6.0",
+          "explain_ja": "次世代の接続規格で、データ転送速度が倍増し、より多くの帯域幅を提供する。"
+        },
+        {
+          "term": "MEXT",
+          "explain_ja": "AMDが提案するAI駆動のページファイル管理技術で、データの最適な管理を目指す。"
         }
       ],
       "personal_actions": [
-        "最新のAI技術に関する業界ニュースを追う。",
-        "AI導入を検討する企業の動向を調査する。",
-        "業界のAI化による影響を社内で議論する。"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/bitcoin-miners-grid-access-value/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-11-09T17:29:25Z",
-      "title": "CoinShares says data center bans could make Bitcoin miners’ power assets more valuable",
-      "title_ja": "CoinShares、データセンター禁止がビットコインマイナーの電力資産の価値を増す可能性を指摘",
-      "summary_ja": "CoinSharesによると、新しいAIデータセンターの制限が既存のビットコインマイニングインフラの価値を高める可能性がある。特に、既に電力契約を持つマイナーは他の新規プロジェクトよりも有利な状況にある。中間選挙後、データセンターの開発に対する反対が強まり、既存の設備がより価値を持つとされている。",
-      "key_points": [
-        "中間選挙後、データセンター開発への制限が強まる。",
-        "AIデータセンターが既存のビットコインマイニングに有利に働く可能性がある。",
-        "契約を持つマイナーは、持たないマイナーに比べて高いバリュエーションを享受している。",
-        "テキサス州の新規承認が今後の構築に影響を与える可能性がある。",
-        "CoinSharesは、収益化に向けたスピードが市場での焦点になっていると指摘。"
-      ],
-      "glossary": [
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能を利用した計算処理を行うためのデータセンター。"
-        },
-        {
-          "term": "ビットコインマイニング",
-          "explain_ja": "ビットコインを生成するためにコンピュータを使ってトランザクションを承認するプロセス。"
-        },
-        {
-          "term": "PJM地域",
-          "explain_ja": "アメリカ合衆国の電力市場の一つで、特定の州の電力供給を管理している。"
-        }
-      ],
-      "personal_actions": [
-        "自社の電力契約状況を確認し、既存インフラの価値を評価する。",
-        "新しいデータセンター開発に関わる規制の動向を注視する。",
-        "競合他社の契約状況や市場動向をリサーチし、ビジネス戦略を見直す。"
+        "新しいプロセッサの特性を理解し、システムのアップグレード計画を検討する。",
+        "最新のセキュリティ機能に関する情報を確認し、データセンターのセキュリティポリシーを見直す。",
+        "PCIe 6.0対応デバイスの動向を追い、将来のシステム設計に備える。"
       ],
       "tags": [
         "DC",
