@@ -1,126 +1,108 @@
 {
-  "date": "2026-11-12",
-  "generatedAtJST": "2026-11-12T07:15:37.307+09:00",
+  "date": "2026-11-13",
+  "generatedAtJST": "2026-11-13T07:15:32.892+09:00",
   "items": [
     {
-      "url": "https://www.techpowerup.com/354657/amd-showcases-6th-gen-epyc-server-sp7-processors-based-on-the-new-zen-6-architecture",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-11-10T17:56:44Z",
-      "title": "AMD Showcases 6th Gen EPYC Server SP7 Processors Based on the New Zen 6 Architecture",
-      "title_ja": "AMD、最新のZen 6アーキテクチャに基づく6世代EPYCサーバーSP7プロセッサを発表",
-      "summary_ja": "AMDは、AIの新たな需要に応える6世代AMD EPYCサーバーSP7プロセッサを発表しました。この新しいプロセッサは、最新のZen 6アーキテクチャに基づいており、サーバーCPU性能のリーダーシップを拡大します。新しいEPYCプロセッサは、多様なアプリケーションに対して最適化されたスタックを提供し、データセンターの効率を高めます。",
+      "url": "https://www.nextbigfuture.com/2026/11/more-power-and-data-centers-for-spacex-in-mississippi.html",
+      "source": "Next Big Future",
+      "publishedAt": "2026-11-11T21:12:04Z",
+      "title": "More Power and Data Centers for SpaceX in Mississippi – NextBigFuture.com",
+      "title_ja": "ミシシッピ州のスペースXに新たな電力とデータセンター",
+      "summary_ja": "スペースXは、ミシシッピ州で新たなAIデータセンター「Project Mitchell」を購入しました。このデータセンターは、既存の5つのデータセンターに加わるものと見られています。また、スペースXは同州での1.2GWの電力プラントに関する規制承認を獲得しました。この動きは、スペースXのコンピューティングインフラの拡張に向けた重要なステップといえるでしょう。",
       "key_points": [
-        "6世代EPYCプロセッサは、AIエージェントの運用やクリティカルなエンタープライズアプリケーションに最適化されている。",
-        "新しいプロセッサは、Intel XeonやNVIDIA Veraに比べてパフォーマンスや経済性で優れている。",
-        "AMD HelionエージェントAIラックなど、さまざまなデプロイメントオプションを提供。",
-        "メタやマイクロソフトAzureが6世代EPYCプロセッサを採用し、スケールでの展開を準備中。",
-        "システムは主要なサーバーベンダーから出荷され、AIインフラ全体に対応している。"
+        "スペースXが新たにAIデータセンターを購入した。",
+        "新しいデータセンターは既存の5つに続くものである。",
+        "スペースXの1.2GW電力プラントの空気許可が承認された。",
+        "プロジェクトには41の天然ガスタービンが含まれる。",
+        "新しいデータセンターはスペースXのSIコンピューティングインフラを支える。"
       ],
       "glossary": [
         {
-          "term": "EPYC",
-          "explain_ja": "AMDが提供するサーバー向けの高性能CPUシリーズ。"
+          "term": "Project Mitchell",
+          "explain_ja": "スペースXがミシシッピ州に展開する新しいAIデータセンターの名称。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略。データセンターでの役割が増大している。"
-        },
-        {
-          "term": "x86",
-          "explain_ja": "Intelが開発したCPUアーキテクチャで、一般的なサーバーやPCの標準となっている。"
-        },
-        {
-          "term": "Azure",
-          "explain_ja": "マイクロソフトが提供するクラウドコンピューティングサービス。"
+          "term": "GW",
+          "explain_ja": "ギガワットの略称で、電力の単位を示す。1GWは10億ワット。"
         }
       ],
       "personal_actions": [
-        "6世代EPYCプロセッサの導入計画があるか、チームで確認する。",
-        "新しいサーバーの性能評価や導入メリットについて情報収集をする。",
-        "AIやデータセンターのニーズに対する現行インフラの適合性を評価する。"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.insurancejournal.com/news/southcentral/2026/11/10/892283.htm",
-      "source": "Insurance Journal",
-      "publishedAt": "2026-11-10T17:36:29Z",
-      "title": "SpaceX Plans $24 Billion Data Center and Gas Plant in Texas",
-      "title_ja": "スペースX、テキサス州に240億ドルのデータセンターとガス発電所を計画",
-      "summary_ja": "スペースXはテキサス州スター基地にガス燃焼発電所とスーパーコンピュータ施設を建設する計画を発表しました。初期投資額は240億ドルと推定されており、税の減免と開発契約の承認が12月9日に議論される予定です。データセンターと新工場の急増する電力需要を背景に、マスク氏は垂直統合の方針を進めています。",
-      "key_points": [
-        "スペースXがテキサス州スター基地にガス発電所とスーパーコンピュータ施設を建設予定。",
-        "初期投資額は240億ドルと推定されている。",
-        "データセンターの電力需要が高まり、ガスプラントの需要が急増している。",
-        "マスク氏は自社の燃料供給を強化するため、ガス取引業者を雇用している。",
-        "テキサス州知事の選出に伴い、建設に対する規制の可能性がある。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "データを保存、管理、配信するための施設。"
-        },
-        {
-          "term": "ガス発電所",
-          "explain_ja": "ガスを燃料とする発電施設。"
-        },
-        {
-          "term": "垂直統合",
-          "explain_ja": "製品の生産過程を全て自社で行う戦略。"
-        }
-      ],
-      "personal_actions": [
-        "新たなガス発電所やデータセンターに関する地域の公共の議論に参加。",
-        "エネルギー効率を向上させるための社内の取り組みを確認する。",
-        "環境への影響の評価について社内で話し合う。"
-      ],
-      "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://uk.pcmag.com/processors/168326/amds-zen-6-architecture-detailed-epyc-data-center-chips-get-dibs-but-ryzens-might-benefit-too",
-      "source": "PCMag.com",
-      "publishedAt": "2026-11-10T17:36:02Z",
-      "title": "AMD's 'Zen 6' Architecture Detailed: EPYC Data Center Chips Get Dibs, But Ryzens Might Benefit, Too",
-      "title_ja": "AMDの『Zen 6』アーキテクチャの詳細：EPYCデータセンターチップが先行、Ryzensも恩恵を受けるか",
-      "summary_ja": "AMDが次世代EPYCプロセッサ用にZenマイクロアーキテクチャを進化させ、『Zen 6』を発表しました。このアーキテクチャは最新の2nm製造プロセスに移行し、性能と帯域幅を向上させる設計改善が含まれています。特にいいニュースは、12コアを配置できる新しい設計により、EPYCからRyzensにかけて高コア数のプロセッサが期待できる点です。",
-      "key_points": [
-        "Zen 6は2nm製造プロセスを採用し、性能と帯域幅を向上。",
-        "各チップレットに12コアを搭載可能で、EPYCプロセッサは256コアにスケール可能。",
-        "新しいZen 6cコアは、従来のコアを縮小したバージョンで、同じL3キャッシュを持つ。",
-        "PCIe 6.0をサポートし、高帯域幅の接続が可能。",
-        "新技術MEXTがAIを活用し、データ管理を最適化する。",
-        "将来的に消費者向けRyzenプロセッサにもZen 6が採用される見込み。"
-      ],
-      "glossary": [
-        {
-          "term": "Zen 6",
-          "explain_ja": "AMDの新しいマイクロアーキテクチャで、次世代EPYCプロセッサに使用される。"
-        },
-        {
-          "term": "EPYC",
-          "explain_ja": "AMDのサーバー向けプロセッサシリーズで、大規模なデータセンター向けに設計されている。"
-        },
-        {
-          "term": "PCIe 6.0",
-          "explain_ja": "次世代の接続規格で、データ転送速度が倍増し、より多くの帯域幅を提供する。"
-        },
-        {
-          "term": "MEXT",
-          "explain_ja": "AMDが提案するAI駆動のページファイル管理技術で、データの最適な管理を目指す。"
-        }
-      ],
-      "personal_actions": [
-        "新しいプロセッサの特性を理解し、システムのアップグレード計画を検討する。",
-        "最新のセキュリティ機能に関する情報を確認し、データセンターのセキュリティポリシーを見直す。",
-        "PCIe 6.0対応デバイスの動向を追い、将来のシステム設計に備える。"
+        "ミシシッピ州内の規制動向を確認する。",
+        "地域の新しい施設やインフラ開発の情報を収集する。"
       ],
       "tags": [
         "DC",
         "AI"
+      ]
+    },
+    {
+      "url": "https://radio.foxnews.com/2026/11/11/democrats-big-mistake-bringing-back-woke-politics-could-undo-their-big-win-ft-wade-stotts/",
+      "source": "Fox News",
+      "publishedAt": "2026-11-11T20:42:04Z",
+      "title": "Democrats' BIG Mistake? Bringing Back Woke Politics Could Undo Their Big Win (ft. Wade Stotts)",
+      "title_ja": "民主党の大きな過ち？ ウォーク・ポリティクスの復活が大勝を台無しにする可能性",
+      "summary_ja": "アメリカは静かな情報戦の最前線にあり、シリコンバレーもその中心に位置しています。NvidiaのCEOが中国のスパイとの関係に巻き込まれ、北京に関連した団体が米国のAIデータセンターの拡張を妨害している中、技術大手は国家安全保障を短期的な株主利益と交換しているのかという疑問が浮上しています。今回の議論では、中国のAI覇権への取り組みと文化的分裂の利用について深掘りされています。",
+      "key_points": [
+        "シリコンバレーは情報戦の最前線に位置している。",
+        "NvidiaのCEOが中国スパイとの関与を疑われている。",
+        "北京に関連した団体が米国のAIデータセンター拡張を妨害。",
+        "短期的な株主利益が国家安全保障のリスクを伴う可能性がある。",
+        "文化的な対立が敵対者によって利用されている。"
+      ],
+      "glossary": [
+        {
+          "term": "ウォーク・ポリティクス",
+          "explain_ja": "社会的な不平等や差別に対する意識を高める政治的アプローチ。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能（Artificial Intelligence）の略称。"
+        }
+      ],
+      "personal_actions": [
+        "自社のAI関連技術やデータセンターの運用に関するリスクを評価する。",
+        "中国の技術革新に対する自社の対応策を検討する。",
+        "社内での情報セキュリティ対策を再確認する。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://hardware.slashdot.org/story/26/11/11/1950231/ukraine-strikes-cause-permanent-data-loss-at-russias-yandex-cloud",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-11-11T20:00:00Z",
+      "title": "Ukraine Strikes Cause Permanent Data Loss at Russia's Yandex Cloud - Slashdot",
+      "title_ja": "ウクライナの攻撃がロシアのYandex Cloudにおけるデータの永久的な損失を引き起こす",
+      "summary_ja": "ウクライナの攻撃により、ロシアのYandexは顧客データの2.84%が永久的に失われたと報告しています。攻撃によって設備が重大な損傷を受け、バックアップもなかったため、復旧は不可能です。これを受けて、Yandexはデータ保護と災害復旧のアプローチを見直し、自動バックアップを新しい仮想マシン作成時にデフォルトで有効にすることを決定しました。",
+      "key_points": [
+        "ウクライナの攻撃でYandexのデータセンターが標的となった。",
+        "Yandexは2.84%の顧客データが永久的に損失したと明言。",
+        "バックアップツールを利用していた顧客のデータは影響を受けなかった。",
+        "Yandexは自動バックアップ機能を新規仮想マシン作成時にデフォルトで有効にする方針を発表。",
+        "新たな可用性ゾーン（ru-central1-f）が導入され、サービスの信頼性が向上する。"
+      ],
+      "glossary": [
+        {
+          "term": "Yandex Cloud",
+          "explain_ja": "ロシアの大手IT企業Yandexが提供するクラウドコンピューティングサービス。"
+        },
+        {
+          "term": "データ損失",
+          "explain_ja": "データが削除されたり、アクセスできなくなること。"
+        },
+        {
+          "term": "冗長性",
+          "explain_ja": "システムが故障した場合でもサービスを継続できる能力。"
+        }
+      ],
+      "personal_actions": [
+        "データバックアップの重要性について社内で再確認する。",
+        "現在使用しているクラウドサービスのバックアップ設定を見直す。",
+        "災害復旧計画についてチームと話し合い、必要な改善を検討する。"
+      ],
+      "tags": [
+        "その他"
       ]
     }
   ]
