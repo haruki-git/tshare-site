@@ -1,34 +1,79 @@
 {
-  "date": "2026-11-13",
-  "generatedAtJST": "2026-11-13T07:15:32.892+09:00",
+  "date": "2026-11-14",
+  "generatedAtJST": "2026-11-14T07:15:40.649+09:00",
   "items": [
     {
-      "url": "https://www.nextbigfuture.com/2026/11/more-power-and-data-centers-for-spacex-in-mississippi.html",
-      "source": "Next Big Future",
-      "publishedAt": "2026-11-11T21:12:04Z",
-      "title": "More Power and Data Centers for SpaceX in Mississippi – NextBigFuture.com",
-      "title_ja": "ミシシッピ州のスペースXに新たな電力とデータセンター",
-      "summary_ja": "スペースXは、ミシシッピ州で新たなAIデータセンター「Project Mitchell」を購入しました。このデータセンターは、既存の5つのデータセンターに加わるものと見られています。また、スペースXは同州での1.2GWの電力プラントに関する規制承認を獲得しました。この動きは、スペースXのコンピューティングインフラの拡張に向けた重要なステップといえるでしょう。",
+      "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/",
+      "source": "TechCrunch",
+      "publishedAt": "2026-11-12T21:29:28Z",
+      "title": "Nebius tests the neocloud playbook with $40 billion in planned spending | TechCrunch",
+      "title_ja": "Nebius、400億ドルのAIインフラ拡張を計画中",
+      "summary_ja": "Nebiusは、400億ドルのAIインフラ拡張を顧客からの前払いと融資で賄う計画を発表しました。しかし、Microsoftのデータセンターでの遅延がこの資金調達モデルへの疑問を呼んでいます。この問題が解決しない限り、Nebiusの計画には影響が出る可能性があります。",
       "key_points": [
-        "スペースXが新たにAIデータセンターを購入した。",
-        "新しいデータセンターは既存の5つに続くものである。",
-        "スペースXの1.2GW電力プラントの空気許可が承認された。",
-        "プロジェクトには41の天然ガスタービンが含まれる。",
-        "新しいデータセンターはスペースXのSIコンピューティングインフラを支える。"
+        "Nebiusは400億ドルのAIインフラ拡張を目指している。",
+        "資金調達は顧客からの前払いと融資による。",
+        "Microsoftのデータセンターでの遅延が資金調達モデルに疑問をもたらしている。",
+        "遅延問題が解決しなければ、計画に影響が出る可能性がある。"
       ],
       "glossary": [
         {
-          "term": "Project Mitchell",
-          "explain_ja": "スペースXがミシシッピ州に展開する新しいAIデータセンターの名称。"
+          "term": "Nebius",
+          "explain_ja": "AIインフラを提供する企業。"
         },
         {
-          "term": "GW",
-          "explain_ja": "ギガワットの略称で、電力の単位を示す。1GWは10億ワット。"
+          "term": "AI",
+          "explain_ja": "人工知能の略で、人間の知能を模倣する技術。"
+        },
+        {
+          "term": "Microsoft",
+          "explain_ja": "マイクロソフト社、ソフトウェアやハードウェアを開発・提供する企業。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "データを保管・管理する施設で、サーバーが設置されている。"
         }
       ],
       "personal_actions": [
-        "ミシシッピ州内の規制動向を確認する。",
-        "地域の新しい施設やインフラ開発の情報を収集する。"
+        "Nebiusの最新情報をフォローして資金調達の進展を確認する。",
+        "顧客とのコミュニケーションを強化し、前払いオプションについての理解を深める。",
+        "Microsoftの関連ニュースをチェックし、データセンターの状況を把握する。"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "url": "https://www.presseportal.de/en/pm/167782/6389325",
+      "source": "Presseportal.de",
+      "publishedAt": "2026-11-12T21:19:23Z",
+      "title": "Gcore and TengriAI to explore 100 MW AI data center in Kazakhstan / Phased project would give Central Asia...",
+      "title_ja": "GcoreとTengriAIがカザフスタンにおける100MWのAIデータセンター計画を探求",
+      "summary_ja": "GcoreとTengriAIは、カザフスタンに100MWのGPUデータセンターを構築するための覚書を締結しました。このプロジェクトは2027年から2029年の間に段階的に進められる予定です。中央アジアではAIコンピューティングの自国内需要が少なく、欧州や東アジアのインフラに依存している状況が続いています。このデータセンターにより、地域内の供給能力が向上し、AI運用の自主性が確保されることが期待されます。",
+      "key_points": [
+        "GcoreとTengriAIが協力してカザフスタンでGPUデータセンターを計画",
+        "データセンターの容量は最大100MWで、2027年から2029年にかけて段階的に構築",
+        "中央アジアのAIコンピューティング需要の増加に応える",
+        "プロジェクトにより、カザフスタンは地域内のAIインフラの主要拠点になることを目指す",
+        "GcoreはNVIDIAのPreferred Cloud Partnerとして自社のGPUクラウドプラットフォームを展開"
+      ],
+      "glossary": [
+        {
+          "term": "GPU",
+          "explain_ja": "グラフィックス処理ユニット。計算を高速化するために使用されるハードウェア。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能。人間の知能を模倣したシステム。"
+        },
+        {
+          "term": "MoU",
+          "explain_ja": "覚書。合意に達した後、正式な契約を結ぶ前の段階の文書。"
+        }
+      ],
+      "personal_actions": [
+        "カザフスタンのAIデータセンター計画について最新の情報を確認する",
+        "地域のGPUリソースとAI関連のニーズを評価する",
+        "自社のAI運用方針を見直し、新たなインフラの可能性を考慮する"
       ],
       "tags": [
         "DC",
@@ -36,73 +81,41 @@
       ]
     },
     {
-      "url": "https://radio.foxnews.com/2026/11/11/democrats-big-mistake-bringing-back-woke-politics-could-undo-their-big-win-ft-wade-stotts/",
-      "source": "Fox News",
-      "publishedAt": "2026-11-11T20:42:04Z",
-      "title": "Democrats' BIG Mistake? Bringing Back Woke Politics Could Undo Their Big Win (ft. Wade Stotts)",
-      "title_ja": "民主党の大きな過ち？ ウォーク・ポリティクスの復活が大勝を台無しにする可能性",
-      "summary_ja": "アメリカは静かな情報戦の最前線にあり、シリコンバレーもその中心に位置しています。NvidiaのCEOが中国のスパイとの関係に巻き込まれ、北京に関連した団体が米国のAIデータセンターの拡張を妨害している中、技術大手は国家安全保障を短期的な株主利益と交換しているのかという疑問が浮上しています。今回の議論では、中国のAI覇権への取り組みと文化的分裂の利用について深掘りされています。",
+      "url": "https://www.techpowerup.com/354743/penguin-solutions-introduces-cxl-enabled-ddr4-module-to-help-address-memory-shortages-in-ai-data-centers",
+      "source": "Techpowerup.com",
+      "publishedAt": "2026-11-12T16:41:19Z",
+      "title": "Penguin Solutions Introduces CXL-Enabled DDR4 Module to Help Address Memory Shortages in AI Data Centers",
+      "title_ja": "ペンギンソリューションズ、AIデータセンターのメモリ不足解消に向けたCXL対応DDR4モジュールを発表",
+      "summary_ja": "ペンギンソリューションズは、AIシステムに対応するための新しいCXL対応DDR4メモリカードを発表しました。AIデータセンターの需要が急増する中、よりコスト効率的なメモリの拡張方法が求められています。新たなモジュールは、既存のDDR4メモリを利用することで、コスト削減とパフォーマンス向上を図るものです。",
       "key_points": [
-        "シリコンバレーは情報戦の最前線に位置している。",
-        "NvidiaのCEOが中国スパイとの関与を疑われている。",
-        "北京に関連した団体が米国のAIデータセンター拡張を妨害。",
-        "短期的な株主利益が国家安全保障のリスクを伴う可能性がある。",
-        "文化的な対立が敵対者によって利用されている。"
+        "Penguin SolutionsがSMART CXL-8F2W-D4を発表",
+        "DDR4メモリを利用することで経済的な利点を提供",
+        "AIデータセンターのDRAM需要が2026年には34%に達する見込み",
+        "既存のDDR4メモリの再利用を促進するプログラムを展開",
+        "メモリの信頼性を確保するZefr超高信頼性メモリスクリーニングプロセスを使用"
       ],
       "glossary": [
         {
-          "term": "ウォーク・ポリティクス",
-          "explain_ja": "社会的な不平等や差別に対する意識を高める政治的アプローチ。"
+          "term": "CXL (Compute Express Link)",
+          "explain_ja": "データセンター内の高速なメモリインターフェースを提供する新しいインターコネクト技術。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略称。"
+          "term": "DDR4",
+          "explain_ja": "第4世代のダブルデータレートSDRAMで、高速なデータ転送を実現するメモリ技術。"
+        },
+        {
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能の処理を専門に行うデータセンター。"
         }
       ],
       "personal_actions": [
-        "自社のAI関連技術やデータセンターの運用に関するリスクを評価する。",
-        "中国の技術革新に対する自社の対応策を検討する。",
-        "社内での情報セキュリティ対策を再確認する。"
+        "現在のインフラでのメモリ使用状況を確認する",
+        "既存のDDR4メモリの再利用可能性を評価する",
+        "CXL技術の導入に向けた計画を検討する"
       ],
       "tags": [
+        "DC",
         "AI"
-      ]
-    },
-    {
-      "url": "https://hardware.slashdot.org/story/26/11/11/1950231/ukraine-strikes-cause-permanent-data-loss-at-russias-yandex-cloud",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-11-11T20:00:00Z",
-      "title": "Ukraine Strikes Cause Permanent Data Loss at Russia's Yandex Cloud - Slashdot",
-      "title_ja": "ウクライナの攻撃がロシアのYandex Cloudにおけるデータの永久的な損失を引き起こす",
-      "summary_ja": "ウクライナの攻撃により、ロシアのYandexは顧客データの2.84%が永久的に失われたと報告しています。攻撃によって設備が重大な損傷を受け、バックアップもなかったため、復旧は不可能です。これを受けて、Yandexはデータ保護と災害復旧のアプローチを見直し、自動バックアップを新しい仮想マシン作成時にデフォルトで有効にすることを決定しました。",
-      "key_points": [
-        "ウクライナの攻撃でYandexのデータセンターが標的となった。",
-        "Yandexは2.84%の顧客データが永久的に損失したと明言。",
-        "バックアップツールを利用していた顧客のデータは影響を受けなかった。",
-        "Yandexは自動バックアップ機能を新規仮想マシン作成時にデフォルトで有効にする方針を発表。",
-        "新たな可用性ゾーン（ru-central1-f）が導入され、サービスの信頼性が向上する。"
-      ],
-      "glossary": [
-        {
-          "term": "Yandex Cloud",
-          "explain_ja": "ロシアの大手IT企業Yandexが提供するクラウドコンピューティングサービス。"
-        },
-        {
-          "term": "データ損失",
-          "explain_ja": "データが削除されたり、アクセスできなくなること。"
-        },
-        {
-          "term": "冗長性",
-          "explain_ja": "システムが故障した場合でもサービスを継続できる能力。"
-        }
-      ],
-      "personal_actions": [
-        "データバックアップの重要性について社内で再確認する。",
-        "現在使用しているクラウドサービスのバックアップ設定を見直す。",
-        "災害復旧計画についてチームと話し合い、必要な改善を検討する。"
-      ],
-      "tags": [
-        "その他"
       ]
     }
   ]
