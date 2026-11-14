@@ -1,121 +1,105 @@
 {
-  "date": "2026-11-14",
-  "generatedAtJST": "2026-11-14T07:15:40.649+09:00",
+  "date": "2026-11-15",
+  "generatedAtJST": "2026-11-15T07:15:25.645+09:00",
   "items": [
     {
-      "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-11-12T21:29:28Z",
-      "title": "Nebius tests the neocloud playbook with $40 billion in planned spending | TechCrunch",
-      "title_ja": "Nebius、400億ドルのAIインフラ拡張を計画中",
-      "summary_ja": "Nebiusは、400億ドルのAIインフラ拡張を顧客からの前払いと融資で賄う計画を発表しました。しかし、Microsoftのデータセンターでの遅延がこの資金調達モデルへの疑問を呼んでいます。この問題が解決しない限り、Nebiusの計画には影響が出る可能性があります。",
+      "url": "https://www.bgr.com/2310621/texas-runs-power-grid-ai-data-center-biggest-weakness/",
+      "source": "BGR",
+      "publishedAt": "2026-11-13T15:47:00Z",
+      "title": "Texas Has A Power Grid Unlike Any Other State, And AI Is Exposing Its Biggest Weakness",
+      "title_ja": "テキサス、独自の電力網とAIが明らかにする最大の弱点",
+      "summary_ja": "テキサス州は急増するAIの需要に応えるためにデータセンターの建設が進んでいるが、ERCOTはその電力供給能力に限界があることを示しています。特に非現実的な要求が増加しており、2026年7月には過去最高の91.1ギガワットを記録しました。この状況を受け、州政府はインフラの大規模な監査と新たな法案を導入し、安定した電力供給の確保を目指しています。",
       "key_points": [
-        "Nebiusは400億ドルのAIインフラ拡張を目指している。",
-        "資金調達は顧客からの前払いと融資による。",
-        "Microsoftのデータセンターでの遅延が資金調達モデルに疑問をもたらしている。",
-        "遅延問題が解決しなければ、計画に影響が出る可能性がある。"
+        "テキサスでのデータセンターの需要が急増している。",
+        "ERCOTは電力供給能力の限界に直面している。",
+        "新しい法案SB 6により、データセンター開発者がインフラのコストを負担することになった。",
+        "冬の嵐のような緊急時にはデータセンターの稼働停止が求められる可能性がある。",
+        "ERCOTによる監査がデータセンター開発のスケジュールに影響を与えている。"
       ],
       "glossary": [
         {
-          "term": "Nebius",
-          "explain_ja": "AIインフラを提供する企業。"
+          "term": "ERCOT",
+          "explain_ja": "テキサス州の電力供給を管理する機関です。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能の略で、人間の知能を模倣する技術。"
+          "term": "SB 6",
+          "explain_ja": "テキサス州議会で制定された法案で、データセンターのインフラ整備の負担を開発者に求める内容です。"
         },
         {
-          "term": "Microsoft",
-          "explain_ja": "マイクロソフト社、ソフトウェアやハードウェアを開発・提供する企業。"
+          "term": "Batch Zero",
+          "explain_ja": "ERCOTが導入した、データセンターの接続申請の初期審査プロセスです。"
+        }
+      ],
+      "personal_actions": [
+        "自社のデータセンターの電力供給と需要計画を見直す。",
+        "地域の電力供給会社との連携を強化し、将来の需要に対する準備を行う。",
+        "最新の法律や規制を把握し、適切な対応策を講じる。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/data-center-boom-fuels-inflation-concerns-complicates-fed-policy-decisions/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-11-13T13:47:58Z",
+      "title": "Data center boom fuels inflation concerns, complicates Fed policy decisions",
+      "title_ja": "データセンターの急増がインフレ懸念を引き起こし、FRBの政策決定を複雑化",
+      "summary_ja": "アウスタン・グールスビー氏は、データセンターの建設がインフレと需要圧力を引き起こしているとの懸念を示しました。このことは、FRBがインフレを無視する能力を複雑化させています。最近の米国消費者物価指数（CPI）は10月に0.4%上昇しており、これがインフレが3.2%を超えるシナリオを支える可能性があると市場は解釈しています。",
+      "key_points": [
+        "データセンター建設がインフレ上昇の重要因子となっている。",
+        "市場は10月の年次インフレが3.2%以下になる可能性が低いと見ている。",
+        "CPIデータは持続的なインフレを示しており、FRBの行動に影響を与える可能性がある。"
+      ],
+      "glossary": [
+        {
+          "term": "CPI",
+          "explain_ja": "消費者物価指数。一般的な消費者が購入する商品やサービスの価格変動を示す指標。"
+        },
+        {
+          "term": "FRB",
+          "explain_ja": "連邦準備制度理事会。米国の中央銀行であり、金融政策を決定する機関。"
+        }
+      ],
+      "personal_actions": [
+        "データセンターの建設状況やインフレ関連のニュースを定期的にチェックする。",
+        "CPIの発表を注視し、経済動向を把握する。",
+        "FRBの政策発表に注意し、自身のビジネスや投資に対する影響を考慮する。"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://newrepublic.com/article/217872/democrats-permitting-reform-baaja-big-oil-giveaway",
+      "source": "The New Republic",
+      "publishedAt": "2026-11-13T11:00:00Z",
+      "title": "The Democrats’ First Move After Their Big Win? A Giveaway to Big Oil.",
+      "title_ja": "民主党の初動はビッグオイルへの恩恵か？",
+      "summary_ja": "民主党は過去の選挙で歴史的な多数を勝ち取り、悪化した状況への対策を求められる中で、早々にビッグオイルへの恩恵を与える動きを見せている。この動きは、選挙中の支持者との信頼関係を損ねる可能性があるため懸念されている。環境政策を重視する市民からは反発が予想される。",
+      "key_points": [
+        "民主党は選挙で歴史的な多数を獲得した。",
+        "新政権の第一歩がビッグオイルへの恩恵である。",
+        "この動きは支持層との信頼関係に影響を及ぼす可能性がある。",
+        "環境問題に敏感な支持者からの反発が懸念されている。"
+      ],
+      "glossary": [
+        {
+          "term": "ビッグオイル",
+          "explain_ja": "大手石油企業を指し、その影響力は広範囲に及ぶ。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データを保管・管理する施設で、サーバーが設置されている。"
+          "explain_ja": "データを保管、処理する施設で、主にIT企業が運営している。"
         }
       ],
       "personal_actions": [
-        "Nebiusの最新情報をフォローして資金調達の進展を確認する。",
-        "顧客とのコミュニケーションを強化し、前払いオプションについての理解を深める。",
-        "Microsoftの関連ニュースをチェックし、データセンターの状況を把握する。"
+        "政策の進展を注視し、関連する公聴会や意見募集に参加する。",
+        "環境政策への影響を考慮し、自社の取り組みを見直す。"
       ],
       "tags": [
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.presseportal.de/en/pm/167782/6389325",
-      "source": "Presseportal.de",
-      "publishedAt": "2026-11-12T21:19:23Z",
-      "title": "Gcore and TengriAI to explore 100 MW AI data center in Kazakhstan / Phased project would give Central Asia...",
-      "title_ja": "GcoreとTengriAIがカザフスタンにおける100MWのAIデータセンター計画を探求",
-      "summary_ja": "GcoreとTengriAIは、カザフスタンに100MWのGPUデータセンターを構築するための覚書を締結しました。このプロジェクトは2027年から2029年の間に段階的に進められる予定です。中央アジアではAIコンピューティングの自国内需要が少なく、欧州や東アジアのインフラに依存している状況が続いています。このデータセンターにより、地域内の供給能力が向上し、AI運用の自主性が確保されることが期待されます。",
-      "key_points": [
-        "GcoreとTengriAIが協力してカザフスタンでGPUデータセンターを計画",
-        "データセンターの容量は最大100MWで、2027年から2029年にかけて段階的に構築",
-        "中央アジアのAIコンピューティング需要の増加に応える",
-        "プロジェクトにより、カザフスタンは地域内のAIインフラの主要拠点になることを目指す",
-        "GcoreはNVIDIAのPreferred Cloud Partnerとして自社のGPUクラウドプラットフォームを展開"
-      ],
-      "glossary": [
-        {
-          "term": "GPU",
-          "explain_ja": "グラフィックス処理ユニット。計算を高速化するために使用されるハードウェア。"
-        },
-        {
-          "term": "AI",
-          "explain_ja": "人工知能。人間の知能を模倣したシステム。"
-        },
-        {
-          "term": "MoU",
-          "explain_ja": "覚書。合意に達した後、正式な契約を結ぶ前の段階の文書。"
-        }
-      ],
-      "personal_actions": [
-        "カザフスタンのAIデータセンター計画について最新の情報を確認する",
-        "地域のGPUリソースとAI関連のニーズを評価する",
-        "自社のAI運用方針を見直し、新たなインフラの可能性を考慮する"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://www.techpowerup.com/354743/penguin-solutions-introduces-cxl-enabled-ddr4-module-to-help-address-memory-shortages-in-ai-data-centers",
-      "source": "Techpowerup.com",
-      "publishedAt": "2026-11-12T16:41:19Z",
-      "title": "Penguin Solutions Introduces CXL-Enabled DDR4 Module to Help Address Memory Shortages in AI Data Centers",
-      "title_ja": "ペンギンソリューションズ、AIデータセンターのメモリ不足解消に向けたCXL対応DDR4モジュールを発表",
-      "summary_ja": "ペンギンソリューションズは、AIシステムに対応するための新しいCXL対応DDR4メモリカードを発表しました。AIデータセンターの需要が急増する中、よりコスト効率的なメモリの拡張方法が求められています。新たなモジュールは、既存のDDR4メモリを利用することで、コスト削減とパフォーマンス向上を図るものです。",
-      "key_points": [
-        "Penguin SolutionsがSMART CXL-8F2W-D4を発表",
-        "DDR4メモリを利用することで経済的な利点を提供",
-        "AIデータセンターのDRAM需要が2026年には34%に達する見込み",
-        "既存のDDR4メモリの再利用を促進するプログラムを展開",
-        "メモリの信頼性を確保するZefr超高信頼性メモリスクリーニングプロセスを使用"
-      ],
-      "glossary": [
-        {
-          "term": "CXL (Compute Express Link)",
-          "explain_ja": "データセンター内の高速なメモリインターフェースを提供する新しいインターコネクト技術。"
-        },
-        {
-          "term": "DDR4",
-          "explain_ja": "第4世代のダブルデータレートSDRAMで、高速なデータ転送を実現するメモリ技術。"
-        },
-        {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能の処理を専門に行うデータセンター。"
-        }
-      ],
-      "personal_actions": [
-        "現在のインフラでのメモリ使用状況を確認する",
-        "既存のDDR4メモリの再利用可能性を評価する",
-        "CXL技術の導入に向けた計画を検討する"
-      ],
-      "tags": [
-        "DC",
-        "AI"
+        "その他"
       ]
     }
   ]
