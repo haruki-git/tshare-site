@@ -1,39 +1,76 @@
 {
-  "date": "2026-11-18",
-  "generatedAtJST": "2026-11-18T07:15:37.589+09:00",
+  "date": "2026-11-19",
+  "generatedAtJST": "2026-11-19T07:15:27.990+09:00",
   "items": [
     {
-      "url": "https://slashdot.org/submission/17352338/just-400-us-data-centers-use-more-electricity-than-michigan",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-11-16T21:34:41Z",
-      "title": "Just 400 US Data Centers Use More Electricity Than Michigan - Slashdot",
-      "title_ja": "米国のわずか400のデータセンターがミシガン州よりも多くの電力を消費",
-      "summary_ja": "新たなハーバード大学の研究によると、米国のわずか400のハイパースケールデータセンターが年間でミシガン州の電力消費と同等の電力量を使用している。研究は、これらのデータセンターの大部分が化石燃料で発電された電力を利用していることを示しており、データセンターの排出量はAIブーム前の3倍に達している。データセンターの使用状況は、連邦および州政府によって他の電力部門と分けて追跡されておらず、アメリカの電力網への深刻な影響が懸念されている。",
+      "url": "https://commercialobserver.com/2026/11/blue-owl-virginia-data-center-gainesville-crossing/",
+      "source": "Commercial Observer",
+      "publishedAt": "2026-11-17T20:05:32Z",
+      "title": "Blue Owl Acquires Northern Virginia Data Center for $780M",
+      "title_ja": "ブルーオウル、バージニア州のデータセンターを7億8,000万ドルで取得",
+      "summary_ja": "ブルーオウルキャピタルがバージニア州ノーザンバージニアの54メガワットデータセンターを7億7,950万ドルで取得し、デジタルインフラのポートフォリオを拡大しました。この施設は、Gainesville Crossing Data Center Campus内にあり、1つのハイパースケールテナントに完全にリースされています。融資にはシティバンクとウェルズファーゴによる5億1,260万ドルの浮動金利モーゲージが含まれています。",
       "key_points": [
-        "米国の400のデータセンターがミシガン州の電力使用量と同等を消費",
-        "多くの電力が化石燃料から生成されている",
-        "データセンターの排出量はAIブーム前の3倍",
-        "連邦および州政府はデータセンター使用を特別に追跡していない",
-        "バージニア州、オレゴン州、オハイオ州、アイオワ州が多くのエネルギー使用に寄与"
+        "ブルーオウルキャピタルが54メガワットのデータセンターを取得",
+        "取得価格は7億7,950万ドル",
+        "施設はGainesville Crossing Data Center Campus内に位置",
+        "1つの未発表のハイパースケールテナントに全てリース済み",
+        "シティバンクとウェルズファーゴからの融資を受けている",
+        "Affinius CapitalとCorscale Data Centersが売却者"
       ],
       "glossary": [
         {
-          "term": "hyperscale data center",
-          "explain_ja": "非常に大規模なデータセンターで、大量のデータ処理と保存が可能。"
+          "term": "ハイパースケール",
+          "explain_ja": "大規模なデータセンターを指し、一般にクラウドコンピューティングサービスを提供する用途に使われる。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能（Artificial Intelligence）の略。データセンターでよく使用される技術。"
+          "term": "融資",
+          "explain_ja": "借入金で、通常は元本を返済しながら利息を支払う必要がある。"
         },
         {
-          "term": "carbon emissions",
-          "explain_ja": "二酸化炭素排出量。温室効果ガスの一種で、気候変動に寄与。"
+          "term": "デジタルインフラ",
+          "explain_ja": "データセンターやサーバーなど、デジタルデータを処理・保存・伝送するための基盤。"
         }
       ],
       "personal_actions": [
-        "データセンターの電力消費が地域の電力供給に与える影響を調査する",
-        "自社のデータセンターがどのような電力源を使用しているか確認する",
-        "地域の電力供給者にデータセンターの使用状況についてのデータを求める"
+        "周辺のデータセンター市場の動向を確認する",
+        "ブルーオウルキャピタルの追加投資戦略を追跡する",
+        "自社のインフラ投資を見直す"
+      ],
+      "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://www.theregister.com/off-prem/2026/11/17/americas-hyperscale-bit-barns-draw-as-much-power-as-entire-states/5310471",
+      "source": "Theregister.com",
+      "publishedAt": "2026-11-17T18:29:00Z",
+      "title": "America's hyperscale bit barns draw as much power as entire states",
+      "title_ja": "アメリカのハイパースケールデータセンターは州全体の電力を消費",
+      "summary_ja": "ハーバード大学の研究によると、403のハイパースケールデータセンターが2024-25年にアメリカの電力の約1.8％を消費し、二酸化炭素排出量は2018年の予測の2〜3倍に達した。この研究は、クラウドコンピューティングやAI処理を支えるサーバーファームに焦点を当てている。電力消費量は、インディアナ州やミシガン州、テネシー州と同程度に達する可能性があるとしている。",
+      "key_points": [
+        "403のハイパースケールデータセンターがアメリカの電力の1.8％を消費。",
+        "二酸化炭素排出量は2018年の予測の2〜3倍。",
+        "電力消費の推定は68-99テラワット時（TWh）。",
+        "54％の電力が化石燃料から供給されている。"
+      ],
+      "glossary": [
+        {
+          "term": "データセンター",
+          "explain_ja": "データの保存、管理、処理を行う施設。"
+        },
+        {
+          "term": "ハイパースケール",
+          "explain_ja": "大規模なデータセンターの運用モデルであり、通常、クラウドサービスに使用される。"
+        },
+        {
+          "term": "CO2（炭酸ガス）",
+          "explain_ja": "温室効果ガスの一種で、主に化石燃料の燃焼によって排出される。"
+        }
+      ],
+      "personal_actions": [
+        "自社のデータセンターのエネルギー効率を確認し、改善点を特定する。",
+        "データセンターのクリーンエネルギー利用状況を評価する。",
+        "新たなデータセンターの建設計画において、環境への影響を考慮する。"
       ],
       "tags": [
         "DC",
@@ -41,70 +78,35 @@
       ]
     },
     {
-      "url": "https://www.techradar.com/pro/kioxia-and-dell-have-managed-to-cram-in-a-huge-157-pb-of-raw-flash-storage-into-a-single-42u-server-rack",
+      "url": "https://www.techradar.com/pro/why-adaptability-beats-capacity-for-data-centers",
       "source": "TechRadar",
-      "publishedAt": "2026-11-16T20:40:00Z",
-      "title": "Kioxia and Dell have managed to cram in a huge 157 PB of raw flash storage into a single 42U server rack",
-      "title_ja": "キオクシアとデルが42Uサーバーラックに157PBのフラッシュストレージを実装",
-      "summary_ja": "キオクシアとデルが157PBの生フラッシュストレージを一本の42Uサーバーラックに集約しました。これは16台のサーバーに640個の高容量SSDを組み合わせることで実現されています。この技術革新は、データセンターのストレージ能力を大幅に向上させる可能性があります。",
+      "publishedAt": "2026-11-17T15:28:21Z",
+      "title": "Why adaptability beats capacity for data centers",
+      "title_ja": "データセンターにおいて適応性が容量を上回る理由",
+      "summary_ja": "AIがデータセンターの設計や密度、冷却、持続可能性を再形成しています。データセンターの適応性は、変化するニーズに応えるために特に重要です。この変化は効率性と持続可能性の向上につながると期待されています。",
       "key_points": [
-        "157PBの生フラッシュストレージを42Uラックに搭載",
-        "16台のサーバーと640個のSSDを使用",
-        "データセンターの効率性を向上",
-        "物理スペースの節約を実現",
-        "最新のストレージ技術による革新"
+        "AIがデータセンターの設計に影響を与えている",
+        "適応性が求められる理由は変化する市場ニーズに対応するため",
+        "データセンターの冷却技術が進化している",
+        "持続可能性がデータセンター運営の鍵となっている"
       ],
       "glossary": [
         {
-          "term": "SSD",
-          "explain_ja": "固体状態ドライブの略で、データを記録するメディアです。"
+          "term": "AI",
+          "explain_ja": "人工知能。データセンターの効率化や最適化に貢献する技術。"
         },
         {
-          "term": "PB",
-          "explain_ja": "ペタバイトの略で、1PBは約1,000テラバイトに相当します。"
+          "term": "冷却",
+          "explain_ja": "データセンターにおける温度管理の手法で、機器の性能維持に不可欠。"
         }
       ],
       "personal_actions": [
-        "最新のストレージ技術を調査する",
-        "ストレージの需要を見直す",
-        "データセンターのアップグレード計画を検討する"
+        "データセンターの最新の冷却技術を調査する",
+        "AIの活用事例を社内で議論する"
       ],
       "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://www.theverge.com/science/1034694/nuclear-energy-constellation-earnings-data-centers-democrats",
-      "source": "The Verge",
-      "publishedAt": "2026-11-16T20:32:51Z",
-      "title": "Big Nuclear isn’t worried about the Democrats stopping data centers",
-      "title_ja": "大手原子力企業、民主党によるデータセンター停止の懸念なし",
-      "summary_ja": "アメリカ最大の原子力発電所運営会社であるコンステレーションエナジーは、民主党がデータセンター開発を遅らせることを懸念していない。CEOのジョー・ドミンゲスは最近の第3四半期の決算発表で、この見解を強調した。これにより、原子力業界は引き続き安定した運営が可能と考えられる。",
-      "key_points": [
-        "コンステレーションエナジーはアメリカ最大の原子力発電所運営会社である。",
-        "民主党がデータセンター開発を抑制する懸念はないとCEOが発言。",
-        "原子力業界への影響は限定的と見られている。"
-      ],
-      "glossary": [
-        {
-          "term": "データセンター",
-          "explain_ja": "企業のITインフラを支えるために使用される施設で、サーバーやネットワーク機器が集中的に配置されている。"
-        },
-        {
-          "term": "コンステレーションエナジー",
-          "explain_ja": "アメリカの原子力発電所の運営会社で、規模の大きい企業。"
-        },
-        {
-          "term": "第3四半期",
-          "explain_ja": "企業の会計年度における第三の期間、通常は7月から9月を指す。"
-        }
-      ],
-      "personal_actions": [
-        "企業の原子力依存度を確認する。",
-        "データセンターの運営に影響を与える政策を調査する。"
-      ],
-      "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     }
   ]
