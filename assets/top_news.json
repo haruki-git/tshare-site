@@ -1,101 +1,109 @@
 {
-  "date": "2026-11-20",
-  "generatedAtJST": "2026-11-20T07:15:27.901+09:00",
+  "date": "2026-11-21",
+  "generatedAtJST": "2026-11-21T07:15:37.869+09:00",
   "items": [
     {
-      "url": "https://www.commondreams.org/news/data-centers-on-public-lands",
-      "source": "Common Dreams",
-      "publishedAt": "2026-11-18T21:23:16Z",
-      "title": "Coalition of 115 Groups Calls for Immediate Data Center Moratorium on Public Lands",
-      "title_ja": "公有地でのデータセンター開発に対する即時のモラトリアムを求める115団体の連携",
-      "summary_ja": "トランプ政権と両党の議員がデータセンター開発を加速しようとする中、115の保全団体と支援団体が連携し、即時のモラトリアムを呼びかけています。この動きは、最近の世論調査によれば、米国民の大多数の意向とは反するものです。データセンターの増加は環境への影響が懸念されており、今後の政策に注目が集まっています。",
+      "url": "https://slashdot.org/firehose.pl?op=view&id=186797964",
+      "source": "Slashdot.org",
+      "publishedAt": "2026-11-19T21:12:05Z",
+      "title": "AI data center power demand will double by 2030 thanks to $4 trillion in spending, adding an entire Great Britain to energy strain  - Slashdot",
+      "title_ja": "2030年までにAIデータセンターの電力需要が倍増、4兆ドルの投資で英国全体分のエネルギー負担増が予測",
+      "summary_ja": "国際エネルギー機関（IEA）の報告によれば、AIデータセンターの電力需要は2030年までに倍増するとされています。これは4兆ドルの投資によるもので、製造と配電の体制は急速な成長についていけていない状態です。この成長はエネルギー供給に大きな負担をかけると見込まれています。",
       "key_points": [
-        "115団体がデータセンターの公有地開発に反対する連携を結成",
-        "トランプ政権と議員が開発を加速する動きが見られる",
-        "最近の世論調査では大多数のアメリカ人が反対",
-        "データセンターの増加が環境に与える影響が懸念される",
-        "モラトリアムの要求が政策議論を刺激する可能性"
+        "AIデータセンターの電力需要は2030年までに倍増する見込み。",
+        "4兆ドルの投資がこの成長を支えている。",
+        "電力の生産と配分は急成長に対して厳しい状況。",
+        "この増加分は英国全体の電力需要に相当する。"
       ],
       "glossary": [
         {
-          "term": "モラトリアム",
-          "explain_ja": "特定の活動や事業を一時停止すること。"
+          "term": "IEA",
+          "explain_ja": "国際エネルギー機関（International Energy Agency）の略で、エネルギー政策の分析や提言を行う国際機関。"
         },
         {
-          "term": "データセンター",
-          "explain_ja": "データの保管、管理、処理を行う施設。"
+          "term": "AIデータセンター",
+          "explain_ja": "人工知能（AI）の処理を行うデータセンター。特に高い計算性能と電力消費を必要とする。"
         }
       ],
       "personal_actions": [
-        "公有地でのデータセンター開発に関する地域のニュースを追跡する",
-        "データセンターの環境影響についての情報を集める",
-        "地域団体の活動に参加し、意見表明を行う"
+        "現場の電力使用を見直し、効率化を図る。",
+        "AIシステムにおける電力消費の適切な管理を行う。",
+        "将来の電力需要を考慮し、設備投資計画を見直す。"
       ],
       "tags": [
-        "DC"
+        "DC",
+        "AI"
       ]
     },
     {
-      "url": "https://www.rawstory.com/alabama-data-center-new-report/",
-      "source": "Raw Story",
-      "publishedAt": "2026-11-18T18:24:33Z",
-      "title": "'Is this America?' Police clear packed meeting as furious residents fight mystery project",
-      "title_ja": "アラバマ州オペリカ、データセンター計画を巡る住民の怒り",
-      "summary_ja": "アラバマ州オペリカで、データセンター建設の提案を巡り住民が激怒し、会議が警察によって解散された。住民は計画の詳細に不満を示し、決定過程に対する透明性を求めている。この騒動は、地域の開発や住民の声が無視されることへの強い反発を示している。",
+      "url": "https://www.dcforecasts.com/bitcoin-news/mara-riot-bitcoin-sales-60845-btc-2026/",
+      "source": "Dcforecasts.com",
+      "publishedAt": "2026-11-19T21:09:18Z",
+      "title": "MARA and Riot Sold 60,845 Bitcoin in 2026 to Pay for Power Plants and AI Campuses",
+      "title_ja": "MARAとRiot、2026年に60,845ビットコインを販売",
+      "summary_ja": "MARA HoldingsとRiot Platformsは2026年に60,845ビットコインを販売しました。この売却により、約45億ドルを調達し、負債の返済及び電力プラントやAIデータセンターの構築に充てることができます。この動きは、競争力を高めるための資金確保を目的としています。",
       "key_points": [
-        "住民がデータセンター計画に反対し、会議が警察によって解散された",
-        "計画は長い間未使用であった土地に関連している",
-        "住民は決定過程の透明性を求めている",
-        "市の計画委員会は積極的に提案を進めているが、住民の信頼は損なわれている",
-        "地域社会の開発は住民の意見を反映すべきという声が高まっている"
+        "MARAとRiotが2026年に60,845ビットコインを売却",
+        "売却額は約45億ドルに達する",
+        "資金は負債返済とインフラ整備に使用される",
+        "電力プラントとAIデータセンターの構築が計画されている",
+        "競争力向上を目指す戦略的な資金調達"
       ],
       "glossary": [
         {
-          "term": "データセンター",
-          "explain_ja": "データを保存、管理、処理するための施設で、ITシステムの基盤を提供する。"
+          "term": "MARA Holdings",
+          "explain_ja": "暗号通貨マイニングを行う企業で、ビットコインの取得や販売を行っている。"
         },
         {
-          "term": "計画委員会",
-          "explain_ja": "地方自治体で都市計画や地域開発に関する提案を審査し、承認を行う機関。"
+          "term": "Riot Platforms",
+          "explain_ja": "米国のビットコインマイニング会社で、高効率なマイニングを行っている。"
+        },
+        {
+          "term": "ビットコイン",
+          "explain_ja": "分散型デジタル通貨で、名目上の銀行などを介さずに取引が可能。"
         }
       ],
       "personal_actions": [
-        "地域の計画や開発に関する最新情報を確認する",
-        "住民代表と話し合い、意見を共有する",
-        "次回の住民会議に参加し声を上げる"
+        "自社の電力使用効率を確認し、改善策を検討する。",
+        "暗号通貨の市場動向や競合分析を行う。",
+        "インフラ投資についてのビジョンを再評価する。"
+      ],
+      "tags": [
+        "DC",
+        "AI"
+      ]
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/introducing-amazon-emr-serverless-flex-run-non-urgent-spark-jobs-at-a-discount/",
+      "source": "Amazon.com",
+      "publishedAt": "2026-11-19T20:58:07Z",
+      "title": "Introducing Amazon EMR Serverless Flex: Run non-urgent Spark jobs at a discount",
+      "title_ja": "Amazon EMR Serverless Flexの導入：非緊急のSparkジョブを割引価格で実行",
+      "summary_ja": "Amazon EMR Serverless Flexが新たに導入され、非緊急のSparkバッチジョブを通常価格の60%割引で実行できるようになります。これにより、利用者はスパー計算能力を有効活用し、コスト削減が期待されます。特に急を要さない処理において、柔軟な運用が可能となります。",
+      "key_points": [
+        "Amazon EMR Serverless Flexは非緊急のSparkジョブ向けの新しい実行オプション。",
+        "標準価格の60%割引で利用可能。",
+        "スパー計算能力を効率的に活用できる。",
+        "Availability Zoneの選択やインスタンスの多様性を管理。",
+        "ジョブコストを削減しつつ、柔軟なリソース管理が可能。"
+      ],
+      "glossary": [
+        {
+          "term": "Amazon EMR",
+          "explain_ja": "Amazon EMRは、ビッグデータ処理を簡単に行えるクラウドサービスである。"
+        },
+        {
+          "term": "Spark",
+          "explain_ja": "Apache Sparkは、ビッグデータ処理のための高速で汎用的なクラスタコンピューティングフレームワークである。"
+        }
+      ],
+      "personal_actions": [
+        "現在のSparkジョブのコストを評価し、非緊急なものをEMR Serverless Flexで実行できるか検討する。",
+        "利用しているAWSリソースを見直し、スパー計算能力の効率的な活用法を考える。",
+        "Amazon EMR Serverless Flexの詳細を調べ、その適用範囲を検討する。"
       ],
       "tags": [
         "その他"
-      ]
-    },
-    {
-      "url": "https://www.cbsnews.com/news/hyperscale-data-centers-electricity-harvard-study/",
-      "source": "CBS News",
-      "publishedAt": "2026-11-18T17:53:18Z",
-      "title": "Largest U.S. data centers use as much power as some countries",
-      "title_ja": "米国最大のデータセンターは一部の国と同等の電力を使用",
-      "summary_ja": "ハーバードの研究によると、米国のハイパースケールデータセンターは2024年から2025年の間に米国全体の電力のほぼ2%を消費している。この電力消費量は、いくつかの国の電力使用量と同じレベルに達している。これにより、データセンターのエネルギー効率の改善が求められている。",
-      "key_points": [
-        "米国のハイパースケールデータセンターは2024〜2025年に約2%の電力を使用",
-        "この消費量は一部の国と同等",
-        "エネルギー効率の向上が必要とされている"
-      ],
-      "glossary": [
-        {
-          "term": "ハイパースケールデータセンター",
-          "explain_ja": "大規模なデータ処理を行うために設計されたデータセンターのこと。"
-        },
-        {
-          "term": "電力消費",
-          "explain_ja": "データセンターが運用されるために必要な電力の量。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターの運用における電力消費状況を確認する",
-        "エネルギー効率向上のための対策を検討する"
-      ],
-      "tags": [
-        "DC"
       ]
     }
   ]
