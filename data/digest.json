@@ -1,109 +1,109 @@
 {
-  "date": "2026-11-21",
-  "generatedAtJST": "2026-11-21T07:15:37.869+09:00",
+  "date": "2026-11-22",
+  "generatedAtJST": "2026-11-22T07:15:45.739+09:00",
   "items": [
     {
-      "url": "https://slashdot.org/firehose.pl?op=view&id=186797964",
-      "source": "Slashdot.org",
-      "publishedAt": "2026-11-19T21:12:05Z",
-      "title": "AI data center power demand will double by 2030 thanks to $4 trillion in spending, adding an entire Great Britain to energy strain  - Slashdot",
-      "title_ja": "2030年までにAIデータセンターの電力需要が倍増、4兆ドルの投資で英国全体分のエネルギー負担増が予測",
-      "summary_ja": "国際エネルギー機関（IEA）の報告によれば、AIデータセンターの電力需要は2030年までに倍増するとされています。これは4兆ドルの投資によるもので、製造と配電の体制は急速な成長についていけていない状態です。この成長はエネルギー供給に大きな負担をかけると見込まれています。",
+      "url": "https://tech.yahoo.com/general/article/trump-threatens-us-companies-that-build-data-centers-in-other-countries-as-americans-increasingly-oppose-the-facilities-in-their-communities-202048230.html",
+      "source": "Yahoo Entertainment",
+      "publishedAt": "2026-11-20T20:27:38Z",
+      "title": "Trump threatens 'tremendous tax' on tech companies that build AI centers overseas",
+      "title_ja": "トランプ米大統領、海外にデータセンターを建設する企業に「巨大な税金」を警告",
+      "summary_ja": "トランプ大統領は、米国のテクノロジー企業が海外にデータセンターを建設した場合、\"巨大な税金\"を課すと警告した。これに対し、米国民はデータセンターの地域設置に対して反対の声を強めている。結果として、企業は米国内でのデータセンター建設を再検討する可能性がある。",
       "key_points": [
-        "AIデータセンターの電力需要は2030年までに倍増する見込み。",
-        "4兆ドルの投資がこの成長を支えている。",
-        "電力の生産と配分は急成長に対して厳しい状況。",
-        "この増加分は英国全体の電力需要に相当する。"
+        "トランプ大統領が海外データセンター建設企業に警告。",
+        "「巨大な税金」を施行する考えを示す。",
+        "地域の反対が高まる中、企業の判断に影響を与える。"
       ],
       "glossary": [
         {
-          "term": "IEA",
-          "explain_ja": "国際エネルギー機関（International Energy Agency）の略で、エネルギー政策の分析や提言を行う国際機関。"
+          "term": "データセンター",
+          "explain_ja": "データを保存、管理するための施設。"
         },
         {
-          "term": "AIデータセンター",
-          "explain_ja": "人工知能（AI）の処理を行うデータセンター。特に高い計算性能と電力消費を必要とする。"
+          "term": "AI",
+          "explain_ja": "人工知能のことで、機械が知的作業を行う技術。"
+        },
+        {
+          "term": "米国民",
+          "explain_ja": "アメリカの国民、またはアメリカ合衆国の市民。"
         }
       ],
       "personal_actions": [
-        "現場の電力使用を見直し、効率化を図る。",
-        "AIシステムにおける電力消費の適切な管理を行う。",
-        "将来の電力需要を考慮し、設備投資計画を見直す。"
+        "企業の方針を確認し、海外拠点に関する影響を把握する。",
+        "地域社会の意見を調査し、自分の立場を考え直す。"
       ],
       "tags": [
-        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://www.dcforecasts.com/bitcoin-news/mara-riot-bitcoin-sales-60845-btc-2026/",
-      "source": "Dcforecasts.com",
-      "publishedAt": "2026-11-19T21:09:18Z",
-      "title": "MARA and Riot Sold 60,845 Bitcoin in 2026 to Pay for Power Plants and AI Campuses",
-      "title_ja": "MARAとRiot、2026年に60,845ビットコインを販売",
-      "summary_ja": "MARA HoldingsとRiot Platformsは2026年に60,845ビットコインを販売しました。この売却により、約45億ドルを調達し、負債の返済及び電力プラントやAIデータセンターの構築に充てることができます。この動きは、競争力を高めるための資金確保を目的としています。",
+      "url": "https://oilprice.com/Energy/Energy-General/US-Data-Center-Boom-Faces-a-New-Political-Reality.html",
+      "source": "OilPrice.com",
+      "publishedAt": "2026-11-20T19:00:00Z",
+      "title": "US Data Center Boom Faces a New Political Reality",
+      "title_ja": "米国のデータセンターブーム、新たな政治的現実に直面",
+      "summary_ja": "米国では、2027年から2030年にかけて発表された300GWのデータセンター容量の77%を、民主党の知事が率いる州が占めることになります。これにはテキサス、バージニア、ペンシルベニア、オハイオ、ジョージアのような主要市場が含まれます。政治的な変化はデータセンターの開発や運営に影響を及ぼす可能性が高く、この新たな現実に適応する必要があります。",
       "key_points": [
-        "MARAとRiotが2026年に60,845ビットコインを売却",
-        "売却額は約45億ドルに達する",
-        "資金は負債返済とインフラ整備に使用される",
-        "電力プラントとAIデータセンターの構築が計画されている",
-        "競争力向上を目指す戦略的な資金調達"
+        "民主党の知事が率いる州が主要なデータセンター市場を占める",
+        "2027-2030年に300GWのデータセンター容量が計画されている",
+        "主要州にはテキサス、バージニア、ペンシルベニア、オハイオ、ジョージアが含まれる",
+        "新たな政治的環境は業界に変化をもたらす可能性がある",
+        "データセンターの運営と投資戦略に影響が出ることが予想される"
       ],
       "glossary": [
         {
-          "term": "MARA Holdings",
-          "explain_ja": "暗号通貨マイニングを行う企業で、ビットコインの取得や販売を行っている。"
+          "term": "GW",
+          "explain_ja": "ギガワット。エネルギーの単位で、主に電力の容量を示す。"
         },
         {
-          "term": "Riot Platforms",
-          "explain_ja": "米国のビットコインマイニング会社で、高効率なマイニングを行っている。"
-        },
-        {
-          "term": "ビットコイン",
-          "explain_ja": "分散型デジタル通貨で、名目上の銀行などを介さずに取引が可能。"
+          "term": "データセンター",
+          "explain_ja": "データを管理・保存するための施設で、サーバーやネットワーク機器が集積されている。"
         }
       ],
       "personal_actions": [
-        "自社の電力使用効率を確認し、改善策を検討する。",
-        "暗号通貨の市場動向や競合分析を行う。",
-        "インフラ投資についてのビジョンを再評価する。"
+        "主要州のデータセンター関連の政策変更をモニターする",
+        "投資戦略において、政治的環境の変化に応じたリスク評価を行う"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "DC"
       ]
     },
     {
-      "url": "https://aws.amazon.com/blogs/big-data/introducing-amazon-emr-serverless-flex-run-non-urgent-spark-jobs-at-a-discount/",
-      "source": "Amazon.com",
-      "publishedAt": "2026-11-19T20:58:07Z",
-      "title": "Introducing Amazon EMR Serverless Flex: Run non-urgent Spark jobs at a discount",
-      "title_ja": "Amazon EMR Serverless Flexの導入：非緊急のSparkジョブを割引価格で実行",
-      "summary_ja": "Amazon EMR Serverless Flexが新たに導入され、非緊急のSparkバッチジョブを通常価格の60%割引で実行できるようになります。これにより、利用者はスパー計算能力を有効活用し、コスト削減が期待されます。特に急を要さない処理において、柔軟な運用が可能となります。",
+      "url": "https://wccftech.com/henrico-countys-data-center-tax-subsidized-new-middle-class-homes-by-226000-but-at-the-cost-of-500000-gallons-of-water-a-day-diesel-fumes-and-soaring-power-bills/",
+      "source": "Wccftech",
+      "publishedAt": "2026-11-20T16:08:37Z",
+      "title": "Henrico County’s Data Center Tax Subsidized New Middle-Class Homes By $226,000, But At The Cost of 500,000 Gallons of Water A Day, Diesel Fumes, And Soaring Power Bills",
+      "title_ja": "ヘンリコ郡のデータセンターが新中流家庭を226,000ドル補助、しかし毎日500,000ガロンの水消費とディーゼル排気ガス、高騰する電気代の代償も",
+      "summary_ja": "ヘンリコ郡は、データセンターの収益を利用して750軒の新たな中流住宅を建設することを目指している。しかし、データセンターによる水消費の増加や電気代の高騰が地域コミュニティに悪影響を及ぼし、住民の反発を招いている。このプログラムは一部の成功を収めているものの、環境への影響や低所得層の住宅需要を無視するという批判が高まっている。",
       "key_points": [
-        "Amazon EMR Serverless Flexは非緊急のSparkジョブ向けの新しい実行オプション。",
-        "標準価格の60%割引で利用可能。",
-        "スパー計算能力を効率的に活用できる。",
-        "Availability Zoneの選択やインスタンスの多様性を管理。",
-        "ジョブコストを削減しつつ、柔軟なリソース管理が可能。"
+        "ヘンリコ郡では17のデータセンターが稼働中で、14が計画中。",
+        "データセンターは$60百万の住宅費用補助基金を設立。",
+        "データセンターの新税率は2025年に$2.60に引き上げられる予定。",
+        "データセンターは毎日約500,000ガロンの水を消費。",
+        "住民は建設騒音やディーゼル排気について不満を抱いている。",
+        "プログラムは60％から120％の地域中央値所得（AMI）を対象としているが、低所得者層は除外されている。"
       ],
       "glossary": [
         {
-          "term": "Amazon EMR",
-          "explain_ja": "Amazon EMRは、ビッグデータ処理を簡単に行えるクラウドサービスである。"
+          "term": "AMI (Area Median Income)",
+          "explain_ja": "地域の中央値所得。住宅支援の対象者を決定する際の基準となる。"
         },
         {
-          "term": "Spark",
-          "explain_ja": "Apache Sparkは、ビッグデータ処理のための高速で汎用的なクラスタコンピューティングフレームワークである。"
+          "term": "データセンター",
+          "explain_ja": "情報処理やデータ管理を行うための特化した施設。"
+        },
+        {
+          "term": "補助基金",
+          "explain_ja": "特定の目的のために設立された資金。ここでは住宅建設のために使用される。"
         }
       ],
       "personal_actions": [
-        "現在のSparkジョブのコストを評価し、非緊急なものをEMR Serverless Flexで実行できるか検討する。",
-        "利用しているAWSリソースを見直し、スパー計算能力の効率的な活用法を考える。",
-        "Amazon EMR Serverless Flexの詳細を調べ、その適用範囲を検討する。"
+        "地域の水利用状況についてのデータを確認する。",
+        "データセンターの近くに住む場合、騒音や空気質について意見を表明する。",
+        "地域の住宅プログラムについて理解を深め、その情報を共有する。"
       ],
       "tags": [
-        "その他"
+        "DC"
       ]
     }
   ]
