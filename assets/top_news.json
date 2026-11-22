@@ -1,109 +1,116 @@
 {
-  "date": "2026-11-22",
-  "generatedAtJST": "2026-11-22T07:15:45.739+09:00",
+  "date": "2026-11-23",
+  "generatedAtJST": "2026-11-23T07:15:28.773+09:00",
   "items": [
     {
-      "url": "https://tech.yahoo.com/general/article/trump-threatens-us-companies-that-build-data-centers-in-other-countries-as-americans-increasingly-oppose-the-facilities-in-their-communities-202048230.html",
-      "source": "Yahoo Entertainment",
-      "publishedAt": "2026-11-20T20:27:38Z",
-      "title": "Trump threatens 'tremendous tax' on tech companies that build AI centers overseas",
-      "title_ja": "トランプ米大統領、海外にデータセンターを建設する企業に「巨大な税金」を警告",
-      "summary_ja": "トランプ大統領は、米国のテクノロジー企業が海外にデータセンターを建設した場合、\"巨大な税金\"を課すと警告した。これに対し、米国民はデータセンターの地域設置に対して反対の声を強めている。結果として、企業は米国内でのデータセンター建設を再検討する可能性がある。",
+      "url": "https://dailycaller.com/2026/11/21/opinion-spacex-texas-data-center-permitting-david-blackmon/",
+      "source": "The Daily Caller",
+      "publishedAt": "2026-11-21T15:30:01Z",
+      "title": "SpaceX First In Line As Texas Resumes Data Center Permitting",
+      "title_ja": "テキサス州がデータセンターの許可再開、SpaceXが最初の申請者に",
+      "summary_ja": "テキサス州がデータセンターの許可を再開し、SpaceXが最初の申請者となった。11月16日に、TCEQがSpaceXの計画するデータセンター及びガス火力発電所に対する空気許可を発行した。このプロジェクトは、ブラウンズビル港近くの444エーカーの敷地に位置する。今後、プロジェクトの進展が期待される。",
       "key_points": [
-        "トランプ大統領が海外データセンター建設企業に警告。",
-        "「巨大な税金」を施行する考えを示す。",
-        "地域の反対が高まる中、企業の判断に影響を与える。"
+        "テキサス州でデータセンターの許可が再開された。",
+        "SpaceXが最初の申請者として登場した。",
+        "TCEQが11月16日に空気許可を発行した。",
+        "計画はブラウンズビル港近くの444エーカーの土地にある。",
+        "プロジェクトにはガス火力発電所も含まれる。"
       ],
       "glossary": [
         {
+          "term": "TCEQ",
+          "explain_ja": "テキサス州環境品質委員会（Texas Commission on Environmental Quality）の略称で、州の環境に関する許可を管理する機関。"
+        },
+        {
           "term": "データセンター",
-          "explain_ja": "データを保存、管理するための施設。"
+          "explain_ja": "データの収集、保存、管理を行う施設。"
         },
         {
-          "term": "AI",
-          "explain_ja": "人工知能のことで、機械が知的作業を行う技術。"
-        },
-        {
-          "term": "米国民",
-          "explain_ja": "アメリカの国民、またはアメリカ合衆国の市民。"
+          "term": "ガス火力発電所",
+          "explain_ja": "天然ガスを燃料とする発電施設。"
         }
       ],
       "personal_actions": [
-        "企業の方針を確認し、海外拠点に関する影響を把握する。",
-        "地域社会の意見を調査し、自分の立場を考え直す。"
+        "新しいデータセンター関連の許可の動向をチェックする。",
+        "SpaceXのプロジェクト進展について情報を追う。",
+        "地元の環境影響についてデータを収集する。"
       ],
       "tags": [
+        "DC"
+      ]
+    },
+    {
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/ecb-president-christine-lagarde-predicts-europe-is-running-short-of-data-center-capacity-warns-about-relying-on-foreign-computing-power-says-should-take-first-losses-on-/articleshow/136055200.cms",
+      "source": "The Times of India",
+      "publishedAt": "2026-11-21T13:20:02Z",
+      "title": "ECB president Christine Lagarde predicts Europe is running short of data center capacity; warns about relying on foreign computing power, says: Should take first losses on …",
+      "title_ja": "ECB総裁クリスティーヌ・ラガルド、欧州のデータセンター容量不足を予測し、外国のコンピューティングパワーへの依存を警告",
+      "summary_ja": "クリスティーヌ・ラガルドECB総裁は、欧州のデータセンターの容量が不足していると指摘し、外国のコンピューターパワーへの依存が危険であると警告しました。彼女は、公共資金を利用して民間投資を促進し、重要なプロジェクトに投資する必要性を強調しました。この結果、欧州のAIコンピューティング能力が向上し、デジタル独立を確保することが求められています。",
+      "key_points": [
+        "クリスティーヌ・ラガルドECB総裁がデータセンター容量不足を指摘",
+        "外国コンピューティングパワーへの依存はリスクがあると警告",
+        "公共資金を使って民間投資を促す必要性",
+        "欧州のAIコンピューティング能力を増強することが重要"
+      ],
+      "glossary": [
+        {
+          "term": "ECB",
+          "explain_ja": "欧州中央銀行の略称で、ユーロ圏の通貨政策を管理する機関。"
+        },
+        {
+          "term": "データセンター",
+          "explain_ja": "大量のデータを保存、管理、処理するための施設。"
+        },
+        {
+          "term": "AI",
+          "explain_ja": "人工知能の略称で、人間の知能を模倣した機械の知能技術。"
+        }
+      ],
+      "personal_actions": [
+        "地域のデータセンター開発状況を確認する",
+        "公共資金活用の取り組みについて情報を集める",
+        "データ処理能力を向上させるための自社戦略を検討する"
+      ],
+      "tags": [
+        "DC",
         "AI"
       ]
     },
     {
-      "url": "https://oilprice.com/Energy/Energy-General/US-Data-Center-Boom-Faces-a-New-Political-Reality.html",
-      "source": "OilPrice.com",
-      "publishedAt": "2026-11-20T19:00:00Z",
-      "title": "US Data Center Boom Faces a New Political Reality",
-      "title_ja": "米国のデータセンターブーム、新たな政治的現実に直面",
-      "summary_ja": "米国では、2027年から2030年にかけて発表された300GWのデータセンター容量の77%を、民主党の知事が率いる州が占めることになります。これにはテキサス、バージニア、ペンシルベニア、オハイオ、ジョージアのような主要市場が含まれます。政治的な変化はデータセンターの開発や運営に影響を及ぼす可能性が高く、この新たな現実に適応する必要があります。",
+      "url": "https://post.rlsbb.cc/rocky-mountain-wreckers-s02e07-hdtv-x264-ngp/",
+      "source": "Rlsbb.cc",
+      "publishedAt": "2026-11-21T12:33:56Z",
+      "title": "Rocky Mountain Wreckers S02E07 HDTV x264-NGP – ReleaseBB",
+      "title_ja": "ロッキー・マウンテン・レッカーズ シーズン2 エピソード7 HDTV x264-NGP",
+      "summary_ja": "エピソード7では、ソルトレイクシティ近郊で風嵐が発生し、荷物を積んだトレーラーが横転する。データセンターの冷却ユニットを積んだトレーラーがI-80で制御を失い、山岳回収の新米オペレーターは厳冬の嵐に立ち向かう。これにより、気象条件が回収作業に与える影響が強調される。",
       "key_points": [
-        "民主党の知事が率いる州が主要なデータセンター市場を占める",
-        "2027-2030年に300GWのデータセンター容量が計画されている",
-        "主要州にはテキサス、バージニア、ペンシルベニア、オハイオ、ジョージアが含まれる",
-        "新たな政治的環境は業界に変化をもたらす可能性がある",
-        "データセンターの運営と投資戦略に影響が出ることが予想される"
+        "風嵐がトレーラーを横転させる事例",
+        "データセンター冷却ユニットを運搬中のトレーラー",
+        "厳冬の嵐が現場の回収作業に影響を及ぼす",
+        "山岳回収の新米オペレーターの奮闘",
+        "エピソードの配信リンクと関連情報あり"
       ],
       "glossary": [
         {
-          "term": "GW",
-          "explain_ja": "ギガワット。エネルギーの単位で、主に電力の容量を示す。"
+          "term": "I-80",
+          "explain_ja": "アメリカの主要な幹線道路の一つで、東西を貫通している。"
         },
         {
           "term": "データセンター",
-          "explain_ja": "データを管理・保存するための施設で、サーバーやネットワーク機器が集積されている。"
+          "explain_ja": "データの運用や管理を行うための専用施設。"
+        },
+        {
+          "term": "回収作業",
+          "explain_ja": "事故や故障によった車両を安全に取り除く作業。"
         }
       ],
       "personal_actions": [
-        "主要州のデータセンター関連の政策変更をモニターする",
-        "投資戦略において、政治的環境の変化に応じたリスク評価を行う"
+        "近くの道路状況を確認する",
+        "冬季の運転に備えて車両を点検する",
+        "緊急時の連絡手段を確認しておく"
       ],
       "tags": [
-        "DC"
-      ]
-    },
-    {
-      "url": "https://wccftech.com/henrico-countys-data-center-tax-subsidized-new-middle-class-homes-by-226000-but-at-the-cost-of-500000-gallons-of-water-a-day-diesel-fumes-and-soaring-power-bills/",
-      "source": "Wccftech",
-      "publishedAt": "2026-11-20T16:08:37Z",
-      "title": "Henrico County’s Data Center Tax Subsidized New Middle-Class Homes By $226,000, But At The Cost of 500,000 Gallons of Water A Day, Diesel Fumes, And Soaring Power Bills",
-      "title_ja": "ヘンリコ郡のデータセンターが新中流家庭を226,000ドル補助、しかし毎日500,000ガロンの水消費とディーゼル排気ガス、高騰する電気代の代償も",
-      "summary_ja": "ヘンリコ郡は、データセンターの収益を利用して750軒の新たな中流住宅を建設することを目指している。しかし、データセンターによる水消費の増加や電気代の高騰が地域コミュニティに悪影響を及ぼし、住民の反発を招いている。このプログラムは一部の成功を収めているものの、環境への影響や低所得層の住宅需要を無視するという批判が高まっている。",
-      "key_points": [
-        "ヘンリコ郡では17のデータセンターが稼働中で、14が計画中。",
-        "データセンターは$60百万の住宅費用補助基金を設立。",
-        "データセンターの新税率は2025年に$2.60に引き上げられる予定。",
-        "データセンターは毎日約500,000ガロンの水を消費。",
-        "住民は建設騒音やディーゼル排気について不満を抱いている。",
-        "プログラムは60％から120％の地域中央値所得（AMI）を対象としているが、低所得者層は除外されている。"
-      ],
-      "glossary": [
-        {
-          "term": "AMI (Area Median Income)",
-          "explain_ja": "地域の中央値所得。住宅支援の対象者を決定する際の基準となる。"
-        },
-        {
-          "term": "データセンター",
-          "explain_ja": "情報処理やデータ管理を行うための特化した施設。"
-        },
-        {
-          "term": "補助基金",
-          "explain_ja": "特定の目的のために設立された資金。ここでは住宅建設のために使用される。"
-        }
-      ],
-      "personal_actions": [
-        "地域の水利用状況についてのデータを確認する。",
-        "データセンターの近くに住む場合、騒音や空気質について意見を表明する。",
-        "地域の住宅プログラムについて理解を深め、その情報を共有する。"
-      ],
-      "tags": [
-        "DC"
+        "その他"
       ]
     }
   ]
