@@ -1,108 +1,107 @@
 {
-  "date": "2026-11-25",
-  "generatedAtJST": "2026-11-25T07:15:43.224+09:00",
+  "date": "2026-11-26",
+  "generatedAtJST": "2026-11-26T07:15:48.576+09:00",
   "items": [
     {
-      "url": "https://www.channelnewsasia.com/business/applied-digital-signs-54-billion-ai-data-center-lease-hyperscaler-6575166",
-      "source": "CNA",
-      "publishedAt": "2026-11-23T13:52:41Z",
-      "title": "Applied Digital signs $5.4 billion AI data center lease with hyperscaler",
-      "title_ja": "Applied DigitalがハイパースケーラーとのAIデータセンターのリース契約を54億ドルで締結",
-      "summary_ja": "Applied Digitalは、ハイパースケーラーに対して150メガワットの重要なIT容量をリースすると発表した。この契約は、18年の基準期間中に54億ドルの契約収益を生むと見込まれている。これは、最新のテクノロジーへの需要が高まっていることを反映している。",
-      "key_points": [
-        "Applied Digitalが150メガワットのIT容量をハイパースケーラーにリース",
-        "契約期間は18年で、54億ドルの収益を見込む",
-        "この動きはAI関連のデータセンターの需要増加に対応している",
-        "以前にもう1件、15年の210メガワット契約を結んでいる"
-      ],
-      "glossary": [
-        {
-          "term": "ハイパースケーラー",
-          "explain_ja": "大規模なデータセンターを運営し、クラウドサービスを提供する企業。"
-        },
-        {
-          "term": "IT容量",
-          "explain_ja": "データセンターが提供できる計算能力やストレージの規模。"
-        }
-      ],
-      "personal_actions": [
-        "データセンターやAIの最新動向について学ぶ",
-        "自社のITインフラの有効性を見直す"
-      ],
-      "tags": [
-        "DC",
-        "AI"
-      ]
-    },
-    {
-      "url": "https://cryptobriefing.com/applied-digital-150-mw-hyperscaler-lease/",
+      "url": "https://cryptobriefing.com/texas-data-center-growth-faces-hurdles-amid-regulatory-power-challenges/",
       "source": "Crypto Briefing",
-      "publishedAt": "2026-11-23T13:24:31Z",
-      "title": "Applied Digital signs 150 MW hyperscaler lease, pushing contracted revenue above $41B",
-      "title_ja": "Applied Digital、150 MWのハイパースケーラーリース契約を締結し、契約収益が41億ドルを超える",
-      "summary_ja": "Applied Digitalは、新たに150 MWのIT容量に関する18年間のリース契約を締結しました。この契約により、契約済みの基本的な収益が41億ドルを超えることになります。契約は大手投資グレードのハイパースケーラーとのもので、2028年上半期に容量の提供が開始される予定です。",
+      "publishedAt": "2026-11-24T21:02:12Z",
+      "title": "Texas data center growth faces hurdles amid regulatory, power challenges",
+      "title_ja": "テキサスのデータセンター成長が規制と電力の課題に直面",
+      "summary_ja": "テキサス州のデータセンターの拡大は、電力制約やコスト上昇、規制の変更に影響を受ける可能性がある。全米のデータセンター市場の約26%を占めるテキサスでの成長は、これらの課題により減速するかもしれない。環境許可の一時停止が解除されたものの、ERCOTは新規の大容量接続を停止しており、今後のプロジェクトに影響を及ぼす可能性がある。",
       "key_points": [
-        "Applied Digitalが大手ハイパースケーラーとの18年間の契約を締結。",
-        "この契約により、契約収益が約54億ドル増加する見込み。",
-        "契約は2028年上半期からの容量提供を意図している。",
-        "投資グレードのテナントが内容の75%を占めている。",
-        "契約収益は実際の収入ではなく、支払いは今後の施設の開発に依存する。"
+        "テキサスのデータセンターに対するモラトリアムの可能性が市場価格から示唆される。",
+        "新しい規制の即時の影響は、投機的プロジェクトの遅延やキャンセルであり、拡大の完全な停止ではない。",
+        "ERCOTの監査や知事選出後のヒノホサ氏の方針がモラトリアム支持のシナリオに一致している。"
       ],
       "glossary": [
         {
-          "term": "ハイパースケーラー",
-          "explain_ja": "非常に大規模なデータセンターを運営する企業で、クラウドサービスやAIなどの需要に対応する。"
+          "term": "ERCOT",
+          "explain_ja": "テキサス州の電力の信頼性協会で、州内の電力グリッドを管理する組織です。"
         },
         {
-          "term": "投資グレード",
-          "explain_ja": "信用リスクが低く、投資家への信用度が高い企業や債券を指す。"
+          "term": "モラトリアム",
+          "explain_ja": "一時的な活動の停止や制限を指します。ここではデータセンターの新規プロジェクトに関するものです。"
         }
       ],
       "personal_actions": [
-        "新しい契約に関連する開発マイルストーンの進捗を確認する。",
-        "契約収益が実際に収入として認識されるまでのリスクを理解する。",
-        "市場の動向が企業に与える影響を考慮する。"
+        "ERCOTの監査結果について最新情報を確認する。",
+        "テキサス州のデータセンターに関する新しい規制や政策の動向に注目する。",
+        "プロジェクトに関わる場合は、規制の変化に備えて計画を見直す。"
       ],
       "tags": [
         "DC"
       ]
     },
     {
-      "url": "https://cryptobriefing.com/williams-epa-data-center-acid-rain-exemption/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-11-23T10:20:17Z",
-      "title": "Williams pushes EPA to exempt data center gas plants from acid rain rules",
-      "title_ja": "ウィリアムズ、EPAにデータセンター用のガス火力発電所を酸性雨規制から免除するよう要請",
-      "summary_ja": "ウィリアムズ社は、データセンター専用のガス火力発電所を連邦の酸性雨プログラムから免除するようEPAに要請しました。EPAはおおむね同意しましたが、民主党の議員たちはその理由を問いただしています。このガイドラインは、大規模な化石燃料事業者が排出規制を回避する隙間を生む可能性があることへの懸念を引き起こしています。",
+      "url": "https://www.newsbtc.com/market-news/microsoft-code-red-crypto-cloud-problem/",
+      "source": "newsBTC",
+      "publishedAt": "2026-11-24T16:50:14Z",
+      "title": "Microsoft’s ‘Code Red’ Exposes Crypto’s Own Cloud Problem",
+      "title_ja": "マイクロソフトの「コードレッド」が暗号通貨のクラウド問題を浮き彫りに",
+      "summary_ja": "マイクロソフトは、11月12日から13日にかけて発生した約24時間のグローバルアウトageを受け、「コードレッド」を宣言し、エンジニアリングと危機対応の見直しに着手した。これは、AWSデータセンターの冷却故障によるCoinbaseの5月のアウトageにも関連しており、クラウドサービスの信頼性に疑問を投げかけている。この状況は、暗号通貨市場に混乱をもたらす可能性がある。",
       "key_points": [
-        "ウィリアムズ社は、AIデータセンター向けのガス火力発電所を酸性雨プログラムから免除することを求めた。",
-        "EPAは、島嶼型の発電所は酸性雨規制の対象外とするガイダンスを発表した。",
-        "このガイダンスに対して、民主党の議員らが調査を開始した。",
-        "酸性雨プログラムは1990年のクリーンエア法の改正から始まった。",
-        "ウィリアムズ社の取り組みは、データセンター向けの信頼性の高い電力供給を支援する。"
+        "マイクロソフトが「コードレッド」を宣言した",
+        "11月12-13日に約24時間のグローバルアウトageが発生",
+        "Coinbaseの5月のアウトageはAWSの冷却故障が原因",
+        "クラウドサービスの信頼性が問われている",
+        "暗号通貨市場への影響が予想される"
       ],
       "glossary": [
         {
-          "term": "EPA",
-          "explain_ja": "環境保護庁（Environmental Protection Agency）の略称。"
+          "term": "Code Red",
+          "explain_ja": "マイクロソフトが危機に対処するために定めた特別な状態を示す用語。"
         },
         {
-          "term": "酸性雨プログラム",
-          "explain_ja": "硫黄酸化物と窒素酸化物の排出を削減することを目的とする1990年のプログラム。"
-        },
-        {
-          "term": "島嶼型発電所",
-          "explain_ja": "公共の電力網に接続されず、電力を販売しない発電所のこと。"
+          "term": "AWS",
+          "explain_ja": "Amazon Web Servicesの略称で、クラウドサービスのプロバイダー。"
         }
       ],
       "personal_actions": [
-        "データセンター向けのガス発電所に関する最新の規制動向を確認する。",
-        "エネルギー供給における持続可能性について社内で議論する。",
-        "規制の変更が事業に与える影響を分析し、必要な対策を検討する。"
+        "クラウドサービスプロバイダーの稼働情報を定期的に確認する。",
+        "非常時に備えたデータバックアップを行う。",
+        "システムの監視体制を再確認し、問題発見を迅速に行えるようにする。"
       ],
       "tags": [
-        "DC",
-        "AI"
+        "その他"
+      ]
+    },
+    {
+      "url": "https://cryptobriefing.com/applied-optoelectronics-800g-supply-agreement/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-11-24T13:48:01Z",
+      "title": "Applied Optoelectronics signs multi-year 800G supply deal with hyperscale customer",
+      "title_ja": "Applied Optoelectronics、ハイパースケール顧客と800G供給契約を締結",
+      "summary_ja": "Applied Optoelectronics（AAOI）は、既存のハイパースケールデータセンター顧客との間で、800Gトランシーバおよびレーザーダイオードの供給に関する数年の契約を締結しました。この契約は2030年までの最低購入義務が約22億ドルに及び、800Gトランシーバに約15億ドル、レーザーダイオードに約7億ドルが関係しています。これにより、AAOIは収益の見通しを確保し、2027年第1四半期から米国製品の出荷を開始する予定です。",
+      "key_points": [
+        "AAOIがハイパースケールデータセンター顧客と800Gトランシーバ供給契約を締結",
+        "契約の総最低購入額は約22億ドル、2030年まで有効",
+        "2027年にはトランシーバに約15億ドル、2028-2029年にはレーザーダイオードに約7億ドルのコミットメントがある",
+        "本契約において、AAOIは200万ドルの一時的費用を負担する",
+        "顧客の需要予測は100億ドルを超えるが、条件付きである",
+        "テキサス州での製造能力拡張が急務"
+      ],
+      "glossary": [
+        {
+          "term": "トランシーバ",
+          "explain_ja": "トランシーバは、デジタル信号を送受信するためのデバイスです。"
+        },
+        {
+          "term": "レーザーダイオード",
+          "explain_ja": "レーザーダイオードは、光信号を生成する半導体デバイスで、通信やデータ転送に利用されます。"
+        },
+        {
+          "term": "ハイパースケールデータセンター",
+          "explain_ja": "ハイパースケールデータセンターは、数千台のサーバを運営し、大規模なデータ処理を行うための施設です。"
+        }
+      ],
+      "personal_actions": [
+        "800Gトランシーバやレーザーダイオードの需要に対する市場動向を確認する",
+        "テキサス州での生産能力拡張の進捗を注視する",
+        "将来的な新たな顧客契約の影響を考慮に入れる"
+      ],
+      "tags": [
+        "DC"
       ]
     }
   ]
